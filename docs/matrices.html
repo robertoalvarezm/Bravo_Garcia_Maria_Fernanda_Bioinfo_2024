@@ -395,14 +395,14 @@ div.csl-indent {
 <h2><span class="header-section-number">5.1</span> Creación de matrices<a href="matrices.html#creación-de-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Para crear una matriz podemos usar la función <code>matrix()</code>. Dicha función requiere de, al menos, un vector e indicar al menos una dimensión.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="matrices.html#cb294-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="sc">-</span><span class="dv">4</span>), <span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">2</span>) <span class="co">#nrow: indica el número de renglones &amp; ncol: indica el número de columnas. </span></span>
-<span id="cb294-2"><a href="matrices.html#cb294-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="matrices.html#cb292-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="sc">-</span><span class="dv">4</span>), <span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">2</span>) <span class="co">#nrow: indica el número de renglones &amp; ncol: indica el número de columnas. </span></span>
+<span id="cb292-2"><a href="matrices.html#cb292-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
 <pre><code>##      [,1] [,2]
 ## [1,]    1    8
 ## [2,]    5   -4</code></pre>
 <p>Por default, la matriz va agregando los datos por columnas.</p>
-<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="matrices.html#cb296-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>,<span class="fu">rep</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>),<span class="dv">3</span>)),<span class="at">nrow=</span><span class="dv">4</span>)</span>
-<span id="cb296-2"><a href="matrices.html#cb296-2" aria-hidden="true" tabindex="-1"></a>z</span></code></pre></div>
+<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="matrices.html#cb294-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>,<span class="fu">rep</span>(<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>),<span class="dv">3</span>)),<span class="at">nrow=</span><span class="dv">4</span>)</span>
+<span id="cb294-2"><a href="matrices.html#cb294-2" aria-hidden="true" tabindex="-1"></a>z</span></code></pre></div>
 <pre><code>##       [,1]  [,2]
 ## [1,]  TRUE  TRUE
 ## [2,] FALSE FALSE
@@ -410,8 +410,8 @@ div.csl-indent {
 ## [4,] FALSE FALSE</code></pre>
 <p>¿Por qué sólo es necesario indicar una dimensión (renglones)?</p>
 <p>También se puede indicar que se cambien el orden de llenado de la matriz, es decir, en lugar de que lo haga por columnas, lo haga por renglones.</p>
-<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="matrices.html#cb298-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>),<span class="at">nrow=</span><span class="dv">2</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
-<span id="cb298-2"><a href="matrices.html#cb298-2" aria-hidden="true" tabindex="-1"></a>m</span></code></pre></div>
+<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="matrices.html#cb296-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>),<span class="at">nrow=</span><span class="dv">2</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb296-2"><a href="matrices.html#cb296-2" aria-hidden="true" tabindex="-1"></a>m</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    2    3
 ## [2,]    4    5    6</code></pre>
@@ -421,33 +421,33 @@ div.csl-indent {
 <p>La dimensión de una matriz es el número de renglones y de columnas respectivamente. Se puede obtener usando la función <code>dim()</code> de <em>dimensión</em>.
 <strong>NOTA</strong>
 <code>dim()</code> no se puede emplear en elementos unidemsionales (Ej: vectores)</p>
-<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="matrices.html#cb300-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(y)</span></code></pre></div>
+<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="matrices.html#cb298-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(y)</span></code></pre></div>
 <pre><code>## [1] 2 2</code></pre>
-<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="matrices.html#cb302-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(z)</span></code></pre></div>
+<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="matrices.html#cb300-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(z)</span></code></pre></div>
 <pre><code>## [1] 4 2</code></pre>
 <p>Así una matriz se distingue de un vector ya que tiene, además de renglones, columnas.</p>
 <p><img src="Escalar_Vector_Matriz.jpeg" alt="Escalar, vector y matriz" />
 ## Elementos de una matriz</p>
 <p>Para acceder a elementos de un objeto con <em>indices</em> (componentes que tienen una posición asignada), debemos usar <em>corchetes</em> <code>[]</code>. En el caso de la matriz se debe indicar la posición de ambas dimensiones <code>[renglón,columna]</code>.</p>
 <p>Ejemplo: En este caso se desea seleccionar el elemento del primer renglón, segunda columna.</p>
-<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="matrices.html#cb304-1" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">1</span>,<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="matrices.html#cb302-1" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">1</span>,<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <p>Ejemplo: En este caso se quiere seleccionar todos los elementos del primer renglón.</p>
-<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="matrices.html#cb306-1" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">1</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="matrices.html#cb304-1" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">1</span>,]</span></code></pre></div>
 <pre><code>## [1] 1 8</code></pre>
 <p>Ejemplo: En este caso se quiere seleccionar todos los elementos de la segunda columna.</p>
-<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="matrices.html#cb308-1" aria-hidden="true" tabindex="-1"></a>y[,<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="matrices.html#cb306-1" aria-hidden="true" tabindex="-1"></a>y[,<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1]  8 -4</code></pre>
 </div>
 <div id="creación-de-matriz-vacia" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Creación de matriz “vacia”<a href="matrices.html#creación-de-matriz-vacia" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Una forma <strong>mucho menos eficiente</strong> de definir una matriz es declarando una matriz sin elementos (matriz vacía) y después llenándolos de forma explícita asignando un valor distinto a cada posición.</p>
-<div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb310-1"><a href="matrices.html#cb310-1" aria-hidden="true" tabindex="-1"></a> y <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">nrow=</span><span class="dv">2</span>,<span class="at">ncol=</span><span class="dv">2</span>)</span>
-<span id="cb310-2"><a href="matrices.html#cb310-2" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">1</span>,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Esta&quot;</span></span>
-<span id="cb310-3"><a href="matrices.html#cb310-3" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">2</span>,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;es&quot;</span></span>
-<span id="cb310-4"><a href="matrices.html#cb310-4" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">1</span>,<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="st">&quot;una&quot;</span></span>
-<span id="cb310-5"><a href="matrices.html#cb310-5" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">2</span>,<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="st">&quot;matriz&quot;</span></span>
-<span id="cb310-6"><a href="matrices.html#cb310-6" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="matrices.html#cb308-1" aria-hidden="true" tabindex="-1"></a> y <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">nrow=</span><span class="dv">2</span>,<span class="at">ncol=</span><span class="dv">2</span>)</span>
+<span id="cb308-2"><a href="matrices.html#cb308-2" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">1</span>,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Esta&quot;</span></span>
+<span id="cb308-3"><a href="matrices.html#cb308-3" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">2</span>,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;es&quot;</span></span>
+<span id="cb308-4"><a href="matrices.html#cb308-4" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">1</span>,<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="st">&quot;una&quot;</span></span>
+<span id="cb308-5"><a href="matrices.html#cb308-5" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">2</span>,<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="st">&quot;matriz&quot;</span></span>
+<span id="cb308-6"><a href="matrices.html#cb308-6" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
 <pre><code>##      [,1]   [,2]    
 ## [1,] &quot;Esta&quot; &quot;una&quot;   
 ## [2,] &quot;es&quot;   &quot;matriz&quot;</code></pre>

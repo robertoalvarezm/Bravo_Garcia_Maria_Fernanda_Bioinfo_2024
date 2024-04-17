@@ -427,24 +427,47 @@ tu máquina teclea la función <code>library()</code></p>
 <code>library(nombre_de_paquete)</code></p>
 <p>Por ejemplo:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gplots)  </span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;gplots&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:stats&#39;:
-## 
-##     lowess</code></pre>
 <p>Para visualizar los paquetes ya cargados, teclea:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;.GlobalEnv&quot;        &quot;package:gplots&quot;    &quot;tools:rstudio&quot;     &quot;package:stats&quot;     &quot;package:graphics&quot;  &quot;package:grDevices&quot;
-##  [7] &quot;package:utils&quot;     &quot;package:datasets&quot;  &quot;package:methods&quot;   &quot;Autoloads&quot;         &quot;package:base&quot;</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
+<pre><code>##  [1] &quot;.GlobalEnv&quot;             &quot;package:ggpubr&quot;         &quot;package:palmerpenguins&quot; &quot;package:ggplot2&quot;        &quot;package:readxl&quot;        
+##  [6] &quot;package:gplots&quot;         &quot;tools:rstudio&quot;          &quot;package:stats&quot;          &quot;package:graphics&quot;       &quot;package:grDevices&quot;     
+## [11] &quot;package:utils&quot;          &quot;package:datasets&quot;       &quot;package:methods&quot;        &quot;Autoloads&quot;              &quot;package:base&quot;</code></pre>
 <p>Para visualizar las funciones dentro de un paquete en particular se utiliza:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>(<span class="dv">2</span>)</span></code></pre></div>
-<pre><code>##  [1] &quot;angleAxis&quot;      &quot;balloonplot&quot;    &quot;bandplot&quot;       &quot;barplot2&quot;       &quot;bluered&quot;        &quot;boxplot2&quot;       &quot;ci2d&quot;          
-##  [8] &quot;col2hex&quot;        &quot;colorpanel&quot;     &quot;greenred&quot;       &quot;heatmap.2&quot;      &quot;hist2d&quot;         &quot;lmplot2&quot;        &quot;lowess&quot;        
-## [15] &quot;ooplot&quot;         &quot;overplot&quot;       &quot;panel.overplot&quot; &quot;plot.venn&quot;      &quot;plotCI&quot;         &quot;plotLowess&quot;     &quot;plotmeans&quot;     
-## [22] &quot;qqnorm.aov&quot;     &quot;redblue&quot;        &quot;redgreen&quot;       &quot;reorder.factor&quot; &quot;residplot&quot;      &quot;rich.colors&quot;    &quot;sinkplot&quot;      
-## [29] &quot;smartlegend&quot;    &quot;space&quot;          &quot;textplot&quot;       &quot;venn&quot;           &quot;wapply&quot;</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>(<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##   [1] &quot;%&gt;%&quot;                         &quot;add_summary&quot;                 &quot;annotate_figure&quot;             &quot;as_ggplot&quot;                  
+##   [5] &quot;as_npc&quot;                      &quot;as_npcx&quot;                     &quot;as_npcy&quot;                     &quot;background_image&quot;           
+##   [9] &quot;bgcolor&quot;                     &quot;border&quot;                      &quot;change_palette&quot;              &quot;clean_table_theme&quot;          
+##  [13] &quot;clean_theme&quot;                 &quot;colnames_style&quot;              &quot;color_palette&quot;               &quot;compare_means&quot;              
+##  [17] &quot;create_aes&quot;                  &quot;desc_statby&quot;                 &quot;diff_express&quot;                &quot;facet&quot;                      
+##  [21] &quot;fill_palette&quot;                &quot;font&quot;                        &quot;gene_citation&quot;               &quot;gene_expression&quot;            
+##  [25] &quot;geom_bracket&quot;                &quot;geom_exec&quot;                   &quot;geom_pwc&quot;                    &quot;geom_signif&quot;                
+##  [29] &quot;get_breaks&quot;                  &quot;get_coord&quot;                   &quot;get_legend&quot;                  &quot;get_palette&quot;                
+##  [33] &quot;get_summary_stats&quot;           &quot;ggadd&quot;                       &quot;ggadjust_pvalue&quot;             &quot;ggarrange&quot;                  
+##  [37] &quot;ggballoonplot&quot;               &quot;ggbarplot&quot;                   &quot;ggboxplot&quot;                   &quot;ggdensity&quot;                  
+##  [41] &quot;ggdonutchart&quot;                &quot;ggdotchart&quot;                  &quot;ggdotplot&quot;                   &quot;ggecdf&quot;                     
+##  [45] &quot;ggerrorplot&quot;                 &quot;ggexport&quot;                    &quot;gghistogram&quot;                 &quot;ggline&quot;                     
+##  [49] &quot;ggmaplot&quot;                    &quot;ggpaired&quot;                    &quot;ggpar&quot;                       &quot;ggparagraph&quot;                
+##  [53] &quot;ggpie&quot;                       &quot;ggpubr_options&quot;              &quot;ggqqplot&quot;                    &quot;ggscatter&quot;                  
+##  [57] &quot;ggscatterhist&quot;               &quot;ggstripchart&quot;                &quot;ggsummarystats&quot;              &quot;ggsummarytable&quot;             
+##  [61] &quot;ggtext&quot;                      &quot;ggtexttable&quot;                 &quot;ggviolin&quot;                    &quot;gradient_color&quot;             
+##  [65] &quot;gradient_fill&quot;               &quot;grids&quot;                       &quot;group_by&quot;                    &quot;labs_pubr&quot;                  
+##  [69] &quot;mean_ci&quot;                     &quot;mean_range&quot;                  &quot;mean_sd&quot;                     &quot;mean_se_&quot;                   
+##  [73] &quot;median_hilow_&quot;               &quot;median_iqr&quot;                  &quot;median_mad&quot;                  &quot;median_q1q3&quot;                
+##  [77] &quot;median_range&quot;                &quot;mutate&quot;                      &quot;npc_to_data_coord&quot;           &quot;rotate&quot;                     
+##  [81] &quot;rotate_x_text&quot;               &quot;rotate_y_text&quot;               &quot;rownames_style&quot;              &quot;rremove&quot;                    
+##  [85] &quot;set_palette&quot;                 &quot;show_line_types&quot;             &quot;show_point_shapes&quot;           &quot;stat_anova_test&quot;            
+##  [89] &quot;stat_bracket&quot;                &quot;stat_central_tendency&quot;       &quot;stat_chull&quot;                  &quot;stat_compare_means&quot;         
+##  [93] &quot;stat_conf_ellipse&quot;           &quot;stat_cor&quot;                    &quot;stat_friedman_test&quot;          &quot;stat_kruskal_test&quot;          
+##  [97] &quot;stat_mean&quot;                   &quot;stat_overlay_normal_density&quot; &quot;stat_pvalue_manual&quot;          &quot;stat_pwc&quot;                   
+## [101] &quot;stat_regline_equation&quot;       &quot;stat_stars&quot;                  &quot;stat_welch_anova_test&quot;       &quot;tab_add_border&quot;             
+## [105] &quot;tab_add_footnote&quot;            &quot;tab_add_hline&quot;               &quot;tab_add_title&quot;               &quot;tab_add_vline&quot;              
+## [109] &quot;tab_cell_crossout&quot;           &quot;tab_ncol&quot;                    &quot;tab_nrow&quot;                    &quot;table_cell_bg&quot;              
+## [113] &quot;table_cell_font&quot;             &quot;tbody_add_border&quot;            &quot;tbody_style&quot;                 &quot;text_grob&quot;                  
+## [117] &quot;thead_add_border&quot;            &quot;theme_classic2&quot;              &quot;theme_cleveland&quot;             &quot;theme_pubclean&quot;             
+## [121] &quot;theme_pubr&quot;                  &quot;theme_transparent&quot;           &quot;ttheme&quot;                      &quot;xscale&quot;                     
+## [125] &quot;yscale&quot;</code></pre>
 <p><strong>EJEMPLOS DE VISUALIZACIÓN DE GRÁFICOS</strong></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">demo</span>(graphics)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">demo</span>(graphics)</span></code></pre></div>
 <pre><code>## 
 ## 
 ##  demo(graphics)
@@ -678,20 +701,20 @@ tu máquina teclea la función <code>library()</code></p>
 <p>En la mayoría de las ocasiones desconocemos el alcance de alguna paquetería, los criterios de alguna función o en general, sabemos lo que queremos hacer pero no tenemos ni idea de qué paqueteria usar.</p>
 <p>Los comandos <code>help()</code> y <code>?</code> son equivalentes, ambos van a permitir encontrar información sobre paqueterias, comandos o funciones generales de R. Se debe teclear <code>help(nombre_comando)</code> o <code>?nombre_comando</code></p>
 <p>Por ejemplo, para buscar información detallada del comando solve:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(solve)</span></code></pre></div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb23-1" aria-hidden="true" tabindex="-1"></a>?solve</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(solve)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb21-1" aria-hidden="true" tabindex="-1"></a>?solve</span></code></pre></div>
 <p>Para buscar ayuda de funciones o palabra reservadas se utilizan comillas:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">&quot;for&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">&quot;for&quot;</span>)</span></code></pre></div>
 <p>También existen opciones como <code>help.start()</code> y <code>help.search()</code> para obtener una versión extendida de la ayuda general desplegada en un navegador. Para ello se requiere tener la ayuda en HTML instalada y conexión a la red.</p>
 <p><code>help.search()</code> es una función que escanea documentación para paquetes previamente instalados.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help.search</span>(<span class="st">&quot;clustering&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help.search</span>(<span class="st">&quot;clustering&quot;</span>)</span></code></pre></div>
 <p><code>help.start()</code> es una función que despliega información basada en documentos en línea de la versión actual de R, además de brindar links a manuales y la lista de las paqueterías instaladas, entre otras cosas.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help.start</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help.start</span>()</span></code></pre></div>
 <p>Cuando queremos ver ejemplos del uso de los comandos usamos la función <code>example()</code></p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">example</span>(<span class="st">&quot;hclust&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">example</span>(<span class="st">&quot;hclust&quot;</span>)</span></code></pre></div>
 <pre><code>## 
 ## hclust&gt; require(graphics)
 ## 
@@ -754,14 +777,14 @@ tu máquina teclea la función <code>library()</code></p>
 <p>Todo lo anterior requiere que conozcamos el nombre correcto del comando, pero ¿qué pasa si no lo sabemos?, ¿lloramos? no.
 Podemos utilizar el comando <code>apropos()</code> para encontrar todo lo relacionado con algún término.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apropos</span>(<span class="st">&quot;solve&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apropos</span>(<span class="st">&quot;solve&quot;</span>)</span></code></pre></div>
 <pre><code>##  [1] &quot;.rs.resolveAliasedPath&quot;            &quot;.rs.resolveAliasedSymbol&quot;          &quot;.rs.resolveFormals&quot;               
 ##  [4] &quot;.rs.resolveObjectFromFunctionCall&quot; &quot;.rs.resolveObjectSource&quot;           &quot;.rs.rnb.resolveActiveChunkId&quot;     
 ##  [7] &quot;backsolve&quot;                         &quot;forwardsolve&quot;                      &quot;qr.solve&quot;                         
 ## [10] &quot;solve&quot;                             &quot;solve.default&quot;                     &quot;solve.qr&quot;</code></pre>
 <p>Ahora, ¿qué pasa cuando tengo la idea de lo que quiero hacer pero no se qué paqueteria usar, ni cuál comando? puedo usar <code>??</code> seguido de una palabra clave. Esto nos arrojará sugerencias sobre lo que deseamos hacer.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb38-1" aria-hidden="true" tabindex="-1"></a>??DNA</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb36-1" aria-hidden="true" tabindex="-1"></a>??DNA</span></code></pre></div>
 <p><strong>NOTA</strong> Se recomienda el uso del autocompletado, de esta manera reducirás errores de dedo.</p>
 </div>
 <div id="expresiones-y-asignaciones" class="section level2 hasAnchor" number="3.4">
@@ -769,15 +792,15 @@ Podemos utilizar el comando <code>apropos()</code> para encontrar todo lo relaci
 <p>Las <strong>expresiones</strong> y <strong>asignaciones</strong> son los dos tipos de resultados que arroja R.</p>
 <p>Las <strong>expresiones</strong> sólo se muestran en la salida estándar y NO se guardan en alguna variable, es decir, cada que se corra la línea se obtendran valores distintos.</p>
 <p>Ejemplo:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##  [1]  0.2367796 -1.1265213 -0.8885043  0.6834963 -1.2768135  0.5839597 -1.4178068  0.6939200 -0.2244745 -0.3115072</code></pre>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] -0.2129481  1.2639448  2.0392955 -1.0152995 -1.4459726 -1.1473892  0.4821682  0.2780398 -0.4602938 -0.6147076</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] -0.2003954 -1.0115785 -0.1869592 -1.2080753  0.1029785 -0.4696601  0.6117198  1.8788794 -0.5523220  2.3049162</code></pre>
+<pre><code>##  [1] -1.12506600  0.47750394 -1.82123875  0.85718667  0.56732944 -0.21737812 -0.07017104 -0.05118713 -1.08439566 -0.50656670</code></pre>
 <p>Las <strong>asignaciones</strong>, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de <code>&lt;-</code></p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb43-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb44-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -0.7972385  1.6112945  1.1960368  0.8361029 -0.1488811 -0.2854391  1.6535405 -0.2455643 -0.8375921 -1.0829630</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb41-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb42-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1]  1.2213519  0.2739884  1.4679184 -3.1863593 -0.5158595  0.6577032  0.9284841 -0.7972551  0.2570852 -0.2123988</code></pre>
 <p><strong>NOTA</strong> El símbolo <code>&lt;-</code> es equivalente en función a <code>=</code> pero no es tan cool.</p>
 <div class="figure">
 <img src="equals-sign-assignment-operator-imgflip-com-going-through-data-structures-and-47188178.png" alt="" />
@@ -785,44 +808,44 @@ Podemos utilizar el comando <code>apropos()</code> para encontrar todo lo relaci
 </div>
 <p>Otro punto a considerar respecto a las <strong>asiganciones</strong> es que R es capaz de distinguir entre mayúsculas y minúsculas, por lo que la misma letra puede contener valores distintos.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb46-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb46-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb46-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">6</span></span></code></pre></div>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb47-1" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb44-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb44-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb44-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">6</span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb45-1" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
 <pre><code>## [1] 3</code></pre>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb49-1" aria-hidden="true" tabindex="-1"></a>A</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb47-1" aria-hidden="true" tabindex="-1"></a>A</span></code></pre></div>
 <pre><code>## [1] 6</code></pre>
 <p>Una opción es definirlas en más de una línea, ejemplo:</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb51-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span></span>
-<span id="cb51-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb51-2" aria-hidden="true" tabindex="-1"></a>  pi <span class="sc">+</span> <span class="dv">12</span></span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb49-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span></span>
+<span id="cb49-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb49-2" aria-hidden="true" tabindex="-1"></a>  pi <span class="sc">+</span> <span class="dv">12</span></span></code></pre></div>
 <p><strong>NOTA</strong> Ten mucha precaución con el nombre que asignas a un valor, ya que podrías sobreescribirlo y se le quedará asignado el último valor.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb52-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb52-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb52-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb50-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb50-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb50-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## [1] 3</code></pre>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb54-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">8</span> </span>
-<span id="cb54-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb54-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb52-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">8</span> </span>
+<span id="cb52-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb52-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <p>La separación de comandos puede darse de dos formas:</p>
 <p>Empleando <code>;</code>, ejemplo:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb56-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span>; b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb54-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span>; b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
 <p>o usando un salto de línea, esta es una mejor opción, ejemplo:</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb57-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb57-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb57-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb55-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb55-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb55-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
 </div>
 <div id="movimiento-entre-directorios" class="section level2 hasAnchor" number="3.5">
 <h2><span class="header-section-number">3.5</span> Movimiento entre directorios<a href="introducción-a-r-para-estudiantes-de-microbiología.html#movimiento-entre-directorios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Otra de las ventajas que ofrece R es que permite ubicar algún archivo o saber la dirección del directorio en la que nos encontramos actualmente, todo ello sin necesidad de salir de la interfaz.</p>
 <p>Para saber en qué directorio estamos, se teclea:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;/Users/robertoalvarez/Documents/GitHub/Bravo_Garcia_Maria_Fernanda_Bioinfo_20204&quot;</code></pre>
 <p>Para cambiar de directorio utilizamos <code>setwd("direccion_a_la_que_quieres_ir")</code></p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>)</span></code></pre></div>
 <p>##Bash en R
 También se pueden usar los comandos de la terminal de bash dentro de R, utilizando la función <code>system()</code></p>
 <p>Para listar archivos de una carpeta usamos <code>ls</code></p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;ls -la&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;ls -la&quot;</span>)</span></code></pre></div>
 <p>Para saber en qué directorio estamos usamos la función análoga a <code>getwd()</code>, que es <code>pwd</code></p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;pwd&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;pwd&quot;</span>)</span></code></pre></div>
 <p><strong>Importante: Como regla general todos los nombres van entre comillas: nombre de carpetas, archivos, de columnas, de renglones,etc.</strong></p>
 </div>
 <div id="operaciones-aritméticas" class="section level2 hasAnchor" number="3.6">
@@ -830,27 +853,27 @@ También se pueden usar los comandos de la terminal de bash dentro de R, utiliza
 <p>R también puede ser usado como calculadora.
 Se puede sumar, restar, multiplicar,dividir, “exponenciar” y calcular la raíz cuadrada.</p>
 <p><strong>SUMA</strong> con el operador <code>+</code></p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb63-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">+</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb61-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">+</span> b</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <p><strong>RESTA</strong> con el operador <code>-</code></p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb65-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">-</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb63-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">-</span> b</span></code></pre></div>
 <pre><code>## [1] -2</code></pre>
 <p><strong>MULTIPLICACIÓN</strong> con el operador <code>*</code></p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb67-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">*</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb65-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">*</span> b</span></code></pre></div>
 <pre><code>## [1] 15</code></pre>
 <p><strong>DIVISIÓN</strong> con el operador <code>/</code></p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb69-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">/</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb67-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">/</span> b</span></code></pre></div>
 <pre><code>## [1] 0.6</code></pre>
 <p><strong>EXPONENTE</strong> con los operadoradores <code>**</code> o <code>^</code></p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb71-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">**</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb69-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">**</span> b</span></code></pre></div>
 <pre><code>## [1] 243</code></pre>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb73-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">^</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb71-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">^</span> b</span></code></pre></div>
 <pre><code>## [1] 243</code></pre>
 <p><strong>RAÍZ CUADRADA</strong> con la función <code>sqrt()</code></p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(a)</span></code></pre></div>
 <pre><code>## [1] 1.732051</code></pre>
 <p><strong>LOGARITMO</strong> con la función <code>log()</code></p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(a)</span></code></pre></div>
 <pre><code>## [1] 1.098612</code></pre>
 <div id="prioridad-en-las-operaciones" class="section level3 hasAnchor" number="3.6.1">
 <h3><span class="header-section-number">3.6.1</span> Prioridad en las operaciones<a href="introducción-a-r-para-estudiantes-de-microbiología.html#prioridad-en-las-operaciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -893,13 +916,13 @@ Este tipo de datos <strong>sólo</strong> contienen información <code>TRUE</cod
 <li>mayor o igual que <code>&gt;=</code></li>
 </ul>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">0</span>    </span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">0</span>    </span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">!=</span> <span class="dv">0</span>   </span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">!=</span> <span class="dv">0</span>   </span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&lt;=</span> <span class="dv">0</span>   </span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&lt;=</span> <span class="dv">0</span>   </span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 <p><strong>NOTA</strong> Dentro de R los valores lógicos <code>TRUE</code> y <code>FALSE</code> tienen un valor numérico. <code>TRUE</code>equivale a 1 y <code>FALSE</code> es equivalente a 0. Esto permite cuantificar el número de elementos que cumplen con los criterios, ¿cómo? mediante la suma de los <code>TRUE</code>s.</p>
 <p><strong>Ejercicios</strong>
@@ -913,18 +936,18 @@ Demuestra si:
 <p>Son <em>strings</em> de texto y se caracterizan porque cada uno de los elementos va entre comillas. Los elementos pueden ser desde sólo un caracter hasta oraciones.
 Podría parecer que la variable a la cual lo asignamos contiene números, pero las comillas indican que serán tratados como texto. Podemos subsetearlos por su índice o buscando literalmente el texto.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb87-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span> <span class="st">&quot;La candente mañana de febrero en que Beatriz Viterbo murió, después de una imperiosa agonía que no se rebajó un solo instante ni al sentimentalismo ni al miedo&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb85-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span> <span class="st">&quot;La candente mañana de febrero en que Beatriz Viterbo murió, después de una imperiosa agonía que no se rebajó un solo instante ni al sentimentalismo ni al miedo&quot;</span></span></code></pre></div>
 </div>
 <div id="enteros-y-números-numeric" class="section level3 hasAnchor" number="3.7.3">
 <h3><span class="header-section-number">3.7.3</span> Enteros y números (numeric)<a href="introducción-a-r-para-estudiantes-de-microbiología.html#enteros-y-números-numeric" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Existen dos formas diferentes en que las computadoras pueden guardar los números y hacer operaciones matemáticas con ellos: <code>numeric</code> e <code>integer</code>.
 Por lo común no importa esta diferencia, pero puede ser relevante para algunas funciones de Bioconductor. En R se representan los números como <code>numeric</code> y el tamaño máximo que maneja para un <code>integer</code> es ligeramente más chico que el tamaño del genoma humano.</p>
 <p>¿Cómo revisar si un objeto es numeric o entero? Con la función <code>class()</code></p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb88-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb88-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb86-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb86-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb90-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
-<span id="cb90-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb88-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
+<span id="cb88-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
 
 </div>

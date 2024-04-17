@@ -396,15 +396,15 @@ div.csl-indent {
 <ul>
 <li>Creación de una Lista</li>
 </ul>
-<div class="sourceCode" id="cb501"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb501-1"><a href="Listas.html#cb501-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creando una lista con diferentes tipos de datos</span></span>
-<span id="cb501-2"><a href="Listas.html#cb501-2" aria-hidden="true" tabindex="-1"></a>compleja_lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb501-3"><a href="Listas.html#cb501-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">numero =</span> <span class="dv">42</span>,</span>
-<span id="cb501-4"><a href="Listas.html#cb501-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">vector =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
-<span id="cb501-5"><a href="Listas.html#cb501-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">matriz =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>),</span>
-<span id="cb501-6"><a href="Listas.html#cb501-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data_frame =</span> <span class="fu">data.frame</span>(<span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">&quot;E. coli&quot;</span>, <span class="st">&quot;S. aureus&quot;</span>), <span class="at">gram =</span> <span class="fu">c</span>(<span class="st">&quot;+&quot;</span>, <span class="st">&quot;-&quot;</span>))</span>
-<span id="cb501-7"><a href="Listas.html#cb501-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb501-8"><a href="Listas.html#cb501-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb501-9"><a href="Listas.html#cb501-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(compleja_lista)</span></code></pre></div>
+<div class="sourceCode" id="cb499"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb499-1"><a href="Listas.html#cb499-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creando una lista con diferentes tipos de datos</span></span>
+<span id="cb499-2"><a href="Listas.html#cb499-2" aria-hidden="true" tabindex="-1"></a>compleja_lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb499-3"><a href="Listas.html#cb499-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">numero =</span> <span class="dv">42</span>,</span>
+<span id="cb499-4"><a href="Listas.html#cb499-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">vector =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb499-5"><a href="Listas.html#cb499-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">matriz =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>),</span>
+<span id="cb499-6"><a href="Listas.html#cb499-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data_frame =</span> <span class="fu">data.frame</span>(<span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">&quot;E. coli&quot;</span>, <span class="st">&quot;S. aureus&quot;</span>), <span class="at">gram =</span> <span class="fu">c</span>(<span class="st">&quot;+&quot;</span>, <span class="st">&quot;-&quot;</span>))</span>
+<span id="cb499-7"><a href="Listas.html#cb499-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb499-8"><a href="Listas.html#cb499-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb499-9"><a href="Listas.html#cb499-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(compleja_lista)</span></code></pre></div>
 <pre><code>## $numero
 ## [1] 42
 ## 
@@ -422,15 +422,15 @@ div.csl-indent {
 ## 2 S. aureus    -</code></pre>
 <p>Para acceder a los elementos de una lista, puedes usar el doble corchete [[ ]] o el operador de dólar $. El doble corchete es útil para acceder a los elementos por su índice, mientras que el operador de dólar se usa con nombres.</p>
 <p>Accceso por índice</p>
-<div class="sourceCode" id="cb503"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb503-1"><a href="Listas.html#cb503-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accediendo al vector dentro de la lista</span></span>
-<span id="cb503-2"><a href="Listas.html#cb503-2" aria-hidden="true" tabindex="-1"></a>vector_en_lista <span class="ot">&lt;-</span> compleja_lista[[<span class="dv">2</span>]]</span>
-<span id="cb503-3"><a href="Listas.html#cb503-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(vector_en_lista)</span></code></pre></div>
+<div class="sourceCode" id="cb501"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb501-1"><a href="Listas.html#cb501-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accediendo al vector dentro de la lista</span></span>
+<span id="cb501-2"><a href="Listas.html#cb501-2" aria-hidden="true" tabindex="-1"></a>vector_en_lista <span class="ot">&lt;-</span> compleja_lista[[<span class="dv">2</span>]]</span>
+<span id="cb501-3"><a href="Listas.html#cb501-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(vector_en_lista)</span></code></pre></div>
 <pre><code>## [1] 1 2 3</code></pre>
 <div id="acceso-por-nombre" class="section level3 hasAnchor" number="14.0.1">
 <h3><span class="header-section-number">14.0.1</span> Acceso por Nombre<a href="Listas.html#acceso-por-nombre" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb505"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb505-1"><a href="Listas.html#cb505-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accediendo al data frame por nombre</span></span>
-<span id="cb505-2"><a href="Listas.html#cb505-2" aria-hidden="true" tabindex="-1"></a>data_frame_en_lista <span class="ot">&lt;-</span> compleja_lista<span class="sc">$</span>data_frame</span>
-<span id="cb505-3"><a href="Listas.html#cb505-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(data_frame_en_lista)</span></code></pre></div>
+<div class="sourceCode" id="cb503"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb503-1"><a href="Listas.html#cb503-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accediendo al data frame por nombre</span></span>
+<span id="cb503-2"><a href="Listas.html#cb503-2" aria-hidden="true" tabindex="-1"></a>data_frame_en_lista <span class="ot">&lt;-</span> compleja_lista<span class="sc">$</span>data_frame</span>
+<span id="cb503-3"><a href="Listas.html#cb503-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(data_frame_en_lista)</span></code></pre></div>
 <pre><code>##      nombre gram
 ## 1   E. coli    +
 ## 2 S. aureus    -</code></pre>

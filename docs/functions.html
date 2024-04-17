@@ -395,11 +395,11 @@ div.csl-indent {
 <div id="sintaxis-básica-de-una-función-en-r" class="section level2 hasAnchor" number="10.1">
 <h2><span class="header-section-number">10.1</span> Sintaxis básica de una función en R<a href="functions.html#sintaxis-básica-de-una-función-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>La sintaxis básica para definir una función en R es la siguiente:</p>
-<div class="sourceCode" id="cb401"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb401-1"><a href="functions.html#cb401-1" aria-hidden="true" tabindex="-1"></a>nombre_de_la_funcion <span class="ot">&lt;-</span> <span class="cf">function</span>(arg1, arg2, ...) {</span>
-<span id="cb401-2"><a href="functions.html#cb401-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Cuerpo de la función</span></span>
-<span id="cb401-3"><a href="functions.html#cb401-3" aria-hidden="true" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> ...</span>
-<span id="cb401-4"><a href="functions.html#cb401-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultado)</span>
-<span id="cb401-5"><a href="functions.html#cb401-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb399"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb399-1"><a href="functions.html#cb399-1" aria-hidden="true" tabindex="-1"></a>nombre_de_la_funcion <span class="ot">&lt;-</span> <span class="cf">function</span>(arg1, arg2, ...) {</span>
+<span id="cb399-2"><a href="functions.html#cb399-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Cuerpo de la función</span></span>
+<span id="cb399-3"><a href="functions.html#cb399-3" aria-hidden="true" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> ...</span>
+<span id="cb399-4"><a href="functions.html#cb399-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultado)</span>
+<span id="cb399-5"><a href="functions.html#cb399-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Donde:</p>
 <ul>
 <li><code>nombre_de_la_funcion</code>: el nombre que le das a tu función. -<code>function</code>: la palabra <em>function</em></li>
@@ -411,103 +411,103 @@ div.csl-indent {
 <div id="ejemplo-de-función-definida-por-el-usuario-en-r" class="section level2 hasAnchor" number="10.2">
 <h2><span class="header-section-number">10.2</span> Ejemplo de función definida por el usuario en R<a href="functions.html#ejemplo-de-función-definida-por-el-usuario-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Aquí hay un ejemplo de una función definida por el usuario que toma dos argumentos x e y y devuelve la suma de ambos:</p>
-<div class="sourceCode" id="cb402"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb402-1"><a href="functions.html#cb402-1" aria-hidden="true" tabindex="-1"></a>mi_suma <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
-<span id="cb402-2"><a href="functions.html#cb402-2" aria-hidden="true" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
-<span id="cb402-3"><a href="functions.html#cb402-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultado)</span>
-<span id="cb402-4"><a href="functions.html#cb402-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb400"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb400-1"><a href="functions.html#cb400-1" aria-hidden="true" tabindex="-1"></a>mi_suma <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
+<span id="cb400-2"><a href="functions.html#cb400-2" aria-hidden="true" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
+<span id="cb400-3"><a href="functions.html#cb400-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultado)</span>
+<span id="cb400-4"><a href="functions.html#cb400-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Para usar esta función, simplemente llámala con los argumentos que deseas pasar:</p>
-<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="functions.html#cb403-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mi_suma</span>(<span class="dv">3</span>, <span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb401"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb401-1"><a href="functions.html#cb401-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mi_suma</span>(<span class="dv">3</span>, <span class="dv">5</span>)</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 </div>
 <div id="ejemplo-de-función-con-argumentos-por-defecto-en-r" class="section level2 hasAnchor" number="10.3">
 <h2><span class="header-section-number">10.3</span> Ejemplo de función con argumentos por defecto en R<a href="functions.html#ejemplo-de-función-con-argumentos-por-defecto-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Las funciones en R también pueden tener argumentos por defecto que se utilizan si no se proporciona ningún valor para ellos. Aquí hay un ejemplo de una función que tiene dos argumentos, <code>x</code> e <code>y</code>, y <code>y</code> tiene un valor por defecto de 2:</p>
-<div class="sourceCode" id="cb405"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb405-1"><a href="functions.html#cb405-1" aria-hidden="true" tabindex="-1"></a>mi_funcion <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">y =</span> <span class="dv">2</span>) {</span>
-<span id="cb405-2"><a href="functions.html#cb405-2" aria-hidden="true" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> x <span class="sc">*</span> y</span>
-<span id="cb405-3"><a href="functions.html#cb405-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultado)</span>
-<span id="cb405-4"><a href="functions.html#cb405-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="functions.html#cb403-1" aria-hidden="true" tabindex="-1"></a>mi_funcion <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">y =</span> <span class="dv">2</span>) {</span>
+<span id="cb403-2"><a href="functions.html#cb403-2" aria-hidden="true" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> x <span class="sc">*</span> y</span>
+<span id="cb403-3"><a href="functions.html#cb403-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(resultado)</span>
+<span id="cb403-4"><a href="functions.html#cb403-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>En este caso, si no se proporciona un valor para <code>y</code>, se utilizará el valor por defecto de <code>2</code>:</p>
-<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb406-1"><a href="functions.html#cb406-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mi_funcion</span>(<span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb404"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb404-1"><a href="functions.html#cb404-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mi_funcion</span>(<span class="dv">3</span>)</span></code></pre></div>
 <pre><code>## [1] 6</code></pre>
 <p>También puede proporcionar un valor diferente para y, si es necesario:</p>
-<div class="sourceCode" id="cb408"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb408-1"><a href="functions.html#cb408-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mi_funcion</span>(<span class="dv">3</span>, <span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb406-1"><a href="functions.html#cb406-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mi_funcion</span>(<span class="dv">3</span>, <span class="dv">5</span>)</span></code></pre></div>
 <pre><code>## [1] 15</code></pre>
 </div>
 <div id="definir-una-función-con-un-parámetro-opcional" class="section level2 hasAnchor" number="10.4">
 <h2><span class="header-section-number">10.4</span> Definir una función con un parámetro opcional<a href="functions.html#definir-una-función-con-un-parámetro-opcional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb410"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb410-1"><a href="functions.html#cb410-1" aria-hidden="true" tabindex="-1"></a>saludar <span class="ot">&lt;-</span> <span class="cf">function</span>(nombre, <span class="at">saludo =</span> <span class="st">&quot;Hola&quot;</span>) {</span>
-<span id="cb410-2"><a href="functions.html#cb410-2" aria-hidden="true" tabindex="-1"></a>  mensaje <span class="ot">&lt;-</span> <span class="fu">paste</span>(saludo, nombre)</span>
-<span id="cb410-3"><a href="functions.html#cb410-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(mensaje)</span>
-<span id="cb410-4"><a href="functions.html#cb410-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb408"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb408-1"><a href="functions.html#cb408-1" aria-hidden="true" tabindex="-1"></a>saludar <span class="ot">&lt;-</span> <span class="cf">function</span>(nombre, <span class="at">saludo =</span> <span class="st">&quot;Hola&quot;</span>) {</span>
+<span id="cb408-2"><a href="functions.html#cb408-2" aria-hidden="true" tabindex="-1"></a>  mensaje <span class="ot">&lt;-</span> <span class="fu">paste</span>(saludo, nombre)</span>
+<span id="cb408-3"><a href="functions.html#cb408-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(mensaje)</span>
+<span id="cb408-4"><a href="functions.html#cb408-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <div id="llamar-a-la-función-saludar-sin-proporcionar-el-parámetro-opcional" class="section level3 hasAnchor" number="10.4.1">
 <h3><span class="header-section-number">10.4.1</span> Llamar a la función saludar sin proporcionar el parámetro opcional<a href="functions.html#llamar-a-la-función-saludar-sin-proporcionar-el-parámetro-opcional" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="functions.html#cb411-1" aria-hidden="true" tabindex="-1"></a>mensaje1 <span class="ot">&lt;-</span> <span class="fu">saludar</span>(<span class="st">&quot;Juan&quot;</span>)</span>
-<span id="cb411-2"><a href="functions.html#cb411-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mensaje1)</span></code></pre></div>
+<div class="sourceCode" id="cb409"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb409-1"><a href="functions.html#cb409-1" aria-hidden="true" tabindex="-1"></a>mensaje1 <span class="ot">&lt;-</span> <span class="fu">saludar</span>(<span class="st">&quot;Juan&quot;</span>)</span>
+<span id="cb409-2"><a href="functions.html#cb409-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mensaje1)</span></code></pre></div>
 <pre><code>## [1] &quot;Hola Juan&quot;</code></pre>
 </div>
 <div id="llamar-a-la-función-saludar-proporcionando-el-parámetro-opcional" class="section level3 hasAnchor" number="10.4.2">
 <h3><span class="header-section-number">10.4.2</span> Llamar a la función saludar proporcionando el parámetro opcional<a href="functions.html#llamar-a-la-función-saludar-proporcionando-el-parámetro-opcional" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb413-1"><a href="functions.html#cb413-1" aria-hidden="true" tabindex="-1"></a>mensaje2 <span class="ot">&lt;-</span> <span class="fu">saludar</span>(<span class="st">&quot;María&quot;</span>, <span class="st">&quot;Buenos días&quot;</span>)</span>
-<span id="cb413-2"><a href="functions.html#cb413-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mensaje2)</span></code></pre></div>
+<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="functions.html#cb411-1" aria-hidden="true" tabindex="-1"></a>mensaje2 <span class="ot">&lt;-</span> <span class="fu">saludar</span>(<span class="st">&quot;María&quot;</span>, <span class="st">&quot;Buenos días&quot;</span>)</span>
+<span id="cb411-2"><a href="functions.html#cb411-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mensaje2)</span></code></pre></div>
 <pre><code>## [1] &quot;Buenos días María&quot;</code></pre>
 </div>
 </div>
 <div id="definir-una-función-para-calcular-el-área-de-un-círculo" class="section level2 hasAnchor" number="10.5">
 <h2><span class="header-section-number">10.5</span> Definir una función para calcular el área de un círculo<a href="functions.html#definir-una-función-para-calcular-el-área-de-un-círculo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="functions.html#cb415-1" aria-hidden="true" tabindex="-1"></a>area_circulo <span class="ot">&lt;-</span> <span class="cf">function</span>(radio) {</span>
-<span id="cb415-2"><a href="functions.html#cb415-2" aria-hidden="true" tabindex="-1"></a>  area <span class="ot">&lt;-</span> pi <span class="sc">*</span> radio<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb415-3"><a href="functions.html#cb415-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(area)</span>
-<span id="cb415-4"><a href="functions.html#cb415-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb415-5"><a href="functions.html#cb415-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo de uso</span></span>
-<span id="cb415-6"><a href="functions.html#cb415-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb415-7"><a href="functions.html#cb415-7" aria-hidden="true" tabindex="-1"></a>radio <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb415-8"><a href="functions.html#cb415-8" aria-hidden="true" tabindex="-1"></a>area <span class="ot">&lt;-</span> <span class="fu">area_circulo</span>(radio)</span>
-<span id="cb415-9"><a href="functions.html#cb415-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;El área del círculo con radio&quot;</span>, radio, <span class="st">&quot;es:&quot;</span>, area))</span></code></pre></div>
+<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb413-1"><a href="functions.html#cb413-1" aria-hidden="true" tabindex="-1"></a>area_circulo <span class="ot">&lt;-</span> <span class="cf">function</span>(radio) {</span>
+<span id="cb413-2"><a href="functions.html#cb413-2" aria-hidden="true" tabindex="-1"></a>  area <span class="ot">&lt;-</span> pi <span class="sc">*</span> radio<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb413-3"><a href="functions.html#cb413-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(area)</span>
+<span id="cb413-4"><a href="functions.html#cb413-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb413-5"><a href="functions.html#cb413-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo de uso</span></span>
+<span id="cb413-6"><a href="functions.html#cb413-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb413-7"><a href="functions.html#cb413-7" aria-hidden="true" tabindex="-1"></a>radio <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb413-8"><a href="functions.html#cb413-8" aria-hidden="true" tabindex="-1"></a>area <span class="ot">&lt;-</span> <span class="fu">area_circulo</span>(radio)</span>
+<span id="cb413-9"><a href="functions.html#cb413-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;El área del círculo con radio&quot;</span>, radio, <span class="st">&quot;es:&quot;</span>, area))</span></code></pre></div>
 <pre><code>## [1] &quot;El área del círculo con radio 3 es: 28.2743338823081&quot;</code></pre>
 </div>
 <div id="definir-una-función-para-calcular-el-factorial-de-un-número" class="section level2 hasAnchor" number="10.6">
 <h2><span class="header-section-number">10.6</span> Definir una función para calcular el factorial de un número<a href="functions.html#definir-una-función-para-calcular-el-factorial-de-un-número" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="functions.html#cb417-1" aria-hidden="true" tabindex="-1"></a>factorial <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {</span>
-<span id="cb417-2"><a href="functions.html#cb417-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb417-3"><a href="functions.html#cb417-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="dv">1</span>)</span>
-<span id="cb417-4"><a href="functions.html#cb417-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb417-5"><a href="functions.html#cb417-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(n <span class="sc">*</span> <span class="fu">factorial</span>(n <span class="sc">-</span> <span class="dv">1</span>))</span>
-<span id="cb417-6"><a href="functions.html#cb417-6" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb417-7"><a href="functions.html#cb417-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb417-8"><a href="functions.html#cb417-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb417-9"><a href="functions.html#cb417-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo de uso</span></span>
-<span id="cb417-10"><a href="functions.html#cb417-10" aria-hidden="true" tabindex="-1"></a>numero <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb417-11"><a href="functions.html#cb417-11" aria-hidden="true" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> <span class="fu">factorial</span>(numero)</span>
-<span id="cb417-12"><a href="functions.html#cb417-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;El factorial de&quot;</span>, numero, <span class="st">&quot;es:&quot;</span>, resultado))</span></code></pre></div>
+<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="functions.html#cb415-1" aria-hidden="true" tabindex="-1"></a>factorial <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {</span>
+<span id="cb415-2"><a href="functions.html#cb415-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb415-3"><a href="functions.html#cb415-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="dv">1</span>)</span>
+<span id="cb415-4"><a href="functions.html#cb415-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb415-5"><a href="functions.html#cb415-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(n <span class="sc">*</span> <span class="fu">factorial</span>(n <span class="sc">-</span> <span class="dv">1</span>))</span>
+<span id="cb415-6"><a href="functions.html#cb415-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb415-7"><a href="functions.html#cb415-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb415-8"><a href="functions.html#cb415-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb415-9"><a href="functions.html#cb415-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo de uso</span></span>
+<span id="cb415-10"><a href="functions.html#cb415-10" aria-hidden="true" tabindex="-1"></a>numero <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb415-11"><a href="functions.html#cb415-11" aria-hidden="true" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> <span class="fu">factorial</span>(numero)</span>
+<span id="cb415-12"><a href="functions.html#cb415-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;El factorial de&quot;</span>, numero, <span class="st">&quot;es:&quot;</span>, resultado))</span></code></pre></div>
 <pre><code>## [1] &quot;El factorial de 5 es: 120&quot;</code></pre>
 </div>
 <div id="definir-una-función-para-verificar-si-un-número-es-primo" class="section level2 hasAnchor" number="10.7">
 <h2><span class="header-section-number">10.7</span> Definir una función para verificar si un número es primo<a href="functions.html#definir-una-función-para-verificar-si-un-número-es-primo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb419"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb419-1"><a href="functions.html#cb419-1" aria-hidden="true" tabindex="-1"></a>es_primo <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {</span>
-<span id="cb419-2"><a href="functions.html#cb419-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">&lt;=</span> <span class="dv">1</span>) {</span>
-<span id="cb419-3"><a href="functions.html#cb419-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
-<span id="cb419-4"><a href="functions.html#cb419-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (n <span class="sc">&lt;=</span> <span class="dv">3</span>) {</span>
-<span id="cb419-5"><a href="functions.html#cb419-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
-<span id="cb419-6"><a href="functions.html#cb419-6" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (n <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">|</span> n <span class="sc">%%</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb419-7"><a href="functions.html#cb419-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
-<span id="cb419-8"><a href="functions.html#cb419-8" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb419-9"><a href="functions.html#cb419-9" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb419-10"><a href="functions.html#cb419-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (i <span class="sc">*</span> i <span class="sc">&lt;=</span> n) {</span>
-<span id="cb419-11"><a href="functions.html#cb419-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (n <span class="sc">%%</span> i <span class="sc">==</span> <span class="dv">0</span> <span class="sc">|</span> n <span class="sc">%%</span> (i <span class="sc">+</span> <span class="dv">2</span>) <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb419-12"><a href="functions.html#cb419-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
-<span id="cb419-13"><a href="functions.html#cb419-13" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb419-14"><a href="functions.html#cb419-14" aria-hidden="true" tabindex="-1"></a>    i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">6</span></span>
-<span id="cb419-15"><a href="functions.html#cb419-15" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb419-16"><a href="functions.html#cb419-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
-<span id="cb419-17"><a href="functions.html#cb419-17" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb419-18"><a href="functions.html#cb419-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb419-19"><a href="functions.html#cb419-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo de uso</span></span>
-<span id="cb419-20"><a href="functions.html#cb419-20" aria-hidden="true" tabindex="-1"></a>numero <span class="ot">&lt;-</span> <span class="dv">11</span></span>
-<span id="cb419-21"><a href="functions.html#cb419-21" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">es_primo</span>(numero)) {</span>
-<span id="cb419-22"><a href="functions.html#cb419-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(numero, <span class="st">&quot;es un número primo.&quot;</span>))</span>
-<span id="cb419-23"><a href="functions.html#cb419-23" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb419-24"><a href="functions.html#cb419-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(numero, <span class="st">&quot;no es un número primo.&quot;</span>))</span>
-<span id="cb419-25"><a href="functions.html#cb419-25" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="functions.html#cb417-1" aria-hidden="true" tabindex="-1"></a>es_primo <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {</span>
+<span id="cb417-2"><a href="functions.html#cb417-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">&lt;=</span> <span class="dv">1</span>) {</span>
+<span id="cb417-3"><a href="functions.html#cb417-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb417-4"><a href="functions.html#cb417-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (n <span class="sc">&lt;=</span> <span class="dv">3</span>) {</span>
+<span id="cb417-5"><a href="functions.html#cb417-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb417-6"><a href="functions.html#cb417-6" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (n <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">|</span> n <span class="sc">%%</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb417-7"><a href="functions.html#cb417-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb417-8"><a href="functions.html#cb417-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb417-9"><a href="functions.html#cb417-9" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb417-10"><a href="functions.html#cb417-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (i <span class="sc">*</span> i <span class="sc">&lt;=</span> n) {</span>
+<span id="cb417-11"><a href="functions.html#cb417-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (n <span class="sc">%%</span> i <span class="sc">==</span> <span class="dv">0</span> <span class="sc">|</span> n <span class="sc">%%</span> (i <span class="sc">+</span> <span class="dv">2</span>) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb417-12"><a href="functions.html#cb417-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb417-13"><a href="functions.html#cb417-13" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb417-14"><a href="functions.html#cb417-14" aria-hidden="true" tabindex="-1"></a>    i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">6</span></span>
+<span id="cb417-15"><a href="functions.html#cb417-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb417-16"><a href="functions.html#cb417-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb417-17"><a href="functions.html#cb417-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb417-18"><a href="functions.html#cb417-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb417-19"><a href="functions.html#cb417-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo de uso</span></span>
+<span id="cb417-20"><a href="functions.html#cb417-20" aria-hidden="true" tabindex="-1"></a>numero <span class="ot">&lt;-</span> <span class="dv">11</span></span>
+<span id="cb417-21"><a href="functions.html#cb417-21" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">es_primo</span>(numero)) {</span>
+<span id="cb417-22"><a href="functions.html#cb417-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(numero, <span class="st">&quot;es un número primo.&quot;</span>))</span>
+<span id="cb417-23"><a href="functions.html#cb417-23" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb417-24"><a href="functions.html#cb417-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(numero, <span class="st">&quot;no es un número primo.&quot;</span>))</span>
+<span id="cb417-25"><a href="functions.html#cb417-25" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;11 es un número primo.&quot;</code></pre>
 <p><strong>Ejercicios</strong></p>
 <ol style="list-style-type: decimal">

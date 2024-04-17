@@ -394,15 +394,15 @@ div.csl-indent {
 <div id="crear-un-dataframe-en-r" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Crear un Dataframe en R<a href="data-frames.html#crear-un-dataframe-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Podemos crear un DataFrame en R utilizando la función <code>data.frame()</code>. Aquí hay un ejemplo de cómo crear un DataFrame simple con datos de estudiantes:</p>
-<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="data-frames.html#cb359-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear un DataFrame de estudiantes</span></span>
-<span id="cb359-2"><a href="data-frames.html#cb359-2" aria-hidden="true" tabindex="-1"></a>estudiantes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb359-3"><a href="data-frames.html#cb359-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;María&quot;</span>, <span class="st">&quot;Pedro&quot;</span>, <span class="st">&quot;Laura&quot;</span>),</span>
-<span id="cb359-4"><a href="data-frames.html#cb359-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">edad =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">23</span>),</span>
-<span id="cb359-5"><a href="data-frames.html#cb359-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">puntaje =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">88</span>, <span class="dv">92</span>)</span>
-<span id="cb359-6"><a href="data-frames.html#cb359-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb359-7"><a href="data-frames.html#cb359-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb359-8"><a href="data-frames.html#cb359-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Ver el DataFrame</span></span>
-<span id="cb359-9"><a href="data-frames.html#cb359-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(estudiantes)</span></code></pre></div>
+<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb357-1"><a href="data-frames.html#cb357-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear un DataFrame de estudiantes</span></span>
+<span id="cb357-2"><a href="data-frames.html#cb357-2" aria-hidden="true" tabindex="-1"></a>estudiantes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb357-3"><a href="data-frames.html#cb357-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;María&quot;</span>, <span class="st">&quot;Pedro&quot;</span>, <span class="st">&quot;Laura&quot;</span>),</span>
+<span id="cb357-4"><a href="data-frames.html#cb357-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">edad =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">23</span>),</span>
+<span id="cb357-5"><a href="data-frames.html#cb357-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">puntaje =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">88</span>, <span class="dv">92</span>)</span>
+<span id="cb357-6"><a href="data-frames.html#cb357-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb357-7"><a href="data-frames.html#cb357-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb357-8"><a href="data-frames.html#cb357-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Ver el DataFrame</span></span>
+<span id="cb357-9"><a href="data-frames.html#cb357-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(estudiantes)</span></code></pre></div>
 <pre><code>##   nombre edad puntaje
 ## 1   Juan   20      85
 ## 2  María   22      90
@@ -410,31 +410,31 @@ div.csl-indent {
 ## 4  Laura   23      92</code></pre>
 <p>Para crear un Dataframe en R, puedes utilizar la función <code>data.frame()</code>.
 Por ejemplo, para crear un Dataframe con información del genoma de algunos microorganismos, podrías escribir lo siguiente:</p>
-<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="data-frames.html#cb361-1" aria-hidden="true" tabindex="-1"></a>dna_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb361-2"><a href="data-frames.html#cb361-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">secuencia =</span> <span class="fu">c</span>(<span class="st">&quot;ATCGATCG&quot;</span>, <span class="st">&quot;GCTAGCTA&quot;</span>, <span class="st">&quot;TTAAGGCT&quot;</span>),</span>
-<span id="cb361-3"><a href="data-frames.html#cb361-3" aria-hidden="true" tabindex="-1"></a>  tamaño <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>),</span>
-<span id="cb361-4"><a href="data-frames.html#cb361-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">contenido_GC =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>)</span>
-<span id="cb361-5"><a href="data-frames.html#cb361-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb361-6"><a href="data-frames.html#cb361-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb361-7"><a href="data-frames.html#cb361-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(dna_data)</span></code></pre></div>
+<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="data-frames.html#cb359-1" aria-hidden="true" tabindex="-1"></a>dna_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb359-2"><a href="data-frames.html#cb359-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">secuencia =</span> <span class="fu">c</span>(<span class="st">&quot;ATCGATCG&quot;</span>, <span class="st">&quot;GCTAGCTA&quot;</span>, <span class="st">&quot;TTAAGGCT&quot;</span>),</span>
+<span id="cb359-3"><a href="data-frames.html#cb359-3" aria-hidden="true" tabindex="-1"></a>  tamaño <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>),</span>
+<span id="cb359-4"><a href="data-frames.html#cb359-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">contenido_GC =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>)</span>
+<span id="cb359-5"><a href="data-frames.html#cb359-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb359-6"><a href="data-frames.html#cb359-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb359-7"><a href="data-frames.html#cb359-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(dna_data)</span></code></pre></div>
 <pre><code>##   secuencia tamaño contenido_GC
 ## 1  ATCGATCG      8          0.5
 ## 2  GCTAGCTA      8          0.4
 ## 3  TTAAGGCT      8          0.3</code></pre>
 <p><strong>NOTA</strong> También puedes emplear <code>View()</code> para visualizar el DataFrame.</p>
-<div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="data-frames.html#cb363-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(dna_data)</span></code></pre></div>
+<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="data-frames.html#cb361-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(dna_data)</span></code></pre></div>
 <p>En este ejemplo, el dataframe tiene tres columnas: “secuencia”, “tamaño” y “contenido_GC”. La columna “secuencia” contiene cadenas de caracteres (strings) que representan las bases del ADN, mientras que las otras dos columnas contienen valores numéricos.</p>
 </div>
 <div id="acceder-a-los-datos-de-un-dataframe" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> Acceder a los datos de un dataframe<a href="data-frames.html#acceder-a-los-datos-de-un-dataframe" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Para seleccionar elementos o acceder a algún dato de un dataframe, se hace de forma análoga a las matrices, es decir, se utiliza el operador de subíndice <code>[]</code>.</p>
 <p>Por ejemplo, para acceder a la segunda fila de la columna “secuencia” en el Dataframe “dna_data”, se puede escribir lo siguiente:</p>
-<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="data-frames.html#cb364-1" aria-hidden="true" tabindex="-1"></a>dna_data[<span class="dv">2</span>, <span class="st">&quot;secuencia&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="data-frames.html#cb362-1" aria-hidden="true" tabindex="-1"></a>dna_data[<span class="dv">2</span>, <span class="st">&quot;secuencia&quot;</span>]</span></code></pre></div>
 <pre><code>## [1] &quot;GCTAGCTA&quot;</code></pre>
 <p>Esto devolvería la cadena de caracteres “GCTAGCTA”.</p>
 <p>También puedes acceder a varias filas o columnas a la vez.
 Por ejemplo, para acceder a las primeras dos filas de las columnas “tamaño” y “contenido_GC” en el Dataframe “dna_data”, podrías escribir lo siguiente:</p>
-<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="data-frames.html#cb366-1" aria-hidden="true" tabindex="-1"></a>dna_data[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="fu">c</span>(<span class="st">&quot;tamaño&quot;</span>, <span class="st">&quot;contenido_GC&quot;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="data-frames.html#cb364-1" aria-hidden="true" tabindex="-1"></a>dna_data[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="fu">c</span>(<span class="st">&quot;tamaño&quot;</span>, <span class="st">&quot;contenido_GC&quot;</span>)]</span></code></pre></div>
 <pre><code>##   tamaño contenido_GC
 ## 1      8          0.5
 ## 2      8          0.4</code></pre>
@@ -444,10 +444,10 @@ Por ejemplo, para acceder a las primeras dos filas de las columnas “tamaño”
 <h2><span class="header-section-number">7.3</span> Agregar y eliminar filas y columnas en un Dataframe en R<a href="data-frames.html#agregar-y-eliminar-filas-y-columnas-en-un-dataframe-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Para agregar una nueva columna a un Dataframe en R, puedes utilizar el operador de asignación <code>&lt;-</code>.
 Por ejemplo, para agregar una columna que represente la Temperatura de Melting (o Fusión) en el Dataframe “dna_data”, podrías escribir lo siguiente:</p>
-<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="data-frames.html#cb368-1" aria-hidden="true" tabindex="-1"></a>dna_data<span class="sc">$</span>temperatura_melting <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">24</span>, <span class="dv">24</span>, <span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="data-frames.html#cb366-1" aria-hidden="true" tabindex="-1"></a>dna_data<span class="sc">$</span>temperatura_melting <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">24</span>, <span class="dv">24</span>, <span class="dv">20</span>)</span></code></pre></div>
 <p>Esto crearía una nueva columna llamada “temperatura_melting” en el Dataframe “dna_data” y la inicializaría con los valores proporcionados.</p>
 <p>Para eliminar una columna de un Dataframe en R, puedes utilizar el operador de subíndice<code>[]</code> con un valor nulo para la columna que deseas eliminar. Por ejemplo, para eliminar la columna “temperatura_melting” del Dataframe “dna_data”, podrías escribir lo siguiente:</p>
-<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="data-frames.html#cb369-1" aria-hidden="true" tabindex="-1"></a>dna_data<span class="sc">$</span>temperatura_melting <span class="ot">&lt;-</span> <span class="cn">NULL</span></span></code></pre></div>
+<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="data-frames.html#cb367-1" aria-hidden="true" tabindex="-1"></a>dna_data<span class="sc">$</span>temperatura_melting <span class="ot">&lt;-</span> <span class="cn">NULL</span></span></code></pre></div>
 <p>Para agregar una nueva fila a un Dataframe en R, puedes utilizar la función <code>rbind()</code>. ¿También se puede aplicar <code>cbind()</code> en Dataframe?</p>
 <p><strong>Ejercicio</strong>
 Empleando la siguiente fórmula para calcular la Temperatura de Fusión: <code>Tm=4(G+C)+2(A+T)</code>, diseña una secuencia que cumpla con una Tm de 55°. Agrega sus características (secuencia, tamaño, cantidad GC &amp; Tm) en una nueva fila. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe <code>dna_data</code> como base.</p>

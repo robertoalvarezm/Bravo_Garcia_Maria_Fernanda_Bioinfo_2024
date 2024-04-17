@@ -391,22 +391,22 @@ div.csl-indent {
 <div id="importar-un-archivo-csv-en-r" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">Chapter 8</span> Importar un archivo csv en R<a href="importar-un-archivo-csv-en-r.html#importar-un-archivo-csv-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Un archivo csv (Comma Separated Values) es un archivo de texto que contiene datos en formato tabular, donde cada fila representa un registro y cada columna representa una variable. Para importar un archivo CSV en R, puedes utilizar la función <code>read.csv()</code>. Por ejemplo, si tienes un archivo llamado “ventas.csv” en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:</p>
-<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="importar-un-archivo-csv-en-r.html#cb370-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read.csv(&quot;ventas.csv&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="importar-un-archivo-csv-en-r.html#cb368-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read.csv(&quot;ventas.csv&quot;)</span></span></code></pre></div>
 <p>Esto creará un Dataframe llamado “ventas” en R, que contendrá los datos del archivo CSV.</p>
 <p>Si el archivo CSV utiliza un separador de campos diferente a la coma, puedes utilizar la función read.csv2() en su lugar. Por ejemplo, si el archivo CSV utiliza un punto y coma como separador de campos, puedes importarlo de la siguiente manera:</p>
-<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="importar-un-archivo-csv-en-r.html#cb371-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read.csv2(&quot;ventas.csv&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="importar-un-archivo-csv-en-r.html#cb369-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read.csv2(&quot;ventas.csv&quot;)</span></span></code></pre></div>
 <div id="importar-un-archivo-tsv-en-r" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Importar un archivo TSV en R<a href="importar-un-archivo-csv-en-r.html#importar-un-archivo-tsv-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Un archivo TSV (Tab Separated Values) es similar a un archivo CSV, pero utiliza <strong>tabulaciones</strong> en lugar de comas para separar los campos. Para importar un archivo TSV en R, puedes utilizar la función read.delim(). Por ejemplo, si tienes un archivo llamado “ventas.tsv” en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:</p>
-<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="importar-un-archivo-csv-en-r.html#cb372-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read.delim(&quot;ventas.tsv&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="importar-un-archivo-csv-en-r.html#cb370-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read.delim(&quot;ventas.tsv&quot;)</span></span></code></pre></div>
 <p>Esto creará un Dataframe llamado “ventas” en R, que contendrá los datos del archivo TSV.</p>
 <p>Si el archivo TSV utiliza un separador de campos diferente a la tabulación, puedes utilizar la función <code>read.delim2()</code> en su lugar.</p>
 </div>
 <div id="importar-un-archivo-excel-en-r" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Importar un archivo Excel en R<a href="importar-un-archivo-csv-en-r.html#importar-un-archivo-excel-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Un archivo de Excel es un formato de archivo popular para almacenar datos en formato tabular. Para importar un archivo de Excel en R, puedes utilizar la función readxl::read_excel() del paquete “readxl”. Por ejemplo, si tienes un archivo llamado “ventas.xlsx” en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:</p>
-<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="importar-un-archivo-csv-en-r.html#cb373-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb373-2"><a href="importar-un-archivo-csv-en-r.html#cb373-2" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read_excel(&quot;ventas.xlsx&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="importar-un-archivo-csv-en-r.html#cb371-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb371-2"><a href="importar-un-archivo-csv-en-r.html#cb371-2" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read_excel(&quot;ventas.xlsx&quot;)</span></span></code></pre></div>
 
 </div>
 </div>
