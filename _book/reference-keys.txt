@@ -1,5 +1,6 @@
 notas-de-r-básico
 intro
+introducción-a-r-para-estudiantes-de-microbiología
 ventajas-de-aprender-r-para-estudiantes-de-microbiología
 análisis-estadístico-avanzado
 visualización-de-datos
@@ -48,8 +49,8 @@ ejercicio-temperaturas-de-incubación
 matrices
 creación-de-matrices
 dimensiones-de-un-matriz
-elementos-de-una-matriz
 creación-de-matriz-vacia
+operaciones-rbind-y-cbind-en-r-para-matrices
 uso-de-rbind-para-unir-matrices-por-filas
 uso-de-cbind-para-unir-matrices-por-columnas
 operaciones-con-matrices
@@ -66,6 +67,7 @@ data-frames
 crear-un-dataframe-en-r
 acceder-a-los-datos-de-un-dataframe
 agregar-y-eliminar-filas-y-columnas-en-un-dataframe-en-r
+importar-un-archivo-csv-en-r
 importar-un-archivo-tsv-en-r
 importar-un-archivo-excel-en-r
 Estructuras_de_seleccion
@@ -101,7 +103,6 @@ introducción
 configuración-inicial
 creación-de-un-gráfico-básico
 personalización-de-gráficos
-ejercicios-sugeridos
 soluciones-a-los-ejercicios-sugeridos
 ejercicios-resueltos
 ejercicio-1-gráfico-de-dispersión-básico
@@ -124,7 +125,6 @@ introducción-1
 configuración-inicial-1
 creación-de-un-gráfico-básico-1
 personalización-de-gráficos-1
-ejercicios-sugeridos-1
 soluciones-a-los-ejercicios-sugeridos-1
 ejercicios-resueltos-1
 ejercicio-1-gráfico-de-dispersión-básico-1

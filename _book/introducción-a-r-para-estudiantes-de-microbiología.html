@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Introducción a R para Estudiantes de Microbiología | Notas de R</title>
+  <meta name="description" content="Estas son las notas de un curso básico de R." />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Introducción a R para Estudiantes de Microbiología | Notas de R" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Estas son las notas de un curso básico de R." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Introducción a R para Estudiantes de Microbiología | Notas de R" />
+  
+  <meta name="twitter:description" content="Estas son las notas de un curso básico de R." />
+  
+
+<meta name="author" content="Roberto Álvarez" />
+
+
+<meta name="date" content="2024-04-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="estructura.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Notas de R básico</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introducción a R</a></li>
+<li class="chapter" data-level="3" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html"><i class="fa fa-check"></i><b>3</b> Introducción a R para Estudiantes de Microbiología</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#ventajas-de-aprender-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>3.1</b> Ventajas de Aprender R para Estudiantes de Microbiología</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#análisis-estadístico-avanzado"><i class="fa fa-check"></i><b>3.1.1</b> 1. Análisis Estadístico Avanzado</a></li>
+<li class="chapter" data-level="3.1.2" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#visualización-de-datos"><i class="fa fa-check"></i><b>3.1.2</b> 2. Visualización de Datos</a></li>
+<li class="chapter" data-level="3.1.3" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#reproducibilidad-y-documentación"><i class="fa fa-check"></i><b>3.1.3</b> 3. Reproducibilidad y Documentación</a></li>
+<li class="chapter" data-level="3.1.4" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#acceso-a-una-comunidad-activa"><i class="fa fa-check"></i><b>3.1.4</b> 4. Acceso a una Comunidad Activa</a></li>
+<li class="chapter" data-level="3.1.5" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#flexibilidad-y-personalización"><i class="fa fa-check"></i><b>3.1.5</b> 5. Flexibilidad y Personalización</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#paquetes-o-bibliotecas"><i class="fa fa-check"></i><b>3.2</b> Paquetes o bibliotecas</a></li>
+<li class="chapter" data-level="3.3" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#ayuda-en-r"><i class="fa fa-check"></i><b>3.3</b> Ayuda en R</a></li>
+<li class="chapter" data-level="3.4" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#expresiones-y-asignaciones"><i class="fa fa-check"></i><b>3.4</b> Expresiones y asignaciones</a></li>
+<li class="chapter" data-level="3.5" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#movimiento-entre-directorios"><i class="fa fa-check"></i><b>3.5</b> Movimiento entre directorios</a></li>
+<li class="chapter" data-level="3.6" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#operaciones-aritméticas"><i class="fa fa-check"></i><b>3.6</b> Operaciones aritméticas</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#prioridad-en-las-operaciones"><i class="fa fa-check"></i><b>3.6.1</b> Prioridad en las operaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#tipos-de-valores-en-r"><i class="fa fa-check"></i><b>3.7</b> Tipos de valores en R</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#valores-booleanos"><i class="fa fa-check"></i><b>3.7.1</b> Valores booleanos</a></li>
+<li class="chapter" data-level="3.7.2" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#caracter"><i class="fa fa-check"></i><b>3.7.2</b> Caracter</a></li>
+<li class="chapter" data-level="3.7.3" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#enteros-y-números-numeric"><i class="fa fa-check"></i><b>3.7.3</b> Enteros y números (numeric)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="estructura.html"><a href="estructura.html"><i class="fa fa-check"></i><b>4</b> Vectores</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="estructura.html"><a href="estructura.html#contenido"><i class="fa fa-check"></i><b>4.1</b> Contenido</a></li>
+<li class="chapter" data-level="4.2" data-path="estructura.html"><a href="estructura.html#vectors"><i class="fa fa-check"></i><b>4.2</b> Vectores en R</a></li>
+<li class="chapter" data-level="4.3" data-path="estructura.html"><a href="estructura.html#definición"><i class="fa fa-check"></i><b>4.3</b> Definición</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="estructura.html"><a href="estructura.html#definición-extensiva"><i class="fa fa-check"></i><b>4.3.1</b> Definición extensiva</a></li>
+<li class="chapter" data-level="4.3.2" data-path="estructura.html"><a href="estructura.html#definición-en-secuencia"><i class="fa fa-check"></i><b>4.3.2</b> Definición en secuencia</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="estructura.html"><a href="estructura.html#longitud-de-un-vector"><i class="fa fa-check"></i><b>4.4</b> Longitud de un vector</a></li>
+<li class="chapter" data-level="4.5" data-path="estructura.html"><a href="estructura.html#elementos-de-un-vector"><i class="fa fa-check"></i><b>4.5</b> Elementos de un vector</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="estructura.html"><a href="estructura.html#elementos-consecutivos"><i class="fa fa-check"></i><b>4.5.1</b> Elementos consecutivos</a></li>
+<li class="chapter" data-level="4.5.2" data-path="estructura.html"><a href="estructura.html#elementos-no-consecutivos-de-un-vector"><i class="fa fa-check"></i><b>4.5.2</b> Elementos no consecutivos de un vector</a></li>
+<li class="chapter" data-level="4.5.3" data-path="estructura.html"><a href="estructura.html#excluir-elementos-de-un-vector"><i class="fa fa-check"></i><b>4.5.3</b> Excluir elementos de un vector</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="estructura.html"><a href="estructura.html#reasignar-elementos-de-un-vector"><i class="fa fa-check"></i><b>4.6</b> Reasignar elementos de un vector</a></li>
+<li class="chapter" data-level="4.7" data-path="estructura.html"><a href="estructura.html#repetición-de-elementos-de-un-vector"><i class="fa fa-check"></i><b>4.7</b> Repetición de elementos de un vector</a></li>
+<li class="chapter" data-level="4.8" data-path="estructura.html"><a href="estructura.html#uso-de-funciones-any-y-all"><i class="fa fa-check"></i><b>4.8</b> Uso de funciones <code>any()</code> y <code>all()</code></a></li>
+<li class="chapter" data-level="4.9" data-path="estructura.html"><a href="estructura.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.9</b> Operaciones con vectores</a>
+<ul>
+<li class="chapter" data-level="4.9.1" data-path="estructura.html"><a href="estructura.html#operaciones-aritméticas-1"><i class="fa fa-check"></i><b>4.9.1</b> Operaciones aritméticas</a></li>
+</ul></li>
+<li class="chapter" data-level="4.10" data-path="estructura.html"><a href="estructura.html#operaciones-con-un-comando"><i class="fa fa-check"></i><b>4.10</b> Operaciones con un comando</a></li>
+<li class="chapter" data-level="4.11" data-path="estructura.html"><a href="estructura.html#gráficos-con-vectores"><i class="fa fa-check"></i><b>4.11</b> Gráficos con vectores</a></li>
+<li class="chapter" data-level="4.12" data-path="estructura.html"><a href="estructura.html#vectores-con-nombre"><i class="fa fa-check"></i><b>4.12</b> Vectores con nombre</a>
+<ul>
+<li class="chapter" data-level="4.12.1" data-path="estructura.html"><a href="estructura.html#tamaños-de-genomas"><i class="fa fa-check"></i><b>4.12.1</b> Tamaños de genomas</a></li>
+</ul></li>
+<li class="chapter" data-level="4.13" data-path="estructura.html"><a href="estructura.html#cómo-lidiar-con-las-nas"><i class="fa fa-check"></i><b>4.13</b> ¿Cómo lidiar con las NAs ?</a></li>
+<li class="chapter" data-level="4.14" data-path="estructura.html"><a href="estructura.html#filtrado-de-elementos-de-un-vector"><i class="fa fa-check"></i><b>4.14</b> Filtrado de elementos de un vector</a>
+<ul>
+<li class="chapter" data-level="4.14.1" data-path="estructura.html"><a href="estructura.html#filtrado-con-subset"><i class="fa fa-check"></i><b>4.14.1</b> Filtrado con <code>subset()</code></a></li>
+<li class="chapter" data-level="4.14.2" data-path="estructura.html"><a href="estructura.html#la-función-de-selección-which"><i class="fa fa-check"></i><b>4.14.2</b> La función de selección <code>which()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.15" data-path="estructura.html"><a href="estructura.html#cómo-podemos-ver-si-dos-vectores-son-iguales"><i class="fa fa-check"></i><b>4.15</b> ¿Cómo podemos ver si dos vectores son iguales?</a>
+<ul>
+<li class="chapter" data-level="4.15.1" data-path="estructura.html"><a href="estructura.html#factor"><i class="fa fa-check"></i><b>4.15.1</b> Factor</a></li>
+<li class="chapter" data-level="4.15.2" data-path="estructura.html"><a href="estructura.html#ejercicio-temperaturas-de-incubación"><i class="fa fa-check"></i><b>4.15.2</b> Ejercicio: Temperaturas de Incubación</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>5</b> Matrices</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="matrices.html"><a href="matrices.html#creación-de-matrices"><i class="fa fa-check"></i><b>5.1</b> Creación de matrices</a></li>
+<li class="chapter" data-level="5.2" data-path="matrices.html"><a href="matrices.html#dimensiones-de-un-matriz"><i class="fa fa-check"></i><b>5.2</b> Dimensiones de un matriz</a></li>
+<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#creación-de-matriz-vacia"><i class="fa fa-check"></i><b>5.3</b> Creación de matriz “vacia”</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html"><i class="fa fa-check"></i><b>6</b> Operaciones rbind y cbind en R para Matrices</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#uso-de-rbind-para-unir-matrices-por-filas"><i class="fa fa-check"></i><b>6.1</b> Uso de <code>rbind()</code> para unir matrices por filas</a></li>
+<li class="chapter" data-level="6.2" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#uso-de-cbind-para-unir-matrices-por-columnas"><i class="fa fa-check"></i><b>6.2</b> Uso de cbind() para unir matrices por columnas</a></li>
+<li class="chapter" data-level="6.3" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>6.3</b> Operaciones con matrices</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#multiplicación-de-un-escalar-con-una-matriz"><i class="fa fa-check"></i><b>6.3.1</b> Multiplicación de un escalar con una matriz</a></li>
+<li class="chapter" data-level="6.3.2" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#suma-de-dos-matrices"><i class="fa fa-check"></i><b>6.3.2</b> Suma de dos matrices</a></li>
+<li class="chapter" data-level="6.3.3" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#multiplicación-de-matrices"><i class="fa fa-check"></i><b>6.3.3</b> Multiplicación de matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#uso-de-la-función-t-para-transponer-una-matriz"><i class="fa fa-check"></i><b>6.4</b> Uso de la función <code>t()</code> para transponer una matriz</a></li>
+<li class="chapter" data-level="6.5" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#seleccionar-elementos-de-matrices"><i class="fa fa-check"></i><b>6.5</b> Seleccionar elementos de matrices</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#seleccionar-todoa-una-renglóncolumna"><i class="fa fa-check"></i><b>6.5.1</b> Seleccionar todo(a) un(a) renglón(columna)</a></li>
+<li class="chapter" data-level="6.5.2" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#selecccionar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>6.5.2</b> Selecccionar elementos de una matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#nombres-a-renglones-y-columnas"><i class="fa fa-check"></i><b>6.6</b> Nombres a renglones y columnas</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#ejercicios"><i class="fa fa-check"></i><b>6.6.1</b> Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>7</b> Data Frames</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="data-frames.html"><a href="data-frames.html#crear-un-dataframe-en-r"><i class="fa fa-check"></i><b>7.1</b> Crear un Dataframe en R</a></li>
+<li class="chapter" data-level="7.2" data-path="data-frames.html"><a href="data-frames.html#acceder-a-los-datos-de-un-dataframe"><i class="fa fa-check"></i><b>7.2</b> Acceder a los datos de un dataframe</a></li>
+<li class="chapter" data-level="7.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-filas-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>7.3</b> Agregar y eliminar filas y columnas en un Dataframe en R</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="importar-un-archivo-csv-en-r.html"><a href="importar-un-archivo-csv-en-r.html"><i class="fa fa-check"></i><b>8</b> Importar un archivo csv en R</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="importar-un-archivo-csv-en-r.html"><a href="importar-un-archivo-csv-en-r.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>8.1</b> Importar un archivo TSV en R</a></li>
+<li class="chapter" data-level="8.2" data-path="importar-un-archivo-csv-en-r.html"><a href="importar-un-archivo-csv-en-r.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>8.2</b> Importar un archivo Excel en R</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html"><i class="fa fa-check"></i><b>9</b> Estructuras de selección</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-si-condicional"><i class="fa fa-check"></i><b>9.1</b> If (si condicional)</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#sintaxis"><i class="fa fa-check"></i><b>9.1.1</b> Sintaxis</a></li>
+<li class="chapter" data-level="9.1.2" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#errores-comunes-en-el-if"><i class="fa fa-check"></i><b>9.1.2</b> Errores comunes en el <code>if</code></a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#combinación-de-operadores-booleanos"><i class="fa fa-check"></i><b>9.2</b> Combinación de operadores booleanos</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#and"><i class="fa fa-check"></i><b>9.2.1</b> And (&amp;)</a></li>
+<li class="chapter" data-level="9.2.2" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#or"><i class="fa fa-check"></i><b>9.2.2</b> OR (|)</a></li>
+<li class="chapter" data-level="9.2.3" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejemplos-de-combinaciones"><i class="fa fa-check"></i><b>9.2.3</b> Ejemplos de combinaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicio"><i class="fa fa-check"></i><b>9.3</b> Ejercicio</a></li>
+<li class="chapter" data-level="9.4" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-si-de-otro-modo"><i class="fa fa-check"></i><b>9.4</b> If … else (si … de otro modo)</a></li>
+<li class="chapter" data-level="9.5" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ifelse"><i class="fa fa-check"></i><b>9.5</b> ifelse</a></li>
+<li class="chapter" data-level="9.6" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-if-else-si-si-no-si-si-no-si-si-no"><i class="fa fa-check"></i><b>9.6</b> If … else if … else ( si, si no si , si no si, si no)</a></li>
+<li class="chapter" data-level="9.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-2"><i class="fa fa-check"></i><b>9.7</b> Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>10</b> Funciones en R</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="functions.html"><a href="functions.html#sintaxis-básica-de-una-función-en-r"><i class="fa fa-check"></i><b>10.1</b> Sintaxis básica de una función en R</a></li>
+<li class="chapter" data-level="10.2" data-path="functions.html"><a href="functions.html#ejemplo-de-función-definida-por-el-usuario-en-r"><i class="fa fa-check"></i><b>10.2</b> Ejemplo de función definida por el usuario en R</a></li>
+<li class="chapter" data-level="10.3" data-path="functions.html"><a href="functions.html#ejemplo-de-función-con-argumentos-por-defecto-en-r"><i class="fa fa-check"></i><b>10.3</b> Ejemplo de función con argumentos por defecto en R</a></li>
+<li class="chapter" data-level="10.4" data-path="functions.html"><a href="functions.html#definir-una-función-con-un-parámetro-opcional"><i class="fa fa-check"></i><b>10.4</b> Definir una función con un parámetro opcional</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="functions.html"><a href="functions.html#llamar-a-la-función-saludar-sin-proporcionar-el-parámetro-opcional"><i class="fa fa-check"></i><b>10.4.1</b> Llamar a la función saludar sin proporcionar el parámetro opcional</a></li>
+<li class="chapter" data-level="10.4.2" data-path="functions.html"><a href="functions.html#llamar-a-la-función-saludar-proporcionando-el-parámetro-opcional"><i class="fa fa-check"></i><b>10.4.2</b> Llamar a la función saludar proporcionando el parámetro opcional</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-área-de-un-círculo"><i class="fa fa-check"></i><b>10.5</b> Definir una función para calcular el área de un círculo</a></li>
+<li class="chapter" data-level="10.6" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-factorial-de-un-número"><i class="fa fa-check"></i><b>10.6</b> Definir una función para calcular el factorial de un número</a></li>
+<li class="chapter" data-level="10.7" data-path="functions.html"><a href="functions.html#definir-una-función-para-verificar-si-un-número-es-primo"><i class="fa fa-check"></i><b>10.7</b> Definir una función para verificar si un número es primo</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="rprojects.html"><a href="rprojects.html"><i class="fa fa-check"></i><b>11</b> RProjects</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="rprojects.html"><a href="rprojects.html#introducción-a-r-projects-en-rstudio"><i class="fa fa-check"></i><b>11.1</b> Introducción a R Projects en RStudio</a></li>
+<li class="chapter" data-level="11.2" data-path="rprojects.html"><a href="rprojects.html#gestión-de-proyectos-organización-y-buenas-prácticas"><i class="fa fa-check"></i><b>11.2</b> Gestión de proyectos: organización y buenas prácticas</a></li>
+<li class="chapter" data-level="11.3" data-path="rprojects.html"><a href="rprojects.html#colaboración-y-control-de-versiones-con-git-y-github"><i class="fa fa-check"></i><b>11.3</b> Colaboración y control de versiones con Git y GitHub</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html"><i class="fa fa-check"></i><b>12</b> Visualización de datos con ggplot2</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#introducción"><i class="fa fa-check"></i><b>12.1</b> Introducción</a></li>
+<li class="chapter" data-level="12.2" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#configuración-inicial"><i class="fa fa-check"></i><b>12.2</b> Configuración inicial</a></li>
+<li class="chapter" data-level="12.3" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#creación-de-un-gráfico-básico"><i class="fa fa-check"></i><b>12.3</b> Creación de un gráfico básico</a></li>
+<li class="chapter" data-level="12.4" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#personalización-de-gráficos"><i class="fa fa-check"></i><b>12.4</b> Personalización de gráficos</a></li>
+<li class="chapter" data-level="12.5" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#soluciones-a-los-ejercicios-sugeridos"><i class="fa fa-check"></i><b>12.5</b> Soluciones a los ejercicios sugeridos</a></li>
+<li class="chapter" data-level="12.6" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicios-resueltos"><i class="fa fa-check"></i><b>12.6</b> Ejercicios resueltos</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-1-gráfico-de-dispersión-básico"><i class="fa fa-check"></i><b>12.6.1</b> Ejercicio 1: Gráfico de dispersión básico</a></li>
+<li class="chapter" data-level="12.6.2" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-2-diferenciación-por-especie"><i class="fa fa-check"></i><b>12.6.2</b> Ejercicio 2: Diferenciación por especie</a></li>
+<li class="chapter" data-level="12.6.3" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-3-histograma-de-masa-corporal"><i class="fa fa-check"></i><b>12.6.3</b> Ejercicio 3: Histograma de masa corporal</a></li>
+<li class="chapter" data-level="12.6.4" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-4-barras-de-error-por-especie"><i class="fa fa-check"></i><b>12.6.4</b> Ejercicio 4: Barras de error por especie</a></li>
+<li class="chapter" data-level="12.6.5" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-6-facetado-por-islas"><i class="fa fa-check"></i><b>12.6.5</b> Ejercicio 6: Facetado por islas</a></li>
+<li class="chapter" data-level="12.6.6" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-7-densidad-de-masa-corporal"><i class="fa fa-check"></i><b>12.6.6</b> Ejercicio 7: Densidad de masa corporal</a></li>
+<li class="chapter" data-level="12.6.7" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen"><i class="fa fa-check"></i><b>12.6.7</b> Ejercicio 8: Gráfico de violín de la longitud del culmen</a></li>
+<li class="chapter" data-level="12.6.8" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-9-puntos-superpuestos-en-boxplot"><i class="fa fa-check"></i><b>12.6.8</b> Ejercicio 9: Puntos superpuestos en boxplot</a></li>
+<li class="chapter" data-level="12.6.9" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo"><i class="fa fa-check"></i><b>12.6.9</b> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo</a></li>
+<li class="chapter" data-level="12.6.10" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto"><i class="fa fa-check"></i><b>12.6.10</b> Ejercicio 11: Gráfico de dispersión con tamaño de punto</a></li>
+<li class="chapter" data-level="12.6.11" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-12-barras-apiladas-de-especies-por-isla"><i class="fa fa-check"></i><b>12.6.11</b> Ejercicio 12: Barras apiladas de especies por isla</a></li>
+<li class="chapter" data-level="12.6.12" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-13-gráfico-de-correlación-con-texto"><i class="fa fa-check"></i><b>12.6.12</b> Ejercicio 13: Gráfico de correlación con texto</a></li>
+<li class="chapter" data-level="12.6.13" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen"><i class="fa fa-check"></i><b>12.6.13</b> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen</a></li>
+<li class="chapter" data-level="12.6.14" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables"><i class="fa fa-check"></i><b>12.6.14</b> Ejercicio 15: Gráfico de interacción entre tres variables</a></li>
+<li class="chapter" data-level="12.6.15" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicios-propuestos"><i class="fa fa-check"></i><b>12.6.15</b> Ejercicios propuestos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html"><i class="fa fa-check"></i><b>13</b> Visualización de datos con ggplot2</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#introducción-1"><i class="fa fa-check"></i><b>13.1</b> Introducción</a></li>
+<li class="chapter" data-level="13.2" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#configuración-inicial-1"><i class="fa fa-check"></i><b>13.2</b> Configuración inicial</a></li>
+<li class="chapter" data-level="13.3" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#creación-de-un-gráfico-básico-1"><i class="fa fa-check"></i><b>13.3</b> Creación de un gráfico básico</a></li>
+<li class="chapter" data-level="13.4" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#personalización-de-gráficos-1"><i class="fa fa-check"></i><b>13.4</b> Personalización de gráficos</a></li>
+<li class="chapter" data-level="13.5" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#soluciones-a-los-ejercicios-sugeridos-1"><i class="fa fa-check"></i><b>13.5</b> Soluciones a los ejercicios sugeridos</a></li>
+<li class="chapter" data-level="13.6" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicios-resueltos-1"><i class="fa fa-check"></i><b>13.6</b> Ejercicios resueltos</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-1-gráfico-de-dispersión-básico-1"><i class="fa fa-check"></i><b>13.6.1</b> Ejercicio 1: Gráfico de dispersión básico</a></li>
+<li class="chapter" data-level="13.6.2" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-2-diferenciación-por-especie-1"><i class="fa fa-check"></i><b>13.6.2</b> Ejercicio 2: Diferenciación por especie</a></li>
+<li class="chapter" data-level="13.6.3" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-3-histograma-de-masa-corporal-1"><i class="fa fa-check"></i><b>13.6.3</b> Ejercicio 3: Histograma de masa corporal</a></li>
+<li class="chapter" data-level="13.6.4" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-4-barras-de-error-por-especie-1"><i class="fa fa-check"></i><b>13.6.4</b> Ejercicio 4: Barras de error por especie</a></li>
+<li class="chapter" data-level="13.6.5" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-6-facetado-por-islas-1"><i class="fa fa-check"></i><b>13.6.5</b> Ejercicio 6: Facetado por islas</a></li>
+<li class="chapter" data-level="13.6.6" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-7-densidad-de-masa-corporal-1"><i class="fa fa-check"></i><b>13.6.6</b> Ejercicio 7: Densidad de masa corporal</a></li>
+<li class="chapter" data-level="13.6.7" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen-1"><i class="fa fa-check"></i><b>13.6.7</b> Ejercicio 8: Gráfico de violín de la longitud del culmen</a></li>
+<li class="chapter" data-level="13.6.8" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-9-puntos-superpuestos-en-boxplot-1"><i class="fa fa-check"></i><b>13.6.8</b> Ejercicio 9: Puntos superpuestos en boxplot</a></li>
+<li class="chapter" data-level="13.6.9" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo-1"><i class="fa fa-check"></i><b>13.6.9</b> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo</a></li>
+<li class="chapter" data-level="13.6.10" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto-1"><i class="fa fa-check"></i><b>13.6.10</b> Ejercicio 11: Gráfico de dispersión con tamaño de punto</a></li>
+<li class="chapter" data-level="13.6.11" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-12-barras-apiladas-de-especies-por-isla-1"><i class="fa fa-check"></i><b>13.6.11</b> Ejercicio 12: Barras apiladas de especies por isla</a></li>
+<li class="chapter" data-level="13.6.12" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-13-gráfico-de-correlación-con-texto-1"><i class="fa fa-check"></i><b>13.6.12</b> Ejercicio 13: Gráfico de correlación con texto</a></li>
+<li class="chapter" data-level="13.6.13" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen-1"><i class="fa fa-check"></i><b>13.6.13</b> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen</a></li>
+<li class="chapter" data-level="13.6.14" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables-1"><i class="fa fa-check"></i><b>13.6.14</b> Ejercicio 15: Gráfico de interacción entre tres variables</a></li>
+<li class="chapter" data-level="13.6.15" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicios-propuestos-1"><i class="fa fa-check"></i><b>13.6.15</b> Ejercicios propuestos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="Listas.html"><a href="Listas.html"><i class="fa fa-check"></i><b>14</b> Listas</a>
+<ul>
+<li class="chapter" data-level="14.0.1" data-path="Listas.html"><a href="Listas.html#acceso-por-nombre"><i class="fa fa-check"></i><b>14.0.1</b> Acceso por Nombre</a></li>
+<li class="chapter" data-level="14.1" data-path="Listas.html"><a href="Listas.html#ejercicios-3"><i class="fa fa-check"></i><b>14.1</b> Ejercicios</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="Listas.html"><a href="Listas.html#ejercicios-propuestos-con-listas"><i class="fa fa-check"></i><b>14.1.1</b> Ejercicios Propuestos con listas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>15</b> Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notas de R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introducción-a-r-para-estudiantes-de-microbiología" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Introducción a R para Estudiantes de Microbiología<a href="introducción-a-r-para-estudiantes-de-microbiología.html#introducción-a-r-para-estudiantes-de-microbiología" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>R es un lenguaje de programación y un entorno de desarrollo estadístico ampliamente utilizado en la comunidad científica, incluida la microbiología. Este poderoso recurso ofrece una variedad de ventajas y funcionalidades que pueden beneficiar significativamente a los estudiantes de microbiología en su investigación y análisis de datos.</p>
+<div id="ventajas-de-aprender-r-para-estudiantes-de-microbiología" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Ventajas de Aprender R para Estudiantes de Microbiología<a href="introducción-a-r-para-estudiantes-de-microbiología.html#ventajas-de-aprender-r-para-estudiantes-de-microbiología" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="análisis-estadístico-avanzado" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> 1. Análisis Estadístico Avanzado<a href="introducción-a-r-para-estudiantes-de-microbiología.html#análisis-estadístico-avanzado" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>R proporciona una amplia gama de paquetes y herramientas estadísticas que permiten a los estudiantes de microbiología realizar análisis avanzados de datos, desde pruebas de hipótesis básicas hasta modelos de regresión y análisis multivariados.</p>
+</div>
+<div id="visualización-de-datos" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> 2. Visualización de Datos<a href="introducción-a-r-para-estudiantes-de-microbiología.html#visualización-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Con paquetes como ggplot2, los estudiantes pueden crear visualizaciones de datos interactivas y de alta calidad que facilitan la comprensión de patrones y tendencias en conjuntos de datos microbiológicos, como datos de secuenciación genómica o datos de conteo de microorganismos.</p>
+</div>
+<div id="reproducibilidad-y-documentación" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> 3. Reproducibilidad y Documentación<a href="introducción-a-r-para-estudiantes-de-microbiología.html#reproducibilidad-y-documentación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>RMarkdown es una herramienta poderosa que permite a los estudiantes escribir documentos reproducibles que combinan código, resultados y narrativa en un solo lugar. Esto promueve la transparencia, la reproducibilidad y una mejor documentación de los análisis microbiológicos.</p>
+</div>
+<div id="acceso-a-una-comunidad-activa" class="section level3 hasAnchor" number="3.1.4">
+<h3><span class="header-section-number">3.1.4</span> 4. Acceso a una Comunidad Activa<a href="introducción-a-r-para-estudiantes-de-microbiología.html#acceso-a-una-comunidad-activa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>R cuenta con una comunidad activa de usuarios y desarrolladores que comparten código, paquetes y recursos educativos. Los estudiantes pueden aprovechar este recurso para buscar ayuda, colaborar en proyectos y mantenerse al tanto de las últimas tendencias en análisis de datos microbiológicos.</p>
+</div>
+<div id="flexibilidad-y-personalización" class="section level3 hasAnchor" number="3.1.5">
+<h3><span class="header-section-number">3.1.5</span> 5. Flexibilidad y Personalización<a href="introducción-a-r-para-estudiantes-de-microbiología.html#flexibilidad-y-personalización" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>R es un lenguaje altamente flexible que permite a los estudiantes adaptar sus análisis a las necesidades específicas de sus proyectos microbiológicos. Desde la manipulación de datos hasta la creación de modelos personalizados, R ofrece la libertad y la capacidad de personalización necesarias para abordar una amplia variedad de preguntas de investigación en microbiología.</p>
+<p>Aprender R puede ser extremadamente beneficioso para los estudiantes de microbiología al proporcionarles las herramientas y habilidades necesarias para realizar análisis de datos sofisticados, visualizar resultados de manera efectiva y promover la reproducibilidad en su investigación científica.</p>
+</div>
+</div>
+<div id="paquetes-o-bibliotecas" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Paquetes o bibliotecas<a href="introducción-a-r-para-estudiantes-de-microbiología.html#paquetes-o-bibliotecas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Las funciones especializadas de R se guardan en paquetes <em>(packages)</em> que deben ser invocados ANTES de llamar a una función del paquete.</p>
+<p>Una manera de instalar paquetes es mediante el repositorio <a href="https://cran.r-project.org/">CRAN</a>.</p>
+<p>Navega por CRAN y encuentra algunos paquetes que podrían interesarte. Hay miles y cada día aumentan.</p>
+<p>Para saber qué paquetes se tienen instalados en
+tu máquina teclea la función <code>library()</code></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>()</span></code></pre></div>
+<p>Para cargar un paquete, que se encuentre previamente instalado, se debe teclear
+<code>library(nombre_de_paquete)</code></p>
+<p>Por ejemplo:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gplots)  </span></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;gplots&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:stats&#39;:
+## 
+##     lowess</code></pre>
+<p>Para visualizar los paquetes ya cargados, teclea:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
+<pre><code>##  [1] &quot;.GlobalEnv&quot;        &quot;package:gplots&quot;    &quot;tools:rstudio&quot;     &quot;package:stats&quot;     &quot;package:graphics&quot;  &quot;package:grDevices&quot;
+##  [7] &quot;package:utils&quot;     &quot;package:datasets&quot;  &quot;package:methods&quot;   &quot;Autoloads&quot;         &quot;package:base&quot;</code></pre>
+<p>Para visualizar las funciones dentro de un paquete en particular se utiliza:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>(<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##  [1] &quot;angleAxis&quot;      &quot;balloonplot&quot;    &quot;bandplot&quot;       &quot;barplot2&quot;       &quot;bluered&quot;        &quot;boxplot2&quot;       &quot;ci2d&quot;          
+##  [8] &quot;col2hex&quot;        &quot;colorpanel&quot;     &quot;greenred&quot;       &quot;heatmap.2&quot;      &quot;hist2d&quot;         &quot;lmplot2&quot;        &quot;lowess&quot;        
+## [15] &quot;ooplot&quot;         &quot;overplot&quot;       &quot;panel.overplot&quot; &quot;plot.venn&quot;      &quot;plotCI&quot;         &quot;plotLowess&quot;     &quot;plotmeans&quot;     
+## [22] &quot;qqnorm.aov&quot;     &quot;redblue&quot;        &quot;redgreen&quot;       &quot;reorder.factor&quot; &quot;residplot&quot;      &quot;rich.colors&quot;    &quot;sinkplot&quot;      
+## [29] &quot;smartlegend&quot;    &quot;space&quot;          &quot;textplot&quot;       &quot;venn&quot;           &quot;wapply&quot;</code></pre>
+<p><strong>EJEMPLOS DE VISUALIZACIÓN DE GRÁFICOS</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">demo</span>(graphics)</span></code></pre></div>
+<pre><code>## 
+## 
+##  demo(graphics)
+##  ---- ~~~~~~~~
+## 
+## &gt; #  Copyright (C) 1997-2009 The R Core Team
+## &gt; 
+## &gt; require(datasets)
+## 
+## &gt; require(grDevices); require(graphics)
+## 
+## &gt; ## Here is some code which illustrates some of the differences between
+## &gt; ## R and S graphics capabilities.  Note that colors are generally specified
+## &gt; ## by a character string name (taken from the X11 rgb.txt file) and that line
+## &gt; ## textures are given similarly.  The parameter &quot;bg&quot; sets the background
+## &gt; ## parameter for the plot and there is also an &quot;fg&quot; parameter which sets
+## &gt; ## the foreground color.
+## &gt; 
+## &gt; 
+## &gt; x &lt;- stats::rnorm(50)
+## 
+## &gt; opar &lt;- par(bg = &quot;white&quot;)
+## 
+## &gt; plot(x, ann = FALSE, type = &quot;n&quot;)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre><code>## 
+## &gt; abline(h = 0, col = gray(.90))
+## 
+## &gt; lines(x, col = &quot;green4&quot;, lty = &quot;dotted&quot;)
+## 
+## &gt; points(x, bg = &quot;limegreen&quot;, pch = 21)
+## 
+## &gt; title(main = &quot;Simple Use of Color In a Plot&quot;,
+## +       xlab = &quot;Just a Whisper of a Label&quot;,
+## +       col.main = &quot;blue&quot;, col.lab = gray(.8),
+## +       cex.main = 1.2, cex.lab = 1.0, font.main = 4, font.lab = 3)
+## 
+## &gt; ## A little color wheel.    This code just plots equally spaced hues in
+## &gt; ## a pie chart.    If you have a cheap SVGA monitor (like me) you will
+## &gt; ## probably find that numerically equispaced does not mean visually
+## &gt; ## equispaced.  On my display at home, these colors tend to cluster at
+## &gt; ## the RGB primaries.  On the other hand on the SGI Indy at work the
+## &gt; ## effect is near perfect.
+## &gt; 
+## &gt; par(bg = &quot;gray&quot;)
+## 
+## &gt; pie(rep(1,24), col = rainbow(24), radius = 0.9)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
+<pre><code>## 
+## &gt; title(main = &quot;A Sample Color Wheel&quot;, cex.main = 1.4, font.main = 3)
+## 
+## &gt; title(xlab = &quot;(Use this as a test of monitor linearity)&quot;,
+## +       cex.lab = 0.8, font.lab = 3)
+## 
+## &gt; ## We have already confessed to having these.  This is just showing off X11
+## &gt; ## color names (and the example (from the postscript manual) is pretty &quot;cute&quot;.
+## &gt; 
+## &gt; pie.sales &lt;- c(0.12, 0.3, 0.26, 0.16, 0.04, 0.12)
+## 
+## &gt; names(pie.sales) &lt;- c(&quot;Blueberry&quot;, &quot;Cherry&quot;,
+## +              &quot;Apple&quot;, &quot;Boston Cream&quot;, &quot;Other&quot;, &quot;Vanilla Cream&quot;)
+## 
+## &gt; pie(pie.sales,
+## +     col = c(&quot;purple&quot;,&quot;violetred1&quot;,&quot;green3&quot;,&quot;cornsilk&quot;,&quot;cyan&quot;,&quot;white&quot;))</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-3.png" width="672" /></p>
+<pre><code>## 
+## &gt; title(main = &quot;January Pie Sales&quot;, cex.main = 1.8, font.main = 1)
+## 
+## &gt; title(xlab = &quot;(Don&#39;t try this at home kids)&quot;, cex.lab = 0.8, font.lab = 3)
+## 
+## &gt; ## Boxplots:  I couldn&#39;t resist the capability for filling the &quot;box&quot;.
+## &gt; ## The use of color seems like a useful addition, it focuses attention
+## &gt; ## on the central bulk of the data.
+## &gt; 
+## &gt; par(bg=&quot;cornsilk&quot;)
+## 
+## &gt; n &lt;- 10
+## 
+## &gt; g &lt;- gl(n, 100, n*100)
+## 
+## &gt; x &lt;- rnorm(n*100) + sqrt(as.numeric(g))
+## 
+## &gt; boxplot(split(x,g), col=&quot;lavender&quot;, notch=TRUE)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-4.png" width="672" /></p>
+<pre><code>## 
+## &gt; title(main=&quot;Notched Boxplots&quot;, xlab=&quot;Group&quot;, font.main=4, font.lab=1)
+## 
+## &gt; ## An example showing how to fill between curves.
+## &gt; 
+## &gt; par(bg=&quot;white&quot;)
+## 
+## &gt; n &lt;- 100
+## 
+## &gt; x &lt;- c(0,cumsum(rnorm(n)))
+## 
+## &gt; y &lt;- c(0,cumsum(rnorm(n)))
+## 
+## &gt; xx &lt;- c(0:n, n:0)
+## 
+## &gt; yy &lt;- c(x, rev(y))
+## 
+## &gt; plot(xx, yy, type=&quot;n&quot;, xlab=&quot;Time&quot;, ylab=&quot;Distance&quot;)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-5.png" width="672" /></p>
+<pre><code>## 
+## &gt; polygon(xx, yy, col=&quot;gray&quot;)
+## 
+## &gt; title(&quot;Distance Between Brownian Motions&quot;)
+## 
+## &gt; ## Colored plot margins, axis labels and titles.    You do need to be
+## &gt; ## careful with these kinds of effects.    It&#39;s easy to go completely
+## &gt; ## over the top and you can end up with your lunch all over the keyboard.
+## &gt; ## On the other hand, my market research clients love it.
+## &gt; 
+## &gt; x &lt;- c(0.00, 0.40, 0.86, 0.85, 0.69, 0.48, 0.54, 1.09, 1.11, 1.73, 2.05, 2.02)
+## 
+## &gt; par(bg=&quot;lightgray&quot;)
+## 
+## &gt; plot(x, type=&quot;n&quot;, axes=FALSE, ann=FALSE)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-6.png" width="672" /></p>
+<pre><code>## 
+## &gt; usr &lt;- par(&quot;usr&quot;)
+## 
+## &gt; rect(usr[1], usr[3], usr[2], usr[4], col=&quot;cornsilk&quot;, border=&quot;black&quot;)
+## 
+## &gt; lines(x, col=&quot;blue&quot;)
+## 
+## &gt; points(x, pch=21, bg=&quot;lightcyan&quot;, cex=1.25)
+## 
+## &gt; axis(2, col.axis=&quot;blue&quot;, las=1)
+## 
+## &gt; axis(1, at=1:12, lab=month.abb, col.axis=&quot;blue&quot;)
+## 
+## &gt; box()
+## 
+## &gt; title(main= &quot;The Level of Interest in R&quot;, font.main=4, col.main=&quot;red&quot;)
+## 
+## &gt; title(xlab= &quot;1996&quot;, col.lab=&quot;red&quot;)
+## 
+## &gt; ## A filled histogram, showing how to change the font used for the
+## &gt; ## main title without changing the other annotation.
+## &gt; 
+## &gt; par(bg=&quot;cornsilk&quot;)
+## 
+## &gt; x &lt;- rnorm(1000)
+## 
+## &gt; hist(x, xlim=range(-4, 4, x), col=&quot;lavender&quot;, main=&quot;&quot;)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-7.png" width="672" /></p>
+<pre><code>## 
+## &gt; title(main=&quot;1000 Normal Random Variates&quot;, font.main=3)
+## 
+## &gt; ## A scatterplot matrix
+## &gt; ## The good old Iris data (yet again)
+## &gt; 
+## &gt; pairs(iris[1:4], main=&quot;Edgar Anderson&#39;s Iris Data&quot;, font.main=4, pch=19)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-8.png" width="672" /></p>
+<pre><code>## 
+## &gt; pairs(iris[1:4], main=&quot;Edgar Anderson&#39;s Iris Data&quot;, pch=21,
+## +       bg = c(&quot;red&quot;, &quot;green3&quot;, &quot;blue&quot;)[unclass(iris$Species)])</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-9.png" width="672" /></p>
+<pre><code>## 
+## &gt; ## Contour plotting
+## &gt; ## This produces a topographic map of one of Auckland&#39;s many volcanic &quot;peaks&quot;.
+## &gt; 
+## &gt; x &lt;- 10*1:nrow(volcano)
+## 
+## &gt; y &lt;- 10*1:ncol(volcano)
+## 
+## &gt; lev &lt;- pretty(range(volcano), 10)
+## 
+## &gt; par(bg = &quot;lightcyan&quot;)
+## 
+## &gt; pin &lt;- par(&quot;pin&quot;)
+## 
+## &gt; xdelta &lt;- diff(range(x))
+## 
+## &gt; ydelta &lt;- diff(range(y))
+## 
+## &gt; xscale &lt;- pin[1]/xdelta
+## 
+## &gt; yscale &lt;- pin[2]/ydelta
+## 
+## &gt; scale &lt;- min(xscale, yscale)
+## 
+## &gt; xadd &lt;- 0.5*(pin[1]/scale - xdelta)
+## 
+## &gt; yadd &lt;- 0.5*(pin[2]/scale - ydelta)
+## 
+## &gt; plot(numeric(0), numeric(0),
+## +      xlim = range(x)+c(-1,1)*xadd, ylim = range(y)+c(-1,1)*yadd,
+## +      type = &quot;n&quot;, ann = FALSE)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-10.png" width="672" /></p>
+<pre><code>## 
+## &gt; usr &lt;- par(&quot;usr&quot;)
+## 
+## &gt; rect(usr[1], usr[3], usr[2], usr[4], col=&quot;green3&quot;)
+## 
+## &gt; contour(x, y, volcano, levels = lev, col=&quot;yellow&quot;, lty=&quot;solid&quot;, add=TRUE)
+## 
+## &gt; box()
+## 
+## &gt; title(&quot;A Topographic Map of Maunga Whau&quot;, font= 4)
+## 
+## &gt; title(xlab = &quot;Meters North&quot;, ylab = &quot;Meters West&quot;, font= 3)
+## 
+## &gt; mtext(&quot;10 Meter Contour Spacing&quot;, side=3, line=0.35, outer=FALSE,
+## +       at = mean(par(&quot;usr&quot;)[1:2]), cex=0.7, font=3)
+## 
+## &gt; ## Conditioning plots
+## &gt; 
+## &gt; par(bg=&quot;cornsilk&quot;)
+## 
+## &gt; coplot(lat ~ long | depth, data = quakes, pch = 21, bg = &quot;green3&quot;)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-11.png" width="672" /></p>
+<pre><code>## 
+## &gt; par(opar)</code></pre>
+<p><strong>Ejercicios</strong></p>
+<ol style="list-style-type: decimal">
+<li>Instala las siguientes librerías que te serviran durante todo el curso
+<ul>
+<li>markdown</li>
+<li>ggplot2</li>
+</ul></li>
+</ol>
+<p><strong>INFORMACIÓN ADICIONAL</strong></p>
+<p>Existen repositorios adicionales a <a href="https://cran.r-project.org/">CRAN</a>, uno de ellos es <a href="https://https://bioconductor.org/">Bioconductor</a>, en él puedes buscar e instalar paquetes como <code>ggtree</code>.</p>
+<p><strong>Ejercicio</strong>
+1. Explora la página de Bioconductor, apóyate de su buscador e instala el paquete <code>ggtree</code>.</p>
+</div>
+<div id="ayuda-en-r" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Ayuda en R<a href="introducción-a-r-para-estudiantes-de-microbiología.html#ayuda-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En la mayoría de las ocasiones desconocemos el alcance de alguna paquetería, los criterios de alguna función o en general, sabemos lo que queremos hacer pero no tenemos ni idea de qué paqueteria usar.</p>
+<p>Los comandos <code>help()</code> y <code>?</code> son equivalentes, ambos van a permitir encontrar información sobre paqueterias, comandos o funciones generales de R. Se debe teclear <code>help(nombre_comando)</code> o <code>?nombre_comando</code></p>
+<p>Por ejemplo, para buscar información detallada del comando solve:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(solve)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb23-1" aria-hidden="true" tabindex="-1"></a>?solve</span></code></pre></div>
+<p>Para buscar ayuda de funciones o palabra reservadas se utilizan comillas:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">&quot;for&quot;</span>)</span></code></pre></div>
+<p>También existen opciones como <code>help.start()</code> y <code>help.search()</code> para obtener una versión extendida de la ayuda general desplegada en un navegador. Para ello se requiere tener la ayuda en HTML instalada y conexión a la red.</p>
+<p><code>help.search()</code> es una función que escanea documentación para paquetes previamente instalados.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help.search</span>(<span class="st">&quot;clustering&quot;</span>)</span></code></pre></div>
+<p><code>help.start()</code> es una función que despliega información basada en documentos en línea de la versión actual de R, además de brindar links a manuales y la lista de las paqueterías instaladas, entre otras cosas.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help.start</span>()</span></code></pre></div>
+<p>Cuando queremos ver ejemplos del uso de los comandos usamos la función <code>example()</code></p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">example</span>(<span class="st">&quot;hclust&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+## hclust&gt; require(graphics)
+## 
+## hclust&gt; ### Example 1: Violent crime rates by US state
+## hclust&gt; 
+## hclust&gt; hc &lt;- hclust(dist(USArrests), &quot;ave&quot;)
+## 
+## hclust&gt; plot(hc)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<pre><code>## 
+## hclust&gt; plot(hc, hang = -1)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
+<pre><code>## 
+## hclust&gt; ## Do the same with centroid clustering and *squared* Euclidean distance,
+## hclust&gt; ## cut the tree into ten clusters and reconstruct the upper part of the
+## hclust&gt; ## tree from the cluster centers.
+## hclust&gt; hc &lt;- hclust(dist(USArrests)^2, &quot;cen&quot;)
+## 
+## hclust&gt; memb &lt;- cutree(hc, k = 10)
+## 
+## hclust&gt; cent &lt;- NULL
+## 
+## hclust&gt; for(k in 1:10){
+## hclust+   cent &lt;- rbind(cent, colMeans(USArrests[memb == k, , drop = FALSE]))
+## hclust+ }
+## 
+## hclust&gt; hc1 &lt;- hclust(dist(cent)^2, method = &quot;cen&quot;, members = table(memb))
+## 
+## hclust&gt; opar &lt;- par(mfrow = c(1, 2))
+## 
+## hclust&gt; plot(hc,  labels = FALSE, hang = -1, main = &quot;Original Tree&quot;)</code></pre>
+<pre><code>## 
+## hclust&gt; plot(hc1, labels = FALSE, hang = -1, main = &quot;Re-start from 10 clusters&quot;)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-3.png" width="672" /></p>
+<pre><code>## 
+## hclust&gt; par(opar)
+## 
+## hclust&gt; ### Example 2: Straight-line distances among 10 US cities
+## hclust&gt; ##  Compare the results of algorithms &quot;ward.D&quot; and &quot;ward.D2&quot;
+## hclust&gt; 
+## hclust&gt; mds2 &lt;- -cmdscale(UScitiesD)
+## 
+## hclust&gt; plot(mds2, type=&quot;n&quot;, axes=FALSE, ann=FALSE)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-4.png" width="672" /></p>
+<pre><code>## 
+## hclust&gt; text(mds2, labels=rownames(mds2), xpd = NA)
+## 
+## hclust&gt; hcity.D  &lt;- hclust(UScitiesD, &quot;ward.D&quot;) # &quot;wrong&quot;
+## 
+## hclust&gt; hcity.D2 &lt;- hclust(UScitiesD, &quot;ward.D2&quot;)
+## 
+## hclust&gt; opar &lt;- par(mfrow = c(1, 2))
+## 
+## hclust&gt; plot(hcity.D,  hang=-1)</code></pre>
+<pre><code>## 
+## hclust&gt; plot(hcity.D2, hang=-1)</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-5.png" width="672" /></p>
+<pre><code>## 
+## hclust&gt; par(opar)</code></pre>
+<p>Todo lo anterior requiere que conozcamos el nombre correcto del comando, pero ¿qué pasa si no lo sabemos?, ¿lloramos? no.
+Podemos utilizar el comando <code>apropos()</code> para encontrar todo lo relacionado con algún término.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apropos</span>(<span class="st">&quot;solve&quot;</span>)</span></code></pre></div>
+<pre><code>##  [1] &quot;.rs.resolveAliasedPath&quot;            &quot;.rs.resolveAliasedSymbol&quot;          &quot;.rs.resolveFormals&quot;               
+##  [4] &quot;.rs.resolveObjectFromFunctionCall&quot; &quot;.rs.resolveObjectSource&quot;           &quot;.rs.rnb.resolveActiveChunkId&quot;     
+##  [7] &quot;backsolve&quot;                         &quot;forwardsolve&quot;                      &quot;qr.solve&quot;                         
+## [10] &quot;solve&quot;                             &quot;solve.default&quot;                     &quot;solve.qr&quot;</code></pre>
+<p>Ahora, ¿qué pasa cuando tengo la idea de lo que quiero hacer pero no se qué paqueteria usar, ni cuál comando? puedo usar <code>??</code> seguido de una palabra clave. Esto nos arrojará sugerencias sobre lo que deseamos hacer.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb38-1" aria-hidden="true" tabindex="-1"></a>??DNA</span></code></pre></div>
+<p><strong>NOTA</strong> Se recomienda el uso del autocompletado, de esta manera reducirás errores de dedo.</p>
+</div>
+<div id="expresiones-y-asignaciones" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Expresiones y asignaciones<a href="introducción-a-r-para-estudiantes-de-microbiología.html#expresiones-y-asignaciones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Las <strong>expresiones</strong> y <strong>asignaciones</strong> son los dos tipos de resultados que arroja R.</p>
+<p>Las <strong>expresiones</strong> sólo se muestran en la salida estándar y NO se guardan en alguna variable, es decir, cada que se corra la línea se obtendran valores distintos.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##  [1] -1.4866210 -0.7439135 -0.7142374 -1.5584159 -1.5659029  1.1994463 -0.3568883 -0.4334957 -1.4770566 -2.8187874</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##  [1] -0.4868011  0.1400936 -0.5127276 -2.6465784  1.2253255 -0.7295779  0.4289894  1.6431602 -1.4234958 -1.0687776</code></pre>
+<p>Las <strong>asignaciones</strong>, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de <code>&lt;-</code></p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb43-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb44-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1]  1.23583842 -0.98504730 -0.99182551 -0.85914953  0.44099739 -1.36190831 -0.19988672  0.34249877  0.01706621  1.24627051</code></pre>
+<p><strong>NOTA</strong> El símbolo <code>&lt;-</code> es equivalente en función a <code>=</code> pero no es tan cool.</p>
+<div class="figure">
+<img src="equals-sign-assignment-operator-imgflip-com-going-through-data-structures-and-47188178.png" alt="" />
+<p class="caption">Operador de asignación. Así que evita el uso del igual</p>
+</div>
+<p>Otro punto a considerar respecto a las <strong>asiganciones</strong> es que R es capaz de distinguir entre mayúsculas y minúsculas, por lo que la misma letra puede contener valores distintos.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb46-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb46-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb46-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">6</span></span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb47-1" aria-hidden="true" tabindex="-1"></a>a</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb49-1" aria-hidden="true" tabindex="-1"></a>A</span></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<p>Una opción es definirlas en más de una línea, ejemplo:</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb51-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span></span>
+<span id="cb51-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb51-2" aria-hidden="true" tabindex="-1"></a>  pi <span class="sc">+</span> <span class="dv">12</span></span></code></pre></div>
+<p><strong>NOTA</strong> Ten mucha precaución con el nombre que asignas a un valor, ya que podrías sobreescribirlo y se le quedará asignado el último valor.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb52-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb52-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb52-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb54-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">8</span> </span>
+<span id="cb54-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb54-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>La separación de comandos puede darse de dos formas:</p>
+<p>Empleando <code>;</code>, ejemplo:</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb56-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span>; b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
+<p>o usando un salto de línea, esta es una mejor opción, ejemplo:</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb57-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb57-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb57-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
+</div>
+<div id="movimiento-entre-directorios" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Movimiento entre directorios<a href="introducción-a-r-para-estudiantes-de-microbiología.html#movimiento-entre-directorios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Otra de las ventajas que ofrece R es que permite ubicar algún archivo o saber la dirección del directorio en la que nos encontramos actualmente, todo ello sin necesidad de salir de la interfaz.</p>
+<p>Para saber en qué directorio estamos, se teclea:</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;/Users/robertoalvarez/Documents/GitHub/Bravo_Garcia_Maria_Fernanda_Bioinfo_20204&quot;</code></pre>
+<p>Para cambiar de directorio utilizamos <code>setwd("direccion_a_la_que_quieres_ir")</code></p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>)</span></code></pre></div>
+<p>##Bash en R
+También se pueden usar los comandos de la terminal de bash dentro de R, utilizando la función <code>system()</code></p>
+<p>Para listar archivos de una carpeta usamos <code>ls</code></p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;ls -la&quot;</span>)</span></code></pre></div>
+<p>Para saber en qué directorio estamos usamos la función análoga a <code>getwd()</code>, que es <code>pwd</code></p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;pwd&quot;</span>)</span></code></pre></div>
+<p><strong>Importante: Como regla general todos los nombres van entre comillas: nombre de carpetas, archivos, de columnas, de renglones,etc.</strong></p>
+</div>
+<div id="operaciones-aritméticas" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Operaciones aritméticas<a href="introducción-a-r-para-estudiantes-de-microbiología.html#operaciones-aritméticas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R también puede ser usado como calculadora.
+Se puede sumar, restar, multiplicar,dividir, “exponenciar” y calcular la raíz cuadrada.</p>
+<p><strong>SUMA</strong> con el operador <code>+</code></p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb63-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">+</span> b</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p><strong>RESTA</strong> con el operador <code>-</code></p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb65-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">-</span> b</span></code></pre></div>
+<pre><code>## [1] -2</code></pre>
+<p><strong>MULTIPLICACIÓN</strong> con el operador <code>*</code></p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb67-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">*</span> b</span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<p><strong>DIVISIÓN</strong> con el operador <code>/</code></p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb69-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">/</span> b</span></code></pre></div>
+<pre><code>## [1] 0.6</code></pre>
+<p><strong>EXPONENTE</strong> con los operadoradores <code>**</code> o <code>^</code></p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb71-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">**</span> b</span></code></pre></div>
+<pre><code>## [1] 243</code></pre>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb73-1" aria-hidden="true" tabindex="-1"></a>a <span class="sc">^</span> b</span></code></pre></div>
+<pre><code>## [1] 243</code></pre>
+<p><strong>RAÍZ CUADRADA</strong> con la función <code>sqrt()</code></p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(a)</span></code></pre></div>
+<pre><code>## [1] 1.732051</code></pre>
+<p><strong>LOGARITMO</strong> con la función <code>log()</code></p>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(a)</span></code></pre></div>
+<pre><code>## [1] 1.098612</code></pre>
+<div id="prioridad-en-las-operaciones" class="section level3 hasAnchor" number="3.6.1">
+<h3><span class="header-section-number">3.6.1</span> Prioridad en las operaciones<a href="introducción-a-r-para-estudiantes-de-microbiología.html#prioridad-en-las-operaciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Las operaciones se efectuan en el siguiente orden:</p>
+<ol style="list-style-type: decimal">
+<li>izquierda a derecha</li>
+<li><code>sqrt()</code> y <code>**</code> <code>^</code></li>
+<li><code>*</code> y <code>/</code></li>
+<li><code>+</code> y <code>-</code></li>
+<li><code>&lt;-</code></li>
+</ol>
+<p><em>IMPORTANTE</em> Este orden se altera si se presenta un paréntesis. En ese caso la operación dentro del paréntesis es la que se realiza primero.</p>
+<p>Ejemplos:</p>
+<p><code>4 + 2 * 3 = 4 + 6 = 10</code></p>
+<p><code>4 - 15/3 + 3^2 + sqrt(9) = 4 - 15/3 + 9 + 3 = 4 - 5 + 12 = 13</code></p>
+<p><code>4 - (3+7)^2 + (2+3)/5 = 4 - (10)^2 + 5/5 = 4 - 100 + 1 = -95</code></p>
+<p><strong>Ejercicios</strong></p>
+<p>Resuelve en un pedazo de papel primero para saber cuál sería el resultado de las siguientes operaciones aritméticas. Después comprueba tu resultado tecleandolas en R.</p>
+<ol style="list-style-type: decimal">
+<li>1 + 2*3 + 3 + 15/3</li>
+<li>4 - 15/3 + 3^2 + 3*sqrt(81)</li>
+<li>40 - (4+3)^2 + (10-5)/3</li>
+<li>32^5 - (3-5)*2 + 32/sqrt(64)</li>
+<li>1/(3^-3) + (8-10^2) - (25/sqrt(25))^2</li>
+</ol>
+</div>
+</div>
+<div id="tipos-de-valores-en-r" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Tipos de valores en R<a href="introducción-a-r-para-estudiantes-de-microbiología.html#tipos-de-valores-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="valores-booleanos" class="section level3 hasAnchor" number="3.7.1">
+<h3><span class="header-section-number">3.7.1</span> Valores booleanos<a href="introducción-a-r-para-estudiantes-de-microbiología.html#valores-booleanos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>También conocidos como <em>Datos lógicos</em>.
+Este tipo de datos <strong>sólo</strong> contienen información <code>TRUE</code> o <code>FALSE</code>, lo cual sirve para evaluar si los elementos de un vector cumplen con los criterios deseados. Para ello se utilizan los operadores de comparación:</p>
+<ul>
+<li>igual <code>==</code></li>
+<li>no es igual a <code>!=</code></li>
+<li>menor que <code>&lt;</code></li>
+<li>mayor que <code>&gt;</code></li>
+<li>menor o igual que <code>&lt;=</code></li>
+<li>mayor o igual que <code>&gt;=</code></li>
+</ul>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">0</span>    </span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">!=</span> <span class="dv">0</span>   </span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&lt;=</span> <span class="dv">0</span>   </span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<p><strong>NOTA</strong> Dentro de R los valores lógicos <code>TRUE</code> y <code>FALSE</code> tienen un valor numérico. <code>TRUE</code>equivale a 1 y <code>FALSE</code> es equivalente a 0. Esto permite cuantificar el número de elementos que cumplen con los criterios, ¿cómo? mediante la suma de los <code>TRUE</code>s.</p>
+<p><strong>Ejercicios</strong>
+Demuestra si:
+1. El logaritmo base 10 de 20 es menor que la raíz cuadrada de 4. Desarrollalo en una sola línea.
+2. 1/3^-1 es igual a 3/1^-1
+3. (-2)^2 no es igual a (2)^2</p>
+</div>
+<div id="caracter" class="section level3 hasAnchor" number="3.7.2">
+<h3><span class="header-section-number">3.7.2</span> Caracter<a href="introducción-a-r-para-estudiantes-de-microbiología.html#caracter" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Son <em>strings</em> de texto y se caracterizan porque cada uno de los elementos va entre comillas. Los elementos pueden ser desde sólo un caracter hasta oraciones.
+Podría parecer que la variable a la cual lo asignamos contiene números, pero las comillas indican que serán tratados como texto. Podemos subsetearlos por su índice o buscando literalmente el texto.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb87-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span> <span class="st">&quot;La candente mañana de febrero en que Beatriz Viterbo murió, después de una imperiosa agonía que no se rebajó un solo instante ni al sentimentalismo ni al miedo&quot;</span></span></code></pre></div>
+</div>
+<div id="enteros-y-números-numeric" class="section level3 hasAnchor" number="3.7.3">
+<h3><span class="header-section-number">3.7.3</span> Enteros y números (numeric)<a href="introducción-a-r-para-estudiantes-de-microbiología.html#enteros-y-números-numeric" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Existen dos formas diferentes en que las computadoras pueden guardar los números y hacer operaciones matemáticas con ellos: <code>numeric</code> e <code>integer</code>.
+Por lo común no importa esta diferencia, pero puede ser relevante para algunas funciones de Bioconductor. En R se representan los números como <code>numeric</code> y el tamaño máximo que maneja para un <code>integer</code> es ligeramente más chico que el tamaño del genoma humano.</p>
+<p>¿Cómo revisar si un objeto es numeric o entero? Con la función <code>class()</code></p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb88-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb88-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb90-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
+<span id="cb90-2"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="estructura.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-Intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
