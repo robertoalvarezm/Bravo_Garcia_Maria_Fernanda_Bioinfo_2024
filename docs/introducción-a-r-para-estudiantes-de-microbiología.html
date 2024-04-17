@@ -793,14 +793,15 @@ Podemos utilizar el comando <code>apropos()</code> para encontrar todo lo relaci
 <p>Las <strong>expresiones</strong> sólo se muestran en la salida estándar y NO se guardan en alguna variable, es decir, cada que se corra la línea se obtendran valores distintos.</p>
 <p>Ejemplo:</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1]  0.6414896  1.1484444 -0.9959077 -1.1975169 -0.4343306  0.2059523 -1.4637880 -0.5968457  1.8940421 -0.5768533</code></pre>
+<pre><code>##  [1] -0.835069957 -0.066204215  0.532069049 -2.015763384 -1.757556569  1.251956246  0.007681661  0.792554454  0.100626248
+## [10] -1.378040274</code></pre>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] -0.44724700 -1.66995734 -0.67966512 -0.25596662 -0.06959657  0.58043576 -0.99175741  2.62616036  1.20244371  1.04894207</code></pre>
+<pre><code>##  [1] -0.04633999  0.33007072  2.15029294  1.45633222  1.18868001  0.15247670 -0.75944193 -1.71911642 -0.28260775  0.77604021</code></pre>
 <p>Las <strong>asignaciones</strong>, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de <code>&lt;-</code></p>
 <p>Ejemplo:</p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb41-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#cb42-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -0.71685702 -0.92170480  1.40128675  0.05778889 -0.48507779 -0.18980466  0.30372185  1.30278286 -0.99556378 -0.42050013</code></pre>
+<pre><code>##  [1]  0.8956181 -1.8007531 -1.3469950  0.3256583  0.4428945 -0.2064974  1.2563035 -1.5740028 -0.4142542  0.6955195</code></pre>
 <p><strong>NOTA</strong> El símbolo <code>&lt;-</code> es equivalente en función a <code>=</code> pero no es tan cool.</p>
 <div class="figure">
 <img src="equals-sign-assignment-operator-imgflip-com-going-through-data-structures-and-47188178.png" alt="" />
