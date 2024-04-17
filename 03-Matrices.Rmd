@@ -77,7 +77,7 @@ y
 ```
 
 
-# Operaciones rbind y cbind en R para Matrices
+## Operaciones rbind y cbind en R para Matrices
 
 En R, las funciones `rbind()` y `cbind()` se utilizan para unir matrices por filas y columnas, respectivamente. Además, la función `t()` se utiliza para transponer una matriz.
 
