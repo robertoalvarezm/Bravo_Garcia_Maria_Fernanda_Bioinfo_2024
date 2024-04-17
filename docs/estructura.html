@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Vectores | Notas de R</title>
+  <meta name="description" content="Estas son las notas de un curso básico de R." />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Vectores | Notas de R" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Estas son las notas de un curso básico de R." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Vectores | Notas de R" />
+  
+  <meta name="twitter:description" content="Estas son las notas de un curso básico de R." />
+  
+
+<meta name="author" content="Roberto Álvarez" />
+
+
+<meta name="date" content="2024-04-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introducción-a-r-para-estudiantes-de-microbiología.html"/>
+<link rel="next" href="matrices.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Notas de R básico</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introducción a R</a></li>
+<li class="chapter" data-level="3" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html"><i class="fa fa-check"></i><b>3</b> Introducción a R para Estudiantes de Microbiología</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#ventajas-de-aprender-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>3.1</b> Ventajas de Aprender R para Estudiantes de Microbiología</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#análisis-estadístico-avanzado"><i class="fa fa-check"></i><b>3.1.1</b> 1. Análisis Estadístico Avanzado</a></li>
+<li class="chapter" data-level="3.1.2" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#visualización-de-datos"><i class="fa fa-check"></i><b>3.1.2</b> 2. Visualización de Datos</a></li>
+<li class="chapter" data-level="3.1.3" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#reproducibilidad-y-documentación"><i class="fa fa-check"></i><b>3.1.3</b> 3. Reproducibilidad y Documentación</a></li>
+<li class="chapter" data-level="3.1.4" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#acceso-a-una-comunidad-activa"><i class="fa fa-check"></i><b>3.1.4</b> 4. Acceso a una Comunidad Activa</a></li>
+<li class="chapter" data-level="3.1.5" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#flexibilidad-y-personalización"><i class="fa fa-check"></i><b>3.1.5</b> 5. Flexibilidad y Personalización</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#paquetes-o-bibliotecas"><i class="fa fa-check"></i><b>3.2</b> Paquetes o bibliotecas</a></li>
+<li class="chapter" data-level="3.3" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#ayuda-en-r"><i class="fa fa-check"></i><b>3.3</b> Ayuda en R</a></li>
+<li class="chapter" data-level="3.4" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#expresiones-y-asignaciones"><i class="fa fa-check"></i><b>3.4</b> Expresiones y asignaciones</a></li>
+<li class="chapter" data-level="3.5" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#movimiento-entre-directorios"><i class="fa fa-check"></i><b>3.5</b> Movimiento entre directorios</a></li>
+<li class="chapter" data-level="3.6" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#operaciones-aritméticas"><i class="fa fa-check"></i><b>3.6</b> Operaciones aritméticas</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#prioridad-en-las-operaciones"><i class="fa fa-check"></i><b>3.6.1</b> Prioridad en las operaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#tipos-de-valores-en-r"><i class="fa fa-check"></i><b>3.7</b> Tipos de valores en R</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#valores-booleanos"><i class="fa fa-check"></i><b>3.7.1</b> Valores booleanos</a></li>
+<li class="chapter" data-level="3.7.2" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#caracter"><i class="fa fa-check"></i><b>3.7.2</b> Caracter</a></li>
+<li class="chapter" data-level="3.7.3" data-path="introducción-a-r-para-estudiantes-de-microbiología.html"><a href="introducción-a-r-para-estudiantes-de-microbiología.html#enteros-y-números-numeric"><i class="fa fa-check"></i><b>3.7.3</b> Enteros y números (numeric)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="estructura.html"><a href="estructura.html"><i class="fa fa-check"></i><b>4</b> Vectores</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="estructura.html"><a href="estructura.html#contenido"><i class="fa fa-check"></i><b>4.1</b> Contenido</a></li>
+<li class="chapter" data-level="4.2" data-path="estructura.html"><a href="estructura.html#vectors"><i class="fa fa-check"></i><b>4.2</b> Vectores en R</a></li>
+<li class="chapter" data-level="4.3" data-path="estructura.html"><a href="estructura.html#definición"><i class="fa fa-check"></i><b>4.3</b> Definición</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="estructura.html"><a href="estructura.html#definición-extensiva"><i class="fa fa-check"></i><b>4.3.1</b> Definición extensiva</a></li>
+<li class="chapter" data-level="4.3.2" data-path="estructura.html"><a href="estructura.html#definición-en-secuencia"><i class="fa fa-check"></i><b>4.3.2</b> Definición en secuencia</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="estructura.html"><a href="estructura.html#longitud-de-un-vector"><i class="fa fa-check"></i><b>4.4</b> Longitud de un vector</a></li>
+<li class="chapter" data-level="4.5" data-path="estructura.html"><a href="estructura.html#elementos-de-un-vector"><i class="fa fa-check"></i><b>4.5</b> Elementos de un vector</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="estructura.html"><a href="estructura.html#elementos-consecutivos"><i class="fa fa-check"></i><b>4.5.1</b> Elementos consecutivos</a></li>
+<li class="chapter" data-level="4.5.2" data-path="estructura.html"><a href="estructura.html#elementos-no-consecutivos-de-un-vector"><i class="fa fa-check"></i><b>4.5.2</b> Elementos no consecutivos de un vector</a></li>
+<li class="chapter" data-level="4.5.3" data-path="estructura.html"><a href="estructura.html#excluir-elementos-de-un-vector"><i class="fa fa-check"></i><b>4.5.3</b> Excluir elementos de un vector</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="estructura.html"><a href="estructura.html#reasignar-elementos-de-un-vector"><i class="fa fa-check"></i><b>4.6</b> Reasignar elementos de un vector</a></li>
+<li class="chapter" data-level="4.7" data-path="estructura.html"><a href="estructura.html#repetición-de-elementos-de-un-vector"><i class="fa fa-check"></i><b>4.7</b> Repetición de elementos de un vector</a></li>
+<li class="chapter" data-level="4.8" data-path="estructura.html"><a href="estructura.html#uso-de-funciones-any-y-all"><i class="fa fa-check"></i><b>4.8</b> Uso de funciones <code>any()</code> y <code>all()</code></a></li>
+<li class="chapter" data-level="4.9" data-path="estructura.html"><a href="estructura.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>4.9</b> Operaciones con vectores</a>
+<ul>
+<li class="chapter" data-level="4.9.1" data-path="estructura.html"><a href="estructura.html#operaciones-aritméticas-1"><i class="fa fa-check"></i><b>4.9.1</b> Operaciones aritméticas</a></li>
+</ul></li>
+<li class="chapter" data-level="4.10" data-path="estructura.html"><a href="estructura.html#operaciones-con-un-comando"><i class="fa fa-check"></i><b>4.10</b> Operaciones con un comando</a></li>
+<li class="chapter" data-level="4.11" data-path="estructura.html"><a href="estructura.html#gráficos-con-vectores"><i class="fa fa-check"></i><b>4.11</b> Gráficos con vectores</a></li>
+<li class="chapter" data-level="4.12" data-path="estructura.html"><a href="estructura.html#vectores-con-nombre"><i class="fa fa-check"></i><b>4.12</b> Vectores con nombre</a>
+<ul>
+<li class="chapter" data-level="4.12.1" data-path="estructura.html"><a href="estructura.html#tamaños-de-genomas"><i class="fa fa-check"></i><b>4.12.1</b> Tamaños de genomas</a></li>
+</ul></li>
+<li class="chapter" data-level="4.13" data-path="estructura.html"><a href="estructura.html#cómo-lidiar-con-las-nas"><i class="fa fa-check"></i><b>4.13</b> ¿Cómo lidiar con las NAs ?</a></li>
+<li class="chapter" data-level="4.14" data-path="estructura.html"><a href="estructura.html#filtrado-de-elementos-de-un-vector"><i class="fa fa-check"></i><b>4.14</b> Filtrado de elementos de un vector</a>
+<ul>
+<li class="chapter" data-level="4.14.1" data-path="estructura.html"><a href="estructura.html#filtrado-con-subset"><i class="fa fa-check"></i><b>4.14.1</b> Filtrado con <code>subset()</code></a></li>
+<li class="chapter" data-level="4.14.2" data-path="estructura.html"><a href="estructura.html#la-función-de-selección-which"><i class="fa fa-check"></i><b>4.14.2</b> La función de selección <code>which()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="4.15" data-path="estructura.html"><a href="estructura.html#cómo-podemos-ver-si-dos-vectores-son-iguales"><i class="fa fa-check"></i><b>4.15</b> ¿Cómo podemos ver si dos vectores son iguales?</a>
+<ul>
+<li class="chapter" data-level="4.15.1" data-path="estructura.html"><a href="estructura.html#factor"><i class="fa fa-check"></i><b>4.15.1</b> Factor</a></li>
+<li class="chapter" data-level="4.15.2" data-path="estructura.html"><a href="estructura.html#ejercicio-temperaturas-de-incubación"><i class="fa fa-check"></i><b>4.15.2</b> Ejercicio: Temperaturas de Incubación</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>5</b> Matrices</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="matrices.html"><a href="matrices.html#creación-de-matrices"><i class="fa fa-check"></i><b>5.1</b> Creación de matrices</a></li>
+<li class="chapter" data-level="5.2" data-path="matrices.html"><a href="matrices.html#dimensiones-de-un-matriz"><i class="fa fa-check"></i><b>5.2</b> Dimensiones de un matriz</a></li>
+<li class="chapter" data-level="5.3" data-path="matrices.html"><a href="matrices.html#creación-de-matriz-vacia"><i class="fa fa-check"></i><b>5.3</b> Creación de matriz “vacia”</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html"><i class="fa fa-check"></i><b>6</b> Operaciones rbind y cbind en R para Matrices</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#uso-de-rbind-para-unir-matrices-por-filas"><i class="fa fa-check"></i><b>6.1</b> Uso de <code>rbind()</code> para unir matrices por filas</a></li>
+<li class="chapter" data-level="6.2" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#uso-de-cbind-para-unir-matrices-por-columnas"><i class="fa fa-check"></i><b>6.2</b> Uso de cbind() para unir matrices por columnas</a></li>
+<li class="chapter" data-level="6.3" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>6.3</b> Operaciones con matrices</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#multiplicación-de-un-escalar-con-una-matriz"><i class="fa fa-check"></i><b>6.3.1</b> Multiplicación de un escalar con una matriz</a></li>
+<li class="chapter" data-level="6.3.2" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#suma-de-dos-matrices"><i class="fa fa-check"></i><b>6.3.2</b> Suma de dos matrices</a></li>
+<li class="chapter" data-level="6.3.3" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#multiplicación-de-matrices"><i class="fa fa-check"></i><b>6.3.3</b> Multiplicación de matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#uso-de-la-función-t-para-transponer-una-matriz"><i class="fa fa-check"></i><b>6.4</b> Uso de la función <code>t()</code> para transponer una matriz</a></li>
+<li class="chapter" data-level="6.5" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#seleccionar-elementos-de-matrices"><i class="fa fa-check"></i><b>6.5</b> Seleccionar elementos de matrices</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#seleccionar-todoa-una-renglóncolumna"><i class="fa fa-check"></i><b>6.5.1</b> Seleccionar todo(a) un(a) renglón(columna)</a></li>
+<li class="chapter" data-level="6.5.2" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#selecccionar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>6.5.2</b> Selecccionar elementos de una matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#nombres-a-renglones-y-columnas"><i class="fa fa-check"></i><b>6.6</b> Nombres a renglones y columnas</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="operaciones-rbind-y-cbind-en-r-para-matrices.html"><a href="operaciones-rbind-y-cbind-en-r-para-matrices.html#ejercicios"><i class="fa fa-check"></i><b>6.6.1</b> Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>7</b> Data Frames</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="data-frames.html"><a href="data-frames.html#crear-un-dataframe-en-r"><i class="fa fa-check"></i><b>7.1</b> Crear un Dataframe en R</a></li>
+<li class="chapter" data-level="7.2" data-path="data-frames.html"><a href="data-frames.html#acceder-a-los-datos-de-un-dataframe"><i class="fa fa-check"></i><b>7.2</b> Acceder a los datos de un dataframe</a></li>
+<li class="chapter" data-level="7.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-filas-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>7.3</b> Agregar y eliminar filas y columnas en un Dataframe en R</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="importar-un-archivo-csv-en-r.html"><a href="importar-un-archivo-csv-en-r.html"><i class="fa fa-check"></i><b>8</b> Importar un archivo csv en R</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="importar-un-archivo-csv-en-r.html"><a href="importar-un-archivo-csv-en-r.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>8.1</b> Importar un archivo TSV en R</a></li>
+<li class="chapter" data-level="8.2" data-path="importar-un-archivo-csv-en-r.html"><a href="importar-un-archivo-csv-en-r.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>8.2</b> Importar un archivo Excel en R</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html"><i class="fa fa-check"></i><b>9</b> Estructuras de selección</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-si-condicional"><i class="fa fa-check"></i><b>9.1</b> If (si condicional)</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#sintaxis"><i class="fa fa-check"></i><b>9.1.1</b> Sintaxis</a></li>
+<li class="chapter" data-level="9.1.2" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#errores-comunes-en-el-if"><i class="fa fa-check"></i><b>9.1.2</b> Errores comunes en el <code>if</code></a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#combinación-de-operadores-booleanos"><i class="fa fa-check"></i><b>9.2</b> Combinación de operadores booleanos</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#and"><i class="fa fa-check"></i><b>9.2.1</b> And (&amp;)</a></li>
+<li class="chapter" data-level="9.2.2" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#or"><i class="fa fa-check"></i><b>9.2.2</b> OR (|)</a></li>
+<li class="chapter" data-level="9.2.3" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejemplos-de-combinaciones"><i class="fa fa-check"></i><b>9.2.3</b> Ejemplos de combinaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicio"><i class="fa fa-check"></i><b>9.3</b> Ejercicio</a></li>
+<li class="chapter" data-level="9.4" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-si-de-otro-modo"><i class="fa fa-check"></i><b>9.4</b> If … else (si … de otro modo)</a></li>
+<li class="chapter" data-level="9.5" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ifelse"><i class="fa fa-check"></i><b>9.5</b> ifelse</a></li>
+<li class="chapter" data-level="9.6" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-if-else-si-si-no-si-si-no-si-si-no"><i class="fa fa-check"></i><b>9.6</b> If … else if … else ( si, si no si , si no si, si no)</a></li>
+<li class="chapter" data-level="9.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-2"><i class="fa fa-check"></i><b>9.7</b> Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>10</b> Funciones en R</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="functions.html"><a href="functions.html#sintaxis-básica-de-una-función-en-r"><i class="fa fa-check"></i><b>10.1</b> Sintaxis básica de una función en R</a></li>
+<li class="chapter" data-level="10.2" data-path="functions.html"><a href="functions.html#ejemplo-de-función-definida-por-el-usuario-en-r"><i class="fa fa-check"></i><b>10.2</b> Ejemplo de función definida por el usuario en R</a></li>
+<li class="chapter" data-level="10.3" data-path="functions.html"><a href="functions.html#ejemplo-de-función-con-argumentos-por-defecto-en-r"><i class="fa fa-check"></i><b>10.3</b> Ejemplo de función con argumentos por defecto en R</a></li>
+<li class="chapter" data-level="10.4" data-path="functions.html"><a href="functions.html#definir-una-función-con-un-parámetro-opcional"><i class="fa fa-check"></i><b>10.4</b> Definir una función con un parámetro opcional</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="functions.html"><a href="functions.html#llamar-a-la-función-saludar-sin-proporcionar-el-parámetro-opcional"><i class="fa fa-check"></i><b>10.4.1</b> Llamar a la función saludar sin proporcionar el parámetro opcional</a></li>
+<li class="chapter" data-level="10.4.2" data-path="functions.html"><a href="functions.html#llamar-a-la-función-saludar-proporcionando-el-parámetro-opcional"><i class="fa fa-check"></i><b>10.4.2</b> Llamar a la función saludar proporcionando el parámetro opcional</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-área-de-un-círculo"><i class="fa fa-check"></i><b>10.5</b> Definir una función para calcular el área de un círculo</a></li>
+<li class="chapter" data-level="10.6" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-factorial-de-un-número"><i class="fa fa-check"></i><b>10.6</b> Definir una función para calcular el factorial de un número</a></li>
+<li class="chapter" data-level="10.7" data-path="functions.html"><a href="functions.html#definir-una-función-para-verificar-si-un-número-es-primo"><i class="fa fa-check"></i><b>10.7</b> Definir una función para verificar si un número es primo</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="rprojects.html"><a href="rprojects.html"><i class="fa fa-check"></i><b>11</b> RProjects</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="rprojects.html"><a href="rprojects.html#introducción-a-r-projects-en-rstudio"><i class="fa fa-check"></i><b>11.1</b> Introducción a R Projects en RStudio</a></li>
+<li class="chapter" data-level="11.2" data-path="rprojects.html"><a href="rprojects.html#gestión-de-proyectos-organización-y-buenas-prácticas"><i class="fa fa-check"></i><b>11.2</b> Gestión de proyectos: organización y buenas prácticas</a></li>
+<li class="chapter" data-level="11.3" data-path="rprojects.html"><a href="rprojects.html#colaboración-y-control-de-versiones-con-git-y-github"><i class="fa fa-check"></i><b>11.3</b> Colaboración y control de versiones con Git y GitHub</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html"><i class="fa fa-check"></i><b>12</b> Visualización de datos con ggplot2</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#introducción"><i class="fa fa-check"></i><b>12.1</b> Introducción</a></li>
+<li class="chapter" data-level="12.2" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#configuración-inicial"><i class="fa fa-check"></i><b>12.2</b> Configuración inicial</a></li>
+<li class="chapter" data-level="12.3" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#creación-de-un-gráfico-básico"><i class="fa fa-check"></i><b>12.3</b> Creación de un gráfico básico</a></li>
+<li class="chapter" data-level="12.4" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#personalización-de-gráficos"><i class="fa fa-check"></i><b>12.4</b> Personalización de gráficos</a></li>
+<li class="chapter" data-level="12.5" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#soluciones-a-los-ejercicios-sugeridos"><i class="fa fa-check"></i><b>12.5</b> Soluciones a los ejercicios sugeridos</a></li>
+<li class="chapter" data-level="12.6" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicios-resueltos"><i class="fa fa-check"></i><b>12.6</b> Ejercicios resueltos</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-1-gráfico-de-dispersión-básico"><i class="fa fa-check"></i><b>12.6.1</b> Ejercicio 1: Gráfico de dispersión básico</a></li>
+<li class="chapter" data-level="12.6.2" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-2-diferenciación-por-especie"><i class="fa fa-check"></i><b>12.6.2</b> Ejercicio 2: Diferenciación por especie</a></li>
+<li class="chapter" data-level="12.6.3" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-3-histograma-de-masa-corporal"><i class="fa fa-check"></i><b>12.6.3</b> Ejercicio 3: Histograma de masa corporal</a></li>
+<li class="chapter" data-level="12.6.4" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-4-barras-de-error-por-especie"><i class="fa fa-check"></i><b>12.6.4</b> Ejercicio 4: Barras de error por especie</a></li>
+<li class="chapter" data-level="12.6.5" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-6-facetado-por-islas"><i class="fa fa-check"></i><b>12.6.5</b> Ejercicio 6: Facetado por islas</a></li>
+<li class="chapter" data-level="12.6.6" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-7-densidad-de-masa-corporal"><i class="fa fa-check"></i><b>12.6.6</b> Ejercicio 7: Densidad de masa corporal</a></li>
+<li class="chapter" data-level="12.6.7" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen"><i class="fa fa-check"></i><b>12.6.7</b> Ejercicio 8: Gráfico de violín de la longitud del culmen</a></li>
+<li class="chapter" data-level="12.6.8" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-9-puntos-superpuestos-en-boxplot"><i class="fa fa-check"></i><b>12.6.8</b> Ejercicio 9: Puntos superpuestos en boxplot</a></li>
+<li class="chapter" data-level="12.6.9" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo"><i class="fa fa-check"></i><b>12.6.9</b> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo</a></li>
+<li class="chapter" data-level="12.6.10" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto"><i class="fa fa-check"></i><b>12.6.10</b> Ejercicio 11: Gráfico de dispersión con tamaño de punto</a></li>
+<li class="chapter" data-level="12.6.11" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-12-barras-apiladas-de-especies-por-isla"><i class="fa fa-check"></i><b>12.6.11</b> Ejercicio 12: Barras apiladas de especies por isla</a></li>
+<li class="chapter" data-level="12.6.12" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-13-gráfico-de-correlación-con-texto"><i class="fa fa-check"></i><b>12.6.12</b> Ejercicio 13: Gráfico de correlación con texto</a></li>
+<li class="chapter" data-level="12.6.13" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen"><i class="fa fa-check"></i><b>12.6.13</b> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen</a></li>
+<li class="chapter" data-level="12.6.14" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables"><i class="fa fa-check"></i><b>12.6.14</b> Ejercicio 15: Gráfico de interacción entre tres variables</a></li>
+<li class="chapter" data-level="12.6.15" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicios-propuestos"><i class="fa fa-check"></i><b>12.6.15</b> Ejercicios propuestos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html"><i class="fa fa-check"></i><b>13</b> Visualización de datos con ggplot2</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#introducción-1"><i class="fa fa-check"></i><b>13.1</b> Introducción</a></li>
+<li class="chapter" data-level="13.2" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#configuración-inicial-1"><i class="fa fa-check"></i><b>13.2</b> Configuración inicial</a></li>
+<li class="chapter" data-level="13.3" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#creación-de-un-gráfico-básico-1"><i class="fa fa-check"></i><b>13.3</b> Creación de un gráfico básico</a></li>
+<li class="chapter" data-level="13.4" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#personalización-de-gráficos-1"><i class="fa fa-check"></i><b>13.4</b> Personalización de gráficos</a></li>
+<li class="chapter" data-level="13.5" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#soluciones-a-los-ejercicios-sugeridos-1"><i class="fa fa-check"></i><b>13.5</b> Soluciones a los ejercicios sugeridos</a></li>
+<li class="chapter" data-level="13.6" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicios-resueltos-1"><i class="fa fa-check"></i><b>13.6</b> Ejercicios resueltos</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-1-gráfico-de-dispersión-básico-1"><i class="fa fa-check"></i><b>13.6.1</b> Ejercicio 1: Gráfico de dispersión básico</a></li>
+<li class="chapter" data-level="13.6.2" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-2-diferenciación-por-especie-1"><i class="fa fa-check"></i><b>13.6.2</b> Ejercicio 2: Diferenciación por especie</a></li>
+<li class="chapter" data-level="13.6.3" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-3-histograma-de-masa-corporal-1"><i class="fa fa-check"></i><b>13.6.3</b> Ejercicio 3: Histograma de masa corporal</a></li>
+<li class="chapter" data-level="13.6.4" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-4-barras-de-error-por-especie-1"><i class="fa fa-check"></i><b>13.6.4</b> Ejercicio 4: Barras de error por especie</a></li>
+<li class="chapter" data-level="13.6.5" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-6-facetado-por-islas-1"><i class="fa fa-check"></i><b>13.6.5</b> Ejercicio 6: Facetado por islas</a></li>
+<li class="chapter" data-level="13.6.6" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-7-densidad-de-masa-corporal-1"><i class="fa fa-check"></i><b>13.6.6</b> Ejercicio 7: Densidad de masa corporal</a></li>
+<li class="chapter" data-level="13.6.7" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen-1"><i class="fa fa-check"></i><b>13.6.7</b> Ejercicio 8: Gráfico de violín de la longitud del culmen</a></li>
+<li class="chapter" data-level="13.6.8" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-9-puntos-superpuestos-en-boxplot-1"><i class="fa fa-check"></i><b>13.6.8</b> Ejercicio 9: Puntos superpuestos en boxplot</a></li>
+<li class="chapter" data-level="13.6.9" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo-1"><i class="fa fa-check"></i><b>13.6.9</b> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo</a></li>
+<li class="chapter" data-level="13.6.10" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto-1"><i class="fa fa-check"></i><b>13.6.10</b> Ejercicio 11: Gráfico de dispersión con tamaño de punto</a></li>
+<li class="chapter" data-level="13.6.11" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-12-barras-apiladas-de-especies-por-isla-1"><i class="fa fa-check"></i><b>13.6.11</b> Ejercicio 12: Barras apiladas de especies por isla</a></li>
+<li class="chapter" data-level="13.6.12" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-13-gráfico-de-correlación-con-texto-1"><i class="fa fa-check"></i><b>13.6.12</b> Ejercicio 13: Gráfico de correlación con texto</a></li>
+<li class="chapter" data-level="13.6.13" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen-1"><i class="fa fa-check"></i><b>13.6.13</b> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen</a></li>
+<li class="chapter" data-level="13.6.14" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables-1"><i class="fa fa-check"></i><b>13.6.14</b> Ejercicio 15: Gráfico de interacción entre tres variables</a></li>
+<li class="chapter" data-level="13.6.15" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicios-propuestos-1"><i class="fa fa-check"></i><b>13.6.15</b> Ejercicios propuestos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="Listas.html"><a href="Listas.html"><i class="fa fa-check"></i><b>14</b> Listas</a>
+<ul>
+<li class="chapter" data-level="14.0.1" data-path="Listas.html"><a href="Listas.html#acceso-por-nombre"><i class="fa fa-check"></i><b>14.0.1</b> Acceso por Nombre</a></li>
+<li class="chapter" data-level="14.1" data-path="Listas.html"><a href="Listas.html#ejercicios-3"><i class="fa fa-check"></i><b>14.1</b> Ejercicios</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="Listas.html"><a href="Listas.html#ejercicios-propuestos-con-listas"><i class="fa fa-check"></i><b>14.1.1</b> Ejercicios Propuestos con listas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>15</b> Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notas de R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="estructura" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Vectores<a href="estructura.html#estructura" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>R permite manejar datos dentro de estructuras para poder trabajarlos, estas estructuras pueden ser:
+- Vector: Es de una sola dimensión y solo permite almacenar datos del mismo tipo.
+- Matriz: Es un arreglo en dos dimensiones y permite ingresar datos del mismo tipo.
+- Data Frame: Similar a la matriz por ser también de dos dimensiones, solo que este arreglo permite distintas clases de datos.
+- Lista: Es de una sola dimensión como el vector, la diferencia que es que una lista permite incorporar diferentes tipos de datos.</p>
+<div id="contenido" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Contenido<a href="estructura.html#contenido" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Para conocer el contenido de una variable, sólo es necesario poner la variable y presionar <em>enter</em> (sesión interactiva). En el caso de estar en un <em>script</em> es necesario usar la función <code>print()</code></p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="estructura.html#cb92-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="dv">3</span></span>
+<span id="cb92-2"><a href="estructura.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+</div>
+<div id="vectors" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Vectores en R<a href="estructura.html#vectors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Un <em>vector</em> es una colección de datos del mismo tipo, siempre del <strong>mismo tipo</strong>, no es posible mezclarlos. Los elementos contenidos dentro de un vector son conocidos como <em>componentes</em> y pueden ser del tipo lógico, caracteres, numéricos o integer.</p>
+</div>
+<div id="definición" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Definición<a href="estructura.html#definición" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Para definir un vector se utiliza la función <code>c()</code>, que significa <em>combine</em>.
+Existen dos formas de definir un vector: <strong>Extensiva</strong> y <strong>Secuencia</strong>.</p>
+<div id="definición-extensiva" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Definición extensiva<a href="estructura.html#definición-extensiva" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La <strong>forma extensiva</strong> para definir un vector considera que los elementos situados dentro del paréntesis tienen que estar separados por comas.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="estructura.html#cb94-1" aria-hidden="true" tabindex="-1"></a>vector_numerico <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>)      <span class="co"># vector numérico</span></span>
+<span id="cb94-2"><a href="estructura.html#cb94-2" aria-hidden="true" tabindex="-1"></a>vector_texto <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>) <span class="co"># vector de texto</span></span>
+<span id="cb94-3"><a href="estructura.html#cb94-3" aria-hidden="true" tabindex="-1"></a>vector_logico <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>) <span class="co"># vector lógico / booleano</span></span></code></pre></div>
+</div>
+<div id="definición-en-secuencia" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Definición en secuencia<a href="estructura.html#definición-en-secuencia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="uso-de-c" class="section level4 hasAnchor" number="4.3.2.1">
+<h4><span class="header-section-number">4.3.2.1</span> Uso de c()<a href="estructura.html#uso-de-c" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En algunas ocasiones definir de manera extensiva puede resultar muy poco eficiente, sobre todo para vectores que contengan una gran cantidad de elementos en secuencia, para ello se definen en <strong>forma de secuencia</strong> empleando el operador <code>:</code>.</p>
+<p>Ejemplo:
+Un vector que tenga los primeros 100 números enteros</p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="estructura.html#cb95-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)</span>
+<span id="cb95-2"><a href="estructura.html#cb95-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb95-3"><a href="estructura.html#cb95-3" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31
+##  [32]  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62
+##  [63]  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93
+##  [94]  94  95  96  97  98  99 100</code></pre>
+</div>
+<div id="uso-de-seq" class="section level4 hasAnchor" number="4.3.2.2">
+<h4><span class="header-section-number">4.3.2.2</span> Uso de seq()<a href="estructura.html#uso-de-seq" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Otra alternativa es la función <code>seq()</code> que significa <em>sequence</em> y es una generalización del operador <code>:</code>.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="estructura.html#cb97-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">100</span>)</span>
+<span id="cb97-2"><a href="estructura.html#cb97-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb97-3"><a href="estructura.html#cb97-3" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31
+##  [32]  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62
+##  [63]  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93
+##  [94]  94  95  96  97  98  99 100</code></pre>
+<p>Esta función permite generar secuencias numéricas de distintas clase y por diferentes rangos.</p>
+<p>Ejemplo:
+Una secuencia que vaya desde -12 hasta 30 en un rango de 3, es decir, -12, -9, -6, …, 27, 30:</p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="estructura.html#cb99-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from=</span><span class="sc">-</span><span class="dv">12</span>,<span class="at">to=</span><span class="dv">30</span>,<span class="at">by=</span><span class="dv">3</span>)</span>
+<span id="cb99-2"><a href="estructura.html#cb99-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-3"><a href="estructura.html#cb99-3" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1] -12  -9  -6  -3   0   3   6   9  12  15  18  21  24  27  30</code></pre>
+<p><strong>NOTA</strong> Se puede omitir <em>from</em>, <em>to</em> y <em>by</em> mientras se sigan colocando los valores en el mismo orden.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="estructura.html#cb101-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="fl">0.1</span>)</span>
+<span id="cb101-2"><a href="estructura.html#cb101-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-3"><a href="estructura.html#cb101-3" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>##  [1] 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0</code></pre>
+<p><strong>NOTA</strong> Si queremos cambiar el orden, debemos necesariamente ponerlos.
+Ejemplo:</p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="estructura.html#cb103-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">by=</span><span class="fl">0.1</span>, <span class="at">to =</span><span class="dv">1</span>, <span class="at">from=</span><span class="fl">0.5</span>)</span>
+<span id="cb103-2"><a href="estructura.html#cb103-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb103-3"><a href="estructura.html#cb103-3" aria-hidden="true" tabindex="-1"></a>z</span></code></pre></div>
+<pre><code>## [1] 0.5 0.6 0.7 0.8 0.9 1.0</code></pre>
+</div>
+</div>
+</div>
+<div id="longitud-de-un-vector" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Longitud de un vector<a href="estructura.html#longitud-de-un-vector" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La <em>longitud</em> de un vector se refiere al número de elementos que contiene. Para conocer ese dato se emplea la función <code>length()</code></p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="estructura.html#cb105-1" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb105-2"><a href="estructura.html#cb105-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-3"><a href="estructura.html#cb105-3" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(s)</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+</div>
+<div id="elementos-de-un-vector" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Elementos de un vector<a href="estructura.html#elementos-de-un-vector" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Para acceder a elementos de un objeto con <em>indices</em> (componentes que tienen una posición asignada), debemos usar <em>corchetes</em> <code>[]</code>. Los corchetes pueden contener posiciones consecutivas o no consecutivas.</p>
+<div id="elementos-consecutivos" class="section level3 hasAnchor" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> Elementos consecutivos<a href="estructura.html#elementos-consecutivos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Se definen el rango de las posiciones a seleccionar, para ello se emplea el operador <code>:</code></p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="estructura.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Se define el vector con la variable &quot;x&quot;</span></span>
+<span id="cb107-2"><a href="estructura.html#cb107-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Muchos&quot;</span>, <span class="st">&quot;años&quot;</span> ,<span class="st">&quot;después&quot;</span> ,<span class="st">&quot;,&quot;</span>, <span class="st">&quot;frente&quot;</span>, <span class="st">&quot;al&quot;</span> ,<span class="st">&quot;pelotón&quot;</span>)</span>
+<span id="cb107-3"><a href="estructura.html#cb107-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-4"><a href="estructura.html#cb107-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Elegir desde el primer hasta el cuarto elemento del objeto &quot;x&quot;</span></span>
+<span id="cb107-5"><a href="estructura.html#cb107-5" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
+<pre><code>## [1] &quot;Muchos&quot;  &quot;años&quot;    &quot;después&quot; &quot;,&quot;</code></pre>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="estructura.html#cb109-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">13</span>,<span class="dv">21</span>)</span>
+<span id="cb109-2"><a href="estructura.html#cb109-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb109-3"><a href="estructura.html#cb109-3" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">3</span><span class="sc">:</span><span class="dv">6</span>]</span></code></pre></div>
+<pre><code>## [1]  3  5  8 13</code></pre>
+</div>
+<div id="elementos-no-consecutivos-de-un-vector" class="section level3 hasAnchor" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> Elementos no consecutivos de un vector<a href="estructura.html#elementos-no-consecutivos-de-un-vector" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Las posiciones a seleccionar se colocan en un vector separadas por <code>,</code>, a su vez este vector se coloca dentro de los corchetes.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="estructura.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Se define el vector &quot;x&quot;</span></span>
+<span id="cb111-2"><a href="estructura.html#cb111-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Hola&quot;</span>, <span class="st">&quot;Bien&quot;</span>, <span class="st">&quot;cómo&quot;</span>, <span class="st">&quot;!&quot;</span>, <span class="st">&quot;estás&quot;</span>, <span class="st">&quot;:(&quot;</span>, <span class="st">&quot;?&quot;</span>)</span>
+<span id="cb111-3"><a href="estructura.html#cb111-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb111-4"><a href="estructura.html#cb111-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Se indica dentro de un nuevo vector que se seleccionen las posiciones 1, 3, 5 y 7 del vector &quot;x&quot;. </span></span>
+<span id="cb111-5"><a href="estructura.html#cb111-5" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>)]</span></code></pre></div>
+<pre><code>## [1] &quot;Hola&quot;  &quot;cómo&quot;  &quot;estás&quot; &quot;?&quot;</code></pre>
+<p>NOTA: No es necesario que estén en orden</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="estructura.html#cb113-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">13</span>,<span class="dv">21</span>)</span>
+<span id="cb113-2"><a href="estructura.html#cb113-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb113-3"><a href="estructura.html#cb113-3" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">4</span>)]</span></code></pre></div>
+<pre><code>## [1]  2 21  5</code></pre>
+</div>
+<div id="excluir-elementos-de-un-vector" class="section level3 hasAnchor" number="4.5.3">
+<h3><span class="header-section-number">4.5.3</span> Excluir elementos de un vector<a href="estructura.html#excluir-elementos-de-un-vector" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para omitir algun o un conjunto de elementos de un vector, se emplea el signo menos dentro de los corchetes <code>[- ]</code></p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="estructura.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Se define el vector &quot;x&quot;</span></span>
+<span id="cb115-2"><a href="estructura.html#cb115-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">13</span>,<span class="dv">21</span>)</span>
+<span id="cb115-3"><a href="estructura.html#cb115-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb115-4"><a href="estructura.html#cb115-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Dentro del corchete indicamos la posición que se quiere omitir </span></span>
+<span id="cb115-5"><a href="estructura.html#cb115-5" aria-hidden="true" tabindex="-1"></a>x[<span class="sc">-</span><span class="dv">4</span>]</span></code></pre></div>
+<pre><code>## [1]  1  2  3  8 13 21</code></pre>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="estructura.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Cuando se quiere omitir un conjunto de elementos, se definen las posiciones dentro de un vector</span></span>
+<span id="cb117-2"><a href="estructura.html#cb117-2" aria-hidden="true" tabindex="-1"></a>x[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">4</span>)]   <span class="co"># Todos menos el segundo , séptimo y cuarto elemento</span></span></code></pre></div>
+<pre><code>## [1]  1  3  8 13</code></pre>
+<p>¿Esto qué hace?</p>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="estructura.html#cb119-1" aria-hidden="true" tabindex="-1"></a>x[<span class="sc">-</span><span class="fu">length</span>(x)]</span></code></pre></div>
+<pre><code>## [1]  1  2  3  5  8 13</code></pre>
+<p><em>NOTA</em> Este comando <code>[- ]</code> <strong>no elimina</strong> elementos de un vector sólo los selecciona y omite. Sin embargo, el vector original continua intacto.</p>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="estructura.html#cb121-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">13</span>,<span class="dv">21</span>)</span>
+<span id="cb121-2"><a href="estructura.html#cb121-2" aria-hidden="true" tabindex="-1"></a>x[<span class="sc">-</span><span class="dv">6</span>] </span></code></pre></div>
+<pre><code>## [1]  1  2  3  5  8 21</code></pre>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="estructura.html#cb123-1" aria-hidden="true" tabindex="-1"></a>x     <span class="co"># Estoy intacto</span></span></code></pre></div>
+<pre><code>## [1]  1  2  3  5  8 13 21</code></pre>
+</div>
+</div>
+<div id="reasignar-elementos-de-un-vector" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Reasignar elementos de un vector<a href="estructura.html#reasignar-elementos-de-un-vector" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Se pueden asignar nuevas posiciones y valores a un vector previamiente definido</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="estructura.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Se define el vector &quot;x&quot;</span></span>
+<span id="cb125-2"><a href="estructura.html#cb125-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">88</span>,<span class="dv">5</span>,<span class="dv">12</span>,<span class="dv">13</span>)</span>
+<span id="cb125-3"><a href="estructura.html#cb125-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb125-4"><a href="estructura.html#cb125-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Agregamos el valor &quot;168&quot; en la posición 4. Intenta explicar paso a paso la siguiente línea de comando. </span></span>
+<span id="cb125-5"><a href="estructura.html#cb125-5" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(x[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>],<span class="dv">168</span>,x[<span class="dv">4</span>]) </span>
+<span id="cb125-6"><a href="estructura.html#cb125-6" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>## [1]  88   5  12 168  13</code></pre>
+<p>Se puede definir un vector vacío y luego “llenarlo” asigando una posición a los componentes.</p>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="estructura.html#cb127-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">c</span>()</span>
+<span id="cb127-2"><a href="estructura.html#cb127-2" aria-hidden="true" tabindex="-1"></a>x                 <span class="co"># Soy un vector vacío :(</span></span></code></pre></div>
+<pre><code>## NULL</code></pre>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="estructura.html#cb129-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>]<span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb129-2"><a href="estructura.html#cb129-2" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span><span class="sc">:</span><span class="dv">5</span>]<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">56</span>,<span class="dv">78</span>,<span class="dv">90</span>,<span class="dv">12</span>)</span>
+<span id="cb129-3"><a href="estructura.html#cb129-3" aria-hidden="true" tabindex="-1"></a>x                 <span class="co"># Ahora ya no :)</span></span></code></pre></div>
+<pre><code>## [1]  2 56 78 90 12</code></pre>
+</div>
+<div id="repetición-de-elementos-de-un-vector" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Repetición de elementos de un vector<a href="estructura.html#repetición-de-elementos-de-un-vector" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La función <code>rep()</code>, que viene del inglés <em>repeat</em>, nos permite repetir elementos en un vector dado.
+El comando <code>rep()</code> sigue el siguiente formato <code>rep(valor, n veces)</code>.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="estructura.html#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Repite 5 veces el valor &quot;3&quot; y asignalo a la variable &quot;x&quot;</span></span>
+<span id="cb131-2"><a href="estructura.html#cb131-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>)</span>
+<span id="cb131-3"><a href="estructura.html#cb131-3" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>## [1] 3 3 3 3 3</code></pre>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="estructura.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="co">#También se pueden repetir un conjunto de valores una vez que sean colocados dentro de un vector</span></span>
+<span id="cb133-2"><a href="estructura.html#cb133-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>),<span class="dv">3</span>) <span class="co">#Repite 3 veces los valores 1, 2, 3 y 5. </span></span>
+<span id="cb133-3"><a href="estructura.html#cb133-3" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>##  [1] 1 2 3 5 1 2 3 5 1 2 3 5</code></pre>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="estructura.html#cb135-1" aria-hidden="true" tabindex="-1"></a>primos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">11</span>)</span>
+<span id="cb135-2"><a href="estructura.html#cb135-2" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">rep</span>(primos,<span class="dv">4</span>)</span>
+<span id="cb135-3"><a href="estructura.html#cb135-3" aria-hidden="true" tabindex="-1"></a>z</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  5  7 11  1  2  3  5  7 11  1  2  3  5  7 11  1  2  3  5  7 11</code></pre>
+<p>Dentro del comando <code>rep()</code> se encuentra la opción <code>each</code>, la cual permite definir la frecuencia de repetición.</p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="estructura.html#cb137-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>)</span>
+<span id="cb137-2"><a href="estructura.html#cb137-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb137-3"><a href="estructura.html#cb137-3" aria-hidden="true" tabindex="-1"></a>y<span class="ot">&lt;-</span><span class="fu">rep</span>(x,<span class="at">each=</span><span class="dv">2</span>)</span>
+<span id="cb137-4"><a href="estructura.html#cb137-4" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>## [1] 1 1 2 2 3 3 4 4</code></pre>
+</div>
+<div id="uso-de-funciones-any-y-all" class="section level2 hasAnchor" number="4.8">
+<h2><span class="header-section-number">4.8</span> Uso de funciones <code>any()</code> y <code>all()</code><a href="estructura.html#uso-de-funciones-any-y-all" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Las funciones <code>any()</code> <em>algún</em> y <code>all()</code> <em>todos</em> permiten conocer si alguno o todos los elementos de un vector cumplen cierta condición.
+El resultado obtenido siempre será un valor booleano: <strong>TRUE</strong> o <strong>FALSE</strong></p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="estructura.html#cb139-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">15</span></span>
+<span id="cb139-2"><a href="estructura.html#cb139-2" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(x <span class="sc">&gt;</span> <span class="fl">7.5</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="estructura.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(x <span class="sc">&gt;</span> <span class="fl">19.76</span>)</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="estructura.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(x <span class="sc">&gt;=</span> <span class="dv">15</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="estructura.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(x <span class="sc">&gt;</span> <span class="fu">sqrt</span>(<span class="dv">100</span>))</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="estructura.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(x<span class="sc">&gt;</span><span class="dv">0</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p><strong>Ejercicios</strong></p>
+<ol style="list-style-type: decimal">
+<li>Dado un vector x, escribe un código que determine si todos los elementos del vector son iguales a cero utilizando la función all().</li>
+<li>Escribe un código que tome un vector x y devuelva TRUE si hay algún elemento repetido en el vector, utilizando la función any().</li>
+<li>Dado un vector x, escribe una función que determine si todos los elementos del vector son iguales entre sí utilizando la función all().</li>
+<li>Escribe una función que tome dos vectores (“x” y “y”) y devuelva TRUE si ambos vectores tienen algún elemento en común, utilizando la función any().</li>
+<li>Escribe una función que tome dos vectores (“x” y “y”) y devuelva TRUE si todos los elementos del vector x son mayores que los elementos correspondientes en el vector y, utilizando la función all().</li>
+<li>Dado un vector x, escribe una función que determine si todos los elementos del vector son menores que cero utilizando la función all().</li>
+<li>Escribe una función que tome dos vectores (“x” y “y”) y devuelva TRUE si al menos un elemento del vector x es mayor que los elementos correspondientes en el vector y, utilizando la función any().</li>
+<li>Dado un vector x, escribe una función que determine si todos los elementos del vector son iguales a un valor específico a utilizando la función all().</li>
+<li>Escribe una función que tome dos vectores (“x” y “y”) y devuelva TRUE si al menos un elemento del vector x es menor que los elementos correspondientes en el vector y, utilizando la función any().</li>
+</ol>
+</div>
+<div id="operaciones-con-vectores" class="section level2 hasAnchor" number="4.9">
+<h2><span class="header-section-number">4.9</span> Operaciones con vectores<a href="estructura.html#operaciones-con-vectores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="operaciones-aritméticas-1" class="section level3 hasAnchor" number="4.9.1">
+<h3><span class="header-section-number">4.9.1</span> Operaciones aritméticas<a href="estructura.html#operaciones-aritméticas-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Al igual que en álgebra podemos definir varias operaciones que nos dejan siempre otro vector. Las operaciones se pueden realizar vector/vector o vector/escalar.</p>
+<p>Se definen los vectores</p>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="estructura.html#cb149-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span>
+<span id="cb149-2"><a href="estructura.html#cb149-2" aria-hidden="true" tabindex="-1"></a>y<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)</span></code></pre></div>
+<p><strong>SUMA</strong> con el operador <code>+</code></p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="estructura.html#cb150-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> y </span></code></pre></div>
+<pre><code>## [1] 5 7 9</code></pre>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="estructura.html#cb152-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 3 4 5</code></pre>
+<p><strong>RESTA</strong> con el operador <code>-</code></p>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="estructura.html#cb154-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">-</span> y</span></code></pre></div>
+<pre><code>## [1] -3 -3 -3</code></pre>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="estructura.html#cb156-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">-</span> <span class="dv">1</span></span></code></pre></div>
+<pre><code>## [1] 0 1 2</code></pre>
+<p><strong>MULTIPLICACIÓN</strong> con el operador <code>*</code></p>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="estructura.html#cb158-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">*</span> x</span></code></pre></div>
+<pre><code>## [1] 1 4 9</code></pre>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="estructura.html#cb160-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">*</span> y </span></code></pre></div>
+<pre><code>## [1]  4 10 18</code></pre>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="estructura.html#cb162-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">*</span> <span class="dv">3</span> </span></code></pre></div>
+<pre><code>## [1] 12 15 18</code></pre>
+<p><strong>DIVISIÓN</strong> con el operador <code>/</code></p>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="estructura.html#cb164-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">/</span> y</span></code></pre></div>
+<pre><code>## [1] 0.25 0.40 0.50</code></pre>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="estructura.html#cb166-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">/</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>## [1] 0.8 1.0 1.2</code></pre>
+<p><strong>EXPONENTE</strong> con los operadoradores <code>**</code> o <code>^</code></p>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="estructura.html#cb168-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">**</span> y</span></code></pre></div>
+<pre><code>## [1]   1  32 729</code></pre>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="estructura.html#cb170-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 16 25 36</code></pre>
+<p><strong>RAÍZ CUADRADA</strong> con la función <code>sqrt()</code></p>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="estructura.html#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(y)</span></code></pre></div>
+<pre><code>## [1] 2.000000 2.236068 2.449490</code></pre>
+<p><strong>LOGARITMO</strong> con la función <code>log()</code></p>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="estructura.html#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(x)</span></code></pre></div>
+<pre><code>## [1] 0.0000000 0.6931472 1.0986123</code></pre>
+<p><em>NOTA</em> CUIDADO con el tamaño de los vectores al momento de realizar operaciones entre ellos.</p>
+</div>
+</div>
+<div id="operaciones-con-un-comando" class="section level2 hasAnchor" number="4.10">
+<h2><span class="header-section-number">4.10</span> Operaciones con un comando<a href="estructura.html#operaciones-con-un-comando" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>También podemos aplicar funciones para calcular con una sola instrucción varias operaciones útiles, esto nos ahorra tiempo.</p>
+<p><strong>Ejercicio</strong> Calcula el promedio de los números del 1 al 10.</p>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="estructura.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Respuesta muy larga </span></span>
+<span id="cb176-2"><a href="estructura.html#cb176-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">+</span><span class="dv">2</span><span class="sc">+</span><span class="dv">3</span><span class="sc">+</span><span class="dv">4</span><span class="sc">+</span><span class="dv">5</span><span class="sc">+</span><span class="dv">6</span><span class="sc">+</span><span class="dv">7</span><span class="sc">+</span><span class="dv">8</span><span class="sc">+</span><span class="dv">9</span><span class="sc">+</span><span class="dv">10</span>)<span class="sc">/</span><span class="dv">10</span></span></code></pre></div>
+<pre><code>## [1] 5.5</code></pre>
+<p><em>Okaaaay, no es un proceso taaaaan largo pero ¿qué pasa cuando queremos calcular el promedio de 10,000 números? RIP</em> para ello se pueden emplear los siguientes comandos <code>min()</code>, <code>max()</code>, <code>range()</code>, <code>sum()</code>, <code>mean()</code>, <code>median()</code>, <code>sd()</code>,<code>quantile()</code>,<code>unique()</code>,<code>sort()</code></p>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="estructura.html#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Se define el vector que incluye mil datos</span></span>
+<span id="cb178-2"><a href="estructura.html#cb178-2" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
+<span id="cb178-3"><a href="estructura.html#cb178-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb178-4"><a href="estructura.html#cb178-4" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(x) <span class="co">#Se obtiene el valor mínimo</span></span></code></pre></div>
+<pre><code>## [1] -3.33612</code></pre>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="estructura.html#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(x) <span class="co">#Se obtiene el valor máximo</span></span></code></pre></div>
+<pre><code>## [1] 3.095637</code></pre>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="estructura.html#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(x) <span class="co">#Da a conocer el rango en el cual se encuentran los valores, es decir el valor min y max. </span></span></code></pre></div>
+<pre><code>## [1] -3.336120  3.095637</code></pre>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="estructura.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(x) <span class="co">#Realiza la suma de todos los valores contenidos en el vector </span></span></code></pre></div>
+<pre><code>## [1] -27.57458</code></pre>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="estructura.html#cb186-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x) <span class="co">#Calcula el promedio del conjunto de valores </span></span></code></pre></div>
+<pre><code>## [1] -0.02757458</code></pre>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="estructura.html#cb188-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(x) <span class="co">#Se obtiene la mediana </span></span></code></pre></div>
+<pre><code>## [1] -0.04194988</code></pre>
+<p><strong>Ejercicio</strong> ¿Qué función tienen los siguientes comandos <code>sd()</code> y <code>quantile()</code>?</p>
+<p>Para <code>unique()</code> y <code>sort()</code> conviene tener elementos discretos más que continuos.</p>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="estructura.html#cb190-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>),<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>,<span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),<span class="dv">5</span>))</span>
+<span id="cb190-2"><a href="estructura.html#cb190-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(x)</span></code></pre></div>
+<pre><code>##  [1]  3  1  2  4  5  6  7  8  9 10 11 12 13 14 15</code></pre>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="estructura.html#cb192-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">10</span>,<span class="dv">10</span>)</span>
+<span id="cb192-2"><a href="estructura.html#cb192-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1]  2  4  3  7  6  8  5  1 10  9</code></pre>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="estructura.html#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(x)</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+<div id="gráficos-con-vectores" class="section level2 hasAnchor" number="4.11">
+<h2><span class="header-section-number">4.11</span> Gráficos con vectores<a href="estructura.html#gráficos-con-vectores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Podemos graficar los vectores de manera inmediata en <code>R</code></p>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="estructura.html#cb196-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>)</span>
+<span id="cb196-2"><a href="estructura.html#cb196-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb196-3"><a href="estructura.html#cb196-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x,<span class="at">col=</span><span class="st">&quot;tomato2&quot;</span>) <span class="co">#Histograma: grafica la distribución de las frecuencias de los datos </span></span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="estructura.html#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,<span class="at">col=</span><span class="st">&quot;salmon&quot;</span>) <span class="co">#Gráfica los datos en el orden de aparición en el vector </span></span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-76-2.png" width="672" /></p>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="estructura.html#cb198-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(x,<span class="at">col=</span><span class="st">&quot;wheat&quot;</span>) <span class="co">#Boxplot: muestra la mediana y quantiles</span></span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-76-3.png" width="672" /></p>
+</div>
+<div id="vectores-con-nombre" class="section level2 hasAnchor" number="4.12">
+<h2><span class="header-section-number">4.12</span> Vectores con nombre<a href="estructura.html#vectores-con-nombre" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Una de las cracterísticas de R es que se puede asignar nombres a los vectores, para ello usamos la función <code>names()</code></p>
+<p>Ejemplo:</p>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="estructura.html#cb199-1" aria-hidden="true" tabindex="-1"></a>edades <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">35</span>,<span class="dv">35</span>,<span class="dv">70</span>,<span class="dv">17</span>,<span class="dv">14</span>) <span class="co">#Definimos un vector llamado &quot;edades&quot;</span></span>
+<span id="cb199-2"><a href="estructura.html#cb199-2" aria-hidden="true" tabindex="-1"></a>nombres <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Jerry&quot;</span>,<span class="st">&quot;Beth&quot;</span>,<span class="st">&quot;Rick&quot;</span>, <span class="st">&quot;Summer&quot;</span>,<span class="st">&quot;Morty&quot;</span>) <span class="co">#Definimos un vector llamado &quot;edades&quot;, del mismo tamaño que &quot;edades&quot;</span></span>
+<span id="cb199-3"><a href="estructura.html#cb199-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb199-4"><a href="estructura.html#cb199-4" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(edades) <span class="ot">&lt;-</span> nombres <span class="co">#Se nombran los elementos del vector &quot;edades&quot;</span></span>
+<span id="cb199-5"><a href="estructura.html#cb199-5" aria-hidden="true" tabindex="-1"></a>edades</span></code></pre></div>
+<pre><code>##  Jerry   Beth   Rick Summer  Morty 
+##     35     35     70     17     14</code></pre>
+<p>También se selecciona de la manera usual, por ejemplo, si quiero ver cuál es la edad de Rick, debo seleccionar el elemento 3:</p>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="estructura.html#cb201-1" aria-hidden="true" tabindex="-1"></a>edades[<span class="dv">3</span>]</span></code></pre></div>
+<pre><code>## Rick 
+##   70</code></pre>
+<p>Esto es muy poco eficiente y propenso al error, sobre todo con vectores muy grandes. Por ello podemos usar los nombres de los vectores:</p>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="estructura.html#cb203-1" aria-hidden="true" tabindex="-1"></a>edades[<span class="st">&quot;Rick&quot;</span>]</span></code></pre></div>
+<pre><code>## Rick 
+##   70</code></pre>
+<p><strong>Recuerda que los nombres S-I-E-M-P-R-E van entre comillas</strong></p>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="estructura.html#cb205-1" aria-hidden="true" tabindex="-1"></a>edades[<span class="fu">c</span>(<span class="st">&quot;Rick&quot;</span>,<span class="st">&quot;Morty&quot;</span>)]</span></code></pre></div>
+<pre><code>##  Rick Morty 
+##    70    14</code></pre>
+<p><strong>Ejercicios:</strong></p>
+<ol style="list-style-type: decimal">
+<li>¿Cuál es el promedio de las edades, sin contar el de Beth?</li>
+<li>Quiten a Morty del vector, ordénenlo y guárdenlo como un nuevo objeto.</li>
+<li>¿Hay alguna edad que sea mayor de 75? ¿Menor de 12? ¿Entre 12 y 20?</li>
+</ol>
+<div id="tamaños-de-genomas" class="section level3 hasAnchor" number="4.12.1">
+<h3><span class="header-section-number">4.12.1</span> Tamaños de genomas<a href="estructura.html#tamaños-de-genomas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ahora veamos un ejemplo más “biológico”</p>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="estructura.html#cb207-1" aria-hidden="true" tabindex="-1"></a>genomeSizeM_BP<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fl">3234.83</span>,<span class="fl">2716.97</span>,<span class="fl">143.73</span>,<span class="fl">0.014281</span>,<span class="fl">12.1</span>)</span></code></pre></div>
+<p><strong>NOTA</strong> Si se desea ver el tamaño en bp, simplemente multiplicamos por el valor del prefijo (Mega = 1 millón)</p>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="estructura.html#cb208-1" aria-hidden="true" tabindex="-1"></a>genomeSizeM_BP<span class="sc">*</span><span class="fl">1e6</span></span></code></pre></div>
+<pre><code>## [1] 3234830000 2716970000  143730000      14281   12100000</code></pre>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="estructura.html#cb210-1" aria-hidden="true" tabindex="-1"></a>organismo<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">&quot;Human&quot;</span>,<span class="st">&quot;Mouse&quot;</span>,<span class="st">&quot;Fruit Fly&quot;</span>,<span class="st">&quot;Roundworm&quot;</span>,<span class="st">&quot;Yeast&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="estructura.html#cb211-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(genomeSizeM_BP)<span class="ot">&lt;-</span> organismo</span></code></pre></div>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="estructura.html#cb212-1" aria-hidden="true" tabindex="-1"></a>genomeSizeM_BP</span></code></pre></div>
+<pre><code>##       Human       Mouse   Fruit Fly   Roundworm       Yeast 
+## 3234.830000 2716.970000  143.730000    0.014281   12.100000</code></pre>
+<p>¿Qué hay de diferente entre el primer vector al que le se asiganaron los tamaños de genomas &amp; esta última versión?</p>
+<p><strong>RECUERDA</strong>
+Se pueden seleccionar elementos de un vector utilizando corchetes:</p>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="estructura.html#cb214-1" aria-hidden="true" tabindex="-1"></a>genomeSizeM_BP[<span class="dv">1</span>]</span></code></pre></div>
+<pre><code>##   Human 
+## 3234.83</code></pre>
+<p>Para obtener elementos consecutivos:</p>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="estructura.html#cb216-1" aria-hidden="true" tabindex="-1"></a>genomeSizeM_BP[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
+<pre><code>##       Human       Mouse   Fruit Fly   Roundworm 
+## 3234.830000 2716.970000  143.730000    0.014281</code></pre>
+<p>Para obtener elementos NO consecutivos:</p>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="estructura.html#cb218-1" aria-hidden="true" tabindex="-1"></a>genomeSizeM_BP[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)]</span></code></pre></div>
+<pre><code>##   Human   Mouse   Yeast 
+## 3234.83 2716.97   12.10</code></pre>
+<p>Para descartar (no eliminar, ni quitar) ciertos elementos:</p>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="estructura.html#cb220-1" aria-hidden="true" tabindex="-1"></a>genomeSizeM_BP[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>)]</span></code></pre></div>
+<pre><code>##       Mouse   Roundworm 
+## 2716.970000    0.014281</code></pre>
+<p>Para referirnos a los elementos por el nombre asignado:</p>
+<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="estructura.html#cb222-1" aria-hidden="true" tabindex="-1"></a>genomeSizeM_BP[<span class="fu">c</span>(<span class="st">&quot;Yeast&quot;</span>,<span class="st">&quot;Human&quot;</span>)]</span></code></pre></div>
+<pre><code>##   Yeast   Human 
+##   12.10 3234.83</code></pre>
+<p>Además de algunas operaciones aritméticas se pueden calcular con la media, máximo, mediana, mínimo, suma y longitud de los vectores</p>
+<p><strong>Ejercicio</strong></p>
+<ol style="list-style-type: decimal">
+<li>Generar un vector de las edades de 10 de tus compañeros</li>
+<li>Asignales nombre.</li>
+<li>Encuentra el mínimo,máximo, media, mediana, la desviación estándar, la longitud del vector y selecciona sólo los elementos impares.</li>
+<li>Elimina el máximo y el mínimo y con el vector resultante realiza un histograma.</li>
+<li>Crea un vector de caracteres con diez nombres de especies y asocialo con su número de acceso de NCBI para su genoma en nucleótidos.</li>
+</ol>
+</div>
+</div>
+<div id="cómo-lidiar-con-las-nas" class="section level2 hasAnchor" number="4.13">
+<h2><span class="header-section-number">4.13</span> ¿Cómo lidiar con las NAs ?<a href="estructura.html#cómo-lidiar-con-las-nas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Es (muy) freceunte que en bases de datos se tengan valores <code>NA</code>, es decir medidas que no pudieron realizarse, medidas perdidas, etc. Para ello se utiliza <code>NA</code>.
+<code>R</code> trata de manera especial a las NAs</p>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="estructura.html#cb224-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">88</span>,<span class="cn">NA</span>,<span class="dv">12</span>,<span class="dv">168</span>,<span class="dv">13</span>)</span></code></pre></div>
+<p>Existe una fución para determinar si un elemento es o no una <code>NA</code>. La función es <code>is.na()</code></p>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="estructura.html#cb225-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">88</span>,<span class="cn">NA</span>,<span class="dv">12</span>,<span class="dv">168</span>,<span class="dv">13</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="estructura.html#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(x)</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE FALSE FALSE FALSE</code></pre>
+<p>Si queremos calcular ciertas funciones numéricas <code>R</code> no sabrá qué hacer</p>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="estructura.html#cb228-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">88</span>,<span class="cn">NA</span>,<span class="dv">12</span>,<span class="dv">168</span>,<span class="dv">13</span>)</span>
+<span id="cb228-2"><a href="estructura.html#cb228-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>Sin emabrgo, podemos decirle a <code>R</code> que las omita, indicando como argumento de la función <code>mean()</code> <code>na.rm=TRUE</code> que significa <em>na remove</em></p>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="estructura.html#cb230-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">88</span>,<span class="cn">NA</span>,<span class="dv">12</span>,<span class="dv">168</span>,<span class="dv">13</span>)</span>
+<span id="cb230-2"><a href="estructura.html#cb230-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x,<span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 70.25</code></pre>
+<p>¿Qué otras funciones tienen esta opción <code>na.rm=TRUE</code> ?</p>
+</div>
+<div id="filtrado-de-elementos-de-un-vector" class="section level2 hasAnchor" number="4.14">
+<h2><span class="header-section-number">4.14</span> Filtrado de elementos de un vector<a href="estructura.html#filtrado-de-elementos-de-un-vector" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Podemos generar vectores de que sean subconjuntos de vectores más grandes que cumplan cierta(s) condición(es)</p>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="estructura.html#cb232-1" aria-hidden="true" tabindex="-1"></a>un_vector <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">13</span>,<span class="dv">17</span>,<span class="dv">19</span>) </span>
+<span id="cb232-2"><a href="estructura.html#cb232-2" aria-hidden="true" tabindex="-1"></a>otro_vector <span class="ot">&lt;-</span> un_vector[un_vector<span class="sc">*</span>un_vector <span class="sc">&gt;</span> <span class="dv">10</span>]   <span class="co">#Se lee el vector desde dentro hacía afuera</span></span>
+<span id="cb232-3"><a href="estructura.html#cb232-3" aria-hidden="true" tabindex="-1"></a>otro_vector</span></code></pre></div>
+<pre><code>## [1]  5  7 11 13 17 19</code></pre>
+<p>Veamos paso a paso qué es lo que hace este proceso</p>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="estructura.html#cb234-1" aria-hidden="true" tabindex="-1"></a>un_vector</span></code></pre></div>
+<pre><code>## [1]  1  2  3  5  7 11 13 17 19</code></pre>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="estructura.html#cb236-1" aria-hidden="true" tabindex="-1"></a>un_vector<span class="sc">*</span>un_vector <span class="sc">&gt;</span> <span class="dv">10</span>    <span class="co"># Mira, de adentro hacía afuera</span></span></code></pre></div>
+<pre><code>## [1] FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE</code></pre>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="estructura.html#cb238-1" aria-hidden="true" tabindex="-1"></a>indices<span class="ot">&lt;-</span>un_vector<span class="sc">*</span>un_vector <span class="sc">&gt;</span> <span class="dv">10</span> </span>
+<span id="cb238-2"><a href="estructura.html#cb238-2" aria-hidden="true" tabindex="-1"></a>un_vector[indices]</span></code></pre></div>
+<pre><code>## [1]  5  7 11 13 17 19</code></pre>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="estructura.html#cb240-1" aria-hidden="true" tabindex="-1"></a>un_vector[<span class="fu">c</span>(<span class="cn">FALSE</span>,<span class="cn">FALSE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>,<span class="cn">TRUE</span>,<span class="cn">TRUE</span>,<span class="cn">TRUE</span>,<span class="cn">TRUE</span>,<span class="cn">TRUE</span>)]</span></code></pre></div>
+<pre><code>## [1]  5  7 11 13 17 19</code></pre>
+<p>La representación interna de los valores booleanos <code>FALSE</code> y <code>TRUE</code>son 0 y 1, respectivamente</p>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="estructura.html#cb242-1" aria-hidden="true" tabindex="-1"></a>un_vector[<span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">0</span>,<span class="dv">3</span>),<span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">1</span>))]</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div id="filtrado-con-subset" class="section level3 hasAnchor" number="4.14.1">
+<h3><span class="header-section-number">4.14.1</span> Filtrado con <code>subset()</code><a href="estructura.html#filtrado-con-subset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Podemos usar la función <code>subset()</code>para hacer lo mismo que en el caso anterior <strong>excepto que omite los NA</strong></p>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="estructura.html#cb244-1" aria-hidden="true" tabindex="-1"></a>un_vector<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="dv">13</span>,<span class="dv">17</span>,<span class="dv">19</span>) </span>
+<span id="cb244-2"><a href="estructura.html#cb244-2" aria-hidden="true" tabindex="-1"></a>otro_vector <span class="ot">&lt;-</span> <span class="fu">subset</span>(un_vector,un_vector<span class="sc">*</span>un_vector <span class="sc">&gt;</span> <span class="dv">10</span>)   </span>
+<span id="cb244-3"><a href="estructura.html#cb244-3" aria-hidden="true" tabindex="-1"></a>otro_vector</span></code></pre></div>
+<pre><code>## [1]  5  7 11 13 17 19</code></pre>
+<p>Qué pasa si tenemos <code>NA</code>s. Si usamos el método anterior obtendríamos</p>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="estructura.html#cb246-1" aria-hidden="true" tabindex="-1"></a>un_vector<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="cn">NA</span>,<span class="dv">13</span>,<span class="dv">17</span>,<span class="cn">NA</span>,<span class="dv">19</span>) </span>
+<span id="cb246-2"><a href="estructura.html#cb246-2" aria-hidden="true" tabindex="-1"></a>otro_vector <span class="ot">&lt;-</span> un_vector[un_vector<span class="sc">*</span>un_vector <span class="sc">&gt;</span> <span class="dv">10</span>]   <span class="co"># Leeme de adentro hacia afuera</span></span>
+<span id="cb246-3"><a href="estructura.html#cb246-3" aria-hidden="true" tabindex="-1"></a>otro_vector  <span class="co"># Aquí salen las NAs</span></span></code></pre></div>
+<pre><code>## [1]  5  7 11 NA 13 17 NA 19</code></pre>
+<p>En cambio con <code>subset()</code></p>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="estructura.html#cb248-1" aria-hidden="true" tabindex="-1"></a>un_vector<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">11</span>,<span class="cn">NA</span>, <span class="dv">13</span>,<span class="dv">17</span>,<span class="cn">NA</span>, <span class="dv">19</span>) </span>
+<span id="cb248-2"><a href="estructura.html#cb248-2" aria-hidden="true" tabindex="-1"></a>otro_vector <span class="ot">&lt;-</span> <span class="fu">subset</span>(un_vector,un_vector<span class="sc">*</span>un_vector <span class="sc">&gt;</span> <span class="dv">10</span>)   </span>
+<span id="cb248-3"><a href="estructura.html#cb248-3" aria-hidden="true" tabindex="-1"></a>otro_vector  <span class="co"># Aquí ya no aparecen las NAs</span></span></code></pre></div>
+<pre><code>## [1]  5  7 11 13 17 19</code></pre>
+</div>
+<div id="la-función-de-selección-which" class="section level3 hasAnchor" number="4.14.2">
+<h3><span class="header-section-number">4.14.2</span> La función de selección <code>which()</code><a href="estructura.html#la-función-de-selección-which" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La función <code>which()</code> nos regresa los índices, es decir, dice <strong>quiénes</strong> cumplen cierta condición</p>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="estructura.html#cb250-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">2</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="dv">8</span>)</span>
+<span id="cb250-2"><a href="estructura.html#cb250-2" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(z<span class="sc">*</span>z <span class="sc">&gt;</span> <span class="dv">8</span>)</span></code></pre></div>
+<pre><code>## [1] 1 3 4</code></pre>
+<p>Acá nos dicen quiénes</p>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="estructura.html#cb252-1" aria-hidden="true" tabindex="-1"></a>z[<span class="fu">which</span>(z<span class="sc">*</span>z <span class="sc">&gt;</span> <span class="dv">8</span>)]</span></code></pre></div>
+<pre><code>## [1]  5 -3  8</code></pre>
+</div>
+</div>
+<div id="cómo-podemos-ver-si-dos-vectores-son-iguales" class="section level2 hasAnchor" number="4.15">
+<h2><span class="header-section-number">4.15</span> ¿Cómo podemos ver si dos vectores son iguales?<a href="estructura.html#cómo-podemos-ver-si-dos-vectores-son-iguales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dos vectores son iguales si elemento a elemento son idénticos.
+Por lo tanto deben de ser del mismo tamaño.
+<strong>RECUERDA</strong> Para probar si dos elementos son iguales se utiliza el operador de comparación <code>==</code> son dos signos iguales juntos, sin espacio.
+No confundir con el operador <code>=</code> que se puede usar como operador de asiganción (aunque no es recomendable su uso. De hecho está prohibido en este curso &gt;:(</p>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="estructura.html#cb254-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">9</span>,<span class="dv">16</span>,<span class="dv">25</span>)</span>
+<span id="cb254-2"><a href="estructura.html#cb254-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb254-3"><a href="estructura.html#cb254-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> y<span class="sc">*</span>y</span></code></pre></div>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="estructura.html#cb255-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">==</span>y</span></code></pre></div>
+<pre><code>## [1] TRUE TRUE TRUE TRUE TRUE</code></pre>
+<p>¿Qué pasaría si me confundo y escribo el operador de igualdad en lugar del de comparación?</p>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="estructura.html#cb257-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">9</span></span>
+<span id="cb257-2"><a href="estructura.html#cb257-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>## [1] 5 6 7 8 9</code></pre>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="estructura.html#cb259-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> y</span></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="estructura.html#cb260-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>## [1] 5 6 7 8 9</code></pre>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="estructura.html#cb262-1" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
+<pre><code>## [1] 5 6 7 8 9</code></pre>
+<p>Para vectores grandes puedo usar la función <code>all()</code> que ya vimos arriba</p>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="estructura.html#cb264-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10000</span>,<span class="dv">1</span>)</span>
+<span id="cb264-2"><a href="estructura.html#cb264-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10000</span>,<span class="dv">1</span>)</span>
+<span id="cb264-3"><a href="estructura.html#cb264-3" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(x<span class="sc">==</span>y)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>¿Cómo podríamos corrobar que son iguales usando <code>any</code>?</p>
+<p>También podríamos utilizar que <code>TRUE</code> es <code>1</code> y que <code>FALSE</code> es <code>0</code></p>
+<p>¿Por qué este código nos dice que sí son iguales?</p>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="estructura.html#cb266-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(x<span class="sc">==</span>y)</span></code></pre></div>
+<pre><code>## [1] 10000</code></pre>
+<div id="factor" class="section level3 hasAnchor" number="4.15.1">
+<h3><span class="header-section-number">4.15.1</span> Factor<a href="estructura.html#factor" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Los factores son un tipo de vector que puede tomar un número “limitado” de valores, que normalmente se utilizan como variables categóricas. Por ejemplo: macho/hembra. Es útil tenener este tipo de objeto porque varios modelos estadísticos que se pueden correr en <code>R</code> los utilizan. A los valores que pueden tomar los elementos del factor se les conoce como <em>levels</em>.</p>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="estructura.html#cb268-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">1</span>)</span>
+<span id="cb268-2"><a href="estructura.html#cb268-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1] 1 2 2 3 1 2 3 3 1 2 3 3 1</code></pre>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="estructura.html#cb270-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.factor</span>(x)</span></code></pre></div>
+<pre><code>##  [1] 1 2 2 3 1 2 3 3 1 2 3 3 1
+## Levels: 1 2 3</code></pre>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="estructura.html#cb272-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span><span class="fu">as.factor</span>(x)</span>
+<span id="cb272-2"><a href="estructura.html#cb272-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1] 1 2 2 3 1 2 3 3 1 2 3 3 1
+## Levels: 1 2 3</code></pre>
+<p>Los factores son una manera computacionalmente eficiente de almacenar caracteres, pues cada valor único (<em>level</em>) se guarda solo una vez y a los datos se les asigna un valor entero.</p>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="estructura.html#cb274-1" aria-hidden="true" tabindex="-1"></a>meses <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;March&quot;</span>,<span class="st">&quot;April&quot;</span>,<span class="st">&quot;January&quot;</span>,<span class="st">&quot;November&quot;</span>,<span class="st">&quot;January&quot;</span>,</span>
+<span id="cb274-2"><a href="estructura.html#cb274-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;September&quot;</span>,<span class="st">&quot;October&quot;</span>,<span class="st">&quot;September&quot;</span>,<span class="st">&quot;November&quot;</span>,<span class="st">&quot;August&quot;</span>,</span>
+<span id="cb274-3"><a href="estructura.html#cb274-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;January&quot;</span>,<span class="st">&quot;November&quot;</span>,<span class="st">&quot;November&quot;</span>,<span class="st">&quot;February&quot;</span>,<span class="st">&quot;May&quot;</span>,<span class="st">&quot;August&quot;</span>,</span>
+<span id="cb274-4"><a href="estructura.html#cb274-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;July&quot;</span>,<span class="st">&quot;December&quot;</span>,<span class="st">&quot;August&quot;</span>,<span class="st">&quot;August&quot;</span>,<span class="st">&quot;September&quot;</span>,<span class="st">&quot;November&quot;</span>,</span>
+<span id="cb274-5"><a href="estructura.html#cb274-5" aria-hidden="true" tabindex="-1"></a>         <span class="st">&quot;February&quot;</span>,<span class="st">&quot;April&quot;</span>)</span>
+<span id="cb274-6"><a href="estructura.html#cb274-6" aria-hidden="true" tabindex="-1"></a>meses</span></code></pre></div>
+<pre><code>##  [1] &quot;March&quot;     &quot;April&quot;     &quot;January&quot;   &quot;November&quot;  &quot;January&quot;   &quot;September&quot; &quot;October&quot;   &quot;September&quot; &quot;November&quot;  &quot;August&quot;   
+## [11] &quot;January&quot;   &quot;November&quot;  &quot;November&quot;  &quot;February&quot;  &quot;May&quot;       &quot;August&quot;    &quot;July&quot;      &quot;December&quot;  &quot;August&quot;    &quot;August&quot;   
+## [21] &quot;September&quot; &quot;November&quot;  &quot;February&quot;  &quot;April&quot;</code></pre>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="estructura.html#cb276-1" aria-hidden="true" tabindex="-1"></a>meses <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(meses)</span>
+<span id="cb276-2"><a href="estructura.html#cb276-2" aria-hidden="true" tabindex="-1"></a>meses</span></code></pre></div>
+<pre><code>##  [1] March     April     January   November  January   September October   September November  August    January   November 
+## [13] November  February  May       August    July      December  August    August    September November  February  April    
+## Levels: April August December February January July March May November October September</code></pre>
+<p>El que existan los <em>levels</em> permite realizar ciertas operaciones y manipular el contenido del factor.</p>
+<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="estructura.html#cb278-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(meses)</span></code></pre></div>
+<pre><code>## meses
+##     April    August  December  February   January      July     March       May  November   October September 
+##         2         4         1         2         3         1         1         1         5         1         3</code></pre>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="estructura.html#cb280-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(meses)</span></code></pre></div>
+<pre><code>##  [1] &quot;April&quot;     &quot;August&quot;    &quot;December&quot;  &quot;February&quot;  &quot;January&quot;   &quot;July&quot;      &quot;March&quot;     &quot;May&quot;       &quot;November&quot;  &quot;October&quot;  
+## [11] &quot;September&quot;</code></pre>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="estructura.html#cb282-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(meses)[<span class="dv">1</span>]</span></code></pre></div>
+<pre><code>## [1] &quot;April&quot;</code></pre>
+<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="estructura.html#cb284-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(meses)[<span class="dv">1</span>]<span class="ot">&lt;-</span><span class="st">&quot;Abril&quot;</span></span>
+<span id="cb284-2"><a href="estructura.html#cb284-2" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(meses)</span></code></pre></div>
+<pre><code>##  [1] &quot;Abril&quot;     &quot;August&quot;    &quot;December&quot;  &quot;February&quot;  &quot;January&quot;   &quot;July&quot;      &quot;March&quot;     &quot;May&quot;       &quot;November&quot;  &quot;October&quot;  
+## [11] &quot;September&quot;</code></pre>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="estructura.html#cb286-1" aria-hidden="true" tabindex="-1"></a>meses</span></code></pre></div>
+<pre><code>##  [1] March     Abril     January   November  January   September October   September November  August    January   November 
+## [13] November  February  May       August    July      December  August    August    September November  February  Abril    
+## Levels: Abril August December February January July March May November October September</code></pre>
+</div>
+<div id="ejercicio-temperaturas-de-incubación" class="section level3 hasAnchor" number="4.15.2">
+<h3><span class="header-section-number">4.15.2</span> Ejercicio: Temperaturas de Incubación<a href="estructura.html#ejercicio-temperaturas-de-incubación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Supongamos que estamos realizando un experimento de cultivo bacteriano y registramos las temperaturas de incubación para diferentes muestras. Queremos calcular la temperatura media y la desviación estándar.</p>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="estructura.html#cb288-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Temperaturas de incubación (en grados Celsius)</span></span>
+<span id="cb288-2"><a href="estructura.html#cb288-2" aria-hidden="true" tabindex="-1"></a>temperaturas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">37</span>, <span class="dv">37</span>, <span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">30</span>, <span class="dv">37</span>, <span class="dv">25</span>, <span class="dv">25</span>)</span>
+<span id="cb288-3"><a href="estructura.html#cb288-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb288-4"><a href="estructura.html#cb288-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Cálculo de la temperatura media</span></span>
+<span id="cb288-5"><a href="estructura.html#cb288-5" aria-hidden="true" tabindex="-1"></a>temp_media <span class="ot">&lt;-</span> <span class="fu">mean</span>(temperaturas)</span>
+<span id="cb288-6"><a href="estructura.html#cb288-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Temperatura media:&quot;</span>, temp_media, <span class="st">&quot;°C</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<pre><code>## Temperatura media: 30.75 °C</code></pre>
+<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="estructura.html#cb290-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cálculo de la desviación estándar</span></span>
+<span id="cb290-2"><a href="estructura.html#cb290-2" aria-hidden="true" tabindex="-1"></a>temp_desviacion <span class="ot">&lt;-</span> <span class="fu">sd</span>(temperaturas)</span>
+<span id="cb290-3"><a href="estructura.html#cb290-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Desviación estándar:&quot;</span>, temp_desviacion, <span class="st">&quot;°C</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<pre><code>## Desviación estándar: 5.574175 °C</code></pre>
+<p>Supongamos que tenemos un conjunto de temperaturas de incubación de diferentes muestras bacterianas, y queremos identificar las muestras que están dentro de un rango de temperatura óptimo para el crecimiento bacteriano (entre 25°C y 37°C).</p>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="estructura.html#cb292-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vectores con nombre: Muestras y Temperaturas</span></span>
+<span id="cb292-2"><a href="estructura.html#cb292-2" aria-hidden="true" tabindex="-1"></a>muestras <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Muestra1&quot;</span>, <span class="st">&quot;Muestra2&quot;</span>, <span class="st">&quot;Muestra3&quot;</span>, <span class="st">&quot;Muestra4&quot;</span>)</span>
+<span id="cb292-3"><a href="estructura.html#cb292-3" aria-hidden="true" tabindex="-1"></a>temperaturas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">Muestra1 =</span> <span class="dv">37</span>, <span class="at">Muestra2 =</span> <span class="dv">25</span>, <span class="at">Muestra3 =</span> <span class="dv">30</span>, <span class="at">Muestra4 =</span> <span class="dv">40</span>)</span>
+<span id="cb292-4"><a href="estructura.html#cb292-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb292-5"><a href="estructura.html#cb292-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrado de temperaturas dentro del rango óptimo</span></span>
+<span id="cb292-6"><a href="estructura.html#cb292-6" aria-hidden="true" tabindex="-1"></a>temperaturas_optimas <span class="ot">&lt;-</span> temperaturas[temperaturas <span class="sc">&gt;=</span> <span class="dv">25</span> <span class="sc">&amp;</span> temperaturas <span class="sc">&lt;=</span> <span class="dv">37</span>]</span>
+<span id="cb292-7"><a href="estructura.html#cb292-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb292-8"><a href="estructura.html#cb292-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestras dentro del rango óptimo</span></span>
+<span id="cb292-9"><a href="estructura.html#cb292-9" aria-hidden="true" tabindex="-1"></a>muestras_optimas <span class="ot">&lt;-</span> <span class="fu">names</span>(temperaturas_optimas)</span>
+<span id="cb292-10"><a href="estructura.html#cb292-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb292-11"><a href="estructura.html#cb292-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Muestras con temperatura óptima:&quot;</span>, muestras_optimas, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<pre><code>## Muestras con temperatura óptima: Muestra1 Muestra2 Muestra3</code></pre>
+<p><strong>Ejercicio</strong>
+1. Lee la ayuda de <code>as.factor</code> para determinar cómo crear un factor “ordenado”
+2. Crea un vector con los meses en los que todas las alumnas del grupo cumplen años.
+3. Aprovecha los levels para generar un objeto que guarde el número de estudiantes que cumplen años cada mes.</p>
+<p><strong>Ejercicios</strong></p>
+<ol style="list-style-type: decimal">
+<li>Genera un vector con el nombre de 10 virus</li>
+<li>Asocia esos nombres con su número de acceso en NCBI</li>
+<li>Genera otro vector que contega los tamaños en pb y los nombres</li>
+<li>Determina cuáles son mayores de 300 bp</li>
+<li>Asocia un subconjunto de vectores que sean mayores (menores a 300 bp) y mayores (mayores a 300 bp)</li>
+<li>Haz un histograma con los tamaños de todos</li>
+<li>Dibuja un boxplot con los tamaños de todos.Pon en el eje los nombres de todos.</li>
+</ol>
+<p><strong>Ejercicios adicionales </strong></p>
+<ol style="list-style-type: decimal">
+<li>Crea un vector llamado “v1” con los números 2, 4, 6, 8 y 10.</li>
+<li>Crea un vector llamado “v2” con los números 1, 3, 5, 7 y 9.</li>
+<li>Suma los vectores “v1” y “v2” elemento por elemento.</li>
+<li>Multiplica el vector “v1” por el escalar 3.</li>
+<li>Calcula la media del vector “v2”.</li>
+<li>Encuentra el valor mínimo del vector “v1”.</li>
+<li>Crea un vector llamado “v3” con los números 2, 4, 6, 8 y 10.</li>
+<li>Compara los vectores “v1” y “v3” y determina si son iguales.</li>
+<li>Crea un vector “v4” con los primeros 10 números impares.</li>
+<li>Encuentra los elementos comunes entre los vectores “v2” y “v4”</li>
+<li>Crea un vector llamado “v1” con números aleatorios enteros entre 1 y 50.</li>
+<li>Ordena el vector “v1” de forma descendente.</li>
+<li>Encuentra la mediana del vector “v1”.</li>
+<li>Crea un vector llamado “v2” con números aleatorios enteros entre 10 y 20, de longitud 5.
+15 .Calcula el producto punto entre “v1” y “v2”.
+16 .Crea un vector llamado “v3” con números aleatorios entre 0 y 1, de longitud 10.</li>
+<li>Normaliza el vector “v3”.</li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introducción-a-r-para-estudiantes-de-microbiología.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="matrices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-Vectors.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
