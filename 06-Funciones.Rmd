@@ -1,0 +1,178 @@
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+# Funciones en R {#functions}
+
+Las funciones definidas por el usuario en R son bloques de código que realizan una tarea específica y se pueden llamar desde cualquier lugar del programa. Las funciones en R se definen usando la palabra clave function seguida del nombre de la función, paréntesis y llaves.
+
+Las funciones toman argumentos de entrada y producen un resultado como salida. Las funciones definidas por el usuario son una herramienta poderosa en R que permiten reutilizar código y automatizar tareas. Una vez que domines la sintaxis básica de la función en R, puedes comenzar a crear funciones más avanzadas y complejas para adaptarse a tus necesidades.
+
+## Sintaxis básica de una función en R
+
+La sintaxis básica para definir una función en R es la siguiente:
+
+```{r}
+nombre_de_la_funcion <- function(arg1, arg2, ...) {
+  # Cuerpo de la función
+  resultado <- ...
+  return(resultado)
+}
+
+```
+
+Donde:
+
+-   `nombre_de_la_funcion`: el nombre que le das a tu función. -`function`: la palabra *function*
+-   `arg1`, `arg2`, ...: los argumentos de entrada que toma la función (opcional).
+-   `resultado`: el resultado que devuelve la función (opcional).
+
+El cuerpo de la función es donde se escribe el código que realiza la tarea específica. El resultado de la función se devuelve con la función `return()`.
+
+## Ejemplo de función definida por el usuario en R
+
+Aquí hay un ejemplo de una función definida por el usuario que toma dos argumentos x e y y devuelve la suma de ambos:
+
+```{r}
+mi_suma <- function(x, y) {
+  resultado <- x + y
+  return(resultado)
+}
+
+```
+
+Para usar esta función, simplemente llámala con los argumentos que deseas pasar:
+
+```{r}
+mi_suma(3, 5)
+
+```
+
+## Ejemplo de función con argumentos por defecto en R
+
+Las funciones en R también pueden tener argumentos por defecto que se utilizan si no se proporciona ningún valor para ellos. Aquí hay un ejemplo de una función que tiene dos argumentos, `x` e `y`, y `y` tiene un valor por defecto de 2:
+
+```{r}
+mi_funcion <- function(x, y = 2) {
+  resultado <- x * y
+  return(resultado)
+}
+```
+
+En este caso, si no se proporciona un valor para `y`, se utilizará el valor por defecto de `2`:
+
+```{r}
+mi_funcion(3)
+```
+
+También puede proporcionar un valor diferente para y, si es necesario:
+
+```{r}
+mi_funcion(3, 5)
+```
+
+## Definir una función con un parámetro opcional
+
+```{r}
+saludar <- function(nombre, saludo = "Hola") {
+  mensaje <- paste(saludo, nombre)
+  return(mensaje)
+}
+```
+
+### Llamar a la función saludar sin proporcionar el parámetro opcional
+
+```{r}
+mensaje1 <- saludar("Juan")
+print(mensaje1)
+```
+
+### Llamar a la función saludar proporcionando el parámetro opcional
+
+```{r}
+mensaje2 <- saludar("María", "Buenos días")
+print(mensaje2)
+```
+
+## Definir una función para calcular el área de un círculo
+
+```{r}
+area_circulo <- function(radio) {
+  area <- pi * radio^2
+  return(area)
+}
+# Ejemplo de uso
+
+radio <- 3
+area <- area_circulo(radio)
+print(paste("El área del círculo con radio", radio, "es:", area))
+```
+
+## Definir una función para calcular el factorial de un número
+
+```{r}
+factorial <- function(n) {
+  if (n == 0) {
+    return(1)
+  } else {
+    return(n * factorial(n - 1))
+  }
+}
+
+# Ejemplo de uso
+numero <- 5
+resultado <- factorial(numero)
+print(paste("El factorial de", numero, "es:", resultado))
+```
+
+## Definir una función para verificar si un número es primo
+
+```{r}
+es_primo <- function(n) {
+  if (n <= 1) {
+    return(FALSE)
+  } else if (n <= 3) {
+    return(TRUE)
+  } else if (n %% 2 == 0 | n %% 3 == 0) {
+    return(FALSE)
+  }
+  i <- 5
+  while (i * i <= n) {
+    if (n %% i == 0 | n %% (i + 2) == 0) {
+      return(FALSE)
+    }
+    i <- i + 6
+  }
+  return(TRUE)
+}
+
+# Ejemplo de uso
+numero <- 11
+if (es_primo(numero)) {
+  print(paste(numero, "es un número primo."))
+} else {
+  print(paste(numero, "no es un número primo."))
+}
+```
+
+**Ejercicios**
+
+1.  Escribe una función que tome un vector numérico como argumento de entrada y devuelva la media aritmética de los valores.
+
+2.  Escribe una función que tome dos vectores numéricos como argumentos de entrada y devuelva su producto punto (también conocido como producto escalar).
+
+3.  Escribe una función que tome un vector numérico como argumento de entrada y devuelva el valor mínimo y máximo en una lista.
+
+4.  Escribe una función que tome una matriz cuadrada como argumento de entrada y devuelva su determinante.
+
+5.  Escribe una función que tome una matriz de $2 \times 2$ como argumento de entrada y devuelva su transpuesta.
+
+6.  Escribe una función que tome una lista como argumento de entrada y devuelva la longitud de cada elemento en una lista.
+
+7.  Escribe una función que tome una cadena de texto como argumento de entrada y devuelva una lista con todas las palabras en la cadena.
+
+8.  Escribe una función que tome un vector numérico como argumento de entrada y devuelva un vector con los valores ordenados de menor a mayor.
+
+9.  Escribe una función que tome un vector de caracteres como argumento de entrada y devuelva un vector con los mismos elementos en orden inverso.
+
+10. Escribe una función que tome una matriz como argumento de entrada y devuelva la diagonal principal en un vector.

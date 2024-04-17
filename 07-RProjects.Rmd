@@ -1,0 +1,58 @@
+---
+---
+
+# RProjects {#rprojects}
+
+
+
+Los proyectos en R (R Projects) son una manera eficiente de organizar y gestionar todo el trabajo relacionado con tus análisis en R. Facilitan la colaboración, el control de versiones y la reproducibilidad de tu investigación o análisis de datos.
+
+## Introducción a R Projects en RStudio
+
+RStudio permite crear proyectos, que son básicamente carpetas que contienen todos los archivos relacionados con un análisis específico. Al trabajar dentro de un proyecto, RStudio automáticamente establece el directorio del proyecto como el directorio de trabajo, simplificando la gestión de archivos y el flujo de trabajo.
+
+**Crear un nuevo proyecto:**
+
+1. En RStudio, ve a `File > New Project`.
+2. Elige crear un proyecto en un nuevo directorio o en un directorio existente.
+3. Asigna un nombre al proyecto y selecciona la ubicación para el directorio del proyecto.
+4. Haz clic en `Create Project`.
+
+## Gestión de proyectos: organización y buenas prácticas
+
+Una buena gestión de proyectos en R implica una estructura de carpetas organizada, nomenclatura consistente de archivos y un entendimiento claro del flujo de trabajo del proyecto.
+
+**Estructura de carpetas recomendada:**
+
+- `/01_RawData`: Guarda tus bases de datos originales (preferentemente en formato de solo lectura como .csv o .xlsx)..
+- `/02_Scripts`: Guardar tus scripts con extensiones .R o .Rmd 
+- `/03_ProceesedData`: Almacena archivos de salida procesados, como datos limpios o tablas resumen
+- `/04_output`: .Guarda las figuras generadas por tus scripts.
+
+**Buenas prácticas:**
+
+- Mantén un script de R (por ejemplo, `main.R`) que sirva como punto de entrada para entender y ejecutar el proyecto.
+- Documenta tus scripts detalladamente para que otros (o tú en el futuro) puedan entender el propósito y funcionamiento de tu código.
+- Utiliza nombres de archivos y variables claros y descriptivos.
+
+## Colaboración y control de versiones con Git y GitHub
+
+El control de versiones es crucial para la colaboración en proyectos de programación. Git, integrado con GitHub, permite a múltiples personas trabajar en el mismo proyecto sin conflictos.
+
+**Configurar Git en RStudio:**
+
+1. Instala Git en tu computadora y configúralo con tus credenciales de GitHub.
+2. En RStudio, ve a `Tools > Global Options > Git/SVN` para configurar tu cuenta de Git.
+3. Crea un nuevo repositorio en GitHub y clónalo en tu computadora a través de la URL del repositorio.
+
+**Uso básico de Git con RStudio:**
+
+- **Commit**: Guarda los cambios realizados en tus archivos al repositorio local. Describe brevemente los cambios realizados.
+- **Push**: Envía tus commits locales a GitHub para actualizar el repositorio remoto.
+- **Pull**: Actualiza tu repositorio local con los cambios realizados por otros colaboradores en el repositorio remoto.
+
+**Colaborar en proyectos:**
+
+- Utiliza *branches* para trabajar en nuevas características o experimentos sin afectar la rama principal (*main* o *master*).
+- Abre *pull requests* para discutir cambios antes de integrarlos a la rama principal.
+- Realiza revisiones de código y utiliza *issues* para rastrear tareas y discutir problemas.

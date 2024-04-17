@@ -1,0 +1,63 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
+# Listas {#Listas}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Las listas son una estructura de datos muy versátil en R, que permiten almacenar una colección de elementos. A diferencia de los vectores, una lista puede contener elementos de diferentes tipos, como números, cadenas y hasta otras listas.
+
+En R, las listas pueden contener una amplia variedad de tipos de datos, incluyendo números, vectores, matrices, y data frames. Esto las hace extremadamente versátiles para la gestión de datos complejos.
+
+**Ejemplos**
+
+- Creación de una Lista
+
+```{r}
+# Creando una lista con diferentes tipos de datos
+compleja_lista <- list(
+  numero = 42,
+  vector = c(1, 2, 3),
+  matriz = matrix(c(1, 2, 3, 4), nrow = 2),
+  data_frame = data.frame(nombre = c("E. coli", "S. aureus"), gram = c("+", "-"))
+)
+
+print(compleja_lista)
+
+```
+
+
+
+Para acceder a los elementos de una lista, puedes usar el doble corchete [[ ]] o el operador de dólar $. El doble corchete es útil para acceder a los elementos por su índice, mientras que el operador de dólar se usa con nombres.
+
+Accceso por índice
+
+```{r}
+# Accediendo al vector dentro de la lista
+vector_en_lista <- compleja_lista[[2]]
+print(vector_en_lista)
+
+```
+
+### Acceso por Nombre
+
+```{r}
+# Accediendo al data frame por nombre
+data_frame_en_lista <- compleja_lista$data_frame
+print(data_frame_en_lista)
+
+```
+## Ejercicios
+### Ejercicios Propuestos con listas 
+
+1. 
+Crea una lista que contenga al menos cuatro tipos diferentes de datos (incluyendo al menos un vector, una matriz, y un data frame). Luego, escribe código para acceder a cada uno de estos elementos por su índice.
+
+2. 
+Añade un nuevo elemento a la compleja_lista que sea otra lista conteniendo información relevante a un experimento microbiológico (p.ej., fechas, resultados de crecimiento, tipo de medio de cultivo). Accede a un elemento específico dentro de esta lista anidada.
+
+Recuerda, el uso efectivo de listas en R puede ayudarte a gestionar y manipular una amplia gama de conjuntos de datos complejos, especialmente útil en campos como la Microbiología.

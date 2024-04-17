@@ -1,0 +1,242 @@
+# Matrices
+Una matriz es un arreglo rectangular de datos del mismo tipo. **Solo del mismo tipo**. Está compuesta tanto de columnas como de renglones. 
+
+## Creación de matrices
+Para crear una matriz podemos usar la función `matrix()`. Dicha función requiere de, al menos, un vector e indicar al menos una dimensión.
+
+Ejemplo: 
+```{r}
+y <- matrix(c(1,5,8,-4), nrow=2, ncol=2) #nrow: indica el número de renglones & ncol: indica el número de columnas. 
+y
+```
+Por default, la matriz va agregando los datos por columnas. 
+
+
+
+```{r}
+z <- matrix(c(TRUE, FALSE,rep(c(TRUE, FALSE),3)),nrow=4)
+z
+```
+¿Por qué sólo es necesario indicar una dimensión (renglones)?
+
+
+También se puede indicar que se cambien el orden de llenado de la matriz, es decir, en lugar de que lo haga por columnas, lo haga por renglones. 
+
+```{r}
+m <- matrix(c(1,2,3,4,5,6),nrow=2,byrow=TRUE)
+m
+```
+
+
+
+ 
+## Dimensiones de un matriz
+La dimensión de una matriz es el número de renglones y de columnas respectivamente. Se puede obtener usando la función `dim()` de *dimensión*. 
+**NOTA** 
+`dim()` no se puede emplear en elementos unidemsionales (Ej: vectores)
+
+```{r}
+dim(y)
+dim(z)
+```
+
+Así una matriz se distingue de un vector ya que tiene, además de renglones, columnas. 
+
+![Escalar, vector y matriz](Escalar_Vector_Matriz.jpeg)
+## Elementos de una matriz 
+
+Para acceder a elementos de un objeto con *indices* (componentes que tienen una posición asignada), debemos usar *corchetes* `[]`. En el caso de la matriz se debe indicar la posición de ambas dimensiones `[renglón,columna]`.
+
+Ejemplo: En este caso se desea seleccionar el elemento del primer renglón, segunda columna.
+
+```{r}
+y[1,2]
+```
+Ejemplo: En este caso se quiere seleccionar todos los elementos del primer renglón. 
+
+```{r}
+y[1,]
+```
+
+Ejemplo: En este caso se quiere seleccionar todos los elementos de la segunda columna. 
+
+```{r}
+y[,2]
+```
+
+## Creación de matriz "vacia"
+Una forma **mucho menos eficiente** de definir una matriz es declarando una matriz sin elementos (matriz vacía) y después llenándolos de forma explícita asignando un valor distinto a cada posición. 
+
+```{r}
+ y <- matrix(nrow=2,ncol=2)
+y[1,1] <- "Esta"
+y[2,1] <- "es"
+y[1,2] <- "una"
+y[2,2] <- "matriz"
+y
+```
+
+
+# Operaciones rbind y cbind en R para Matrices
+
+En R, las funciones `rbind()` y `cbind()` se utilizan para unir matrices por filas y columnas, respectivamente. Además, la función `t()` se utiliza para transponer una matriz.
+
+## Uso de `rbind()` para unir matrices por filas
+
+La función `rbind()` se utiliza para unir matrices por filas. Por ejemplo, considera las siguientes dos matrices:
+
+```{r}
+# Matrices de ejemplo
+matriz1 <- matrix(1:6, nrow = 2)
+matriz2 <- matrix(7:12, nrow = 2)
+
+# Unir matrices por filas
+matriz_unida <- rbind(matriz1, matriz2)
+matriz_unida
+```
+## Uso de cbind() para unir matrices por columnas
+
+La función cbind() se utiliza para unir matrices por columnas. A continuación, se muestra un ejemplo de cómo unir dos matrices por columnas:
+
+```{r}
+# Unir matrices por columnas
+matriz_unida_columnas <- cbind(matriz1, matriz2)
+matriz_unida_columnas
+```
+
+
+**Ejercicio** 
+
+¿Cómo se llenaría una matriz vacia a partir de vectores?
+¿El vector tendría que tener la misma longitud que la columna o el renglón de la matriz? 
+¿Qué pasaría si la longitud del vector es diferente a la columna o renglón de la matriz? 
+¿Cómo podrías emplear `cbind()` & `rbind()`?`
+ 
+## Operaciones con matrices
+
+### Multiplicación de un escalar con una matriz
+
+
+```{r}
+3*m
+```
+
+### Suma de dos matrices
+
+```{r}
+m + m
+n<-matrix(c(2,3,4,5,6,7),ncol=3)
+m+n
+```
+
+Para sumar matrices deben tener las mismas dimensiones
+
+```{r}
+dim(n)
+dim(m)
+(dim(n)-dim(m))==0
+```
+
+### Multiplicación de matrices
+
+Se utiliza el operador `%*%`. Sí. Son tres caracteres. E incluyen dos `%`.
+No hay espacios y es un sólo operador .
+
+```{r}
+n<-matrix(c(2,3,4,5,6,7),ncol=2)
+n
+m %*% n 
+```
+
+¿Recuerdas cuál es el criterio para calcular el producto de matrices?
+¿Recuerdas cómo se multiplican dos matrices?
+
+## Uso de la función `t()` para transponer una matriz
+
+La función `t()` se utiliza para transponer una matriz, es decir, intercambiar filas por columnas y viceversa. Veamos un ejemplo:
+
+```{r}
+# Transponer una matriz
+matriz_transpuesta <- t(matriz_unida_columnas)
+matriz_transpuesta
+```
+
+## Seleccionar elementos de matrices
+
+Para seleccionar elementos de matrices se hace de forma análoga a vectores, es decir, se utiliza el operador `[]`. Sólo que esta vez hay que indicar tanto los renglones como la columna en ese orden
+
+```{r}
+m[2,3]  # Este es el segundo renglón tercera columna de m
+n[3,2]  # Este es el elemento que está en el renglón 3 y columna 2 de la matriz n 
+```
+
+### Seleccionar todo(a) un(a) renglón(columna)
+
+Para seleccionar todos los elementos de un renglón dado se utiliza la siguiente sintáxis
+
+```{r}
+m[2,]  # Todos los elementos que están en el segundo renglón
+```
+
+Para una columna 
+
+```{r}
+m[,3] # Toda la tercera columna
+```
+
+### Selecccionar elementos de una matriz
+
+¿Qué hace lo siguiente?
+
+```{r}
+m[1:2,1]
+m[1:2,2:3]
+m[-1,]
+m[-1,-c(1,3)]
+```
+
+
+## Nombres a renglones y columnas
+
+Al igual que con vectores le podemos poner nombres tanto a renglones como a columnas para ello utilizamos `rownames()` y `colnames()`
+
+```{r}
+m   # No tengo nombres :(
+```
+
+
+
+```{r}
+colnames(m)<-LETTERS[1:3]
+rownames(m)<-letters[5:6]
+```
+
+```{r}
+m   # Ahora sí. Feos, pero nombres :) :)
+m["e","C"]
+m["e","C"]==m[1,3]
+```
+
+### Ejercicios
+
+1. Genera dos matrices aleatorias de tamaño 3x3 y luego suma ambas matrices.
+
+2. Crea dos matrices aleatorias, una de tamaño 2x3 y otra de tamaño 3x4. Luego, calcula su producto matricial.
+
+3. Crea una matriz aleatoria de tamaño 4x3 y encuentra su matriz transpuesta.
+
+4. Genera una matriz cuadrada aleatoria de tamaño 4x4 y calcula su determinante.
+
+5. Crea una matriz cuadrada aleatoria de tamaño 3x3 y encuentra su inversa.
+
+6. Genera una matriz aleatoria de tamaño 5x5 y extrae la tercera fila y la segunda columna.
+
+7. Crea una matriz diagonal aleatoria de tamaño 4x4 y encuentra sus elementos diagonales.
+
+8. Define una matriz de coeficientes A y un vector de términos constantes b. Luego, resuelve el sistema de ecuaciones lineales Ax = b.
+
+9. Genera una matriz aleatoria de tamaño 3x3 y multiplica cada uno de sus elementos por un escalar, por ejemplo, 2.
+
+10. Crea una matriz simétrica aleatoria de tamaño 4x4 y verifica si es simétrica.
+
+
