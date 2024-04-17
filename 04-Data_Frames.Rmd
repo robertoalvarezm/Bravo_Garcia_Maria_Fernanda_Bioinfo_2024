@@ -82,7 +82,7 @@ Para agregar una nueva fila a un Dataframe en R, puedes utilizar la función `rb
 **Ejercicio** 
 Empleando la siguiente fórmula para calcular la Temperatura de Fusión:  `Tm=4(G+C)+2(A+T)`, diseña una secuencia que cumpla con una Tm de 55°. Agrega sus características (secuencia, tamaño, cantidad GC & Tm) en una nueva fila. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe `dna_data` como base. 
 
-# Importar un archivo csv en R
+### Importar un archivo csv en R
 
 Un archivo csv (Comma Separated Values) es un archivo de texto que contiene datos en formato tabular, donde cada fila representa un registro y cada columna representa una variable. Para importar un archivo CSV en R, puedes utilizar la función `read.csv()`. Por ejemplo, si tienes un archivo llamado "ventas.csv" en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:
 
@@ -97,7 +97,7 @@ Si el archivo CSV utiliza un separador de campos diferente a la coma, puedes uti
 ```{r}
 #ventas <- read.csv2("ventas.csv")
 ```
-## Importar un archivo TSV en R
+### Importar un archivo TSV en R
 
 Un archivo TSV (Tab Separated Values) es similar a un archivo CSV, pero utiliza **tabulaciones** en lugar de comas para separar los campos. Para importar un archivo TSV en R, puedes utilizar la función read.delim(). Por ejemplo, si tienes un archivo llamado "ventas.tsv" en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:
 ```{r}
@@ -110,7 +110,7 @@ Esto creará un Dataframe llamado "ventas" en R, que contendrá los datos del ar
 
 Si el archivo TSV utiliza un separador de campos diferente a la tabulación, puedes utilizar la función `read.delim2()` en su lugar.
 
-## Importar un archivo Excel en R
+### Importar un archivo Excel en R
 Un archivo de Excel es un formato de archivo popular para almacenar datos en formato tabular. Para importar un archivo de Excel en R, puedes utilizar la función readxl::read_excel() del paquete "readxl". Por ejemplo, si tienes un archivo llamado "ventas.xlsx" en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:
 
 ```{r}

@@ -70,11 +70,15 @@ agregar-y-eliminar-filas-y-columnas-en-un-dataframe-en-r
 importar-un-archivo-csv-en-r
 importar-un-archivo-tsv-en-r
 importar-un-archivo-excel-en-r
+Listas
+acceso-por-nombre
+ejercicios-1
+ejercicios-propuestos-con-listas
 Estructuras_de_seleccion
 if-si-condicional
 sintaxis
 errores-comunes-en-el-if
-ejercicios-1
+ejercicios-2
 combinación-de-operadores-booleanos
 and
 or
@@ -83,7 +87,7 @@ ejercicio
 if-else-si-de-otro-modo
 ifelse
 if-else-if-else-si-si-no-si-si-no-si-si-no
-ejercicios-2
+ejercicios-3
 functions
 sintaxis-básica-de-una-función-en-r
 ejemplo-de-función-definida-por-el-usuario-en-r
@@ -142,8 +146,4 @@ ejercicio-13-gráfico-de-correlación-con-texto-1
 ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen-1
 ejercicio-15-gráfico-de-interacción-entre-tres-variables-1
 ejercicios-propuestos-1
-Listas
-acceso-por-nombre
-ejercicios-3
-ejercicios-propuestos-con-listas
 referencias
