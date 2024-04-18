@@ -17,6 +17,8 @@ R es un entorno integrado para el manejo de datos, el cálculo, la generación d
 9. Además excel no es la mejor elección si queremos hacer bioinformática en serio. 
 
 
+
+## Learning R Hub
 En este sitio web se presentan varios recurso adicionales en línea para aprender R
 
 
@@ -28,23 +30,23 @@ R es un lenguaje de programación y un entorno de desarrollo estadístico amplia
 
 ### Ventajas de Aprender R para Estudiantes de Microbiología
 
-1. Análisis Estadístico Avanzado
+**1. Análisis Estadístico Avanzado**
 
 R proporciona una amplia gama de paquetes y herramientas estadísticas que permiten a los estudiantes de microbiología realizar análisis avanzados de datos, desde pruebas de hipótesis básicas hasta modelos de regresión y análisis multivariados.
 
-2. Visualización de Datos
+**2. Visualización de Datos**
 
 Con paquetes como ggplot2, los estudiantes pueden crear visualizaciones de datos interactivas y de alta calidad que facilitan la comprensión de patrones y tendencias en conjuntos de datos microbiológicos, como datos de secuenciación genómica o datos de conteo de microorganismos.
 
-3. Reproducibilidad y Documentación
+**3. Reproducibilidad y Documentación**
 
 RMarkdown es una herramienta poderosa que permite a los estudiantes escribir documentos reproducibles que combinan código, resultados y narrativa en un solo lugar. Esto promueve la transparencia, la reproducibilidad y una mejor documentación de los análisis microbiológicos.
 
-4. Acceso a una Comunidad Activa
+**4. Acceso a una Comunidad Activa**
 
 R cuenta con una comunidad activa de usuarios y desarrolladores que comparten código, paquetes y recursos educativos. Los estudiantes pueden aprovechar este recurso para buscar ayuda, colaborar en proyectos y mantenerse al tanto de las últimas tendencias en análisis de datos microbiológicos.
 
-5. Flexibilidad y Personalización
+**5. Flexibilidad y Personalización**
 
 R es un lenguaje altamente flexible que permite a los estudiantes adaptar sus análisis a las necesidades específicas de sus proyectos microbiológicos. Desde la manipulación de datos hasta la creación de modelos personalizados, R ofrece la libertad y la capacidad de personalización necesarias para abordar una amplia variedad de preguntas de investigación en microbiología.
 
