@@ -801,14 +801,14 @@ Podemos utilizar el comando <code>apropos()</code> para encontrar todo lo relaci
 <p>Las <strong>expresiones</strong> sólo se muestran en la salida estándar y NO se guardan en alguna variable, es decir, cada que se corra la línea se obtendran valores distintos.</p>
 <p>Ejemplo:</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="intro.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1]  0.8268902 -1.1999361 -0.9443179 -0.7761989 -0.4459732  0.9174054 -0.7404121 -2.8180375  0.4211560 -1.2553172</code></pre>
+<pre><code>##  [1]  0.26000435 -0.29886084  0.05651828  0.51398237  0.10506616  1.59210118  0.13591088  2.67022119  0.46511128 -0.31993646</code></pre>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="intro.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1]  1.24628921 -0.22743335 -0.55522959 -0.14929818 -0.17619392 -1.88290903  0.02386734  0.40599307  0.08868238 -0.52964715</code></pre>
+<pre><code>##  [1]  0.73111924 -0.58407705  0.11678578  0.12811857 -1.10041453  0.47450020 -0.00737151 -1.23551357 -0.44234445 -1.67383392</code></pre>
 <p>Las <strong>asignaciones</strong>, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de <code>&lt;-</code></p>
 <p>Ejemplo:</p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="intro.html#cb41-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="intro.html#cb42-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1]  0.71569804 -0.29310211  0.02266350 -1.40956603  0.83378648 -0.47041521 -0.91535094 -0.25113454 -0.46093041 -0.06051892</code></pre>
+<pre><code>##  [1] -0.31592633  1.36495663  0.82532775  1.73225914  0.04743956  1.77587574  0.71953342 -0.76198872  1.98812334 -2.44008118</code></pre>
 <p><strong>NOTA</strong> El símbolo <code>&lt;-</code> es equivalente en función a <code>=</code> pero puede llevar a confusiones importantes con el operador <code>==</code>.</p>
 <div class="figure">
 <img src="equals-sign-assignment-operator-imgflip-com-going-through-data-structures-and-47188178.png" alt="" />
