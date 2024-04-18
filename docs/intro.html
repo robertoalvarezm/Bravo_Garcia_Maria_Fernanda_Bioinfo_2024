@@ -395,6 +395,8 @@ div.csl-indent {
 <li><strong>Casi todos podemos aprender por nuestra cuenta a usar excel (pero hay que pagar por la licencia, es software privativo…). Sin embargo, es más díficil aprender por nuestra cuenta R; y si lo hacemos nos da una ventaja comparativa sobre el resto.</strong></li>
 <li>Además excel no es la mejor elección si queremos hacer bioinformática en serio.</li>
 </ol>
+<p>En este sitio web se presentan varios recurso adicionales en línea para aprender R</p>
+<p><a href="https://github.com/robertoalvarezm/Learning_R_Hub">Learning R Hub</a></p>
 <div id="introducción-a-r-para-estudiantes-de-microbiología" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Introducción a R para Estudiantes de Microbiología<a href="intro.html#introducción-a-r-para-estudiantes-de-microbiología" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>R es un lenguaje de programación y un entorno de desarrollo estadístico ampliamente utilizado en la comunidad científica, incluida la microbiología. Este poderoso recurso ofrece una variedad de ventajas y funcionalidades que pueden beneficiar significativamente a los estudiantes de microbiología en su investigación y análisis de datos.</p>
@@ -801,14 +803,14 @@ Podemos utilizar el comando <code>apropos()</code> para encontrar todo lo relaci
 <p>Las <strong>expresiones</strong> sólo se muestran en la salida estándar y NO se guardan en alguna variable, es decir, cada que se corra la línea se obtendran valores distintos.</p>
 <p>Ejemplo:</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="intro.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1]  0.26000435 -0.29886084  0.05651828  0.51398237  0.10506616  1.59210118  0.13591088  2.67022119  0.46511128 -0.31993646</code></pre>
+<pre><code>##  [1]  1.4298957 -1.1486452  0.2515142  0.7467904 -1.0219075 -0.0159512  0.3037258  0.7730656 -0.2633475 -1.2118731</code></pre>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="intro.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1]  0.73111924 -0.58407705  0.11678578  0.12811857 -1.10041453  0.47450020 -0.00737151 -1.23551357 -0.44234445 -1.67383392</code></pre>
+<pre><code>##  [1] -0.60591751  0.01002988 -0.82881289 -0.28913471  0.25634406 -0.94475400  0.81111991 -0.67418747  1.25492873 -0.67015514</code></pre>
 <p>Las <strong>asignaciones</strong>, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de <code>&lt;-</code></p>
 <p>Ejemplo:</p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="intro.html#cb41-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="intro.html#cb42-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -0.31592633  1.36495663  0.82532775  1.73225914  0.04743956  1.77587574  0.71953342 -0.76198872  1.98812334 -2.44008118</code></pre>
+<pre><code>##  [1]  0.8550316 -0.6011012  0.3028623  1.3581989  0.7728886  0.5748552  0.1642896  1.2532607  1.2962636  1.2284154</code></pre>
 <p><strong>NOTA</strong> El símbolo <code>&lt;-</code> es equivalente en función a <code>=</code> pero puede llevar a confusiones importantes con el operador <code>==</code>.</p>
 <div class="figure">
 <img src="equals-sign-assignment-operator-imgflip-com-going-through-data-structures-and-47188178.png" alt="" />

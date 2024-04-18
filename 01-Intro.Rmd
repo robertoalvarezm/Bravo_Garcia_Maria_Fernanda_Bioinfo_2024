@@ -17,6 +17,11 @@ R es un entorno integrado para el manejo de datos, el cálculo, la generación d
 9. Además excel no es la mejor elección si queremos hacer bioinformática en serio. 
 
 
+En este sitio web se presentan varios recurso adicionales en línea para aprender R
+
+
+[Learning R Hub](https://github.com/robertoalvarezm/Learning_R_Hub)
+
 ## Introducción a R para Estudiantes de Microbiología
 
 R es un lenguaje de programación y un entorno de desarrollo estadístico ampliamente utilizado en la comunidad científica, incluida la microbiología. Este poderoso recurso ofrece una variedad de ventajas y funcionalidades que pueden beneficiar significativamente a los estudiantes de microbiología en su investigación y análisis de datos.
