@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  18 APR 2024 10:56
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  18 APR 2024 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1710,21 +1710,21 @@ Overfull \hbox (36.5pt too wide) in paragraph at lines 774--774
 Underfull \vbox (badness 2012) has occurred while \output is active []
 
 [28]
-Overfull \hbox (293.75pt too wide) in paragraph at lines 805--805
-[]\EU1/lmtt/m/n/10 ##  [1]  0.37300538 -0.06182624 -0.31254723 -1.47286453  1.4
-0368556 -0.55323829 -0.66883838  0.14782854  0.59978754 -0.17286067[] 
+Overfull \hbox (292.0pt too wide) in paragraph at lines 805--805
+[]\EU1/lmtt/m/n/10 ##  [1] -0.11579988  2.12074264  1.01859718  0.18813661 -1.5
+5493296 -0.03838433 -0.11206977  0.90601242  0.99833671 -0.43503111[] 
  []
 
 
-Overfull \hbox (288.5pt too wide) in paragraph at lines 815--815
-[]\EU1/lmtt/m/n/10 ##  [1]  0.67767129 -0.33079623  0.08203414  0.39806183 -0.3
-9759132  0.35527650  0.02155980  0.97775712  1.12445068 -1.65044720[] 
+Overfull \hbox (295.5pt too wide) in paragraph at lines 815--815
+[]\EU1/lmtt/m/n/10 ##  [1] -1.10816738  1.42440823 -0.24840729 -0.06738153 -0.7
+8756389 -0.52603704  0.65739990  1.34215874 -0.04488571 -0.67797994[] 
  []
 
 
-Overfull \hbox (239.5pt too wide) in paragraph at lines 835--835
-[]\EU1/lmtt/m/n/10 ##  [1]  1.8633500  0.3705777  1.1081389 -0.1432902 -0.86011
-84 -1.0654806 -0.8872037  1.1070655  0.6018853 -1.5552557[] 
+Overfull \hbox (292.0pt too wide) in paragraph at lines 835--835
+[]\EU1/lmtt/m/n/10 ##  [1]  0.21770031  0.29312271  0.37788391 -0.71444186  0.9
+5955931 -0.08380225 -0.25233073 -1.94055933  0.13754629 -0.05958126[] 
  []
 
 File: equals-sign-assignment-operator-imgflip-com-going-through-data-structures
