@@ -24,16 +24,16 @@ git add .nojekyll
 ```
 
 
-Render en un book
+## Render en un book
 ```{r}
 rmarkdown::render_site(output_format = 'bookdown::gitbook', encoding = 'UTF-8')
 ```
 
 
 
-Correr en pdf 
+## Correr en pdf 
 ```{r}
-
+bookdown::render_book('index.Rmd', 'bookdown::pdf_book')
 ```
 
 
