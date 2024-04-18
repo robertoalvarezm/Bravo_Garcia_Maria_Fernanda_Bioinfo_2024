@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  18 APR 2024 11:25
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  18 APR 2024 11:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1166,7 +1166,7 @@ LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(2)/m/n' will be
 (Font)              scaled to size 7.01224pt on input line 3.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(2)/m/n' will be
 (Font)              scaled to size 4.98067pt on input line 3.
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 30.
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 31.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1182,239 +1182,236 @@ Capítulo 1.
 
 ]
 Capítulo 2.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 [9] [10]
-Overfull \hbox (246.5pt too wide) in paragraph at lines 274--274
+Overfull \hbox (246.5pt too wide) in paragraph at lines 248--248
 []\EU1/lmtt/m/n/10 ##  [1] ".GlobalEnv"             "package:ggpubr"         "p
 ackage:palmerpenguins" "package:ggplot2"        "package:readxl"[] 
  []
 
 
-Overfull \hbox (253.5pt too wide) in paragraph at lines 274--274
+Overfull \hbox (253.5pt too wide) in paragraph at lines 248--248
 []\EU1/lmtt/m/n/10 ##  [6] "package:gplots"         "tools:rstudio"          "p
 ackage:stats"          "package:graphics"       "package:grDevices"[] 
  []
 
 
-Overfull \hbox (223.75pt too wide) in paragraph at lines 274--274
+Overfull \hbox (223.75pt too wide) in paragraph at lines 248--248
 []\EU1/lmtt/m/n/10 ## [11] "package:utils"          "package:datasets"       "p
 ackage:methods"        "Autoloads"              "package:base"[] 
  []
 
 
-Overfull \hbox (129.25pt too wide) in paragraph at lines 317--317
+Overfull \hbox (129.25pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##   [1] "%>%"                         "add_summary"        
          "annotate_figure"             "as_ggplot"[] 
  []
 
 
-Overfull \hbox (150.25pt too wide) in paragraph at lines 317--317
+Overfull \hbox (150.25pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##   [5] "as_npc"                      "as_npcx"            
          "as_npcy"                     "background_image"[] 
  []
 
 
-Overfull \hbox (167.75pt too wide) in paragraph at lines 317--317
+Overfull \hbox (167.75pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##   [9] "bgcolor"                     "border"             
          "change_palette"              "clean_table_theme"[] 
  []
 
 
-Overfull \hbox (167.75pt too wide) in paragraph at lines 317--317
+Overfull \hbox (167.75pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [13] "clean_theme"                 "colnames_style"     
          "color_palette"               "compare_means"[] 
  []
 
 
-Overfull \hbox (117.0pt too wide) in paragraph at lines 317--317
+Overfull \hbox (117.0pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [17] "create_aes"                  "desc_statby"        
          "diff_express"                "facet"[] 
  []
 
 
-Overfull \hbox (162.5pt too wide) in paragraph at lines 317--317
+Overfull \hbox (162.5pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [21] "fill_palette"                "font"               
          "gene_citation"               "gene_expression"[] 
  []
 
 
-Overfull \hbox (141.5pt too wide) in paragraph at lines 317--317
+Overfull \hbox (141.5pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [25] "geom_bracket"                "geom_exec"          
          "geom_pwc"                    "geom_signif"[] 
  []
 
 
-Overfull \hbox (141.5pt too wide) in paragraph at lines 317--317
+Overfull \hbox (141.5pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [29] "get_breaks"                  "get_coord"          
          "get_legend"                  "get_palette"[] 
  []
 
 
-Overfull \hbox (145.0pt too wide) in paragraph at lines 317--317
+Overfull \hbox (145.0pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [33] "get_summary_stats"           "ggadd"              
          "ggadjust_pvalue"             "ggarrange"[] 
  []
 
 
-Overfull \hbox (134.5pt too wide) in paragraph at lines 317--317
+Overfull \hbox (134.5pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [37] "ggballoonplot"               "ggbarplot"          
          "ggboxplot"                   "ggdensity"[] 
  []
 
 
-Overfull \hbox (118.75pt too wide) in paragraph at lines 317--317
+Overfull \hbox (118.75pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [41] "ggdonutchart"                "ggdotchart"         
          "ggdotplot"                   "ggecdf"[] 
  []
 
 
-Overfull \hbox (117.0pt too wide) in paragraph at lines 317--317
+Overfull \hbox (117.0pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [45] "ggerrorplot"                 "ggexport"           
          "gghistogram"                 "ggline"[] 
  []
 
 [11]
-Overfull \hbox (127.5pt too wide) in paragraph at lines 317--317
+Overfull \hbox (127.5pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [49] "ggmaplot"                    "ggpaired"           
          "ggpar"                       "ggparagraph"[] 
  []
 
 
-Overfull \hbox (127.5pt too wide) in paragraph at lines 317--317
+Overfull \hbox (127.5pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [53] "ggpie"                       "ggpubr_options"     
          "ggqqplot"                    "ggscatter"[] 
  []
 
 
-Overfull \hbox (174.75pt too wide) in paragraph at lines 317--317
+Overfull \hbox (174.75pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [57] "ggscatterhist"               "ggstripchart"       
          "ggsummarystats"              "ggsummarytable"[] 
  []
 
 
-Overfull \hbox (150.25pt too wide) in paragraph at lines 317--317
+Overfull \hbox (150.25pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [61] "ggtext"                      "ggtexttable"        
          "ggviolin"                    "gradient_color"[] 
  []
 
 
-Overfull \hbox (125.75pt too wide) in paragraph at lines 317--317
+Overfull \hbox (125.75pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [65] "gradient_fill"               "grids"              
          "group_by"                    "labs_pubr"[] 
  []
 
 
-Overfull \hbox (117.0pt too wide) in paragraph at lines 317--317
+Overfull \hbox (117.0pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [69] "mean_ci"                     "mean_range"         
          "mean_sd"                     "mean_se_"[] 
  []
 
 
-Overfull \hbox (148.5pt too wide) in paragraph at lines 317--317
+Overfull \hbox (148.5pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [73] "median_hilow_"               "median_iqr"         
          "median_mad"                  "median_q1q3"[] 
  []
 
 
-Overfull \hbox (125.75pt too wide) in paragraph at lines 317--317
+Overfull \hbox (125.75pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [77] "median_range"                "mutate"             
          "npc_to_data_coord"           "rotate"[] 
  []
 
 
-Overfull \hbox (139.75pt too wide) in paragraph at lines 317--317
+Overfull \hbox (139.75pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [81] "rotate_x_text"               "rotate_y_text"      
          "rownames_style"              "rremove"[] 
  []
 
 
-Overfull \hbox (187.0pt too wide) in paragraph at lines 317--317
+Overfull \hbox (187.0pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [85] "set_palette"                 "show_line_types"    
          "show_point_shapes"           "stat_anova_test"[] 
  []
 
 
-Overfull \hbox (202.75pt too wide) in paragraph at lines 317--317
+Overfull \hbox (202.75pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [89] "stat_bracket"                "stat_central_tendenc
 y"       "stat_chull"                  "stat_compare_means"[] 
  []
 
 
-Overfull \hbox (197.5pt too wide) in paragraph at lines 317--317
+Overfull \hbox (197.5pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [93] "stat_conf_ellipse"           "stat_cor"           
          "stat_friedman_test"          "stat_kruskal_test"[] 
  []
 
 
-Overfull \hbox (169.5pt too wide) in paragraph at lines 317--317
+Overfull \hbox (169.5pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ##  [97] "stat_mean"                   "stat_overlay_normal_
 density" "stat_pvalue_manual"          "stat_pwc"[] 
  []
 
 
-Overfull \hbox (199.25pt too wide) in paragraph at lines 317--317
+Overfull \hbox (199.25pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ## [101] "stat_regline_equation"       "stat_stars"         
          "stat_welch_anova_test"       "tab_add_border"[] 
  []
 
 
-Overfull \hbox (176.5pt too wide) in paragraph at lines 317--317
+Overfull \hbox (176.5pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ## [105] "tab_add_footnote"            "tab_add_hline"      
          "tab_add_title"               "tab_add_vline"[] 
  []
 
 
-Overfull \hbox (160.75pt too wide) in paragraph at lines 317--317
+Overfull \hbox (160.75pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ## [109] "tab_cell_crossout"           "tab_ncol"           
          "tab_nrow"                    "table_cell_bg"[] 
  []
 
 
-Overfull \hbox (155.5pt too wide) in paragraph at lines 317--317
+Overfull \hbox (155.5pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ## [113] "table_cell_font"             "tbody_add_border"   
          "tbody_style"                 "text_grob"[] 
  []
 
 
-Overfull \hbox (187.0pt too wide) in paragraph at lines 317--317
+Overfull \hbox (187.0pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ## [117] "thead_add_border"            "theme_classic2"     
          "theme_cleveland"             "theme_pubclean"[] 
  []
 
 
-Overfull \hbox (124.0pt too wide) in paragraph at lines 317--317
+Overfull \hbox (124.0pt too wide) in paragraph at lines 291--291
 []\EU1/lmtt/m/n/10 ## [121] "theme_pubr"                  "theme_transparent"  
          "ttheme"                      "xscale"[] 
  []
 
 
-Overfull \hbox (26.0pt too wide) in paragraph at lines 352--352
+Overfull \hbox (26.0pt too wide) in paragraph at lines 326--326
 []\EU1/lmtt/m/n/10 ## > ## Here is some code which illustrates some of the diff
 erences between[] 
  []
 
 
-Overfull \hbox (50.5pt too wide) in paragraph at lines 352--352
+Overfull \hbox (50.5pt too wide) in paragraph at lines 326--326
 []\EU1/lmtt/m/n/10 ## > ## R and S graphics capabilities.  Note that colors are
  generally specified[] 
  []
 
 
-Overfull \hbox (57.5pt too wide) in paragraph at lines 352--352
+Overfull \hbox (57.5pt too wide) in paragraph at lines 326--326
 []\EU1/lmtt/m/n/10 ## > ## by a character string name (taken from the X11 rgb.t
 xt file) and that line[] 
  []
 
 
-Overfull \hbox (36.5pt too wide) in paragraph at lines 352--352
+Overfull \hbox (36.5pt too wide) in paragraph at lines 326--326
 []\EU1/lmtt/m/n/10 ## > ## textures are given similarly.  The parameter "bg" se
 ts the background[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 352--352
+Overfull \hbox (33.0pt too wide) in paragraph at lines 326--326
 []\EU1/lmtt/m/n/10 ## > ## parameter for the plot and there is also an "fg" par
 ameter which sets[] 
  []
@@ -1423,31 +1420,31 @@ ameter which sets[]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type
  QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-1.pdf" >
-Overfull \hbox (24.25pt too wide) in paragraph at lines 379--379
+Overfull \hbox (24.25pt too wide) in paragraph at lines 353--353
 []\EU1/lmtt/m/n/10 ## > ## A little color wheel.    This code just plots equall
 y spaced hues in[] 
  []
 
 
-Overfull \hbox (15.5pt too wide) in paragraph at lines 379--379
+Overfull \hbox (15.5pt too wide) in paragraph at lines 353--353
 []\EU1/lmtt/m/n/10 ## > ## a pie chart.    If you have a cheap SVGA monitor (li
 ke me) you will[] 
  []
 
 
-Overfull \hbox (13.75pt too wide) in paragraph at lines 379--379
+Overfull \hbox (13.75pt too wide) in paragraph at lines 353--353
 []\EU1/lmtt/m/n/10 ## > ## probably find that numerically equispaced does not m
 ean visually[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 379--379
+Overfull \hbox (22.5pt too wide) in paragraph at lines 353--353
 []\EU1/lmtt/m/n/10 ## > ## equispaced.  On my display at home, these colors ten
 d to cluster at[] 
  []
 
 
-Overfull \hbox (8.5pt too wide) in paragraph at lines 379--379
+Overfull \hbox (8.5pt too wide) in paragraph at lines 353--353
 []\EU1/lmtt/m/n/10 ## > ## the RGB primaries.  On the other hand on the SGI Ind
 y at work the[] 
  []
@@ -1456,25 +1453,25 @@ y at work the[]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-5-2.pdf Graphic file (type
  QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-2.pdf" >
-Overfull \hbox (10.25pt too wide) in paragraph at lines 400--400
+Overfull \hbox (10.25pt too wide) in paragraph at lines 374--374
 []\EU1/lmtt/m/n/10 ## > title(main = "A Sample Color Wheel", cex.main = 1.4, fo
 nt.main = 3)[] 
  []
 
 
-Overfull \hbox (47.0pt too wide) in paragraph at lines 400--400
+Overfull \hbox (47.0pt too wide) in paragraph at lines 374--374
 []\EU1/lmtt/m/n/10 ## > ## We have already confessed to having these.  This is 
 just showing off X11[] 
  []
 
 
-Overfull \hbox (66.25pt too wide) in paragraph at lines 400--400
+Overfull \hbox (66.25pt too wide) in paragraph at lines 374--374
 []\EU1/lmtt/m/n/10 ## > ## color names (and the example (from the postscript ma
 nual) is pretty "cute".[] 
  []
 
 
-Overfull \hbox (34.75pt too wide) in paragraph at lines 400--400
+Overfull \hbox (34.75pt too wide) in paragraph at lines 374--374
 []\EU1/lmtt/m/n/10 ## +     col = c("purple","violetred1","green3","cornsilk","
 cyan","white"))[] 
  []
@@ -1485,19 +1482,19 @@ File: bookdown-demo_files/figure-latex/unnamed-chunk-5-3.pdf Graphic file (type
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [14]
-Overfull \hbox (43.5pt too wide) in paragraph at lines 423--423
+Overfull \hbox (43.5pt too wide) in paragraph at lines 397--397
 []\EU1/lmtt/m/n/10 ## > title(xlab = "(Don't try this at home kids)", cex.lab =
  0.8, font.lab = 3)[] 
  []
 
 
-Overfull \hbox (20.75pt too wide) in paragraph at lines 423--423
+Overfull \hbox (20.75pt too wide) in paragraph at lines 397--397
 []\EU1/lmtt/m/n/10 ## > ## Boxplots:  I couldn't resist the capability for fill
 ing the "box".[] 
  []
 
 
-Overfull \hbox (24.25pt too wide) in paragraph at lines 423--423
+Overfull \hbox (24.25pt too wide) in paragraph at lines 397--397
 []\EU1/lmtt/m/n/10 ## > ## The use of color seems like a useful addition, it fo
 cuses attention[] 
  []
@@ -1508,7 +1505,7 @@ File: bookdown-demo_files/figure-latex/unnamed-chunk-5-4.pdf Graphic file (type
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [15]
-Overfull \hbox (33.0pt too wide) in paragraph at lines 446--446
+Overfull \hbox (33.0pt too wide) in paragraph at lines 420--420
 []\EU1/lmtt/m/n/10 ## > title(main="Notched Boxplots", xlab="Group", font.main=
 4, font.lab=1)[] 
  []
@@ -1519,25 +1516,25 @@ File: bookdown-demo_files/figure-latex/unnamed-chunk-5-5.pdf Graphic file (type
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [16]
-Overfull \hbox (13.75pt too wide) in paragraph at lines 466--466
+Overfull \hbox (13.75pt too wide) in paragraph at lines 440--440
 []\EU1/lmtt/m/n/10 ## > ## Colored plot margins, axis labels and titles.    You
  do need to be[] 
  []
 
 
-Overfull \hbox (15.5pt too wide) in paragraph at lines 466--466
+Overfull \hbox (15.5pt too wide) in paragraph at lines 440--440
 []\EU1/lmtt/m/n/10 ## > ## careful with these kinds of effects.    It's easy to
  go completely[] 
  []
 
 
-Overfull \hbox (34.75pt too wide) in paragraph at lines 466--466
+Overfull \hbox (34.75pt too wide) in paragraph at lines 440--440
 []\EU1/lmtt/m/n/10 ## > ## over the top and you can end up with your lunch all 
 over the keyboard.[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 466--466
+Overfull \hbox (64.5pt too wide) in paragraph at lines 440--440
 []\EU1/lmtt/m/n/10 ## > x <- c(0.00, 0.40, 0.86, 0.85, 0.69, 0.48, 0.54, 1.09, 
 1.11, 1.73, 2.05, 2.02)[] 
  []
@@ -1548,19 +1545,19 @@ File: bookdown-demo_files/figure-latex/unnamed-chunk-5-6.pdf Graphic file (type
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [17]
-Overfull \hbox (26.0pt too wide) in paragraph at lines 498--498
+Overfull \hbox (26.0pt too wide) in paragraph at lines 472--472
 []\EU1/lmtt/m/n/10 ## > rect(usr[1], usr[3], usr[2], usr[4], col="cornsilk", bo
 rder="black")[] 
  []
 
 
-Overfull \hbox (31.25pt too wide) in paragraph at lines 498--498
+Overfull \hbox (31.25pt too wide) in paragraph at lines 472--472
 []\EU1/lmtt/m/n/10 ## > title(main= "The Level of Interest in R", font.main=4, 
 col.main="red")[] 
  []
 
 
-Overfull \hbox (3.25pt too wide) in paragraph at lines 498--498
+Overfull \hbox (3.25pt too wide) in paragraph at lines 472--472
 []\EU1/lmtt/m/n/10 ## > ## A filled histogram, showing how to change the font u
 sed for the[] 
  []
@@ -1572,7 +1569,7 @@ Underfull \vbox (badness 1077) has occurred while \output is active []
 File: bookdown-demo_files/figure-latex/unnamed-chunk-5-7.pdf Graphic file (type
  QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-7.pdf" >
-Overfull \hbox (45.25pt too wide) in paragraph at lines 510--510
+Overfull \hbox (45.25pt too wide) in paragraph at lines 484--484
 []\EU1/lmtt/m/n/10 ## > pairs(iris[1:4], main="Edgar Anderson's Iris Data", fon
 t.main=4, pch=19)[] 
  []
@@ -1586,7 +1583,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: bookdown-demo_files/figure-latex/unnamed-chunk-5-9.pdf Graphic file (type
  QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-9.pdf" > [20]
-Overfull \hbox (66.25pt too wide) in paragraph at lines 554--554
+Overfull \hbox (66.25pt too wide) in paragraph at lines 528--528
 []\EU1/lmtt/m/n/10 ## > ## This produces a topographic map of one of Auckland's
  many volcanic "peaks".[] 
  []
@@ -1597,19 +1594,19 @@ e QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [21]
-Overfull \hbox (47.0pt too wide) in paragraph at lines 580--580
+Overfull \hbox (47.0pt too wide) in paragraph at lines 554--554
 []\EU1/lmtt/m/n/10 ## > contour(x, y, volcano, levels = lev, col="yellow", lty=
 "solid", add=TRUE)[] 
  []
 
 
-Overfull \hbox (8.5pt too wide) in paragraph at lines 580--580
+Overfull \hbox (8.5pt too wide) in paragraph at lines 554--554
 []\EU1/lmtt/m/n/10 ## > mtext("10 Meter Contour Spacing", side=3, line=0.35, ou
 ter=FALSE,[] 
  []
 
 
-Overfull \hbox (1.5pt too wide) in paragraph at lines 580--580
+Overfull \hbox (1.5pt too wide) in paragraph at lines 554--554
 []\EU1/lmtt/m/n/10 ## > coplot(lat ~ long | depth, data = quakes, pch = 21, bg 
 = "green3")[] 
  []
@@ -1629,37 +1626,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: bookdown-demo_files/figure-latex/unnamed-chunk-11-2.pdf Graphic file (typ
 e QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-11-2.pdf" >
-Overfull \hbox (75.0pt too wide) in paragraph at lines 714--714
+Overfull \hbox (75.0pt too wide) in paragraph at lines 688--688
 []\EU1/lmtt/m/n/10 ## hclust> ## Do the same with centroid clustering and *squa
 red* Euclidean distance,[] 
  []
 
 [25]
-Overfull \hbox (59.25pt too wide) in paragraph at lines 714--714
+Overfull \hbox (59.25pt too wide) in paragraph at lines 688--688
 []\EU1/lmtt/m/n/10 ## hclust> ## cut the tree into ten clusters and reconstruct
  the upper part of the[] 
  []
 
 
-Overfull \hbox (52.25pt too wide) in paragraph at lines 714--714
+Overfull \hbox (52.25pt too wide) in paragraph at lines 688--688
 []\EU1/lmtt/m/n/10 ## hclust+   cent <- rbind(cent, colMeans(USArrests[memb == 
 k, , drop = FALSE]))[] 
  []
 
 
-Overfull \hbox (41.75pt too wide) in paragraph at lines 714--714
+Overfull \hbox (41.75pt too wide) in paragraph at lines 688--688
 []\EU1/lmtt/m/n/10 ## hclust> hc1 <- hclust(dist(cent)^2, method = "cen", membe
 rs = table(memb))[] 
  []
 
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 714--714
+Overfull \hbox (5.0pt too wide) in paragraph at lines 688--688
 []\EU1/lmtt/m/n/10 ## hclust> plot(hc,  labels = FALSE, hang = -1, main = "Orig
 inal Tree")[] 
  []
 
 
-Overfull \hbox (66.25pt too wide) in paragraph at lines 719--719
+Overfull \hbox (66.25pt too wide) in paragraph at lines 693--693
 []\EU1/lmtt/m/n/10 ## hclust> plot(hc1, labels = FALSE, hang = -1, main = "Re-s
 tart from 10 clusters")[] 
  []
@@ -1667,7 +1664,7 @@ tart from 10 clusters")[]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-11-3.pdf Graphic file (typ
 e QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-11-3.pdf" >
-Overfull \hbox (8.5pt too wide) in paragraph at lines 733--733
+Overfull \hbox (8.5pt too wide) in paragraph at lines 707--707
 []\EU1/lmtt/m/n/10 ## hclust> ##  Compare the results of algorithms "ward.D" an
 d "ward.D2"[] 
  []
@@ -1682,25 +1679,25 @@ e QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [27]
-Overfull \hbox (136.25pt too wide) in paragraph at lines 778--778
+Overfull \hbox (136.25pt too wide) in paragraph at lines 752--752
 []\EU1/lmtt/m/n/10 ##  [1] ".rs.resolveAliasedPath"            ".rs.resolveAlia
 sedSymbol"          ".rs.resolveFormals"[] 
  []
 
 
-Overfull \hbox (206.25pt too wide) in paragraph at lines 778--778
+Overfull \hbox (206.25pt too wide) in paragraph at lines 752--752
 []\EU1/lmtt/m/n/10 ##  [4] ".rs.resolveObjectFromFunctionCall" ".rs.resolveObje
 ctSource"           ".rs.rnb.resolveActiveChunkId"[] 
  []
 
 
-Overfull \hbox (40.0pt too wide) in paragraph at lines 778--778
+Overfull \hbox (40.0pt too wide) in paragraph at lines 752--752
 []\EU1/lmtt/m/n/10 ##  [7] "backsolve"                         "forwardsolve"  
                     "qr.solve"[] 
  []
 
 
-Overfull \hbox (36.5pt too wide) in paragraph at lines 778--778
+Overfull \hbox (36.5pt too wide) in paragraph at lines 752--752
 []\EU1/lmtt/m/n/10 ## [10] "solve"                             "solve.default" 
                     "solve.qr"[] 
  []
@@ -1709,21 +1706,21 @@ Overfull \hbox (36.5pt too wide) in paragraph at lines 778--778
 Underfull \vbox (badness 2012) has occurred while \output is active []
 
 [28]
-Overfull \hbox (292.0pt too wide) in paragraph at lines 809--809
-[]\EU1/lmtt/m/n/10 ##  [1] -0.90294942  0.40974720  0.55274405 -0.90360903  2.1
-0996687 -0.56355653  0.83539225 -1.51857081 -1.29299249  0.02297909[] 
+Overfull \hbox (241.25pt too wide) in paragraph at lines 783--783
+[]\EU1/lmtt/m/n/10 ##  [1]  0.1533122 -1.3739135 -0.4642187 -0.4811018 -0.19513
+24 -0.2315348 -0.5179645  0.8096079  0.2168516  1.0662393[] 
  []
 
 
-Overfull \hbox (241.25pt too wide) in paragraph at lines 819--819
-[]\EU1/lmtt/m/n/10 ##  [1]  1.0907613  1.3747528 -0.7704953  0.4712824 -0.99871
-57 -1.9053895 -1.0627830 -1.5861398  0.7312900 -1.1345491[] 
+Overfull \hbox (297.25pt too wide) in paragraph at lines 793--793
+[]\EU1/lmtt/m/n/10 ##  [1] -1.07673310 -1.02838526 -0.23334494 -0.28823106 -0.1
+9944557 -0.01977908  0.28276636 -0.16861096 -0.39460436  0.67951612[] 
  []
 
 
-Overfull \hbox (288.5pt too wide) in paragraph at lines 839--839
-[]\EU1/lmtt/m/n/10 ##  [1]  0.81439356  1.22955838 -1.29927815  0.59509320  0.4
-6585876  0.50017199  2.04838633 -0.90633727 -0.39034084  0.05005671[] 
+Overfull \hbox (239.5pt too wide) in paragraph at lines 813--813
+[]\EU1/lmtt/m/n/10 ##  [1]  0.5375391 -1.7935491 -1.7016953 -1.4060775  0.72823
+06  0.4638744  0.1523402 -0.3726444  0.5019601 -0.5031751[] 
  []
 
 File: equals-sign-assignment-operator-imgflip-com-going-through-data-structures
@@ -1731,13 +1728,13 @@ File: equals-sign-assignment-operator-imgflip-com-going-through-data-structures
 
 <use  "equals-sign-assignment-operator-imgflip-com-going-through-data-structure
 s-and-47188178.png" > [29] [30]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 949--949
+Overfull \hbox (118.75pt too wide) in paragraph at lines 923--923
 []\EU1/lmtt/m/n/10 ## [1] "/Users/robertoalvarez/Documents/GitHub/Bravo_Garcia_
 Maria_Fernanda_Bioinfo_20204"[] 
  []
 
 
-Overfull \hbox (17.03pt too wide) in paragraph at lines 951--952
+Overfull \hbox (17.03pt too wide) in paragraph at lines 925--926
 []\EU1/lmr/m/n/10 Para cambiar de directorio utilizamos \EU1/lmtt/m/n/10 setwd(
 "direccion_a_la_que_quieres_ir") 
  []
@@ -1747,44 +1744,44 @@ Overfull \hbox (17.03pt too wide) in paragraph at lines 951--952
 ]
 Capítulo 3.
 [37]
-Overfull \hbox (218.5pt too wide) in paragraph at lines 1325--1325
+Overfull \hbox (218.5pt too wide) in paragraph at lines 1299--1299
 []\EU1/lmtt/m/n/10 ##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13
   14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31[] 
  []
 
 
-Overfull \hbox (236.0pt too wide) in paragraph at lines 1325--1325
+Overfull \hbox (236.0pt too wide) in paragraph at lines 1299--1299
 []\EU1/lmtt/m/n/10 ##  [32]  32  33  34  35  36  37  38  39  40  41  42  43  44
   45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62[] 
  []
 
 
-Overfull \hbox (236.0pt too wide) in paragraph at lines 1325--1325
+Overfull \hbox (236.0pt too wide) in paragraph at lines 1299--1299
 []\EU1/lmtt/m/n/10 ##  [63]  63  64  65  66  67  68  69  70  71  72  73  74  75
   76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93[] 
  []
 
 
-Overfull \hbox (218.5pt too wide) in paragraph at lines 1347--1347
+Overfull \hbox (218.5pt too wide) in paragraph at lines 1321--1321
 []\EU1/lmtt/m/n/10 ##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13
   14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31[] 
  []
 
 [38]
-Overfull \hbox (236.0pt too wide) in paragraph at lines 1347--1347
+Overfull \hbox (236.0pt too wide) in paragraph at lines 1321--1321
 []\EU1/lmtt/m/n/10 ##  [32]  32  33  34  35  36  37  38  39  40  41  42  43  44
   45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62[] 
  []
 
 
-Overfull \hbox (236.0pt too wide) in paragraph at lines 1347--1347
+Overfull \hbox (236.0pt too wide) in paragraph at lines 1321--1321
 []\EU1/lmtt/m/n/10 ##  [63]  63  64  65  66  67  68  69  70  71  72  73  74  75
   76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93[] 
  []
 
 [39] [40] [41] [42]
 LaTeX Font Info:    Font shape `EU1/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 1671.
+(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 1645.
 
 [43] [44] [45] [46]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-76-1.pdf Graphic file (typ
@@ -1796,83 +1793,83 @@ e QTm)
 File: bookdown-demo_files/figure-latex/unnamed-chunk-76-3.pdf Graphic file (typ
 e QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-76-3.pdf" > [48]
-Underfull \hbox (badness 1147) in paragraph at lines 2189--2191
+Underfull \hbox (badness 1147) in paragraph at lines 2163--2165
 []\EU1/lmr/bx/n/10 RECUERDA \EU1/lmr/m/n/10 Se pueden seleccionar elementos de 
 un vector utilizando
  []
 
 [49] [50] [51]
 LaTeX Font Info:    Font shape `EU1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 2405.
+(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 2379.
 
 [52] [53]
-Overfull \hbox (257.0pt too wide) in paragraph at lines 2628--2628
+Overfull \hbox (257.0pt too wide) in paragraph at lines 2602--2602
 []\EU1/lmtt/m/n/10 ##  [1] "March"     "April"     "January"   "November"  "Jan
 uary"   "September" "October"   "September" "November"  "August"[] 
  []
 
 
-Overfull \hbox (246.5pt too wide) in paragraph at lines 2628--2628
+Overfull \hbox (246.5pt too wide) in paragraph at lines 2602--2602
 []\EU1/lmtt/m/n/10 ## [11] "January"   "November"  "November"  "February"  "May
 "       "August"    "July"      "December"  "August"    "August"[] 
  []
 
 
-Overfull \hbox (255.25pt too wide) in paragraph at lines 2641--2641
+Overfull \hbox (255.25pt too wide) in paragraph at lines 2615--2615
 []\EU1/lmtt/m/n/10 ##  [1] March     April     January   November  January   Se
 ptember October   September November  August    January   November[] 
  []
 
 
-Overfull \hbox (234.25pt too wide) in paragraph at lines 2641--2641
+Overfull \hbox (234.25pt too wide) in paragraph at lines 2615--2615
 []\EU1/lmtt/m/n/10 ## [13] November  February  May       August    July      De
 cember  August    August    September November  February  April[] 
  []
 
 
-Overfull \hbox (111.75pt too wide) in paragraph at lines 2641--2641
+Overfull \hbox (111.75pt too wide) in paragraph at lines 2615--2615
 []\EU1/lmtt/m/n/10 ## Levels: April August December February January July March
  May November October September[] 
  []
 
 
-Overfull \hbox (173.0pt too wide) in paragraph at lines 2655--2655
+Overfull \hbox (173.0pt too wide) in paragraph at lines 2629--2629
 []\EU1/lmtt/m/n/10 ##     April    August  December  February   January      Ju
 ly     March       May  November   October September[] 
  []
 
 [54]
-Overfull \hbox (69.75pt too wide) in paragraph at lines 2655--2655
+Overfull \hbox (69.75pt too wide) in paragraph at lines 2629--2629
 []\EU1/lmtt/m/n/10 ##         2         4         1         2         3        
  1         1         1         5         1         3[] 
  []
 
 
-Overfull \hbox (243.0pt too wide) in paragraph at lines 2666--2666
+Overfull \hbox (243.0pt too wide) in paragraph at lines 2640--2640
 []\EU1/lmtt/m/n/10 ##  [1] "April"     "August"    "December"  "February"  "Jan
 uary"   "July"      "March"     "May"       "November"  "October"[] 
  []
 
 
-Overfull \hbox (243.0pt too wide) in paragraph at lines 2688--2688
+Overfull \hbox (243.0pt too wide) in paragraph at lines 2662--2662
 []\EU1/lmtt/m/n/10 ##  [1] "Abril"     "August"    "December"  "February"  "Jan
 uary"   "July"      "March"     "May"       "November"  "October"[] 
  []
 
 
-Overfull \hbox (255.25pt too wide) in paragraph at lines 2700--2700
+Overfull \hbox (255.25pt too wide) in paragraph at lines 2674--2674
 []\EU1/lmtt/m/n/10 ##  [1] March     Abril     January   November  January   Se
 ptember October   September November  August    January   November[] 
  []
 
 
-Overfull \hbox (234.25pt too wide) in paragraph at lines 2700--2700
+Overfull \hbox (234.25pt too wide) in paragraph at lines 2674--2674
 []\EU1/lmtt/m/n/10 ## [13] November  February  May       August    July      De
 cember  August    August    September November  February  Abril[] 
  []
 
 
-Overfull \hbox (111.75pt too wide) in paragraph at lines 2700--2700
+Overfull \hbox (111.75pt too wide) in paragraph at lines 2674--2674
 []\EU1/lmtt/m/n/10 ## Levels: Abril August December February January July March
  May November October September[] 
  []
@@ -1884,17 +1881,17 @@ Capítulo 4.
 [59]
 File: Escalar_Vector_Matriz.jpeg Graphic file (type QTm)
 <use  "Escalar_Vector_Matriz.jpeg" >
-Underfull \hbox (badness 10000) in paragraph at lines 2909--2911
+Underfull \hbox (badness 10000) in paragraph at lines 2883--2885
 [][]
  []
 
 [60] [61]
-Underfull \hbox (badness 1320) in paragraph at lines 3003--3003
+Underfull \hbox (badness 1320) in paragraph at lines 2977--2977
 []\EU1/lmr/bx/n/14.4 Uso de cbind() para unir matrices por
  []
 
 [62] [63] [64] [65]
-Underfull \hbox (badness 1394) in paragraph at lines 3329--3331
+Underfull \hbox (badness 1394) in paragraph at lines 3303--3305
 []\EU1/lmr/m/n/10 Crea una matriz aleatoria de tamaño 4x3 y encuentra su matriz
 
  []
@@ -1904,7 +1901,7 @@ Capítulo 5.
 [67
 
 ] [68]
-Underfull \hbox (badness 1939) in paragraph at lines 3458--3459
+Underfull \hbox (badness 1939) in paragraph at lines 3432--3433
 []\EU1/lmr/m/n/10 Esto crearía una nueva columna llamada “temperatura_melting” 
 en el
  []
@@ -1924,11 +1921,11 @@ Capítulo 7.
 File: If_R.001.jpeg Graphic file (type QTm)
 <use  "If_R.001.jpeg" >
 LaTeX Font Info:    Font shape `EU1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 3663.
+(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 3637.
 
 
 LaTeX Font Warning: Font shape `EU1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `EU1/lmtt/b/sl' tried instead on input line 3664
+(Font)              Font shape `EU1/lmtt/b/sl' tried instead on input line 3638
 .
 
 [73
@@ -1945,7 +1942,7 @@ Capítulo 8.
 Underfull \vbox (badness 2134) has occurred while \output is active []
 
 [84]
-Underfull \hbox (badness 1270) in paragraph at lines 4208--4208
+Underfull \hbox (badness 1270) in paragraph at lines 4182--4182
 []\EU1/lmr/bx/n/12 Llamar a la función saludar proporcionando el
  []
 
@@ -1970,7 +1967,7 @@ Overfull \hbox (9.61124pt too wide) has occurred while \output is active
 ]
 Capítulo 10.
 
-Overfull \vbox (1.98976pt too high) detected at line 4459
+Overfull \vbox (1.98976pt too high) detected at line 4433
  []
 
 [93]
@@ -2007,7 +2004,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [98]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4581--4581
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4555--4555
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2018,7 +2015,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [99]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4599--4599
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4573--4573
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2029,7 +2026,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [100]
-Overfull \hbox (97.75pt too wide) in paragraph at lines 4617--4617
+Overfull \hbox (97.75pt too wide) in paragraph at lines 4591--4591
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_bin()`).[] 
  []
@@ -2040,13 +2037,13 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [101]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 4637--4637
+Overfull \hbox (118.75pt too wide) in paragraph at lines 4611--4611
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_summary()`).[] 
  []
 
 
-Overfull \hbox (73.25pt too wide) in paragraph at lines 4637--4637
+Overfull \hbox (73.25pt too wide) in paragraph at lines 4611--4611
 []\EU1/lmtt/m/n/10 ## Removed 2 rows containing non-finite outside the scale ra
 nge (`stat_summary()`).[] 
  []
@@ -2057,7 +2054,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [102]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 4653--4653
+Overfull \hbox (118.75pt too wide) in paragraph at lines 4627--4627
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_boxplot()`).[] 
  []
@@ -2068,7 +2065,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [103]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4672--4672
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4646--4646
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2079,7 +2076,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [104]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 4690--4690
+Overfull \hbox (118.75pt too wide) in paragraph at lines 4664--4664
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_density()`).[] 
  []
@@ -2090,7 +2087,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [105]
-Overfull \hbox (124.0pt too wide) in paragraph at lines 4708--4708
+Overfull \hbox (124.0pt too wide) in paragraph at lines 4682--4682
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_ydensity()`).[] 
  []
@@ -2101,13 +2098,13 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [106]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 4727--4727
+Overfull \hbox (118.75pt too wide) in paragraph at lines 4701--4701
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_boxplot()`).[] 
  []
 
 
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4731--4731
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4705--4705
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2118,7 +2115,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [107]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 4750--4750
+Overfull \hbox (118.75pt too wide) in paragraph at lines 4724--4724
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_summary()`).[] 
  []
@@ -2129,7 +2126,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [108]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4768--4768
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4742--4742
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2146,13 +2143,13 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [110]
-Overfull \hbox (97.75pt too wide) in paragraph at lines 4802--4802
+Overfull \hbox (97.75pt too wide) in paragraph at lines 4776--4776
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_cor()`).[] 
  []
 
 
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4806--4806
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4780--4780
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2163,7 +2160,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [111]
-Overfull \hbox (108.25pt too wide) in paragraph at lines 4824--4824
+Overfull \hbox (108.25pt too wide) in paragraph at lines 4798--4798
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_bin2d()`).[] 
  []
@@ -2174,7 +2171,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [112]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4843--4843
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4817--4817
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2189,7 +2186,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Capítulo 11.
 
-Overfull \vbox (1.98976pt too high) detected at line 4916
+Overfull \vbox (1.98976pt too high) detected at line 4890
  []
 
 [117]
@@ -2226,7 +2223,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [122]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5038--5038
+Overfull \hbox (176.5pt too wide) in paragraph at lines 5012--5012
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2237,7 +2234,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [123]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5056--5056
+Overfull \hbox (176.5pt too wide) in paragraph at lines 5030--5030
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2248,7 +2245,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [124]
-Overfull \hbox (97.75pt too wide) in paragraph at lines 5074--5074
+Overfull \hbox (97.75pt too wide) in paragraph at lines 5048--5048
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_bin()`).[] 
  []
@@ -2259,13 +2256,13 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [125]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 5094--5094
+Overfull \hbox (118.75pt too wide) in paragraph at lines 5068--5068
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_summary()`).[] 
  []
 
 
-Overfull \hbox (73.25pt too wide) in paragraph at lines 5094--5094
+Overfull \hbox (73.25pt too wide) in paragraph at lines 5068--5068
 []\EU1/lmtt/m/n/10 ## Removed 2 rows containing non-finite outside the scale ra
 nge (`stat_summary()`).[] 
  []
@@ -2276,7 +2273,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [126]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 5110--5110
+Overfull \hbox (118.75pt too wide) in paragraph at lines 5084--5084
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_boxplot()`).[] 
  []
@@ -2287,7 +2284,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [127]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5129--5129
+Overfull \hbox (176.5pt too wide) in paragraph at lines 5103--5103
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2298,7 +2295,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [128]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 5147--5147
+Overfull \hbox (118.75pt too wide) in paragraph at lines 5121--5121
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_density()`).[] 
  []
@@ -2309,7 +2306,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [129]
-Overfull \hbox (124.0pt too wide) in paragraph at lines 5165--5165
+Overfull \hbox (124.0pt too wide) in paragraph at lines 5139--5139
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_ydensity()`).[] 
  []
@@ -2320,13 +2317,13 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [130]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 5184--5184
+Overfull \hbox (118.75pt too wide) in paragraph at lines 5158--5158
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_boxplot()`).[] 
  []
 
 
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5188--5188
+Overfull \hbox (176.5pt too wide) in paragraph at lines 5162--5162
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2337,7 +2334,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [131]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 5207--5207
+Overfull \hbox (118.75pt too wide) in paragraph at lines 5181--5181
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_summary()`).[] 
  []
@@ -2348,7 +2345,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [132]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5225--5225
+Overfull \hbox (176.5pt too wide) in paragraph at lines 5199--5199
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2365,13 +2362,13 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [134]
-Overfull \hbox (97.75pt too wide) in paragraph at lines 5259--5259
+Overfull \hbox (97.75pt too wide) in paragraph at lines 5233--5233
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_cor()`).[] 
  []
 
 
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5263--5263
+Overfull \hbox (176.5pt too wide) in paragraph at lines 5237--5237
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2382,7 +2379,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [135]
-Overfull \hbox (108.25pt too wide) in paragraph at lines 5281--5281
+Overfull \hbox (108.25pt too wide) in paragraph at lines 5255--5255
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_bin2d()`).[] 
  []
@@ -2393,7 +2390,7 @@ pe QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [136]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5300--5300
+Overfull \hbox (176.5pt too wide) in paragraph at lines 5274--5274
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2408,22 +2405,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Capítulo 12.
 No file bookdown-demo.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5346.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5320.
 [141]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5346.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5320.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5346.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 5346.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5320.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 5320.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5346.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5320.
  ) 
 Here is how much of TeX's memory you used:
- 29092 strings out of 493591
- 508983 string characters out of 6143546
- 641718 words of memory out of 5000000
- 32125 multiletter control sequences out of 15000+600000
+ 29094 strings out of 493591
+ 509005 string characters out of 6143546
+ 641759 words of memory out of 5000000
+ 32127 multiletter control sequences out of 15000+600000
  10155 words of font info for 75 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  58i,6n,109p,10408b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
