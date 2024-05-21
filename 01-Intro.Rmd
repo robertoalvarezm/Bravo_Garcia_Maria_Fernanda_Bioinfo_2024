@@ -4,6 +4,14 @@ output:
   html_document: default
 ---
 # Introducción a R {#intro}
+
+## Historia de R 
+
+R es un lenguaje de programación derivado de S. ¿Qué es S? Es un lenguaje de programación desarrollado por John Chambers (AT&T) en 1976, su función inicial era el análisis estadístico implementado como librerías Fortran. Fue hasta 1998 que se lanzó la cuarta versión de este lenguaje por John Chambers en el libro *"Programming with Data"*, el cual documenta una versión muy similar a la que conocemos hoy en día que incluye el funcionamiento de análisis estadístico. El lenguaje S tiene como raíz el análisis de datos, sus desarrolladores se enfocaron en hacer más sencillo dicho análisis, ellos querían contruir un lenguaje que resultara sencillo tanto para los desarrolladores como para los usuarios, ¿cómo? desarrollando un método de programación basado en líneas de comando. Una limitación clave de el lenguaje S fue que solamente estaba disponible en un paquete comercial, S-PLUS. 
+Volviendo a R, se creó en 1991 por Ross Ihaka y Robert Gentleman, en 1996 se lanzó oficialmente en *"R: A lenguaje for data anlysis and graphics"*. En un inicio R era bastante similar a S. Una gran ventaja sobre S fue que se lanzó como un software libre, esto permitió que la fuente de código del sistema entero fuera accesible para  cualquiera que decidiera emplearlo. 
+Al día de hoy R se puede emplear en casi cualquier plataforma de cómputo y sistema operativo, esto es gracias a su naturaleza *open source*, es decir, que cualquiera es libre de adaptar el software a la plataforma que desee. 
+Uno de los beneficios de los mejores beneficios de R, que no está relacionado con el lenguaje en sí, es que tiene una comunidad de usuarios muy activa, multidisciplinaria de distintas partes del mundo. Esto ha permitido la construcción de una plataforma que tiene éxito en la medida en las que las personas crean y apoyan el desarrollo de nuevas herramientas, paquetes, aplicaciones y apoyo a nuevos usuarios. 
+
 R es un entorno integrado para el manejo de datos, el cálculo, la generación de gráficos y análisis estadísticos. Las principales ventajas del uso de R son:
 
 1. Software libre.
