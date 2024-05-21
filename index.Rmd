@@ -12,5 +12,3 @@ github-repo: rstudio/bookdown-demo
 description: "Estas son las notas de un curso básico de R."
 output_dir: docs
 ---
-# Notas de R básico
-
