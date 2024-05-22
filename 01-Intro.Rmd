@@ -7,10 +7,17 @@ output:
 
 ## Historia de R 
 
-R es un lenguaje de programación derivado de S. ¿Qué es S? Es un lenguaje de programación desarrollado por John Chambers (AT&T) en 1976, su función inicial era el análisis estadístico implementado como librerías Fortran. Fue hasta 1998 que se lanzó la cuarta versión de este lenguaje por John Chambers en el libro *"Programming with Data"*, el cual documenta una versión muy similar a la que conocemos hoy en día que incluye el funcionamiento de análisis estadístico. El lenguaje S tiene como raíz el análisis de datos, sus desarrolladores se enfocaron en hacer más sencillo dicho análisis, ellos querían contruir un lenguaje que resultara sencillo tanto para los desarrolladores como para los usuarios, ¿cómo? desarrollando un método de programación basado en líneas de comando. Una limitación clave de el lenguaje S fue que solamente estaba disponible en un paquete comercial, S-PLUS. 
-Volviendo a R, se creó en 1991 por Ross Ihaka y Robert Gentleman, en 1996 se lanzó oficialmente en *"R: A lenguaje for data anlysis and graphics"*. En un inicio R era bastante similar a S. Una gran ventaja sobre S fue que se lanzó como un software libre, esto permitió que la fuente de código del sistema entero fuera accesible para  cualquiera que decidiera emplearlo. 
+R es un lenguaje de programación derivado de S.
+
+**¿Qué es S?** Es un lenguaje de programación desarrollado por John Chambers (AT&T) en 1976, su función inicial era el análisis estadístico. Fue hasta 1998 que se lanzó la cuarta versión en *"Programming with Data"*, dicho libro documenta una versión muy similar a la que conocemos hoy en día, la cual incluye el análisis funcional estadístio. El lenguaje S tiene como raíz el análisis de datos, sus desarrolladores se enfocaron en contruir un lenguaje que resultara sencillo tanto para los ellos como para los usuarios, ¿Cómo? desarrollando un método de programación basado en líneas de comando.
+
+Volviendo a R, se creó en 1991 por Ross Ihaka y Robert Gentleman. Fue en 1996 que se lanzó oficialmente: *"R: A lenguaje for data anlysis and graphics"*, siendo incialmente bastante similar al lenguaje S. Una gran ventaja de R fue su lanzamiento como software libre (la limitación clave de S fue su única disponibilidad como paquete comercial, S-PLUS), esto permitió que la fuente de código del sistema entero fuera accesible para  cualquiera que decidiera emplearlo. 
+
 Al día de hoy R se puede emplear en casi cualquier plataforma de cómputo y sistema operativo, esto es gracias a su naturaleza *open source*, es decir, que cualquiera es libre de adaptar el software a la plataforma que desee. 
-Uno de los beneficios de los mejores beneficios de R, que no está relacionado con el lenguaje en sí, es que tiene una comunidad de usuarios muy activa, multidisciplinaria de distintas partes del mundo. Esto ha permitido la construcción de una plataforma que tiene éxito en la medida en las que las personas crean y apoyan el desarrollo de nuevas herramientas, paquetes, aplicaciones y apoyo a nuevos usuarios. 
+
+Uno de los más grandes beneficios de R, no relacionado *per se* al lenguaje, es la comunidad de usuarios. Sus característicad de una comunidad muy activa, multidisciplinaria y de distintas partes del mundo ha permitido la construcción de una plataforma que tiene éxito en medida que las personas crean y apoyan el desarrollo de nuevas herramientas, paquetes, aplicaciones, así mismo como el apoyo a nuevos usuarios. 
+
+## Ventajas de R 
 
 R es un entorno integrado para el manejo de datos, el cálculo, la generación de gráficos y análisis estadísticos. Las principales ventajas del uso de R son:
 
@@ -18,13 +25,11 @@ R es un entorno integrado para el manejo de datos, el cálculo, la generación d
 2. Facilidad para el manejo y almacenamiento de datos.
 3. Un conjunto de operadores para el cálculo de vectores y matrices.
 4. Una colección extensa e integrada de herramientas intermedias para el análisis estadístico de datos.
-5. Multitud de facilidades gráficas de altísima calidad.
-6. Un lenguaje de programación (muy) poderoso con muchas librerías especializadas disponibles.
+5. Multitud de facilidades gráficas de altísima calidad. 
+6. Un lenguaje de programación (muy) poderoso con muchas librerías especializadas disponibles. CRAN tiene aproximadamente 10k paqueterías disponibles, muchas más que el número de funciones de Excel. 
 7. La mejor herramienta para trabajar con datos genómicos, proteómicos, redes, metabolómica, entre varias más.
-8. **Casi todos podemos aprender por nuestra cuenta a usar excel (pero hay que pagar por la licencia, es software privativo...). Sin embargo, es más  díficil aprender por nuestra cuenta R; y si lo hacemos nos da una ventaja comparativa sobre el resto.** 
-9. Además excel no es la mejor elección si queremos hacer bioinformática en serio. 
-
-
+8. **Casi todos podemos aprender por nuestra cuenta a usar excel (pero hay que pagar por la licencia, es software privativo...). Sin embargo, aunque es más difícil aprender por nuestra cuenta R, si lo hacemos nos da una ventaja comparativa sobre el resto de estudiantes de licenciaturas afines.** 
+9. R tiene la capacidad de relacionarse y trabajar de manera paralela con otros software (Microsoft Office, QGIS..). Algunas ventajas de R sobre, por ejemplo, la paquetería Office, son su capacidad de iteración, reproducibilidad, automatización, la generación de reportes dinámicos, múltiples formatos de salida (PDF, HTML, páginas de internet, artículos científicos, diapositivas), conexión directa con buscadores de internet. 
 
 ## Learning R Hub
 En este sitio web se presentan varios recurso adicionales en línea para aprender R
@@ -44,7 +49,7 @@ R proporciona una amplia gama de paquetes y herramientas estadísticas que permi
 
 **2. Visualización de Datos**
 
-Con paquetes como ggplot2, los estudiantes pueden crear visualizaciones de datos interactivas y de alta calidad que facilitan la comprensión de patrones y tendencias en conjuntos de datos microbiológicos, como datos de secuenciación genómica o datos de conteo de microorganismos.
+Con paquetes como ggplot2, los estudiantes pueden crear visualizaciones de datos interactivas y de alta calidad que facilitan la comprensión de patrones y tendencias en conjuntos de datos microbiológicos, como datos de secuenciación genómica o datos de ecología microbiana.
 
 **3. Reproducibilidad y Documentación**
 
@@ -59,6 +64,10 @@ R cuenta con una comunidad activa de usuarios y desarrolladores que comparten c�
 R es un lenguaje altamente flexible que permite a los estudiantes adaptar sus análisis a las necesidades específicas de sus proyectos microbiológicos. Desde la manipulación de datos hasta la creación de modelos personalizados, R ofrece la libertad y la capacidad de personalización necesarias para abordar una amplia variedad de preguntas de investigación en microbiología.
 
 Aprender R puede ser extremadamente beneficioso para los estudiantes de microbiología al proporcionarles las herramientas y habilidades necesarias para realizar análisis de datos sofisticados, visualizar resultados de manera efectiva y promover la reproducibilidad en su investigación científica.
+
+# Comienza con R 
+
+## Instalación
 
 
 
