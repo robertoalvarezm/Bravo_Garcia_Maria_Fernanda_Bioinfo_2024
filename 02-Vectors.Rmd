@@ -355,7 +355,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 (1+2+3+4+5+6+7+8+9+10)/10
 
 ```
-*Okaaaay, no es un proceso taaaaan largo pero ¿qué pasa cuando queremos calcular el promedio de 10,000 números? RIP* para ello se pueden emplear los siguientes comandos `min()`, `max()`, `range()`, `sum()`, `mean()`, `median()`, `sd()`,`quantile()`,`unique()`,`sort()`
+*¿Qué alternativas se tienen para realizar operaciones con una cantidad mucho mayor de datos?* Se pueden emplear los siguientes comandos `min()`, `max()`, `range()`, `sum()`, `mean()`, `median()`, `sd()`,`quantile()`,`unique()`,`sort()`
 
 ```{r}
 #Se define el vector que incluye mil datos
@@ -535,7 +535,7 @@ x <- c(88,NA,12,168,13)
 mean(x)
 ```
 
-Sin emabrgo, podemos decirle a `R` que las omita, indicando como argumento de la función `mean()` `na.rm=TRUE` que significa *na remove*
+Sin embargo, podemos decirle a `R` que las omita, indicando como argumento de la función `mean()` `na.rm=TRUE` que significa *na remove*
 
 ```{r}
 x <- c(88,NA,12,168,13)
@@ -625,7 +625,7 @@ z[which(z*z > 8)]
 Dos vectores son iguales si elemento a elemento son idénticos.
 Por lo tanto deben de ser del mismo tamaño.
 **RECUERDA** Para probar si dos elementos son iguales se utiliza el operador de comparación `==` son dos signos iguales juntos, sin espacio.
-No confundir con el operador `=` que se puede usar como operador de asiganción (aunque no es recomendable su uso. De hecho está prohibido en este curso >:(
+No confundir con el operador `=` que se puede usar como operador de asignación (aunque no es recomendable su uso. De hecho está prohibido en este curso >:(
 
 ```{r}
 x <- c(1,4,9,16,25)
@@ -677,7 +677,7 @@ sum(x==y)
 
 ### Factor
 
-Los factores son un tipo de vector que puede tomar un número "limitado" de valores, que normalmente se utilizan como variables categóricas. Por ejemplo: macho/hembra. Es útil tenener este tipo de objeto porque varios modelos estadísticos que se pueden correr en `R` los utilizan. A los valores que pueden tomar los elementos del factor se les conoce como *levels*.
+Los factores son un tipo de vector que puede tomar un número "limitado" de valores, que normalmente se utilizan como variables categóricas. Por ejemplo: macho/hembra. Es útil tener este tipo de objeto porque varios modelos estadísticos que se pueden correr en `R` los utilizan. A los valores que pueden tomar los elementos del factor se les conoce como *levels*.
 
 
 ```{r}
