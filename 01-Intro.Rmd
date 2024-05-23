@@ -202,6 +202,8 @@ Ahora, ¿qué pasa cuando tengo la idea de lo que quiero hacer pero no se qué p
 
 **NOTA** Se recomienda el uso del autocompletado, de esta manera reducirás errores de dedo. 
 
+# Bases prácticas en R 
+
 ## Expresiones y asignaciones
 
 Las **expresiones** y **asignaciones** son los dos tipos de resultados que arroja R. 
