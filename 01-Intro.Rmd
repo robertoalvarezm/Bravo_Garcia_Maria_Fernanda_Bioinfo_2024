@@ -69,9 +69,13 @@ Aprender R puede ser extremadamente beneficioso para los estudiantes de microbio
 
 ## Instalación
 
+Para iniciar en R es necesario instalarlo. R está disponible para los sistemas Windows, Mac OS X y Linux. El lenguaje de programación R tiene integrado un ambiente de desarrollo (IDE, por sus siglas en inglés) llamado RStudio. Este IDE facilita la sintaxis y edición del código, así como la visualización de objetos. 
 
+Si requiere ver un tutorial de cómo instalar R y RStudio para Mac o Windows, puede apoyarse de los siguientes videos: 
 
+- [Instalación para Windows](https://www.youtube.com/watch?v=mZlt25hBWg8&t=2s)
 
+- [Instalación para Mac](https://www.youtube.com/watch?v=OW66f1sBQOc)
 
 ## Paquetes o bibliotecas
 
@@ -122,16 +126,14 @@ demo(graphics)
    * markdown
    * ggplot2
    
-   
-   
 **INFORMACIÓN ADICIONAL**
 
 Existen repositorios adicionales a [CRAN](https://cran.r-project.org/), uno de ellos es [Bioconductor](https://https://bioconductor.org/), en él puedes buscar e instalar paquetes como `ggtree`. 
 
+Otra plataforma que resulta de gran apoyo es [GitHub](https://docs.github.com/es), permite crear, almacenar, administrar y compartir códigos de distintos lenguajes de programación. Una de sus ventajas es la consulta de repositorios, por ejemplo [mixOmics](https://github.com/mixOmicsTeam/mixOmics), el cual contiene una amplia variedad de métodos para la exploración e integración de datos biológicos. El paquete `mixOmics` contiene una gran cantidad de técnicas multivariadas que se han desarrollado y validado en múltiples estudios biológicos, esto mediante la implementación simultánea de distintas "ómicas" para obtener una mejor compresión del sistema. 
+
 **Ejercicio**
 1. Explora la página de Bioconductor, apóyate de su buscador e instala el paquete `ggtree`. 
-
-
 
 ## Ayuda en R
 
@@ -232,7 +234,7 @@ x
 ![Operador de asignación. Así que evita el uso del igual](equals-sign-assignment-operator-imgflip-com-going-through-data-structures-and-47188178.png)
 
 
-Otro punto a considerar respecto a las **asiganciones** es que R es capaz de distinguir entre mayúsculas y minúsculas, por lo que la misma letra puede contener valores distintos. 
+Otro punto a considerar respecto a las **asignaciones** es que R es capaz de distinguir entre mayúsculas y minúsculas, por lo que la misma letra puede contener valores distintos. 
 
 Ejemplo: 
 ```{r}
@@ -299,7 +301,7 @@ Para cambiar de directorio utilizamos `setwd("direccion_a_la_que_quieres_ir")`
 setwd("~")
 ```
 
-##Bash en R 
+## Bash en R 
 También se pueden usar los comandos de la terminal de bash dentro de R, utilizando la función `system()`
 
 
