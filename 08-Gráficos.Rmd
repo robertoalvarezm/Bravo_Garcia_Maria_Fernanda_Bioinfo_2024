@@ -1,4 +1,4 @@
-# Gráficos
+# Gráficos {#plots}
 
 Agrupar los datos, ya sea numéricamente o gráficamente, es un paso muy importante en el análisis de datos. Una de las ventajas de R es su gran capacidad para elaborar gráficos, sus aplicaciones van desde una primera consulta exploratoria de datos hasta la generación de imágenes complejas y de alta cálidad.
 
