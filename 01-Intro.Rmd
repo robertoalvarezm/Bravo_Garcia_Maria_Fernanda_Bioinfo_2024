@@ -65,9 +65,9 @@ R es un lenguaje altamente flexible que permite a los estudiantes adaptar sus an
 
 Aprender R puede ser extremadamente beneficioso para los estudiantes de microbiología al proporcionarles las herramientas y habilidades necesarias para realizar análisis de datos sofisticados, visualizar resultados de manera efectiva y promover la reproducibilidad en su investigación científica.
 
-# Comienza con R 
+## Comienza con R 
 
-## Instalación
+### Instalación
 
 Para iniciar en R es necesario instalarlo. R está disponible para los sistemas Windows, Mac OS X y Linux. El lenguaje de programación R tiene integrado un ambiente de desarrollo (IDE, por sus siglas en inglés) llamado RStudio. Este IDE facilita la sintaxis y edición del código, así como la visualización de objetos. 
 
@@ -77,7 +77,7 @@ Si requiere ver un tutorial de cómo instalar R y RStudio para Mac o Windows, pu
 
 - [Instalación para Mac](https://www.youtube.com/watch?v=OW66f1sBQOc)
 
-## Paquetes o bibliotecas
+### Paquetes o bibliotecas
 
 Las funciones especializadas de R se guardan en paquetes *(packages)* que deben ser invocados ANTES de  llamar a una función del paquete.
 

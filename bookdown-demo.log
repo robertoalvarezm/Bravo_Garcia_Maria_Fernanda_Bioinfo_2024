@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  18 APR 2024 11:28
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  24 MAY 2024 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -84,41 +84,7 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/lmodern.sty
-Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (/usr/local/texlive/2016/texmf-dist/tex/generic/iftex/iftex.sty
+)) (/usr/local/texlive/2016/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2013/04/04 v0.2 Provides if(tex) conditional for PDFTeX, XeTeX, 
 and LuaTeX
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/unicode-math/unicode-math.sty
@@ -491,7 +457,41 @@ ex)
 . 
 . I'm going to patch macro \r@@t.
 .................................................
-)) (/usr/local/texlive/2016/texmf-dist/tex/latex/upquote/upquote.sty
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/textcomp.sty
@@ -606,7 +606,108 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/bookmark.sty
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count138
+\FV@InFile=\read2
+\FV@TabBox=\box44
+\c@FancyVerbLine=\count139
+\FV@StepNumber=\count140
+\FV@OutFile=\write3
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip52
+\fb@frw=\dimen149
+\fb@frh=\dimen150
+\FrameRule=\dimen151
+\FrameSep=\dimen152
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip53
+\LTright=\skip54
+\LTpre=\skip55
+\LTpost=\skip56
+\LTchunksize=\count141
+\LTcapwidth=\dimen153
+\LT@head=\box45
+\LT@firsthead=\box46
+\LT@foot=\box47
+\LT@lastfoot=\box48
+\LT@cols=\count142
+\LT@rows=\count143
+\c@LT@tables=\count144
+\c@LT@chunks=\count145
+\LT@p@ftn=\toks23
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen154
+\lightrulewidth=\dimen155
+\cmidrulewidth=\dimen156
+\belowrulesep=\dimen157
+\belowbottomsep=\dimen158
+\aboverulesep=\dimen159
+\abovetopsep=\dimen160
+\cmidrulesep=\dimen161
+\cmidrulekern=\dimen162
+\defaultaddspace=\dimen163
+\@cmidla=\count146
+\@cmidlb=\count147
+\@aboverulesep=\dimen164
+\@belowrulesep=\dimen165
+\@thisruleclass=\count148
+\@lastruleclass=\count149
+\@thisrulewidth=\dimen166
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen167
+\extrarowheight=\dimen168
+\NC@list=\toks24
+\extratabsurround=\skip57
+\backup@length=\skip58
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count150
+\calc@Bcount=\count151
+\calc@Adimen=\dimen169
+\calc@Bdimen=\dimen170
+\calc@Askip=\skip59
+\calc@Bskip=\skip60
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count152
+\calc@Cskip=\skip61
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count153
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/footnotehyper/footnotehyper.sty
+Package: footnotehyper 2016/04/30 v0.9e hyperref aware footnote.sty (JFB)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box49
+\fn@width=\dimen171
+)) (/usr/local/texlive/2016/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks25
+\thm@bodyfont=\toks26
+\thm@headfont=\toks27
+\thm@notefont=\toks28
+\thm@headpunct=\toks29
+\thm@preskip=\skip62
+\thm@postskip=\skip63
+\thm@headsep=\skip64
+\dth@everypar=\toks30
+) (/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip65
+\bibsep=\skip66
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count154
+)
+\citation{*}
+(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/bookmark.sty
 Package: bookmark 2016/05/16 v1.25 PDF bookmarks (HO)
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdfescape.sty
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
@@ -657,7 +758,6 @@ Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
 Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
 Package: xcolor-patch 2016/05/16 xcolor patch
 Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
@@ -666,13 +766,13 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen149
-\Hy@linkcounter=\count138
-\Hy@pagecounter=\count139
+\@linkdim=\dimen172
+\Hy@linkcounter=\count155
+\Hy@pagecounter=\count156
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count140
+\Hy@SavedSpaceFactor=\count157
 (/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
@@ -687,16 +787,16 @@ Package hyperref Info: Plain pages OFF on input line 4461.
 Package hyperref Info: Backreferencing OFF on input line 4466.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4691.
-\c@Hy@tempcnt=\count141
+\c@Hy@tempcnt=\count158
 (/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5044.
-\XeTeXLinkMargin=\dimen150
-\Fld@menulength=\count142
-\Field@Width=\dimen151
-\Fld@charsize=\dimen152
+\XeTeXLinkMargin=\dimen173
+\Fld@menulength=\count159
+\Field@Width=\dimen174
+\Fld@charsize=\dimen175
 Package hyperref Info: Hyper figures OFF on input line 6298.
 Package hyperref Info: Link nesting OFF on input line 6303.
 Package hyperref Info: Hyper index ON on input line 6306.
@@ -706,9 +806,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6323.
 Package hyperref Info: PDF/A mode OFF on input line 6328.
 LaTeX Info: Redefining \ref on input line 6368.
 LaTeX Info: Redefining \pageref on input line 6372.
-\Hy@abspage=\count143
-\c@Item=\count144
-\c@Hfootnote=\count145
+\Hy@abspage=\count160
+\c@Item=\count161
+\c@Hfootnote=\count162
 )
 
 Package hyperref Message: Driver (autodetected): hxetex.
@@ -719,11 +819,11 @@ File: hxetex.def 2016/05/05 v6.83n Hyperref driver for XeTeX
 Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box44
-\c@Hy@AnnotLevel=\count146
-\HyField@AnnotCount=\count147
-\Fld@listcount=\count148
-\c@bookmark@seq@number=\count149
+\pdfm@box=\box50
+\c@Hy@AnnotLevel=\count163
+\HyField@AnnotCount=\count164
+\Fld@listcount=\count165
+\c@bookmark@seq@number=\count166
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
@@ -733,112 +833,11 @@ Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
 tly
 (rerunfilecheck)             and the loading of the package is aborted.
 )
-\Hy@SectionHShift=\skip52
+\Hy@SectionHShift=\skip67
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/bkm-dvipdfm.def
 File: bkm-dvipdfm.def 2016/05/16 v1.25 bookmark driver for dvipdfm (HO)
-\BKM@id=\count150
-)) (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2008/02/07
-
-Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
-<2008/02/07> (tvz)
-\FV@CodeLineNo=\count151
-\FV@InFile=\read2
-\FV@TabBox=\box45
-\c@FancyVerbLine=\count152
-\FV@StepNumber=\count153
-\FV@OutFile=\write3
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/framed/framed.sty
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip53
-\fb@frw=\dimen153
-\fb@frh=\dimen154
-\FrameRule=\dimen155
-\FrameSep=\dimen156
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip54
-\LTright=\skip55
-\LTpre=\skip56
-\LTpost=\skip57
-\LTchunksize=\count154
-\LTcapwidth=\dimen157
-\LT@head=\box46
-\LT@firsthead=\box47
-\LT@foot=\box48
-\LT@lastfoot=\box49
-\LT@cols=\count155
-\LT@rows=\count156
-\c@LT@tables=\count157
-\c@LT@chunks=\count158
-\LT@p@ftn=\toks23
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen158
-\lightrulewidth=\dimen159
-\cmidrulewidth=\dimen160
-\belowrulesep=\dimen161
-\belowbottomsep=\dimen162
-\aboverulesep=\dimen163
-\abovetopsep=\dimen164
-\cmidrulesep=\dimen165
-\cmidrulekern=\dimen166
-\defaultaddspace=\dimen167
-\@cmidla=\count159
-\@cmidlb=\count160
-\@aboverulesep=\dimen168
-\@belowrulesep=\dimen169
-\@thisruleclass=\count161
-\@lastruleclass=\count162
-\@thisrulewidth=\dimen170
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen171
-\extrarowheight=\dimen172
-\NC@list=\toks24
-\extratabsurround=\skip58
-\backup@length=\skip59
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count163
-\calc@Bcount=\count164
-\calc@Adimen=\dimen173
-\calc@Bdimen=\dimen174
-\calc@Askip=\skip60
-\calc@Bskip=\skip61
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count165
-\calc@Cskip=\skip62
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count166
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/footnotehyper/footnotehyper.sty
-Package: footnotehyper 2016/04/30 v0.9e hyperref aware footnote.sty (JFB)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/mdwtools/footnote.sty
-Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box50
-\fn@width=\dimen175
-)) (/usr/local/texlive/2016/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks25
-\thm@bodyfont=\toks26
-\thm@headfont=\toks27
-\thm@notefont=\toks28
-\thm@headpunct=\toks29
-\thm@preskip=\skip63
-\thm@postskip=\skip64
-\thm@headsep=\skip65
-\dth@everypar=\toks30
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip66
-\bibsep=\skip67
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count167
-)
-\citation{*}
-(./bookdown-demo.aux
+\BKM@id=\count167
+)) (./bookdown-demo.aux
 
 LaTeX Warning: Label `id' multiply defined.
 
@@ -848,32 +847,32 @@ LaTeX Warning: Label `id' multiply defined.
 )
 \openout1 = `bookdown-demo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 132.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 132.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 135.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 135.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
 .................................................
 . fontspec info: "set-scale"
 . 
@@ -920,23 +919,23 @@ nmodern-math]/OT:script=math;language=DFLT;+ssty=0;"<-7>s*[1]"[latinmodern-math
 . - 'bold small caps'  (bx/sc) with NFSS spec.: 
 .................................................
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 132.
+(Font)              scaled to size 10.0pt on input line 135.
 .................................................
 . fontspec info: "set-scale"
 . 
 . latinmodern-math.otf scale = 1.
 .................................................
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 132.
+(Font)              `operators' in the math version `normal' on input line 135.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> EU1/latinmodern-math.otf(0)/m/n on inpu
-t line 132.
+t line 135.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 132.
+(Font)              `operators' in the math version `bold' on input line 135.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> EU1/latinmodern-math.otf(0)/bx/n on in
-put line 132.
+put line 135.
 .................................................
 . fontspec info: "set-scale"
 . 
@@ -1010,15 +1009,15 @@ f},Scale=1.00001,FontAdjustment={\fontdimen
 . =2.5pt\relax \relax 
 .................................................
 LaTeX Font Info:    Encoding `OMS' has changed to `EU1' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 132.
+(Font)              `symbols' in the math version `normal' on input line 135.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> EU1/latinmodern-math.otf(1)/m/n on inp
-ut line 132.
+ut line 135.
 LaTeX Font Info:    Encoding `OMS' has changed to `EU1' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 132.
+(Font)              `symbols' in the math version `bold' on input line 135.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> EU1/latinmodern-math.otf(1)/bx/n on in
-put line 132.
+put line 135.
 .................................................
 . fontspec info: "set-scale"
 . 
@@ -1077,17 +1076,17 @@ f},Scale=0.99999,FontAdjustment={\fontdimen
 .................................................
 LaTeX Font Info:    Encoding `OMX' has changed to `EU1' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-32.
+35.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> EU1/latinmodern-math.otf(2)/m/n on inp
-ut line 132.
+ut line 135.
 LaTeX Font Info:    Encoding `OMX' has changed to `EU1' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 132
+(Font)              `largesymbols' in the math version `bold' on input line 135
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> EU1/latinmodern-math.otf(2)/bx/n on in
-put line 132.
-LaTeX Info: Redefining \microtypecontext on input line 132.
+put line 135.
+LaTeX Info: Redefining \microtypecontext on input line 135.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -1099,7 +1098,7 @@ File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mod
 ern Roman (RS)
 )
 \AtBeginShipoutBox=\box51
-Package hyperref Info: Link coloring OFF on input line 132.
+Package hyperref Info: Link coloring OFF on input line 135.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1107,39 +1106,39 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count169
 )
-LaTeX Info: Redefining \ref on input line 132.
-LaTeX Info: Redefining \pageref on input line 132.
-LaTeX Info: Redefining \nameref on input line 132.
+LaTeX Info: Redefining \ref on input line 135.
+LaTeX Info: Redefining \pageref on input line 135.
+LaTeX Info: Redefining \nameref on input line 135.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 134.
+(Font)              scaled to size 12.0pt on input line 137.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 134.
+(Font)              scaled to size 8.0pt on input line 137.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 134.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 134.
+(Font)              scaled to size 6.0pt on input line 137.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 137.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.00018pt on input line 134.
+(Font)              scaled to size 12.00018pt on input line 137.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.00012pt on input line 134.
+(Font)              scaled to size 8.00012pt on input line 137.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.00009pt on input line 134.
+(Font)              scaled to size 6.00009pt on input line 137.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 11.99982pt on input line 134.
+(Font)              scaled to size 11.99982pt on input line 137.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.99988pt on input line 134.
+(Font)              scaled to size 7.99988pt on input line 137.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.99991pt on input line 134.
-LaTeX Font Info:    Try loading font information for U+msa on input line 134.
+(Font)              scaled to size 5.99991pt on input line 137.
+LaTeX Font Info:    Try loading font information for U+msa on input line 137.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 134.
+LaTeX Font Info:    Try loading font information for U+msb on input line 137.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1151,327 +1150,342 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 ] (./bookdown-demo.toc
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 7.01236pt on input line 3.
+(Font)              scaled to size 7.01236pt on input line 2.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 4.98074pt on input line 3.
+(Font)              scaled to size 4.98074pt on input line 2.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.00015pt on input line 3.
+(Font)              scaled to size 10.00015pt on input line 2.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.01247pt on input line 3.
+(Font)              scaled to size 7.01247pt on input line 2.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 4.9808pt on input line 3.
+(Font)              scaled to size 4.9808pt on input line 2.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.99985pt on input line 3.
+(Font)              scaled to size 9.99985pt on input line 2.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.01224pt on input line 3.
+(Font)              scaled to size 7.01224pt on input line 2.
 LaTeX Font Info:    Font shape `EU1/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 4.98067pt on input line 3.
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 31.
+(Font)              scaled to size 4.98067pt on input line 2.
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 36.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3] [4])
+) [3])
 \tf@toc=\write4
 \openout4 = `bookdown-demo.toc'.
 
-[5] [6
-
-]
+[4]
 Capítulo 1.
-[7] [8
+[5
 
-]
-Capítulo 2.
-[9] [10]
-Overfull \hbox (246.5pt too wide) in paragraph at lines 248--248
+] [6]
+Underfull \vbox (badness 6842) has occurred while \output is active []
+
+[7]
+LaTeX Font Info:    Font shape `EU1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 245.
+
+Overfull \hbox (134.5pt too wide) in paragraph at lines 273--273
 []\EU1/lmtt/m/n/10 ##  [1] ".GlobalEnv"             "package:ggpubr"         "p
-ackage:palmerpenguins" "package:ggplot2"        "package:readxl"[] 
+ackage:palmerpenguins" "package:ggplot2"[] 
  []
 
 
-Overfull \hbox (253.5pt too wide) in paragraph at lines 248--248
-[]\EU1/lmtt/m/n/10 ##  [6] "package:gplots"         "tools:rstudio"          "p
-ackage:stats"          "package:graphics"       "package:grDevices"[] 
+Overfull \hbox (115.25pt too wide) in paragraph at lines 273--273
+[]\EU1/lmtt/m/n/10 ##  [5] "package:readxl"         "package:gplots"         "t
+ools:rstudio"          "package:stats"[] 
  []
 
 
-Overfull \hbox (223.75pt too wide) in paragraph at lines 248--248
-[]\EU1/lmtt/m/n/10 ## [11] "package:utils"          "package:datasets"       "p
-ackage:methods"        "Autoloads"              "package:base"[] 
- []
-
-
-Overfull \hbox (129.25pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##   [1] "%>%"                         "add_summary"        
-         "annotate_figure"             "as_ggplot"[] 
- []
-
-
-Overfull \hbox (150.25pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##   [5] "as_npc"                      "as_npcx"            
-         "as_npcy"                     "background_image"[] 
- []
-
-
-Overfull \hbox (167.75pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##   [9] "bgcolor"                     "border"             
-         "change_palette"              "clean_table_theme"[] 
- []
-
-
-Overfull \hbox (167.75pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [13] "clean_theme"                 "colnames_style"     
-         "color_palette"               "compare_means"[] 
- []
-
-
-Overfull \hbox (117.0pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [17] "create_aes"                  "desc_statby"        
-         "diff_express"                "facet"[] 
- []
-
-
-Overfull \hbox (162.5pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [21] "fill_palette"                "font"               
-         "gene_citation"               "gene_expression"[] 
- []
-
-
-Overfull \hbox (141.5pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [25] "geom_bracket"                "geom_exec"          
-         "geom_pwc"                    "geom_signif"[] 
- []
-
-
-Overfull \hbox (141.5pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [29] "get_breaks"                  "get_coord"          
-         "get_legend"                  "get_palette"[] 
- []
-
-
-Overfull \hbox (145.0pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [33] "get_summary_stats"           "ggadd"              
-         "ggadjust_pvalue"             "ggarrange"[] 
- []
-
-
-Overfull \hbox (134.5pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [37] "ggballoonplot"               "ggbarplot"          
-         "ggboxplot"                   "ggdensity"[] 
- []
-
-
-Overfull \hbox (118.75pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [41] "ggdonutchart"                "ggdotchart"         
-         "ggdotplot"                   "ggecdf"[] 
- []
-
-
-Overfull \hbox (117.0pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [45] "ggerrorplot"                 "ggexport"           
-         "gghistogram"                 "ggline"[] 
- []
-
-[11]
-Overfull \hbox (127.5pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [49] "ggmaplot"                    "ggpaired"           
-         "ggpar"                       "ggparagraph"[] 
- []
-
-
-Overfull \hbox (127.5pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [53] "ggpie"                       "ggpubr_options"     
-         "ggqqplot"                    "ggscatter"[] 
- []
-
-
-Overfull \hbox (174.75pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [57] "ggscatterhist"               "ggstripchart"       
-         "ggsummarystats"              "ggsummarytable"[] 
- []
-
-
-Overfull \hbox (150.25pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [61] "ggtext"                      "ggtexttable"        
-         "ggviolin"                    "gradient_color"[] 
- []
-
-
-Overfull \hbox (125.75pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [65] "gradient_fill"               "grids"              
-         "group_by"                    "labs_pubr"[] 
- []
-
-
-Overfull \hbox (117.0pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [69] "mean_ci"                     "mean_range"         
-         "mean_sd"                     "mean_se_"[] 
- []
-
-
-Overfull \hbox (148.5pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [73] "median_hilow_"               "median_iqr"         
-         "median_mad"                  "median_q1q3"[] 
- []
-
-
-Overfull \hbox (125.75pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [77] "median_range"                "mutate"             
-         "npc_to_data_coord"           "rotate"[] 
- []
-
-
-Overfull \hbox (139.75pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [81] "rotate_x_text"               "rotate_y_text"      
-         "rownames_style"              "rremove"[] 
- []
-
-
-Overfull \hbox (187.0pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [85] "set_palette"                 "show_line_types"    
-         "show_point_shapes"           "stat_anova_test"[] 
- []
-
-
-Overfull \hbox (202.75pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [89] "stat_bracket"                "stat_central_tendenc
-y"       "stat_chull"                  "stat_compare_means"[] 
- []
-
-
-Overfull \hbox (197.5pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [93] "stat_conf_ellipse"           "stat_cor"           
-         "stat_friedman_test"          "stat_kruskal_test"[] 
- []
-
-
-Overfull \hbox (169.5pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ##  [97] "stat_mean"                   "stat_overlay_normal_
-density" "stat_pvalue_manual"          "stat_pwc"[] 
- []
-
-
-Overfull \hbox (199.25pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ## [101] "stat_regline_equation"       "stat_stars"         
-         "stat_welch_anova_test"       "tab_add_border"[] 
- []
-
-
-Overfull \hbox (176.5pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ## [105] "tab_add_footnote"            "tab_add_hline"      
-         "tab_add_title"               "tab_add_vline"[] 
- []
-
-
-Overfull \hbox (160.75pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ## [109] "tab_cell_crossout"           "tab_ncol"           
-         "tab_nrow"                    "table_cell_bg"[] 
- []
-
-
-Overfull \hbox (155.5pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ## [113] "table_cell_font"             "tbody_add_border"   
-         "tbody_style"                 "text_grob"[] 
- []
-
-
-Overfull \hbox (187.0pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ## [117] "thead_add_border"            "theme_classic2"     
-         "theme_cleveland"             "theme_pubclean"[] 
- []
-
-
-Overfull \hbox (124.0pt too wide) in paragraph at lines 291--291
-[]\EU1/lmtt/m/n/10 ## [121] "theme_pubr"                  "theme_transparent"  
-         "ttheme"                      "xscale"[] 
+Overfull \hbox (139.75pt too wide) in paragraph at lines 273--273
+[]\EU1/lmtt/m/n/10 ##  [9] "package:graphics"       "package:grDevices"      "p
+ackage:utils"          "package:datasets"[] 
  []
 
 
 Overfull \hbox (26.0pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##   [1] "%>%"                         "add_summary"        
+         "annotate_figure"[] 
+ []
+
+[8]
+Overfull \hbox (48.75pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [10] "border"                      "change_palette"     
+         "clean_table_theme"[] 
+ []
+
+
+Overfull \hbox (36.5pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [13] "clean_theme"                 "colnames_style"     
+         "color_palette"[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [16] "compare_means"               "create_aes"         
+         "desc_statby"[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [19] "diff_express"                "facet"              
+         "fill_palette"[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [22] "font"                        "gene_citation"      
+         "gene_expression"[] 
+ []
+
+
+Overfull \hbox (3.25pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [25] "geom_bracket"                "geom_exec"          
+         "geom_pwc"[] 
+ []
+
+
+Overfull \hbox (8.5pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [28] "geom_signif"                 "get_breaks"         
+         "get_coord"[] 
+ []
+
+
+Overfull \hbox (50.5pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [31] "get_legend"                  "get_palette"        
+         "get_summary_stats"[] 
+ []
+
+
+Overfull \hbox (6.75pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [34] "ggadd"                       "ggadjust_pvalue"    
+         "ggarrange"[] 
+ []
+
+
+Overfull \hbox (10.25pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [37] "ggballoonplot"               "ggbarplot"          
+         "ggboxplot"[] 
+ []
+
+
+Overfull \hbox (13.75pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [40] "ggdensity"                   "ggdonutchart"       
+         "ggdotchart"[] 
+ []
+
+
+Overfull \hbox (8.5pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [43] "ggdotplot"                   "ggecdf"             
+         "ggerrorplot"[] 
+ []
+
+
+Overfull \hbox (26.0pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [52] "ggparagraph"                 "ggpie"              
+         "ggpubr_options"[] 
+ []
+
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [55] "ggqqplot"                    "ggscatter"          
+         "ggscatterhist"[] 
+ []
+
+
+Overfull \hbox (43.5pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [58] "ggstripchart"                "ggsummarystats"     
+         "ggsummarytable"[] 
+ []
+
+
+Overfull \hbox (17.25pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [73] "median_hilow_"               "median_iqr"         
+         "median_mad"[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [79] "npc_to_data_coord"           "rotate"             
+         "rotate_x_text"[] 
+ []
+
+
+Overfull \hbox (8.5pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [82] "rotate_y_text"               "rownames_style"     
+         "rremove"[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [85] "set_palette"                 "show_line_types"    
+         "show_point_shapes"[] 
+ []
+
+
+Overfull \hbox (82.0pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [88] "stat_anova_test"             "stat_bracket"       
+         "stat_central_tendency"[] 
+ []
+
+
+Overfull \hbox (62.75pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [91] "stat_chull"                  "stat_compare_means" 
+         "stat_conf_ellipse"[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [94] "stat_cor"                    "stat_friedman_test" 
+         "stat_kruskal_test"[] 
+ []
+
+
+Overfull \hbox (82.0pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ##  [97] "stat_mean"                   "stat_overlay_normal_
+density" "stat_pvalue_manual"[] 
+ []
+
+
+Overfull \hbox (29.5pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ## [100] "stat_pwc"                    "stat_regline_equatio
+n"       "stat_stars"[] 
+ []
+
+
+Overfull \hbox (71.5pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ## [103] "stat_welch_anova_test"       "tab_add_border"     
+         "tab_add_footnote"[] 
+ []
+
+
+Overfull \hbox (40.0pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ## [106] "tab_add_hline"               "tab_add_title"      
+         "tab_add_vline"[] 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ## [109] "tab_cell_crossout"           "tab_ncol"           
+         "tab_nrow"[] 
+ []
+
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ## [112] "table_cell_bg"               "table_cell_font"    
+         "tbody_add_border"[] 
+ []
+
+
+Overfull \hbox (45.25pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ## [115] "tbody_style"                 "text_grob"          
+         "thead_add_border"[] 
+ []
+
+
+Overfull \hbox (50.5pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ## [118] "theme_classic2"              "theme_cleveland"    
+         "theme_pubclean"[] 
+ []
+
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 326--326
+[]\EU1/lmtt/m/n/10 ## [121] "theme_pubr"                  "theme_transparent"  
+         "ttheme"[] 
+ []
+
+
+Underfull \vbox (badness 3219) has occurred while \output is active []
+
+[9]
+Overfull \hbox (26.0pt too wide) in paragraph at lines 361--361
 []\EU1/lmtt/m/n/10 ## > ## Here is some code which illustrates some of the diff
 erences between[] 
  []
 
 
-Overfull \hbox (50.5pt too wide) in paragraph at lines 326--326
+Overfull \hbox (50.5pt too wide) in paragraph at lines 361--361
 []\EU1/lmtt/m/n/10 ## > ## R and S graphics capabilities.  Note that colors are
  generally specified[] 
  []
 
 
-Overfull \hbox (57.5pt too wide) in paragraph at lines 326--326
+Overfull \hbox (57.5pt too wide) in paragraph at lines 361--361
 []\EU1/lmtt/m/n/10 ## > ## by a character string name (taken from the X11 rgb.t
 xt file) and that line[] 
  []
 
 
-Overfull \hbox (36.5pt too wide) in paragraph at lines 326--326
+Overfull \hbox (36.5pt too wide) in paragraph at lines 361--361
 []\EU1/lmtt/m/n/10 ## > ## textures are given similarly.  The parameter "bg" se
 ts the background[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 326--326
+Overfull \hbox (33.0pt too wide) in paragraph at lines 361--361
 []\EU1/lmtt/m/n/10 ## > ## parameter for the plot and there is also an "fg" par
 ameter which sets[] 
  []
 
-[12]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type
  QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-1.pdf" >
-Overfull \hbox (24.25pt too wide) in paragraph at lines 353--353
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[10]
+Overfull \hbox (24.25pt too wide) in paragraph at lines 388--388
 []\EU1/lmtt/m/n/10 ## > ## A little color wheel.    This code just plots equall
 y spaced hues in[] 
  []
 
 
-Overfull \hbox (15.5pt too wide) in paragraph at lines 353--353
+Overfull \hbox (15.5pt too wide) in paragraph at lines 388--388
 []\EU1/lmtt/m/n/10 ## > ## a pie chart.    If you have a cheap SVGA monitor (li
 ke me) you will[] 
  []
 
 
-Overfull \hbox (13.75pt too wide) in paragraph at lines 353--353
+Overfull \hbox (13.75pt too wide) in paragraph at lines 388--388
 []\EU1/lmtt/m/n/10 ## > ## probably find that numerically equispaced does not m
 ean visually[] 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 353--353
+Overfull \hbox (22.5pt too wide) in paragraph at lines 388--388
 []\EU1/lmtt/m/n/10 ## > ## equispaced.  On my display at home, these colors ten
 d to cluster at[] 
  []
 
 
-Overfull \hbox (8.5pt too wide) in paragraph at lines 353--353
+Overfull \hbox (8.5pt too wide) in paragraph at lines 388--388
 []\EU1/lmtt/m/n/10 ## > ## the RGB primaries.  On the other hand on the SGI Ind
 y at work the[] 
  []
 
-[13]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-5-2.pdf Graphic file (type
  QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-2.pdf" >
-Overfull \hbox (10.25pt too wide) in paragraph at lines 374--374
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[11]
+Overfull \hbox (10.25pt too wide) in paragraph at lines 409--409
 []\EU1/lmtt/m/n/10 ## > title(main = "A Sample Color Wheel", cex.main = 1.4, fo
 nt.main = 3)[] 
  []
 
 
-Overfull \hbox (47.0pt too wide) in paragraph at lines 374--374
+Overfull \hbox (47.0pt too wide) in paragraph at lines 409--409
 []\EU1/lmtt/m/n/10 ## > ## We have already confessed to having these.  This is 
 just showing off X11[] 
  []
 
 
-Overfull \hbox (66.25pt too wide) in paragraph at lines 374--374
+Overfull \hbox (66.25pt too wide) in paragraph at lines 409--409
 []\EU1/lmtt/m/n/10 ## > ## color names (and the example (from the postscript ma
 nual) is pretty "cute".[] 
  []
 
 
-Overfull \hbox (34.75pt too wide) in paragraph at lines 374--374
+Overfull \hbox (34.75pt too wide) in paragraph at lines 409--409
 []\EU1/lmtt/m/n/10 ## +     col = c("purple","violetred1","green3","cornsilk","
 cyan","white"))[] 
  []
@@ -1481,20 +1495,20 @@ File: bookdown-demo_files/figure-latex/unnamed-chunk-5-3.pdf Graphic file (type
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-3.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[14]
-Overfull \hbox (43.5pt too wide) in paragraph at lines 397--397
+[12]
+Overfull \hbox (43.5pt too wide) in paragraph at lines 432--432
 []\EU1/lmtt/m/n/10 ## > title(xlab = "(Don't try this at home kids)", cex.lab =
  0.8, font.lab = 3)[] 
  []
 
 
-Overfull \hbox (20.75pt too wide) in paragraph at lines 397--397
+Overfull \hbox (20.75pt too wide) in paragraph at lines 432--432
 []\EU1/lmtt/m/n/10 ## > ## Boxplots:  I couldn't resist the capability for fill
 ing the "box".[] 
  []
 
 
-Overfull \hbox (24.25pt too wide) in paragraph at lines 397--397
+Overfull \hbox (24.25pt too wide) in paragraph at lines 432--432
 []\EU1/lmtt/m/n/10 ## > ## The use of color seems like a useful addition, it fo
 cuses attention[] 
  []
@@ -1504,8 +1518,8 @@ File: bookdown-demo_files/figure-latex/unnamed-chunk-5-4.pdf Graphic file (type
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-4.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[15]
-Overfull \hbox (33.0pt too wide) in paragraph at lines 420--420
+[13]
+Overfull \hbox (33.0pt too wide) in paragraph at lines 455--455
 []\EU1/lmtt/m/n/10 ## > title(main="Notched Boxplots", xlab="Group", font.main=
 4, font.lab=1)[] 
  []
@@ -1515,26 +1529,26 @@ File: bookdown-demo_files/figure-latex/unnamed-chunk-5-5.pdf Graphic file (type
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-5.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[16]
-Overfull \hbox (13.75pt too wide) in paragraph at lines 440--440
+[14]
+Overfull \hbox (13.75pt too wide) in paragraph at lines 475--475
 []\EU1/lmtt/m/n/10 ## > ## Colored plot margins, axis labels and titles.    You
  do need to be[] 
  []
 
 
-Overfull \hbox (15.5pt too wide) in paragraph at lines 440--440
+Overfull \hbox (15.5pt too wide) in paragraph at lines 475--475
 []\EU1/lmtt/m/n/10 ## > ## careful with these kinds of effects.    It's easy to
  go completely[] 
  []
 
 
-Overfull \hbox (34.75pt too wide) in paragraph at lines 440--440
+Overfull \hbox (34.75pt too wide) in paragraph at lines 475--475
 []\EU1/lmtt/m/n/10 ## > ## over the top and you can end up with your lunch all 
 over the keyboard.[] 
  []
 
 
-Overfull \hbox (64.5pt too wide) in paragraph at lines 440--440
+Overfull \hbox (64.5pt too wide) in paragraph at lines 475--475
 []\EU1/lmtt/m/n/10 ## > x <- c(0.00, 0.40, 0.86, 0.85, 0.69, 0.48, 0.54, 1.09, 
 1.11, 1.73, 2.05, 2.02)[] 
  []
@@ -1544,20 +1558,20 @@ File: bookdown-demo_files/figure-latex/unnamed-chunk-5-6.pdf Graphic file (type
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-6.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[17]
-Overfull \hbox (26.0pt too wide) in paragraph at lines 472--472
+[15]
+Overfull \hbox (26.0pt too wide) in paragraph at lines 507--507
 []\EU1/lmtt/m/n/10 ## > rect(usr[1], usr[3], usr[2], usr[4], col="cornsilk", bo
 rder="black")[] 
  []
 
 
-Overfull \hbox (31.25pt too wide) in paragraph at lines 472--472
+Overfull \hbox (31.25pt too wide) in paragraph at lines 507--507
 []\EU1/lmtt/m/n/10 ## > title(main= "The Level of Interest in R", font.main=4, 
 col.main="red")[] 
  []
 
 
-Overfull \hbox (3.25pt too wide) in paragraph at lines 472--472
+Overfull \hbox (3.25pt too wide) in paragraph at lines 507--507
 []\EU1/lmtt/m/n/10 ## > ## A filled histogram, showing how to change the font u
 sed for the[] 
  []
@@ -1565,11 +1579,11 @@ sed for the[]
 
 Underfull \vbox (badness 1077) has occurred while \output is active []
 
-[18]
+[16]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-5-7.pdf Graphic file (type
  QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-7.pdf" >
-Overfull \hbox (45.25pt too wide) in paragraph at lines 484--484
+Overfull \hbox (45.25pt too wide) in paragraph at lines 519--519
 []\EU1/lmtt/m/n/10 ## > pairs(iris[1:4], main="Edgar Anderson's Iris Data", fon
 t.main=4, pch=19)[] 
  []
@@ -1579,11 +1593,11 @@ File: bookdown-demo_files/figure-latex/unnamed-chunk-5-8.pdf Graphic file (type
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-8.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[19]
+[17]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-5-9.pdf Graphic file (type
  QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-9.pdf" > [20]
-Overfull \hbox (66.25pt too wide) in paragraph at lines 528--528
+<use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-9.pdf" > [18]
+Overfull \hbox (66.25pt too wide) in paragraph at lines 563--563
 []\EU1/lmtt/m/n/10 ## > ## This produces a topographic map of one of Auckland's
  many volcanic "peaks".[] 
  []
@@ -1593,20 +1607,20 @@ e QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-10.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[21]
-Overfull \hbox (47.0pt too wide) in paragraph at lines 554--554
+[19]
+Overfull \hbox (47.0pt too wide) in paragraph at lines 589--589
 []\EU1/lmtt/m/n/10 ## > contour(x, y, volcano, levels = lev, col="yellow", lty=
 "solid", add=TRUE)[] 
  []
 
 
-Overfull \hbox (8.5pt too wide) in paragraph at lines 554--554
+Overfull \hbox (8.5pt too wide) in paragraph at lines 589--589
 []\EU1/lmtt/m/n/10 ## > mtext("10 Meter Contour Spacing", side=3, line=0.35, ou
 ter=FALSE,[] 
  []
 
 
-Overfull \hbox (1.5pt too wide) in paragraph at lines 554--554
+Overfull \hbox (1.5pt too wide) in paragraph at lines 589--589
 []\EU1/lmtt/m/n/10 ## > coplot(lat ~ long | depth, data = quakes, pch = 21, bg 
 = "green3")[] 
  []
@@ -1616,47 +1630,50 @@ e QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-5-11.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[22] [23]
+[20]
+Underfull \vbox (badness 2401) has occurred while \output is active []
+
+[21] [22]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (typ
 e QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-11-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[24]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-11-2.pdf Graphic file (typ
 e QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-11-2.pdf" >
-Overfull \hbox (75.0pt too wide) in paragraph at lines 688--688
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[23]
+Overfull \hbox (75.0pt too wide) in paragraph at lines 724--724
 []\EU1/lmtt/m/n/10 ## hclust> ## Do the same with centroid clustering and *squa
 red* Euclidean distance,[] 
  []
 
-[25]
-Overfull \hbox (59.25pt too wide) in paragraph at lines 688--688
+
+Overfull \hbox (59.25pt too wide) in paragraph at lines 724--724
 []\EU1/lmtt/m/n/10 ## hclust> ## cut the tree into ten clusters and reconstruct
  the upper part of the[] 
  []
 
 
-Overfull \hbox (52.25pt too wide) in paragraph at lines 688--688
+Overfull \hbox (52.25pt too wide) in paragraph at lines 724--724
 []\EU1/lmtt/m/n/10 ## hclust+   cent <- rbind(cent, colMeans(USArrests[memb == 
 k, , drop = FALSE]))[] 
  []
 
 
-Overfull \hbox (41.75pt too wide) in paragraph at lines 688--688
+Overfull \hbox (41.75pt too wide) in paragraph at lines 724--724
 []\EU1/lmtt/m/n/10 ## hclust> hc1 <- hclust(dist(cent)^2, method = "cen", membe
 rs = table(memb))[] 
  []
 
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 688--688
+Overfull \hbox (5.0pt too wide) in paragraph at lines 724--724
 []\EU1/lmtt/m/n/10 ## hclust> plot(hc,  labels = FALSE, hang = -1, main = "Orig
 inal Tree")[] 
  []
 
 
-Overfull \hbox (66.25pt too wide) in paragraph at lines 693--693
+Overfull \hbox (66.25pt too wide) in paragraph at lines 729--729
 []\EU1/lmtt/m/n/10 ## hclust> plot(hc1, labels = FALSE, hang = -1, main = "Re-s
 tart from 10 clusters")[] 
  []
@@ -1664,63 +1681,75 @@ tart from 10 clusters")[]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-11-3.pdf Graphic file (typ
 e QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-11-3.pdf" >
-Overfull \hbox (8.5pt too wide) in paragraph at lines 707--707
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[24]
+Overfull \hbox (8.5pt too wide) in paragraph at lines 743--743
 []\EU1/lmtt/m/n/10 ## hclust> ##  Compare the results of algorithms "ward.D" an
 d "ward.D2"[] 
  []
 
-[26]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-11-4.pdf Graphic file (typ
 e QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-11-4.pdf" >
+<use  "bookdown-demo_files/figure-latex/unnamed-chunk-11-4.pdf" > [25]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-11-5.pdf Graphic file (typ
 e QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-11-5.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[27]
-Overfull \hbox (136.25pt too wide) in paragraph at lines 752--752
-[]\EU1/lmtt/m/n/10 ##  [1] ".rs.resolveAliasedPath"            ".rs.resolveAlia
-sedSymbol"          ".rs.resolveFormals"[] 
+Overfull \hbox (192.25pt too wide) in paragraph at lines 790--790
+[]\EU1/lmtt/m/n/10 ##  [1] ".rs.markdown.resolveCompletionRoot" ".rs.resolveAli
+asedPath"             ".rs.resolveAliasedSymbol"[] 
  []
 
 
-Overfull \hbox (206.25pt too wide) in paragraph at lines 752--752
-[]\EU1/lmtt/m/n/10 ##  [4] ".rs.resolveObjectFromFunctionCall" ".rs.resolveObje
-ctSource"           ".rs.rnb.resolveActiveChunkId"[] 
+Overfull \hbox (150.25pt too wide) in paragraph at lines 790--790
+[]\EU1/lmtt/m/n/10 ##  [4] ".rs.resolveContextSourceRefs"       ".rs.resolveEnv
+ironment"             ".rs.resolveFormals"[] 
  []
 
 
-Overfull \hbox (40.0pt too wide) in paragraph at lines 752--752
-[]\EU1/lmtt/m/n/10 ##  [7] "backsolve"                         "forwardsolve"  
-                    "qr.solve"[] 
+Overfull \hbox (236.0pt too wide) in paragraph at lines 790--790
+[]\EU1/lmtt/m/n/10 ##  [7] ".rs.resolveFormalsImpl"             ".rs.resolveFor
+malsImplS3Dispatch"   ".rs.resolveObjectFromFunctionCall"[] 
  []
 
 
-Overfull \hbox (36.5pt too wide) in paragraph at lines 752--752
-[]\EU1/lmtt/m/n/10 ## [10] "solve"                             "solve.default" 
-                    "solve.qr"[] 
+Overfull \hbox (206.25pt too wide) in paragraph at lines 790--790
+[]\EU1/lmtt/m/n/10 ## [10] ".rs.resolveObjectSource"            ".rs.reticulate
+.resolveModule"       ".rs.rnb.resolveActiveChunkId"[] 
  []
 
 
-Underfull \vbox (badness 2012) has occurred while \output is active []
-
-[28]
-Overfull \hbox (241.25pt too wide) in paragraph at lines 783--783
-[]\EU1/lmtt/m/n/10 ##  [1]  0.1533122 -1.3739135 -0.4642187 -0.4811018 -0.19513
-24 -0.2315348 -0.5179645  0.8096079  0.2168516  1.0662393[] 
+Overfull \hbox (48.75pt too wide) in paragraph at lines 790--790
+[]\EU1/lmtt/m/n/10 ## [13] "backsolve"                          "forwardsolve" 
+                      "qr.solve"[] 
  []
 
 
-Overfull \hbox (297.25pt too wide) in paragraph at lines 793--793
-[]\EU1/lmtt/m/n/10 ##  [1] -1.07673310 -1.02838526 -0.23334494 -0.28823106 -0.1
-9944557 -0.01977908  0.28276636 -0.16861096 -0.39460436  0.67951612[] 
+Overfull \hbox (43.5pt too wide) in paragraph at lines 790--790
+[]\EU1/lmtt/m/n/10 ## [16] "solve"                              "solve.default"
+                      "solve.qr"[] 
+ []
+
+[26] [27] [28
+
+]
+Capítulo 2.
+
+Overfull \hbox (237.75pt too wide) in paragraph at lines 822--822
+[]\EU1/lmtt/m/n/10 ##  [1] -0.2150566  1.6946748  0.8325958  0.4389604 -1.31768
+93  1.8661793 -1.7543788  0.5175336 -0.6529762  0.3681927[] 
  []
 
 
-Overfull \hbox (239.5pt too wide) in paragraph at lines 813--813
-[]\EU1/lmtt/m/n/10 ##  [1]  0.5375391 -1.7935491 -1.7016953 -1.4060775  0.72823
-06  0.4638744  0.1523402 -0.3726444  0.5019601 -0.5031751[] 
+Overfull \hbox (230.75pt too wide) in paragraph at lines 833--833
+[]\EU1/lmtt/m/n/10 ##  [1] -0.35081785  0.33974329 -0.02088452 -1.03763867  0.3
+5419154  1.61737892 -0.96977559  0.27713696  0.02441601[] 
+ []
+
+
+Overfull \hbox (243.0pt too wide) in paragraph at lines 853--853
+[]\EU1/lmtt/m/n/10 ##  [1] -1.4758755 -0.2010015 -1.9456407 -0.5611828  0.77130
+08 -0.8867994  2.9315195  1.0262690 -1.1676302 -0.4071093[] 
  []
 
 File: equals-sign-assignment-operator-imgflip-com-going-through-data-structures
@@ -1728,60 +1757,60 @@ File: equals-sign-assignment-operator-imgflip-com-going-through-data-structures
 
 <use  "equals-sign-assignment-operator-imgflip-com-going-through-data-structure
 s-and-47188178.png" > [29] [30]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 923--923
-[]\EU1/lmtt/m/n/10 ## [1] "/Users/robertoalvarez/Documents/GitHub/Bravo_Garcia_
-Maria_Fernanda_Bioinfo_20204"[] 
+Overfull \hbox (87.25pt too wide) in paragraph at lines 962--962
+[]\EU1/lmtt/m/n/10 ## [1] "/Users/robertoalvarez/Documents/GitHub/BravoGarciaMa
+riaFernandaBioinfo2024"[] 
  []
 
-
-Overfull \hbox (17.03pt too wide) in paragraph at lines 925--926
+[31]
+Overfull \hbox (17.03pt too wide) in paragraph at lines 964--965
 []\EU1/lmr/m/n/10 Para cambiar de directorio utilizamos \EU1/lmtt/m/n/10 setwd(
 "direccion_a_la_que_quieres_ir") 
  []
 
-[31] [32] [33] [34] [35] [36
+[32] [33] [34] [35] [36
 
 ]
 Capítulo 3.
 [37]
-Overfull \hbox (218.5pt too wide) in paragraph at lines 1299--1299
+Overfull \hbox (166.0pt too wide) in paragraph at lines 1326--1326
 []\EU1/lmtt/m/n/10 ##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13
-  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31[] 
+  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28[] 
  []
 
 
-Overfull \hbox (236.0pt too wide) in paragraph at lines 1299--1299
-[]\EU1/lmtt/m/n/10 ##  [32]  32  33  34  35  36  37  38  39  40  41  42  43  44
-  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62[] 
+Overfull \hbox (183.5pt too wide) in paragraph at lines 1326--1326
+[]\EU1/lmtt/m/n/10 ##  [29]  29  30  31  32  33  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56[] 
  []
 
 
-Overfull \hbox (236.0pt too wide) in paragraph at lines 1299--1299
-[]\EU1/lmtt/m/n/10 ##  [63]  63  64  65  66  67  68  69  70  71  72  73  74  75
-  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93[] 
+Overfull \hbox (183.5pt too wide) in paragraph at lines 1326--1326
+[]\EU1/lmtt/m/n/10 ##  [57]  57  58  59  60  61  62  63  64  65  66  67  68  69
+  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84[] 
  []
 
 
-Overfull \hbox (218.5pt too wide) in paragraph at lines 1321--1321
+Overfull \hbox (166.0pt too wide) in paragraph at lines 1347--1347
 []\EU1/lmtt/m/n/10 ##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13
-  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31[] 
+  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28[] 
  []
 
 [38]
-Overfull \hbox (236.0pt too wide) in paragraph at lines 1321--1321
-[]\EU1/lmtt/m/n/10 ##  [32]  32  33  34  35  36  37  38  39  40  41  42  43  44
-  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62[] 
+Overfull \hbox (183.5pt too wide) in paragraph at lines 1347--1347
+[]\EU1/lmtt/m/n/10 ##  [29]  29  30  31  32  33  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56[] 
  []
 
 
-Overfull \hbox (236.0pt too wide) in paragraph at lines 1321--1321
-[]\EU1/lmtt/m/n/10 ##  [63]  63  64  65  66  67  68  69  70  71  72  73  74  75
-  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93[] 
+Overfull \hbox (183.5pt too wide) in paragraph at lines 1347--1347
+[]\EU1/lmtt/m/n/10 ##  [57]  57  58  59  60  61  62  63  64  65  66  67  68  69
+  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84[] 
  []
 
 [39] [40] [41] [42]
 LaTeX Font Info:    Font shape `EU1/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 1645.
+(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 1663.
 
 [43] [44] [45] [46]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-76-1.pdf Graphic file (typ
@@ -1793,83 +1822,89 @@ e QTm)
 File: bookdown-demo_files/figure-latex/unnamed-chunk-76-3.pdf Graphic file (typ
 e QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-76-3.pdf" > [48]
-Underfull \hbox (badness 1147) in paragraph at lines 2163--2165
+Underfull \hbox (badness 1147) in paragraph at lines 2175--2177
 []\EU1/lmr/bx/n/10 RECUERDA \EU1/lmr/m/n/10 Se pueden seleccionar elementos de 
 un vector utilizando
  []
 
 [49] [50] [51]
 LaTeX Font Info:    Font shape `EU1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 2379.
+(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 2388.
 
 [52] [53]
-Overfull \hbox (257.0pt too wide) in paragraph at lines 2602--2602
+Overfull \hbox (208.0pt too wide) in paragraph at lines 2608--2608
 []\EU1/lmtt/m/n/10 ##  [1] "March"     "April"     "January"   "November"  "Jan
-uary"   "September" "October"   "September" "November"  "August"[] 
+uary"   "September" "October"   "September" "November"[] 
  []
 
 
-Overfull \hbox (246.5pt too wide) in paragraph at lines 2602--2602
-[]\EU1/lmtt/m/n/10 ## [11] "January"   "November"  "November"  "February"  "May
-"       "August"    "July"      "December"  "August"    "August"[] 
+Overfull \hbox (197.5pt too wide) in paragraph at lines 2608--2608
+[]\EU1/lmtt/m/n/10 ## [10] "August"    "January"   "November"  "November"  "Feb
+ruary"  "May"       "August"    "July"      "December"[] 
  []
 
 
-Overfull \hbox (255.25pt too wide) in paragraph at lines 2615--2615
+Overfull \hbox (22.5pt too wide) in paragraph at lines 2608--2608
+[]\EU1/lmtt/m/n/10 ## [19] "August"    "August"    "September" "November"  "Feb
+ruary"  "April"[] 
+ []
+
+
+Overfull \hbox (202.75pt too wide) in paragraph at lines 2622--2622
 []\EU1/lmtt/m/n/10 ##  [1] March     April     January   November  January   Se
-ptember October   September November  August    January   November[] 
+ptember October   September November  August    January[] 
  []
 
 
-Overfull \hbox (234.25pt too wide) in paragraph at lines 2615--2615
-[]\EU1/lmtt/m/n/10 ## [13] November  February  May       August    July      De
-cember  August    August    September November  February  April[] 
+Overfull \hbox (201.0pt too wide) in paragraph at lines 2622--2622
+[]\EU1/lmtt/m/n/10 ## [12] November  November  February  May       August    Ju
+ly      December  August    August    September November[] 
  []
 
 
-Overfull \hbox (111.75pt too wide) in paragraph at lines 2615--2615
+Overfull \hbox (111.75pt too wide) in paragraph at lines 2622--2622
 []\EU1/lmtt/m/n/10 ## Levels: April August December February January July March
  May November October September[] 
  []
 
-
-Overfull \hbox (173.0pt too wide) in paragraph at lines 2629--2629
+[54]
+Overfull \hbox (173.0pt too wide) in paragraph at lines 2636--2636
 []\EU1/lmtt/m/n/10 ##     April    August  December  February   January      Ju
 ly     March       May  November   October September[] 
  []
 
-[54]
-Overfull \hbox (69.75pt too wide) in paragraph at lines 2629--2629
+
+Overfull \hbox (69.75pt too wide) in paragraph at lines 2636--2636
 []\EU1/lmtt/m/n/10 ##         2         4         1         2         3        
  1         1         1         5         1         3[] 
  []
 
 
-Overfull \hbox (243.0pt too wide) in paragraph at lines 2640--2640
+Overfull \hbox (188.75pt too wide) in paragraph at lines 2647--2647
 []\EU1/lmtt/m/n/10 ##  [1] "April"     "August"    "December"  "February"  "Jan
-uary"   "July"      "March"     "May"       "November"  "October"[] 
+uary"   "July"      "March"     "May"       "November"[] 
  []
 
 
-Overfull \hbox (243.0pt too wide) in paragraph at lines 2662--2662
+Overfull \hbox (188.75pt too wide) in paragraph at lines 2669--2669
 []\EU1/lmtt/m/n/10 ##  [1] "Abril"     "August"    "December"  "February"  "Jan
-uary"   "July"      "March"     "May"       "November"  "October"[] 
+uary"   "July"      "March"     "May"       "November"[] 
  []
 
 
-Overfull \hbox (255.25pt too wide) in paragraph at lines 2674--2674
+Overfull \hbox (202.75pt too wide) in paragraph at lines 2682--2682
 []\EU1/lmtt/m/n/10 ##  [1] March     Abril     January   November  January   Se
-ptember October   September November  August    January   November[] 
+ptember October   September November  August    January[] 
  []
 
 
-Overfull \hbox (234.25pt too wide) in paragraph at lines 2674--2674
-[]\EU1/lmtt/m/n/10 ## [13] November  February  May       August    July      De
-cember  August    August    September November  February  Abril[] 
+Overfull \hbox (201.0pt too wide) in paragraph at lines 2682--2682
+[]\EU1/lmtt/m/n/10 ## [12] November  November  February  May       August    Ju
+ly      December  August    August    September November[] 
  []
 
 
-Overfull \hbox (111.75pt too wide) in paragraph at lines 2674--2674
+Overfull \hbox (111.75pt too wide) in paragraph at lines 2682--2682
 []\EU1/lmtt/m/n/10 ## Levels: Abril August December February January July March
  May November October September[] 
  []
@@ -1881,7 +1916,7 @@ Capítulo 4.
 [59]
 File: Escalar_Vector_Matriz.jpeg Graphic file (type QTm)
 <use  "Escalar_Vector_Matriz.jpeg" >
-Underfull \hbox (badness 10000) in paragraph at lines 2883--2885
+Underfull \hbox (badness 10000) in paragraph at lines 2887--2889
 [][]
  []
 
@@ -1891,7 +1926,7 @@ Underfull \hbox (badness 1320) in paragraph at lines 2977--2977
  []
 
 [62] [63] [64] [65]
-Underfull \hbox (badness 1394) in paragraph at lines 3303--3305
+Underfull \hbox (badness 1394) in paragraph at lines 3293--3295
 []\EU1/lmr/m/n/10 Crea una matriz aleatoria de tamaño 4x3 y encuentra su matriz
 
  []
@@ -1901,15 +1936,15 @@ Capítulo 5.
 [67
 
 ] [68]
-Underfull \hbox (badness 1939) in paragraph at lines 3432--3433
+Underfull \hbox (badness 1939) in paragraph at lines 3418--3419
 []\EU1/lmr/m/n/10 Esto crearía una nueva columna llamada “temperatura_melting” 
 en el
  []
 
 
-Overfull \hbox (31.99902pt too wide) has occurred while \output is active
-\EU1/lmr/m/sl/10 5.3.  AGREGAR Y ELIMINAR FILAS Y COLUMNAS EN UN DATAFRAME EN R
- \EU1/lmr/m/n/10 69
+Overfull \hbox (65.96902pt too wide) has occurred while \output is active
+\EU1/lmr/m/sl/10 5.3.  AGREGAR Y ELIMINAR RENGLONES Y COLUMNAS EN UN DATAFRAME 
+EN R \EU1/lmr/m/n/10 69
  []
 
 [69] [70]
@@ -1920,12 +1955,9 @@ Capítulo 6.
 Capítulo 7.
 File: If_R.001.jpeg Graphic file (type QTm)
 <use  "If_R.001.jpeg" >
-LaTeX Font Info:    Font shape `EU1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 3637.
-
 
 LaTeX Font Warning: Font shape `EU1/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `EU1/lmtt/b/sl' tried instead on input line 3638
+(Font)              Font shape `EU1/lmtt/b/sl' tried instead on input line 3612
 .
 
 [73
@@ -1939,10 +1971,10 @@ Capítulo 8.
 [83
 
 ]
-Underfull \vbox (badness 2134) has occurred while \output is active []
+Underfull \vbox (badness 2158) has occurred while \output is active []
 
 [84]
-Underfull \hbox (badness 1270) in paragraph at lines 4182--4182
+Underfull \hbox (badness 1270) in paragraph at lines 4136--4136
 []\EU1/lmr/bx/n/12 Llamar a la función saludar proporcionando el
  []
 
@@ -1956,55 +1988,41 @@ Overfull \hbox (22.97011pt too wide) has occurred while \output is active
 
 ]
 Capítulo 9.
+
+Underfull \vbox (badness 6032) has occurred while \output is active []
+
 [89] [90]
-Overfull \hbox (9.61124pt too wide) has occurred while \output is active
-\EU1/lmr/m/sl/10 9.3.  COLABORACIÓN Y CONTROL DE VERSIONES CON GIT Y GITHUB \EU
-1/lmr/m/n/10 91
- []
-
-[91] [92
-
-]
-Capítulo 10.
-
-Overfull \vbox (1.98976pt too high) detected at line 4433
- []
-
-[93]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-173-1.pdf Graphic file (ty
 pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-173-1.pdf" >
+<use  "bookdown-demo_files/figure-latex/unnamed-chunk-173-1.pdf" > [91]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-174-1.pdf Graphic file (ty
 pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-174-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[94]
+[92]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-175-1.pdf Graphic file (ty
 pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-175-1.pdf" >
-Underfull \vbox (badness 6792) has occurred while \output is active []
-
-[95]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-176-1.pdf Graphic file (ty
 pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-176-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[96]
+[93]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-177-1.pdf Graphic file (ty
 pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-177-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[97]
+[94]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-178-1.pdf Graphic file (ty
 pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-178-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[98]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4555--4555
+[95]
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4442--4442
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2014,8 +2032,8 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-180-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[99]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4573--4573
+[96]
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4459--4459
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2025,8 +2043,8 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-181-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[100]
-Overfull \hbox (97.75pt too wide) in paragraph at lines 4591--4591
+[97]
+Overfull \hbox (97.75pt too wide) in paragraph at lines 4476--4476
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_bin()`).[] 
  []
@@ -2036,14 +2054,14 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-182-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[101]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 4611--4611
+[98]
+Overfull \hbox (118.75pt too wide) in paragraph at lines 4495--4495
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_summary()`).[] 
  []
 
 
-Overfull \hbox (73.25pt too wide) in paragraph at lines 4611--4611
+Overfull \hbox (73.25pt too wide) in paragraph at lines 4495--4495
 []\EU1/lmtt/m/n/10 ## Removed 2 rows containing non-finite outside the scale ra
 nge (`stat_summary()`).[] 
  []
@@ -2053,8 +2071,8 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-183-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[102]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 4627--4627
+[99]
+Overfull \hbox (118.75pt too wide) in paragraph at lines 4512--4512
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_boxplot()`).[] 
  []
@@ -2064,8 +2082,8 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-184-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[103]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4646--4646
+[100]
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4530--4530
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2075,8 +2093,8 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-185-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[104]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 4664--4664
+[101]
+Overfull \hbox (118.75pt too wide) in paragraph at lines 4547--4547
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_density()`).[] 
  []
@@ -2086,8 +2104,8 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-186-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[105]
-Overfull \hbox (124.0pt too wide) in paragraph at lines 4682--4682
+[102]
+Overfull \hbox (124.0pt too wide) in paragraph at lines 4564--4564
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_ydensity()`).[] 
  []
@@ -2097,14 +2115,14 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-187-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[106]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 4701--4701
+[103]
+Overfull \hbox (118.75pt too wide) in paragraph at lines 4582--4582
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_boxplot()`).[] 
  []
 
 
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4705--4705
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4586--4586
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2114,8 +2132,8 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-188-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[107]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 4724--4724
+[104]
+Overfull \hbox (118.75pt too wide) in paragraph at lines 4604--4604
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_summary()`).[] 
  []
@@ -2125,8 +2143,8 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-189-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[108]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4742--4742
+[105]
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4621--4621
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2136,20 +2154,20 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-190-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[109]
+[106]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-191-1.pdf Graphic file (ty
 pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-191-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[110]
-Overfull \hbox (97.75pt too wide) in paragraph at lines 4776--4776
+[107]
+Overfull \hbox (97.75pt too wide) in paragraph at lines 4653--4653
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_cor()`).[] 
  []
 
 
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4780--4780
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4657--4657
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2159,8 +2177,8 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-192-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[111]
-Overfull \hbox (108.25pt too wide) in paragraph at lines 4798--4798
+[108]
+Overfull \hbox (108.25pt too wide) in paragraph at lines 4674--4674
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
  scale range (`stat_bin2d()`).[] 
  []
@@ -2170,8 +2188,8 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-193-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[112]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 4817--4817
+[109]
+Overfull \hbox (176.5pt too wide) in paragraph at lines 4692--4692
 []\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
 es outside the scale range (`geom_point()`).[] 
  []
@@ -2181,248 +2199,38 @@ pe QTm)
 <use  "bookdown-demo_files/figure-latex/unnamed-chunk-194-1.pdf" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[113] [114] [115] [116
+[110] [111] [112]
+Capítulo 10.
+[113
+
+] [114]
+Overfull \hbox (19.61124pt too wide) has occurred while \output is active
+\EU1/lmr/m/sl/10 10.3.  COLABORACIÓN Y CONTROL DE VERSIONES CON GIT Y GITHUB \E
+U1/lmr/m/n/10 115
+ []
+
+[115] [116
 
 ]
 Capítulo 11.
-
-Overfull \vbox (1.98976pt too high) detected at line 4890
- []
-
-[117]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-196-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-196-1.pdf" >
-File: bookdown-demo_files/figure-latex/unnamed-chunk-197-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-197-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[118]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-198-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-198-1.pdf" >
-Underfull \vbox (badness 6792) has occurred while \output is active []
-
-[119]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-199-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-199-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[120]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-200-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-200-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[121]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-201-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-201-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[122]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5012--5012
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
-es outside the scale range (`geom_point()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-203-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-203-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[123]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5030--5030
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
-es outside the scale range (`geom_point()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-204-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-204-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[124]
-Overfull \hbox (97.75pt too wide) in paragraph at lines 5048--5048
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
- scale range (`stat_bin()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-205-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-205-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[125]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 5068--5068
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
- scale range (`stat_summary()`).[] 
- []
-
-
-Overfull \hbox (73.25pt too wide) in paragraph at lines 5068--5068
-[]\EU1/lmtt/m/n/10 ## Removed 2 rows containing non-finite outside the scale ra
-nge (`stat_summary()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-206-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-206-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[126]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 5084--5084
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
- scale range (`stat_boxplot()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-207-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-207-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[127]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5103--5103
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
-es outside the scale range (`geom_point()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-208-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-208-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[128]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 5121--5121
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
- scale range (`stat_density()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-209-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-209-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[129]
-Overfull \hbox (124.0pt too wide) in paragraph at lines 5139--5139
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
- scale range (`stat_ydensity()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-210-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-210-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[130]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 5158--5158
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
- scale range (`stat_boxplot()`).[] 
- []
-
-
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5162--5162
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
-es outside the scale range (`geom_point()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-211-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-211-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[131]
-Overfull \hbox (118.75pt too wide) in paragraph at lines 5181--5181
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
- scale range (`stat_summary()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-212-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-212-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[132]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5199--5199
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
-es outside the scale range (`geom_point()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-213-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-213-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[133]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-214-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-214-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[134]
-Overfull \hbox (97.75pt too wide) in paragraph at lines 5233--5233
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
- scale range (`stat_cor()`).[] 
- []
-
-
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5237--5237
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
-es outside the scale range (`geom_point()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-215-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-215-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[135]
-Overfull \hbox (108.25pt too wide) in paragraph at lines 5255--5255
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the
- scale range (`stat_bin2d()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-216-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-216-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[136]
-Overfull \hbox (176.5pt too wide) in paragraph at lines 5274--5274
-[]\EU1/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or valu
-es outside the scale range (`geom_point()`).[] 
- []
-
-File: bookdown-demo_files/figure-latex/unnamed-chunk-217-1.pdf Graphic file (ty
-pe QTm)
-<use  "bookdown-demo_files/figure-latex/unnamed-chunk-217-1.pdf" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[137] [138] [139] [140
-
-]
-Capítulo 12.
 No file bookdown-demo.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5320.
-[141]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5320.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4830.
+[117]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4830.
 (./bookdown-demo.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5320.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 5320.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4830.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 4830.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5320.
  ) 
 Here is how much of TeX's memory you used:
- 29094 strings out of 493591
- 509005 string characters out of 6143546
- 641759 words of memory out of 5000000
- 32127 multiletter control sequences out of 15000+600000
+ 29026 strings out of 493591
+ 506390 string characters out of 6143546
+ 642631 words of memory out of 5000000
+ 32079 multiletter control sequences out of 15000+600000
  10155 words of font info for 75 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  58i,6n,109p,10408b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (141 pages).
+Output written on bookdown-demo.pdf (117 pages).
