@@ -1,10 +1,53 @@
-# Visualización de datos con ggplot2
+# Gráficos
 
-## Introducción
+Agrupar los datos, ya sea numéricamente o gráficamente, es un paso muy importante en el análisis de datos. Una de las ventajas de R es su gran capacidad para elaborar gráficos, sus aplicaciones van desde una primera consulta exploratoria de datos hasta la generación de imágenes complejas y de alta cálidad.
+
+Existen tres principales sistemas para generar gráficos en R: 
+
+
+- **base R graphics**: Es el sistema de graficación base que está implementado en R desde sus inicios. Es bastante útil para realizar gráficas simples con el objetivo de un primer análisis exploratorio a los datos. Su principal función es `plot`, este comando permite crear un gráfico sencillo, adicionalmente se deben elegir y emplear funciones menores, como `lines` y `text`, para agregar información o mejorar el diseño del gráfico.
+
+
+- **lattice**: Es un paquete de R. Una de sus ventajas es que la mayoría de sus gráficos son generados empleando una sola función, por lo tanto no hay necesidad de implementar funciones menores para modificar la apariencia del gráfico, ya que muchas de las específicaciones vienen por *default* en los comandos. Principalmente `lattice` es implmentado para crear gráficos de alto nivel, como gráficas de líneas, gráficas de barras apiladas, gráficas de contorno y dividirlos por variables de agrupación.
+
+
+- **ggplot2**: Es la librería de graficación que se empleará principalmente en este curso. En el siguiente apartado se presentan de manera más amplia sus aplicaciones. El paquete `ggplot2` es bastante popular por su capacidad para realizar gráficos de gran calidad de una manera relativamente sencilla basado en *La Grámatica del Gráfico*. 
+
+
+## Visualización de datos con ggplot2
+
+### Introducción
 
 La visualización de datos es una herramienta poderosa en el análisis de datos, permitiendo comunicar información compleja de manera intuitiva y efectiva. `ggplot2` es un paquete en R que facilita la creación de gráficos de calidad de publicación de manera sencilla. Este documento proporciona una introducción a `ggplot2` y ejercicios para practicar.
 
-## Configuración inicial
+#### La Grámatica de los Gráficos 
+
+El paquete `ggplot2` está insipirado en el libro [*Grammar of Graphics*](https://link.springer.com/book/10.1007/0-387-28695-0) por Leland Wilkinson, de ahí parte de su nombre "gg". Su principal enfoque es la creación de gráficos considerando sus distintos componentes y que el usuario sea capaz de manipular cada una de esas partes con base en necesidades específicas que permitan una óptima representación e interpretación de los datos. 
+
+Los componentes que considera `ggplot2` para la construcción de un gráfico son los siguientes: 
+
+
+-  **Data**: Datos que se emplean para la creación del gráfico. 
+
+-  **Mapping**: La manera de mapear las variables de los datos a propiedades visuales del gráfico como el color, el tamaño, la forma o la posición.
+
+- **Geoms**: El tipo de gráfico empleado: puntos, barras, líneas...
+
+- **Facets**: Permite dividir el gráfico en múltiples paneles según los niveles de una o más variables categóricas.
+
+- **Statistics**: Son las técnicas estadísticas que son aplicadas a los datos previo a su visualización. 
+
+- **Coords**: El tipo de coordenadas empleadas para mapear los datos. Por ejemplo: cartesianas, polares, logarítmicas... 
+
+- **Scales**: Asigna los valores de los datos a los valores visuales. Por ejemplo: Que a valores más pequeños les corresponda un tono más claro de color. 
+
+- **Themes**: Controlan los aspectos visuales del gráfico, como los colores, las fuentes, los tamaños de los ejes, los márgenes... 
+
+
+**NOTA** Para conocer a profundidad e identificar de manera específica cada uno de estos componentes se puede consultar la siguiente [Guía para la contrucción de un gráfico con ggplot2](https://intro2r.com/graphics_r.html)
+
+
+### Configuración inicial
 
 Primero, asegúrate de tener instalado `ggplot2`.
 
@@ -12,7 +55,7 @@ Primero, asegúrate de tener instalado `ggplot2`.
 library(ggplot2)
 ```
 
-## Creación de un gráfico básico
+### Creación de un gráfico básico
 
 Vamos a comenzar con un gráfico de dispersión simple utilizando el conjunto de datos mtcars.
 
@@ -25,7 +68,7 @@ ggplot(data = mtcars, aes(x = wt, y = mpg)) +
 
 ```
 
-## Personalización de gráficos
+### Personalización de gráficos
 
 Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de tendencia.
 
@@ -40,14 +83,14 @@ ggplot(data = mtcars, aes(x = wt, y = mpg, color = factor(gear))) +
   theme_minimal()
 
 ```
-### Ejercicios sugeridos
+#### Ejercicios sugeridos
 
 1.  Explora otro conjunto de datos: Utiliza el conjunto de datos iris para crear un gráfico de dispersión que muestre la relación entre Sepal.Length y Sepal.Width. Colorea los puntos según la especie.
 2.  Personaliza tu gráfico: Añade títulos personalizados a los ejes y al gráfico. Experimenta con diferentes temas, como theme_bw() o theme_light().
 3.  Exploración de geométricas: Utiliza geom_histogram() para crear un histograma del Sepal.Length en el conjunto de datos iris. Ajusta los parámetros binwidth y fill.
 4.  Facetas para múltiples gráficos: Utiliza facet_wrap(\~ species) para crear gráficos separados para cada especie en el conjunto de datos iris, mostrando la relación entre Sepal.Length y Sepal.Width.
 
-## Soluciones a los ejercicios sugeridos
+### Soluciones a los ejercicios sugeridos
 
 ```{r}
 ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + 
@@ -91,7 +134,7 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
 
 ```
 
-## Ejercicios resueltos
+### Ejercicios resueltos
 
 En esta sección usaremos la librería `palmerpenguins`
 
@@ -101,7 +144,7 @@ library(ggplot2)
 ```
 
 
-### Ejercicio 1: Gráfico de dispersión básico
+#### Ejercicio 1: Gráfico de dispersión básico
 Crea un gráfico de dispersión para visualizar la relación entre la longitud del culmen y la profundidad del culmen de los pingüinos.
 
 ```{r}
@@ -110,7 +153,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
 ```
 
 
-### Ejercicio 2: Diferenciación por especie
+#### Ejercicio 2: Diferenciación por especie
 Modifica el gráfico de dispersión anterior para diferenciar los puntos por especie de pingüino.
 
 
@@ -121,7 +164,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = species)) +
 ```
 
 
-### Ejercicio 3: Histograma de masa corporal
+#### Ejercicio 3: Histograma de masa corporal
 Crea un histograma para explorar la distribución de la masa corporal de los pingüinos.
 
 ```{r}
@@ -130,7 +173,7 @@ ggplot(penguins, aes(x = body_mass_g)) +
 
 ```
 
-### Ejercicio 4: Barras de error por especie
+#### Ejercicio 4: Barras de error por especie
 Genera un gráfico de barras que muestre la masa corporal media de los pingüinos por especie, incluyendo barras de error.
 
 ```{r}
@@ -140,7 +183,7 @@ ggplot(penguins, aes(x = species, y = body_mass_g)) +
 
 ```
 
-###Ejercicio 5: Boxplot de profundidad del culmen
+#### Ejercicio 5: Boxplot de profundidad del culmen
 Crea un boxplot para comparar la profundidad del culmen entre las diferentes especies de pingüinos.
 
 
@@ -150,7 +193,7 @@ ggplot(penguins, aes(x = species, y = bill_depth_mm)) +
 
 ```
 
-### Ejercicio 6: Facetado por islas
+#### Ejercicio 6: Facetado por islas
 Repite el gráfico de dispersión de longitud vs. profundidad del culmen, pero esta vez facetado por la isla de origen.
 ```{r}
 ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
@@ -159,7 +202,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
 ```
 
 
-### Ejercicio 7: Densidad de masa corporal
+#### Ejercicio 7: Densidad de masa corporal
 Muestra la densidad de la distribución de la masa corporal de los pingüinos utilizando un gráfico de densidad.
 
 ```{r}
@@ -169,7 +212,7 @@ ggplot(penguins, aes(x = body_mass_g, fill = species)) +
 ```
 
 
-### Ejercicio 8: Gráfico de violín de la longitud del culmen
+#### Ejercicio 8: Gráfico de violín de la longitud del culmen
 Genera un gráfico de violín para visualizar la distribución de la longitud del culmen por especie.
 
 ```{r}
@@ -179,7 +222,7 @@ ggplot(penguins, aes(x = species, y = bill_length_mm)) +
 ```
 
 
-### Ejercicio 9: Puntos superpuestos en boxplot
+#### Ejercicio 9: Puntos superpuestos en boxplot
 Crea un boxplot de la profundidad del culmen por especie y superpón los puntos de datos individuales.
 
 ```{r}
@@ -189,7 +232,7 @@ ggplot(penguins, aes(x = species, y = bill_depth_mm)) +
 
 ```
 
-### Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo
+#### Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo
 Asumiendo que los datos estén ordenados temporalmente, muestra cómo cambia la masa corporal promedio a lo largo del tiempo.
 
 ```{r}
@@ -198,7 +241,7 @@ ggplot(penguins, aes(x = year, y = body_mass_g, group = 1)) +
   geom_line(stat = "summary", fun = "mean")
 ```
 
-### Ejercicio 11: Gráfico de dispersión con tamaño de punto
+#### Ejercicio 11: Gráfico de dispersión con tamaño de punto
 Modifica el gráfico de dispersión de longitud vs. profundidad del culmen para que el tamaño de los puntos refleje la masa corporal de los pingüinos.
 
 ```{r}
@@ -208,7 +251,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, size = body_mass_g))
 ```
 
 
-### Ejercicio 12: Barras apiladas de especies por isla
+#### Ejercicio 12: Barras apiladas de especies por isla
 Crea un gráfico de barras apiladas que muestre la cantidad de pingüinos de cada especie presentes en cada isla.
 
 
@@ -219,7 +262,7 @@ ggplot(penguins, aes(x = island, fill = species)) +
 ```
 
 
-### Ejercicio 13: Gráfico de correlación con texto
+#### Ejercicio 13: Gráfico de correlación con texto
 Genera un gráfico de dispersión entre la longitud y la profundidad del culmen e incluye un texto que muestre el coeficiente de correlación en el gráfico.
 
 ```{r}
@@ -230,7 +273,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
 
 ```
 
-### Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen
+#### Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen
 Crea un mapa de calor que muestre la distribución conjunta de la longitud y la profundidad del culmen de los pingüinos.
 
 ```{r}
@@ -241,7 +284,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
 
 
 
-### Ejercicio 15: Gráfico de interacción entre tres variables
+#### Ejercicio 15: Gráfico de interacción entre tres variables
 Explora la relación entre la longitud del culmen, la profundidad del culmen y la masa corporal, diferenciando por especie.
 
 
@@ -253,7 +296,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = body_mass_g)
 ```
 
 
-### Ejercicios propuestos
+#### Ejercicios propuestos
 
 1. Gráfico de dispersión con facetas por sexo
 Crea un gráfico de dispersión para examinar la relación entre la longitud del culmen y la profundidad del culmen, separando los datos por sexo de los pingüinos utilizando facetas.
