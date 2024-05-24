@@ -93,13 +93,13 @@ También podría ser que basta con que una de ellas sea cierta para que haga alg
 
 ### And (&)
 
-El operador booleano `&` representa el y lógico. Estos operadores binarios nos sirven para unir al menos dos enunciados que tienen valor de verdadero o falso (Tengo dinero (V/F), Tengo vacaciones (V/F))
+El operador booleano `&` representa el "Y" lógico. Estos operadores binarios nos sirven para unir al menos dos enunciados que tienen valor de verdadero o falso (Tengo dinero (V/F), Tengo vacaciones (V/F))
 
-Con estas dos operaciones puedo unirlas utilizando el operador `y` lógico (AND (`&`) representado en R con el símbolo del ampersand (`&`)
+Con estas dos operaciones puedo unirlas utilizando el operador "Y" lógico (AND (`&`)) representado en R con el símbolo del *ampersand* (`&`)
 
 Tengo dinero AND Tengo vaciones
 
-Para saber el valor booleano (V/F) del enunciado anterior debemos concocer los valores de verdad de los enunciados por separado
+Para saber el valor booleano (V/F) del enunciado anterior debemos conocer los valores de verdad de los enunciados por separado
 
 Por ejemplo, podemos representar al primer enunciado por `p` y al segundo enunciado por `q`
 
@@ -107,7 +107,7 @@ Por ejemplo, podemos representar al primer enunciado por `p` y al segundo enunci
 
 `q: Tengo vacaciones`
 
-Para saber cuál es el valor de verdad del enunciado compuesto debemos ver cuáles son todas las combinaciones de valores de verdad de los enunciados que la componen: p verdadero y q verdadero, p falso y q verdadero, p falso y q verdadero, p falso y q falso. Eso se resumen en las tablas de verdad de los operadores
+Para saber cuál es el valor de verdad del enunciado compuesto debemos ver cuáles son todas las combinaciones de valores de verdad de los enunciados que la componen: p verdadero y q verdadero, p verdadero y q falso, p falso y q verdadero, p falso y q falso. Eso se resumen en las tablas de verdad de los operadores
 
 |  p  |  q  | p & q |
 |:---:|:---:|:-----:|
@@ -118,27 +118,27 @@ Para saber cuál es el valor de verdad del enunciado compuesto debemos ver cuál
 
 : Tabla de verdad del AND
 
-Es decir, el `&` solo es **verdadero** cuando ambas condciones son **verdaderas**.
+Es decir, el `&` solo es **verdadero** cuando ambas condiciones son **verdaderas**.
 
 Esto representa lo que se observa en la realidad: es decir, solo hago algo si tengo y tengo vacaciones. Si una de ellas no se cumple (es decir, es falsa) entonces no se lleva a cabo la acción.
 
 ### OR (\|)
 
-El operador booleano `|` representa el `o` lógico. Estos operadores binarios nos sirven para unir al menos dos enunciados que tienen valor de verdadero o falso (Tengo dinero (V/F), Tengo vacaciones (V/F))
+El operador booleano `|` representa el "O" lógico. Estos operadores binarios nos sirven para unir al menos dos enunciados que tienen valor de verdadero o falso (Tengo dinero (V/F), Tengo vacaciones (V/F))
 
-Con estas dos operaciones puedo unirlas utilizando el operador `y` lógico (OR (`|`) representado en R con el símbolo de *la barrita* (`|`)
+Con estas dos operaciones puedo unirlas utilizando el operador `O` lógico (OR (`|`)) representado en R con el símbolo de *la barrita* (`|`)
 
 Tengo dinero OR Tengo vaciones
 
-Para saber el valor booleano (V/F) del enunciado anterior debemos concocer los valores de verdad de los enunciados por separado
+Para saber el valor booleano (V/F) del enunciado anterior debemos conocer los valores de verdad de los enunciados por separado
 
-Por ejmplo podemos representar al primer enunciado por `p` y al segundo enunciado por `q`
+Por ejemplo podemos representar al primer enunciado por `p` y al segundo enunciado por `q`
 
 `p: Tengo dinero`
 
 `q: Tengo vacaciones`
 
-Para saber cuál es el valor de verdad del enunciado compuesto debemos ver cuáles son todas las combinaciones de valores de verdad de los enunciados que la componen: p verdadero y q verdadero, p falso y q verdadero, p falso y q verdadero, p falso y q falso. Eso se resumen en las tablas de verdad de los operadores
+Para saber cuál es el valor de verdad del enunciado compuesto debemos ver cuáles son todas las combinaciones de valores de verdad de los enunciados que la componen: p verdadero y q verdadero, p verdadero y q falso, p falso y q verdadero, p falso y q falso. Eso se resumen en las tablas de verdad de los operadores
 
 |  p  |  q  | p \| q |
 |:---:|:---:|:------:|
@@ -155,7 +155,7 @@ Es decir, el `|` solo es **falso** cuando ambas condiciones son **falsas**.
 
 ### Ejemplos de combinaciones
 
-Por eejmplo es útil para intervalos
+Por ejemplo es útil para intervalos
 
 $$
 18 \leq edad \leq 29 
@@ -300,4 +300,4 @@ if(numero > 0){
 
 1.  Elabora un programa que con tu fecha de cumpleaños te diga en qué estación del año naciste.
 
-2.  Elabora un porgrama que a partir de las calficaciones de tus examenes parciales y 8 quincenales arroje si exentaras o no este curso usando los criterios definidos en el programa del curso. Asume que en las tareas y demás actividades tienes 10.
+2.  Elabora un programa que a partir de las calificaciones de tus examenes parciales y 8 quincenales arroje si exentarás o no este curso usando los criterios definidos en el programa del curso. Asume que en las tareas y demás actividades tienes 10.
