@@ -1,7 +1,7 @@
 # Data Frames
 
 
-Un Dataframe en R es una estructura de datos rectangular que se compone de filas y columnas, donde cada columna puede tener un tipo de datos diferente. Los Dataframes son una de las estructuras de datos más utilizadas en R, ya que son la forma estándar de almacenar datos tabulares.
+Un Dataframe en R es una estructura de datos rectangular que se compone de renglones y columnas, donde cada columna puede tener un tipo de datos diferente. Los Dataframes son una de las estructuras de datos más utilizadas en R, ya que son la forma estándar de almacenar datos tabulares.
 
 ## Crear un Dataframe en R
 Podemos crear un DataFrame en R utilizando la función `data.frame()`. Aquí hay un ejemplo de cómo crear un DataFrame simple con datos de estudiantes:
@@ -42,7 +42,7 @@ En este ejemplo, el dataframe tiene tres columnas: "secuencia", "tamaño" y "con
 
 Para seleccionar elementos o acceder a algún dato de un dataframe, se hace de forma análoga a las matrices, es decir, se utiliza el operador de subíndice `[]`. 
 
-Por ejemplo, para acceder a la segunda fila de la columna "secuencia" en el Dataframe "dna_data", se puede escribir lo siguiente:
+Por ejemplo, para acceder al segundo renglón de la columna "secuencia" en el Dataframe "dna_data", se puede escribir lo siguiente:
 
 ```{r}
 dna_data[2, "secuencia"]
@@ -51,16 +51,16 @@ dna_data[2, "secuencia"]
 
 Esto devolvería la cadena de caracteres "GCTAGCTA".
 
-También puedes acceder a varias filas o columnas a la vez.
-Por ejemplo, para acceder a las primeras dos filas de las columnas "tamaño" y "contenido_GC" en el Dataframe "dna_data", podrías escribir lo siguiente:
+También puedes acceder a varios renglones o columnas a la vez.
+Por ejemplo, para acceder a los primeros dos renglones de las columnas "tamaño" y "contenido_GC" en el Dataframe "dna_data", podrías escribir lo siguiente:
 
 ```{r}
 dna_data[1:2, c("tamaño", "contenido_GC")]
 ```
 
-Esto devolvería un Dataframe con dos filas y dos columnas.
+Esto devolvería un Dataframe con dos renglones y dos columnas.
 
-## Agregar y eliminar filas y columnas en un Dataframe en R
+## Agregar y eliminar renglones y columnas en un Dataframe en R
 Para agregar una nueva columna a un Dataframe en R, puedes utilizar el operador de asignación `<-`. 
 Por ejemplo, para agregar una columna que represente la Temperatura de Melting (o Fusión) en el Dataframe "dna_data", podrías escribir lo siguiente:
 
@@ -77,14 +77,14 @@ Para eliminar una columna de un Dataframe en R, puedes utilizar el operador de s
 dna_data$temperatura_melting <- NULL
 ```
 
-Para agregar una nueva fila a un Dataframe en R, puedes utilizar la función `rbind()`. ¿También se puede aplicar `cbind()` en Dataframe?
+Para agregar un nuevo renglón a un Dataframe en R, puedes utilizar la función `rbind()`. ¿También se puede aplicar `cbind()` en Dataframe?
 
 **Ejercicio** 
-Empleando la siguiente fórmula para calcular la Temperatura de Fusión:  `Tm=4(G+C)+2(A+T)`, diseña una secuencia que cumpla con una Tm de 55°. Agrega sus características (secuencia, tamaño, cantidad GC & Tm) en una nueva fila. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe `dna_data` como base. 
+Empleando la siguiente fórmula para calcular la Temperatura de Fusión:  `Tm=4(G+C)+2(A+T)`, diseña una secuencia que cumpla con una Tm de 55°. Agrega sus características (secuencia, tamaño, cantidad GC & Tm) en un nuevo renglón. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe `dna_data` como base. 
 
 ### Importar un archivo csv en R
 
-Un archivo csv (Comma Separated Values) es un archivo de texto que contiene datos en formato tabular, donde cada fila representa un registro y cada columna representa una variable. Para importar un archivo CSV en R, puedes utilizar la función `read.csv()`. Por ejemplo, si tienes un archivo llamado "ventas.csv" en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:
+Un archivo csv (Comma Separated Values) es un archivo de texto que contiene datos en formato tabular, donde cada renglón representa un registro y cada columna representa una variable. Para importar un archivo CSV en R, puedes utilizar la función `read.csv()`. Por ejemplo, si tienes un archivo llamado "ventas.csv" en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:
 
 ```{r}
 #ventas <- read.csv("ventas.csv")
