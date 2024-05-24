@@ -33,7 +33,7 @@ Una buena gestión de proyectos en R implica una estructura de carpetas organiza
 
 - Mantén un script de R (por ejemplo, `main.R`) que sirva como punto de entrada para entender y ejecutar el proyecto.
 - Documenta tus scripts detalladamente para que otros (o tú en el futuro) puedan entender el propósito y funcionamiento de tu código.
-- Utiliza nombres de archivos y variables claros y descriptivos.
+- Utiliza nombres de archivos y variables claros y descriptivos. Por ejemplo: "SeqCluster: Clustering de Secuencias Biológicas" o "GeneAnalyzer: Análisis de Datos Genéticos". 
 
 ## Colaboración y control de versiones con Git y GitHub
 
