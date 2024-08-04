@@ -128,3 +128,20 @@ Descripción: Supón que tienes un data.frame con datos de crecimiento de cultiv
 - Crea un data.frame crecimiento con las siguientes columnas: Cepa, Medio, TasaCrecimiento, Temperatura.
 - Llena el data.frame con datos aleatorios para 10 cepas en 3 medios diferentes y 4 temperaturas distintas.
 - Encuentra la media y la desviación estándar de la tasa de crecimiento por cada medio.
+
+2. **Perfil de resistencia antibiótica**
+
+Descripción: Supón que tienes un data.frame con datos de resistencia antibiótica de diferentes cepas bacterianas.
+
+- Crea un data.frame resistencia con las columnas: Cepa, Antibiótico, Resistencia (0 para sensible, 1 para resistente).
+- Llena el data.frame con datos aleatorios para 5 cepas y 5 antibióticos diferentes.
+- Calcula el porcentaje de resistencia para cada antibiótico.
+
+3. **Datos de abundancia de secuencias**
+
+Descripción: Supón que tienes un data.frame con datos de abundancia de secuencias de diferentes microorganismos en distintas muestras.
+
+- Crea un data.frame secuencias con las columnas: Muestra, Microorganismo, Abundancia.
+- Llena el data.frame con datos aleatorios para 8 microorganismos en 5 muestras diferentes.
+- Encuentra la abundancia total y promedio por muestra.
+
