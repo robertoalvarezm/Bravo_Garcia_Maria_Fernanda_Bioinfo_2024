@@ -79,9 +79,9 @@ dna_data$temperatura_melting <- NULL
 
 Para agregar un nuevo renglón a un Dataframe en R, puedes utilizar la función `rbind()`. ¿También se puede aplicar `cbind()` en Dataframe?
 
-**Ejercicio** 
+** Ejercicio ** 
 
-Empleando la siguiente fórmula para calcular la Temperatura de Fusión:  $T_m=4(G+C)+2(A+T)$, diseña una secuencia que cumpla con una $T_m$ de $55°$. Agrega sus características (secuencia, tamaño, cantidad GC & T_m) en un nuevo renglón. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe `dna_data` como base. 
+Emplea la siguiente fórmula para calcular la Temperatura de Fusión:  $T_m=4(G+C)+2(A+T)$, diseña una secuencia que cumpla con una $T_m$ de $55°$. Agrega sus características (secuencia, tamaño, cantidad GC & T_m) en un nuevo renglón. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe `dna_data` como base. 
 
 ## Importar archivos externos
 

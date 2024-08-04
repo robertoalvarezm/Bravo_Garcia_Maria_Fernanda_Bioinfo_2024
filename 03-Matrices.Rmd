@@ -282,6 +282,7 @@ Descripción: Supongamos que tienes una matriz de distancias genéticas entre 6 
 - Crea una matriz distancias de 6x6 con valores aleatorios.
 - Asigna nombres de especies a las filas y columnas.
 - Encuentra la especie más cercana y más lejana para cada especie (índices de los mínimos y máximos valores en cada fila, excluyendo la diagonal).
+
 ### Ejercicios avanzados
 
 1. **Ejercicio 1: Transformaciones de Matrices**
