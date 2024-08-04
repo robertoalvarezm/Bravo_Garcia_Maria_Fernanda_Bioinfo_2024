@@ -256,7 +256,6 @@ div.csl-indent {
 <li class="chapter" data-level="3.10" data-path="matrices.html"><a href="matrices.html#nombres-a-renglones-y-columnas"><i class="fa fa-check"></i><b>3.10</b> Nombres a renglones y columnas</a>
 <ul>
 <li class="chapter" data-level="3.10.1" data-path="matrices.html"><a href="matrices.html#ejercicios"><i class="fa fa-check"></i><b>3.10.1</b> Ejercicios</a></li>
-<li class="chapter" data-level="3.10.2" data-path="matrices.html"><a href="matrices.html#ejercicios-avanzados"><i class="fa fa-check"></i><b>3.10.2</b> Ejercicios avanzados</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>4</b> Data Frames</a>
@@ -575,12 +574,12 @@ No hay espacios y es un sólo operador .</p>
 </ol>
 <p>Descripción: Supongamos que tienes una matriz de expresión génica con 6 genes y 4 condiciones experimentales.</p>
 <ul>
-<li>Crea una matriz llamada ☎️expresion_genica con 6 genes y 4 condiciones (rellena con datos aleatorios).</li>
+<li>Crea una matriz llamada <code>expresion_genica</code> con 6 genes y 4 condiciones (rellena con datos aleatorios).</li>
 <li>Asigna nombres de genes a las filas y nombres de condiciones a las columnas.</li>
 <li>Calcula el promedio de expresión génica para cada gen.</li>
 </ul>
 <ol start="12" style="list-style-type: decimal">
-<li><strong>Red de Interacciones Proteína-Proteína</strong></li>
+<li><strong>Red de interacciones proteína-proteína</strong></li>
 </ol>
 <p>Descripción: Modela una matriz de interacciones entre proteínas donde 1 indica interacción y 0 indica no interacción.</p>
 <ul>
@@ -588,9 +587,34 @@ No hay espacios y es un sólo operador .</p>
 <li>Asigna nombres de proteínas a las filas y columnas.</li>
 <li>Encuentra cuántas interacciones tiene cada proteína (suma de cada fila).</li>
 </ul>
-</div>
-<div id="ejercicios-avanzados" class="section level3 hasAnchor" number="3.10.2">
-<h3><span class="header-section-number">3.10.2</span> Ejercicios avanzados<a href="matrices.html#ejercicios-avanzados" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol start="13" style="list-style-type: decimal">
+<li><strong>Variación de concentraciones de metabolitos</strong></li>
+</ol>
+<p>Descripción: Supongamos que tienes datos de concentraciones de 4 metabolitos en 3 tipos de tejidos diferentes.</p>
+<ul>
+<li>Crea una matriz concentraciones de <span class="math inline">\(4 \times 3\)</span> con datos aleatorios.</li>
+<li>Asigna nombres de metabolitos a las filas y tipos de tejidos a las columnas.</li>
+<li>Normaliza las concentraciones para cada metabolito (dividiendo por el máximo valor de cada fila).</li>
+</ul>
+<ol start="14" style="list-style-type: decimal">
+<li><strong>Análisis de tasa de crecimiento bacteriano</strong></li>
+</ol>
+<p>Descripción: Modela una matriz con las tasas de crecimiento de 5 cepas bacterianas en 4 medios de cultivo diferentes.</p>
+<ul>
+<li>Crea una matriz crecimiento de 5x4 con datos aleatorios.</li>
+<li>Asigna nombres de cepas bacterianas a las filas y nombres de medios de cultivo a las columnas.</li>
+<li>Calcula la media y la desviación estándar de la tasa de crecimiento para cada medio de cultivo.</li>
+</ul>
+<ol start="15" style="list-style-type: decimal">
+<li><strong>Matriz de distancias genéticas</strong></li>
+</ol>
+<p>Descripción: Supongamos que tienes una matriz de distancias genéticas entre 6 especies.</p>
+<ul>
+<li>Crea una matriz distancias de 6x6 con valores aleatorios.</li>
+<li>Asigna nombres de especies a las filas y columnas.</li>
+<li>Encuentra la especie más cercana y más lejana para cada especie (índices de los mínimos y máximos valores en cada fila, excluyendo la diagonal).
+### Ejercicios avanzados</li>
+</ul>
 <ol style="list-style-type: decimal">
 <li><strong>Ejercicio 1: Transformaciones de Matrices</strong></li>
 </ol>

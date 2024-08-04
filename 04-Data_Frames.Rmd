@@ -119,4 +119,12 @@ library(readxl)
 
 ```
 
+## Ejercicios
 
+1. **Datos de crecimiento de cultivos bacterianos**
+
+Descripción: Supón que tienes un data.frame con datos de crecimiento de cultivos bacterianos en diferentes condiciones.
+
+- Crea un data.frame crecimiento con las siguientes columnas: Cepa, Medio, TasaCrecimiento, Temperatura.
+- Llena el data.frame con datos aleatorios para 10 cepas en 3 medios diferentes y 4 temperaturas distintas.
+- Encuentra la media y la desviación estándar de la tasa de crecimiento por cada medio.

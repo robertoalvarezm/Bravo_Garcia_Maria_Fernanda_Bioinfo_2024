@@ -247,11 +247,11 @@ m["e","C"]==m[1,3]
 
 Descripción: Supongamos que tienes una matriz de expresión génica con 6 genes y 4 condiciones experimentales.
 
-- Crea una matriz llamada expresion_genica con 6 genes y 4 condiciones (rellena con datos aleatorios).
+- Crea una matriz llamada `expresion_genica` con 6 genes y 4 condiciones (rellena con datos aleatorios).
 - Asigna nombres de genes a las filas y nombres de condiciones a las columnas.
 - Calcula el promedio de expresión génica para cada gen.
 
-12. **Red de Interacciones Proteína-Proteína**
+12. **Red de interacciones proteína-proteína**
 
 Descripción: Modela una matriz de interacciones entre proteínas donde 1 indica interacción y 0 indica no interacción.
 
@@ -259,9 +259,29 @@ Descripción: Modela una matriz de interacciones entre proteínas donde 1 indica
 - Asigna nombres de proteínas a las filas y columnas.
 - Encuentra cuántas interacciones tiene cada proteína (suma de cada fila).
 
+13. **Variación de concentraciones de metabolitos**
 
+Descripción: Supongamos que tienes datos de concentraciones de 4 metabolitos en 3 tipos de tejidos diferentes.
 
+- Crea una matriz concentraciones de $4 \times 3$ con datos aleatorios.
+- Asigna nombres de metabolitos a las filas y tipos de tejidos a las columnas.
+- Normaliza las concentraciones para cada metabolito (dividiendo por el máximo valor de cada fila).
 
+14. **Análisis de tasa de crecimiento bacteriano**
+
+Descripción: Modela una matriz con las tasas de crecimiento de 5 cepas bacterianas en 4 medios de cultivo diferentes.
+
+- Crea una matriz crecimiento de 5x4 con datos aleatorios.
+- Asigna nombres de cepas bacterianas a las filas y nombres de medios de cultivo a las columnas.
+- Calcula la media y la desviación estándar de la tasa de crecimiento para cada medio de cultivo.
+
+15. **Matriz de distancias genéticas**
+
+Descripción: Supongamos que tienes una matriz de distancias genéticas entre 6 especies.
+
+- Crea una matriz distancias de 6x6 con valores aleatorios.
+- Asigna nombres de especies a las filas y columnas.
+- Encuentra la especie más cercana y más lejana para cada especie (índices de los mínimos y máximos valores en cada fila, excluyendo la diagonal).
 ### Ejercicios avanzados
 
 1. **Ejercicio 1: Transformaciones de Matrices**

@@ -266,11 +266,14 @@ Para visualizar los paquetes ya cargados, teclea:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] ".GlobalEnv"        "package:ggplot2"   "package:readxl"   
-##  [4] "package:gplots"    "tools:rstudio"     "package:stats"    
-##  [7] "package:graphics"  "package:grDevices" "package:utils"    
-## [10] "package:datasets"  "package:methods"   "Autoloads"        
-## [13] "package:base"
+##  [1] ".GlobalEnv"             "package:ggpubr"        
+##  [3] "package:palmerpenguins" "package:ggplot2"       
+##  [5] "package:readxl"         "package:gplots"        
+##  [7] "tools:rstudio"          "package:stats"         
+##  [9] "package:graphics"       "package:grDevices"     
+## [11] "package:utils"          "package:datasets"      
+## [13] "package:methods"        "Autoloads"             
+## [15] "package:base"
 \end{verbatim}
 
 Para visualizar las funciones dentro de un paquete en particular se utiliza:
@@ -282,291 +285,69 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 \end{Shaded}
 
 \begin{verbatim}
-##   [1] "%+%"                        "%+replace%"                
-##   [3] "aes"                        "aes_"                      
-##   [5] "aes_all"                    "aes_auto"                  
-##   [7] "aes_q"                      "aes_string"                
-##   [9] "after_scale"                "after_stat"                
-##  [11] "alpha"                      "annotate"                  
-##  [13] "annotation_custom"          "annotation_logticks"       
-##  [15] "annotation_map"             "annotation_raster"         
-##  [17] "arrow"                      "as_label"                  
-##  [19] "as_labeller"                "autolayer"                 
-##  [21] "autoplot"                   "AxisSecondary"             
-##  [23] "benchplot"                  "binned_scale"              
-##  [25] "borders"                    "calc_element"              
-##  [27] "check_device"               "combine_vars"              
-##  [29] "continuous_scale"           "Coord"                     
-##  [31] "coord_cartesian"            "coord_equal"               
-##  [33] "coord_fixed"                "coord_flip"                
-##  [35] "coord_map"                  "coord_munch"               
-##  [37] "coord_polar"                "coord_quickmap"            
-##  [39] "coord_radial"               "coord_sf"                  
-##  [41] "coord_trans"                "CoordCartesian"            
-##  [43] "CoordFixed"                 "CoordFlip"                 
-##  [45] "CoordMap"                   "CoordPolar"                
-##  [47] "CoordQuickmap"              "CoordRadial"               
-##  [49] "CoordSf"                    "CoordTrans"                
-##  [51] "cut_interval"               "cut_number"                
-##  [53] "cut_width"                  "datetime_scale"            
-##  [55] "derive"                     "diamonds"                  
-##  [57] "discrete_scale"             "draw_key_abline"           
-##  [59] "draw_key_blank"             "draw_key_boxplot"          
-##  [61] "draw_key_crossbar"          "draw_key_dotplot"          
-##  [63] "draw_key_label"             "draw_key_linerange"        
-##  [65] "draw_key_path"              "draw_key_point"            
-##  [67] "draw_key_pointrange"        "draw_key_polygon"          
-##  [69] "draw_key_rect"              "draw_key_smooth"           
-##  [71] "draw_key_text"              "draw_key_timeseries"       
-##  [73] "draw_key_vline"             "draw_key_vpath"            
-##  [75] "dup_axis"                   "economics"                 
-##  [77] "economics_long"             "el_def"                    
-##  [79] "element_blank"              "element_grob"              
-##  [81] "element_line"               "element_rect"              
-##  [83] "element_render"             "element_text"              
-##  [85] "enexpr"                     "enexprs"                   
-##  [87] "enquo"                      "enquos"                    
-##  [89] "ensym"                      "ensyms"                    
-##  [91] "expand_limits"              "expand_scale"              
-##  [93] "expansion"                  "expr"                      
-##  [95] "Facet"                      "facet_grid"                
-##  [97] "facet_null"                 "facet_wrap"                
-##  [99] "FacetGrid"                  "FacetNull"                 
-## [101] "FacetWrap"                  "faithfuld"                 
-## [103] "fill_alpha"                 "find_panel"                
-## [105] "flip_data"                  "flipped_names"             
-## [107] "fortify"                    "Geom"                      
-## [109] "geom_abline"                "geom_area"                 
-## [111] "geom_bar"                   "geom_bin_2d"               
-## [113] "geom_bin2d"                 "geom_blank"                
-## [115] "geom_boxplot"               "geom_col"                  
-## [117] "geom_contour"               "geom_contour_filled"       
-## [119] "geom_count"                 "geom_crossbar"             
-## [121] "geom_curve"                 "geom_density"              
-## [123] "geom_density_2d"            "geom_density_2d_filled"    
-## [125] "geom_density2d"             "geom_density2d_filled"     
-## [127] "geom_dotplot"               "geom_errorbar"             
-## [129] "geom_errorbarh"             "geom_freqpoly"             
-## [131] "geom_function"              "geom_hex"                  
-## [133] "geom_histogram"             "geom_hline"                
-## [135] "geom_jitter"                "geom_label"                
-## [137] "geom_line"                  "geom_linerange"            
-## [139] "geom_map"                   "geom_path"                 
-## [141] "geom_point"                 "geom_pointrange"           
-## [143] "geom_polygon"               "geom_qq"                   
-## [145] "geom_qq_line"               "geom_quantile"             
-## [147] "geom_raster"                "geom_rect"                 
-## [149] "geom_ribbon"                "geom_rug"                  
-## [151] "geom_segment"               "geom_sf"                   
-## [153] "geom_sf_label"              "geom_sf_text"              
-## [155] "geom_smooth"                "geom_spoke"                
-## [157] "geom_step"                  "geom_text"                 
-## [159] "geom_tile"                  "geom_violin"               
-## [161] "geom_vline"                 "GeomAbline"                
-## [163] "GeomAnnotationMap"          "GeomArea"                  
-## [165] "GeomBar"                    "GeomBlank"                 
-## [167] "GeomBoxplot"                "GeomCol"                   
-## [169] "GeomContour"                "GeomContourFilled"         
-## [171] "GeomCrossbar"               "GeomCurve"                 
-## [173] "GeomCustomAnn"              "GeomDensity"               
-## [175] "GeomDensity2d"              "GeomDensity2dFilled"       
-## [177] "GeomDotplot"                "GeomErrorbar"              
-## [179] "GeomErrorbarh"              "GeomFunction"              
-## [181] "GeomHex"                    "GeomHline"                 
-## [183] "GeomLabel"                  "GeomLine"                  
-## [185] "GeomLinerange"              "GeomLogticks"              
-## [187] "GeomMap"                    "GeomPath"                  
-## [189] "GeomPoint"                  "GeomPointrange"            
-## [191] "GeomPolygon"                "GeomQuantile"              
-## [193] "GeomRaster"                 "GeomRasterAnn"             
-## [195] "GeomRect"                   "GeomRibbon"                
-## [197] "GeomRug"                    "GeomSegment"               
-## [199] "GeomSf"                     "GeomSmooth"                
-## [201] "GeomSpoke"                  "GeomStep"                  
-## [203] "GeomText"                   "GeomTile"                  
-## [205] "GeomViolin"                 "GeomVline"                 
-## [207] "get_alt_text"               "get_element_tree"          
-## [209] "get_guide_data"             "gg_dep"                    
-## [211] "ggplot"                     "ggplot_add"                
-## [213] "ggplot_build"               "ggplot_gtable"             
-## [215] "ggplotGrob"                 "ggproto"                   
-## [217] "ggproto_parent"             "ggsave"                    
-## [219] "ggtitle"                    "Guide"                     
-## [221] "guide_axis"                 "guide_axis_logticks"       
-## [223] "guide_axis_stack"           "guide_axis_theta"          
-## [225] "guide_bins"                 "guide_colorbar"            
-## [227] "guide_colorsteps"           "guide_colourbar"           
-## [229] "guide_coloursteps"          "guide_custom"              
-## [231] "guide_gengrob"              "guide_geom"                
-## [233] "guide_legend"               "guide_merge"               
-## [235] "guide_none"                 "guide_train"               
-## [237] "guide_transform"            "GuideAxis"                 
-## [239] "GuideAxisLogticks"          "GuideAxisStack"            
-## [241] "GuideAxisTheta"             "GuideBins"                 
-## [243] "GuideColourbar"             "GuideColoursteps"          
-## [245] "GuideCustom"                "GuideLegend"               
-## [247] "GuideNone"                  "GuideOld"                  
-## [249] "guides"                     "has_flipped_aes"           
-## [251] "is.Coord"                   "is.facet"                  
-## [253] "is.ggplot"                  "is.ggproto"                
-## [255] "is.theme"                   "label_both"                
-## [257] "label_bquote"               "label_context"             
-## [259] "label_parsed"               "label_value"               
-## [261] "label_wrap_gen"             "labeller"                  
-## [263] "labs"                       "last_plot"                 
-## [265] "layer"                      "layer_data"                
-## [267] "layer_grob"                 "layer_scales"              
-## [269] "layer_sf"                   "Layout"                    
-## [271] "lims"                       "luv_colours"               
-## [273] "map_data"                   "margin"                    
-## [275] "max_height"                 "max_width"                 
-## [277] "mean_cl_boot"               "mean_cl_normal"            
-## [279] "mean_sdl"                   "mean_se"                   
-## [281] "median_hilow"               "merge_element"             
-## [283] "midwest"                    "mpg"                       
-## [285] "msleep"                     "new_guide"                 
-## [287] "old_guide"                  "panel_cols"                
-## [289] "panel_rows"                 "pattern_alpha"             
-## [291] "Position"                   "position_dodge"            
-## [293] "position_dodge2"            "position_fill"             
-## [295] "position_identity"          "position_jitter"           
-## [297] "position_jitterdodge"       "position_nudge"            
-## [299] "position_stack"             "PositionDodge"             
-## [301] "PositionDodge2"             "PositionFill"              
-## [303] "PositionIdentity"           "PositionJitter"            
-## [305] "PositionJitterdodge"        "PositionNudge"             
-## [307] "PositionStack"              "presidential"              
-## [309] "qplot"                      "quickplot"                 
-## [311] "quo"                        "quo_name"                  
-## [313] "quos"                       "register_theme_elements"   
-## [315] "rel"                        "remove_missing"            
-## [317] "render_axes"                "render_strips"             
-## [319] "reset_theme_settings"       "resolution"                
-## [321] "Scale"                      "scale_alpha"               
-## [323] "scale_alpha_binned"         "scale_alpha_continuous"    
-## [325] "scale_alpha_date"           "scale_alpha_datetime"      
-## [327] "scale_alpha_discrete"       "scale_alpha_identity"      
-## [329] "scale_alpha_manual"         "scale_alpha_ordinal"       
-## [331] "scale_color_binned"         "scale_color_brewer"        
-## [333] "scale_color_continuous"     "scale_color_date"          
-## [335] "scale_color_datetime"       "scale_color_discrete"      
-## [337] "scale_color_distiller"      "scale_color_fermenter"     
-## [339] "scale_color_gradient"       "scale_color_gradient2"     
-## [341] "scale_color_gradientn"      "scale_color_grey"          
-## [343] "scale_color_hue"            "scale_color_identity"      
-## [345] "scale_color_manual"         "scale_color_ordinal"       
-## [347] "scale_color_steps"          "scale_color_steps2"        
-## [349] "scale_color_stepsn"         "scale_color_viridis_b"     
-## [351] "scale_color_viridis_c"      "scale_color_viridis_d"     
-## [353] "scale_colour_binned"        "scale_colour_brewer"       
-## [355] "scale_colour_continuous"    "scale_colour_date"         
-## [357] "scale_colour_datetime"      "scale_colour_discrete"     
-## [359] "scale_colour_distiller"     "scale_colour_fermenter"    
-## [361] "scale_colour_gradient"      "scale_colour_gradient2"    
-## [363] "scale_colour_gradientn"     "scale_colour_grey"         
-## [365] "scale_colour_hue"           "scale_colour_identity"     
-## [367] "scale_colour_manual"        "scale_colour_ordinal"      
-## [369] "scale_colour_steps"         "scale_colour_steps2"       
-## [371] "scale_colour_stepsn"        "scale_colour_viridis_b"    
-## [373] "scale_colour_viridis_c"     "scale_colour_viridis_d"    
-## [375] "scale_continuous_identity"  "scale_discrete_identity"   
-## [377] "scale_discrete_manual"      "scale_fill_binned"         
-## [379] "scale_fill_brewer"          "scale_fill_continuous"     
-## [381] "scale_fill_date"            "scale_fill_datetime"       
-## [383] "scale_fill_discrete"        "scale_fill_distiller"      
-## [385] "scale_fill_fermenter"       "scale_fill_gradient"       
-## [387] "scale_fill_gradient2"       "scale_fill_gradientn"      
-## [389] "scale_fill_grey"            "scale_fill_hue"            
-## [391] "scale_fill_identity"        "scale_fill_manual"         
-## [393] "scale_fill_ordinal"         "scale_fill_steps"          
-## [395] "scale_fill_steps2"          "scale_fill_stepsn"         
-## [397] "scale_fill_viridis_b"       "scale_fill_viridis_c"      
-## [399] "scale_fill_viridis_d"       "scale_linetype"            
-## [401] "scale_linetype_binned"      "scale_linetype_continuous" 
-## [403] "scale_linetype_discrete"    "scale_linetype_identity"   
-## [405] "scale_linetype_manual"      "scale_linewidth"           
-## [407] "scale_linewidth_binned"     "scale_linewidth_continuous"
-## [409] "scale_linewidth_date"       "scale_linewidth_datetime"  
-## [411] "scale_linewidth_discrete"   "scale_linewidth_identity"  
-## [413] "scale_linewidth_manual"     "scale_linewidth_ordinal"   
-## [415] "scale_radius"               "scale_shape"               
-## [417] "scale_shape_binned"         "scale_shape_continuous"    
-## [419] "scale_shape_discrete"       "scale_shape_identity"      
-## [421] "scale_shape_manual"         "scale_shape_ordinal"       
-## [423] "scale_size"                 "scale_size_area"           
-## [425] "scale_size_binned"          "scale_size_binned_area"    
-## [427] "scale_size_continuous"      "scale_size_date"           
-## [429] "scale_size_datetime"        "scale_size_discrete"       
-## [431] "scale_size_identity"        "scale_size_manual"         
-## [433] "scale_size_ordinal"         "scale_type"                
-## [435] "scale_x_binned"             "scale_x_continuous"        
-## [437] "scale_x_date"               "scale_x_datetime"          
-## [439] "scale_x_discrete"           "scale_x_log10"             
-## [441] "scale_x_reverse"            "scale_x_sqrt"              
-## [443] "scale_x_time"               "scale_y_binned"            
-## [445] "scale_y_continuous"         "scale_y_date"              
-## [447] "scale_y_datetime"           "scale_y_discrete"          
-## [449] "scale_y_log10"              "scale_y_reverse"           
-## [451] "scale_y_sqrt"               "scale_y_time"              
-## [453] "ScaleBinned"                "ScaleBinnedPosition"       
-## [455] "ScaleContinuous"            "ScaleContinuousDate"       
-## [457] "ScaleContinuousDatetime"    "ScaleContinuousIdentity"   
-## [459] "ScaleContinuousPosition"    "ScaleDiscrete"             
-## [461] "ScaleDiscreteIdentity"      "ScaleDiscretePosition"     
-## [463] "seals"                      "sec_axis"                  
-## [465] "set_last_plot"              "sf_transform_xy"           
-## [467] "should_stop"                "stage"                     
-## [469] "standardise_aes_names"      "stat"                      
-## [471] "Stat"                       "stat_align"                
-## [473] "stat_bin"                   "stat_bin_2d"               
-## [475] "stat_bin_hex"               "stat_bin2d"                
-## [477] "stat_binhex"                "stat_boxplot"              
-## [479] "stat_contour"               "stat_contour_filled"       
-## [481] "stat_count"                 "stat_density"              
-## [483] "stat_density_2d"            "stat_density_2d_filled"    
-## [485] "stat_density2d"             "stat_density2d_filled"     
-## [487] "stat_ecdf"                  "stat_ellipse"              
-## [489] "stat_function"              "stat_identity"             
-## [491] "stat_qq"                    "stat_qq_line"              
-## [493] "stat_quantile"              "stat_sf"                   
-## [495] "stat_sf_coordinates"        "stat_smooth"               
-## [497] "stat_spoke"                 "stat_sum"                  
-## [499] "stat_summary"               "stat_summary_2d"           
-## [501] "stat_summary_bin"           "stat_summary_hex"          
-## [503] "stat_summary2d"             "stat_unique"               
-## [505] "stat_ydensity"              "StatAlign"                 
-## [507] "StatBin"                    "StatBin2d"                 
-## [509] "StatBindot"                 "StatBinhex"                
-## [511] "StatBoxplot"                "StatContour"               
-## [513] "StatContourFilled"          "StatCount"                 
-## [515] "StatDensity"                "StatDensity2d"             
-## [517] "StatDensity2dFilled"        "StatEcdf"                  
-## [519] "StatEllipse"                "StatFunction"              
-## [521] "StatIdentity"               "StatQq"                    
-## [523] "StatQqLine"                 "StatQuantile"              
-## [525] "StatSf"                     "StatSfCoordinates"         
-## [527] "StatSmooth"                 "StatSum"                   
-## [529] "StatSummary"                "StatSummary2d"             
-## [531] "StatSummaryBin"             "StatSummaryHex"            
-## [533] "StatUnique"                 "StatYdensity"              
-## [535] "summarise_coord"            "summarise_layers"          
-## [537] "summarise_layout"           "sym"                       
-## [539] "syms"                       "theme"                     
-## [541] "theme_bw"                   "theme_classic"             
-## [543] "theme_dark"                 "theme_get"                 
-## [545] "theme_gray"                 "theme_grey"                
-## [547] "theme_light"                "theme_linedraw"            
-## [549] "theme_minimal"              "theme_replace"             
-## [551] "theme_set"                  "theme_test"                
-## [553] "theme_update"               "theme_void"                
-## [555] "transform_position"         "translate_shape_string"    
-## [557] "txhousing"                  "unit"                      
-## [559] "update_geom_defaults"       "update_labels"             
-## [561] "update_stat_defaults"       "vars"                      
-## [563] "waiver"                     "wrap_dims"                 
-## [565] "xlab"                       "xlim"                      
-## [567] "ylab"                       "ylim"                      
-## [569] "zeroGrob"
+##   [1] "%>%"                         "add_summary"                
+##   [3] "annotate_figure"             "as_ggplot"                  
+##   [5] "as_npc"                      "as_npcx"                    
+##   [7] "as_npcy"                     "background_image"           
+##   [9] "bgcolor"                     "border"                     
+##  [11] "change_palette"              "clean_table_theme"          
+##  [13] "clean_theme"                 "colnames_style"             
+##  [15] "color_palette"               "compare_means"              
+##  [17] "create_aes"                  "desc_statby"                
+##  [19] "diff_express"                "facet"                      
+##  [21] "fill_palette"                "font"                       
+##  [23] "gene_citation"               "gene_expression"            
+##  [25] "geom_bracket"                "geom_exec"                  
+##  [27] "geom_pwc"                    "geom_signif"                
+##  [29] "get_breaks"                  "get_coord"                  
+##  [31] "get_legend"                  "get_palette"                
+##  [33] "get_summary_stats"           "ggadd"                      
+##  [35] "ggadjust_pvalue"             "ggarrange"                  
+##  [37] "ggballoonplot"               "ggbarplot"                  
+##  [39] "ggboxplot"                   "ggdensity"                  
+##  [41] "ggdonutchart"                "ggdotchart"                 
+##  [43] "ggdotplot"                   "ggecdf"                     
+##  [45] "ggerrorplot"                 "ggexport"                   
+##  [47] "gghistogram"                 "ggline"                     
+##  [49] "ggmaplot"                    "ggpaired"                   
+##  [51] "ggpar"                       "ggparagraph"                
+##  [53] "ggpie"                       "ggpubr_options"             
+##  [55] "ggqqplot"                    "ggscatter"                  
+##  [57] "ggscatterhist"               "ggstripchart"               
+##  [59] "ggsummarystats"              "ggsummarytable"             
+##  [61] "ggtext"                      "ggtexttable"                
+##  [63] "ggviolin"                    "gradient_color"             
+##  [65] "gradient_fill"               "grids"                      
+##  [67] "group_by"                    "labs_pubr"                  
+##  [69] "mean_ci"                     "mean_range"                 
+##  [71] "mean_sd"                     "mean_se_"                   
+##  [73] "median_hilow_"               "median_iqr"                 
+##  [75] "median_mad"                  "median_q1q3"                
+##  [77] "median_range"                "mutate"                     
+##  [79] "npc_to_data_coord"           "rotate"                     
+##  [81] "rotate_x_text"               "rotate_y_text"              
+##  [83] "rownames_style"              "rremove"                    
+##  [85] "set_palette"                 "show_line_types"            
+##  [87] "show_point_shapes"           "stat_anova_test"            
+##  [89] "stat_bracket"                "stat_central_tendency"      
+##  [91] "stat_chull"                  "stat_compare_means"         
+##  [93] "stat_conf_ellipse"           "stat_cor"                   
+##  [95] "stat_friedman_test"          "stat_kruskal_test"          
+##  [97] "stat_mean"                   "stat_overlay_normal_density"
+##  [99] "stat_pvalue_manual"          "stat_pwc"                   
+## [101] "stat_regline_equation"       "stat_stars"                 
+## [103] "stat_welch_anova_test"       "tab_add_border"             
+## [105] "tab_add_footnote"            "tab_add_hline"              
+## [107] "tab_add_title"               "tab_add_vline"              
+## [109] "tab_cell_crossout"           "tab_ncol"                   
+## [111] "tab_nrow"                    "table_cell_bg"              
+## [113] "table_cell_font"             "tbody_add_border"           
+## [115] "tbody_style"                 "text_grob"                  
+## [117] "thead_add_border"            "theme_classic2"             
+## [119] "theme_cleveland"             "theme_pubclean"             
+## [121] "theme_pubr"                  "theme_transparent"          
+## [123] "ttheme"                      "xscale"                     
+## [125] "yscale"
 \end{verbatim}
 
 \textbf{EJEMPLOS DE VISUALIZACIÓN DE GRÁFICOS}
@@ -1074,8 +855,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  1.27584478  2.23174843  0.39156502 -1.81826407  0.59151068
-##  [6] -1.13373766 -0.10480276  0.65534223 -1.48813795  0.07053674
+##  [1] -0.1500580  0.1916843  0.3965073 -0.6334543 -1.2033739
+##  [6]  0.8362899 -0.8556184 -1.2909872  0.5524860 -0.4357048
 \end{verbatim}
 
 \begin{Shaded}
@@ -1085,8 +866,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] -0.2989495  0.7531259  0.5976649  1.3236640 -0.1651016
-##  [6] -0.6110866 -0.1290841 -0.1352870 -0.2827615  0.9016190
+##  [1] -0.03514984  0.02691580 -0.74108455 -0.86232665 -0.59957570
+##  [6] -1.43874405  0.68712443 -0.01502948  0.68961937  0.17001979
 \end{verbatim}
 
 Las \textbf{asignaciones}, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de \texttt{\textless{}-}
@@ -1106,8 +887,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  0.6853859  0.8307815  1.5139747  1.3362325 -0.9445922
-##  [6] -0.2470238  1.0181408  2.1623618  0.2095774 -2.0976586
+##  [1]  0.8802163  1.8689481  0.2638898  1.0455125  1.1635098
+##  [6]  0.3224475  1.2630908 -0.7749165 -0.4520177 -1.1650157
 \end{verbatim}
 
 \textbf{NOTA} El símbolo \texttt{\textless{}-} es equivalente en función a \texttt{=} pero puede llevar a confusiones importantes con el operador \texttt{==}.
@@ -2198,7 +1979,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -2.969845
+## [1] -4.197952
 \end{verbatim}
 
 \begin{Shaded}
@@ -2208,7 +1989,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 3.247604
+## [1] 3.285286
 \end{verbatim}
 
 \begin{Shaded}
@@ -2218,7 +1999,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -2.969845  3.247604
+## [1] -4.197952  3.285286
 \end{verbatim}
 
 \begin{Shaded}
@@ -2228,7 +2009,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -15.39413
+## [1] -36.09457
 \end{verbatim}
 
 \begin{Shaded}
@@ -2238,7 +2019,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -0.01539413
+## [1] -0.03609457
 \end{verbatim}
 
 \begin{Shaded}
@@ -2248,7 +2029,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -0.04208399
+## [1] -0.04053752
 \end{verbatim}
 
 \textbf{Ejercicio} ¿Qué función tienen los siguientes comandos \texttt{sd()} y \texttt{quantile()}?
@@ -2274,7 +2055,7 @@ Para \texttt{unique()} y \texttt{sort()} conviene tener elementos discretos más
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  5  6  4  3  1  9  7  2 10  8
+##  [1]  5  1 10  2  9  7  4  3  8  6
 \end{verbatim}
 
 \begin{Shaded}
@@ -3588,7 +3369,7 @@ Descripción: Supongamos que tienes una matriz de expresión génica con 6 genes
 \begin{itemize}
 \tightlist
 \item
-  Crea una matriz llamada expresion\_genica con 6 genes y 4 condiciones (rellena con datos aleatorios).
+  Crea una matriz llamada \texttt{expresion\_genica} con 6 genes y 4 condiciones (rellena con datos aleatorios).
 \item
   Asigna nombres de genes a las filas y nombres de condiciones a las columnas.
 \item
@@ -3600,7 +3381,7 @@ Descripción: Supongamos que tienes una matriz de expresión génica con 6 genes
 \setcounter{enumi}{11}
 \tightlist
 \item
-  \textbf{Red de Interacciones Proteína-Proteína}
+  \textbf{Red de interacciones proteína-proteína}
 \end{enumerate}
 
 Descripción: Modela una matriz de interacciones entre proteínas donde 1 indica interacción y 0 indica no interacción.
@@ -3615,7 +3396,66 @@ Descripción: Modela una matriz de interacciones entre proteínas donde 1 indica
   Encuentra cuántas interacciones tiene cada proteína (suma de cada fila).
 \end{itemize}
 
-\subsection{Ejercicios avanzados}\label{ejercicios-avanzados}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  \textbf{Variación de concentraciones de metabolitos}
+\end{enumerate}
+
+Descripción: Supongamos que tienes datos de concentraciones de 4 metabolitos en 3 tipos de tejidos diferentes.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea una matriz concentraciones de \(4 \times 3\) con datos aleatorios.
+\item
+  Asigna nombres de metabolitos a las filas y tipos de tejidos a las columnas.
+\item
+  Normaliza las concentraciones para cada metabolito (dividiendo por el máximo valor de cada fila).
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\tightlist
+\item
+  \textbf{Análisis de tasa de crecimiento bacteriano}
+\end{enumerate}
+
+Descripción: Modela una matriz con las tasas de crecimiento de 5 cepas bacterianas en 4 medios de cultivo diferentes.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea una matriz crecimiento de 5x4 con datos aleatorios.
+\item
+  Asigna nombres de cepas bacterianas a las filas y nombres de medios de cultivo a las columnas.
+\item
+  Calcula la media y la desviación estándar de la tasa de crecimiento para cada medio de cultivo.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{14}
+\tightlist
+\item
+  \textbf{Matriz de distancias genéticas}
+\end{enumerate}
+
+Descripción: Supongamos que tienes una matriz de distancias genéticas entre 6 especies.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea una matriz distancias de 6x6 con valores aleatorios.
+\item
+  Asigna nombres de especies a las filas y columnas.
+\item
+  Encuentra la especie más cercana y más lejana para cada especie (índices de los mínimos y máximos valores en cada fila, excluyendo la diagonal).
+  \#\#\# Ejercicios avanzados
+\end{itemize}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3822,6 +3662,27 @@ Un archivo de Excel es un formato de archivo popular para almacenar datos en for
 \end{Highlighting}
 \end{Shaded}
 
+\section{Ejercicios}\label{ejercicios-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Datos de crecimiento de cultivos bacterianos}
+\end{enumerate}
+
+Descripción: Supón que tienes un data.frame con datos de crecimiento de cultivos bacterianos en diferentes condiciones.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea un data.frame crecimiento con las siguientes columnas: Cepa, Medio, TasaCrecimiento, Temperatura.
+\item
+  Llena el data.frame con datos aleatorios para 10 cepas en 3 medios diferentes y 4 temperaturas distintas.
+\item
+  Encuentra la media y la desviación estándar de la tasa de crecimiento por cada medio.
+\end{itemize}
+
 \chapter{Listas}\label{Listas}
 
 Las listas son una estructura de datos muy versátil en R, que permiten almacenar una colección de elementos. A diferencia de los vectores, una lista puede contener elementos de diferentes tipos, como números, cadenas y hasta otras listas.
@@ -3900,7 +3761,7 @@ Accceso por índice
 ## 2 S. aureus    -
 \end{verbatim}
 
-\section{Ejercicios}\label{ejercicios-1}
+\section{Ejercicios}\label{ejercicios-2}
 
 \subsection{Ejercicios Propuestos con listas}\label{ejercicios-propuestos-con-listas}
 
@@ -4025,7 +3886,7 @@ La sintaxis de una condición \texttt{if} consiste en lo siguiente:
 ## [1] "Acá sigue"
 \end{verbatim}
 
-\subsubsection{Ejercicios}\label{ejercicios-2}
+\subsubsection{Ejercicios}\label{ejercicios-3}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4346,7 +4207,7 @@ Esta estructura se ejecuta solo en la primera que sea verdadera o si no hay una 
 
 \textbf{Pregunta}: ¿por qué no es necesario poner un if en el último else?
 
-\section{Ejercicios}\label{ejercicios-3}
+\section{Ejercicios}\label{ejercicios-4}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
