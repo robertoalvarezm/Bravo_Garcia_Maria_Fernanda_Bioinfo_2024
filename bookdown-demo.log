@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.1)  3 AUG 2024 21:18
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.1)  3 AUG 2024 21:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -820,8 +820,8 @@ Overfull \hbox (59.25pt too wide) in paragraph at lines 386--386
 []\TU/lmtt/m/n/10 ## > ## parameter for the plot and there is also an "fg" parameter which sets[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-5-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-6-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -855,8 +855,8 @@ Overfull \hbox (38.25pt too wide) in paragraph at lines 413--413
 []\TU/lmtt/m/n/10 ## > ## the RGB primaries.  On the other hand on the SGI Indy at work the[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-5-2.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-5-2.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-6-2.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-6-2.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -885,8 +885,8 @@ Overfull \hbox (48.75pt too wide) in paragraph at lines 434--434
 []\TU/lmtt/m/n/10 ## +     col = c("purple","violetred1","green3","cornsilk","cyan","white"))[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-5-3.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-5-3.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-6-3.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-6-3.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -910,8 +910,8 @@ Overfull \hbox (48.75pt too wide) in paragraph at lines 457--457
 []\TU/lmtt/m/n/10 ## > ## The use of color seems like a useful addition, it focuses attention[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-5-4.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-5-4.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-6-4.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-6-4.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -920,8 +920,8 @@ Overfull \hbox (43.5pt too wide) in paragraph at lines 480--480
 []\TU/lmtt/m/n/10 ## > title(main="Notched Boxplots", xlab="Group", font.main=4, font.lab=1)[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-5-5.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-5-5.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-6-5.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-6-5.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -945,8 +945,8 @@ Overfull \hbox (90.75pt too wide) in paragraph at lines 500--500
 []\TU/lmtt/m/n/10 ## > x <- c(0.00, 0.40, 0.86, 0.85, 0.69, 0.48, 0.54, 1.09, 1.11, 1.73, 2.05, 2.02)[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-5-6.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-5-6.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-6-6.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-6-6.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -969,15 +969,15 @@ Overfull \hbox (27.75pt too wide) in paragraph at lines 532--532
 Underfull \vbox (badness 1708) has occurred while \output is active []
 
 [16]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-5-7.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-5-7.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-6-7.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-6-7.pdf>
 
 Overfull \hbox (59.25pt too wide) in paragraph at lines 544--544
 []\TU/lmtt/m/n/10 ## > pairs(iris[1:4], main="Edgar Anderson[]s Iris Data", font.main=4, pch=19)[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-5-8.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-5-8.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-6-8.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-6-8.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -986,8 +986,8 @@ Overfull \hbox (1.5pt too wide) in paragraph at lines 552--552
 []\TU/lmtt/m/n/10 ## +       bg = c("red", "green3", "blue")[unclass(iris$Species)])[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-5-9.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-5-9.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-6-9.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-6-9.pdf>
 [18]
 Overfull \hbox (90.75pt too wide) in paragraph at lines 588--588
 []\TU/lmtt/m/n/10 ## > ## This produces a topographic map of one of Auckland[]s many volcanic "peaks".[] 
@@ -998,8 +998,8 @@ Overfull \hbox (17.25pt too wide) in paragraph at lines 588--588
 []\TU/lmtt/m/n/10 ## +      xlim = range(x)+c(-1,1)*xadd, ylim = range(y)+c(-1,1)*yadd,[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-5-10.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-5-10.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-6-10.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-6-10.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1018,8 +1018,8 @@ Overfull \hbox (27.75pt too wide) in paragraph at lines 614--614
 []\TU/lmtt/m/n/10 ## > coplot(lat ~ long | depth, data = quakes, pch = 21, bg = "green3")[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-5-11.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-5-11.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-6-11.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-6-11.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1027,10 +1027,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 2538) has occurred while \output is active []
 
 [21] [22]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-11-1.pdf>
-File: bookdown-demo_files/figure-latex/unnamed-chunk-11-2.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-11-2.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-12-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-12-2.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-12-2.pdf>
 
 Underfull \vbox (badness 1215) has occurred while \output is active []
 
@@ -1064,8 +1064,8 @@ Overfull \hbox (90.75pt too wide) in paragraph at lines 754--754
 []\TU/lmtt/m/n/10 ## hclust> plot(hc1, labels = FALSE, hang = -1, main = "Re-start from 10 clusters")[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-11-3.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-11-3.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-12-3.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-12-3.pdf>
 
 Overfull \hbox (12.0pt too wide) in paragraph at lines 768--768
 []\TU/lmtt/m/n/10 ## hclust> ### Example 2: Straight-line distances among 10 US cities[] 
@@ -1076,10 +1076,10 @@ Overfull \hbox (27.75pt too wide) in paragraph at lines 768--768
 []\TU/lmtt/m/n/10 ## hclust> ##  Compare the results of algorithms "ward.D" and "ward.D2"[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-11-4.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-11-4.pdf>
-File: bookdown-demo_files/figure-latex/unnamed-chunk-11-5.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-11-5.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-12-4.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-12-4.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-12-5.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-12-5.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1177,16 +1177,16 @@ Overfull \hbox (22.5pt too wide) in paragraph at lines 1690--1690
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1709.
 [43] [44] [45] [46]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-76-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-76-1.pdf>
-File: bookdown-demo_files/figure-latex/unnamed-chunk-76-2.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-76-2.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-77-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-77-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-77-2.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-77-2.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [47]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-76-3.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-76-3.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-77-3.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-77-3.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1319,33 +1319,33 @@ Capítulo 9.
 Underfull \vbox (badness 6032) has occurred while \output is active []
 
 [93] [94]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-173-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-173-1.pdf>
-[95]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-174-1.pdf Graphic file (type pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-174-1.pdf>
+[95]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-175-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-175-1.pdf>
 
 Underfull \hbox (badness 10000) in paragraph at lines 4597--4599
 [][]
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-175-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-175-1.pdf>
-[96]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-176-1.pdf Graphic file (type pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-176-1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[97]
+[96]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-177-1.pdf Graphic file (type pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-177-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[98]
+[97]
 File: bookdown-demo_files/figure-latex/unnamed-chunk-178-1.pdf Graphic file (type pdf)
 <use bookdown-demo_files/figure-latex/unnamed-chunk-178-1.pdf>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[98]
+File: bookdown-demo_files/figure-latex/unnamed-chunk-179-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-179-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1354,8 +1354,8 @@ Overfull \hbox (75.0pt too wide) in paragraph at lines 4691--4691
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or values outside the scale[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-180-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-180-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-181-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-181-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1364,8 +1364,8 @@ Overfull \hbox (75.0pt too wide) in paragraph at lines 4709--4709
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or values outside the scale[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-181-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-181-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-182-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-182-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1374,8 +1374,8 @@ Overfull \hbox (33.0pt too wide) in paragraph at lines 4727--4727
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the scale range[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-182-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-182-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-183-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-183-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1384,8 +1384,8 @@ Overfull \hbox (33.0pt too wide) in paragraph at lines 4748--4748
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the scale range[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-183-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-183-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-184-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-184-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1394,8 +1394,8 @@ Overfull \hbox (33.0pt too wide) in paragraph at lines 4766--4766
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the scale range[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-184-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-184-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-185-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-185-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1404,8 +1404,8 @@ Overfull \hbox (75.0pt too wide) in paragraph at lines 4785--4785
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or values outside the scale[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-185-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-185-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-186-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-186-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1414,8 +1414,8 @@ Overfull \hbox (33.0pt too wide) in paragraph at lines 4803--4803
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the scale range[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-186-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-186-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-187-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-187-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1424,8 +1424,8 @@ Overfull \hbox (33.0pt too wide) in paragraph at lines 4821--4821
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the scale range[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-187-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-187-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-188-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-188-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1439,8 +1439,8 @@ Overfull \hbox (75.0pt too wide) in paragraph at lines 4845--4845
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or values outside the scale[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-188-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-188-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-189-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-189-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1449,8 +1449,8 @@ Overfull \hbox (33.0pt too wide) in paragraph at lines 4864--4864
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the scale range[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-189-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-189-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-190-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-190-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1459,14 +1459,14 @@ Overfull \hbox (75.0pt too wide) in paragraph at lines 4882--4882
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or values outside the scale[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-190-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-190-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-191-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-191-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [110]
-File: bookdown-demo_files/figure-latex/unnamed-chunk-191-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-191-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-192-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-192-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1480,8 +1480,8 @@ Overfull \hbox (75.0pt too wide) in paragraph at lines 4920--4920
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or values outside the scale[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-192-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-192-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-193-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-193-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1490,8 +1490,8 @@ Overfull \hbox (33.0pt too wide) in paragraph at lines 4938--4938
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing non-finite outside the scale range[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-193-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-193-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-194-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-194-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1500,8 +1500,8 @@ Overfull \hbox (75.0pt too wide) in paragraph at lines 4957--4957
 []\TU/lmtt/m/n/10 ## Warning: Removed 2 rows containing missing values or values outside the scale[] 
  []
 
-File: bookdown-demo_files/figure-latex/unnamed-chunk-194-1.pdf Graphic file (type pdf)
-<use bookdown-demo_files/figure-latex/unnamed-chunk-194-1.pdf>
+File: bookdown-demo_files/figure-latex/unnamed-chunk-195-1.pdf Graphic file (type pdf)
+<use bookdown-demo_files/figure-latex/unnamed-chunk-195-1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
