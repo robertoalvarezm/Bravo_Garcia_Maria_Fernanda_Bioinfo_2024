@@ -58,7 +58,7 @@ Por ejemplo, para acceder a los primeros dos renglones de las columnas "tamaño"
 dna_data[1:2, c("tamaño", "contenido_GC")]
 ```
 
-Esto devolvería un Dataframe con dos renglones y dos columnas.
+Esto devolvería un dataframe con dos renglones y dos columnas.
 
 ## Agregar y eliminar renglones y columnas en un Dataframe en R
 Para agregar una nueva columna a un Dataframe en R, puedes utilizar el operador de asignación `<-`. 
@@ -80,7 +80,12 @@ dna_data$temperatura_melting <- NULL
 Para agregar un nuevo renglón a un Dataframe en R, puedes utilizar la función `rbind()`. ¿También se puede aplicar `cbind()` en Dataframe?
 
 **Ejercicio** 
-Empleando la siguiente fórmula para calcular la Temperatura de Fusión:  `Tm=4(G+C)+2(A+T)`, diseña una secuencia que cumpla con una Tm de 55°. Agrega sus características (secuencia, tamaño, cantidad GC & Tm) en un nuevo renglón. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe `dna_data` como base. 
+
+Empleando la siguiente fórmula para calcular la Temperatura de Fusión:  $T_m=4(G+C)+2(A+T)$, diseña una secuencia que cumpla con una $T_m$ de $55°$. Agrega sus características (secuencia, tamaño, cantidad GC & T_m) en un nuevo renglón. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe `dna_data` como base. 
+
+## Importar archivos externos
+
+Normalmente queremos trabajar con datos generados en excel o en google sheets que vienen de una encuesta, de un experimento etc. R tiene la capacidad de hacer eso con varias funciones y normalmente el resultado es un data.frame
 
 ### Importar un archivo csv en R
 
@@ -90,7 +95,7 @@ Un archivo csv (Comma Separated Values) es un archivo de texto que contiene dato
 #ventas <- read.csv("ventas.csv")
 ```
 
-Esto creará un Dataframe llamado "ventas" en R, que contendrá los datos del archivo CSV.
+Esto creará un dataframe llamado "ventas" en R, que contendrá los datos del archivo CSV.
 
 Si el archivo CSV utiliza un separador de campos diferente a la coma, puedes utilizar la función read.csv2() en su lugar. Por ejemplo, si el archivo CSV utiliza un punto y coma como separador de campos, puedes importarlo de la siguiente manera:
 
@@ -119,7 +124,7 @@ library(readxl)
 
 ```
 
-## Ejercicios
+### Ejercicios
 
 1. **Datos de crecimiento de cultivos bacterianos**
 
@@ -144,4 +149,12 @@ Descripción: Supón que tienes un data.frame con datos de abundancia de secuenc
 - Crea un data.frame secuencias con las columnas: Muestra, Microorganismo, Abundancia.
 - Llena el data.frame con datos aleatorios para 8 microorganismos en 5 muestras diferentes.
 - Encuentra la abundancia total y promedio por muestra.
+
+4. ** Datos de Producción de Ácido Láctico**
+
+Descripción: Supón que tienes un data.frame con datos de producción de ácido láctico por diferentes cepas en distintas condiciones.
+
+- Crea un data.frame fermentacion con las columnas: Cepa, Condición, Producción.
+- Llena el data.frame con datos aleatorios para 7 cepas y 4 condiciones diferentes.
+- Encuentra la cepa que produce la mayor cantidad de ácido láctico en cada condición.
 
