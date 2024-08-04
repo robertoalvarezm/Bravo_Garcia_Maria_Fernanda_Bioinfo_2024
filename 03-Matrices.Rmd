@@ -1,5 +1,9 @@
 # Matrices
-Una matriz es un arreglo rectangular de datos del mismo tipo. **Solo del mismo tipo**. Está compuesta tanto de columnas como de renglones. 
+
+
+En R, una matriz es un tipo de dato bidimensional que se utiliza para almacenar elementos de datos del mismo tiposí **solo del mismo tipo** organizados en filas y columnas. 
+Las matrices son una extensión de los vectores y pueden ser útiles para realizar operaciones matemáticas y estadísticas.
+
 
 ## Creación de matrices
 Para crear una matriz podemos usar la función `matrix()`. Dicha función requiere de, al menos, un vector e indicar al menos una dimensión.
@@ -219,24 +223,58 @@ m["e","C"]==m[1,3]
 
 ### Ejercicios
 
-1. Genera dos matrices aleatorias de tamaño 3x3 y luego suma ambas matrices.
+1. Genera dos matrices aleatorias de tamaño $3 \times 3$ y luego suma ambas matrices.
 
-2. Crea dos matrices aleatorias, una de tamaño 2x3 y otra de tamaño 3x4. Luego, calcula su producto matricial.
+2. Crea dos matrices aleatorias, una de tamaño $2\times 3$ y otra de tamaño $3 \times 4$. Luego, calcula su producto matricial.
 
-3. Crea una matriz aleatoria de tamaño 4x3 y encuentra su matriz transpuesta.
+3. Crea una matriz aleatoria de tamaño $4\times 3$ y encuentra su matriz transpuesta.
 
-4. Genera una matriz cuadrada aleatoria de tamaño 4x4 y calcula su determinante.
+4. Genera una matriz cuadrada aleatoria de tamaño $4\times 4$ y calcula su determinante.
 
-5. Crea una matriz cuadrada aleatoria de tamaño 3x3 y encuentra su inversa.
+5. Crea una matriz cuadrada aleatoria de tamaño $3\times 3$ y encuentra su inversa.
 
-6. Genera una matriz aleatoria de tamaño 5x5 y extrae el tercer renglón y la segunda columna.
+6. Genera una matriz aleatoria de tamaño $5 \times 5$ y extrae el tercer renglón y la segunda columna.
 
-7. Crea una matriz diagonal aleatoria de tamaño 4x4 y encuentra sus elementos diagonales.
+7. Crea una matriz diagonal aleatoria de tamaño $4 \times 4$ y encuentra sus elementos diagonales.
 
-8. Define una matriz de coeficientes A y un vector de términos constantes b. Luego, resuelve el sistema de ecuaciones lineales Ax = b.
+8. Define una matriz de coeficientes $\mathcal A$ y un vector de términos constantes b. Luego, resuelve el sistema de ecuaciones lineales $\mathcal Ax = b$.
 
-9. Genera una matriz aleatoria de tamaño 3x3 y multiplica cada uno de sus elementos por un escalar, por ejemplo, 2.
+9. Genera una matriz aleatoria de tamaño $3\times 3$ y multiplica cada uno de sus elementos por un escalar, por ejemplo, 2.
 
 10. Crea una matriz simétrica aleatoria de tamaño 4x4 y verifica si es simétrica.
+
+11.  **Comparación de Expresión Génica entre Condiciones**
+
+Descripción: Supongamos que tienes una matriz de expresión génica con 6 genes y 4 condiciones experimentales.
+
+- Crea una matriz llamada expresion_genica con 6 genes y 4 condiciones (rellena con datos aleatorios).
+- Asigna nombres de genes a las filas y nombres de condiciones a las columnas.
+- Calcula el promedio de expresión génica para cada gen.
+
+12. **Red de Interacciones Proteína-Proteína**
+
+Descripción: Modela una matriz de interacciones entre proteínas donde 1 indica interacción y 0 indica no interacción.
+
+- Crea una matriz interacciones de 5x5 con valores binarios.
+- Asigna nombres de proteínas a las filas y columnas.
+- Encuentra cuántas interacciones tiene cada proteína (suma de cada fila).
+
+
+
+
+### Ejercicios avanzados
+
+1. **Ejercicio 1: Transformaciones de Matrices**
+- Crea una matriz de 5x5 con números aleatorios entre 1 y 100.
+- Encuentra la transpuesta de la matriz.
+- Calcula la inversa de la matriz original (asegúrate de que la matriz sea invertible).
+- Multiplica la matriz original por su inversa y verifica si el resultado es la matriz identidad.
+
+
+2. **Ejercicio 4: eigenvalores y eigenvectores**
+- Crea una matriz simétrica de 5x5 con números aleatorios entre 1 y 10.
+- Calcula los eigenvalores y eigenvectores de la matriz.
+Verifica la propiedad de los autovalores y autovectores: 
+$\mathcal A⋅v=λ⋅v$
 
 
