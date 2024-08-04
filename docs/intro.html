@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Notas de R</title>
   <meta name="description" content="Estas son las notas de un curso básico de R." />
-  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Notas de R" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Roberto Álvarez" />
 
 
-<meta name="date" content="2024-05-24" />
+<meta name="date" content="2024-08-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -66,7 +66,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -240,43 +240,44 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="4.1" data-path="matrices.html"><a href="matrices.html#creación-de-matrices"><i class="fa fa-check"></i><b>4.1</b> Creación de matrices</a></li>
 <li class="chapter" data-level="4.2" data-path="matrices.html"><a href="matrices.html#dimensiones-de-un-matriz"><i class="fa fa-check"></i><b>4.2</b> Dimensiones de un matriz</a></li>
-<li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#elementos-de-una-matriz"><i class="fa fa-check"></i><b>4.3</b> Elementos de una matriz</a></li>
-<li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#creación-de-matriz-vacia"><i class="fa fa-check"></i><b>4.4</b> Creación de matriz “vacia”</a></li>
-<li class="chapter" data-level="4.5" data-path="matrices.html"><a href="matrices.html#operaciones-rbind-y-cbind-en-r-para-matrices"><i class="fa fa-check"></i><b>4.5</b> Operaciones rbind y cbind en R para Matrices</a></li>
-<li class="chapter" data-level="4.6" data-path="matrices.html"><a href="matrices.html#uso-de-rbind-para-unir-matrices-por-renglones"><i class="fa fa-check"></i><b>4.6</b> Uso de <code>rbind()</code> para unir matrices por renglones</a></li>
-<li class="chapter" data-level="4.7" data-path="matrices.html"><a href="matrices.html#uso-de-cbind-para-unir-matrices-por-columnas"><i class="fa fa-check"></i><b>4.7</b> Uso de cbind() para unir matrices por columnas</a></li>
-<li class="chapter" data-level="4.8" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.8</b> Operaciones con matrices</a>
+<li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#creación-de-matriz-vacia"><i class="fa fa-check"></i><b>4.3</b> Creación de matriz “vacia”</a></li>
+<li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#operaciones-rbind-y-cbind-en-r-para-matrices"><i class="fa fa-check"></i><b>4.4</b> Operaciones rbind y cbind en R para Matrices</a></li>
+<li class="chapter" data-level="4.5" data-path="matrices.html"><a href="matrices.html#uso-de-rbind-para-unir-matrices-por-renglones"><i class="fa fa-check"></i><b>4.5</b> Uso de <code>rbind()</code> para unir matrices por renglones</a></li>
+<li class="chapter" data-level="4.6" data-path="matrices.html"><a href="matrices.html#uso-de-cbind-para-unir-matrices-por-columnas"><i class="fa fa-check"></i><b>4.6</b> Uso de cbind() para unir matrices por columnas</a></li>
+<li class="chapter" data-level="4.7" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.7</b> Operaciones con matrices</a>
 <ul>
-<li class="chapter" data-level="4.8.1" data-path="matrices.html"><a href="matrices.html#multiplicación-de-un-escalar-con-una-matriz"><i class="fa fa-check"></i><b>4.8.1</b> Multiplicación de un escalar con una matriz</a></li>
-<li class="chapter" data-level="4.8.2" data-path="matrices.html"><a href="matrices.html#suma-de-dos-matrices"><i class="fa fa-check"></i><b>4.8.2</b> Suma de dos matrices</a></li>
-<li class="chapter" data-level="4.8.3" data-path="matrices.html"><a href="matrices.html#multiplicación-de-matrices"><i class="fa fa-check"></i><b>4.8.3</b> Multiplicación de matrices</a></li>
+<li class="chapter" data-level="4.7.1" data-path="matrices.html"><a href="matrices.html#multiplicación-de-un-escalar-con-una-matriz"><i class="fa fa-check"></i><b>4.7.1</b> Multiplicación de un escalar con una matriz</a></li>
+<li class="chapter" data-level="4.7.2" data-path="matrices.html"><a href="matrices.html#suma-de-dos-matrices"><i class="fa fa-check"></i><b>4.7.2</b> Suma de dos matrices</a></li>
+<li class="chapter" data-level="4.7.3" data-path="matrices.html"><a href="matrices.html#multiplicación-de-matrices"><i class="fa fa-check"></i><b>4.7.3</b> Multiplicación de matrices</a></li>
 </ul></li>
-<li class="chapter" data-level="4.9" data-path="matrices.html"><a href="matrices.html#uso-de-la-función-t-para-transponer-una-matriz"><i class="fa fa-check"></i><b>4.9</b> Uso de la función <code>t()</code> para transponer una matriz</a></li>
-<li class="chapter" data-level="4.10" data-path="matrices.html"><a href="matrices.html#seleccionar-elementos-de-matrices"><i class="fa fa-check"></i><b>4.10</b> Seleccionar elementos de matrices</a>
+<li class="chapter" data-level="4.8" data-path="matrices.html"><a href="matrices.html#uso-de-la-función-t-para-transponer-una-matriz"><i class="fa fa-check"></i><b>4.8</b> Uso de la función <code>t()</code> para transponer una matriz</a></li>
+<li class="chapter" data-level="4.9" data-path="matrices.html"><a href="matrices.html#seleccionar-elementos-de-matrices"><i class="fa fa-check"></i><b>4.9</b> Seleccionar elementos de matrices</a>
 <ul>
-<li class="chapter" data-level="4.10.1" data-path="matrices.html"><a href="matrices.html#seleccionar-todoa-una-renglóncolumna"><i class="fa fa-check"></i><b>4.10.1</b> Seleccionar todo(a) un(a) renglón(columna)</a></li>
-<li class="chapter" data-level="4.10.2" data-path="matrices.html"><a href="matrices.html#selecccionar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>4.10.2</b> Selecccionar elementos de una matriz</a></li>
+<li class="chapter" data-level="4.9.1" data-path="matrices.html"><a href="matrices.html#seleccionar-todoa-una-renglóncolumna"><i class="fa fa-check"></i><b>4.9.1</b> Seleccionar todo(a) un(a) renglón(columna)</a></li>
+<li class="chapter" data-level="4.9.2" data-path="matrices.html"><a href="matrices.html#selecccionar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>4.9.2</b> Selecccionar elementos de una matriz</a></li>
 </ul></li>
-<li class="chapter" data-level="4.11" data-path="matrices.html"><a href="matrices.html#nombres-a-renglones-y-columnas"><i class="fa fa-check"></i><b>4.11</b> Nombres a renglones y columnas</a>
+<li class="chapter" data-level="4.10" data-path="matrices.html"><a href="matrices.html#nombres-a-renglones-y-columnas"><i class="fa fa-check"></i><b>4.10</b> Nombres a renglones y columnas</a>
 <ul>
-<li class="chapter" data-level="4.11.1" data-path="matrices.html"><a href="matrices.html#ejercicios"><i class="fa fa-check"></i><b>4.11.1</b> Ejercicios</a></li>
+<li class="chapter" data-level="4.10.1" data-path="matrices.html"><a href="matrices.html#ejercicios"><i class="fa fa-check"></i><b>4.10.1</b> Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>5</b> Data Frames</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="data-frames.html"><a href="data-frames.html#crear-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.1</b> Crear un Dataframe en R</a></li>
 <li class="chapter" data-level="5.2" data-path="data-frames.html"><a href="data-frames.html#acceder-a-los-datos-de-un-dataframe"><i class="fa fa-check"></i><b>5.2</b> Acceder a los datos de un dataframe</a></li>
-<li class="chapter" data-level="5.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-renglones-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.3</b> Agregar y eliminar renglones y columnas en un Dataframe en R</a>
+<li class="chapter" data-level="5.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-renglones-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.3</b> Agregar y eliminar renglones y columnas en un Dataframe en R</a></li>
+<li class="chapter" data-level="5.4" data-path="data-frames.html"><a href="data-frames.html#importar-archivos-externos"><i class="fa fa-check"></i><b>5.4</b> Importar archivos externos</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-csv-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Importar un archivo csv en R</a></li>
-<li class="chapter" data-level="5.3.2" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>5.3.2</b> Importar un archivo TSV en R</a></li>
-<li class="chapter" data-level="5.3.3" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>5.3.3</b> Importar un archivo Excel en R</a></li>
+<li class="chapter" data-level="5.4.1" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-csv-en-r"><i class="fa fa-check"></i><b>5.4.1</b> Importar un archivo csv en R</a></li>
+<li class="chapter" data-level="5.4.2" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>5.4.2</b> Importar un archivo TSV en R</a></li>
+<li class="chapter" data-level="5.4.3" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>5.4.3</b> Importar un archivo Excel en R</a></li>
+<li class="chapter" data-level="5.4.4" data-path="data-frames.html"><a href="data-frames.html#ejercicios-1"><i class="fa fa-check"></i><b>5.4.4</b> Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="Listas.html"><a href="Listas.html"><i class="fa fa-check"></i><b>6</b> Listas</a>
 <ul>
 <li class="chapter" data-level="6.0.1" data-path="Listas.html"><a href="Listas.html#acceso-por-nombre"><i class="fa fa-check"></i><b>6.0.1</b> Acceso por Nombre</a></li>
-<li class="chapter" data-level="6.1" data-path="Listas.html"><a href="Listas.html#ejercicios-1"><i class="fa fa-check"></i><b>6.1</b> Ejercicios</a>
+<li class="chapter" data-level="6.1" data-path="Listas.html"><a href="Listas.html#ejercicios-2"><i class="fa fa-check"></i><b>6.1</b> Ejercicios</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="Listas.html"><a href="Listas.html#ejercicios-propuestos-con-listas"><i class="fa fa-check"></i><b>6.1.1</b> Ejercicios Propuestos con listas</a></li>
 </ul></li>
@@ -298,7 +299,7 @@ div.csl-indent {
 <li class="chapter" data-level="7.4" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-si-de-otro-modo"><i class="fa fa-check"></i><b>7.4</b> If … else (si … de otro modo)</a></li>
 <li class="chapter" data-level="7.5" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ifelse"><i class="fa fa-check"></i><b>7.5</b> ifelse</a></li>
 <li class="chapter" data-level="7.6" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-if-else-si-si-no-si-si-no-si-si-no"><i class="fa fa-check"></i><b>7.6</b> If … else if … else ( si, si no si , si no si, si no)</a></li>
-<li class="chapter" data-level="7.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-3"><i class="fa fa-check"></i><b>7.7</b> Ejercicios</a></li>
+<li class="chapter" data-level="7.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-4"><i class="fa fa-check"></i><b>7.7</b> Ejercicios</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>8</b> Funciones en R</a>
 <ul>
@@ -356,7 +357,7 @@ div.csl-indent {
 <div id="header">
 <h1 class="title">Notas de R</h1>
 <p class="author"><em>Roberto Álvarez</em></p>
-<p class="date"><em>2024-05-24</em></p>
+<p class="date"><em>2024-08-03</em></p>
 </div>
 <div id="intro" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introducción a R<a href="intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -429,30 +430,83 @@ tu máquina teclea la función <code>library()</code></p>
 <code>library(nombre_de_paquete)</code></p>
 <p>Por ejemplo:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1" tabindex="-1"></a><span class="fu">library</span>(gplots)  </span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;gplots&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:stats&#39;:
-## 
-##     lowess</code></pre>
 <p>Para visualizar los paquetes ya cargados, teclea:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="intro.html#cb5-1" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;.GlobalEnv&quot;        &quot;package:gplots&quot;    &quot;package:stats&quot;    
-##  [4] &quot;package:graphics&quot;  &quot;package:grDevices&quot; &quot;package:utils&quot;    
-##  [7] &quot;package:datasets&quot;  &quot;package:methods&quot;   &quot;Autoloads&quot;        
-## [10] &quot;package:base&quot;</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="intro.html#cb3-1" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
+<pre><code>##  [1] &quot;.GlobalEnv&quot;             &quot;package:ggpubr&quot;        
+##  [3] &quot;package:palmerpenguins&quot; &quot;package:ggplot2&quot;       
+##  [5] &quot;package:readxl&quot;         &quot;package:gplots&quot;        
+##  [7] &quot;tools:rstudio&quot;          &quot;package:stats&quot;         
+##  [9] &quot;package:graphics&quot;       &quot;package:grDevices&quot;     
+## [11] &quot;package:utils&quot;          &quot;package:datasets&quot;      
+## [13] &quot;package:methods&quot;        &quot;Autoloads&quot;             
+## [15] &quot;package:base&quot;</code></pre>
 <p>Para visualizar las funciones dentro de un paquete en particular se utiliza:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="intro.html#cb7-1" tabindex="-1"></a><span class="fu">ls</span>(<span class="dv">2</span>)</span></code></pre></div>
-<pre><code>##  [1] &quot;angleAxis&quot;      &quot;balloonplot&quot;    &quot;bandplot&quot;       &quot;barplot2&quot;      
-##  [5] &quot;bluered&quot;        &quot;boxplot2&quot;       &quot;ci2d&quot;           &quot;col2hex&quot;       
-##  [9] &quot;colorpanel&quot;     &quot;greenred&quot;       &quot;heatmap.2&quot;      &quot;hist2d&quot;        
-## [13] &quot;lmplot2&quot;        &quot;lowess&quot;         &quot;ooplot&quot;         &quot;overplot&quot;      
-## [17] &quot;panel.overplot&quot; &quot;plot.venn&quot;      &quot;plotCI&quot;         &quot;plotLowess&quot;    
-## [21] &quot;plotmeans&quot;      &quot;qqnorm.aov&quot;     &quot;redblue&quot;        &quot;redgreen&quot;      
-## [25] &quot;reorder.factor&quot; &quot;residplot&quot;      &quot;rich.colors&quot;    &quot;sinkplot&quot;      
-## [29] &quot;smartlegend&quot;    &quot;space&quot;          &quot;textplot&quot;       &quot;venn&quot;          
-## [33] &quot;wapply&quot;</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="intro.html#cb5-1" tabindex="-1"></a><span class="fu">ls</span>(<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##   [1] &quot;%&gt;%&quot;                         &quot;add_summary&quot;                
+##   [3] &quot;annotate_figure&quot;             &quot;as_ggplot&quot;                  
+##   [5] &quot;as_npc&quot;                      &quot;as_npcx&quot;                    
+##   [7] &quot;as_npcy&quot;                     &quot;background_image&quot;           
+##   [9] &quot;bgcolor&quot;                     &quot;border&quot;                     
+##  [11] &quot;change_palette&quot;              &quot;clean_table_theme&quot;          
+##  [13] &quot;clean_theme&quot;                 &quot;colnames_style&quot;             
+##  [15] &quot;color_palette&quot;               &quot;compare_means&quot;              
+##  [17] &quot;create_aes&quot;                  &quot;desc_statby&quot;                
+##  [19] &quot;diff_express&quot;                &quot;facet&quot;                      
+##  [21] &quot;fill_palette&quot;                &quot;font&quot;                       
+##  [23] &quot;gene_citation&quot;               &quot;gene_expression&quot;            
+##  [25] &quot;geom_bracket&quot;                &quot;geom_exec&quot;                  
+##  [27] &quot;geom_pwc&quot;                    &quot;geom_signif&quot;                
+##  [29] &quot;get_breaks&quot;                  &quot;get_coord&quot;                  
+##  [31] &quot;get_legend&quot;                  &quot;get_palette&quot;                
+##  [33] &quot;get_summary_stats&quot;           &quot;ggadd&quot;                      
+##  [35] &quot;ggadjust_pvalue&quot;             &quot;ggarrange&quot;                  
+##  [37] &quot;ggballoonplot&quot;               &quot;ggbarplot&quot;                  
+##  [39] &quot;ggboxplot&quot;                   &quot;ggdensity&quot;                  
+##  [41] &quot;ggdonutchart&quot;                &quot;ggdotchart&quot;                 
+##  [43] &quot;ggdotplot&quot;                   &quot;ggecdf&quot;                     
+##  [45] &quot;ggerrorplot&quot;                 &quot;ggexport&quot;                   
+##  [47] &quot;gghistogram&quot;                 &quot;ggline&quot;                     
+##  [49] &quot;ggmaplot&quot;                    &quot;ggpaired&quot;                   
+##  [51] &quot;ggpar&quot;                       &quot;ggparagraph&quot;                
+##  [53] &quot;ggpie&quot;                       &quot;ggpubr_options&quot;             
+##  [55] &quot;ggqqplot&quot;                    &quot;ggscatter&quot;                  
+##  [57] &quot;ggscatterhist&quot;               &quot;ggstripchart&quot;               
+##  [59] &quot;ggsummarystats&quot;              &quot;ggsummarytable&quot;             
+##  [61] &quot;ggtext&quot;                      &quot;ggtexttable&quot;                
+##  [63] &quot;ggviolin&quot;                    &quot;gradient_color&quot;             
+##  [65] &quot;gradient_fill&quot;               &quot;grids&quot;                      
+##  [67] &quot;group_by&quot;                    &quot;labs_pubr&quot;                  
+##  [69] &quot;mean_ci&quot;                     &quot;mean_range&quot;                 
+##  [71] &quot;mean_sd&quot;                     &quot;mean_se_&quot;                   
+##  [73] &quot;median_hilow_&quot;               &quot;median_iqr&quot;                 
+##  [75] &quot;median_mad&quot;                  &quot;median_q1q3&quot;                
+##  [77] &quot;median_range&quot;                &quot;mutate&quot;                     
+##  [79] &quot;npc_to_data_coord&quot;           &quot;rotate&quot;                     
+##  [81] &quot;rotate_x_text&quot;               &quot;rotate_y_text&quot;              
+##  [83] &quot;rownames_style&quot;              &quot;rremove&quot;                    
+##  [85] &quot;set_palette&quot;                 &quot;show_line_types&quot;            
+##  [87] &quot;show_point_shapes&quot;           &quot;stat_anova_test&quot;            
+##  [89] &quot;stat_bracket&quot;                &quot;stat_central_tendency&quot;      
+##  [91] &quot;stat_chull&quot;                  &quot;stat_compare_means&quot;         
+##  [93] &quot;stat_conf_ellipse&quot;           &quot;stat_cor&quot;                   
+##  [95] &quot;stat_friedman_test&quot;          &quot;stat_kruskal_test&quot;          
+##  [97] &quot;stat_mean&quot;                   &quot;stat_overlay_normal_density&quot;
+##  [99] &quot;stat_pvalue_manual&quot;          &quot;stat_pwc&quot;                   
+## [101] &quot;stat_regline_equation&quot;       &quot;stat_stars&quot;                 
+## [103] &quot;stat_welch_anova_test&quot;       &quot;tab_add_border&quot;             
+## [105] &quot;tab_add_footnote&quot;            &quot;tab_add_hline&quot;              
+## [107] &quot;tab_add_title&quot;               &quot;tab_add_vline&quot;              
+## [109] &quot;tab_cell_crossout&quot;           &quot;tab_ncol&quot;                   
+## [111] &quot;tab_nrow&quot;                    &quot;table_cell_bg&quot;              
+## [113] &quot;table_cell_font&quot;             &quot;tbody_add_border&quot;           
+## [115] &quot;tbody_style&quot;                 &quot;text_grob&quot;                  
+## [117] &quot;thead_add_border&quot;            &quot;theme_classic2&quot;             
+## [119] &quot;theme_cleveland&quot;             &quot;theme_pubclean&quot;             
+## [121] &quot;theme_pubr&quot;                  &quot;theme_transparent&quot;          
+## [123] &quot;ttheme&quot;                      &quot;xscale&quot;                     
+## [125] &quot;yscale&quot;</code></pre>
 <p><strong>EJEMPLOS DE VISUALIZACIÓN DE GRÁFICOS</strong></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="intro.html#cb9-1" tabindex="-1"></a><span class="fu">demo</span>(graphics)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="intro.html#cb7-1" tabindex="-1"></a><span class="fu">demo</span>(graphics)</span></code></pre></div>
 <pre><code>## 
 ## 
 ##  demo(graphics)
@@ -688,24 +742,20 @@ tu máquina teclea la función <code>library()</code></p>
 <p>En la mayoría de las ocasiones desconocemos el alcance de alguna paquetería, los criterios de alguna función o en general, sabemos lo que queremos hacer pero no tenemos ni idea de qué paqueteria usar.</p>
 <p>Los comandos <code>help()</code> y <code>?</code> son equivalentes, ambos van a permitir encontrar información sobre paqueterias, comandos o funciones generales de R. Se debe teclear <code>help(nombre_comando)</code> o <code>?nombre_comando</code></p>
 <p>Por ejemplo, para buscar información detallada del comando solve:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="intro.html#cb22-1" tabindex="-1"></a><span class="fu">help</span>(solve)</span></code></pre></div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="intro.html#cb23-1" tabindex="-1"></a>?solve</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="intro.html#cb20-1" tabindex="-1"></a><span class="fu">help</span>(solve)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="intro.html#cb21-1" tabindex="-1"></a>?solve</span></code></pre></div>
 <p>Para buscar ayuda de funciones o palabra reservadas se utilizan comillas:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="intro.html#cb24-1" tabindex="-1"></a><span class="fu">help</span>(<span class="st">&quot;for&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="intro.html#cb22-1" tabindex="-1"></a><span class="fu">help</span>(<span class="st">&quot;for&quot;</span>)</span></code></pre></div>
 <p>También existen opciones como <code>help.start()</code> y <code>help.search()</code> para obtener una versión extendida de la ayuda general desplegada en un navegador. Para ello se requiere tener la ayuda en HTML instalada y conexión a la red.</p>
 <p><code>help.search()</code> es una función que escanea documentación para paquetes previamente instalados.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="intro.html#cb25-1" tabindex="-1"></a><span class="fu">help.search</span>(<span class="st">&quot;clustering&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="intro.html#cb23-1" tabindex="-1"></a><span class="fu">help.search</span>(<span class="st">&quot;clustering&quot;</span>)</span></code></pre></div>
 <p><code>help.start()</code> es una función que despliega información basada en documentos en línea de la versión actual de R, además de brindar links a manuales y la lista de las paqueterías instaladas, entre otras cosas.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="intro.html#cb26-1" tabindex="-1"></a><span class="fu">help.start</span>()</span></code></pre></div>
-<pre><code>## starting httpd help server ... done</code></pre>
-<pre><code>## If the browser launched by &#39;/usr/bin/open&#39; is already running, it is
-##     *not* restarted, and you must switch to its window.
-## Otherwise, be patient ...</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="intro.html#cb24-1" tabindex="-1"></a><span class="fu">help.start</span>()</span></code></pre></div>
 <p>Cuando queremos ver ejemplos del uso de los comandos usamos la función <code>example()</code></p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="intro.html#cb29-1" tabindex="-1"></a><span class="fu">example</span>(<span class="st">&quot;hclust&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="intro.html#cb25-1" tabindex="-1"></a><span class="fu">example</span>(<span class="st">&quot;hclust&quot;</span>)</span></code></pre></div>
 <pre><code>## 
 ## hclust&gt; require(graphics)
 ## 
@@ -768,12 +818,28 @@ tu máquina teclea la función <code>library()</code></p>
 <p>Todo lo anterior requiere que conozcamos el nombre correcto del comando, pero ¿qué pasa si no lo sabemos?, ¿lloramos? no.
 Podemos utilizar el comando <code>apropos()</code> para encontrar todo lo relacionado con algún término.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="intro.html#cb38-1" tabindex="-1"></a><span class="fu">apropos</span>(<span class="st">&quot;solve&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;backsolve&quot;     &quot;forwardsolve&quot;  &quot;qr.solve&quot;      &quot;solve&quot;        
-## [5] &quot;solve.default&quot; &quot;solve.qr&quot;</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="intro.html#cb34-1" tabindex="-1"></a><span class="fu">apropos</span>(<span class="st">&quot;solve&quot;</span>)</span></code></pre></div>
+<pre><code>##  [1] &quot;.rs.markdown.resolveCompletionRoot&quot;
+##  [2] &quot;.rs.resolveAliasedPath&quot;            
+##  [3] &quot;.rs.resolveAliasedSymbol&quot;          
+##  [4] &quot;.rs.resolveContextSourceRefs&quot;      
+##  [5] &quot;.rs.resolveEnvironment&quot;            
+##  [6] &quot;.rs.resolveFormals&quot;                
+##  [7] &quot;.rs.resolveFormalsImpl&quot;            
+##  [8] &quot;.rs.resolveFormalsImplS3Dispatch&quot;  
+##  [9] &quot;.rs.resolveObjectFromFunctionCall&quot; 
+## [10] &quot;.rs.resolveObjectSource&quot;           
+## [11] &quot;.rs.reticulate.resolveModule&quot;      
+## [12] &quot;.rs.rnb.resolveActiveChunkId&quot;      
+## [13] &quot;backsolve&quot;                         
+## [14] &quot;forwardsolve&quot;                      
+## [15] &quot;qr.solve&quot;                          
+## [16] &quot;solve&quot;                             
+## [17] &quot;solve.default&quot;                     
+## [18] &quot;solve.qr&quot;</code></pre>
 <p>Ahora, ¿qué pasa cuando tengo la idea de lo que quiero hacer pero no se qué paqueteria usar, ni cuál comando? puedo usar <code>??</code> seguido de una palabra clave. Esto nos arrojará sugerencias sobre lo que deseamos hacer.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="intro.html#cb40-1" tabindex="-1"></a>??DNA</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="intro.html#cb36-1" tabindex="-1"></a>??DNA</span></code></pre></div>
 <p><strong>NOTA</strong> Se recomienda el uso del autocompletado, de esta manera reducirás errores de dedo.</p>
 </div>
 </div>
@@ -837,6 +903,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

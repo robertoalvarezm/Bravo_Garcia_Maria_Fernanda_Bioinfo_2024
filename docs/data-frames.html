@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Data Frames | Notas de R</title>
   <meta name="description" content="Estas son las notas de un curso básico de R." />
-  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Data Frames | Notas de R" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Roberto Álvarez" />
 
 
-<meta name="date" content="2024-04-18" />
+<meta name="date" content="2024-08-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +66,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -128,6 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -162,27 +163,36 @@ div.csl-indent {
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Notas de R básico</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introducción a R</a>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción a R</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#learning-r-hub"><i class="fa fa-check"></i><b>2.1</b> Learning R Hub</a></li>
-<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#introducción-a-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>2.2</b> Introducción a R para Estudiantes de Microbiología</a>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#historia-de-r"><i class="fa fa-check"></i><b>1.1</b> Historia de R</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#ventajas-de-r"><i class="fa fa-check"></i><b>1.2</b> Ventajas de R</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#learning-r-hub"><i class="fa fa-check"></i><b>1.3</b> Learning R Hub</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#introducción-a-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>1.4</b> Introducción a R para Estudiantes de Microbiología</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#ventajas-de-aprender-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>2.2.1</b> Ventajas de Aprender R para Estudiantes de Microbiología</a></li>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#ventajas-de-aprender-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>1.4.1</b> Ventajas de Aprender R para Estudiantes de Microbiología</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#paquetes-o-bibliotecas"><i class="fa fa-check"></i><b>2.3</b> Paquetes o bibliotecas</a></li>
-<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#ayuda-en-r"><i class="fa fa-check"></i><b>2.4</b> Ayuda en R</a></li>
-<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#expresiones-y-asignaciones"><i class="fa fa-check"></i><b>2.5</b> Expresiones y asignaciones</a></li>
-<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#movimiento-entre-directorios"><i class="fa fa-check"></i><b>2.6</b> Movimiento entre directorios</a></li>
-<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#operaciones-aritméticas"><i class="fa fa-check"></i><b>2.7</b> Operaciones aritméticas</a>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#comienza-con-r"><i class="fa fa-check"></i><b>1.5</b> Comienza con R</a>
 <ul>
-<li class="chapter" data-level="2.7.1" data-path="intro.html"><a href="intro.html#prioridad-en-las-operaciones"><i class="fa fa-check"></i><b>2.7.1</b> Prioridad en las operaciones</a></li>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#instalación"><i class="fa fa-check"></i><b>1.5.1</b> Instalación</a></li>
+<li class="chapter" data-level="1.5.2" data-path="intro.html"><a href="intro.html#paquetes-o-bibliotecas"><i class="fa fa-check"></i><b>1.5.2</b> Paquetes o bibliotecas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="intro.html"><a href="intro.html#tipos-de-valores-en-r"><i class="fa fa-check"></i><b>2.8</b> Tipos de valores en R</a>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#ayuda-en-r"><i class="fa fa-check"></i><b>1.6</b> Ayuda en R</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html"><i class="fa fa-check"></i><b>2</b> Bases prácticas en R</a>
 <ul>
-<li class="chapter" data-level="2.8.1" data-path="intro.html"><a href="intro.html#valores-booleanos"><i class="fa fa-check"></i><b>2.8.1</b> Valores booleanos</a></li>
-<li class="chapter" data-level="2.8.2" data-path="intro.html"><a href="intro.html#caracter"><i class="fa fa-check"></i><b>2.8.2</b> Caracter</a></li>
-<li class="chapter" data-level="2.8.3" data-path="intro.html"><a href="intro.html#enteros-y-números-numeric"><i class="fa fa-check"></i><b>2.8.3</b> Enteros y números (numeric)</a></li>
+<li class="chapter" data-level="2.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#expresiones-y-asignaciones"><i class="fa fa-check"></i><b>2.1</b> Expresiones y asignaciones</a></li>
+<li class="chapter" data-level="2.2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#movimiento-entre-directorios"><i class="fa fa-check"></i><b>2.2</b> Movimiento entre directorios</a></li>
+<li class="chapter" data-level="2.3" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#bash-en-r"><i class="fa fa-check"></i><b>2.3</b> Bash en R</a></li>
+<li class="chapter" data-level="2.4" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#operaciones-aritméticas"><i class="fa fa-check"></i><b>2.4</b> Operaciones aritméticas</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#prioridad-en-las-operaciones"><i class="fa fa-check"></i><b>2.4.1</b> Prioridad en las operaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#tipos-de-valores-en-r"><i class="fa fa-check"></i><b>2.5</b> Tipos de valores en R</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#valores-booleanos"><i class="fa fa-check"></i><b>2.5.1</b> Valores booleanos</a></li>
+<li class="chapter" data-level="2.5.2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#caracter"><i class="fa fa-check"></i><b>2.5.2</b> Caracter</a></li>
+<li class="chapter" data-level="2.5.3" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#enteros-y-números-numeric"><i class="fa fa-check"></i><b>2.5.3</b> Enteros y números (numeric)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="estructura.html"><a href="estructura.html"><i class="fa fa-check"></i><b>3</b> Vectores</a>
@@ -232,7 +242,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.2" data-path="matrices.html"><a href="matrices.html#dimensiones-de-un-matriz"><i class="fa fa-check"></i><b>4.2</b> Dimensiones de un matriz</a></li>
 <li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#creación-de-matriz-vacia"><i class="fa fa-check"></i><b>4.3</b> Creación de matriz “vacia”</a></li>
 <li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#operaciones-rbind-y-cbind-en-r-para-matrices"><i class="fa fa-check"></i><b>4.4</b> Operaciones rbind y cbind en R para Matrices</a></li>
-<li class="chapter" data-level="4.5" data-path="matrices.html"><a href="matrices.html#uso-de-rbind-para-unir-matrices-por-filas"><i class="fa fa-check"></i><b>4.5</b> Uso de <code>rbind()</code> para unir matrices por filas</a></li>
+<li class="chapter" data-level="4.5" data-path="matrices.html"><a href="matrices.html#uso-de-rbind-para-unir-matrices-por-renglones"><i class="fa fa-check"></i><b>4.5</b> Uso de <code>rbind()</code> para unir matrices por renglones</a></li>
 <li class="chapter" data-level="4.6" data-path="matrices.html"><a href="matrices.html#uso-de-cbind-para-unir-matrices-por-columnas"><i class="fa fa-check"></i><b>4.6</b> Uso de cbind() para unir matrices por columnas</a></li>
 <li class="chapter" data-level="4.7" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.7</b> Operaciones con matrices</a>
 <ul>
@@ -255,17 +265,19 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="5.1" data-path="data-frames.html"><a href="data-frames.html#crear-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.1</b> Crear un Dataframe en R</a></li>
 <li class="chapter" data-level="5.2" data-path="data-frames.html"><a href="data-frames.html#acceder-a-los-datos-de-un-dataframe"><i class="fa fa-check"></i><b>5.2</b> Acceder a los datos de un dataframe</a></li>
-<li class="chapter" data-level="5.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-filas-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.3</b> Agregar y eliminar filas y columnas en un Dataframe en R</a>
+<li class="chapter" data-level="5.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-renglones-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.3</b> Agregar y eliminar renglones y columnas en un Dataframe en R</a></li>
+<li class="chapter" data-level="5.4" data-path="data-frames.html"><a href="data-frames.html#importar-archivos-externos"><i class="fa fa-check"></i><b>5.4</b> Importar archivos externos</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-csv-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Importar un archivo csv en R</a></li>
-<li class="chapter" data-level="5.3.2" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>5.3.2</b> Importar un archivo TSV en R</a></li>
-<li class="chapter" data-level="5.3.3" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>5.3.3</b> Importar un archivo Excel en R</a></li>
+<li class="chapter" data-level="5.4.1" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-csv-en-r"><i class="fa fa-check"></i><b>5.4.1</b> Importar un archivo csv en R</a></li>
+<li class="chapter" data-level="5.4.2" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>5.4.2</b> Importar un archivo TSV en R</a></li>
+<li class="chapter" data-level="5.4.3" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>5.4.3</b> Importar un archivo Excel en R</a></li>
+<li class="chapter" data-level="5.4.4" data-path="data-frames.html"><a href="data-frames.html#ejercicios-1"><i class="fa fa-check"></i><b>5.4.4</b> Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="Listas.html"><a href="Listas.html"><i class="fa fa-check"></i><b>6</b> Listas</a>
 <ul>
 <li class="chapter" data-level="6.0.1" data-path="Listas.html"><a href="Listas.html#acceso-por-nombre"><i class="fa fa-check"></i><b>6.0.1</b> Acceso por Nombre</a></li>
-<li class="chapter" data-level="6.1" data-path="Listas.html"><a href="Listas.html#ejercicios-1"><i class="fa fa-check"></i><b>6.1</b> Ejercicios</a>
+<li class="chapter" data-level="6.1" data-path="Listas.html"><a href="Listas.html#ejercicios-2"><i class="fa fa-check"></i><b>6.1</b> Ejercicios</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="Listas.html"><a href="Listas.html#ejercicios-propuestos-con-listas"><i class="fa fa-check"></i><b>6.1.1</b> Ejercicios Propuestos con listas</a></li>
 </ul></li>
@@ -287,7 +299,7 @@ div.csl-indent {
 <li class="chapter" data-level="7.4" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-si-de-otro-modo"><i class="fa fa-check"></i><b>7.4</b> If … else (si … de otro modo)</a></li>
 <li class="chapter" data-level="7.5" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ifelse"><i class="fa fa-check"></i><b>7.5</b> ifelse</a></li>
 <li class="chapter" data-level="7.6" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-if-else-si-si-no-si-si-no-si-si-no"><i class="fa fa-check"></i><b>7.6</b> If … else if … else ( si, si no si , si no si, si no)</a></li>
-<li class="chapter" data-level="7.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-3"><i class="fa fa-check"></i><b>7.7</b> Ejercicios</a></li>
+<li class="chapter" data-level="7.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-4"><i class="fa fa-check"></i><b>7.7</b> Ejercicios</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>8</b> Funciones en R</a>
 <ul>
@@ -303,65 +315,25 @@ div.csl-indent {
 <li class="chapter" data-level="8.6" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-factorial-de-un-número"><i class="fa fa-check"></i><b>8.6</b> Definir una función para calcular el factorial de un número</a></li>
 <li class="chapter" data-level="8.7" data-path="functions.html"><a href="functions.html#definir-una-función-para-verificar-si-un-número-es-primo"><i class="fa fa-check"></i><b>8.7</b> Definir una función para verificar si un número es primo</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="rprojects.html"><a href="rprojects.html"><i class="fa fa-check"></i><b>9</b> RProjects</a>
+<li class="chapter" data-level="9" data-path="plots.html"><a href="plots.html"><i class="fa fa-check"></i><b>9</b> Gráficos</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="rprojects.html"><a href="rprojects.html#introducción-a-r-projects-en-rstudio"><i class="fa fa-check"></i><b>9.1</b> Introducción a R Projects en RStudio</a></li>
-<li class="chapter" data-level="9.2" data-path="rprojects.html"><a href="rprojects.html#gestión-de-proyectos-organización-y-buenas-prácticas"><i class="fa fa-check"></i><b>9.2</b> Gestión de proyectos: organización y buenas prácticas</a></li>
-<li class="chapter" data-level="9.3" data-path="rprojects.html"><a href="rprojects.html#colaboración-y-control-de-versiones-con-git-y-github"><i class="fa fa-check"></i><b>9.3</b> Colaboración y control de versiones con Git y GitHub</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html"><i class="fa fa-check"></i><b>10</b> Visualización de datos con ggplot2</a>
+<li class="chapter" data-level="9.1" data-path="plots.html"><a href="plots.html#visualización-de-datos-con-ggplot2"><i class="fa fa-check"></i><b>9.1</b> Visualización de datos con ggplot2</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#introducción"><i class="fa fa-check"></i><b>10.1</b> Introducción</a></li>
-<li class="chapter" data-level="10.2" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#configuración-inicial"><i class="fa fa-check"></i><b>10.2</b> Configuración inicial</a></li>
-<li class="chapter" data-level="10.3" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#creación-de-un-gráfico-básico"><i class="fa fa-check"></i><b>10.3</b> Creación de un gráfico básico</a></li>
-<li class="chapter" data-level="10.4" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#personalización-de-gráficos"><i class="fa fa-check"></i><b>10.4</b> Personalización de gráficos</a></li>
-<li class="chapter" data-level="10.5" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#soluciones-a-los-ejercicios-sugeridos"><i class="fa fa-check"></i><b>10.5</b> Soluciones a los ejercicios sugeridos</a></li>
-<li class="chapter" data-level="10.6" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicios-resueltos"><i class="fa fa-check"></i><b>10.6</b> Ejercicios resueltos</a>
-<ul>
-<li class="chapter" data-level="10.6.1" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-1-gráfico-de-dispersión-básico"><i class="fa fa-check"></i><b>10.6.1</b> Ejercicio 1: Gráfico de dispersión básico</a></li>
-<li class="chapter" data-level="10.6.2" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-2-diferenciación-por-especie"><i class="fa fa-check"></i><b>10.6.2</b> Ejercicio 2: Diferenciación por especie</a></li>
-<li class="chapter" data-level="10.6.3" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-3-histograma-de-masa-corporal"><i class="fa fa-check"></i><b>10.6.3</b> Ejercicio 3: Histograma de masa corporal</a></li>
-<li class="chapter" data-level="10.6.4" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-4-barras-de-error-por-especie"><i class="fa fa-check"></i><b>10.6.4</b> Ejercicio 4: Barras de error por especie</a></li>
-<li class="chapter" data-level="10.6.5" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-6-facetado-por-islas"><i class="fa fa-check"></i><b>10.6.5</b> Ejercicio 6: Facetado por islas</a></li>
-<li class="chapter" data-level="10.6.6" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-7-densidad-de-masa-corporal"><i class="fa fa-check"></i><b>10.6.6</b> Ejercicio 7: Densidad de masa corporal</a></li>
-<li class="chapter" data-level="10.6.7" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen"><i class="fa fa-check"></i><b>10.6.7</b> Ejercicio 8: Gráfico de violín de la longitud del culmen</a></li>
-<li class="chapter" data-level="10.6.8" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-9-puntos-superpuestos-en-boxplot"><i class="fa fa-check"></i><b>10.6.8</b> Ejercicio 9: Puntos superpuestos en boxplot</a></li>
-<li class="chapter" data-level="10.6.9" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo"><i class="fa fa-check"></i><b>10.6.9</b> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo</a></li>
-<li class="chapter" data-level="10.6.10" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto"><i class="fa fa-check"></i><b>10.6.10</b> Ejercicio 11: Gráfico de dispersión con tamaño de punto</a></li>
-<li class="chapter" data-level="10.6.11" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-12-barras-apiladas-de-especies-por-isla"><i class="fa fa-check"></i><b>10.6.11</b> Ejercicio 12: Barras apiladas de especies por isla</a></li>
-<li class="chapter" data-level="10.6.12" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-13-gráfico-de-correlación-con-texto"><i class="fa fa-check"></i><b>10.6.12</b> Ejercicio 13: Gráfico de correlación con texto</a></li>
-<li class="chapter" data-level="10.6.13" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen"><i class="fa fa-check"></i><b>10.6.13</b> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen</a></li>
-<li class="chapter" data-level="10.6.14" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables"><i class="fa fa-check"></i><b>10.6.14</b> Ejercicio 15: Gráfico de interacción entre tres variables</a></li>
-<li class="chapter" data-level="10.6.15" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicios-propuestos"><i class="fa fa-check"></i><b>10.6.15</b> Ejercicios propuestos</a></li>
+<li class="chapter" data-level="9.1.1" data-path="plots.html"><a href="plots.html#introducción"><i class="fa fa-check"></i><b>9.1.1</b> Introducción</a></li>
+<li class="chapter" data-level="9.1.2" data-path="plots.html"><a href="plots.html#configuración-inicial"><i class="fa fa-check"></i><b>9.1.2</b> Configuración inicial</a></li>
+<li class="chapter" data-level="9.1.3" data-path="plots.html"><a href="plots.html#creación-de-un-gráfico-básico"><i class="fa fa-check"></i><b>9.1.3</b> Creación de un gráfico básico</a></li>
+<li class="chapter" data-level="9.1.4" data-path="plots.html"><a href="plots.html#personalización-de-gráficos"><i class="fa fa-check"></i><b>9.1.4</b> Personalización de gráficos</a></li>
+<li class="chapter" data-level="9.1.5" data-path="plots.html"><a href="plots.html#soluciones-a-los-ejercicios-sugeridos"><i class="fa fa-check"></i><b>9.1.5</b> Soluciones a los ejercicios sugeridos</a></li>
+<li class="chapter" data-level="9.1.6" data-path="plots.html"><a href="plots.html#ejercicios-resueltos"><i class="fa fa-check"></i><b>9.1.6</b> Ejercicios resueltos</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html"><i class="fa fa-check"></i><b>11</b> Visualización de datos con ggplot2</a>
+<li class="chapter" data-level="10" data-path="rprojects.html"><a href="rprojects.html"><i class="fa fa-check"></i><b>10</b> RProjects</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#introducción-1"><i class="fa fa-check"></i><b>11.1</b> Introducción</a></li>
-<li class="chapter" data-level="11.2" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#configuración-inicial-1"><i class="fa fa-check"></i><b>11.2</b> Configuración inicial</a></li>
-<li class="chapter" data-level="11.3" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#creación-de-un-gráfico-básico-1"><i class="fa fa-check"></i><b>11.3</b> Creación de un gráfico básico</a></li>
-<li class="chapter" data-level="11.4" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#personalización-de-gráficos-1"><i class="fa fa-check"></i><b>11.4</b> Personalización de gráficos</a></li>
-<li class="chapter" data-level="11.5" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#soluciones-a-los-ejercicios-sugeridos-1"><i class="fa fa-check"></i><b>11.5</b> Soluciones a los ejercicios sugeridos</a></li>
-<li class="chapter" data-level="11.6" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicios-resueltos-1"><i class="fa fa-check"></i><b>11.6</b> Ejercicios resueltos</a>
-<ul>
-<li class="chapter" data-level="11.6.1" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-1-gráfico-de-dispersión-básico-1"><i class="fa fa-check"></i><b>11.6.1</b> Ejercicio 1: Gráfico de dispersión básico</a></li>
-<li class="chapter" data-level="11.6.2" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-2-diferenciación-por-especie-1"><i class="fa fa-check"></i><b>11.6.2</b> Ejercicio 2: Diferenciación por especie</a></li>
-<li class="chapter" data-level="11.6.3" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-3-histograma-de-masa-corporal-1"><i class="fa fa-check"></i><b>11.6.3</b> Ejercicio 3: Histograma de masa corporal</a></li>
-<li class="chapter" data-level="11.6.4" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-4-barras-de-error-por-especie-1"><i class="fa fa-check"></i><b>11.6.4</b> Ejercicio 4: Barras de error por especie</a></li>
-<li class="chapter" data-level="11.6.5" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-6-facetado-por-islas-1"><i class="fa fa-check"></i><b>11.6.5</b> Ejercicio 6: Facetado por islas</a></li>
-<li class="chapter" data-level="11.6.6" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-7-densidad-de-masa-corporal-1"><i class="fa fa-check"></i><b>11.6.6</b> Ejercicio 7: Densidad de masa corporal</a></li>
-<li class="chapter" data-level="11.6.7" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen-1"><i class="fa fa-check"></i><b>11.6.7</b> Ejercicio 8: Gráfico de violín de la longitud del culmen</a></li>
-<li class="chapter" data-level="11.6.8" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-9-puntos-superpuestos-en-boxplot-1"><i class="fa fa-check"></i><b>11.6.8</b> Ejercicio 9: Puntos superpuestos en boxplot</a></li>
-<li class="chapter" data-level="11.6.9" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo-1"><i class="fa fa-check"></i><b>11.6.9</b> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo</a></li>
-<li class="chapter" data-level="11.6.10" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto-1"><i class="fa fa-check"></i><b>11.6.10</b> Ejercicio 11: Gráfico de dispersión con tamaño de punto</a></li>
-<li class="chapter" data-level="11.6.11" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-12-barras-apiladas-de-especies-por-isla-1"><i class="fa fa-check"></i><b>11.6.11</b> Ejercicio 12: Barras apiladas de especies por isla</a></li>
-<li class="chapter" data-level="11.6.12" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-13-gráfico-de-correlación-con-texto-1"><i class="fa fa-check"></i><b>11.6.12</b> Ejercicio 13: Gráfico de correlación con texto</a></li>
-<li class="chapter" data-level="11.6.13" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen-1"><i class="fa fa-check"></i><b>11.6.13</b> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen</a></li>
-<li class="chapter" data-level="11.6.14" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables-1"><i class="fa fa-check"></i><b>11.6.14</b> Ejercicio 15: Gráfico de interacción entre tres variables</a></li>
-<li class="chapter" data-level="11.6.15" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicios-propuestos-1"><i class="fa fa-check"></i><b>11.6.15</b> Ejercicios propuestos</a></li>
+<li class="chapter" data-level="10.1" data-path="rprojects.html"><a href="rprojects.html#introducción-a-r-projects-en-rstudio"><i class="fa fa-check"></i><b>10.1</b> Introducción a R Projects en RStudio</a></li>
+<li class="chapter" data-level="10.2" data-path="rprojects.html"><a href="rprojects.html#gestión-de-proyectos-organización-y-buenas-prácticas"><i class="fa fa-check"></i><b>10.2</b> Gestión de proyectos: organización y buenas prácticas</a></li>
+<li class="chapter" data-level="10.3" data-path="rprojects.html"><a href="rprojects.html#colaboración-y-control-de-versiones-con-git-y-github"><i class="fa fa-check"></i><b>10.3</b> Colaboración y control de versiones con Git y GitHub</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>12</b> Referencias</a></li>
+<li class="chapter" data-level="11" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>11</b> Referencias</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -384,19 +356,19 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="data-frames" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Data Frames<a href="data-frames.html#data-frames" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Un Dataframe en R es una estructura de datos rectangular que se compone de filas y columnas, donde cada columna puede tener un tipo de datos diferente. Los Dataframes son una de las estructuras de datos más utilizadas en R, ya que son la forma estándar de almacenar datos tabulares.</p>
+<p>Un Dataframe en R es una estructura de datos rectangular que se compone de renglones y columnas, donde cada columna puede tener un tipo de datos diferente. Los Dataframes son una de las estructuras de datos más utilizadas en R, ya que son la forma estándar de almacenar datos tabulares.</p>
 <div id="crear-un-dataframe-en-r" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Crear un Dataframe en R<a href="data-frames.html#crear-un-dataframe-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Podemos crear un DataFrame en R utilizando la función <code>data.frame()</code>. Aquí hay un ejemplo de cómo crear un DataFrame simple con datos de estudiantes:</p>
-<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb357-1"><a href="data-frames.html#cb357-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear un DataFrame de estudiantes</span></span>
-<span id="cb357-2"><a href="data-frames.html#cb357-2" aria-hidden="true" tabindex="-1"></a>estudiantes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb357-3"><a href="data-frames.html#cb357-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;María&quot;</span>, <span class="st">&quot;Pedro&quot;</span>, <span class="st">&quot;Laura&quot;</span>),</span>
-<span id="cb357-4"><a href="data-frames.html#cb357-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">edad =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">23</span>),</span>
-<span id="cb357-5"><a href="data-frames.html#cb357-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">puntaje =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">88</span>, <span class="dv">92</span>)</span>
-<span id="cb357-6"><a href="data-frames.html#cb357-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb357-7"><a href="data-frames.html#cb357-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb357-8"><a href="data-frames.html#cb357-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Ver el DataFrame</span></span>
-<span id="cb357-9"><a href="data-frames.html#cb357-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(estudiantes)</span></code></pre></div>
+<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb357-1"><a href="data-frames.html#cb357-1" tabindex="-1"></a><span class="co"># Crear un DataFrame de estudiantes</span></span>
+<span id="cb357-2"><a href="data-frames.html#cb357-2" tabindex="-1"></a>estudiantes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb357-3"><a href="data-frames.html#cb357-3" tabindex="-1"></a>  <span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">&quot;Juan&quot;</span>, <span class="st">&quot;María&quot;</span>, <span class="st">&quot;Pedro&quot;</span>, <span class="st">&quot;Laura&quot;</span>),</span>
+<span id="cb357-4"><a href="data-frames.html#cb357-4" tabindex="-1"></a>  <span class="at">edad =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">23</span>),</span>
+<span id="cb357-5"><a href="data-frames.html#cb357-5" tabindex="-1"></a>  <span class="at">puntaje =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">88</span>, <span class="dv">92</span>)</span>
+<span id="cb357-6"><a href="data-frames.html#cb357-6" tabindex="-1"></a>)</span>
+<span id="cb357-7"><a href="data-frames.html#cb357-7" tabindex="-1"></a></span>
+<span id="cb357-8"><a href="data-frames.html#cb357-8" tabindex="-1"></a><span class="co"># Ver el DataFrame</span></span>
+<span id="cb357-9"><a href="data-frames.html#cb357-9" tabindex="-1"></a><span class="fu">print</span>(estudiantes)</span></code></pre></div>
 <pre><code>##   nombre edad puntaje
 ## 1   Juan   20      85
 ## 2  María   22      90
@@ -404,67 +376,110 @@ div.csl-indent {
 ## 4  Laura   23      92</code></pre>
 <p>Para crear un Dataframe en R, puedes utilizar la función <code>data.frame()</code>.
 Por ejemplo, para crear un Dataframe con información del genoma de algunos microorganismos, podrías escribir lo siguiente:</p>
-<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="data-frames.html#cb359-1" aria-hidden="true" tabindex="-1"></a>dna_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb359-2"><a href="data-frames.html#cb359-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">secuencia =</span> <span class="fu">c</span>(<span class="st">&quot;ATCGATCG&quot;</span>, <span class="st">&quot;GCTAGCTA&quot;</span>, <span class="st">&quot;TTAAGGCT&quot;</span>),</span>
-<span id="cb359-3"><a href="data-frames.html#cb359-3" aria-hidden="true" tabindex="-1"></a>  tamaño <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>),</span>
-<span id="cb359-4"><a href="data-frames.html#cb359-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">contenido_GC =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>)</span>
-<span id="cb359-5"><a href="data-frames.html#cb359-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb359-6"><a href="data-frames.html#cb359-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb359-7"><a href="data-frames.html#cb359-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(dna_data)</span></code></pre></div>
+<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="data-frames.html#cb359-1" tabindex="-1"></a>dna_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb359-2"><a href="data-frames.html#cb359-2" tabindex="-1"></a>  <span class="at">secuencia =</span> <span class="fu">c</span>(<span class="st">&quot;ATCGATCG&quot;</span>, <span class="st">&quot;GCTAGCTA&quot;</span>, <span class="st">&quot;TTAAGGCT&quot;</span>),</span>
+<span id="cb359-3"><a href="data-frames.html#cb359-3" tabindex="-1"></a>  tamaño <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>),</span>
+<span id="cb359-4"><a href="data-frames.html#cb359-4" tabindex="-1"></a>  <span class="at">contenido_GC =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>)</span>
+<span id="cb359-5"><a href="data-frames.html#cb359-5" tabindex="-1"></a>)</span>
+<span id="cb359-6"><a href="data-frames.html#cb359-6" tabindex="-1"></a></span>
+<span id="cb359-7"><a href="data-frames.html#cb359-7" tabindex="-1"></a><span class="fu">print</span>(dna_data)</span></code></pre></div>
 <pre><code>##   secuencia tamaño contenido_GC
 ## 1  ATCGATCG      8          0.5
 ## 2  GCTAGCTA      8          0.4
 ## 3  TTAAGGCT      8          0.3</code></pre>
 <p><strong>NOTA</strong> También puedes emplear <code>View()</code> para visualizar el DataFrame.</p>
-<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="data-frames.html#cb361-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(dna_data)</span></code></pre></div>
+<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="data-frames.html#cb361-1" tabindex="-1"></a><span class="fu">View</span>(dna_data)</span></code></pre></div>
 <p>En este ejemplo, el dataframe tiene tres columnas: “secuencia”, “tamaño” y “contenido_GC”. La columna “secuencia” contiene cadenas de caracteres (strings) que representan las bases del ADN, mientras que las otras dos columnas contienen valores numéricos.</p>
 </div>
 <div id="acceder-a-los-datos-de-un-dataframe" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Acceder a los datos de un dataframe<a href="data-frames.html#acceder-a-los-datos-de-un-dataframe" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Para seleccionar elementos o acceder a algún dato de un dataframe, se hace de forma análoga a las matrices, es decir, se utiliza el operador de subíndice <code>[]</code>.</p>
-<p>Por ejemplo, para acceder a la segunda fila de la columna “secuencia” en el Dataframe “dna_data”, se puede escribir lo siguiente:</p>
-<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="data-frames.html#cb362-1" aria-hidden="true" tabindex="-1"></a>dna_data[<span class="dv">2</span>, <span class="st">&quot;secuencia&quot;</span>]</span></code></pre></div>
+<p>Por ejemplo, para acceder al segundo renglón de la columna “secuencia” en el Dataframe “dna_data”, se puede escribir lo siguiente:</p>
+<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="data-frames.html#cb362-1" tabindex="-1"></a>dna_data[<span class="dv">2</span>, <span class="st">&quot;secuencia&quot;</span>]</span></code></pre></div>
 <pre><code>## [1] &quot;GCTAGCTA&quot;</code></pre>
 <p>Esto devolvería la cadena de caracteres “GCTAGCTA”.</p>
-<p>También puedes acceder a varias filas o columnas a la vez.
-Por ejemplo, para acceder a las primeras dos filas de las columnas “tamaño” y “contenido_GC” en el Dataframe “dna_data”, podrías escribir lo siguiente:</p>
-<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="data-frames.html#cb364-1" aria-hidden="true" tabindex="-1"></a>dna_data[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="fu">c</span>(<span class="st">&quot;tamaño&quot;</span>, <span class="st">&quot;contenido_GC&quot;</span>)]</span></code></pre></div>
+<p>También puedes acceder a varios renglones o columnas a la vez.
+Por ejemplo, para acceder a los primeros dos renglones de las columnas “tamaño” y “contenido_GC” en el Dataframe “dna_data”, podrías escribir lo siguiente:</p>
+<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="data-frames.html#cb364-1" tabindex="-1"></a>dna_data[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="fu">c</span>(<span class="st">&quot;tamaño&quot;</span>, <span class="st">&quot;contenido_GC&quot;</span>)]</span></code></pre></div>
 <pre><code>##   tamaño contenido_GC
 ## 1      8          0.5
 ## 2      8          0.4</code></pre>
-<p>Esto devolvería un Dataframe con dos filas y dos columnas.</p>
+<p>Esto devolvería un dataframe con dos renglones y dos columnas.</p>
 </div>
-<div id="agregar-y-eliminar-filas-y-columnas-en-un-dataframe-en-r" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Agregar y eliminar filas y columnas en un Dataframe en R<a href="data-frames.html#agregar-y-eliminar-filas-y-columnas-en-un-dataframe-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="agregar-y-eliminar-renglones-y-columnas-en-un-dataframe-en-r" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Agregar y eliminar renglones y columnas en un Dataframe en R<a href="data-frames.html#agregar-y-eliminar-renglones-y-columnas-en-un-dataframe-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Para agregar una nueva columna a un Dataframe en R, puedes utilizar el operador de asignación <code>&lt;-</code>.
 Por ejemplo, para agregar una columna que represente la Temperatura de Melting (o Fusión) en el Dataframe “dna_data”, podrías escribir lo siguiente:</p>
-<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="data-frames.html#cb366-1" aria-hidden="true" tabindex="-1"></a>dna_data<span class="sc">$</span>temperatura_melting <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">24</span>, <span class="dv">24</span>, <span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="data-frames.html#cb366-1" tabindex="-1"></a>dna_data<span class="sc">$</span>temperatura_melting <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">24</span>, <span class="dv">24</span>, <span class="dv">20</span>)</span></code></pre></div>
 <p>Esto crearía una nueva columna llamada “temperatura_melting” en el Dataframe “dna_data” y la inicializaría con los valores proporcionados.</p>
 <p>Para eliminar una columna de un Dataframe en R, puedes utilizar el operador de subíndice<code>[]</code> con un valor nulo para la columna que deseas eliminar. Por ejemplo, para eliminar la columna “temperatura_melting” del Dataframe “dna_data”, podrías escribir lo siguiente:</p>
-<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="data-frames.html#cb367-1" aria-hidden="true" tabindex="-1"></a>dna_data<span class="sc">$</span>temperatura_melting <span class="ot">&lt;-</span> <span class="cn">NULL</span></span></code></pre></div>
-<p>Para agregar una nueva fila a un Dataframe en R, puedes utilizar la función <code>rbind()</code>. ¿También se puede aplicar <code>cbind()</code> en Dataframe?</p>
-<p><strong>Ejercicio</strong>
-Empleando la siguiente fórmula para calcular la Temperatura de Fusión: <code>Tm=4(G+C)+2(A+T)</code>, diseña una secuencia que cumpla con una Tm de 55°. Agrega sus características (secuencia, tamaño, cantidad GC &amp; Tm) en una nueva fila. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe <code>dna_data</code> como base.</p>
-<div id="importar-un-archivo-csv-en-r" class="section level3 hasAnchor" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> Importar un archivo csv en R<a href="data-frames.html#importar-un-archivo-csv-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Un archivo csv (Comma Separated Values) es un archivo de texto que contiene datos en formato tabular, donde cada fila representa un registro y cada columna representa una variable. Para importar un archivo CSV en R, puedes utilizar la función <code>read.csv()</code>. Por ejemplo, si tienes un archivo llamado “ventas.csv” en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:</p>
-<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="data-frames.html#cb368-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read.csv(&quot;ventas.csv&quot;)</span></span></code></pre></div>
-<p>Esto creará un Dataframe llamado “ventas” en R, que contendrá los datos del archivo CSV.</p>
-<p>Si el archivo CSV utiliza un separador de campos diferente a la coma, puedes utilizar la función read.csv2() en su lugar. Por ejemplo, si el archivo CSV utiliza un punto y coma como separador de campos, puedes importarlo de la siguiente manera:</p>
-<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="data-frames.html#cb369-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read.csv2(&quot;ventas.csv&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="data-frames.html#cb367-1" tabindex="-1"></a>dna_data<span class="sc">$</span>temperatura_melting <span class="ot">&lt;-</span> <span class="cn">NULL</span></span></code></pre></div>
+<p>Para agregar un nuevo renglón a un Dataframe en R, puedes utilizar la función <code>rbind()</code>. ¿También se puede aplicar <code>cbind()</code> en Dataframe?</p>
+<p><strong>Ejercicio</strong></p>
+<p>Empleando la siguiente fórmula para calcular la Temperatura de Fusión: <span class="math inline">\(T_m=4(G+C)+2(A+T)\)</span>, diseña una secuencia que cumpla con una <span class="math inline">\(T_m\)</span> de <span class="math inline">\(55°\)</span>. Agrega sus características (secuencia, tamaño, cantidad GC &amp; T_m) en un nuevo renglón. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe <code>dna_data</code> como base.</p>
 </div>
-<div id="importar-un-archivo-tsv-en-r" class="section level3 hasAnchor" number="5.3.2">
-<h3><span class="header-section-number">5.3.2</span> Importar un archivo TSV en R<a href="data-frames.html#importar-un-archivo-tsv-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="importar-archivos-externos" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Importar archivos externos<a href="data-frames.html#importar-archivos-externos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Normalmente queremos trabajar con datos generados en excel o en google sheets que vienen de una encuesta, de un experimento etc. R tiene la capacidad de hacer eso con varias funciones y normalmente el resultado es un data.frame</p>
+<div id="importar-un-archivo-csv-en-r" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Importar un archivo csv en R<a href="data-frames.html#importar-un-archivo-csv-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un archivo csv (Comma Separated Values) es un archivo de texto que contiene datos en formato tabular, donde cada renglón representa un registro y cada columna representa una variable. Para importar un archivo CSV en R, puedes utilizar la función <code>read.csv()</code>. Por ejemplo, si tienes un archivo llamado “ventas.csv” en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:</p>
+<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="data-frames.html#cb368-1" tabindex="-1"></a><span class="co">#ventas &lt;- read.csv(&quot;ventas.csv&quot;)</span></span></code></pre></div>
+<p>Esto creará un dataframe llamado “ventas” en R, que contendrá los datos del archivo CSV.</p>
+<p>Si el archivo CSV utiliza un separador de campos diferente a la coma, puedes utilizar la función read.csv2() en su lugar. Por ejemplo, si el archivo CSV utiliza un punto y coma como separador de campos, puedes importarlo de la siguiente manera:</p>
+<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="data-frames.html#cb369-1" tabindex="-1"></a><span class="co">#ventas &lt;- read.csv2(&quot;ventas.csv&quot;)</span></span></code></pre></div>
+</div>
+<div id="importar-un-archivo-tsv-en-r" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Importar un archivo TSV en R<a href="data-frames.html#importar-un-archivo-tsv-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Un archivo TSV (Tab Separated Values) es similar a un archivo CSV, pero utiliza <strong>tabulaciones</strong> en lugar de comas para separar los campos. Para importar un archivo TSV en R, puedes utilizar la función read.delim(). Por ejemplo, si tienes un archivo llamado “ventas.tsv” en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:</p>
-<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="data-frames.html#cb370-1" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read.delim(&quot;ventas.tsv&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="data-frames.html#cb370-1" tabindex="-1"></a><span class="co">#ventas &lt;- read.delim(&quot;ventas.tsv&quot;)</span></span></code></pre></div>
 <p>Esto creará un Dataframe llamado “ventas” en R, que contendrá los datos del archivo TSV.</p>
 <p>Si el archivo TSV utiliza un separador de campos diferente a la tabulación, puedes utilizar la función <code>read.delim2()</code> en su lugar.</p>
 </div>
-<div id="importar-un-archivo-excel-en-r" class="section level3 hasAnchor" number="5.3.3">
-<h3><span class="header-section-number">5.3.3</span> Importar un archivo Excel en R<a href="data-frames.html#importar-un-archivo-excel-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="importar-un-archivo-excel-en-r" class="section level3 hasAnchor" number="5.4.3">
+<h3><span class="header-section-number">5.4.3</span> Importar un archivo Excel en R<a href="data-frames.html#importar-un-archivo-excel-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Un archivo de Excel es un formato de archivo popular para almacenar datos en formato tabular. Para importar un archivo de Excel en R, puedes utilizar la función readxl::read_excel() del paquete “readxl”. Por ejemplo, si tienes un archivo llamado “ventas.xlsx” en tu directorio de trabajo actual, puedes importarlo de la siguiente manera:</p>
-<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="data-frames.html#cb371-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb371-2"><a href="data-frames.html#cb371-2" aria-hidden="true" tabindex="-1"></a><span class="co">#ventas &lt;- read_excel(&quot;ventas.xlsx&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="data-frames.html#cb371-1" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb371-2"><a href="data-frames.html#cb371-2" tabindex="-1"></a><span class="co">#ventas &lt;- read_excel(&quot;ventas.xlsx&quot;)</span></span></code></pre></div>
+</div>
+<div id="ejercicios-1" class="section level3 hasAnchor" number="5.4.4">
+<h3><span class="header-section-number">5.4.4</span> Ejercicios<a href="data-frames.html#ejercicios-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><strong>Datos de crecimiento de cultivos bacterianos</strong></li>
+</ol>
+<p>Descripción: Supón que tienes un data.frame con datos de crecimiento de cultivos bacterianos en diferentes condiciones.</p>
+<ul>
+<li>Crea un data.frame crecimiento con las siguientes columnas: Cepa, Medio, TasaCrecimiento, Temperatura.</li>
+<li>Llena el data.frame con datos aleatorios para 10 cepas en 3 medios diferentes y 4 temperaturas distintas.</li>
+<li>Encuentra la media y la desviación estándar de la tasa de crecimiento por cada medio.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Perfil de resistencia antibiótica</strong></li>
+</ol>
+<p>Descripción: Supón que tienes un data.frame con datos de resistencia antibiótica de diferentes cepas bacterianas.</p>
+<ul>
+<li>Crea un data.frame resistencia con las columnas: Cepa, Antibiótico, Resistencia (0 para sensible, 1 para resistente).</li>
+<li>Llena el data.frame con datos aleatorios para 5 cepas y 5 antibióticos diferentes.</li>
+<li>Calcula el porcentaje de resistencia para cada antibiótico.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Datos de abundancia de secuencias</strong></li>
+</ol>
+<p>Descripción: Supón que tienes un data.frame con datos de abundancia de secuencias de diferentes microorganismos en distintas muestras.</p>
+<ul>
+<li>Crea un data.frame secuencias con las columnas: Muestra, Microorganismo, Abundancia.</li>
+<li>Llena el data.frame con datos aleatorios para 8 microorganismos en 5 muestras diferentes.</li>
+<li>Encuentra la abundancia total y promedio por muestra.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>** Datos de Producción de Ácido Láctico**</li>
+</ol>
+<p>Descripción: Supón que tienes un data.frame con datos de producción de ácido láctico por diferentes cepas en distintas condiciones.</p>
+<ul>
+<li>Crea un data.frame fermentacion con las columnas: Cepa, Condición, Producción.</li>
+<li>Llena el data.frame con datos aleatorios para 7 cepas y 4 condiciones diferentes.</li>
+<li>Encuentra la cepa que produce la mayor cantidad de ácido láctico en cada condición.</li>
+</ul>
 
 </div>
 </div>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 Estructuras de selección | Notas de R</title>
   <meta name="description" content="Estas son las notas de un curso básico de R." />
-  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Estructuras de selección | Notas de R" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Roberto Álvarez" />
 
 
-<meta name="date" content="2024-04-18" />
+<meta name="date" content="2024-08-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +66,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -128,6 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -162,27 +163,36 @@ div.csl-indent {
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Notas de R básico</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introducción a R</a>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción a R</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#learning-r-hub"><i class="fa fa-check"></i><b>2.1</b> Learning R Hub</a></li>
-<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#introducción-a-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>2.2</b> Introducción a R para Estudiantes de Microbiología</a>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#historia-de-r"><i class="fa fa-check"></i><b>1.1</b> Historia de R</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#ventajas-de-r"><i class="fa fa-check"></i><b>1.2</b> Ventajas de R</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#learning-r-hub"><i class="fa fa-check"></i><b>1.3</b> Learning R Hub</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#introducción-a-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>1.4</b> Introducción a R para Estudiantes de Microbiología</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#ventajas-de-aprender-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>2.2.1</b> Ventajas de Aprender R para Estudiantes de Microbiología</a></li>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#ventajas-de-aprender-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>1.4.1</b> Ventajas de Aprender R para Estudiantes de Microbiología</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#paquetes-o-bibliotecas"><i class="fa fa-check"></i><b>2.3</b> Paquetes o bibliotecas</a></li>
-<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#ayuda-en-r"><i class="fa fa-check"></i><b>2.4</b> Ayuda en R</a></li>
-<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#expresiones-y-asignaciones"><i class="fa fa-check"></i><b>2.5</b> Expresiones y asignaciones</a></li>
-<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#movimiento-entre-directorios"><i class="fa fa-check"></i><b>2.6</b> Movimiento entre directorios</a></li>
-<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#operaciones-aritméticas"><i class="fa fa-check"></i><b>2.7</b> Operaciones aritméticas</a>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#comienza-con-r"><i class="fa fa-check"></i><b>1.5</b> Comienza con R</a>
 <ul>
-<li class="chapter" data-level="2.7.1" data-path="intro.html"><a href="intro.html#prioridad-en-las-operaciones"><i class="fa fa-check"></i><b>2.7.1</b> Prioridad en las operaciones</a></li>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#instalación"><i class="fa fa-check"></i><b>1.5.1</b> Instalación</a></li>
+<li class="chapter" data-level="1.5.2" data-path="intro.html"><a href="intro.html#paquetes-o-bibliotecas"><i class="fa fa-check"></i><b>1.5.2</b> Paquetes o bibliotecas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="intro.html"><a href="intro.html#tipos-de-valores-en-r"><i class="fa fa-check"></i><b>2.8</b> Tipos de valores en R</a>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#ayuda-en-r"><i class="fa fa-check"></i><b>1.6</b> Ayuda en R</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html"><i class="fa fa-check"></i><b>2</b> Bases prácticas en R</a>
 <ul>
-<li class="chapter" data-level="2.8.1" data-path="intro.html"><a href="intro.html#valores-booleanos"><i class="fa fa-check"></i><b>2.8.1</b> Valores booleanos</a></li>
-<li class="chapter" data-level="2.8.2" data-path="intro.html"><a href="intro.html#caracter"><i class="fa fa-check"></i><b>2.8.2</b> Caracter</a></li>
-<li class="chapter" data-level="2.8.3" data-path="intro.html"><a href="intro.html#enteros-y-números-numeric"><i class="fa fa-check"></i><b>2.8.3</b> Enteros y números (numeric)</a></li>
+<li class="chapter" data-level="2.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#expresiones-y-asignaciones"><i class="fa fa-check"></i><b>2.1</b> Expresiones y asignaciones</a></li>
+<li class="chapter" data-level="2.2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#movimiento-entre-directorios"><i class="fa fa-check"></i><b>2.2</b> Movimiento entre directorios</a></li>
+<li class="chapter" data-level="2.3" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#bash-en-r"><i class="fa fa-check"></i><b>2.3</b> Bash en R</a></li>
+<li class="chapter" data-level="2.4" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#operaciones-aritméticas"><i class="fa fa-check"></i><b>2.4</b> Operaciones aritméticas</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#prioridad-en-las-operaciones"><i class="fa fa-check"></i><b>2.4.1</b> Prioridad en las operaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#tipos-de-valores-en-r"><i class="fa fa-check"></i><b>2.5</b> Tipos de valores en R</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#valores-booleanos"><i class="fa fa-check"></i><b>2.5.1</b> Valores booleanos</a></li>
+<li class="chapter" data-level="2.5.2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#caracter"><i class="fa fa-check"></i><b>2.5.2</b> Caracter</a></li>
+<li class="chapter" data-level="2.5.3" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#enteros-y-números-numeric"><i class="fa fa-check"></i><b>2.5.3</b> Enteros y números (numeric)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="estructura.html"><a href="estructura.html"><i class="fa fa-check"></i><b>3</b> Vectores</a>
@@ -232,7 +242,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.2" data-path="matrices.html"><a href="matrices.html#dimensiones-de-un-matriz"><i class="fa fa-check"></i><b>4.2</b> Dimensiones de un matriz</a></li>
 <li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#creación-de-matriz-vacia"><i class="fa fa-check"></i><b>4.3</b> Creación de matriz “vacia”</a></li>
 <li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#operaciones-rbind-y-cbind-en-r-para-matrices"><i class="fa fa-check"></i><b>4.4</b> Operaciones rbind y cbind en R para Matrices</a></li>
-<li class="chapter" data-level="4.5" data-path="matrices.html"><a href="matrices.html#uso-de-rbind-para-unir-matrices-por-filas"><i class="fa fa-check"></i><b>4.5</b> Uso de <code>rbind()</code> para unir matrices por filas</a></li>
+<li class="chapter" data-level="4.5" data-path="matrices.html"><a href="matrices.html#uso-de-rbind-para-unir-matrices-por-renglones"><i class="fa fa-check"></i><b>4.5</b> Uso de <code>rbind()</code> para unir matrices por renglones</a></li>
 <li class="chapter" data-level="4.6" data-path="matrices.html"><a href="matrices.html#uso-de-cbind-para-unir-matrices-por-columnas"><i class="fa fa-check"></i><b>4.6</b> Uso de cbind() para unir matrices por columnas</a></li>
 <li class="chapter" data-level="4.7" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.7</b> Operaciones con matrices</a>
 <ul>
@@ -255,17 +265,19 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="5.1" data-path="data-frames.html"><a href="data-frames.html#crear-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.1</b> Crear un Dataframe en R</a></li>
 <li class="chapter" data-level="5.2" data-path="data-frames.html"><a href="data-frames.html#acceder-a-los-datos-de-un-dataframe"><i class="fa fa-check"></i><b>5.2</b> Acceder a los datos de un dataframe</a></li>
-<li class="chapter" data-level="5.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-filas-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.3</b> Agregar y eliminar filas y columnas en un Dataframe en R</a>
+<li class="chapter" data-level="5.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-renglones-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.3</b> Agregar y eliminar renglones y columnas en un Dataframe en R</a></li>
+<li class="chapter" data-level="5.4" data-path="data-frames.html"><a href="data-frames.html#importar-archivos-externos"><i class="fa fa-check"></i><b>5.4</b> Importar archivos externos</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-csv-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Importar un archivo csv en R</a></li>
-<li class="chapter" data-level="5.3.2" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>5.3.2</b> Importar un archivo TSV en R</a></li>
-<li class="chapter" data-level="5.3.3" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>5.3.3</b> Importar un archivo Excel en R</a></li>
+<li class="chapter" data-level="5.4.1" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-csv-en-r"><i class="fa fa-check"></i><b>5.4.1</b> Importar un archivo csv en R</a></li>
+<li class="chapter" data-level="5.4.2" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>5.4.2</b> Importar un archivo TSV en R</a></li>
+<li class="chapter" data-level="5.4.3" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>5.4.3</b> Importar un archivo Excel en R</a></li>
+<li class="chapter" data-level="5.4.4" data-path="data-frames.html"><a href="data-frames.html#ejercicios-1"><i class="fa fa-check"></i><b>5.4.4</b> Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="Listas.html"><a href="Listas.html"><i class="fa fa-check"></i><b>6</b> Listas</a>
 <ul>
 <li class="chapter" data-level="6.0.1" data-path="Listas.html"><a href="Listas.html#acceso-por-nombre"><i class="fa fa-check"></i><b>6.0.1</b> Acceso por Nombre</a></li>
-<li class="chapter" data-level="6.1" data-path="Listas.html"><a href="Listas.html#ejercicios-1"><i class="fa fa-check"></i><b>6.1</b> Ejercicios</a>
+<li class="chapter" data-level="6.1" data-path="Listas.html"><a href="Listas.html#ejercicios-2"><i class="fa fa-check"></i><b>6.1</b> Ejercicios</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="Listas.html"><a href="Listas.html#ejercicios-propuestos-con-listas"><i class="fa fa-check"></i><b>6.1.1</b> Ejercicios Propuestos con listas</a></li>
 </ul></li>
@@ -287,7 +299,7 @@ div.csl-indent {
 <li class="chapter" data-level="7.4" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-si-de-otro-modo"><i class="fa fa-check"></i><b>7.4</b> If … else (si … de otro modo)</a></li>
 <li class="chapter" data-level="7.5" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ifelse"><i class="fa fa-check"></i><b>7.5</b> ifelse</a></li>
 <li class="chapter" data-level="7.6" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-if-else-si-si-no-si-si-no-si-si-no"><i class="fa fa-check"></i><b>7.6</b> If … else if … else ( si, si no si , si no si, si no)</a></li>
-<li class="chapter" data-level="7.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-3"><i class="fa fa-check"></i><b>7.7</b> Ejercicios</a></li>
+<li class="chapter" data-level="7.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-4"><i class="fa fa-check"></i><b>7.7</b> Ejercicios</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>8</b> Funciones en R</a>
 <ul>
@@ -303,65 +315,25 @@ div.csl-indent {
 <li class="chapter" data-level="8.6" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-factorial-de-un-número"><i class="fa fa-check"></i><b>8.6</b> Definir una función para calcular el factorial de un número</a></li>
 <li class="chapter" data-level="8.7" data-path="functions.html"><a href="functions.html#definir-una-función-para-verificar-si-un-número-es-primo"><i class="fa fa-check"></i><b>8.7</b> Definir una función para verificar si un número es primo</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="rprojects.html"><a href="rprojects.html"><i class="fa fa-check"></i><b>9</b> RProjects</a>
+<li class="chapter" data-level="9" data-path="plots.html"><a href="plots.html"><i class="fa fa-check"></i><b>9</b> Gráficos</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="rprojects.html"><a href="rprojects.html#introducción-a-r-projects-en-rstudio"><i class="fa fa-check"></i><b>9.1</b> Introducción a R Projects en RStudio</a></li>
-<li class="chapter" data-level="9.2" data-path="rprojects.html"><a href="rprojects.html#gestión-de-proyectos-organización-y-buenas-prácticas"><i class="fa fa-check"></i><b>9.2</b> Gestión de proyectos: organización y buenas prácticas</a></li>
-<li class="chapter" data-level="9.3" data-path="rprojects.html"><a href="rprojects.html#colaboración-y-control-de-versiones-con-git-y-github"><i class="fa fa-check"></i><b>9.3</b> Colaboración y control de versiones con Git y GitHub</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html"><i class="fa fa-check"></i><b>10</b> Visualización de datos con ggplot2</a>
+<li class="chapter" data-level="9.1" data-path="plots.html"><a href="plots.html#visualización-de-datos-con-ggplot2"><i class="fa fa-check"></i><b>9.1</b> Visualización de datos con ggplot2</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#introducción"><i class="fa fa-check"></i><b>10.1</b> Introducción</a></li>
-<li class="chapter" data-level="10.2" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#configuración-inicial"><i class="fa fa-check"></i><b>10.2</b> Configuración inicial</a></li>
-<li class="chapter" data-level="10.3" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#creación-de-un-gráfico-básico"><i class="fa fa-check"></i><b>10.3</b> Creación de un gráfico básico</a></li>
-<li class="chapter" data-level="10.4" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#personalización-de-gráficos"><i class="fa fa-check"></i><b>10.4</b> Personalización de gráficos</a></li>
-<li class="chapter" data-level="10.5" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#soluciones-a-los-ejercicios-sugeridos"><i class="fa fa-check"></i><b>10.5</b> Soluciones a los ejercicios sugeridos</a></li>
-<li class="chapter" data-level="10.6" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicios-resueltos"><i class="fa fa-check"></i><b>10.6</b> Ejercicios resueltos</a>
-<ul>
-<li class="chapter" data-level="10.6.1" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-1-gráfico-de-dispersión-básico"><i class="fa fa-check"></i><b>10.6.1</b> Ejercicio 1: Gráfico de dispersión básico</a></li>
-<li class="chapter" data-level="10.6.2" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-2-diferenciación-por-especie"><i class="fa fa-check"></i><b>10.6.2</b> Ejercicio 2: Diferenciación por especie</a></li>
-<li class="chapter" data-level="10.6.3" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-3-histograma-de-masa-corporal"><i class="fa fa-check"></i><b>10.6.3</b> Ejercicio 3: Histograma de masa corporal</a></li>
-<li class="chapter" data-level="10.6.4" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-4-barras-de-error-por-especie"><i class="fa fa-check"></i><b>10.6.4</b> Ejercicio 4: Barras de error por especie</a></li>
-<li class="chapter" data-level="10.6.5" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-6-facetado-por-islas"><i class="fa fa-check"></i><b>10.6.5</b> Ejercicio 6: Facetado por islas</a></li>
-<li class="chapter" data-level="10.6.6" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-7-densidad-de-masa-corporal"><i class="fa fa-check"></i><b>10.6.6</b> Ejercicio 7: Densidad de masa corporal</a></li>
-<li class="chapter" data-level="10.6.7" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen"><i class="fa fa-check"></i><b>10.6.7</b> Ejercicio 8: Gráfico de violín de la longitud del culmen</a></li>
-<li class="chapter" data-level="10.6.8" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-9-puntos-superpuestos-en-boxplot"><i class="fa fa-check"></i><b>10.6.8</b> Ejercicio 9: Puntos superpuestos en boxplot</a></li>
-<li class="chapter" data-level="10.6.9" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo"><i class="fa fa-check"></i><b>10.6.9</b> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo</a></li>
-<li class="chapter" data-level="10.6.10" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto"><i class="fa fa-check"></i><b>10.6.10</b> Ejercicio 11: Gráfico de dispersión con tamaño de punto</a></li>
-<li class="chapter" data-level="10.6.11" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-12-barras-apiladas-de-especies-por-isla"><i class="fa fa-check"></i><b>10.6.11</b> Ejercicio 12: Barras apiladas de especies por isla</a></li>
-<li class="chapter" data-level="10.6.12" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-13-gráfico-de-correlación-con-texto"><i class="fa fa-check"></i><b>10.6.12</b> Ejercicio 13: Gráfico de correlación con texto</a></li>
-<li class="chapter" data-level="10.6.13" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen"><i class="fa fa-check"></i><b>10.6.13</b> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen</a></li>
-<li class="chapter" data-level="10.6.14" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables"><i class="fa fa-check"></i><b>10.6.14</b> Ejercicio 15: Gráfico de interacción entre tres variables</a></li>
-<li class="chapter" data-level="10.6.15" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicios-propuestos"><i class="fa fa-check"></i><b>10.6.15</b> Ejercicios propuestos</a></li>
+<li class="chapter" data-level="9.1.1" data-path="plots.html"><a href="plots.html#introducción"><i class="fa fa-check"></i><b>9.1.1</b> Introducción</a></li>
+<li class="chapter" data-level="9.1.2" data-path="plots.html"><a href="plots.html#configuración-inicial"><i class="fa fa-check"></i><b>9.1.2</b> Configuración inicial</a></li>
+<li class="chapter" data-level="9.1.3" data-path="plots.html"><a href="plots.html#creación-de-un-gráfico-básico"><i class="fa fa-check"></i><b>9.1.3</b> Creación de un gráfico básico</a></li>
+<li class="chapter" data-level="9.1.4" data-path="plots.html"><a href="plots.html#personalización-de-gráficos"><i class="fa fa-check"></i><b>9.1.4</b> Personalización de gráficos</a></li>
+<li class="chapter" data-level="9.1.5" data-path="plots.html"><a href="plots.html#soluciones-a-los-ejercicios-sugeridos"><i class="fa fa-check"></i><b>9.1.5</b> Soluciones a los ejercicios sugeridos</a></li>
+<li class="chapter" data-level="9.1.6" data-path="plots.html"><a href="plots.html#ejercicios-resueltos"><i class="fa fa-check"></i><b>9.1.6</b> Ejercicios resueltos</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html"><i class="fa fa-check"></i><b>11</b> Visualización de datos con ggplot2</a>
+<li class="chapter" data-level="10" data-path="rprojects.html"><a href="rprojects.html"><i class="fa fa-check"></i><b>10</b> RProjects</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#introducción-1"><i class="fa fa-check"></i><b>11.1</b> Introducción</a></li>
-<li class="chapter" data-level="11.2" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#configuración-inicial-1"><i class="fa fa-check"></i><b>11.2</b> Configuración inicial</a></li>
-<li class="chapter" data-level="11.3" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#creación-de-un-gráfico-básico-1"><i class="fa fa-check"></i><b>11.3</b> Creación de un gráfico básico</a></li>
-<li class="chapter" data-level="11.4" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#personalización-de-gráficos-1"><i class="fa fa-check"></i><b>11.4</b> Personalización de gráficos</a></li>
-<li class="chapter" data-level="11.5" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#soluciones-a-los-ejercicios-sugeridos-1"><i class="fa fa-check"></i><b>11.5</b> Soluciones a los ejercicios sugeridos</a></li>
-<li class="chapter" data-level="11.6" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicios-resueltos-1"><i class="fa fa-check"></i><b>11.6</b> Ejercicios resueltos</a>
-<ul>
-<li class="chapter" data-level="11.6.1" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-1-gráfico-de-dispersión-básico-1"><i class="fa fa-check"></i><b>11.6.1</b> Ejercicio 1: Gráfico de dispersión básico</a></li>
-<li class="chapter" data-level="11.6.2" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-2-diferenciación-por-especie-1"><i class="fa fa-check"></i><b>11.6.2</b> Ejercicio 2: Diferenciación por especie</a></li>
-<li class="chapter" data-level="11.6.3" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-3-histograma-de-masa-corporal-1"><i class="fa fa-check"></i><b>11.6.3</b> Ejercicio 3: Histograma de masa corporal</a></li>
-<li class="chapter" data-level="11.6.4" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-4-barras-de-error-por-especie-1"><i class="fa fa-check"></i><b>11.6.4</b> Ejercicio 4: Barras de error por especie</a></li>
-<li class="chapter" data-level="11.6.5" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-6-facetado-por-islas-1"><i class="fa fa-check"></i><b>11.6.5</b> Ejercicio 6: Facetado por islas</a></li>
-<li class="chapter" data-level="11.6.6" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-7-densidad-de-masa-corporal-1"><i class="fa fa-check"></i><b>11.6.6</b> Ejercicio 7: Densidad de masa corporal</a></li>
-<li class="chapter" data-level="11.6.7" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen-1"><i class="fa fa-check"></i><b>11.6.7</b> Ejercicio 8: Gráfico de violín de la longitud del culmen</a></li>
-<li class="chapter" data-level="11.6.8" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-9-puntos-superpuestos-en-boxplot-1"><i class="fa fa-check"></i><b>11.6.8</b> Ejercicio 9: Puntos superpuestos en boxplot</a></li>
-<li class="chapter" data-level="11.6.9" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo-1"><i class="fa fa-check"></i><b>11.6.9</b> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo</a></li>
-<li class="chapter" data-level="11.6.10" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto-1"><i class="fa fa-check"></i><b>11.6.10</b> Ejercicio 11: Gráfico de dispersión con tamaño de punto</a></li>
-<li class="chapter" data-level="11.6.11" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-12-barras-apiladas-de-especies-por-isla-1"><i class="fa fa-check"></i><b>11.6.11</b> Ejercicio 12: Barras apiladas de especies por isla</a></li>
-<li class="chapter" data-level="11.6.12" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-13-gráfico-de-correlación-con-texto-1"><i class="fa fa-check"></i><b>11.6.12</b> Ejercicio 13: Gráfico de correlación con texto</a></li>
-<li class="chapter" data-level="11.6.13" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen-1"><i class="fa fa-check"></i><b>11.6.13</b> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen</a></li>
-<li class="chapter" data-level="11.6.14" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables-1"><i class="fa fa-check"></i><b>11.6.14</b> Ejercicio 15: Gráfico de interacción entre tres variables</a></li>
-<li class="chapter" data-level="11.6.15" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicios-propuestos-1"><i class="fa fa-check"></i><b>11.6.15</b> Ejercicios propuestos</a></li>
+<li class="chapter" data-level="10.1" data-path="rprojects.html"><a href="rprojects.html#introducción-a-r-projects-en-rstudio"><i class="fa fa-check"></i><b>10.1</b> Introducción a R Projects en RStudio</a></li>
+<li class="chapter" data-level="10.2" data-path="rprojects.html"><a href="rprojects.html#gestión-de-proyectos-organización-y-buenas-prácticas"><i class="fa fa-check"></i><b>10.2</b> Gestión de proyectos: organización y buenas prácticas</a></li>
+<li class="chapter" data-level="10.3" data-path="rprojects.html"><a href="rprojects.html#colaboración-y-control-de-versiones-con-git-y-github"><i class="fa fa-check"></i><b>10.3</b> Colaboración y control de versiones con Git y GitHub</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>12</b> Referencias</a></li>
+<li class="chapter" data-level="11" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>11</b> Referencias</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -394,9 +366,9 @@ div.csl-indent {
 <h2><span class="header-section-number">7.1</span> If (si condicional)<a href="Estructuras_de_seleccion.html#if-si-condicional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>La instrucción <code>if</code> nos permite probar una condición y esa condición debe arrojar un valor booleano, es decir, un valor de verdad (<code>TRUE</code> o <code>FALSE</code>) Si la condición es verdadera se ejecuta lo que está dentro de los corchetes, de lo contrario, ejecuta lo que sigue después del corchete de cierre.</p>
 <p><strong>Definición</strong>: Lo que se encuentra dentra del corchete se llama cuerpo ( <em>body</em> ) de la declaración <code>if</code></p>
-<div class="figure">
-<img src="If_R.001.jpeg" id="id" class="class" style="width:100.0%;height:100.0%" alt="" />
-<p class="caption">Diagrama de flujo del If</p>
+<div class="float" id="id">
+<img src="If_R.001.jpeg" class="class" style="width:100.0%;height:100.0%" alt="Diagrama de flujo del If" />
+<div class="figcaption">Diagrama de flujo del If</div>
 </div>
 <p>La sintaxis de una condición <code>if</code> consiste en lo siguiente:</p>
 <p><code>if (condicion){</code></p>
@@ -405,10 +377,10 @@ div.csl-indent {
 <p><code>}</code></p>
 <div id="sintaxis" class="section level3 hasAnchor" number="7.1.1">
 <h3><span class="header-section-number">7.1.1</span> Sintaxis<a href="Estructuras_de_seleccion.html#sintaxis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb378"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb378-1"><a href="Estructuras_de_seleccion.html#cb378-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">&lt;</span>condition<span class="sc">&gt;</span>) {</span>
-<span id="cb378-2"><a href="Estructuras_de_seleccion.html#cb378-2" aria-hidden="true" tabindex="-1"></a>        <span class="do">## Hace algo</span></span>
-<span id="cb378-3"><a href="Estructuras_de_seleccion.html#cb378-3" aria-hidden="true" tabindex="-1"></a>} </span>
-<span id="cb378-4"><a href="Estructuras_de_seleccion.html#cb378-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Continúa con el resto del código</span></span></code></pre></div>
+<div class="sourceCode" id="cb378"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb378-1"><a href="Estructuras_de_seleccion.html#cb378-1" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">&lt;</span>condition<span class="sc">&gt;</span>) {</span>
+<span id="cb378-2"><a href="Estructuras_de_seleccion.html#cb378-2" tabindex="-1"></a>        <span class="do">## Hace algo</span></span>
+<span id="cb378-3"><a href="Estructuras_de_seleccion.html#cb378-3" tabindex="-1"></a>} </span>
+<span id="cb378-4"><a href="Estructuras_de_seleccion.html#cb378-4" tabindex="-1"></a><span class="do">## Continúa con el resto del código</span></span></code></pre></div>
 </div>
 <div id="errores-comunes-en-el-if" class="section level3 hasAnchor" number="7.1.2">
 <h3><span class="header-section-number">7.1.2</span> Errores comunes en el <code>if</code><a href="Estructuras_de_seleccion.html#errores-comunes-en-el-if" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -419,30 +391,30 @@ div.csl-indent {
 <li>Este no es un error, es más bien una advertencia, si la condición arroja un sólo valor de verdad sólo toma en cuenta el primero de ellos.</li>
 </ol>
 <p>###Ejemplos de uso del <code>if</code></p>
-<div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb379-1"><a href="Estructuras_de_seleccion.html#cb379-1" aria-hidden="true" tabindex="-1"></a>mayor_de_edad<span class="ot">&lt;-</span><span class="dv">18</span></span>
-<span id="cb379-2"><a href="Estructuras_de_seleccion.html#cb379-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb379-3"><a href="Estructuras_de_seleccion.html#cb379-3" aria-hidden="true" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">20</span></span>
-<span id="cb379-4"><a href="Estructuras_de_seleccion.html#cb379-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb379-5"><a href="Estructuras_de_seleccion.html#cb379-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(edad <span class="sc">&gt;=</span>mayor_de_edad){</span>
-<span id="cb379-6"><a href="Estructuras_de_seleccion.html#cb379-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Eres mayor de edad&quot;</span>)</span>
-<span id="cb379-7"><a href="Estructuras_de_seleccion.html#cb379-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb379-1"><a href="Estructuras_de_seleccion.html#cb379-1" tabindex="-1"></a>mayor_de_edad<span class="ot">&lt;-</span><span class="dv">18</span></span>
+<span id="cb379-2"><a href="Estructuras_de_seleccion.html#cb379-2" tabindex="-1"></a></span>
+<span id="cb379-3"><a href="Estructuras_de_seleccion.html#cb379-3" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">20</span></span>
+<span id="cb379-4"><a href="Estructuras_de_seleccion.html#cb379-4" tabindex="-1"></a></span>
+<span id="cb379-5"><a href="Estructuras_de_seleccion.html#cb379-5" tabindex="-1"></a><span class="cf">if</span>(edad <span class="sc">&gt;=</span>mayor_de_edad){</span>
+<span id="cb379-6"><a href="Estructuras_de_seleccion.html#cb379-6" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Eres mayor de edad&quot;</span>)</span>
+<span id="cb379-7"><a href="Estructuras_de_seleccion.html#cb379-7" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Eres mayor de edad&quot;</code></pre>
-<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb381-1"><a href="Estructuras_de_seleccion.html#cb381-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="dv">5</span><span class="sc">+</span><span class="dv">4</span></span>
-<span id="cb381-2"><a href="Estructuras_de_seleccion.html#cb381-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb381-1"><a href="Estructuras_de_seleccion.html#cb381-1" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="dv">5</span><span class="sc">+</span><span class="dv">4</span></span>
+<span id="cb381-2"><a href="Estructuras_de_seleccion.html#cb381-2" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
 <pre><code>## [1] 9</code></pre>
-<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="Estructuras_de_seleccion.html#cb383-1" aria-hidden="true" tabindex="-1"></a>minimo<span class="ot">&lt;-</span><span class="dv">20000</span></span>
-<span id="cb383-2"><a href="Estructuras_de_seleccion.html#cb383-2" aria-hidden="true" tabindex="-1"></a>dinero<span class="ot">&lt;-</span><span class="dv">15000</span></span>
-<span id="cb383-3"><a href="Estructuras_de_seleccion.html#cb383-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb383-4"><a href="Estructuras_de_seleccion.html#cb383-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(dinero<span class="sc">&gt;=</span>minimo){</span>
-<span id="cb383-5"><a href="Estructuras_de_seleccion.html#cb383-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;¿Cómo está Cancún?&quot;</span>)</span>
-<span id="cb383-6"><a href="Estructuras_de_seleccion.html#cb383-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;La vida es buena&quot;</span>)</span>
-<span id="cb383-7"><a href="Estructuras_de_seleccion.html#cb383-7" aria-hidden="true" tabindex="-1"></a>  sobrante<span class="ot">&lt;-</span>dinero<span class="sc">-</span>minimo</span>
-<span id="cb383-8"><a href="Estructuras_de_seleccion.html#cb383-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;Me queda $&quot;</span>, sobrante))</span>
-<span id="cb383-9"><a href="Estructuras_de_seleccion.html#cb383-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb383-10"><a href="Estructuras_de_seleccion.html#cb383-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Acá sigue&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="Estructuras_de_seleccion.html#cb383-1" tabindex="-1"></a>minimo<span class="ot">&lt;-</span><span class="dv">20000</span></span>
+<span id="cb383-2"><a href="Estructuras_de_seleccion.html#cb383-2" tabindex="-1"></a>dinero<span class="ot">&lt;-</span><span class="dv">15000</span></span>
+<span id="cb383-3"><a href="Estructuras_de_seleccion.html#cb383-3" tabindex="-1"></a></span>
+<span id="cb383-4"><a href="Estructuras_de_seleccion.html#cb383-4" tabindex="-1"></a><span class="cf">if</span>(dinero<span class="sc">&gt;=</span>minimo){</span>
+<span id="cb383-5"><a href="Estructuras_de_seleccion.html#cb383-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;¿Cómo está Cancún?&quot;</span>)</span>
+<span id="cb383-6"><a href="Estructuras_de_seleccion.html#cb383-6" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;La vida es buena&quot;</span>)</span>
+<span id="cb383-7"><a href="Estructuras_de_seleccion.html#cb383-7" tabindex="-1"></a>  sobrante<span class="ot">&lt;-</span>dinero<span class="sc">-</span>minimo</span>
+<span id="cb383-8"><a href="Estructuras_de_seleccion.html#cb383-8" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;Me queda $&quot;</span>, sobrante))</span>
+<span id="cb383-9"><a href="Estructuras_de_seleccion.html#cb383-9" tabindex="-1"></a>}</span>
+<span id="cb383-10"><a href="Estructuras_de_seleccion.html#cb383-10" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Acá sigue&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Acá sigue&quot;</code></pre>
-<div id="ejercicios-2" class="section level4 hasAnchor" number="7.1.2.1">
-<h4><span class="header-section-number">7.1.2.1</span> Ejercicios<a href="Estructuras_de_seleccion.html#ejercicios-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="ejercicios-3" class="section level4 hasAnchor" number="7.1.2.1">
+<h4><span class="header-section-number">7.1.2.1</span> Ejercicios<a href="Estructuras_de_seleccion.html#ejercicios-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>Elabora un programa que compare tu estatura con tu ídolx y determine si eres más altx.</li>
 <li>Toma dos archivos fasta de virus distintos. Leelos con Biostrings y compara sus tamaños ( en bp) y determina si el primero es más grande que el segundo.</li>
@@ -463,14 +435,14 @@ div.csl-indent {
 <p>También podría ser que basta con que una de ellas sea cierta para que haga algo.</p>
 <div id="and" class="section level3 hasAnchor" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> And (&amp;)<a href="Estructuras_de_seleccion.html#and" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El operador booleano <code>&amp;</code> representa el y lógico. Estos operadores binarios nos sirven para unir al menos dos enunciados que tienen valor de verdadero o falso (Tengo dinero (V/F), Tengo vacaciones (V/F))</p>
-<p>Con estas dos operaciones puedo unirlas utilizando el operador <code>y</code> lógico (AND (<code>&amp;</code>) representado en R con el símbolo del ampersand (<code>&amp;</code>)</p>
+<p>El operador booleano <code>&amp;</code> representa el “Y” lógico. Estos operadores binarios nos sirven para unir al menos dos enunciados que tienen valor de verdadero o falso (Tengo dinero (V/F), Tengo vacaciones (V/F))</p>
+<p>Con estas dos operaciones puedo unirlas utilizando el operador “Y” lógico (AND (<code>&amp;</code>)) representado en R con el símbolo del <em>ampersand</em> (<code>&amp;</code>)</p>
 <p>Tengo dinero AND Tengo vaciones</p>
-<p>Para saber el valor booleano (V/F) del enunciado anterior debemos concocer los valores de verdad de los enunciados por separado</p>
+<p>Para saber el valor booleano (V/F) del enunciado anterior debemos conocer los valores de verdad de los enunciados por separado</p>
 <p>Por ejemplo, podemos representar al primer enunciado por <code>p</code> y al segundo enunciado por <code>q</code></p>
 <p><code>p: Tengo dinero</code></p>
 <p><code>q: Tengo vacaciones</code></p>
-<p>Para saber cuál es el valor de verdad del enunciado compuesto debemos ver cuáles son todas las combinaciones de valores de verdad de los enunciados que la componen: p verdadero y q verdadero, p falso y q verdadero, p falso y q verdadero, p falso y q falso. Eso se resumen en las tablas de verdad de los operadores</p>
+<p>Para saber cuál es el valor de verdad del enunciado compuesto debemos ver cuáles son todas las combinaciones de valores de verdad de los enunciados que la componen: p verdadero y q verdadero, p verdadero y q falso, p falso y q verdadero, p falso y q falso. Eso se resumen en las tablas de verdad de los operadores</p>
 <table>
 <caption>Tabla de verdad del AND</caption>
 <thead>
@@ -503,19 +475,19 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<p>Es decir, el <code>&amp;</code> solo es <strong>verdadero</strong> cuando ambas condciones son <strong>verdaderas</strong>.</p>
+<p>Es decir, el <code>&amp;</code> solo es <strong>verdadero</strong> cuando ambas condiciones son <strong>verdaderas</strong>.</p>
 <p>Esto representa lo que se observa en la realidad: es decir, solo hago algo si tengo y tengo vacaciones. Si una de ellas no se cumple (es decir, es falsa) entonces no se lleva a cabo la acción.</p>
 </div>
 <div id="or" class="section level3 hasAnchor" number="7.2.2">
 <h3><span class="header-section-number">7.2.2</span> OR (|)<a href="Estructuras_de_seleccion.html#or" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>El operador booleano <code>|</code> representa el <code>o</code> lógico. Estos operadores binarios nos sirven para unir al menos dos enunciados que tienen valor de verdadero o falso (Tengo dinero (V/F), Tengo vacaciones (V/F))</p>
-<p>Con estas dos operaciones puedo unirlas utilizando el operador <code>y</code> lógico (OR (<code>|</code>) representado en R con el símbolo de <em>la barrita</em> (<code>|</code>)</p>
+<p>El operador booleano <code>|</code> representa el “O” lógico. Estos operadores binarios nos sirven para unir al menos dos enunciados que tienen valor de verdadero o falso (Tengo dinero (V/F), Tengo vacaciones (V/F))</p>
+<p>Con estas dos operaciones puedo unirlas utilizando el operador <code>O</code> lógico (OR (<code>|</code>)) representado en R con el símbolo de <em>la barrita</em> (<code>|</code>)</p>
 <p>Tengo dinero OR Tengo vaciones</p>
-<p>Para saber el valor booleano (V/F) del enunciado anterior debemos concocer los valores de verdad de los enunciados por separado</p>
-<p>Por ejmplo podemos representar al primer enunciado por <code>p</code> y al segundo enunciado por <code>q</code></p>
+<p>Para saber el valor booleano (V/F) del enunciado anterior debemos conocer los valores de verdad de los enunciados por separado</p>
+<p>Por ejemplo podemos representar al primer enunciado por <code>p</code> y al segundo enunciado por <code>q</code></p>
 <p><code>p: Tengo dinero</code></p>
 <p><code>q: Tengo vacaciones</code></p>
-<p>Para saber cuál es el valor de verdad del enunciado compuesto debemos ver cuáles son todas las combinaciones de valores de verdad de los enunciados que la componen: p verdadero y q verdadero, p falso y q verdadero, p falso y q verdadero, p falso y q falso. Eso se resumen en las tablas de verdad de los operadores</p>
+<p>Para saber cuál es el valor de verdad del enunciado compuesto debemos ver cuáles son todas las combinaciones de valores de verdad de los enunciados que la componen: p verdadero y q verdadero, p verdadero y q falso, p falso y q verdadero, p falso y q falso. Eso se resumen en las tablas de verdad de los operadores</p>
 <table>
 <caption>Tabla de verdad del operador OR</caption>
 <thead>
@@ -553,24 +525,24 @@ div.csl-indent {
 </div>
 <div id="ejemplos-de-combinaciones" class="section level3 hasAnchor" number="7.2.3">
 <h3><span class="header-section-number">7.2.3</span> Ejemplos de combinaciones<a href="Estructuras_de_seleccion.html#ejemplos-de-combinaciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Por eejmplo es útil para intervalos</p>
+<p>Por ejemplo es útil para intervalos</p>
 <p><span class="math display">\[
 18 \leq edad \leq 29
 \]</span></p>
 <p>Esta condición la podemos expresar mediante la combinación de dos: la edad debe ser mayor igual a 18 y (<strong>AND</strong>, <code>&amp;</code>) la edad debe ser menor o igual que 29</p>
-<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="Estructuras_de_seleccion.html#cb385-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">&amp;</span> edad <span class="sc">&lt;=</span><span class="dv">29</span>){</span>
-<span id="cb385-2"><a href="Estructuras_de_seleccion.html#cb385-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Te toca vacunarte&quot;</span>)</span>
-<span id="cb385-3"><a href="Estructuras_de_seleccion.html#cb385-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="Estructuras_de_seleccion.html#cb385-1" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">&amp;</span> edad <span class="sc">&lt;=</span><span class="dv">29</span>){</span>
+<span id="cb385-2"><a href="Estructuras_de_seleccion.html#cb385-2" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Te toca vacunarte&quot;</span>)</span>
+<span id="cb385-3"><a href="Estructuras_de_seleccion.html#cb385-3" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Te toca vacunarte&quot;</code></pre>
 <p><strong>Pregunta</strong>: ¿qué pasaría si se pone un <strong>OR</strong> como unión entre las dos condiciones</p>
-<div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb387-1"><a href="Estructuras_de_seleccion.html#cb387-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">|</span> edad <span class="sc">&lt;=</span><span class="dv">29</span>){</span>
-<span id="cb387-2"><a href="Estructuras_de_seleccion.html#cb387-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Te toca vacunarte&quot;</span>)</span>
-<span id="cb387-3"><a href="Estructuras_de_seleccion.html#cb387-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb387-1"><a href="Estructuras_de_seleccion.html#cb387-1" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">|</span> edad <span class="sc">&lt;=</span><span class="dv">29</span>){</span>
+<span id="cb387-2"><a href="Estructuras_de_seleccion.html#cb387-2" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Te toca vacunarte&quot;</span>)</span>
+<span id="cb387-3"><a href="Estructuras_de_seleccion.html#cb387-3" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Te toca vacunarte&quot;</code></pre>
 <p>o así (¿es lo mismo?)</p>
-<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb389-1"><a href="Estructuras_de_seleccion.html#cb389-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&lt;=</span> <span class="dv">29</span> <span class="sc">|</span> edad <span class="sc">&gt;=</span> <span class="dv">18</span>){</span>
-<span id="cb389-2"><a href="Estructuras_de_seleccion.html#cb389-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Te toca vacunarte&quot;</span>)</span>
-<span id="cb389-3"><a href="Estructuras_de_seleccion.html#cb389-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb389-1"><a href="Estructuras_de_seleccion.html#cb389-1" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&lt;=</span> <span class="dv">29</span> <span class="sc">|</span> edad <span class="sc">&gt;=</span> <span class="dv">18</span>){</span>
+<span id="cb389-2"><a href="Estructuras_de_seleccion.html#cb389-2" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Te toca vacunarte&quot;</span>)</span>
+<span id="cb389-3"><a href="Estructuras_de_seleccion.html#cb389-3" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Te toca vacunarte&quot;</code></pre>
 </div>
 </div>
@@ -584,37 +556,37 @@ div.csl-indent {
 <div id="if-else-si-de-otro-modo" class="section level2 hasAnchor" number="7.4">
 <h2><span class="header-section-number">7.4</span> If … else (si … de otro modo)<a href="Estructuras_de_seleccion.html#if-else-si-de-otro-modo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Si además quieres que se ejecute algo cuando la condición es <strong>falsa</strong> entonces debes usar la declaración <code>if … else</code></p>
-<div class="sourceCode" id="cb391"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb391-1"><a href="Estructuras_de_seleccion.html#cb391-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (condición) { <span class="co"># Si la condición es cierta</span></span>
-<span id="cb391-2"><a href="Estructuras_de_seleccion.html#cb391-2" aria-hidden="true" tabindex="-1"></a>hace esto</span>
-<span id="cb391-3"><a href="Estructuras_de_seleccion.html#cb391-3" aria-hidden="true" tabindex="-1"></a>y esto</span>
-<span id="cb391-4"><a href="Estructuras_de_seleccion.html#cb391-4" aria-hidden="true" tabindex="-1"></a>y esto</span>
-<span id="cb391-5"><a href="Estructuras_de_seleccion.html#cb391-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> { <span class="co"># De otro modo, es decir si es falsa hace lo que #está en el corchete</span></span>
-<span id="cb391-6"><a href="Estructuras_de_seleccion.html#cb391-6" aria-hidden="true" tabindex="-1"></a>entonces hace esto otro</span>
-<span id="cb391-7"><a href="Estructuras_de_seleccion.html#cb391-7" aria-hidden="true" tabindex="-1"></a>y esto otro</span>
-<span id="cb391-8"><a href="Estructuras_de_seleccion.html#cb391-8" aria-hidden="true" tabindex="-1"></a>y esto</span>
-<span id="cb391-9"><a href="Estructuras_de_seleccion.html#cb391-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<div class="figure">
-<img src="If_else.001.jpeg" id="id" class="class" style="width:100.0%;height:100.0%" alt="" />
-<p class="caption">Diagrama_if_else</p>
+<div class="sourceCode" id="cb391"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb391-1"><a href="Estructuras_de_seleccion.html#cb391-1" tabindex="-1"></a><span class="cf">if</span> (condición) { <span class="co"># Si la condición es cierta</span></span>
+<span id="cb391-2"><a href="Estructuras_de_seleccion.html#cb391-2" tabindex="-1"></a>hace esto</span>
+<span id="cb391-3"><a href="Estructuras_de_seleccion.html#cb391-3" tabindex="-1"></a>y esto</span>
+<span id="cb391-4"><a href="Estructuras_de_seleccion.html#cb391-4" tabindex="-1"></a>y esto</span>
+<span id="cb391-5"><a href="Estructuras_de_seleccion.html#cb391-5" tabindex="-1"></a>} <span class="cf">else</span> { <span class="co"># De otro modo, es decir si es falsa hace lo que #está en el corchete</span></span>
+<span id="cb391-6"><a href="Estructuras_de_seleccion.html#cb391-6" tabindex="-1"></a>entonces hace esto otro</span>
+<span id="cb391-7"><a href="Estructuras_de_seleccion.html#cb391-7" tabindex="-1"></a>y esto otro</span>
+<span id="cb391-8"><a href="Estructuras_de_seleccion.html#cb391-8" tabindex="-1"></a>y esto</span>
+<span id="cb391-9"><a href="Estructuras_de_seleccion.html#cb391-9" tabindex="-1"></a>}</span></code></pre></div>
+<div class="float" id="id">
+<img src="If_else.001.jpeg" class="class" style="width:100.0%;height:100.0%" alt="Diagrama_if_else" />
+<div class="figcaption">Diagrama_if_else</div>
 </div>
-<div class="sourceCode" id="cb392"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb392-1"><a href="Estructuras_de_seleccion.html#cb392-1" aria-hidden="true" tabindex="-1"></a>minimo<span class="ot">&lt;-</span><span class="dv">20000</span></span>
-<span id="cb392-2"><a href="Estructuras_de_seleccion.html#cb392-2" aria-hidden="true" tabindex="-1"></a>vacaciones<span class="ot">&lt;-</span><span class="st">&quot;SI&quot;</span></span>
-<span id="cb392-3"><a href="Estructuras_de_seleccion.html#cb392-3" aria-hidden="true" tabindex="-1"></a>dinero<span class="ot">&lt;-</span><span class="dv">21000</span></span>
-<span id="cb392-4"><a href="Estructuras_de_seleccion.html#cb392-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(dinero<span class="sc">&gt;=</span>minimo <span class="sc">&amp;</span> vacaciones<span class="sc">==</span><span class="st">&quot;SI&quot;</span>){</span>
-<span id="cb392-5"><a href="Estructuras_de_seleccion.html#cb392-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Me voy a la playa, looser&quot;</span>)</span>
-<span id="cb392-6"><a href="Estructuras_de_seleccion.html#cb392-6" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb392-7"><a href="Estructuras_de_seleccion.html#cb392-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Me quedo en mi casa&quot;</span>)</span>
-<span id="cb392-8"><a href="Estructuras_de_seleccion.html#cb392-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb392"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb392-1"><a href="Estructuras_de_seleccion.html#cb392-1" tabindex="-1"></a>minimo<span class="ot">&lt;-</span><span class="dv">20000</span></span>
+<span id="cb392-2"><a href="Estructuras_de_seleccion.html#cb392-2" tabindex="-1"></a>vacaciones<span class="ot">&lt;-</span><span class="st">&quot;SI&quot;</span></span>
+<span id="cb392-3"><a href="Estructuras_de_seleccion.html#cb392-3" tabindex="-1"></a>dinero<span class="ot">&lt;-</span><span class="dv">21000</span></span>
+<span id="cb392-4"><a href="Estructuras_de_seleccion.html#cb392-4" tabindex="-1"></a><span class="cf">if</span>(dinero<span class="sc">&gt;=</span>minimo <span class="sc">&amp;</span> vacaciones<span class="sc">==</span><span class="st">&quot;SI&quot;</span>){</span>
+<span id="cb392-5"><a href="Estructuras_de_seleccion.html#cb392-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Me voy a la playa, looser&quot;</span>)</span>
+<span id="cb392-6"><a href="Estructuras_de_seleccion.html#cb392-6" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb392-7"><a href="Estructuras_de_seleccion.html#cb392-7" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Me quedo en mi casa&quot;</span>)</span>
+<span id="cb392-8"><a href="Estructuras_de_seleccion.html#cb392-8" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Me voy a la playa, looser&quot;</code></pre>
 </div>
 <div id="ifelse" class="section level2 hasAnchor" number="7.5">
 <h2><span class="header-section-number">7.5</span> ifelse<a href="Estructuras_de_seleccion.html#ifelse" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Si la condición es muy simple ,tanto para cuando es verdadero como cuando es falso se puede implementar la función <code>ifelse</code> en una línea. Es equivalente a la condición compuesta pero ahorramos código.</p>
-<div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb394-1"><a href="Estructuras_de_seleccion.html#cb394-1" aria-hidden="true" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">21</span></span>
-<span id="cb394-2"><a href="Estructuras_de_seleccion.html#cb394-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(edad<span class="sc">&gt;=</span><span class="dv">18</span>, <span class="st">&quot;Ya eres grande&quot;</span>,<span class="st">&quot;Todavia no puedes beber (legalmente)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb394-1"><a href="Estructuras_de_seleccion.html#cb394-1" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">21</span></span>
+<span id="cb394-2"><a href="Estructuras_de_seleccion.html#cb394-2" tabindex="-1"></a><span class="fu">ifelse</span>(edad<span class="sc">&gt;=</span><span class="dv">18</span>, <span class="st">&quot;Ya eres grande&quot;</span>,<span class="st">&quot;Todavia no puedes beber (legalmente)&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Ya eres grande&quot;</code></pre>
-<div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb396-1"><a href="Estructuras_de_seleccion.html#cb396-1" aria-hidden="true" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">12</span></span>
-<span id="cb396-2"><a href="Estructuras_de_seleccion.html#cb396-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(edad<span class="sc">&gt;=</span><span class="dv">18</span>, <span class="st">&quot;Ya eres grande&quot;</span>,<span class="st">&quot;Todavia no puedes beber (legalmente)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb396-1"><a href="Estructuras_de_seleccion.html#cb396-1" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">12</span></span>
+<span id="cb396-2"><a href="Estructuras_de_seleccion.html#cb396-2" tabindex="-1"></a><span class="fu">ifelse</span>(edad<span class="sc">&gt;=</span><span class="dv">18</span>, <span class="st">&quot;Ya eres grande&quot;</span>,<span class="st">&quot;Todavia no puedes beber (legalmente)&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Todavia no puedes beber (legalmente)&quot;</code></pre>
 </div>
 <div id="if-else-if-else-si-si-no-si-si-no-si-si-no" class="section level2 hasAnchor" number="7.6">
@@ -626,53 +598,53 @@ div.csl-indent {
 <p>Esta estructura se ejecuta solo en la primera que sea verdadera o si no hay una verdadera ejecuta lo que esta en el <code>else</code></p>
 </dd>
 </dl>
-<div class="sourceCode" id="cb398"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb398-1"><a href="Estructuras_de_seleccion.html#cb398-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> ( condicion <span class="dv">1</span>) {</span>
-<span id="cb398-2"><a href="Estructuras_de_seleccion.html#cb398-2" aria-hidden="true" tabindex="-1"></a>Hace cosas</span>
-<span id="cb398-3"><a href="Estructuras_de_seleccion.html#cb398-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> ( condcion <span class="dv">2</span>) {</span>
-<span id="cb398-4"><a href="Estructuras_de_seleccion.html#cb398-4" aria-hidden="true" tabindex="-1"></a>Hace otras cosas</span>
-<span id="cb398-5"><a href="Estructuras_de_seleccion.html#cb398-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> ( condicion <span class="dv">3</span>) {</span>
-<span id="cb398-6"><a href="Estructuras_de_seleccion.html#cb398-6" aria-hidden="true" tabindex="-1"></a>Hace estas otras cosas</span>
-<span id="cb398-7"><a href="Estructuras_de_seleccion.html#cb398-7" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb398-8"><a href="Estructuras_de_seleccion.html#cb398-8" aria-hidden="true" tabindex="-1"></a>No le queda de otra y hace esto</span>
-<span id="cb398-9"><a href="Estructuras_de_seleccion.html#cb398-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<div class="figure">
-<img src="If_else_else_if.001.jpeg" id="id" class="class" style="width:100.0%;height:150.0%" alt="" />
-<p class="caption">Diagrama de flujo del if… else if… else if…else</p>
+<div class="sourceCode" id="cb398"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb398-1"><a href="Estructuras_de_seleccion.html#cb398-1" tabindex="-1"></a><span class="cf">if</span> ( condicion <span class="dv">1</span>) {</span>
+<span id="cb398-2"><a href="Estructuras_de_seleccion.html#cb398-2" tabindex="-1"></a>Hace cosas</span>
+<span id="cb398-3"><a href="Estructuras_de_seleccion.html#cb398-3" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> ( condcion <span class="dv">2</span>) {</span>
+<span id="cb398-4"><a href="Estructuras_de_seleccion.html#cb398-4" tabindex="-1"></a>Hace otras cosas</span>
+<span id="cb398-5"><a href="Estructuras_de_seleccion.html#cb398-5" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> ( condicion <span class="dv">3</span>) {</span>
+<span id="cb398-6"><a href="Estructuras_de_seleccion.html#cb398-6" tabindex="-1"></a>Hace estas otras cosas</span>
+<span id="cb398-7"><a href="Estructuras_de_seleccion.html#cb398-7" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb398-8"><a href="Estructuras_de_seleccion.html#cb398-8" tabindex="-1"></a>No le queda de otra y hace esto</span>
+<span id="cb398-9"><a href="Estructuras_de_seleccion.html#cb398-9" tabindex="-1"></a>}</span></code></pre></div>
+<div class="float" id="id">
+<img src="If_else_else_if.001.jpeg" class="class" style="width:100.0%;height:150.0%" alt="Diagrama de flujo del if… else if… else if…else" />
+<div class="figcaption">Diagrama de flujo del if… else if… else if…else</div>
 </div>
-<div class="sourceCode" id="cb399"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb399-1"><a href="Estructuras_de_seleccion.html#cb399-1" aria-hidden="true" tabindex="-1"></a>numero<span class="ot">&lt;-</span><span class="dv">3</span></span>
-<span id="cb399-2"><a href="Estructuras_de_seleccion.html#cb399-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(numero <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
-<span id="cb399-3"><a href="Estructuras_de_seleccion.html#cb399-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es positivo&quot;</span>)</span>
-<span id="cb399-4"><a href="Estructuras_de_seleccion.html#cb399-4" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span> (numero <span class="sc">&lt;</span><span class="dv">0</span>){</span>
-<span id="cb399-5"><a href="Estructuras_de_seleccion.html#cb399-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es negativo&quot;</span>)</span>
-<span id="cb399-6"><a href="Estructuras_de_seleccion.html#cb399-6" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb399-7"><a href="Estructuras_de_seleccion.html#cb399-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es cero&quot;</span>)</span>
-<span id="cb399-8"><a href="Estructuras_de_seleccion.html#cb399-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb399"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb399-1"><a href="Estructuras_de_seleccion.html#cb399-1" tabindex="-1"></a>numero<span class="ot">&lt;-</span><span class="dv">3</span></span>
+<span id="cb399-2"><a href="Estructuras_de_seleccion.html#cb399-2" tabindex="-1"></a><span class="cf">if</span>(numero <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb399-3"><a href="Estructuras_de_seleccion.html#cb399-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es positivo&quot;</span>)</span>
+<span id="cb399-4"><a href="Estructuras_de_seleccion.html#cb399-4" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span> (numero <span class="sc">&lt;</span><span class="dv">0</span>){</span>
+<span id="cb399-5"><a href="Estructuras_de_seleccion.html#cb399-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es negativo&quot;</span>)</span>
+<span id="cb399-6"><a href="Estructuras_de_seleccion.html#cb399-6" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb399-7"><a href="Estructuras_de_seleccion.html#cb399-7" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es cero&quot;</span>)</span>
+<span id="cb399-8"><a href="Estructuras_de_seleccion.html#cb399-8" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Tu número es positivo&quot;</code></pre>
-<div class="sourceCode" id="cb401"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb401-1"><a href="Estructuras_de_seleccion.html#cb401-1" aria-hidden="true" tabindex="-1"></a>numero<span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">27</span></span>
-<span id="cb401-2"><a href="Estructuras_de_seleccion.html#cb401-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(numero <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
-<span id="cb401-3"><a href="Estructuras_de_seleccion.html#cb401-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es positivo&quot;</span>)</span>
-<span id="cb401-4"><a href="Estructuras_de_seleccion.html#cb401-4" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span> (numero <span class="sc">&lt;</span><span class="dv">0</span>){</span>
-<span id="cb401-5"><a href="Estructuras_de_seleccion.html#cb401-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es negativo&quot;</span>)</span>
-<span id="cb401-6"><a href="Estructuras_de_seleccion.html#cb401-6" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb401-7"><a href="Estructuras_de_seleccion.html#cb401-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es cero&quot;</span>)</span>
-<span id="cb401-8"><a href="Estructuras_de_seleccion.html#cb401-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb401"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb401-1"><a href="Estructuras_de_seleccion.html#cb401-1" tabindex="-1"></a>numero<span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">27</span></span>
+<span id="cb401-2"><a href="Estructuras_de_seleccion.html#cb401-2" tabindex="-1"></a><span class="cf">if</span>(numero <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb401-3"><a href="Estructuras_de_seleccion.html#cb401-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es positivo&quot;</span>)</span>
+<span id="cb401-4"><a href="Estructuras_de_seleccion.html#cb401-4" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span> (numero <span class="sc">&lt;</span><span class="dv">0</span>){</span>
+<span id="cb401-5"><a href="Estructuras_de_seleccion.html#cb401-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es negativo&quot;</span>)</span>
+<span id="cb401-6"><a href="Estructuras_de_seleccion.html#cb401-6" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb401-7"><a href="Estructuras_de_seleccion.html#cb401-7" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es cero&quot;</span>)</span>
+<span id="cb401-8"><a href="Estructuras_de_seleccion.html#cb401-8" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Tu número es negativo&quot;</code></pre>
-<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="Estructuras_de_seleccion.html#cb403-1" aria-hidden="true" tabindex="-1"></a>numero<span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb403-2"><a href="Estructuras_de_seleccion.html#cb403-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(numero <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
-<span id="cb403-3"><a href="Estructuras_de_seleccion.html#cb403-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es positivo&quot;</span>)</span>
-<span id="cb403-4"><a href="Estructuras_de_seleccion.html#cb403-4" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span> (numero <span class="sc">&lt;</span><span class="dv">0</span>){</span>
-<span id="cb403-5"><a href="Estructuras_de_seleccion.html#cb403-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es negativo&quot;</span>)</span>
-<span id="cb403-6"><a href="Estructuras_de_seleccion.html#cb403-6" aria-hidden="true" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb403-7"><a href="Estructuras_de_seleccion.html#cb403-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es cero&quot;</span>)</span>
-<span id="cb403-8"><a href="Estructuras_de_seleccion.html#cb403-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="Estructuras_de_seleccion.html#cb403-1" tabindex="-1"></a>numero<span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb403-2"><a href="Estructuras_de_seleccion.html#cb403-2" tabindex="-1"></a><span class="cf">if</span>(numero <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb403-3"><a href="Estructuras_de_seleccion.html#cb403-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es positivo&quot;</span>)</span>
+<span id="cb403-4"><a href="Estructuras_de_seleccion.html#cb403-4" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span> (numero <span class="sc">&lt;</span><span class="dv">0</span>){</span>
+<span id="cb403-5"><a href="Estructuras_de_seleccion.html#cb403-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es negativo&quot;</span>)</span>
+<span id="cb403-6"><a href="Estructuras_de_seleccion.html#cb403-6" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb403-7"><a href="Estructuras_de_seleccion.html#cb403-7" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es cero&quot;</span>)</span>
+<span id="cb403-8"><a href="Estructuras_de_seleccion.html#cb403-8" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Tu número es cero&quot;</code></pre>
 <p><strong>Pregunta</strong>: ¿por qué no es necesario poner un if en el último else?</p>
 </div>
-<div id="ejercicios-3" class="section level2 hasAnchor" number="7.7">
-<h2><span class="header-section-number">7.7</span> Ejercicios<a href="Estructuras_de_seleccion.html#ejercicios-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ejercicios-4" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> Ejercicios<a href="Estructuras_de_seleccion.html#ejercicios-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Elabora un programa que con tu fecha de cumpleaños te diga en qué estación del año naciste.</p></li>
-<li><p>Elabora un porgrama que a partir de las calficaciones de tus examenes parciales y 8 quincenales arroje si exentaras o no este curso usando los criterios definidos en el programa del curso. Asume que en las tareas y demás actividades tienes 10.</p></li>
+<li><p>Elabora un programa que a partir de las calificaciones de tus examenes parciales y 8 quincenales arroje si exentarás o no este curso usando los criterios definidos en el programa del curso. Asume que en las tareas y demás actividades tienes 10.</p></li>
 </ol>
 
 <hr />

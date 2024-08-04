@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Listas | Notas de R</title>
   <meta name="description" content="Estas son las notas de un curso básico de R." />
-  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Listas | Notas de R" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Roberto Álvarez" />
 
 
-<meta name="date" content="2024-04-18" />
+<meta name="date" content="2024-08-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +66,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -128,6 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -162,27 +163,36 @@ div.csl-indent {
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Notas de R básico</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introducción a R</a>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción a R</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#learning-r-hub"><i class="fa fa-check"></i><b>2.1</b> Learning R Hub</a></li>
-<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#introducción-a-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>2.2</b> Introducción a R para Estudiantes de Microbiología</a>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#historia-de-r"><i class="fa fa-check"></i><b>1.1</b> Historia de R</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#ventajas-de-r"><i class="fa fa-check"></i><b>1.2</b> Ventajas de R</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#learning-r-hub"><i class="fa fa-check"></i><b>1.3</b> Learning R Hub</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#introducción-a-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>1.4</b> Introducción a R para Estudiantes de Microbiología</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#ventajas-de-aprender-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>2.2.1</b> Ventajas de Aprender R para Estudiantes de Microbiología</a></li>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#ventajas-de-aprender-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>1.4.1</b> Ventajas de Aprender R para Estudiantes de Microbiología</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#paquetes-o-bibliotecas"><i class="fa fa-check"></i><b>2.3</b> Paquetes o bibliotecas</a></li>
-<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#ayuda-en-r"><i class="fa fa-check"></i><b>2.4</b> Ayuda en R</a></li>
-<li class="chapter" data-level="2.5" data-path="intro.html"><a href="intro.html#expresiones-y-asignaciones"><i class="fa fa-check"></i><b>2.5</b> Expresiones y asignaciones</a></li>
-<li class="chapter" data-level="2.6" data-path="intro.html"><a href="intro.html#movimiento-entre-directorios"><i class="fa fa-check"></i><b>2.6</b> Movimiento entre directorios</a></li>
-<li class="chapter" data-level="2.7" data-path="intro.html"><a href="intro.html#operaciones-aritméticas"><i class="fa fa-check"></i><b>2.7</b> Operaciones aritméticas</a>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#comienza-con-r"><i class="fa fa-check"></i><b>1.5</b> Comienza con R</a>
 <ul>
-<li class="chapter" data-level="2.7.1" data-path="intro.html"><a href="intro.html#prioridad-en-las-operaciones"><i class="fa fa-check"></i><b>2.7.1</b> Prioridad en las operaciones</a></li>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#instalación"><i class="fa fa-check"></i><b>1.5.1</b> Instalación</a></li>
+<li class="chapter" data-level="1.5.2" data-path="intro.html"><a href="intro.html#paquetes-o-bibliotecas"><i class="fa fa-check"></i><b>1.5.2</b> Paquetes o bibliotecas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="intro.html"><a href="intro.html#tipos-de-valores-en-r"><i class="fa fa-check"></i><b>2.8</b> Tipos de valores en R</a>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#ayuda-en-r"><i class="fa fa-check"></i><b>1.6</b> Ayuda en R</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html"><i class="fa fa-check"></i><b>2</b> Bases prácticas en R</a>
 <ul>
-<li class="chapter" data-level="2.8.1" data-path="intro.html"><a href="intro.html#valores-booleanos"><i class="fa fa-check"></i><b>2.8.1</b> Valores booleanos</a></li>
-<li class="chapter" data-level="2.8.2" data-path="intro.html"><a href="intro.html#caracter"><i class="fa fa-check"></i><b>2.8.2</b> Caracter</a></li>
-<li class="chapter" data-level="2.8.3" data-path="intro.html"><a href="intro.html#enteros-y-números-numeric"><i class="fa fa-check"></i><b>2.8.3</b> Enteros y números (numeric)</a></li>
+<li class="chapter" data-level="2.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#expresiones-y-asignaciones"><i class="fa fa-check"></i><b>2.1</b> Expresiones y asignaciones</a></li>
+<li class="chapter" data-level="2.2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#movimiento-entre-directorios"><i class="fa fa-check"></i><b>2.2</b> Movimiento entre directorios</a></li>
+<li class="chapter" data-level="2.3" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#bash-en-r"><i class="fa fa-check"></i><b>2.3</b> Bash en R</a></li>
+<li class="chapter" data-level="2.4" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#operaciones-aritméticas"><i class="fa fa-check"></i><b>2.4</b> Operaciones aritméticas</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#prioridad-en-las-operaciones"><i class="fa fa-check"></i><b>2.4.1</b> Prioridad en las operaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#tipos-de-valores-en-r"><i class="fa fa-check"></i><b>2.5</b> Tipos de valores en R</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#valores-booleanos"><i class="fa fa-check"></i><b>2.5.1</b> Valores booleanos</a></li>
+<li class="chapter" data-level="2.5.2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#caracter"><i class="fa fa-check"></i><b>2.5.2</b> Caracter</a></li>
+<li class="chapter" data-level="2.5.3" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#enteros-y-números-numeric"><i class="fa fa-check"></i><b>2.5.3</b> Enteros y números (numeric)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="estructura.html"><a href="estructura.html"><i class="fa fa-check"></i><b>3</b> Vectores</a>
@@ -232,7 +242,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.2" data-path="matrices.html"><a href="matrices.html#dimensiones-de-un-matriz"><i class="fa fa-check"></i><b>4.2</b> Dimensiones de un matriz</a></li>
 <li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#creación-de-matriz-vacia"><i class="fa fa-check"></i><b>4.3</b> Creación de matriz “vacia”</a></li>
 <li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#operaciones-rbind-y-cbind-en-r-para-matrices"><i class="fa fa-check"></i><b>4.4</b> Operaciones rbind y cbind en R para Matrices</a></li>
-<li class="chapter" data-level="4.5" data-path="matrices.html"><a href="matrices.html#uso-de-rbind-para-unir-matrices-por-filas"><i class="fa fa-check"></i><b>4.5</b> Uso de <code>rbind()</code> para unir matrices por filas</a></li>
+<li class="chapter" data-level="4.5" data-path="matrices.html"><a href="matrices.html#uso-de-rbind-para-unir-matrices-por-renglones"><i class="fa fa-check"></i><b>4.5</b> Uso de <code>rbind()</code> para unir matrices por renglones</a></li>
 <li class="chapter" data-level="4.6" data-path="matrices.html"><a href="matrices.html#uso-de-cbind-para-unir-matrices-por-columnas"><i class="fa fa-check"></i><b>4.6</b> Uso de cbind() para unir matrices por columnas</a></li>
 <li class="chapter" data-level="4.7" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.7</b> Operaciones con matrices</a>
 <ul>
@@ -255,17 +265,19 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="5.1" data-path="data-frames.html"><a href="data-frames.html#crear-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.1</b> Crear un Dataframe en R</a></li>
 <li class="chapter" data-level="5.2" data-path="data-frames.html"><a href="data-frames.html#acceder-a-los-datos-de-un-dataframe"><i class="fa fa-check"></i><b>5.2</b> Acceder a los datos de un dataframe</a></li>
-<li class="chapter" data-level="5.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-filas-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.3</b> Agregar y eliminar filas y columnas en un Dataframe en R</a>
+<li class="chapter" data-level="5.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-renglones-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.3</b> Agregar y eliminar renglones y columnas en un Dataframe en R</a></li>
+<li class="chapter" data-level="5.4" data-path="data-frames.html"><a href="data-frames.html#importar-archivos-externos"><i class="fa fa-check"></i><b>5.4</b> Importar archivos externos</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-csv-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Importar un archivo csv en R</a></li>
-<li class="chapter" data-level="5.3.2" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>5.3.2</b> Importar un archivo TSV en R</a></li>
-<li class="chapter" data-level="5.3.3" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>5.3.3</b> Importar un archivo Excel en R</a></li>
+<li class="chapter" data-level="5.4.1" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-csv-en-r"><i class="fa fa-check"></i><b>5.4.1</b> Importar un archivo csv en R</a></li>
+<li class="chapter" data-level="5.4.2" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>5.4.2</b> Importar un archivo TSV en R</a></li>
+<li class="chapter" data-level="5.4.3" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>5.4.3</b> Importar un archivo Excel en R</a></li>
+<li class="chapter" data-level="5.4.4" data-path="data-frames.html"><a href="data-frames.html#ejercicios-1"><i class="fa fa-check"></i><b>5.4.4</b> Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="Listas.html"><a href="Listas.html"><i class="fa fa-check"></i><b>6</b> Listas</a>
 <ul>
 <li class="chapter" data-level="6.0.1" data-path="Listas.html"><a href="Listas.html#acceso-por-nombre"><i class="fa fa-check"></i><b>6.0.1</b> Acceso por Nombre</a></li>
-<li class="chapter" data-level="6.1" data-path="Listas.html"><a href="Listas.html#ejercicios-1"><i class="fa fa-check"></i><b>6.1</b> Ejercicios</a>
+<li class="chapter" data-level="6.1" data-path="Listas.html"><a href="Listas.html#ejercicios-2"><i class="fa fa-check"></i><b>6.1</b> Ejercicios</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="Listas.html"><a href="Listas.html#ejercicios-propuestos-con-listas"><i class="fa fa-check"></i><b>6.1.1</b> Ejercicios Propuestos con listas</a></li>
 </ul></li>
@@ -287,7 +299,7 @@ div.csl-indent {
 <li class="chapter" data-level="7.4" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-si-de-otro-modo"><i class="fa fa-check"></i><b>7.4</b> If … else (si … de otro modo)</a></li>
 <li class="chapter" data-level="7.5" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ifelse"><i class="fa fa-check"></i><b>7.5</b> ifelse</a></li>
 <li class="chapter" data-level="7.6" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-if-else-si-si-no-si-si-no-si-si-no"><i class="fa fa-check"></i><b>7.6</b> If … else if … else ( si, si no si , si no si, si no)</a></li>
-<li class="chapter" data-level="7.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-3"><i class="fa fa-check"></i><b>7.7</b> Ejercicios</a></li>
+<li class="chapter" data-level="7.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-4"><i class="fa fa-check"></i><b>7.7</b> Ejercicios</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>8</b> Funciones en R</a>
 <ul>
@@ -303,65 +315,25 @@ div.csl-indent {
 <li class="chapter" data-level="8.6" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-factorial-de-un-número"><i class="fa fa-check"></i><b>8.6</b> Definir una función para calcular el factorial de un número</a></li>
 <li class="chapter" data-level="8.7" data-path="functions.html"><a href="functions.html#definir-una-función-para-verificar-si-un-número-es-primo"><i class="fa fa-check"></i><b>8.7</b> Definir una función para verificar si un número es primo</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="rprojects.html"><a href="rprojects.html"><i class="fa fa-check"></i><b>9</b> RProjects</a>
+<li class="chapter" data-level="9" data-path="plots.html"><a href="plots.html"><i class="fa fa-check"></i><b>9</b> Gráficos</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="rprojects.html"><a href="rprojects.html#introducción-a-r-projects-en-rstudio"><i class="fa fa-check"></i><b>9.1</b> Introducción a R Projects en RStudio</a></li>
-<li class="chapter" data-level="9.2" data-path="rprojects.html"><a href="rprojects.html#gestión-de-proyectos-organización-y-buenas-prácticas"><i class="fa fa-check"></i><b>9.2</b> Gestión de proyectos: organización y buenas prácticas</a></li>
-<li class="chapter" data-level="9.3" data-path="rprojects.html"><a href="rprojects.html#colaboración-y-control-de-versiones-con-git-y-github"><i class="fa fa-check"></i><b>9.3</b> Colaboración y control de versiones con Git y GitHub</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html"><i class="fa fa-check"></i><b>10</b> Visualización de datos con ggplot2</a>
+<li class="chapter" data-level="9.1" data-path="plots.html"><a href="plots.html#visualización-de-datos-con-ggplot2"><i class="fa fa-check"></i><b>9.1</b> Visualización de datos con ggplot2</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#introducción"><i class="fa fa-check"></i><b>10.1</b> Introducción</a></li>
-<li class="chapter" data-level="10.2" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#configuración-inicial"><i class="fa fa-check"></i><b>10.2</b> Configuración inicial</a></li>
-<li class="chapter" data-level="10.3" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#creación-de-un-gráfico-básico"><i class="fa fa-check"></i><b>10.3</b> Creación de un gráfico básico</a></li>
-<li class="chapter" data-level="10.4" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#personalización-de-gráficos"><i class="fa fa-check"></i><b>10.4</b> Personalización de gráficos</a></li>
-<li class="chapter" data-level="10.5" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#soluciones-a-los-ejercicios-sugeridos"><i class="fa fa-check"></i><b>10.5</b> Soluciones a los ejercicios sugeridos</a></li>
-<li class="chapter" data-level="10.6" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicios-resueltos"><i class="fa fa-check"></i><b>10.6</b> Ejercicios resueltos</a>
-<ul>
-<li class="chapter" data-level="10.6.1" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-1-gráfico-de-dispersión-básico"><i class="fa fa-check"></i><b>10.6.1</b> Ejercicio 1: Gráfico de dispersión básico</a></li>
-<li class="chapter" data-level="10.6.2" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-2-diferenciación-por-especie"><i class="fa fa-check"></i><b>10.6.2</b> Ejercicio 2: Diferenciación por especie</a></li>
-<li class="chapter" data-level="10.6.3" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-3-histograma-de-masa-corporal"><i class="fa fa-check"></i><b>10.6.3</b> Ejercicio 3: Histograma de masa corporal</a></li>
-<li class="chapter" data-level="10.6.4" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-4-barras-de-error-por-especie"><i class="fa fa-check"></i><b>10.6.4</b> Ejercicio 4: Barras de error por especie</a></li>
-<li class="chapter" data-level="10.6.5" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-6-facetado-por-islas"><i class="fa fa-check"></i><b>10.6.5</b> Ejercicio 6: Facetado por islas</a></li>
-<li class="chapter" data-level="10.6.6" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-7-densidad-de-masa-corporal"><i class="fa fa-check"></i><b>10.6.6</b> Ejercicio 7: Densidad de masa corporal</a></li>
-<li class="chapter" data-level="10.6.7" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen"><i class="fa fa-check"></i><b>10.6.7</b> Ejercicio 8: Gráfico de violín de la longitud del culmen</a></li>
-<li class="chapter" data-level="10.6.8" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-9-puntos-superpuestos-en-boxplot"><i class="fa fa-check"></i><b>10.6.8</b> Ejercicio 9: Puntos superpuestos en boxplot</a></li>
-<li class="chapter" data-level="10.6.9" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo"><i class="fa fa-check"></i><b>10.6.9</b> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo</a></li>
-<li class="chapter" data-level="10.6.10" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto"><i class="fa fa-check"></i><b>10.6.10</b> Ejercicio 11: Gráfico de dispersión con tamaño de punto</a></li>
-<li class="chapter" data-level="10.6.11" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-12-barras-apiladas-de-especies-por-isla"><i class="fa fa-check"></i><b>10.6.11</b> Ejercicio 12: Barras apiladas de especies por isla</a></li>
-<li class="chapter" data-level="10.6.12" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-13-gráfico-de-correlación-con-texto"><i class="fa fa-check"></i><b>10.6.12</b> Ejercicio 13: Gráfico de correlación con texto</a></li>
-<li class="chapter" data-level="10.6.13" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen"><i class="fa fa-check"></i><b>10.6.13</b> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen</a></li>
-<li class="chapter" data-level="10.6.14" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables"><i class="fa fa-check"></i><b>10.6.14</b> Ejercicio 15: Gráfico de interacción entre tres variables</a></li>
-<li class="chapter" data-level="10.6.15" data-path="visualización-de-datos-con-ggplot2.html"><a href="visualización-de-datos-con-ggplot2.html#ejercicios-propuestos"><i class="fa fa-check"></i><b>10.6.15</b> Ejercicios propuestos</a></li>
+<li class="chapter" data-level="9.1.1" data-path="plots.html"><a href="plots.html#introducción"><i class="fa fa-check"></i><b>9.1.1</b> Introducción</a></li>
+<li class="chapter" data-level="9.1.2" data-path="plots.html"><a href="plots.html#configuración-inicial"><i class="fa fa-check"></i><b>9.1.2</b> Configuración inicial</a></li>
+<li class="chapter" data-level="9.1.3" data-path="plots.html"><a href="plots.html#creación-de-un-gráfico-básico"><i class="fa fa-check"></i><b>9.1.3</b> Creación de un gráfico básico</a></li>
+<li class="chapter" data-level="9.1.4" data-path="plots.html"><a href="plots.html#personalización-de-gráficos"><i class="fa fa-check"></i><b>9.1.4</b> Personalización de gráficos</a></li>
+<li class="chapter" data-level="9.1.5" data-path="plots.html"><a href="plots.html#soluciones-a-los-ejercicios-sugeridos"><i class="fa fa-check"></i><b>9.1.5</b> Soluciones a los ejercicios sugeridos</a></li>
+<li class="chapter" data-level="9.1.6" data-path="plots.html"><a href="plots.html#ejercicios-resueltos"><i class="fa fa-check"></i><b>9.1.6</b> Ejercicios resueltos</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html"><i class="fa fa-check"></i><b>11</b> Visualización de datos con ggplot2</a>
+<li class="chapter" data-level="10" data-path="rprojects.html"><a href="rprojects.html"><i class="fa fa-check"></i><b>10</b> RProjects</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#introducción-1"><i class="fa fa-check"></i><b>11.1</b> Introducción</a></li>
-<li class="chapter" data-level="11.2" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#configuración-inicial-1"><i class="fa fa-check"></i><b>11.2</b> Configuración inicial</a></li>
-<li class="chapter" data-level="11.3" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#creación-de-un-gráfico-básico-1"><i class="fa fa-check"></i><b>11.3</b> Creación de un gráfico básico</a></li>
-<li class="chapter" data-level="11.4" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#personalización-de-gráficos-1"><i class="fa fa-check"></i><b>11.4</b> Personalización de gráficos</a></li>
-<li class="chapter" data-level="11.5" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#soluciones-a-los-ejercicios-sugeridos-1"><i class="fa fa-check"></i><b>11.5</b> Soluciones a los ejercicios sugeridos</a></li>
-<li class="chapter" data-level="11.6" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicios-resueltos-1"><i class="fa fa-check"></i><b>11.6</b> Ejercicios resueltos</a>
-<ul>
-<li class="chapter" data-level="11.6.1" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-1-gráfico-de-dispersión-básico-1"><i class="fa fa-check"></i><b>11.6.1</b> Ejercicio 1: Gráfico de dispersión básico</a></li>
-<li class="chapter" data-level="11.6.2" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-2-diferenciación-por-especie-1"><i class="fa fa-check"></i><b>11.6.2</b> Ejercicio 2: Diferenciación por especie</a></li>
-<li class="chapter" data-level="11.6.3" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-3-histograma-de-masa-corporal-1"><i class="fa fa-check"></i><b>11.6.3</b> Ejercicio 3: Histograma de masa corporal</a></li>
-<li class="chapter" data-level="11.6.4" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-4-barras-de-error-por-especie-1"><i class="fa fa-check"></i><b>11.6.4</b> Ejercicio 4: Barras de error por especie</a></li>
-<li class="chapter" data-level="11.6.5" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-6-facetado-por-islas-1"><i class="fa fa-check"></i><b>11.6.5</b> Ejercicio 6: Facetado por islas</a></li>
-<li class="chapter" data-level="11.6.6" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-7-densidad-de-masa-corporal-1"><i class="fa fa-check"></i><b>11.6.6</b> Ejercicio 7: Densidad de masa corporal</a></li>
-<li class="chapter" data-level="11.6.7" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen-1"><i class="fa fa-check"></i><b>11.6.7</b> Ejercicio 8: Gráfico de violín de la longitud del culmen</a></li>
-<li class="chapter" data-level="11.6.8" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-9-puntos-superpuestos-en-boxplot-1"><i class="fa fa-check"></i><b>11.6.8</b> Ejercicio 9: Puntos superpuestos en boxplot</a></li>
-<li class="chapter" data-level="11.6.9" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo-1"><i class="fa fa-check"></i><b>11.6.9</b> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo</a></li>
-<li class="chapter" data-level="11.6.10" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto-1"><i class="fa fa-check"></i><b>11.6.10</b> Ejercicio 11: Gráfico de dispersión con tamaño de punto</a></li>
-<li class="chapter" data-level="11.6.11" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-12-barras-apiladas-de-especies-por-isla-1"><i class="fa fa-check"></i><b>11.6.11</b> Ejercicio 12: Barras apiladas de especies por isla</a></li>
-<li class="chapter" data-level="11.6.12" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-13-gráfico-de-correlación-con-texto-1"><i class="fa fa-check"></i><b>11.6.12</b> Ejercicio 13: Gráfico de correlación con texto</a></li>
-<li class="chapter" data-level="11.6.13" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen-1"><i class="fa fa-check"></i><b>11.6.13</b> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen</a></li>
-<li class="chapter" data-level="11.6.14" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables-1"><i class="fa fa-check"></i><b>11.6.14</b> Ejercicio 15: Gráfico de interacción entre tres variables</a></li>
-<li class="chapter" data-level="11.6.15" data-path="visualización-de-datos-con-ggplot2-1.html"><a href="visualización-de-datos-con-ggplot2-1.html#ejercicios-propuestos-1"><i class="fa fa-check"></i><b>11.6.15</b> Ejercicios propuestos</a></li>
+<li class="chapter" data-level="10.1" data-path="rprojects.html"><a href="rprojects.html#introducción-a-r-projects-en-rstudio"><i class="fa fa-check"></i><b>10.1</b> Introducción a R Projects en RStudio</a></li>
+<li class="chapter" data-level="10.2" data-path="rprojects.html"><a href="rprojects.html#gestión-de-proyectos-organización-y-buenas-prácticas"><i class="fa fa-check"></i><b>10.2</b> Gestión de proyectos: organización y buenas prácticas</a></li>
+<li class="chapter" data-level="10.3" data-path="rprojects.html"><a href="rprojects.html#colaboración-y-control-de-versiones-con-git-y-github"><i class="fa fa-check"></i><b>10.3</b> Colaboración y control de versiones con Git y GitHub</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>12</b> Referencias</a></li>
+<li class="chapter" data-level="11" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>11</b> Referencias</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -390,15 +362,15 @@ div.csl-indent {
 <ul>
 <li>Creación de una Lista</li>
 </ul>
-<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="Listas.html#cb372-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creando una lista con diferentes tipos de datos</span></span>
-<span id="cb372-2"><a href="Listas.html#cb372-2" aria-hidden="true" tabindex="-1"></a>compleja_lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb372-3"><a href="Listas.html#cb372-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">numero =</span> <span class="dv">42</span>,</span>
-<span id="cb372-4"><a href="Listas.html#cb372-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">vector =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
-<span id="cb372-5"><a href="Listas.html#cb372-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">matriz =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>),</span>
-<span id="cb372-6"><a href="Listas.html#cb372-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data_frame =</span> <span class="fu">data.frame</span>(<span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">&quot;E. coli&quot;</span>, <span class="st">&quot;S. aureus&quot;</span>), <span class="at">gram =</span> <span class="fu">c</span>(<span class="st">&quot;+&quot;</span>, <span class="st">&quot;-&quot;</span>))</span>
-<span id="cb372-7"><a href="Listas.html#cb372-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb372-8"><a href="Listas.html#cb372-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb372-9"><a href="Listas.html#cb372-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(compleja_lista)</span></code></pre></div>
+<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="Listas.html#cb372-1" tabindex="-1"></a><span class="co"># Creando una lista con diferentes tipos de datos</span></span>
+<span id="cb372-2"><a href="Listas.html#cb372-2" tabindex="-1"></a>compleja_lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb372-3"><a href="Listas.html#cb372-3" tabindex="-1"></a>  <span class="at">numero =</span> <span class="dv">42</span>,</span>
+<span id="cb372-4"><a href="Listas.html#cb372-4" tabindex="-1"></a>  <span class="at">vector =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb372-5"><a href="Listas.html#cb372-5" tabindex="-1"></a>  <span class="at">matriz =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>),</span>
+<span id="cb372-6"><a href="Listas.html#cb372-6" tabindex="-1"></a>  <span class="at">data_frame =</span> <span class="fu">data.frame</span>(<span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">&quot;E. coli&quot;</span>, <span class="st">&quot;S. aureus&quot;</span>), <span class="at">gram =</span> <span class="fu">c</span>(<span class="st">&quot;+&quot;</span>, <span class="st">&quot;-&quot;</span>))</span>
+<span id="cb372-7"><a href="Listas.html#cb372-7" tabindex="-1"></a>)</span>
+<span id="cb372-8"><a href="Listas.html#cb372-8" tabindex="-1"></a></span>
+<span id="cb372-9"><a href="Listas.html#cb372-9" tabindex="-1"></a><span class="fu">print</span>(compleja_lista)</span></code></pre></div>
 <pre><code>## $numero
 ## [1] 42
 ## 
@@ -416,21 +388,21 @@ div.csl-indent {
 ## 2 S. aureus    -</code></pre>
 <p>Para acceder a los elementos de una lista, puedes usar el doble corchete [[ ]] o el operador de dólar $. El doble corchete es útil para acceder a los elementos por su índice, mientras que el operador de dólar se usa con nombres.</p>
 <p>Accceso por índice</p>
-<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="Listas.html#cb374-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accediendo al vector dentro de la lista</span></span>
-<span id="cb374-2"><a href="Listas.html#cb374-2" aria-hidden="true" tabindex="-1"></a>vector_en_lista <span class="ot">&lt;-</span> compleja_lista[[<span class="dv">2</span>]]</span>
-<span id="cb374-3"><a href="Listas.html#cb374-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(vector_en_lista)</span></code></pre></div>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="Listas.html#cb374-1" tabindex="-1"></a><span class="co"># Accediendo al vector dentro de la lista</span></span>
+<span id="cb374-2"><a href="Listas.html#cb374-2" tabindex="-1"></a>vector_en_lista <span class="ot">&lt;-</span> compleja_lista[[<span class="dv">2</span>]]</span>
+<span id="cb374-3"><a href="Listas.html#cb374-3" tabindex="-1"></a><span class="fu">print</span>(vector_en_lista)</span></code></pre></div>
 <pre><code>## [1] 1 2 3</code></pre>
 <div id="acceso-por-nombre" class="section level3 hasAnchor" number="6.0.1">
 <h3><span class="header-section-number">6.0.1</span> Acceso por Nombre<a href="Listas.html#acceso-por-nombre" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="Listas.html#cb376-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Accediendo al data frame por nombre</span></span>
-<span id="cb376-2"><a href="Listas.html#cb376-2" aria-hidden="true" tabindex="-1"></a>data_frame_en_lista <span class="ot">&lt;-</span> compleja_lista<span class="sc">$</span>data_frame</span>
-<span id="cb376-3"><a href="Listas.html#cb376-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(data_frame_en_lista)</span></code></pre></div>
+<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="Listas.html#cb376-1" tabindex="-1"></a><span class="co"># Accediendo al data frame por nombre</span></span>
+<span id="cb376-2"><a href="Listas.html#cb376-2" tabindex="-1"></a>data_frame_en_lista <span class="ot">&lt;-</span> compleja_lista<span class="sc">$</span>data_frame</span>
+<span id="cb376-3"><a href="Listas.html#cb376-3" tabindex="-1"></a><span class="fu">print</span>(data_frame_en_lista)</span></code></pre></div>
 <pre><code>##      nombre gram
 ## 1   E. coli    +
 ## 2 S. aureus    -</code></pre>
 </div>
-<div id="ejercicios-1" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Ejercicios<a href="Listas.html#ejercicios-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ejercicios-2" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Ejercicios<a href="Listas.html#ejercicios-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="ejercicios-propuestos-con-listas" class="section level3 hasAnchor" number="6.1.1">
 <h3><span class="header-section-number">6.1.1</span> Ejercicios Propuestos con listas<a href="Listas.html#ejercicios-propuestos-con-listas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">

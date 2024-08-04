@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Gráficos | Notas de R</title>
+  <meta name="description" content="Estas son las notas de un curso básico de R." />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Gráficos | Notas de R" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Estas son las notas de un curso básico de R." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Gráficos | Notas de R" />
+  
+  <meta name="twitter:description" content="Estas son las notas de un curso básico de R." />
+  
+
+<meta name="author" content="Roberto Álvarez" />
+
+
+<meta name="date" content="2024-08-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="functions.html"/>
+<link rel="next" href="rprojects.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción a R</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#historia-de-r"><i class="fa fa-check"></i><b>1.1</b> Historia de R</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#ventajas-de-r"><i class="fa fa-check"></i><b>1.2</b> Ventajas de R</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#learning-r-hub"><i class="fa fa-check"></i><b>1.3</b> Learning R Hub</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#introducción-a-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>1.4</b> Introducción a R para Estudiantes de Microbiología</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#ventajas-de-aprender-r-para-estudiantes-de-microbiología"><i class="fa fa-check"></i><b>1.4.1</b> Ventajas de Aprender R para Estudiantes de Microbiología</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#comienza-con-r"><i class="fa fa-check"></i><b>1.5</b> Comienza con R</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#instalación"><i class="fa fa-check"></i><b>1.5.1</b> Instalación</a></li>
+<li class="chapter" data-level="1.5.2" data-path="intro.html"><a href="intro.html#paquetes-o-bibliotecas"><i class="fa fa-check"></i><b>1.5.2</b> Paquetes o bibliotecas</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#ayuda-en-r"><i class="fa fa-check"></i><b>1.6</b> Ayuda en R</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html"><i class="fa fa-check"></i><b>2</b> Bases prácticas en R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#expresiones-y-asignaciones"><i class="fa fa-check"></i><b>2.1</b> Expresiones y asignaciones</a></li>
+<li class="chapter" data-level="2.2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#movimiento-entre-directorios"><i class="fa fa-check"></i><b>2.2</b> Movimiento entre directorios</a></li>
+<li class="chapter" data-level="2.3" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#bash-en-r"><i class="fa fa-check"></i><b>2.3</b> Bash en R</a></li>
+<li class="chapter" data-level="2.4" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#operaciones-aritméticas"><i class="fa fa-check"></i><b>2.4</b> Operaciones aritméticas</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#prioridad-en-las-operaciones"><i class="fa fa-check"></i><b>2.4.1</b> Prioridad en las operaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#tipos-de-valores-en-r"><i class="fa fa-check"></i><b>2.5</b> Tipos de valores en R</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#valores-booleanos"><i class="fa fa-check"></i><b>2.5.1</b> Valores booleanos</a></li>
+<li class="chapter" data-level="2.5.2" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#caracter"><i class="fa fa-check"></i><b>2.5.2</b> Caracter</a></li>
+<li class="chapter" data-level="2.5.3" data-path="bases-prácticas-en-r.html"><a href="bases-prácticas-en-r.html#enteros-y-números-numeric"><i class="fa fa-check"></i><b>2.5.3</b> Enteros y números (numeric)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="estructura.html"><a href="estructura.html"><i class="fa fa-check"></i><b>3</b> Vectores</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="estructura.html"><a href="estructura.html#contenido"><i class="fa fa-check"></i><b>3.1</b> Contenido</a></li>
+<li class="chapter" data-level="3.2" data-path="estructura.html"><a href="estructura.html#vectors"><i class="fa fa-check"></i><b>3.2</b> Vectores en R</a></li>
+<li class="chapter" data-level="3.3" data-path="estructura.html"><a href="estructura.html#definición"><i class="fa fa-check"></i><b>3.3</b> Definición</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="estructura.html"><a href="estructura.html#definición-extensiva"><i class="fa fa-check"></i><b>3.3.1</b> Definición extensiva</a></li>
+<li class="chapter" data-level="3.3.2" data-path="estructura.html"><a href="estructura.html#definición-en-secuencia"><i class="fa fa-check"></i><b>3.3.2</b> Definición en secuencia</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="estructura.html"><a href="estructura.html#longitud-de-un-vector"><i class="fa fa-check"></i><b>3.4</b> Longitud de un vector</a></li>
+<li class="chapter" data-level="3.5" data-path="estructura.html"><a href="estructura.html#elementos-de-un-vector"><i class="fa fa-check"></i><b>3.5</b> Elementos de un vector</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="estructura.html"><a href="estructura.html#elementos-consecutivos"><i class="fa fa-check"></i><b>3.5.1</b> Elementos consecutivos</a></li>
+<li class="chapter" data-level="3.5.2" data-path="estructura.html"><a href="estructura.html#elementos-no-consecutivos-de-un-vector"><i class="fa fa-check"></i><b>3.5.2</b> Elementos no consecutivos de un vector</a></li>
+<li class="chapter" data-level="3.5.3" data-path="estructura.html"><a href="estructura.html#excluir-elementos-de-un-vector"><i class="fa fa-check"></i><b>3.5.3</b> Excluir elementos de un vector</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="estructura.html"><a href="estructura.html#reasignar-elementos-de-un-vector"><i class="fa fa-check"></i><b>3.6</b> Reasignar elementos de un vector</a></li>
+<li class="chapter" data-level="3.7" data-path="estructura.html"><a href="estructura.html#repetición-de-elementos-de-un-vector"><i class="fa fa-check"></i><b>3.7</b> Repetición de elementos de un vector</a></li>
+<li class="chapter" data-level="3.8" data-path="estructura.html"><a href="estructura.html#uso-de-funciones-any-y-all"><i class="fa fa-check"></i><b>3.8</b> Uso de funciones <code>any()</code> y <code>all()</code></a></li>
+<li class="chapter" data-level="3.9" data-path="estructura.html"><a href="estructura.html#operaciones-con-vectores"><i class="fa fa-check"></i><b>3.9</b> Operaciones con vectores</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="estructura.html"><a href="estructura.html#operaciones-aritméticas-1"><i class="fa fa-check"></i><b>3.9.1</b> Operaciones aritméticas</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="estructura.html"><a href="estructura.html#operaciones-con-un-comando"><i class="fa fa-check"></i><b>3.10</b> Operaciones con un comando</a></li>
+<li class="chapter" data-level="3.11" data-path="estructura.html"><a href="estructura.html#gráficos-con-vectores"><i class="fa fa-check"></i><b>3.11</b> Gráficos con vectores</a></li>
+<li class="chapter" data-level="3.12" data-path="estructura.html"><a href="estructura.html#vectores-con-nombre"><i class="fa fa-check"></i><b>3.12</b> Vectores con nombre</a>
+<ul>
+<li class="chapter" data-level="3.12.1" data-path="estructura.html"><a href="estructura.html#tamaños-de-genomas"><i class="fa fa-check"></i><b>3.12.1</b> Tamaños de genomas</a></li>
+</ul></li>
+<li class="chapter" data-level="3.13" data-path="estructura.html"><a href="estructura.html#cómo-lidiar-con-las-nas"><i class="fa fa-check"></i><b>3.13</b> ¿Cómo lidiar con las NAs ?</a></li>
+<li class="chapter" data-level="3.14" data-path="estructura.html"><a href="estructura.html#filtrado-de-elementos-de-un-vector"><i class="fa fa-check"></i><b>3.14</b> Filtrado de elementos de un vector</a>
+<ul>
+<li class="chapter" data-level="3.14.1" data-path="estructura.html"><a href="estructura.html#filtrado-con-subset"><i class="fa fa-check"></i><b>3.14.1</b> Filtrado con <code>subset()</code></a></li>
+<li class="chapter" data-level="3.14.2" data-path="estructura.html"><a href="estructura.html#la-función-de-selección-which"><i class="fa fa-check"></i><b>3.14.2</b> La función de selección <code>which()</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.15" data-path="estructura.html"><a href="estructura.html#cómo-podemos-ver-si-dos-vectores-son-iguales"><i class="fa fa-check"></i><b>3.15</b> ¿Cómo podemos ver si dos vectores son iguales?</a>
+<ul>
+<li class="chapter" data-level="3.15.1" data-path="estructura.html"><a href="estructura.html#factor"><i class="fa fa-check"></i><b>3.15.1</b> Factor</a></li>
+<li class="chapter" data-level="3.15.2" data-path="estructura.html"><a href="estructura.html#ejercicio-temperaturas-de-incubación"><i class="fa fa-check"></i><b>3.15.2</b> Ejercicio: Temperaturas de Incubación</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>4</b> Matrices</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="matrices.html"><a href="matrices.html#creación-de-matrices"><i class="fa fa-check"></i><b>4.1</b> Creación de matrices</a></li>
+<li class="chapter" data-level="4.2" data-path="matrices.html"><a href="matrices.html#dimensiones-de-un-matriz"><i class="fa fa-check"></i><b>4.2</b> Dimensiones de un matriz</a></li>
+<li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#creación-de-matriz-vacia"><i class="fa fa-check"></i><b>4.3</b> Creación de matriz “vacia”</a></li>
+<li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#operaciones-rbind-y-cbind-en-r-para-matrices"><i class="fa fa-check"></i><b>4.4</b> Operaciones rbind y cbind en R para Matrices</a></li>
+<li class="chapter" data-level="4.5" data-path="matrices.html"><a href="matrices.html#uso-de-rbind-para-unir-matrices-por-renglones"><i class="fa fa-check"></i><b>4.5</b> Uso de <code>rbind()</code> para unir matrices por renglones</a></li>
+<li class="chapter" data-level="4.6" data-path="matrices.html"><a href="matrices.html#uso-de-cbind-para-unir-matrices-por-columnas"><i class="fa fa-check"></i><b>4.6</b> Uso de cbind() para unir matrices por columnas</a></li>
+<li class="chapter" data-level="4.7" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.7</b> Operaciones con matrices</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="matrices.html"><a href="matrices.html#multiplicación-de-un-escalar-con-una-matriz"><i class="fa fa-check"></i><b>4.7.1</b> Multiplicación de un escalar con una matriz</a></li>
+<li class="chapter" data-level="4.7.2" data-path="matrices.html"><a href="matrices.html#suma-de-dos-matrices"><i class="fa fa-check"></i><b>4.7.2</b> Suma de dos matrices</a></li>
+<li class="chapter" data-level="4.7.3" data-path="matrices.html"><a href="matrices.html#multiplicación-de-matrices"><i class="fa fa-check"></i><b>4.7.3</b> Multiplicación de matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="matrices.html"><a href="matrices.html#uso-de-la-función-t-para-transponer-una-matriz"><i class="fa fa-check"></i><b>4.8</b> Uso de la función <code>t()</code> para transponer una matriz</a></li>
+<li class="chapter" data-level="4.9" data-path="matrices.html"><a href="matrices.html#seleccionar-elementos-de-matrices"><i class="fa fa-check"></i><b>4.9</b> Seleccionar elementos de matrices</a>
+<ul>
+<li class="chapter" data-level="4.9.1" data-path="matrices.html"><a href="matrices.html#seleccionar-todoa-una-renglóncolumna"><i class="fa fa-check"></i><b>4.9.1</b> Seleccionar todo(a) un(a) renglón(columna)</a></li>
+<li class="chapter" data-level="4.9.2" data-path="matrices.html"><a href="matrices.html#selecccionar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>4.9.2</b> Selecccionar elementos de una matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="4.10" data-path="matrices.html"><a href="matrices.html#nombres-a-renglones-y-columnas"><i class="fa fa-check"></i><b>4.10</b> Nombres a renglones y columnas</a>
+<ul>
+<li class="chapter" data-level="4.10.1" data-path="matrices.html"><a href="matrices.html#ejercicios"><i class="fa fa-check"></i><b>4.10.1</b> Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>5</b> Data Frames</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="data-frames.html"><a href="data-frames.html#crear-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.1</b> Crear un Dataframe en R</a></li>
+<li class="chapter" data-level="5.2" data-path="data-frames.html"><a href="data-frames.html#acceder-a-los-datos-de-un-dataframe"><i class="fa fa-check"></i><b>5.2</b> Acceder a los datos de un dataframe</a></li>
+<li class="chapter" data-level="5.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-renglones-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.3</b> Agregar y eliminar renglones y columnas en un Dataframe en R</a></li>
+<li class="chapter" data-level="5.4" data-path="data-frames.html"><a href="data-frames.html#importar-archivos-externos"><i class="fa fa-check"></i><b>5.4</b> Importar archivos externos</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-csv-en-r"><i class="fa fa-check"></i><b>5.4.1</b> Importar un archivo csv en R</a></li>
+<li class="chapter" data-level="5.4.2" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>5.4.2</b> Importar un archivo TSV en R</a></li>
+<li class="chapter" data-level="5.4.3" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>5.4.3</b> Importar un archivo Excel en R</a></li>
+<li class="chapter" data-level="5.4.4" data-path="data-frames.html"><a href="data-frames.html#ejercicios-1"><i class="fa fa-check"></i><b>5.4.4</b> Ejercicios</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="Listas.html"><a href="Listas.html"><i class="fa fa-check"></i><b>6</b> Listas</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="Listas.html"><a href="Listas.html#acceso-por-nombre"><i class="fa fa-check"></i><b>6.0.1</b> Acceso por Nombre</a></li>
+<li class="chapter" data-level="6.1" data-path="Listas.html"><a href="Listas.html#ejercicios-2"><i class="fa fa-check"></i><b>6.1</b> Ejercicios</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="Listas.html"><a href="Listas.html#ejercicios-propuestos-con-listas"><i class="fa fa-check"></i><b>6.1.1</b> Ejercicios Propuestos con listas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html"><i class="fa fa-check"></i><b>7</b> Estructuras de selección</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-si-condicional"><i class="fa fa-check"></i><b>7.1</b> If (si condicional)</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#sintaxis"><i class="fa fa-check"></i><b>7.1.1</b> Sintaxis</a></li>
+<li class="chapter" data-level="7.1.2" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#errores-comunes-en-el-if"><i class="fa fa-check"></i><b>7.1.2</b> Errores comunes en el <code>if</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#combinación-de-operadores-booleanos"><i class="fa fa-check"></i><b>7.2</b> Combinación de operadores booleanos</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#and"><i class="fa fa-check"></i><b>7.2.1</b> And (&amp;)</a></li>
+<li class="chapter" data-level="7.2.2" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#or"><i class="fa fa-check"></i><b>7.2.2</b> OR (|)</a></li>
+<li class="chapter" data-level="7.2.3" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejemplos-de-combinaciones"><i class="fa fa-check"></i><b>7.2.3</b> Ejemplos de combinaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicio"><i class="fa fa-check"></i><b>7.3</b> Ejercicio</a></li>
+<li class="chapter" data-level="7.4" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-si-de-otro-modo"><i class="fa fa-check"></i><b>7.4</b> If … else (si … de otro modo)</a></li>
+<li class="chapter" data-level="7.5" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ifelse"><i class="fa fa-check"></i><b>7.5</b> ifelse</a></li>
+<li class="chapter" data-level="7.6" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-if-else-si-si-no-si-si-no-si-si-no"><i class="fa fa-check"></i><b>7.6</b> If … else if … else ( si, si no si , si no si, si no)</a></li>
+<li class="chapter" data-level="7.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-4"><i class="fa fa-check"></i><b>7.7</b> Ejercicios</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>8</b> Funciones en R</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="functions.html"><a href="functions.html#sintaxis-básica-de-una-función-en-r"><i class="fa fa-check"></i><b>8.1</b> Sintaxis básica de una función en R</a></li>
+<li class="chapter" data-level="8.2" data-path="functions.html"><a href="functions.html#ejemplo-de-función-definida-por-el-usuario-en-r"><i class="fa fa-check"></i><b>8.2</b> Ejemplo de función definida por el usuario en R</a></li>
+<li class="chapter" data-level="8.3" data-path="functions.html"><a href="functions.html#ejemplo-de-función-con-argumentos-por-defecto-en-r"><i class="fa fa-check"></i><b>8.3</b> Ejemplo de función con argumentos por defecto en R</a></li>
+<li class="chapter" data-level="8.4" data-path="functions.html"><a href="functions.html#definir-una-función-con-un-parámetro-opcional"><i class="fa fa-check"></i><b>8.4</b> Definir una función con un parámetro opcional</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="functions.html"><a href="functions.html#llamar-a-la-función-saludar-sin-proporcionar-el-parámetro-opcional"><i class="fa fa-check"></i><b>8.4.1</b> Llamar a la función saludar sin proporcionar el parámetro opcional</a></li>
+<li class="chapter" data-level="8.4.2" data-path="functions.html"><a href="functions.html#llamar-a-la-función-saludar-proporcionando-el-parámetro-opcional"><i class="fa fa-check"></i><b>8.4.2</b> Llamar a la función saludar proporcionando el parámetro opcional</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-área-de-un-círculo"><i class="fa fa-check"></i><b>8.5</b> Definir una función para calcular el área de un círculo</a></li>
+<li class="chapter" data-level="8.6" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-factorial-de-un-número"><i class="fa fa-check"></i><b>8.6</b> Definir una función para calcular el factorial de un número</a></li>
+<li class="chapter" data-level="8.7" data-path="functions.html"><a href="functions.html#definir-una-función-para-verificar-si-un-número-es-primo"><i class="fa fa-check"></i><b>8.7</b> Definir una función para verificar si un número es primo</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="plots.html"><a href="plots.html"><i class="fa fa-check"></i><b>9</b> Gráficos</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="plots.html"><a href="plots.html#visualización-de-datos-con-ggplot2"><i class="fa fa-check"></i><b>9.1</b> Visualización de datos con ggplot2</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="plots.html"><a href="plots.html#introducción"><i class="fa fa-check"></i><b>9.1.1</b> Introducción</a></li>
+<li class="chapter" data-level="9.1.2" data-path="plots.html"><a href="plots.html#configuración-inicial"><i class="fa fa-check"></i><b>9.1.2</b> Configuración inicial</a></li>
+<li class="chapter" data-level="9.1.3" data-path="plots.html"><a href="plots.html#creación-de-un-gráfico-básico"><i class="fa fa-check"></i><b>9.1.3</b> Creación de un gráfico básico</a></li>
+<li class="chapter" data-level="9.1.4" data-path="plots.html"><a href="plots.html#personalización-de-gráficos"><i class="fa fa-check"></i><b>9.1.4</b> Personalización de gráficos</a></li>
+<li class="chapter" data-level="9.1.5" data-path="plots.html"><a href="plots.html#soluciones-a-los-ejercicios-sugeridos"><i class="fa fa-check"></i><b>9.1.5</b> Soluciones a los ejercicios sugeridos</a></li>
+<li class="chapter" data-level="9.1.6" data-path="plots.html"><a href="plots.html#ejercicios-resueltos"><i class="fa fa-check"></i><b>9.1.6</b> Ejercicios resueltos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="rprojects.html"><a href="rprojects.html"><i class="fa fa-check"></i><b>10</b> RProjects</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="rprojects.html"><a href="rprojects.html#introducción-a-r-projects-en-rstudio"><i class="fa fa-check"></i><b>10.1</b> Introducción a R Projects en RStudio</a></li>
+<li class="chapter" data-level="10.2" data-path="rprojects.html"><a href="rprojects.html#gestión-de-proyectos-organización-y-buenas-prácticas"><i class="fa fa-check"></i><b>10.2</b> Gestión de proyectos: organización y buenas prácticas</a></li>
+<li class="chapter" data-level="10.3" data-path="rprojects.html"><a href="rprojects.html#colaboración-y-control-de-versiones-con-git-y-github"><i class="fa fa-check"></i><b>10.3</b> Colaboración y control de versiones con Git y GitHub</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>11</b> Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Notas de R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="plots" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Gráficos<a href="plots.html#plots" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Agrupar los datos, ya sea numéricamente o gráficamente, es un paso muy importante en el análisis de datos. Una de las ventajas de R es su gran capacidad para elaborar gráficos, sus aplicaciones van desde una primera consulta exploratoria de datos hasta la generación de imágenes complejas y de alta cálidad.</p>
+<p>Existen tres principales sistemas para generar gráficos en R:</p>
+<ul>
+<li><p><strong>base R graphics</strong>: Es el sistema de graficación base que está implementado en R desde sus inicios. Es bastante útil para realizar gráficas simples con el objetivo de un primer análisis exploratorio a los datos. Su principal función es <code>plot</code>, este comando permite crear un gráfico sencillo, adicionalmente se deben elegir y emplear funciones menores, como <code>lines</code> y <code>text</code>, para agregar información o mejorar el diseño del gráfico.</p></li>
+<li><p><strong>lattice</strong>: Es un paquete de R. Una de sus ventajas es que la mayoría de sus gráficos son generados empleando una sola función, por lo tanto no hay necesidad de implementar funciones menores para modificar la apariencia del gráfico, ya que muchas de las específicaciones vienen por <em>default</em> en los comandos. Principalmente <code>lattice</code> está impelmentado para crear gráficos de alto nivel, como gráficas de líneas, gráficas de barras apiladas, gráficas de contorno y dividirlos por variables de agrupación.</p></li>
+<li><p><strong>ggplot2</strong>: Es la librería de graficación que se empleará principalmente en este curso. En el siguiente apartado se presentan de manera más amplia sus aplicaciones. El paquete <code>ggplot2</code> es bastante popular por su capacidad para realizar gráficos de gran calidad de una manera relativamente sencilla basado en <em>La Grámatica del Gráfico</em>.</p></li>
+</ul>
+<div id="visualización-de-datos-con-ggplot2" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Visualización de datos con ggplot2<a href="plots.html#visualización-de-datos-con-ggplot2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introducción" class="section level3 hasAnchor" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> Introducción<a href="plots.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La visualización de datos es una herramienta poderosa en el análisis de datos, permitiendo comunicar información compleja de manera intuitiva y efectiva. <code>ggplot2</code> es un paquete en R que facilita la creación de gráficos de calidad de publicación de manera sencilla. Este documento proporciona una introducción a <code>ggplot2</code> y ejercicios para practicar.</p>
+<div id="la-grámatica-de-los-gráficos" class="section level4 hasAnchor" number="9.1.1.1">
+<h4><span class="header-section-number">9.1.1.1</span> La Grámatica de los Gráficos<a href="plots.html#la-grámatica-de-los-gráficos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>El paquete <code>ggplot2</code> está insipirado en el libro <a href="https://link.springer.com/book/10.1007/0-387-28695-0"><em>Grammar of Graphics</em></a> por Leland Wilkinson, de ahí parte de su nombre “gg”. Su principal enfoque es la creación de gráficos considerando sus distintos componentes y que el usuario sea capaz de manipular cada una de esas partes con base en necesidades específicas que permitan una óptima representación e interpretación de los datos.</p>
+<p>Los componentes que considera <code>ggplot2</code> para la construcción de un gráfico son los siguientes:</p>
+<ul>
+<li><p><strong>Data</strong>: Datos que se emplean para la creación del gráfico.</p></li>
+<li><p><strong>Mapping</strong>: La manera de mapear las variables de los datos a propiedades visuales del gráfico como el color, el tamaño, la forma o la posición.</p></li>
+<li><p><strong>Geoms</strong>: El tipo de gráfico empleado: puntos, barras, líneas…</p></li>
+<li><p><strong>Facets</strong>: Permite dividir el gráfico en múltiples paneles según los niveles de una o más variables categóricas.</p></li>
+<li><p><strong>Statistics</strong>: Son las técnicas estadísticas que son aplicadas a los datos previo a su visualización.</p></li>
+<li><p><strong>Coords</strong>: El tipo de coordenadas empleadas para mapear los datos. Por ejemplo: cartesianas, polares, logarítmicas…</p></li>
+<li><p><strong>Scales</strong>: Asigna los valores de los datos a los valores visuales. Por ejemplo: Que a valores más pequeños les corresponda un tono más claro de color.</p></li>
+<li><p><strong>Themes</strong>: Controlan los aspectos visuales del gráfico, como los colores, las fuentes, los tamaños de los ejes, los márgenes…</p></li>
+</ul>
+<p><strong>NOTA</strong> Para conocer a profundidad e identificar de manera específica cada uno de estos componentes se puede consultar la siguiente <a href="https://intro2r.com/graphics_r.html">Guía para la contrucción de un gráfico con ggplot2</a></p>
+</div>
+</div>
+<div id="configuración-inicial" class="section level3 hasAnchor" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> Configuración inicial<a href="plots.html#configuración-inicial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Primero, asegúrate de tener instalado <code>ggplot2</code>.</p>
+<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="plots.html#cb425-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+</div>
+<div id="creación-de-un-gráfico-básico" class="section level3 hasAnchor" number="9.1.3">
+<h3><span class="header-section-number">9.1.3</span> Creación de un gráfico básico<a href="plots.html#creación-de-un-gráfico-básico" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Vamos a comenzar con un gráfico de dispersión simple utilizando el conjunto de datos mtcars.</p>
+<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb426-1"><a href="plots.html#cb426-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) <span class="sc">+</span> </span>
+<span id="cb426-2"><a href="plots.html#cb426-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb426-3"><a href="plots.html#cb426-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Consumo de Gasolina vs. Peso&quot;</span>,</span>
+<span id="cb426-4"><a href="plots.html#cb426-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Peso (1000 lbs)&quot;</span>,</span>
+<span id="cb426-5"><a href="plots.html#cb426-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Millas por Galón (mpg)&quot;</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-173-1.png" width="672" /></p>
+</div>
+<div id="personalización-de-gráficos" class="section level3 hasAnchor" number="9.1.4">
+<h3><span class="header-section-number">9.1.4</span> Personalización de gráficos<a href="plots.html#personalización-de-gráficos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de tendencia.</p>
+<div class="sourceCode" id="cb427"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb427-1"><a href="plots.html#cb427-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> <span class="fu">factor</span>(gear))) <span class="sc">+</span> </span>
+<span id="cb427-2"><a href="plots.html#cb427-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb427-3"><a href="plots.html#cb427-3" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb427-4"><a href="plots.html#cb427-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Consumo de Gasolina vs. Peso por Tipo de Cambio&quot;</span>,</span>
+<span id="cb427-5"><a href="plots.html#cb427-5" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Peso (1000 lbs)&quot;</span>,</span>
+<span id="cb427-6"><a href="plots.html#cb427-6" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Millas por Galón (mpg)&quot;</span>,</span>
+<span id="cb427-7"><a href="plots.html#cb427-7" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Tipo de Cambio&quot;</span>) <span class="sc">+</span></span>
+<span id="cb427-8"><a href="plots.html#cb427-8" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-174-1.png" width="672" />
+#### Ejercicios sugeridos</p>
+<ol style="list-style-type: decimal">
+<li>Explora otro conjunto de datos: Utiliza el conjunto de datos iris para crear un gráfico de dispersión que muestre la relación entre Sepal.Length y Sepal.Width. Colorea los puntos según la especie.</li>
+<li>Personaliza tu gráfico: Añade títulos personalizados a los ejes y al gráfico. Experimenta con diferentes temas, como theme_bw() o theme_light().</li>
+<li>Exploración de geométricas: Utiliza geom_histogram() para crear un histograma del Sepal.Length en el conjunto de datos iris. Ajusta los parámetros binwidth y fill.</li>
+<li>Facetas para múltiples gráficos: Utiliza facet_wrap(~ species) para crear gráficos separados para cada especie en el conjunto de datos iris, mostrando la relación entre Sepal.Length y Sepal.Width.</li>
+</ol>
+</div>
+<div id="soluciones-a-los-ejercicios-sugeridos" class="section level3 hasAnchor" number="9.1.5">
+<h3><span class="header-section-number">9.1.5</span> Soluciones a los ejercicios sugeridos<a href="plots.html#soluciones-a-los-ejercicios-sugeridos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb429"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb429-1"><a href="plots.html#cb429-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span> </span>
+<span id="cb429-2"><a href="plots.html#cb429-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb429-3"><a href="plots.html#cb429-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relación entre el Largo y el Ancho del Sépalo por Especie&quot;</span>,</span>
+<span id="cb429-4"><a href="plots.html#cb429-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Largo del Sépalo&quot;</span>,</span>
+<span id="cb429-5"><a href="plots.html#cb429-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Ancho del Sépalo&quot;</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-175-1.png" width="672" /></p>
+<div class="sourceCode" id="cb430"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb430-1"><a href="plots.html#cb430-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span> </span>
+<span id="cb430-2"><a href="plots.html#cb430-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb430-3"><a href="plots.html#cb430-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relación entre el Largo y el Ancho del Sépalo por Especie&quot;</span>,</span>
+<span id="cb430-4"><a href="plots.html#cb430-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Largo del Sépalo&quot;</span>,</span>
+<span id="cb430-5"><a href="plots.html#cb430-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Ancho del Sépalo&quot;</span>) <span class="sc">+</span></span>
+<span id="cb430-6"><a href="plots.html#cb430-6" tabindex="-1"></a>  <span class="fu">theme_light</span>() <span class="sc">+</span></span>
+<span id="cb430-7"><a href="plots.html#cb430-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-176-1.png" width="672" /></p>
+<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb431-1"><a href="plots.html#cb431-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length)) <span class="sc">+</span> </span>
+<span id="cb431-2"><a href="plots.html#cb431-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb431-3"><a href="plots.html#cb431-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Distribución del Largo del Sépalo&quot;</span>,</span>
+<span id="cb431-4"><a href="plots.html#cb431-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Largo del Sépalo&quot;</span>,</span>
+<span id="cb431-5"><a href="plots.html#cb431-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Frecuencia&quot;</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-177-1.png" width="672" /></p>
+<div class="sourceCode" id="cb432"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb432-1"><a href="plots.html#cb432-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
+<span id="cb432-2"><a href="plots.html#cb432-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb432-3"><a href="plots.html#cb432-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Species) <span class="sc">+</span></span>
+<span id="cb432-4"><a href="plots.html#cb432-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relación entre el Largo y el Ancho del Sépalo por Especie&quot;</span>,</span>
+<span id="cb432-5"><a href="plots.html#cb432-5" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Largo del Sépalo&quot;</span>,</span>
+<span id="cb432-6"><a href="plots.html#cb432-6" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Ancho del Sépalo&quot;</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-178-1.png" width="672" /></p>
+</div>
+<div id="ejercicios-resueltos" class="section level3 hasAnchor" number="9.1.6">
+<h3><span class="header-section-number">9.1.6</span> Ejercicios resueltos<a href="plots.html#ejercicios-resueltos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En esta sección usaremos la librería <code>palmerpenguins</code></p>
+<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb433-1"><a href="plots.html#cb433-1" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb433-2"><a href="plots.html#cb433-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<div id="ejercicio-1-gráfico-de-dispersión-básico" class="section level4 hasAnchor" number="9.1.6.1">
+<h4><span class="header-section-number">9.1.6.1</span> Ejercicio 1: Gráfico de dispersión básico<a href="plots.html#ejercicio-1-gráfico-de-dispersión-básico" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Crea un gráfico de dispersión para visualizar la relación entre la longitud del culmen y la profundidad del culmen de los pingüinos.</p>
+<div class="sourceCode" id="cb434"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb434-1"><a href="plots.html#cb434-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
+<span id="cb434-2"><a href="plots.html#cb434-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values or values outside the scale
+## range (`geom_point()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-180-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-2-diferenciación-por-especie" class="section level4 hasAnchor" number="9.1.6.2">
+<h4><span class="header-section-number">9.1.6.2</span> Ejercicio 2: Diferenciación por especie<a href="plots.html#ejercicio-2-diferenciación-por-especie" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Modifica el gráfico de dispersión anterior para diferenciar los puntos por especie de pingüino.</p>
+<div class="sourceCode" id="cb436"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb436-1"><a href="plots.html#cb436-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb436-2"><a href="plots.html#cb436-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values or values outside the scale
+## range (`geom_point()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-181-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-3-histograma-de-masa-corporal" class="section level4 hasAnchor" number="9.1.6.3">
+<h4><span class="header-section-number">9.1.6.3</span> Ejercicio 3: Histograma de masa corporal<a href="plots.html#ejercicio-3-histograma-de-masa-corporal" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Crea un histograma para explorar la distribución de la masa corporal de los pingüinos.</p>
+<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb438-1"><a href="plots.html#cb438-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb438-2"><a href="plots.html#cb438-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside the scale range
+## (`stat_bin()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-182-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-4-barras-de-error-por-especie" class="section level4 hasAnchor" number="9.1.6.4">
+<h4><span class="header-section-number">9.1.6.4</span> Ejercicio 4: Barras de error por especie<a href="plots.html#ejercicio-4-barras-de-error-por-especie" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Genera un gráfico de barras que muestre la masa corporal media de los pingüinos por especie, incluyendo barras de error.</p>
+<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb440-1"><a href="plots.html#cb440-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb440-2"><a href="plots.html#cb440-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>) <span class="sc">+</span></span>
+<span id="cb440-3"><a href="plots.html#cb440-3" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun.data =</span> mean_se, <span class="at">width =</span> <span class="fl">0.2</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside the scale range
+## (`stat_summary()`).
+## Removed 2 rows containing non-finite outside the scale range
+## (`stat_summary()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-183-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-5-boxplot-de-profundidad-del-culmen" class="section level4 hasAnchor" number="9.1.6.5">
+<h4><span class="header-section-number">9.1.6.5</span> Ejercicio 5: Boxplot de profundidad del culmen<a href="plots.html#ejercicio-5-boxplot-de-profundidad-del-culmen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Crea un boxplot para comparar la profundidad del culmen entre las diferentes especies de pingüinos.</p>
+<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb442-1"><a href="plots.html#cb442-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
+<span id="cb442-2"><a href="plots.html#cb442-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside the scale range
+## (`stat_boxplot()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-184-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-6-facetado-por-islas" class="section level4 hasAnchor" number="9.1.6.6">
+<h4><span class="header-section-number">9.1.6.6</span> Ejercicio 6: Facetado por islas<a href="plots.html#ejercicio-6-facetado-por-islas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Repite el gráfico de dispersión de longitud vs. profundidad del culmen, pero esta vez facetado por la isla de origen.</p>
+<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="plots.html#cb444-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
+<span id="cb444-2"><a href="plots.html#cb444-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb444-3"><a href="plots.html#cb444-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>island)</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values or values outside the scale
+## range (`geom_point()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-185-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-7-densidad-de-masa-corporal" class="section level4 hasAnchor" number="9.1.6.7">
+<h4><span class="header-section-number">9.1.6.7</span> Ejercicio 7: Densidad de masa corporal<a href="plots.html#ejercicio-7-densidad-de-masa-corporal" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Muestra la densidad de la distribución de la masa corporal de los pingüinos utilizando un gráfico de densidad.</p>
+<div class="sourceCode" id="cb446"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb446-1"><a href="plots.html#cb446-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb446-2"><a href="plots.html#cb446-2" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside the scale range
+## (`stat_density()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-186-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen" class="section level4 hasAnchor" number="9.1.6.8">
+<h4><span class="header-section-number">9.1.6.8</span> Ejercicio 8: Gráfico de violín de la longitud del culmen<a href="plots.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Genera un gráfico de violín para visualizar la distribución de la longitud del culmen por especie.</p>
+<div class="sourceCode" id="cb448"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb448-1"><a href="plots.html#cb448-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb448-2"><a href="plots.html#cb448-2" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside the scale range
+## (`stat_ydensity()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-187-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-9-puntos-superpuestos-en-boxplot" class="section level4 hasAnchor" number="9.1.6.9">
+<h4><span class="header-section-number">9.1.6.9</span> Ejercicio 9: Puntos superpuestos en boxplot<a href="plots.html#ejercicio-9-puntos-superpuestos-en-boxplot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Crea un boxplot de la profundidad del culmen por especie y superpón los puntos de datos individuales.</p>
+<div class="sourceCode" id="cb450"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb450-1"><a href="plots.html#cb450-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
+<span id="cb450-2"><a href="plots.html#cb450-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb450-3"><a href="plots.html#cb450-3" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.2</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside the scale range
+## (`stat_boxplot()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values or values outside the scale
+## range (`geom_point()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-188-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo" class="section level4 hasAnchor" number="9.1.6.10">
+<h4><span class="header-section-number">9.1.6.10</span> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo<a href="plots.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Asumiendo que los datos estén ordenados temporalmente, muestra cómo cambia la masa corporal promedio a lo largo del tiempo.</p>
+<div class="sourceCode" id="cb453"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb453-1"><a href="plots.html#cb453-1" tabindex="-1"></a><span class="co"># Asumiendo que &#39;year&#39; representa el tiempo en tus datos</span></span>
+<span id="cb453-2"><a href="plots.html#cb453-2" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> body_mass_g, <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb453-3"><a href="plots.html#cb453-3" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside the scale range
+## (`stat_summary()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto" class="section level4 hasAnchor" number="9.1.6.11">
+<h4><span class="header-section-number">9.1.6.11</span> Ejercicio 11: Gráfico de dispersión con tamaño de punto<a href="plots.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Modifica el gráfico de dispersión de longitud vs. profundidad del culmen para que el tamaño de los puntos refleje la masa corporal de los pingüinos.</p>
+<div class="sourceCode" id="cb455"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb455-1"><a href="plots.html#cb455-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">size =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb455-2"><a href="plots.html#cb455-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values or values outside the scale
+## range (`geom_point()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-190-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-12-barras-apiladas-de-especies-por-isla" class="section level4 hasAnchor" number="9.1.6.12">
+<h4><span class="header-section-number">9.1.6.12</span> Ejercicio 12: Barras apiladas de especies por isla<a href="plots.html#ejercicio-12-barras-apiladas-de-especies-por-isla" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Crea un gráfico de barras apiladas que muestre la cantidad de pingüinos de cada especie presentes en cada isla.</p>
+<div class="sourceCode" id="cb457"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb457-1"><a href="plots.html#cb457-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> island, <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb457-2"><a href="plots.html#cb457-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">&quot;stack&quot;</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-191-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-13-gráfico-de-correlación-con-texto" class="section level4 hasAnchor" number="9.1.6.13">
+<h4><span class="header-section-number">9.1.6.13</span> Ejercicio 13: Gráfico de correlación con texto<a href="plots.html#ejercicio-13-gráfico-de-correlación-con-texto" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Genera un gráfico de dispersión entre la longitud y la profundidad del culmen e incluye un texto que muestre el coeficiente de correlación en el gráfico.</p>
+<div class="sourceCode" id="cb458"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb458-1"><a href="plots.html#cb458-1" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
+<span id="cb458-2"><a href="plots.html#cb458-2" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
+<span id="cb458-3"><a href="plots.html#cb458-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb458-4"><a href="plots.html#cb458-4" tabindex="-1"></a>  <span class="fu">stat_cor</span>(<span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>, <span class="at">label.x =</span> <span class="dv">3</span>, <span class="at">label.y =</span> <span class="dv">50</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside the scale range
+## (`stat_cor()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values or values outside the scale
+## range (`geom_point()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-192-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen" class="section level4 hasAnchor" number="9.1.6.14">
+<h4><span class="header-section-number">9.1.6.14</span> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen<a href="plots.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Crea un mapa de calor que muestre la distribución conjunta de la longitud y la profundidad del culmen de los pingüinos.</p>
+<div class="sourceCode" id="cb461"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb461-1"><a href="plots.html#cb461-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
+<span id="cb461-2"><a href="plots.html#cb461-2" tabindex="-1"></a>  <span class="fu">geom_bin2d</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside the scale range
+## (`stat_bin2d()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-193-1.png" width="672" /></p>
+</div>
+<div id="ejercicio-15-gráfico-de-interacción-entre-tres-variables" class="section level4 hasAnchor" number="9.1.6.15">
+<h4><span class="header-section-number">9.1.6.15</span> Ejercicio 15: Gráfico de interacción entre tres variables<a href="plots.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Explora la relación entre la longitud del culmen, la profundidad del culmen y la masa corporal, diferenciando por especie.</p>
+<div class="sourceCode" id="cb463"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb463-1"><a href="plots.html#cb463-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">color =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb463-2"><a href="plots.html#cb463-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb463-3"><a href="plots.html#cb463-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>species)</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values or values outside the scale
+## range (`geom_point()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-194-1.png" width="672" /></p>
+</div>
+<div id="ejercicios-propuestos" class="section level4 hasAnchor" number="9.1.6.16">
+<h4><span class="header-section-number">9.1.6.16</span> Ejercicios propuestos<a href="plots.html#ejercicios-propuestos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><p>Gráfico de dispersión con facetas por sexo
+Crea un gráfico de dispersión para examinar la relación entre la longitud del culmen y la profundidad del culmen, separando los datos por sexo de los pingüinos utilizando facetas.</p></li>
+<li><p>Comparación de masa corporal entre islas
+Utiliza un gráfico de barras para comparar la masa corporal media de los pingüinos en las diferentes islas.</p></li>
+<li><p>Gráfico de densidad por sexo
+Genera gráficos de densidad para la longitud del culmen, diferenciados por sexo de los pingüinos.</p></li>
+<li><p>Gráfico de líneas de tendencia para la profundidad del culmen
+Crea un gráfico que muestre la tendencia de la profundidad del culmen a lo largo del tiempo para cada especie de pingüino.</p></li>
+<li><p>Mapa de calor de la correlación entre variables numéricas
+Utiliza funciones de <code>ggplot2</code> para crear un mapa de calor que muestre la correlación entre las variables numéricas de los datos de pingüinos.</p></li>
+<li><p>Gráfico de barras de conteo por especie
+Crea un gráfico de barras que muestre el número de observaciones (conteo) para cada especie de pingüino.</p></li>
+<li><p>Análisis de outliers en la masa corporal
+Utiliza un boxplot para identificar outliers en la masa corporal de los pingüinos y diferencia por especie.</p></li>
+<li><p>Gráfico de dispersión con modelado lineal
+Crea un gráfico de dispersión de la longitud vs. profundidad del culmen e incluye una línea de tendencia lineal.</p></li>
+<li><p>Barras apiladas de conteo por isla y especie
+Genera un gráfico de barras apiladas que muestre el número de pingüinos de cada especie en cada isla.</p></li>
+<li><p>Gráfico de violín con puntos individuales
+Crea gráficos de violín para la masa corporal de los pingüinos por especie e incluye los puntos individuales de los datos.</p></li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rprojects.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-Gráficos.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

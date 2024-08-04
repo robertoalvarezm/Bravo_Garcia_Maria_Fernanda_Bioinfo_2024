@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Bases prácticas en R | Notas de R</title>
   <meta name="description" content="Estas son las notas de un curso básico de R." />
-  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Bases prácticas en R | Notas de R" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Roberto Álvarez" />
 
 
-<meta name="date" content="2024-05-24" />
+<meta name="date" content="2024-08-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -66,7 +66,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -240,43 +240,44 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="4.1" data-path="matrices.html"><a href="matrices.html#creación-de-matrices"><i class="fa fa-check"></i><b>4.1</b> Creación de matrices</a></li>
 <li class="chapter" data-level="4.2" data-path="matrices.html"><a href="matrices.html#dimensiones-de-un-matriz"><i class="fa fa-check"></i><b>4.2</b> Dimensiones de un matriz</a></li>
-<li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#elementos-de-una-matriz"><i class="fa fa-check"></i><b>4.3</b> Elementos de una matriz</a></li>
-<li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#creación-de-matriz-vacia"><i class="fa fa-check"></i><b>4.4</b> Creación de matriz “vacia”</a></li>
-<li class="chapter" data-level="4.5" data-path="matrices.html"><a href="matrices.html#operaciones-rbind-y-cbind-en-r-para-matrices"><i class="fa fa-check"></i><b>4.5</b> Operaciones rbind y cbind en R para Matrices</a></li>
-<li class="chapter" data-level="4.6" data-path="matrices.html"><a href="matrices.html#uso-de-rbind-para-unir-matrices-por-renglones"><i class="fa fa-check"></i><b>4.6</b> Uso de <code>rbind()</code> para unir matrices por renglones</a></li>
-<li class="chapter" data-level="4.7" data-path="matrices.html"><a href="matrices.html#uso-de-cbind-para-unir-matrices-por-columnas"><i class="fa fa-check"></i><b>4.7</b> Uso de cbind() para unir matrices por columnas</a></li>
-<li class="chapter" data-level="4.8" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.8</b> Operaciones con matrices</a>
+<li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#creación-de-matriz-vacia"><i class="fa fa-check"></i><b>4.3</b> Creación de matriz “vacia”</a></li>
+<li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#operaciones-rbind-y-cbind-en-r-para-matrices"><i class="fa fa-check"></i><b>4.4</b> Operaciones rbind y cbind en R para Matrices</a></li>
+<li class="chapter" data-level="4.5" data-path="matrices.html"><a href="matrices.html#uso-de-rbind-para-unir-matrices-por-renglones"><i class="fa fa-check"></i><b>4.5</b> Uso de <code>rbind()</code> para unir matrices por renglones</a></li>
+<li class="chapter" data-level="4.6" data-path="matrices.html"><a href="matrices.html#uso-de-cbind-para-unir-matrices-por-columnas"><i class="fa fa-check"></i><b>4.6</b> Uso de cbind() para unir matrices por columnas</a></li>
+<li class="chapter" data-level="4.7" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.7</b> Operaciones con matrices</a>
 <ul>
-<li class="chapter" data-level="4.8.1" data-path="matrices.html"><a href="matrices.html#multiplicación-de-un-escalar-con-una-matriz"><i class="fa fa-check"></i><b>4.8.1</b> Multiplicación de un escalar con una matriz</a></li>
-<li class="chapter" data-level="4.8.2" data-path="matrices.html"><a href="matrices.html#suma-de-dos-matrices"><i class="fa fa-check"></i><b>4.8.2</b> Suma de dos matrices</a></li>
-<li class="chapter" data-level="4.8.3" data-path="matrices.html"><a href="matrices.html#multiplicación-de-matrices"><i class="fa fa-check"></i><b>4.8.3</b> Multiplicación de matrices</a></li>
+<li class="chapter" data-level="4.7.1" data-path="matrices.html"><a href="matrices.html#multiplicación-de-un-escalar-con-una-matriz"><i class="fa fa-check"></i><b>4.7.1</b> Multiplicación de un escalar con una matriz</a></li>
+<li class="chapter" data-level="4.7.2" data-path="matrices.html"><a href="matrices.html#suma-de-dos-matrices"><i class="fa fa-check"></i><b>4.7.2</b> Suma de dos matrices</a></li>
+<li class="chapter" data-level="4.7.3" data-path="matrices.html"><a href="matrices.html#multiplicación-de-matrices"><i class="fa fa-check"></i><b>4.7.3</b> Multiplicación de matrices</a></li>
 </ul></li>
-<li class="chapter" data-level="4.9" data-path="matrices.html"><a href="matrices.html#uso-de-la-función-t-para-transponer-una-matriz"><i class="fa fa-check"></i><b>4.9</b> Uso de la función <code>t()</code> para transponer una matriz</a></li>
-<li class="chapter" data-level="4.10" data-path="matrices.html"><a href="matrices.html#seleccionar-elementos-de-matrices"><i class="fa fa-check"></i><b>4.10</b> Seleccionar elementos de matrices</a>
+<li class="chapter" data-level="4.8" data-path="matrices.html"><a href="matrices.html#uso-de-la-función-t-para-transponer-una-matriz"><i class="fa fa-check"></i><b>4.8</b> Uso de la función <code>t()</code> para transponer una matriz</a></li>
+<li class="chapter" data-level="4.9" data-path="matrices.html"><a href="matrices.html#seleccionar-elementos-de-matrices"><i class="fa fa-check"></i><b>4.9</b> Seleccionar elementos de matrices</a>
 <ul>
-<li class="chapter" data-level="4.10.1" data-path="matrices.html"><a href="matrices.html#seleccionar-todoa-una-renglóncolumna"><i class="fa fa-check"></i><b>4.10.1</b> Seleccionar todo(a) un(a) renglón(columna)</a></li>
-<li class="chapter" data-level="4.10.2" data-path="matrices.html"><a href="matrices.html#selecccionar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>4.10.2</b> Selecccionar elementos de una matriz</a></li>
+<li class="chapter" data-level="4.9.1" data-path="matrices.html"><a href="matrices.html#seleccionar-todoa-una-renglóncolumna"><i class="fa fa-check"></i><b>4.9.1</b> Seleccionar todo(a) un(a) renglón(columna)</a></li>
+<li class="chapter" data-level="4.9.2" data-path="matrices.html"><a href="matrices.html#selecccionar-elementos-de-una-matriz"><i class="fa fa-check"></i><b>4.9.2</b> Selecccionar elementos de una matriz</a></li>
 </ul></li>
-<li class="chapter" data-level="4.11" data-path="matrices.html"><a href="matrices.html#nombres-a-renglones-y-columnas"><i class="fa fa-check"></i><b>4.11</b> Nombres a renglones y columnas</a>
+<li class="chapter" data-level="4.10" data-path="matrices.html"><a href="matrices.html#nombres-a-renglones-y-columnas"><i class="fa fa-check"></i><b>4.10</b> Nombres a renglones y columnas</a>
 <ul>
-<li class="chapter" data-level="4.11.1" data-path="matrices.html"><a href="matrices.html#ejercicios"><i class="fa fa-check"></i><b>4.11.1</b> Ejercicios</a></li>
+<li class="chapter" data-level="4.10.1" data-path="matrices.html"><a href="matrices.html#ejercicios"><i class="fa fa-check"></i><b>4.10.1</b> Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>5</b> Data Frames</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="data-frames.html"><a href="data-frames.html#crear-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.1</b> Crear un Dataframe en R</a></li>
 <li class="chapter" data-level="5.2" data-path="data-frames.html"><a href="data-frames.html#acceder-a-los-datos-de-un-dataframe"><i class="fa fa-check"></i><b>5.2</b> Acceder a los datos de un dataframe</a></li>
-<li class="chapter" data-level="5.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-renglones-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.3</b> Agregar y eliminar renglones y columnas en un Dataframe en R</a>
+<li class="chapter" data-level="5.3" data-path="data-frames.html"><a href="data-frames.html#agregar-y-eliminar-renglones-y-columnas-en-un-dataframe-en-r"><i class="fa fa-check"></i><b>5.3</b> Agregar y eliminar renglones y columnas en un Dataframe en R</a></li>
+<li class="chapter" data-level="5.4" data-path="data-frames.html"><a href="data-frames.html#importar-archivos-externos"><i class="fa fa-check"></i><b>5.4</b> Importar archivos externos</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-csv-en-r"><i class="fa fa-check"></i><b>5.3.1</b> Importar un archivo csv en R</a></li>
-<li class="chapter" data-level="5.3.2" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>5.3.2</b> Importar un archivo TSV en R</a></li>
-<li class="chapter" data-level="5.3.3" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>5.3.3</b> Importar un archivo Excel en R</a></li>
+<li class="chapter" data-level="5.4.1" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-csv-en-r"><i class="fa fa-check"></i><b>5.4.1</b> Importar un archivo csv en R</a></li>
+<li class="chapter" data-level="5.4.2" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-tsv-en-r"><i class="fa fa-check"></i><b>5.4.2</b> Importar un archivo TSV en R</a></li>
+<li class="chapter" data-level="5.4.3" data-path="data-frames.html"><a href="data-frames.html#importar-un-archivo-excel-en-r"><i class="fa fa-check"></i><b>5.4.3</b> Importar un archivo Excel en R</a></li>
+<li class="chapter" data-level="5.4.4" data-path="data-frames.html"><a href="data-frames.html#ejercicios-1"><i class="fa fa-check"></i><b>5.4.4</b> Ejercicios</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="Listas.html"><a href="Listas.html"><i class="fa fa-check"></i><b>6</b> Listas</a>
 <ul>
 <li class="chapter" data-level="6.0.1" data-path="Listas.html"><a href="Listas.html#acceso-por-nombre"><i class="fa fa-check"></i><b>6.0.1</b> Acceso por Nombre</a></li>
-<li class="chapter" data-level="6.1" data-path="Listas.html"><a href="Listas.html#ejercicios-1"><i class="fa fa-check"></i><b>6.1</b> Ejercicios</a>
+<li class="chapter" data-level="6.1" data-path="Listas.html"><a href="Listas.html#ejercicios-2"><i class="fa fa-check"></i><b>6.1</b> Ejercicios</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="Listas.html"><a href="Listas.html#ejercicios-propuestos-con-listas"><i class="fa fa-check"></i><b>6.1.1</b> Ejercicios Propuestos con listas</a></li>
 </ul></li>
@@ -298,7 +299,7 @@ div.csl-indent {
 <li class="chapter" data-level="7.4" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-si-de-otro-modo"><i class="fa fa-check"></i><b>7.4</b> If … else (si … de otro modo)</a></li>
 <li class="chapter" data-level="7.5" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ifelse"><i class="fa fa-check"></i><b>7.5</b> ifelse</a></li>
 <li class="chapter" data-level="7.6" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#if-else-if-else-si-si-no-si-si-no-si-si-no"><i class="fa fa-check"></i><b>7.6</b> If … else if … else ( si, si no si , si no si, si no)</a></li>
-<li class="chapter" data-level="7.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-3"><i class="fa fa-check"></i><b>7.7</b> Ejercicios</a></li>
+<li class="chapter" data-level="7.7" data-path="Estructuras_de_seleccion.html"><a href="Estructuras_de_seleccion.html#ejercicios-4"><i class="fa fa-check"></i><b>7.7</b> Ejercicios</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>8</b> Funciones en R</a>
 <ul>
@@ -360,18 +361,18 @@ div.csl-indent {
 <p>Las <strong>expresiones</strong> y <strong>asignaciones</strong> son los dos tipos de resultados que arroja R.</p>
 <p>Las <strong>expresiones</strong> sólo se muestran en la salida estándar y NO se guardan en alguna variable, es decir, cada que se corra la línea se obtendran valores distintos.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="bases-prácticas-en-r.html#cb41-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1]  1.10666401  0.60957103 -0.57328923 -0.32507817  0.56218200 -0.02635869
-##  [7] -0.14065970  0.65424638  1.34175986 -0.30134338</code></pre>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="bases-prácticas-en-r.html#cb43-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1]  0.4299497  0.1829354 -0.4932218  0.9841284 -0.5154700  0.6628050
-##  [7] -1.8048923  0.2154675 -1.2786883 -0.3158008</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="bases-prácticas-en-r.html#cb37-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##  [1]  0.1394691 -2.0520340 -0.7061138 -0.6555092  0.7970393
+##  [6]  0.4413919 -0.4888978 -1.4179095 -2.2861810  0.3858547</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="bases-prácticas-en-r.html#cb39-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##  [1]  1.7436483  1.6764156 -0.8793052 -0.5011965 -0.2739609
+##  [6] -0.1838214  0.2776914  0.9846853 -0.9442416 -0.1193518</code></pre>
 <p>Las <strong>asignaciones</strong>, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de <code>&lt;-</code></p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="bases-prácticas-en-r.html#cb45-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="bases-prácticas-en-r.html#cb46-1" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -1.2005691 -0.7134632  0.6326810  0.5576434 -0.1854318  0.8785185
-##  [7]  0.9830089 -0.6796926  1.9291262  0.1017411</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="bases-prácticas-en-r.html#cb41-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="bases-prácticas-en-r.html#cb42-1" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1] -1.2266500 -0.6482199 -1.4707834  1.4632654 -0.2179033
+##  [6]  1.1311356 -0.9991323  0.1864278  0.5168453  0.7932384</code></pre>
 <p><strong>NOTA</strong> El símbolo <code>&lt;-</code> es equivalente en función a <code>=</code> pero puede llevar a confusiones importantes con el operador <code>==</code>.</p>
 <div class="float">
 <img src="equals-sign-assignment-operator-imgflip-com-going-through-data-structures-and-47188178.png" alt="Operador de asignación. Así que evita el uso del igual" />
@@ -379,46 +380,46 @@ div.csl-indent {
 </div>
 <p>Otro punto a considerar respecto a las <strong>asignaciones</strong> es que R es capaz de distinguir entre mayúsculas y minúsculas, por lo que la misma letra puede contener valores distintos.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="bases-prácticas-en-r.html#cb48-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb48-2"><a href="bases-prácticas-en-r.html#cb48-2" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">6</span></span></code></pre></div>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="bases-prácticas-en-r.html#cb49-1" tabindex="-1"></a>a</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="bases-prácticas-en-r.html#cb44-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb44-2"><a href="bases-prácticas-en-r.html#cb44-2" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">6</span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="bases-prácticas-en-r.html#cb45-1" tabindex="-1"></a>a</span></code></pre></div>
 <pre><code>## [1] 3</code></pre>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="bases-prácticas-en-r.html#cb51-1" tabindex="-1"></a>A</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="bases-prácticas-en-r.html#cb47-1" tabindex="-1"></a>A</span></code></pre></div>
 <pre><code>## [1] 6</code></pre>
 <p>Una opción es definirlas en más de una línea, ejemplo:</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="bases-prácticas-en-r.html#cb53-1" tabindex="-1"></a>a <span class="ot">&lt;-</span></span>
-<span id="cb53-2"><a href="bases-prácticas-en-r.html#cb53-2" tabindex="-1"></a>  pi <span class="sc">+</span> <span class="dv">12</span></span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="bases-prácticas-en-r.html#cb49-1" tabindex="-1"></a>a <span class="ot">&lt;-</span></span>
+<span id="cb49-2"><a href="bases-prácticas-en-r.html#cb49-2" tabindex="-1"></a>  pi <span class="sc">+</span> <span class="dv">12</span></span></code></pre></div>
 <p><strong>NOTA</strong> Ten mucha precaución con el nombre que asignas a un valor, ya que podrías sobreescribirlo y se le quedará asignado el último valor.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="bases-prácticas-en-r.html#cb54-1" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb54-2"><a href="bases-prácticas-en-r.html#cb54-2" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="bases-prácticas-en-r.html#cb50-1" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb50-2"><a href="bases-prácticas-en-r.html#cb50-2" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## [1] 3</code></pre>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="bases-prácticas-en-r.html#cb56-1" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">8</span> </span>
-<span id="cb56-2"><a href="bases-prácticas-en-r.html#cb56-2" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="bases-prácticas-en-r.html#cb52-1" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">8</span> </span>
+<span id="cb52-2"><a href="bases-prácticas-en-r.html#cb52-2" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <p>La separación de comandos puede darse de dos formas:</p>
 <p>Empleando <code>;</code>, ejemplo:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="bases-prácticas-en-r.html#cb58-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span>; b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="bases-prácticas-en-r.html#cb54-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span>; b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
 <p>o usando un salto de línea, esta es una mejor opción, ejemplo:</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="bases-prácticas-en-r.html#cb59-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb59-2"><a href="bases-prácticas-en-r.html#cb59-2" tabindex="-1"></a>b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="bases-prácticas-en-r.html#cb55-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb55-2"><a href="bases-prácticas-en-r.html#cb55-2" tabindex="-1"></a>b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
 </div>
 <div id="movimiento-entre-directorios" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Movimiento entre directorios<a href="bases-prácticas-en-r.html#movimiento-entre-directorios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Otra de las ventajas que ofrece R es que permite ubicar algún archivo o saber la dirección del directorio en la que nos encontramos actualmente, todo ello sin necesidad de salir de la interfaz.</p>
 <p>Para saber en qué directorio estamos, se teclea:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="bases-prácticas-en-r.html#cb60-1" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;/Users/robertoalvarez/Documents/GitHub/BravoGarciaMariaFernandaBioinfo2024&quot;</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="bases-prácticas-en-r.html#cb56-1" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;/Users/robertoalvarez/Documents/GitHub/Bravo_Garcia_Maria_Fernanda_Bioinfo_2024&quot;</code></pre>
 <p>Para cambiar de directorio utilizamos <code>setwd("direccion_a_la_que_quieres_ir")</code></p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="bases-prácticas-en-r.html#cb62-1" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="bases-prácticas-en-r.html#cb58-1" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>)</span></code></pre></div>
 </div>
 <div id="bash-en-r" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Bash en R<a href="bases-prácticas-en-r.html#bash-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>También se pueden usar los comandos de la terminal de bash dentro de R, utilizando la función <code>system()</code></p>
 <p>Para listar archivos de una carpeta usamos <code>ls</code></p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="bases-prácticas-en-r.html#cb63-1" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;ls -la&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="bases-prácticas-en-r.html#cb59-1" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;ls -la&quot;</span>)</span></code></pre></div>
 <p>Para saber en qué directorio estamos usamos la función análoga a <code>getwd()</code>, que es <code>pwd</code></p>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="bases-prácticas-en-r.html#cb64-1" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;pwd&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="bases-prácticas-en-r.html#cb60-1" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;pwd&quot;</span>)</span></code></pre></div>
 <p><strong>Importante: Como regla general todos los nombres van entre comillas: nombre de carpetas, archivos, de columnas, de renglones,etc.</strong></p>
 </div>
 <div id="operaciones-aritméticas" class="section level2 hasAnchor" number="2.4">
@@ -426,27 +427,27 @@ div.csl-indent {
 <p>R también puede ser usado como calculadora.
 Se puede sumar, restar, multiplicar,dividir, “exponenciar” y calcular la raíz cuadrada.</p>
 <p><strong>SUMA</strong> con el operador <code>+</code></p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="bases-prácticas-en-r.html#cb65-1" tabindex="-1"></a>a <span class="sc">+</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="bases-prácticas-en-r.html#cb61-1" tabindex="-1"></a>a <span class="sc">+</span> b</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <p><strong>RESTA</strong> con el operador <code>-</code></p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="bases-prácticas-en-r.html#cb67-1" tabindex="-1"></a>a <span class="sc">-</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="bases-prácticas-en-r.html#cb63-1" tabindex="-1"></a>a <span class="sc">-</span> b</span></code></pre></div>
 <pre><code>## [1] -2</code></pre>
 <p><strong>MULTIPLICACIÓN</strong> con el operador <code>*</code></p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="bases-prácticas-en-r.html#cb69-1" tabindex="-1"></a>a <span class="sc">*</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="bases-prácticas-en-r.html#cb65-1" tabindex="-1"></a>a <span class="sc">*</span> b</span></code></pre></div>
 <pre><code>## [1] 15</code></pre>
 <p><strong>DIVISIÓN</strong> con el operador <code>/</code></p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="bases-prácticas-en-r.html#cb71-1" tabindex="-1"></a>a <span class="sc">/</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="bases-prácticas-en-r.html#cb67-1" tabindex="-1"></a>a <span class="sc">/</span> b</span></code></pre></div>
 <pre><code>## [1] 0.6</code></pre>
 <p><strong>EXPONENTE</strong> con los operadoradores <code>**</code> o <code>^</code></p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="bases-prácticas-en-r.html#cb73-1" tabindex="-1"></a>a <span class="sc">**</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="bases-prácticas-en-r.html#cb69-1" tabindex="-1"></a>a <span class="sc">**</span> b</span></code></pre></div>
 <pre><code>## [1] 243</code></pre>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="bases-prácticas-en-r.html#cb75-1" tabindex="-1"></a>a <span class="sc">^</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="bases-prácticas-en-r.html#cb71-1" tabindex="-1"></a>a <span class="sc">^</span> b</span></code></pre></div>
 <pre><code>## [1] 243</code></pre>
 <p><strong>RAÍZ CUADRADA</strong> con la función <code>sqrt()</code></p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="bases-prácticas-en-r.html#cb77-1" tabindex="-1"></a><span class="fu">sqrt</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="bases-prácticas-en-r.html#cb73-1" tabindex="-1"></a><span class="fu">sqrt</span>(a)</span></code></pre></div>
 <pre><code>## [1] 1.732051</code></pre>
 <p><strong>LOGARITMO</strong> con la función <code>log()</code></p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="bases-prácticas-en-r.html#cb79-1" tabindex="-1"></a><span class="fu">log</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="bases-prácticas-en-r.html#cb75-1" tabindex="-1"></a><span class="fu">log</span>(a)</span></code></pre></div>
 <pre><code>## [1] 1.098612</code></pre>
 <div id="prioridad-en-las-operaciones" class="section level3 hasAnchor" number="2.4.1">
 <h3><span class="header-section-number">2.4.1</span> Prioridad en las operaciones<a href="bases-prácticas-en-r.html#prioridad-en-las-operaciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -489,13 +490,13 @@ Este tipo de datos <strong>sólo</strong> contienen información <code>TRUE</cod
 <li>mayor o igual que <code>&gt;=</code></li>
 </ul>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="bases-prácticas-en-r.html#cb81-1" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="bases-prácticas-en-r.html#cb77-1" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="bases-prácticas-en-r.html#cb83-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">0</span>    </span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="bases-prácticas-en-r.html#cb79-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">0</span>    </span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="bases-prácticas-en-r.html#cb85-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">!=</span> <span class="dv">0</span>   </span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="bases-prácticas-en-r.html#cb81-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">!=</span> <span class="dv">0</span>   </span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="bases-prácticas-en-r.html#cb87-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&lt;=</span> <span class="dv">0</span>   </span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="bases-prácticas-en-r.html#cb83-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&lt;=</span> <span class="dv">0</span>   </span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 <p><strong>NOTA</strong> Dentro de R los valores lógicos <code>TRUE</code> y <code>FALSE</code> tienen un valor numérico. <code>TRUE</code>equivale a 1 y <code>FALSE</code> es equivalente a 0. Esto permite cuantificar el número de elementos que cumplen con los criterios, ¿cómo? mediante la suma de los <code>TRUE</code>s.</p>
 <p><strong>Ejercicios</strong>
@@ -509,18 +510,18 @@ Demuestra si:
 <p>Son <em>strings</em> de texto y se caracterizan porque cada uno de los elementos va entre comillas. Los elementos pueden ser desde sólo un caracter hasta oraciones.
 Podría parecer que la variable a la cual lo asignamos contiene números, pero las comillas indican que serán tratados como texto. Podemos subsetearlos por su índice o buscando literalmente el texto.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="bases-prácticas-en-r.html#cb89-1" tabindex="-1"></a>x<span class="ot">&lt;-</span> <span class="st">&quot;La candente mañana de febrero en que Beatriz Viterbo murió, después de una imperiosa agonía que no se rebajó un solo instante ni al sentimentalismo ni al miedo&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="bases-prácticas-en-r.html#cb85-1" tabindex="-1"></a>x<span class="ot">&lt;-</span> <span class="st">&quot;La candente mañana de febrero en que Beatriz Viterbo murió, después de una imperiosa agonía que no se rebajó un solo instante ni al sentimentalismo ni al miedo&quot;</span></span></code></pre></div>
 </div>
 <div id="enteros-y-números-numeric" class="section level3 hasAnchor" number="2.5.3">
 <h3><span class="header-section-number">2.5.3</span> Enteros y números (numeric)<a href="bases-prácticas-en-r.html#enteros-y-números-numeric" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Existen dos formas diferentes en que las computadoras pueden guardar los números y hacer operaciones matemáticas con ellos: <code>numeric</code> e <code>integer</code>.
 Por lo común no importa esta diferencia, pero puede ser relevante para algunas funciones de Bioconductor. En R se representan los números como <code>numeric</code> y el tamaño máximo que maneja para un <code>integer</code> es ligeramente más chico que el tamaño del genoma humano.</p>
 <p>¿Cómo revisar si un objeto es numeric o entero? Con la función <code>class()</code></p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="bases-prácticas-en-r.html#cb90-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb90-2"><a href="bases-prácticas-en-r.html#cb90-2" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="bases-prácticas-en-r.html#cb86-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb86-2"><a href="bases-prácticas-en-r.html#cb86-2" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="bases-prácticas-en-r.html#cb92-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
-<span id="cb92-2"><a href="bases-prácticas-en-r.html#cb92-2" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="bases-prácticas-en-r.html#cb88-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
+<span id="cb88-2"><a href="bases-prácticas-en-r.html#cb88-2" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
 
 </div>
@@ -586,6 +587,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
