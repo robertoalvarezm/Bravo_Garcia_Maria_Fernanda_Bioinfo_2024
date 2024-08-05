@@ -316,7 +316,10 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8.5" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-área-de-un-círculo"><i class="fa fa-check"></i><b>8.5</b> Definir una función para calcular el área de un círculo</a></li>
 <li class="chapter" data-level="8.6" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-factorial-de-un-número"><i class="fa fa-check"></i><b>8.6</b> Definir una función para calcular el factorial de un número</a></li>
-<li class="chapter" data-level="8.7" data-path="functions.html"><a href="functions.html#definir-una-función-para-verificar-si-un-número-es-primo"><i class="fa fa-check"></i><b>8.7</b> Definir una función para verificar si un número es primo</a></li>
+<li class="chapter" data-level="8.7" data-path="functions.html"><a href="functions.html#definir-una-función-para-verificar-si-un-número-es-primo"><i class="fa fa-check"></i><b>8.7</b> Definir una función para verificar si un número es primo</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="functions.html"><a href="functions.html#ejemplo-resuelto"><i class="fa fa-check"></i><b>8.7.1</b> Ejemplo resuelto</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="plots.html"><a href="plots.html"><i class="fa fa-check"></i><b>9</b> Gráficos</a>
 <ul>
@@ -478,6 +481,23 @@ div.csl-indent {
 <span id="cb429-24"><a href="functions.html#cb429-24" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(numero, <span class="st">&quot;no es un número primo.&quot;</span>))</span>
 <span id="cb429-25"><a href="functions.html#cb429-25" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;11 es un número primo.&quot;</code></pre>
+<div id="ejemplo-resuelto" class="section level3 hasAnchor" number="8.7.1">
+<h3><span class="header-section-number">8.7.1</span> Ejemplo resuelto<a href="functions.html#ejemplo-resuelto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Calcular Índice de Diversidad de Shannon</strong></p>
+<p>Descripción: Define una función que calcule el índice de diversidad de Shannon dado un vector de abundancias de especies.</p>
+<ul>
+<li>Define una función indice_shannon que acepte un argumento: abundancias.</li>
+<li>La función debe devolver el índice de Shannon calculado a partir del vector de abundancias.</li>
+</ul>
+<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb431-1"><a href="functions.html#cb431-1" tabindex="-1"></a>indice_shannon <span class="ot">&lt;-</span> <span class="cf">function</span>(abundancias) {</span>
+<span id="cb431-2"><a href="functions.html#cb431-2" tabindex="-1"></a>  p <span class="ot">&lt;-</span> abundancias <span class="sc">/</span> <span class="fu">sum</span>(abundancias)</span>
+<span id="cb431-3"><a href="functions.html#cb431-3" tabindex="-1"></a>  shannon <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">sum</span>(p <span class="sc">*</span> <span class="fu">log</span>(p), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb431-4"><a href="functions.html#cb431-4" tabindex="-1"></a>  <span class="fu">return</span>(shannon)</span>
+<span id="cb431-5"><a href="functions.html#cb431-5" tabindex="-1"></a>}</span>
+<span id="cb431-6"><a href="functions.html#cb431-6" tabindex="-1"></a></span>
+<span id="cb431-7"><a href="functions.html#cb431-7" tabindex="-1"></a><span class="co"># Prueba de la función</span></span>
+<span id="cb431-8"><a href="functions.html#cb431-8" tabindex="-1"></a><span class="fu">indice_shannon</span>(<span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>))</span></code></pre></div>
+<pre><code>## [1] 1.279854</code></pre>
 <p><strong>Ejercicios</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>Escribe una función que tome un vector numérico como argumento de entrada y devuelva la media aritmética de los valores.</p></li>
@@ -490,8 +510,15 @@ div.csl-indent {
 <li><p>Escribe una función que tome un vector numérico como argumento de entrada y devuelva un vector con los valores ordenados de menor a mayor.</p></li>
 <li><p>Escribe una función que tome un vector de caracteres como argumento de entrada y devuelva un vector con los mismos elementos en orden inverso.</p></li>
 <li><p>Escribe una función que tome una matriz como argumento de entrada y devuelva la diagonal principal en un vector.</p></li>
+<li><p><strong>Calcular Tasa de Crecimiento Bacteriano</strong></p></li>
 </ol>
+<p>Descripción: Define una función que calcule la tasa de crecimiento bacteriano dada la concentración inicial y final de bacterias y el tiempo.</p>
+<ul>
+<li>Define una función tasa_crecimiento que acepte tres argumentos: concentracion_inicial, concentracion_final y tiempo.</li>
+<li>La función debe devolver la tasa de crecimiento (logaritmo natural de la razón de concentraciones dividido por el tiempo).</li>
+</ul>
 
+</div>
 </div>
 </div>
             </section>

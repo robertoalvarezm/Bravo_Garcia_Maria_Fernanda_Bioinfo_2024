@@ -316,7 +316,10 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8.5" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-área-de-un-círculo"><i class="fa fa-check"></i><b>8.5</b> Definir una función para calcular el área de un círculo</a></li>
 <li class="chapter" data-level="8.6" data-path="functions.html"><a href="functions.html#definir-una-función-para-calcular-el-factorial-de-un-número"><i class="fa fa-check"></i><b>8.6</b> Definir una función para calcular el factorial de un número</a></li>
-<li class="chapter" data-level="8.7" data-path="functions.html"><a href="functions.html#definir-una-función-para-verificar-si-un-número-es-primo"><i class="fa fa-check"></i><b>8.7</b> Definir una función para verificar si un número es primo</a></li>
+<li class="chapter" data-level="8.7" data-path="functions.html"><a href="functions.html#definir-una-función-para-verificar-si-un-número-es-primo"><i class="fa fa-check"></i><b>8.7</b> Definir una función para verificar si un número es primo</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="functions.html"><a href="functions.html#ejemplo-resuelto"><i class="fa fa-check"></i><b>8.7.1</b> Ejemplo resuelto</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="plots.html"><a href="plots.html"><i class="fa fa-check"></i><b>9</b> Gráficos</a>
 <ul>
@@ -391,31 +394,31 @@ div.csl-indent {
 <div id="configuración-inicial" class="section level3 hasAnchor" number="9.1.2">
 <h3><span class="header-section-number">9.1.2</span> Configuración inicial<a href="plots.html#configuración-inicial" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Primero, asegúrate de tener instalado <code>ggplot2</code>.</p>
-<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb431-1"><a href="plots.html#cb431-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb433-1"><a href="plots.html#cb433-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
 </div>
 <div id="creación-de-un-gráfico-básico" class="section level3 hasAnchor" number="9.1.3">
 <h3><span class="header-section-number">9.1.3</span> Creación de un gráfico básico<a href="plots.html#creación-de-un-gráfico-básico" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Vamos a comenzar con un gráfico de dispersión simple utilizando el conjunto de datos mtcars.</p>
-<div class="sourceCode" id="cb432"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb432-1"><a href="plots.html#cb432-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) <span class="sc">+</span> </span>
-<span id="cb432-2"><a href="plots.html#cb432-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb432-3"><a href="plots.html#cb432-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Consumo de Gasolina vs. Peso&quot;</span>,</span>
-<span id="cb432-4"><a href="plots.html#cb432-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Peso (1000 lbs)&quot;</span>,</span>
-<span id="cb432-5"><a href="plots.html#cb432-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Millas por Galón (mpg)&quot;</span>)</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-174-1.png" width="672" /></p>
+<div class="sourceCode" id="cb434"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb434-1"><a href="plots.html#cb434-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) <span class="sc">+</span> </span>
+<span id="cb434-2"><a href="plots.html#cb434-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb434-3"><a href="plots.html#cb434-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Consumo de Gasolina vs. Peso&quot;</span>,</span>
+<span id="cb434-4"><a href="plots.html#cb434-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Peso (1000 lbs)&quot;</span>,</span>
+<span id="cb434-5"><a href="plots.html#cb434-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Millas por Galón (mpg)&quot;</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-175-1.png" width="672" /></p>
 </div>
 <div id="personalización-de-gráficos" class="section level3 hasAnchor" number="9.1.4">
 <h3><span class="header-section-number">9.1.4</span> Personalización de gráficos<a href="plots.html#personalización-de-gráficos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de tendencia.</p>
-<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb433-1"><a href="plots.html#cb433-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> <span class="fu">factor</span>(gear))) <span class="sc">+</span> </span>
-<span id="cb433-2"><a href="plots.html#cb433-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb433-3"><a href="plots.html#cb433-3" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb433-4"><a href="plots.html#cb433-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Consumo de Gasolina vs. Peso por Tipo de Cambio&quot;</span>,</span>
-<span id="cb433-5"><a href="plots.html#cb433-5" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Peso (1000 lbs)&quot;</span>,</span>
-<span id="cb433-6"><a href="plots.html#cb433-6" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Millas por Galón (mpg)&quot;</span>,</span>
-<span id="cb433-7"><a href="plots.html#cb433-7" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Tipo de Cambio&quot;</span>) <span class="sc">+</span></span>
-<span id="cb433-8"><a href="plots.html#cb433-8" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb435-1"><a href="plots.html#cb435-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg, <span class="at">color =</span> <span class="fu">factor</span>(gear))) <span class="sc">+</span> </span>
+<span id="cb435-2"><a href="plots.html#cb435-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb435-3"><a href="plots.html#cb435-3" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb435-4"><a href="plots.html#cb435-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Consumo de Gasolina vs. Peso por Tipo de Cambio&quot;</span>,</span>
+<span id="cb435-5"><a href="plots.html#cb435-5" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Peso (1000 lbs)&quot;</span>,</span>
+<span id="cb435-6"><a href="plots.html#cb435-6" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Millas por Galón (mpg)&quot;</span>,</span>
+<span id="cb435-7"><a href="plots.html#cb435-7" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Tipo de Cambio&quot;</span>) <span class="sc">+</span></span>
+<span id="cb435-8"><a href="plots.html#cb435-8" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-175-1.png" width="672" />
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-176-1.png" width="672" />
 #### Ejercicios sugeridos</p>
 <ol style="list-style-type: decimal">
 <li>Explora otro conjunto de datos: Utiliza el conjunto de datos iris para crear un gráfico de dispersión que muestre la relación entre Sepal.Length y Sepal.Width. Colorea los puntos según la especie.</li>
@@ -426,191 +429,191 @@ div.csl-indent {
 </div>
 <div id="soluciones-a-los-ejercicios-sugeridos" class="section level3 hasAnchor" number="9.1.5">
 <h3><span class="header-section-number">9.1.5</span> Soluciones a los ejercicios sugeridos<a href="plots.html#soluciones-a-los-ejercicios-sugeridos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb435-1"><a href="plots.html#cb435-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span> </span>
-<span id="cb435-2"><a href="plots.html#cb435-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb435-3"><a href="plots.html#cb435-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relación entre el Largo y el Ancho del Sépalo por Especie&quot;</span>,</span>
-<span id="cb435-4"><a href="plots.html#cb435-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Largo del Sépalo&quot;</span>,</span>
-<span id="cb435-5"><a href="plots.html#cb435-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Ancho del Sépalo&quot;</span>)</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-176-1.png" width="672" /></p>
-<div class="sourceCode" id="cb436"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb436-1"><a href="plots.html#cb436-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span> </span>
-<span id="cb436-2"><a href="plots.html#cb436-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb436-3"><a href="plots.html#cb436-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relación entre el Largo y el Ancho del Sépalo por Especie&quot;</span>,</span>
-<span id="cb436-4"><a href="plots.html#cb436-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Largo del Sépalo&quot;</span>,</span>
-<span id="cb436-5"><a href="plots.html#cb436-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Ancho del Sépalo&quot;</span>) <span class="sc">+</span></span>
-<span id="cb436-6"><a href="plots.html#cb436-6" tabindex="-1"></a>  <span class="fu">theme_light</span>() <span class="sc">+</span></span>
-<span id="cb436-7"><a href="plots.html#cb436-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-177-1.png" width="672" /></p>
-<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb437-1"><a href="plots.html#cb437-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length)) <span class="sc">+</span> </span>
-<span id="cb437-2"><a href="plots.html#cb437-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
-<span id="cb437-3"><a href="plots.html#cb437-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Distribución del Largo del Sépalo&quot;</span>,</span>
+<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb437-1"><a href="plots.html#cb437-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span> </span>
+<span id="cb437-2"><a href="plots.html#cb437-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb437-3"><a href="plots.html#cb437-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relación entre el Largo y el Ancho del Sépalo por Especie&quot;</span>,</span>
 <span id="cb437-4"><a href="plots.html#cb437-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Largo del Sépalo&quot;</span>,</span>
-<span id="cb437-5"><a href="plots.html#cb437-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Frecuencia&quot;</span>)</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-178-1.png" width="672" /></p>
-<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb438-1"><a href="plots.html#cb438-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
+<span id="cb437-5"><a href="plots.html#cb437-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Ancho del Sépalo&quot;</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-177-1.png" width="672" /></p>
+<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb438-1"><a href="plots.html#cb438-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width, <span class="at">color =</span> Species)) <span class="sc">+</span> </span>
 <span id="cb438-2"><a href="plots.html#cb438-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb438-3"><a href="plots.html#cb438-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Species) <span class="sc">+</span></span>
-<span id="cb438-4"><a href="plots.html#cb438-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relación entre el Largo y el Ancho del Sépalo por Especie&quot;</span>,</span>
-<span id="cb438-5"><a href="plots.html#cb438-5" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Largo del Sépalo&quot;</span>,</span>
-<span id="cb438-6"><a href="plots.html#cb438-6" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Ancho del Sépalo&quot;</span>)</span></code></pre></div>
+<span id="cb438-3"><a href="plots.html#cb438-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relación entre el Largo y el Ancho del Sépalo por Especie&quot;</span>,</span>
+<span id="cb438-4"><a href="plots.html#cb438-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Largo del Sépalo&quot;</span>,</span>
+<span id="cb438-5"><a href="plots.html#cb438-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Ancho del Sépalo&quot;</span>) <span class="sc">+</span></span>
+<span id="cb438-6"><a href="plots.html#cb438-6" tabindex="-1"></a>  <span class="fu">theme_light</span>() <span class="sc">+</span></span>
+<span id="cb438-7"><a href="plots.html#cb438-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-178-1.png" width="672" /></p>
+<div class="sourceCode" id="cb439"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb439-1"><a href="plots.html#cb439-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length)) <span class="sc">+</span> </span>
+<span id="cb439-2"><a href="plots.html#cb439-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span></span>
+<span id="cb439-3"><a href="plots.html#cb439-3" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Distribución del Largo del Sépalo&quot;</span>,</span>
+<span id="cb439-4"><a href="plots.html#cb439-4" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Largo del Sépalo&quot;</span>,</span>
+<span id="cb439-5"><a href="plots.html#cb439-5" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Frecuencia&quot;</span>)</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-179-1.png" width="672" /></p>
+<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb440-1"><a href="plots.html#cb440-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
+<span id="cb440-2"><a href="plots.html#cb440-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb440-3"><a href="plots.html#cb440-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Species) <span class="sc">+</span></span>
+<span id="cb440-4"><a href="plots.html#cb440-4" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relación entre el Largo y el Ancho del Sépalo por Especie&quot;</span>,</span>
+<span id="cb440-5"><a href="plots.html#cb440-5" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Largo del Sépalo&quot;</span>,</span>
+<span id="cb440-6"><a href="plots.html#cb440-6" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Ancho del Sépalo&quot;</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-180-1.png" width="672" /></p>
 </div>
 <div id="ejercicios-resueltos" class="section level3 hasAnchor" number="9.1.6">
 <h3><span class="header-section-number">9.1.6</span> Ejercicios resueltos<a href="plots.html#ejercicios-resueltos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En esta sección usaremos la librería <code>palmerpenguins</code></p>
-<div class="sourceCode" id="cb439"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb439-1"><a href="plots.html#cb439-1" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb439-2"><a href="plots.html#cb439-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<div class="sourceCode" id="cb441"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb441-1"><a href="plots.html#cb441-1" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb441-2"><a href="plots.html#cb441-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
 <div id="ejercicio-1-gráfico-de-dispersión-básico" class="section level4 hasAnchor" number="9.1.6.1">
 <h4><span class="header-section-number">9.1.6.1</span> Ejercicio 1: Gráfico de dispersión básico<a href="plots.html#ejercicio-1-gráfico-de-dispersión-básico" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Crea un gráfico de dispersión para visualizar la relación entre la longitud del culmen y la profundidad del culmen de los pingüinos.</p>
-<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb440-1"><a href="plots.html#cb440-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
-<span id="cb440-2"><a href="plots.html#cb440-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing missing values or
-## values outside the scale range
-## (`geom_point()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-181-1.png" width="672" /></p>
-</div>
-<div id="ejercicio-2-diferenciación-por-especie" class="section level4 hasAnchor" number="9.1.6.2">
-<h4><span class="header-section-number">9.1.6.2</span> Ejercicio 2: Diferenciación por especie<a href="plots.html#ejercicio-2-diferenciación-por-especie" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Modifica el gráfico de dispersión anterior para diferenciar los puntos por especie de pingüino.</p>
-<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb442-1"><a href="plots.html#cb442-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb442-1"><a href="plots.html#cb442-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
 <span id="cb442-2"><a href="plots.html#cb442-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing missing values or
 ## values outside the scale range
 ## (`geom_point()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-182-1.png" width="672" /></p>
 </div>
+<div id="ejercicio-2-diferenciación-por-especie" class="section level4 hasAnchor" number="9.1.6.2">
+<h4><span class="header-section-number">9.1.6.2</span> Ejercicio 2: Diferenciación por especie<a href="plots.html#ejercicio-2-diferenciación-por-especie" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Modifica el gráfico de dispersión anterior para diferenciar los puntos por especie de pingüino.</p>
+<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="plots.html#cb444-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb444-2"><a href="plots.html#cb444-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 rows containing missing values or
+## values outside the scale range
+## (`geom_point()`).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-183-1.png" width="672" /></p>
+</div>
 <div id="ejercicio-3-histograma-de-masa-corporal" class="section level4 hasAnchor" number="9.1.6.3">
 <h4><span class="header-section-number">9.1.6.3</span> Ejercicio 3: Histograma de masa corporal<a href="plots.html#ejercicio-3-histograma-de-masa-corporal" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Crea un histograma para explorar la distribución de la masa corporal de los pingüinos.</p>
-<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="plots.html#cb444-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb444-2"><a href="plots.html#cb444-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb446"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb446-1"><a href="plots.html#cb446-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb446-2"><a href="plots.html#cb446-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing non-finite outside
 ## the scale range (`stat_bin()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-183-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-184-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-4-barras-de-error-por-especie" class="section level4 hasAnchor" number="9.1.6.4">
 <h4><span class="header-section-number">9.1.6.4</span> Ejercicio 4: Barras de error por especie<a href="plots.html#ejercicio-4-barras-de-error-por-especie" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Genera un gráfico de barras que muestre la masa corporal media de los pingüinos por especie, incluyendo barras de error.</p>
-<div class="sourceCode" id="cb446"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb446-1"><a href="plots.html#cb446-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb446-2"><a href="plots.html#cb446-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>) <span class="sc">+</span></span>
-<span id="cb446-3"><a href="plots.html#cb446-3" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun.data =</span> mean_se, <span class="at">width =</span> <span class="fl">0.2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb448"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb448-1"><a href="plots.html#cb448-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb448-2"><a href="plots.html#cb448-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>) <span class="sc">+</span></span>
+<span id="cb448-3"><a href="plots.html#cb448-3" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun.data =</span> mean_se, <span class="at">width =</span> <span class="fl">0.2</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing non-finite outside
 ## the scale range (`stat_summary()`).
 ## Removed 2 rows containing non-finite outside
 ## the scale range (`stat_summary()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-184-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-185-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-5-boxplot-de-profundidad-del-culmen" class="section level4 hasAnchor" number="9.1.6.5">
 <h4><span class="header-section-number">9.1.6.5</span> Ejercicio 5: Boxplot de profundidad del culmen<a href="plots.html#ejercicio-5-boxplot-de-profundidad-del-culmen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Crea un boxplot para comparar la profundidad del culmen entre las diferentes especies de pingüinos.</p>
-<div class="sourceCode" id="cb448"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb448-1"><a href="plots.html#cb448-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
-<span id="cb448-2"><a href="plots.html#cb448-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb450"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb450-1"><a href="plots.html#cb450-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
+<span id="cb450-2"><a href="plots.html#cb450-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing non-finite outside
 ## the scale range (`stat_boxplot()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-185-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-186-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-6-facetado-por-islas" class="section level4 hasAnchor" number="9.1.6.6">
 <h4><span class="header-section-number">9.1.6.6</span> Ejercicio 6: Facetado por islas<a href="plots.html#ejercicio-6-facetado-por-islas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Repite el gráfico de dispersión de longitud vs. profundidad del culmen, pero esta vez facetado por la isla de origen.</p>
-<div class="sourceCode" id="cb450"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb450-1"><a href="plots.html#cb450-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
-<span id="cb450-2"><a href="plots.html#cb450-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb450-3"><a href="plots.html#cb450-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>island)</span></code></pre></div>
+<div class="sourceCode" id="cb452"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb452-1"><a href="plots.html#cb452-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
+<span id="cb452-2"><a href="plots.html#cb452-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb452-3"><a href="plots.html#cb452-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>island)</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing missing values or
 ## values outside the scale range
 ## (`geom_point()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-186-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-187-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-7-densidad-de-masa-corporal" class="section level4 hasAnchor" number="9.1.6.7">
 <h4><span class="header-section-number">9.1.6.7</span> Ejercicio 7: Densidad de masa corporal<a href="plots.html#ejercicio-7-densidad-de-masa-corporal" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Muestra la densidad de la distribución de la masa corporal de los pingüinos utilizando un gráfico de densidad.</p>
-<div class="sourceCode" id="cb452"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb452-1"><a href="plots.html#cb452-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">fill =</span> species)) <span class="sc">+</span></span>
-<span id="cb452-2"><a href="plots.html#cb452-2" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb454"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb454-1"><a href="plots.html#cb454-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb454-2"><a href="plots.html#cb454-2" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing non-finite outside
 ## the scale range (`stat_density()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-187-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-188-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen" class="section level4 hasAnchor" number="9.1.6.8">
 <h4><span class="header-section-number">9.1.6.8</span> Ejercicio 8: Gráfico de violín de la longitud del culmen<a href="plots.html#ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Genera un gráfico de violín para visualizar la distribución de la longitud del culmen por especie.</p>
-<div class="sourceCode" id="cb454"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb454-1"><a href="plots.html#cb454-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb454-2"><a href="plots.html#cb454-2" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb456"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb456-1"><a href="plots.html#cb456-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb456-2"><a href="plots.html#cb456-2" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing non-finite outside
 ## the scale range (`stat_ydensity()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-188-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-9-puntos-superpuestos-en-boxplot" class="section level4 hasAnchor" number="9.1.6.9">
 <h4><span class="header-section-number">9.1.6.9</span> Ejercicio 9: Puntos superpuestos en boxplot<a href="plots.html#ejercicio-9-puntos-superpuestos-en-boxplot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Crea un boxplot de la profundidad del culmen por especie y superpón los puntos de datos individuales.</p>
-<div class="sourceCode" id="cb456"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb456-1"><a href="plots.html#cb456-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
-<span id="cb456-2"><a href="plots.html#cb456-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb456-3"><a href="plots.html#cb456-3" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb458"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb458-1"><a href="plots.html#cb458-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
+<span id="cb458-2"><a href="plots.html#cb458-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb458-3"><a href="plots.html#cb458-3" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.2</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing non-finite outside
 ## the scale range (`stat_boxplot()`).</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values or
 ## values outside the scale range
 ## (`geom_point()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-190-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo" class="section level4 hasAnchor" number="9.1.6.10">
 <h4><span class="header-section-number">9.1.6.10</span> Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo<a href="plots.html#ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Asumiendo que los datos estén ordenados temporalmente, muestra cómo cambia la masa corporal promedio a lo largo del tiempo.</p>
-<div class="sourceCode" id="cb459"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb459-1"><a href="plots.html#cb459-1" tabindex="-1"></a><span class="co"># Asumiendo que &#39;year&#39; representa el tiempo en tus datos</span></span>
-<span id="cb459-2"><a href="plots.html#cb459-2" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> body_mass_g, <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb459-3"><a href="plots.html#cb459-3" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb461"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb461-1"><a href="plots.html#cb461-1" tabindex="-1"></a><span class="co"># Asumiendo que &#39;year&#39; representa el tiempo en tus datos</span></span>
+<span id="cb461-2"><a href="plots.html#cb461-2" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> body_mass_g, <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb461-3"><a href="plots.html#cb461-3" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing non-finite outside
 ## the scale range (`stat_summary()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-190-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-191-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto" class="section level4 hasAnchor" number="9.1.6.11">
 <h4><span class="header-section-number">9.1.6.11</span> Ejercicio 11: Gráfico de dispersión con tamaño de punto<a href="plots.html#ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Modifica el gráfico de dispersión de longitud vs. profundidad del culmen para que el tamaño de los puntos refleje la masa corporal de los pingüinos.</p>
-<div class="sourceCode" id="cb461"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb461-1"><a href="plots.html#cb461-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">size =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb461-2"><a href="plots.html#cb461-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb463"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb463-1"><a href="plots.html#cb463-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">size =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb463-2"><a href="plots.html#cb463-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing missing values or
 ## values outside the scale range
 ## (`geom_point()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-191-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-192-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-12-barras-apiladas-de-especies-por-isla" class="section level4 hasAnchor" number="9.1.6.12">
 <h4><span class="header-section-number">9.1.6.12</span> Ejercicio 12: Barras apiladas de especies por isla<a href="plots.html#ejercicio-12-barras-apiladas-de-especies-por-isla" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Crea un gráfico de barras apiladas que muestre la cantidad de pingüinos de cada especie presentes en cada isla.</p>
-<div class="sourceCode" id="cb463"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb463-1"><a href="plots.html#cb463-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> island, <span class="at">fill =</span> species)) <span class="sc">+</span></span>
-<span id="cb463-2"><a href="plots.html#cb463-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">&quot;stack&quot;</span>)</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-192-1.png" width="672" /></p>
+<div class="sourceCode" id="cb465"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb465-1"><a href="plots.html#cb465-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> island, <span class="at">fill =</span> species)) <span class="sc">+</span></span>
+<span id="cb465-2"><a href="plots.html#cb465-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">&quot;stack&quot;</span>)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-193-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-13-gráfico-de-correlación-con-texto" class="section level4 hasAnchor" number="9.1.6.13">
 <h4><span class="header-section-number">9.1.6.13</span> Ejercicio 13: Gráfico de correlación con texto<a href="plots.html#ejercicio-13-gráfico-de-correlación-con-texto" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Genera un gráfico de dispersión entre la longitud y la profundidad del culmen e incluye un texto que muestre el coeficiente de correlación en el gráfico.</p>
-<div class="sourceCode" id="cb464"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb464-1"><a href="plots.html#cb464-1" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
-<span id="cb464-2"><a href="plots.html#cb464-2" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
-<span id="cb464-3"><a href="plots.html#cb464-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb464-4"><a href="plots.html#cb464-4" tabindex="-1"></a>  <span class="fu">stat_cor</span>(<span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>, <span class="at">label.x =</span> <span class="dv">3</span>, <span class="at">label.y =</span> <span class="dv">50</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb466"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb466-1"><a href="plots.html#cb466-1" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
+<span id="cb466-2"><a href="plots.html#cb466-2" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
+<span id="cb466-3"><a href="plots.html#cb466-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb466-4"><a href="plots.html#cb466-4" tabindex="-1"></a>  <span class="fu">stat_cor</span>(<span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>, <span class="at">label.x =</span> <span class="dv">3</span>, <span class="at">label.y =</span> <span class="dv">50</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing non-finite outside
 ## the scale range (`stat_cor()`).</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values or
 ## values outside the scale range
 ## (`geom_point()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-193-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-194-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen" class="section level4 hasAnchor" number="9.1.6.14">
 <h4><span class="header-section-number">9.1.6.14</span> Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen<a href="plots.html#ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Crea un mapa de calor que muestre la distribución conjunta de la longitud y la profundidad del culmen de los pingüinos.</p>
-<div class="sourceCode" id="cb467"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb467-1"><a href="plots.html#cb467-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
-<span id="cb467-2"><a href="plots.html#cb467-2" tabindex="-1"></a>  <span class="fu">geom_bin2d</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb469"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb469-1"><a href="plots.html#cb469-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
+<span id="cb469-2"><a href="plots.html#cb469-2" tabindex="-1"></a>  <span class="fu">geom_bin2d</span>()</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing non-finite outside
 ## the scale range (`stat_bin2d()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-194-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-195-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-15-gráfico-de-interacción-entre-tres-variables" class="section level4 hasAnchor" number="9.1.6.15">
 <h4><span class="header-section-number">9.1.6.15</span> Ejercicio 15: Gráfico de interacción entre tres variables<a href="plots.html#ejercicio-15-gráfico-de-interacción-entre-tres-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Explora la relación entre la longitud del culmen, la profundidad del culmen y la masa corporal, diferenciando por especie.</p>
-<div class="sourceCode" id="cb469"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb469-1"><a href="plots.html#cb469-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">color =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb469-2"><a href="plots.html#cb469-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb469-3"><a href="plots.html#cb469-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>species)</span></code></pre></div>
+<div class="sourceCode" id="cb471"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb471-1"><a href="plots.html#cb471-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">color =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb471-2"><a href="plots.html#cb471-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb471-3"><a href="plots.html#cb471-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>species)</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing missing values or
 ## values outside the scale range
 ## (`geom_point()`).</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-195-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-196-1.png" width="672" /></p>
 </div>
 <div id="ejercicios-propuestos" class="section level4 hasAnchor" number="9.1.6.16">
 <h4><span class="header-section-number">9.1.6.16</span> Ejercicios propuestos<a href="plots.html#ejercicios-propuestos" class="anchor-section" aria-label="Anchor link to header"></a></h4>

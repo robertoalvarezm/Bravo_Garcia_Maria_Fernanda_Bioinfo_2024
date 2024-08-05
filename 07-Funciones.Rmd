@@ -155,6 +155,29 @@ if (es_primo(numero)) {
 }
 ```
 
+### Ejemplo resuelto
+
+**Calcular Índice de Diversidad de Shannon**
+
+Descripción: Define una función que calcule el índice de diversidad de Shannon dado un vector de abundancias de especies.
+
+- Define una función indice_shannon que acepte un argumento: abundancias.
+- La función debe devolver el índice de Shannon calculado a partir del vector de abundancias.
+
+```{r}
+indice_shannon <- function(abundancias) {
+  p <- abundancias / sum(abundancias)
+  shannon <- -sum(p * log(p), na.rm = TRUE)
+  return(shannon)
+}
+
+# Prueba de la función
+indice_shannon(c(10, 20, 30, 40))
+
+```
+
+
+
 **Ejercicios**
 
 1.  Escribe una función que tome un vector numérico como argumento de entrada y devuelva la media aritmética de los valores.
@@ -176,3 +199,12 @@ if (es_primo(numero)) {
 9.  Escribe una función que tome un vector de caracteres como argumento de entrada y devuelva un vector con los mismos elementos en orden inverso.
 
 10. Escribe una función que tome una matriz como argumento de entrada y devuelva la diagonal principal en un vector.
+
+11. **Calcular Tasa de Crecimiento Bacteriano**
+
+Descripción: Define una función que calcule la tasa de crecimiento bacteriano dada la concentración inicial y final de bacterias y el tiempo.
+
+- Define una función tasa_crecimiento que acepte tres argumentos: concentracion_inicial, concentracion_final y tiempo.
+- La función debe devolver la tasa de crecimiento (logaritmo natural de la razón de concentraciones dividido por el tiempo).
+
+

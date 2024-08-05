@@ -104,6 +104,7 @@ llamar-a-la-función-saludar-proporcionando-el-parámetro-opcional
 definir-una-función-para-calcular-el-área-de-un-círculo
 definir-una-función-para-calcular-el-factorial-de-un-número
 definir-una-función-para-verificar-si-un-número-es-primo
+ejemplo-resuelto
 plots
 visualización-de-datos-con-ggplot2
 introducción
