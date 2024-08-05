@@ -653,17 +653,17 @@ El resultado obtenido siempre será un valor booleano: <strong>TRUE</strong> o <
 <span id="cb176-2"><a href="estructura.html#cb176-2" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
 <span id="cb176-3"><a href="estructura.html#cb176-3" tabindex="-1"></a></span>
 <span id="cb176-4"><a href="estructura.html#cb176-4" tabindex="-1"></a><span class="fu">min</span>(x) <span class="co">#Se obtiene el valor mínimo</span></span></code></pre></div>
-<pre><code>## [1] -3.373467</code></pre>
+<pre><code>## [1] -3.034168</code></pre>
 <div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="estructura.html#cb178-1" tabindex="-1"></a><span class="fu">max</span>(x) <span class="co">#Se obtiene el valor máximo</span></span></code></pre></div>
-<pre><code>## [1] 2.650453</code></pre>
+<pre><code>## [1] 3.13604</code></pre>
 <div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="estructura.html#cb180-1" tabindex="-1"></a><span class="fu">range</span>(x) <span class="co">#Da a conocer el rango en el cual se encuentran los valores, es decir el valor min y max. </span></span></code></pre></div>
-<pre><code>## [1] -3.373467  2.650453</code></pre>
+<pre><code>## [1] -3.034168  3.136040</code></pre>
 <div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="estructura.html#cb182-1" tabindex="-1"></a><span class="fu">sum</span>(x) <span class="co">#Realiza la suma de todos los valores contenidos en el vector </span></span></code></pre></div>
-<pre><code>## [1] 10.92218</code></pre>
+<pre><code>## [1] -7.726629</code></pre>
 <div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="estructura.html#cb184-1" tabindex="-1"></a><span class="fu">mean</span>(x) <span class="co">#Calcula el promedio del conjunto de valores </span></span></code></pre></div>
-<pre><code>## [1] 0.01092218</code></pre>
+<pre><code>## [1] -0.007726629</code></pre>
 <div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="estructura.html#cb186-1" tabindex="-1"></a><span class="fu">median</span>(x) <span class="co">#Se obtiene la mediana </span></span></code></pre></div>
-<pre><code>## [1] 0.01415916</code></pre>
+<pre><code>## [1] -0.01338098</code></pre>
 <p><strong>Ejercicio</strong> ¿Qué función tienen los siguientes comandos <code>sd()</code> y <code>quantile()</code>?</p>
 <p>Para <code>unique()</code> y <code>sort()</code> conviene tener elementos discretos más que continuos.</p>
 <div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="estructura.html#cb188-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>),<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>,<span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),<span class="dv">5</span>))</span>
@@ -671,7 +671,7 @@ El resultado obtenido siempre será un valor booleano: <strong>TRUE</strong> o <
 <pre><code>##  [1]  3  1  2  4  5  6  7  8  9 10 11 12 13 14 15</code></pre>
 <div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="estructura.html#cb190-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">10</span>,<span class="dv">10</span>)</span>
 <span id="cb190-2"><a href="estructura.html#cb190-2" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1]  1  6  7  3  9 10  2  8  4  5</code></pre>
+<pre><code>##  [1]  7  3  9  4  8  6  2  1 10  5</code></pre>
 <div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="estructura.html#cb192-1" tabindex="-1"></a><span class="fu">sort</span>(x)</span></code></pre></div>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 </div>
