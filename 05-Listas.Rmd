@@ -51,6 +51,31 @@ data_frame_en_lista <- compleja_lista$data_frame
 print(data_frame_en_lista)
 
 ```
+
+## Ejercicio resuelto
+
+Guarda datos de análisis de diferentes muestras de agua en una lista.
+
+1. Crea una lista muestras_agua con 4 elementos, cada uno representando una muestra de agua.
+2. Cada elemento debe ser una lista con: ID, Localización, pH, Coliformes (número de coliformes).
+3. Calcula el promedio de coliformes en todas las muestras.
+
+```{r}
+# Crear lista de muestras de agua
+muestras_agua <- list(
+  list(ID = "Muestra1", Localizacion = "Río", pH = 7.2, Coliformes = 150),
+  list(ID = "Muestra2", Localizacion = "Lago", pH = 6.8, Coliformes = 200),
+  list(ID = "Muestra3", Localizacion = "Pozo", pH = 7.5, Coliformes = 50),
+  list(ID = "Muestra4", Localizacion = "Mar", pH = 8.1, Coliformes = 80)
+)
+
+# Calcular promedio de coliformes
+promedio_coliformes <- mean(sapply(muestras_agua, function(x) x$Coliformes))
+print(promedio_coliformes)
+
+```
+
+
 ## Ejercicios
 ### Ejercicios Propuestos con listas 
 
