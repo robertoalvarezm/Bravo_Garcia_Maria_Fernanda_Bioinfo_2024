@@ -363,27 +363,24 @@ div.csl-indent {
 <p>Las <strong>expresiones</strong> y <strong>asignaciones</strong> son los dos tipos de resultados que arroja R.</p>
 <p>Las <strong>expresiones</strong> sólo se muestran en la salida estándar y NO se guardan en alguna variable, es decir, cada que se corra la línea se obtendran valores distintos.</p>
 <p>Ejemplo:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="bases-prácticas-en-r.html#cb37-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>##  [1]  0.3945400  0.6630100 -0.9034575
+##  [4]  0.6645018  1.8326265 -0.2258644
+##  [7]  0.7245406 -0.5069751  0.4831893
+## [10] -0.4154193</code></pre>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="bases-prácticas-en-r.html#cb39-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] -0.41047329 -0.86604903
-##  [3] -0.44057704  0.01346911
-##  [5]  0.92543846  1.92641528
-##  [7]  0.32650974 -1.13385988
-##  [9]  1.72036116 -0.49465598</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="bases-prácticas-en-r.html#cb41-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] -1.2688585 -1.5397660
-##  [3]  1.1569936 -0.6174327
-##  [5]  0.6653704  1.0971702
-##  [7]  2.3508757  1.2263305
-##  [9]  0.1898277 -0.1540295</code></pre>
+<pre><code>##  [1] -0.07989635 -1.58676719  0.37709835
+##  [4]  0.94744344  0.94164849 -0.88345268
+##  [7]  0.40065600  0.38559204 -1.05541575
+## [10] -0.41051200</code></pre>
 <p>Las <strong>asignaciones</strong>, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de <code>&lt;-</code></p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="bases-prácticas-en-r.html#cb43-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="bases-prácticas-en-r.html#cb44-1" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -2.6837734 -0.5380444
-##  [3] -1.2184126  0.6199278
-##  [5] -1.1468110 -1.0438291
-##  [7]  1.5232167  0.4498332
-##  [9]  1.8151336  1.3622934</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="bases-prácticas-en-r.html#cb41-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="bases-prácticas-en-r.html#cb42-1" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1] -0.5767360 -0.5377346 -0.4141525
+##  [4] -0.2642416  1.5244101 -0.4544607
+##  [7]  0.2843083 -0.6314041  1.4370048
+## [10]  0.4644948</code></pre>
 <p><strong>NOTA</strong> El símbolo <code>&lt;-</code> es equivalente en función a <code>=</code> pero puede llevar a confusiones importantes con el operador <code>==</code>.</p>
 <div class="float">
 <img src="equals-sign-assignment-operator-imgflip-com-going-through-data-structures-and-47188178.png" alt="Operador de asignación. Así que evita el uso del igual" />
@@ -391,46 +388,46 @@ div.csl-indent {
 </div>
 <p>Otro punto a considerar respecto a las <strong>asignaciones</strong> es que R es capaz de distinguir entre mayúsculas y minúsculas, por lo que la misma letra puede contener valores distintos.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="bases-prácticas-en-r.html#cb46-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb46-2"><a href="bases-prácticas-en-r.html#cb46-2" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">6</span></span></code></pre></div>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="bases-prácticas-en-r.html#cb47-1" tabindex="-1"></a>a</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="bases-prácticas-en-r.html#cb44-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb44-2"><a href="bases-prácticas-en-r.html#cb44-2" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="dv">6</span></span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="bases-prácticas-en-r.html#cb45-1" tabindex="-1"></a>a</span></code></pre></div>
 <pre><code>## [1] 3</code></pre>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="bases-prácticas-en-r.html#cb49-1" tabindex="-1"></a>A</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="bases-prácticas-en-r.html#cb47-1" tabindex="-1"></a>A</span></code></pre></div>
 <pre><code>## [1] 6</code></pre>
 <p>Una opción es definirlas en más de una línea, ejemplo:</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="bases-prácticas-en-r.html#cb51-1" tabindex="-1"></a>a <span class="ot">&lt;-</span></span>
-<span id="cb51-2"><a href="bases-prácticas-en-r.html#cb51-2" tabindex="-1"></a>  pi <span class="sc">+</span> <span class="dv">12</span></span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="bases-prácticas-en-r.html#cb49-1" tabindex="-1"></a>a <span class="ot">&lt;-</span></span>
+<span id="cb49-2"><a href="bases-prácticas-en-r.html#cb49-2" tabindex="-1"></a>  pi <span class="sc">+</span> <span class="dv">12</span></span></code></pre></div>
 <p><strong>NOTA</strong> Ten mucha precaución con el nombre que asignas a un valor, ya que podrías sobreescribirlo y se le quedará asignado el último valor.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="bases-prácticas-en-r.html#cb52-1" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb52-2"><a href="bases-prácticas-en-r.html#cb52-2" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="bases-prácticas-en-r.html#cb50-1" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb50-2"><a href="bases-prácticas-en-r.html#cb50-2" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## [1] 3</code></pre>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="bases-prácticas-en-r.html#cb54-1" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">8</span> </span>
-<span id="cb54-2"><a href="bases-prácticas-en-r.html#cb54-2" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="bases-prácticas-en-r.html#cb52-1" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">8</span> </span>
+<span id="cb52-2"><a href="bases-prácticas-en-r.html#cb52-2" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <p>La separación de comandos puede darse de dos formas:</p>
 <p>Empleando <code>;</code>, ejemplo:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="bases-prácticas-en-r.html#cb56-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span>; b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="bases-prácticas-en-r.html#cb54-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span>; b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
 <p>o usando un salto de línea, esta es una mejor opción, ejemplo:</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="bases-prácticas-en-r.html#cb57-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb57-2"><a href="bases-prácticas-en-r.html#cb57-2" tabindex="-1"></a>b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="bases-prácticas-en-r.html#cb55-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb55-2"><a href="bases-prácticas-en-r.html#cb55-2" tabindex="-1"></a>b <span class="ot">&lt;-</span><span class="dv">5</span></span></code></pre></div>
 </div>
 <div id="movimiento-entre-directorios" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Movimiento entre directorios<a href="bases-prácticas-en-r.html#movimiento-entre-directorios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Otra de las ventajas que ofrece R es que permite ubicar algún archivo o saber la dirección del directorio en la que nos encontramos actualmente, todo ello sin necesidad de salir de la interfaz.</p>
 <p>Para saber en qué directorio estamos, se teclea:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="bases-prácticas-en-r.html#cb58-1" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="bases-prácticas-en-r.html#cb56-1" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;/Users/robertoalvarez/Documents/GitHub/Bravo_Garcia_Maria_Fernanda_Bioinfo_2024&quot;</code></pre>
 <p>Para cambiar de directorio utilizamos <code>setwd("direccion_a_la_que_quieres_ir")</code></p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="bases-prácticas-en-r.html#cb60-1" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="bases-prácticas-en-r.html#cb58-1" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;~&quot;</span>)</span></code></pre></div>
 </div>
 <div id="bash-en-r" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Bash en R<a href="bases-prácticas-en-r.html#bash-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>También se pueden usar los comandos de la terminal de bash dentro de R, utilizando la función <code>system()</code></p>
 <p>Para listar archivos de una carpeta usamos <code>ls</code></p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="bases-prácticas-en-r.html#cb61-1" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;ls -la&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="bases-prácticas-en-r.html#cb59-1" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;ls -la&quot;</span>)</span></code></pre></div>
 <p>Para saber en qué directorio estamos usamos la función análoga a <code>getwd()</code>, que es <code>pwd</code></p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="bases-prácticas-en-r.html#cb62-1" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;pwd&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="bases-prácticas-en-r.html#cb60-1" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;pwd&quot;</span>)</span></code></pre></div>
 <p><strong>Importante: Como regla general todos los nombres van entre comillas: nombre de carpetas, archivos, de columnas, de renglones,etc.</strong></p>
 </div>
 <div id="operaciones-aritméticas" class="section level2 hasAnchor" number="2.4">
@@ -438,27 +435,27 @@ div.csl-indent {
 <p>R también puede ser usado como calculadora.
 Se puede sumar, restar, multiplicar,dividir, “exponenciar” y calcular la raíz cuadrada.</p>
 <p><strong>SUMA</strong> con el operador <code>+</code></p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="bases-prácticas-en-r.html#cb63-1" tabindex="-1"></a>a <span class="sc">+</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="bases-prácticas-en-r.html#cb61-1" tabindex="-1"></a>a <span class="sc">+</span> b</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <p><strong>RESTA</strong> con el operador <code>-</code></p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="bases-prácticas-en-r.html#cb65-1" tabindex="-1"></a>a <span class="sc">-</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="bases-prácticas-en-r.html#cb63-1" tabindex="-1"></a>a <span class="sc">-</span> b</span></code></pre></div>
 <pre><code>## [1] -2</code></pre>
 <p><strong>MULTIPLICACIÓN</strong> con el operador <code>*</code></p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="bases-prácticas-en-r.html#cb67-1" tabindex="-1"></a>a <span class="sc">*</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="bases-prácticas-en-r.html#cb65-1" tabindex="-1"></a>a <span class="sc">*</span> b</span></code></pre></div>
 <pre><code>## [1] 15</code></pre>
 <p><strong>DIVISIÓN</strong> con el operador <code>/</code></p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="bases-prácticas-en-r.html#cb69-1" tabindex="-1"></a>a <span class="sc">/</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="bases-prácticas-en-r.html#cb67-1" tabindex="-1"></a>a <span class="sc">/</span> b</span></code></pre></div>
 <pre><code>## [1] 0.6</code></pre>
 <p><strong>EXPONENTE</strong> con los operadoradores <code>**</code> o <code>^</code></p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="bases-prácticas-en-r.html#cb71-1" tabindex="-1"></a>a <span class="sc">**</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="bases-prácticas-en-r.html#cb69-1" tabindex="-1"></a>a <span class="sc">**</span> b</span></code></pre></div>
 <pre><code>## [1] 243</code></pre>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="bases-prácticas-en-r.html#cb73-1" tabindex="-1"></a>a <span class="sc">^</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="bases-prácticas-en-r.html#cb71-1" tabindex="-1"></a>a <span class="sc">^</span> b</span></code></pre></div>
 <pre><code>## [1] 243</code></pre>
 <p><strong>RAÍZ CUADRADA</strong> con la función <code>sqrt()</code></p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="bases-prácticas-en-r.html#cb75-1" tabindex="-1"></a><span class="fu">sqrt</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="bases-prácticas-en-r.html#cb73-1" tabindex="-1"></a><span class="fu">sqrt</span>(a)</span></code></pre></div>
 <pre><code>## [1] 1.732051</code></pre>
 <p><strong>LOGARITMO</strong> con la función <code>log()</code></p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="bases-prácticas-en-r.html#cb77-1" tabindex="-1"></a><span class="fu">log</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="bases-prácticas-en-r.html#cb75-1" tabindex="-1"></a><span class="fu">log</span>(a)</span></code></pre></div>
 <pre><code>## [1] 1.098612</code></pre>
 <div id="prioridad-en-las-operaciones" class="section level3 hasAnchor" number="2.4.1">
 <h3><span class="header-section-number">2.4.1</span> Prioridad en las operaciones<a href="bases-prácticas-en-r.html#prioridad-en-las-operaciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -501,13 +498,13 @@ Este tipo de datos <strong>sólo</strong> contienen información <code>TRUE</cod
 <li>mayor o igual que <code>&gt;=</code></li>
 </ul>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="bases-prácticas-en-r.html#cb79-1" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="bases-prácticas-en-r.html#cb77-1" tabindex="-1"></a><span class="dv">1</span> <span class="sc">&lt;</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="bases-prácticas-en-r.html#cb81-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">0</span>    </span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="bases-prácticas-en-r.html#cb79-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">==</span> <span class="dv">0</span>    </span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="bases-prácticas-en-r.html#cb83-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">!=</span> <span class="dv">0</span>   </span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="bases-prácticas-en-r.html#cb81-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">!=</span> <span class="dv">0</span>   </span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="bases-prácticas-en-r.html#cb85-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&lt;=</span> <span class="dv">0</span>   </span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="bases-prácticas-en-r.html#cb83-1" tabindex="-1"></a><span class="dv">10</span> <span class="sc">&lt;=</span> <span class="dv">0</span>   </span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 <p><strong>NOTA</strong> Dentro de R los valores lógicos <code>TRUE</code> y <code>FALSE</code> tienen un valor numérico. <code>TRUE</code>equivale a 1 y <code>FALSE</code> es equivalente a 0. Esto permite cuantificar el número de elementos que cumplen con los criterios, ¿cómo? mediante la suma de los <code>TRUE</code>s.</p>
 <p><strong>Ejercicios</strong>
@@ -521,18 +518,18 @@ Demuestra si:
 <p>Son <em>strings</em> de texto y se caracterizan porque cada uno de los elementos va entre comillas. Los elementos pueden ser desde sólo un caracter hasta oraciones.
 Podría parecer que la variable a la cual lo asignamos contiene números, pero las comillas indican que serán tratados como texto. Podemos subsetearlos por su índice o buscando literalmente el texto.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="bases-prácticas-en-r.html#cb87-1" tabindex="-1"></a>x<span class="ot">&lt;-</span> <span class="st">&quot;La candente mañana de febrero en que Beatriz Viterbo murió, después de una imperiosa agonía que no se rebajó un solo instante ni al sentimentalismo ni al miedo&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="bases-prácticas-en-r.html#cb85-1" tabindex="-1"></a>x<span class="ot">&lt;-</span> <span class="st">&quot;La candente mañana de febrero en que Beatriz Viterbo murió, después de una imperiosa agonía que no se rebajó un solo instante ni al sentimentalismo ni al miedo&quot;</span></span></code></pre></div>
 </div>
 <div id="enteros-y-números-numeric" class="section level3 hasAnchor" number="2.5.3">
 <h3><span class="header-section-number">2.5.3</span> Enteros y números (numeric)<a href="bases-prácticas-en-r.html#enteros-y-números-numeric" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Existen dos formas diferentes en que las computadoras pueden guardar los números y hacer operaciones matemáticas con ellos: <code>numeric</code> e <code>integer</code>.
 Por lo común no importa esta diferencia, pero puede ser relevante para algunas funciones de Bioconductor. En R se representan los números como <code>numeric</code> y el tamaño máximo que maneja para un <code>integer</code> es ligeramente más chico que el tamaño del genoma humano.</p>
 <p>¿Cómo revisar si un objeto es numeric o entero? Con la función <code>class()</code></p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="bases-prácticas-en-r.html#cb88-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb88-2"><a href="bases-prácticas-en-r.html#cb88-2" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="bases-prácticas-en-r.html#cb86-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb86-2"><a href="bases-prácticas-en-r.html#cb86-2" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="bases-prácticas-en-r.html#cb90-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
-<span id="cb90-2"><a href="bases-prácticas-en-r.html#cb90-2" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="bases-prácticas-en-r.html#cb88-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
+<span id="cb88-2"><a href="bases-prácticas-en-r.html#cb88-2" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
 <pre><code>## [1] &quot;integer&quot;</code></pre>
 
 </div>

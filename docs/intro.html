@@ -432,40 +432,152 @@ tu máquina teclea la función <code>library()</code></p>
 <code>library(nombre_de_paquete)</code></p>
 <p>Por ejemplo:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro.html#cb2-1" tabindex="-1"></a><span class="fu">library</span>(gplots)  </span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;gplots&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:stats&#39;:
-## 
-##     lowess</code></pre>
 <p>Para visualizar los paquetes ya cargados, teclea:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="intro.html#cb5-1" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;.GlobalEnv&quot;        &quot;package:gplots&quot;   
-##  [3] &quot;tools:rstudio&quot;     &quot;package:stats&quot;    
-##  [5] &quot;package:graphics&quot;  &quot;package:grDevices&quot;
-##  [7] &quot;package:utils&quot;     &quot;package:datasets&quot; 
-##  [9] &quot;package:methods&quot;   &quot;Autoloads&quot;        
-## [11] &quot;package:base&quot;</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="intro.html#cb3-1" tabindex="-1"></a><span class="fu">search</span>()</span></code></pre></div>
+<pre><code>##  [1] &quot;.GlobalEnv&quot;            
+##  [2] &quot;package:ggpubr&quot;        
+##  [3] &quot;package:palmerpenguins&quot;
+##  [4] &quot;package:ggplot2&quot;       
+##  [5] &quot;package:readxl&quot;        
+##  [6] &quot;package:gplots&quot;        
+##  [7] &quot;tools:rstudio&quot;         
+##  [8] &quot;package:stats&quot;         
+##  [9] &quot;package:graphics&quot;      
+## [10] &quot;package:grDevices&quot;     
+## [11] &quot;package:utils&quot;         
+## [12] &quot;package:datasets&quot;      
+## [13] &quot;package:methods&quot;       
+## [14] &quot;Autoloads&quot;             
+## [15] &quot;package:base&quot;</code></pre>
 <p>Para visualizar las funciones dentro de un paquete en particular se utiliza:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="intro.html#cb7-1" tabindex="-1"></a><span class="fu">ls</span>(<span class="dv">2</span>)</span></code></pre></div>
-<pre><code>##  [1] &quot;angleAxis&quot;      &quot;balloonplot&quot;   
-##  [3] &quot;bandplot&quot;       &quot;barplot2&quot;      
-##  [5] &quot;bluered&quot;        &quot;boxplot2&quot;      
-##  [7] &quot;ci2d&quot;           &quot;col2hex&quot;       
-##  [9] &quot;colorpanel&quot;     &quot;greenred&quot;      
-## [11] &quot;heatmap.2&quot;      &quot;hist2d&quot;        
-## [13] &quot;lmplot2&quot;        &quot;lowess&quot;        
-## [15] &quot;ooplot&quot;         &quot;overplot&quot;      
-## [17] &quot;panel.overplot&quot; &quot;plot.venn&quot;     
-## [19] &quot;plotCI&quot;         &quot;plotLowess&quot;    
-## [21] &quot;plotmeans&quot;      &quot;qqnorm.aov&quot;    
-## [23] &quot;redblue&quot;        &quot;redgreen&quot;      
-## [25] &quot;reorder.factor&quot; &quot;residplot&quot;     
-## [27] &quot;rich.colors&quot;    &quot;sinkplot&quot;      
-## [29] &quot;smartlegend&quot;    &quot;space&quot;         
-## [31] &quot;textplot&quot;       &quot;venn&quot;          
-## [33] &quot;wapply&quot;</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="intro.html#cb5-1" tabindex="-1"></a><span class="fu">ls</span>(<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##   [1] &quot;%&gt;%&quot;                        
+##   [2] &quot;add_summary&quot;                
+##   [3] &quot;annotate_figure&quot;            
+##   [4] &quot;as_ggplot&quot;                  
+##   [5] &quot;as_npc&quot;                     
+##   [6] &quot;as_npcx&quot;                    
+##   [7] &quot;as_npcy&quot;                    
+##   [8] &quot;background_image&quot;           
+##   [9] &quot;bgcolor&quot;                    
+##  [10] &quot;border&quot;                     
+##  [11] &quot;change_palette&quot;             
+##  [12] &quot;clean_table_theme&quot;          
+##  [13] &quot;clean_theme&quot;                
+##  [14] &quot;colnames_style&quot;             
+##  [15] &quot;color_palette&quot;              
+##  [16] &quot;compare_means&quot;              
+##  [17] &quot;create_aes&quot;                 
+##  [18] &quot;desc_statby&quot;                
+##  [19] &quot;diff_express&quot;               
+##  [20] &quot;facet&quot;                      
+##  [21] &quot;fill_palette&quot;               
+##  [22] &quot;font&quot;                       
+##  [23] &quot;gene_citation&quot;              
+##  [24] &quot;gene_expression&quot;            
+##  [25] &quot;geom_bracket&quot;               
+##  [26] &quot;geom_exec&quot;                  
+##  [27] &quot;geom_pwc&quot;                   
+##  [28] &quot;geom_signif&quot;                
+##  [29] &quot;get_breaks&quot;                 
+##  [30] &quot;get_coord&quot;                  
+##  [31] &quot;get_legend&quot;                 
+##  [32] &quot;get_palette&quot;                
+##  [33] &quot;get_summary_stats&quot;          
+##  [34] &quot;ggadd&quot;                      
+##  [35] &quot;ggadjust_pvalue&quot;            
+##  [36] &quot;ggarrange&quot;                  
+##  [37] &quot;ggballoonplot&quot;              
+##  [38] &quot;ggbarplot&quot;                  
+##  [39] &quot;ggboxplot&quot;                  
+##  [40] &quot;ggdensity&quot;                  
+##  [41] &quot;ggdonutchart&quot;               
+##  [42] &quot;ggdotchart&quot;                 
+##  [43] &quot;ggdotplot&quot;                  
+##  [44] &quot;ggecdf&quot;                     
+##  [45] &quot;ggerrorplot&quot;                
+##  [46] &quot;ggexport&quot;                   
+##  [47] &quot;gghistogram&quot;                
+##  [48] &quot;ggline&quot;                     
+##  [49] &quot;ggmaplot&quot;                   
+##  [50] &quot;ggpaired&quot;                   
+##  [51] &quot;ggpar&quot;                      
+##  [52] &quot;ggparagraph&quot;                
+##  [53] &quot;ggpie&quot;                      
+##  [54] &quot;ggpubr_options&quot;             
+##  [55] &quot;ggqqplot&quot;                   
+##  [56] &quot;ggscatter&quot;                  
+##  [57] &quot;ggscatterhist&quot;              
+##  [58] &quot;ggstripchart&quot;               
+##  [59] &quot;ggsummarystats&quot;             
+##  [60] &quot;ggsummarytable&quot;             
+##  [61] &quot;ggtext&quot;                     
+##  [62] &quot;ggtexttable&quot;                
+##  [63] &quot;ggviolin&quot;                   
+##  [64] &quot;gradient_color&quot;             
+##  [65] &quot;gradient_fill&quot;              
+##  [66] &quot;grids&quot;                      
+##  [67] &quot;group_by&quot;                   
+##  [68] &quot;labs_pubr&quot;                  
+##  [69] &quot;mean_ci&quot;                    
+##  [70] &quot;mean_range&quot;                 
+##  [71] &quot;mean_sd&quot;                    
+##  [72] &quot;mean_se_&quot;                   
+##  [73] &quot;median_hilow_&quot;              
+##  [74] &quot;median_iqr&quot;                 
+##  [75] &quot;median_mad&quot;                 
+##  [76] &quot;median_q1q3&quot;                
+##  [77] &quot;median_range&quot;               
+##  [78] &quot;mutate&quot;                     
+##  [79] &quot;npc_to_data_coord&quot;          
+##  [80] &quot;rotate&quot;                     
+##  [81] &quot;rotate_x_text&quot;              
+##  [82] &quot;rotate_y_text&quot;              
+##  [83] &quot;rownames_style&quot;             
+##  [84] &quot;rremove&quot;                    
+##  [85] &quot;set_palette&quot;                
+##  [86] &quot;show_line_types&quot;            
+##  [87] &quot;show_point_shapes&quot;          
+##  [88] &quot;stat_anova_test&quot;            
+##  [89] &quot;stat_bracket&quot;               
+##  [90] &quot;stat_central_tendency&quot;      
+##  [91] &quot;stat_chull&quot;                 
+##  [92] &quot;stat_compare_means&quot;         
+##  [93] &quot;stat_conf_ellipse&quot;          
+##  [94] &quot;stat_cor&quot;                   
+##  [95] &quot;stat_friedman_test&quot;         
+##  [96] &quot;stat_kruskal_test&quot;          
+##  [97] &quot;stat_mean&quot;                  
+##  [98] &quot;stat_overlay_normal_density&quot;
+##  [99] &quot;stat_pvalue_manual&quot;         
+## [100] &quot;stat_pwc&quot;                   
+## [101] &quot;stat_regline_equation&quot;      
+## [102] &quot;stat_stars&quot;                 
+## [103] &quot;stat_welch_anova_test&quot;      
+## [104] &quot;tab_add_border&quot;             
+## [105] &quot;tab_add_footnote&quot;           
+## [106] &quot;tab_add_hline&quot;              
+## [107] &quot;tab_add_title&quot;              
+## [108] &quot;tab_add_vline&quot;              
+## [109] &quot;tab_cell_crossout&quot;          
+## [110] &quot;tab_ncol&quot;                   
+## [111] &quot;tab_nrow&quot;                   
+## [112] &quot;table_cell_bg&quot;              
+## [113] &quot;table_cell_font&quot;            
+## [114] &quot;tbody_add_border&quot;           
+## [115] &quot;tbody_style&quot;                
+## [116] &quot;text_grob&quot;                  
+## [117] &quot;thead_add_border&quot;           
+## [118] &quot;theme_classic2&quot;             
+## [119] &quot;theme_cleveland&quot;            
+## [120] &quot;theme_pubclean&quot;             
+## [121] &quot;theme_pubr&quot;                 
+## [122] &quot;theme_transparent&quot;          
+## [123] &quot;ttheme&quot;                     
+## [124] &quot;xscale&quot;                     
+## [125] &quot;yscale&quot;</code></pre>
 <p><strong>EJEMPLOS DE VISUALIZACIÓN DE GRÁFICOS</strong></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="intro.html#cb9-1" tabindex="-1"></a><span class="fu">demo</span>(graphics)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="intro.html#cb7-1" tabindex="-1"></a><span class="fu">demo</span>(graphics)</span></code></pre></div>
 <pre><code>## 
 ## 
 ##  demo(graphics)
@@ -701,20 +813,20 @@ tu máquina teclea la función <code>library()</code></p>
 <p>En la mayoría de las ocasiones desconocemos el alcance de alguna paquetería, los criterios de alguna función o en general, sabemos lo que queremos hacer pero no tenemos ni idea de qué paqueteria usar.</p>
 <p>Los comandos <code>help()</code> y <code>?</code> son equivalentes, ambos van a permitir encontrar información sobre paqueterias, comandos o funciones generales de R. Se debe teclear <code>help(nombre_comando)</code> o <code>?nombre_comando</code></p>
 <p>Por ejemplo, para buscar información detallada del comando solve:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="intro.html#cb22-1" tabindex="-1"></a><span class="fu">help</span>(solve)</span></code></pre></div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="intro.html#cb23-1" tabindex="-1"></a>?solve</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="intro.html#cb20-1" tabindex="-1"></a><span class="fu">help</span>(solve)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="intro.html#cb21-1" tabindex="-1"></a>?solve</span></code></pre></div>
 <p>Para buscar ayuda de funciones o palabra reservadas se utilizan comillas:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="intro.html#cb24-1" tabindex="-1"></a><span class="fu">help</span>(<span class="st">&quot;for&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="intro.html#cb22-1" tabindex="-1"></a><span class="fu">help</span>(<span class="st">&quot;for&quot;</span>)</span></code></pre></div>
 <p>También existen opciones como <code>help.start()</code> y <code>help.search()</code> para obtener una versión extendida de la ayuda general desplegada en un navegador. Para ello se requiere tener la ayuda en HTML instalada y conexión a la red.</p>
 <p><code>help.search()</code> es una función que escanea documentación para paquetes previamente instalados.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="intro.html#cb25-1" tabindex="-1"></a><span class="fu">help.search</span>(<span class="st">&quot;clustering&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="intro.html#cb23-1" tabindex="-1"></a><span class="fu">help.search</span>(<span class="st">&quot;clustering&quot;</span>)</span></code></pre></div>
 <p><code>help.start()</code> es una función que despliega información basada en documentos en línea de la versión actual de R, además de brindar links a manuales y la lista de las paqueterías instaladas, entre otras cosas.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="intro.html#cb26-1" tabindex="-1"></a><span class="fu">help.start</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="intro.html#cb24-1" tabindex="-1"></a><span class="fu">help.start</span>()</span></code></pre></div>
 <p>Cuando queremos ver ejemplos del uso de los comandos usamos la función <code>example()</code></p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="intro.html#cb27-1" tabindex="-1"></a><span class="fu">example</span>(<span class="st">&quot;hclust&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="intro.html#cb25-1" tabindex="-1"></a><span class="fu">example</span>(<span class="st">&quot;hclust&quot;</span>)</span></code></pre></div>
 <pre><code>## 
 ## hclust&gt; require(graphics)
 ## 
@@ -777,7 +889,7 @@ tu máquina teclea la función <code>library()</code></p>
 <p>Todo lo anterior requiere que conozcamos el nombre correcto del comando, pero ¿qué pasa si no lo sabemos?, ¿lloramos? no.
 Podemos utilizar el comando <code>apropos()</code> para encontrar todo lo relacionado con algún término.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="intro.html#cb36-1" tabindex="-1"></a><span class="fu">apropos</span>(<span class="st">&quot;solve&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="intro.html#cb34-1" tabindex="-1"></a><span class="fu">apropos</span>(<span class="st">&quot;solve&quot;</span>)</span></code></pre></div>
 <pre><code>##  [1] &quot;.rs.markdown.resolveCompletionRoot&quot;
 ##  [2] &quot;.rs.resolveAliasedPath&quot;            
 ##  [3] &quot;.rs.resolveAliasedSymbol&quot;          
@@ -798,7 +910,7 @@ Podemos utilizar el comando <code>apropos()</code> para encontrar todo lo relaci
 ## [18] &quot;solve.qr&quot;</code></pre>
 <p>Ahora, ¿qué pasa cuando tengo la idea de lo que quiero hacer pero no se qué paqueteria usar, ni cuál comando? puedo usar <code>??</code> seguido de una palabra clave. Esto nos arrojará sugerencias sobre lo que deseamos hacer.</p>
 <p>Ejemplo:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="intro.html#cb38-1" tabindex="-1"></a>??DNA</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="intro.html#cb36-1" tabindex="-1"></a>??DNA</span></code></pre></div>
 <p><strong>NOTA</strong> Se recomienda el uso del autocompletado, de esta manera reducirás errores de dedo.</p>
 </div>
 </div>

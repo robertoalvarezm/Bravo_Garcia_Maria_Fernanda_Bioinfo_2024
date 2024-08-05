@@ -379,10 +379,10 @@ div.csl-indent {
 <p><code>}</code></p>
 <div id="sintaxis" class="section level3 hasAnchor" number="7.1.1">
 <h3><span class="header-section-number">7.1.1</span> Sintaxis<a href="Estructuras_de_seleccion.html#sintaxis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb382"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb382-1"><a href="Estructuras_de_seleccion.html#cb382-1" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">&lt;</span>condition<span class="sc">&gt;</span>) {</span>
-<span id="cb382-2"><a href="Estructuras_de_seleccion.html#cb382-2" tabindex="-1"></a>        <span class="do">## Hace algo</span></span>
-<span id="cb382-3"><a href="Estructuras_de_seleccion.html#cb382-3" tabindex="-1"></a>} </span>
-<span id="cb382-4"><a href="Estructuras_de_seleccion.html#cb382-4" tabindex="-1"></a><span class="do">## Continúa con el resto del código</span></span></code></pre></div>
+<div class="sourceCode" id="cb384"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb384-1"><a href="Estructuras_de_seleccion.html#cb384-1" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">&lt;</span>condition<span class="sc">&gt;</span>) {</span>
+<span id="cb384-2"><a href="Estructuras_de_seleccion.html#cb384-2" tabindex="-1"></a>        <span class="do">## Hace algo</span></span>
+<span id="cb384-3"><a href="Estructuras_de_seleccion.html#cb384-3" tabindex="-1"></a>} </span>
+<span id="cb384-4"><a href="Estructuras_de_seleccion.html#cb384-4" tabindex="-1"></a><span class="do">## Continúa con el resto del código</span></span></code></pre></div>
 </div>
 <div id="errores-comunes-en-el-if" class="section level3 hasAnchor" number="7.1.2">
 <h3><span class="header-section-number">7.1.2</span> Errores comunes en el <code>if</code><a href="Estructuras_de_seleccion.html#errores-comunes-en-el-if" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -393,27 +393,27 @@ div.csl-indent {
 <li>Este no es un error, es más bien una advertencia, si la condición arroja un sólo valor de verdad sólo toma en cuenta el primero de ellos.</li>
 </ol>
 <p>###Ejemplos de uso del <code>if</code></p>
-<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="Estructuras_de_seleccion.html#cb383-1" tabindex="-1"></a>mayor_de_edad<span class="ot">&lt;-</span><span class="dv">18</span></span>
-<span id="cb383-2"><a href="Estructuras_de_seleccion.html#cb383-2" tabindex="-1"></a></span>
-<span id="cb383-3"><a href="Estructuras_de_seleccion.html#cb383-3" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">20</span></span>
-<span id="cb383-4"><a href="Estructuras_de_seleccion.html#cb383-4" tabindex="-1"></a></span>
-<span id="cb383-5"><a href="Estructuras_de_seleccion.html#cb383-5" tabindex="-1"></a><span class="cf">if</span>(edad <span class="sc">&gt;=</span>mayor_de_edad){</span>
-<span id="cb383-6"><a href="Estructuras_de_seleccion.html#cb383-6" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Eres mayor de edad&quot;</span>)</span>
-<span id="cb383-7"><a href="Estructuras_de_seleccion.html#cb383-7" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="Estructuras_de_seleccion.html#cb385-1" tabindex="-1"></a>mayor_de_edad<span class="ot">&lt;-</span><span class="dv">18</span></span>
+<span id="cb385-2"><a href="Estructuras_de_seleccion.html#cb385-2" tabindex="-1"></a></span>
+<span id="cb385-3"><a href="Estructuras_de_seleccion.html#cb385-3" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">20</span></span>
+<span id="cb385-4"><a href="Estructuras_de_seleccion.html#cb385-4" tabindex="-1"></a></span>
+<span id="cb385-5"><a href="Estructuras_de_seleccion.html#cb385-5" tabindex="-1"></a><span class="cf">if</span>(edad <span class="sc">&gt;=</span>mayor_de_edad){</span>
+<span id="cb385-6"><a href="Estructuras_de_seleccion.html#cb385-6" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Eres mayor de edad&quot;</span>)</span>
+<span id="cb385-7"><a href="Estructuras_de_seleccion.html#cb385-7" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Eres mayor de edad&quot;</code></pre>
-<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="Estructuras_de_seleccion.html#cb385-1" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="dv">5</span><span class="sc">+</span><span class="dv">4</span></span>
-<span id="cb385-2"><a href="Estructuras_de_seleccion.html#cb385-2" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb387-1"><a href="Estructuras_de_seleccion.html#cb387-1" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="dv">5</span><span class="sc">+</span><span class="dv">4</span></span>
+<span id="cb387-2"><a href="Estructuras_de_seleccion.html#cb387-2" tabindex="-1"></a><span class="fu">print</span>(x)</span></code></pre></div>
 <pre><code>## [1] 9</code></pre>
-<div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb387-1"><a href="Estructuras_de_seleccion.html#cb387-1" tabindex="-1"></a>minimo<span class="ot">&lt;-</span><span class="dv">20000</span></span>
-<span id="cb387-2"><a href="Estructuras_de_seleccion.html#cb387-2" tabindex="-1"></a>dinero<span class="ot">&lt;-</span><span class="dv">15000</span></span>
-<span id="cb387-3"><a href="Estructuras_de_seleccion.html#cb387-3" tabindex="-1"></a></span>
-<span id="cb387-4"><a href="Estructuras_de_seleccion.html#cb387-4" tabindex="-1"></a><span class="cf">if</span>(dinero<span class="sc">&gt;=</span>minimo){</span>
-<span id="cb387-5"><a href="Estructuras_de_seleccion.html#cb387-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;¿Cómo está Cancún?&quot;</span>)</span>
-<span id="cb387-6"><a href="Estructuras_de_seleccion.html#cb387-6" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;La vida es buena&quot;</span>)</span>
-<span id="cb387-7"><a href="Estructuras_de_seleccion.html#cb387-7" tabindex="-1"></a>  sobrante<span class="ot">&lt;-</span>dinero<span class="sc">-</span>minimo</span>
-<span id="cb387-8"><a href="Estructuras_de_seleccion.html#cb387-8" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;Me queda $&quot;</span>, sobrante))</span>
-<span id="cb387-9"><a href="Estructuras_de_seleccion.html#cb387-9" tabindex="-1"></a>}</span>
-<span id="cb387-10"><a href="Estructuras_de_seleccion.html#cb387-10" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Acá sigue&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb389-1"><a href="Estructuras_de_seleccion.html#cb389-1" tabindex="-1"></a>minimo<span class="ot">&lt;-</span><span class="dv">20000</span></span>
+<span id="cb389-2"><a href="Estructuras_de_seleccion.html#cb389-2" tabindex="-1"></a>dinero<span class="ot">&lt;-</span><span class="dv">15000</span></span>
+<span id="cb389-3"><a href="Estructuras_de_seleccion.html#cb389-3" tabindex="-1"></a></span>
+<span id="cb389-4"><a href="Estructuras_de_seleccion.html#cb389-4" tabindex="-1"></a><span class="cf">if</span>(dinero<span class="sc">&gt;=</span>minimo){</span>
+<span id="cb389-5"><a href="Estructuras_de_seleccion.html#cb389-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;¿Cómo está Cancún?&quot;</span>)</span>
+<span id="cb389-6"><a href="Estructuras_de_seleccion.html#cb389-6" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;La vida es buena&quot;</span>)</span>
+<span id="cb389-7"><a href="Estructuras_de_seleccion.html#cb389-7" tabindex="-1"></a>  sobrante<span class="ot">&lt;-</span>dinero<span class="sc">-</span>minimo</span>
+<span id="cb389-8"><a href="Estructuras_de_seleccion.html#cb389-8" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;Me queda $&quot;</span>, sobrante))</span>
+<span id="cb389-9"><a href="Estructuras_de_seleccion.html#cb389-9" tabindex="-1"></a>}</span>
+<span id="cb389-10"><a href="Estructuras_de_seleccion.html#cb389-10" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Acá sigue&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Acá sigue&quot;</code></pre>
 <div id="ejercicios-3" class="section level4 hasAnchor" number="7.1.2.1">
 <h4><span class="header-section-number">7.1.2.1</span> Ejercicios<a href="Estructuras_de_seleccion.html#ejercicios-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -532,19 +532,19 @@ div.csl-indent {
 18 \leq edad \leq 29
 \]</span></p>
 <p>Esta condición la podemos expresar mediante la combinación de dos: la edad debe ser mayor igual a 18 y (<strong>AND</strong>, <code>&amp;</code>) la edad debe ser menor o igual que 29</p>
-<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb389-1"><a href="Estructuras_de_seleccion.html#cb389-1" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">&amp;</span> edad <span class="sc">&lt;=</span><span class="dv">29</span>){</span>
-<span id="cb389-2"><a href="Estructuras_de_seleccion.html#cb389-2" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Te toca vacunarte&quot;</span>)</span>
-<span id="cb389-3"><a href="Estructuras_de_seleccion.html#cb389-3" tabindex="-1"></a>}</span></code></pre></div>
-<pre><code>## [1] &quot;Te toca vacunarte&quot;</code></pre>
-<p><strong>Pregunta</strong>: ¿qué pasaría si se pone un <strong>OR</strong> como unión entre las dos condiciones</p>
-<div class="sourceCode" id="cb391"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb391-1"><a href="Estructuras_de_seleccion.html#cb391-1" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">|</span> edad <span class="sc">&lt;=</span><span class="dv">29</span>){</span>
+<div class="sourceCode" id="cb391"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb391-1"><a href="Estructuras_de_seleccion.html#cb391-1" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">&amp;</span> edad <span class="sc">&lt;=</span><span class="dv">29</span>){</span>
 <span id="cb391-2"><a href="Estructuras_de_seleccion.html#cb391-2" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Te toca vacunarte&quot;</span>)</span>
 <span id="cb391-3"><a href="Estructuras_de_seleccion.html#cb391-3" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Te toca vacunarte&quot;</code></pre>
-<p>o así (¿es lo mismo?)</p>
-<div class="sourceCode" id="cb393"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb393-1"><a href="Estructuras_de_seleccion.html#cb393-1" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&lt;=</span> <span class="dv">29</span> <span class="sc">|</span> edad <span class="sc">&gt;=</span> <span class="dv">18</span>){</span>
+<p><strong>Pregunta</strong>: ¿qué pasaría si se pone un <strong>OR</strong> como unión entre las dos condiciones</p>
+<div class="sourceCode" id="cb393"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb393-1"><a href="Estructuras_de_seleccion.html#cb393-1" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">|</span> edad <span class="sc">&lt;=</span><span class="dv">29</span>){</span>
 <span id="cb393-2"><a href="Estructuras_de_seleccion.html#cb393-2" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Te toca vacunarte&quot;</span>)</span>
 <span id="cb393-3"><a href="Estructuras_de_seleccion.html#cb393-3" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] &quot;Te toca vacunarte&quot;</code></pre>
+<p>o así (¿es lo mismo?)</p>
+<div class="sourceCode" id="cb395"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb395-1"><a href="Estructuras_de_seleccion.html#cb395-1" tabindex="-1"></a><span class="cf">if</span> (edad <span class="sc">&lt;=</span> <span class="dv">29</span> <span class="sc">|</span> edad <span class="sc">&gt;=</span> <span class="dv">18</span>){</span>
+<span id="cb395-2"><a href="Estructuras_de_seleccion.html#cb395-2" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Te toca vacunarte&quot;</span>)</span>
+<span id="cb395-3"><a href="Estructuras_de_seleccion.html#cb395-3" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Te toca vacunarte&quot;</code></pre>
 </div>
 </div>
@@ -558,37 +558,37 @@ div.csl-indent {
 <div id="if-else-si-de-otro-modo" class="section level2 hasAnchor" number="7.4">
 <h2><span class="header-section-number">7.4</span> If … else (si … de otro modo)<a href="Estructuras_de_seleccion.html#if-else-si-de-otro-modo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Si además quieres que se ejecute algo cuando la condición es <strong>falsa</strong> entonces debes usar la declaración <code>if … else</code></p>
-<div class="sourceCode" id="cb395"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb395-1"><a href="Estructuras_de_seleccion.html#cb395-1" tabindex="-1"></a><span class="cf">if</span> (condición) { <span class="co"># Si la condición es cierta</span></span>
-<span id="cb395-2"><a href="Estructuras_de_seleccion.html#cb395-2" tabindex="-1"></a>hace esto</span>
-<span id="cb395-3"><a href="Estructuras_de_seleccion.html#cb395-3" tabindex="-1"></a>y esto</span>
-<span id="cb395-4"><a href="Estructuras_de_seleccion.html#cb395-4" tabindex="-1"></a>y esto</span>
-<span id="cb395-5"><a href="Estructuras_de_seleccion.html#cb395-5" tabindex="-1"></a>} <span class="cf">else</span> { <span class="co"># De otro modo, es decir si es falsa hace lo que #está en el corchete</span></span>
-<span id="cb395-6"><a href="Estructuras_de_seleccion.html#cb395-6" tabindex="-1"></a>entonces hace esto otro</span>
-<span id="cb395-7"><a href="Estructuras_de_seleccion.html#cb395-7" tabindex="-1"></a>y esto otro</span>
-<span id="cb395-8"><a href="Estructuras_de_seleccion.html#cb395-8" tabindex="-1"></a>y esto</span>
-<span id="cb395-9"><a href="Estructuras_de_seleccion.html#cb395-9" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb397"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb397-1"><a href="Estructuras_de_seleccion.html#cb397-1" tabindex="-1"></a><span class="cf">if</span> (condición) { <span class="co"># Si la condición es cierta</span></span>
+<span id="cb397-2"><a href="Estructuras_de_seleccion.html#cb397-2" tabindex="-1"></a>hace esto</span>
+<span id="cb397-3"><a href="Estructuras_de_seleccion.html#cb397-3" tabindex="-1"></a>y esto</span>
+<span id="cb397-4"><a href="Estructuras_de_seleccion.html#cb397-4" tabindex="-1"></a>y esto</span>
+<span id="cb397-5"><a href="Estructuras_de_seleccion.html#cb397-5" tabindex="-1"></a>} <span class="cf">else</span> { <span class="co"># De otro modo, es decir si es falsa hace lo que #está en el corchete</span></span>
+<span id="cb397-6"><a href="Estructuras_de_seleccion.html#cb397-6" tabindex="-1"></a>entonces hace esto otro</span>
+<span id="cb397-7"><a href="Estructuras_de_seleccion.html#cb397-7" tabindex="-1"></a>y esto otro</span>
+<span id="cb397-8"><a href="Estructuras_de_seleccion.html#cb397-8" tabindex="-1"></a>y esto</span>
+<span id="cb397-9"><a href="Estructuras_de_seleccion.html#cb397-9" tabindex="-1"></a>}</span></code></pre></div>
 <div class="float" id="id">
 <img src="If_else.001.jpeg" class="class" style="width:100.0%;height:100.0%" alt="Diagrama_if_else" />
 <div class="figcaption">Diagrama_if_else</div>
 </div>
-<div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb396-1"><a href="Estructuras_de_seleccion.html#cb396-1" tabindex="-1"></a>minimo<span class="ot">&lt;-</span><span class="dv">20000</span></span>
-<span id="cb396-2"><a href="Estructuras_de_seleccion.html#cb396-2" tabindex="-1"></a>vacaciones<span class="ot">&lt;-</span><span class="st">&quot;SI&quot;</span></span>
-<span id="cb396-3"><a href="Estructuras_de_seleccion.html#cb396-3" tabindex="-1"></a>dinero<span class="ot">&lt;-</span><span class="dv">21000</span></span>
-<span id="cb396-4"><a href="Estructuras_de_seleccion.html#cb396-4" tabindex="-1"></a><span class="cf">if</span>(dinero<span class="sc">&gt;=</span>minimo <span class="sc">&amp;</span> vacaciones<span class="sc">==</span><span class="st">&quot;SI&quot;</span>){</span>
-<span id="cb396-5"><a href="Estructuras_de_seleccion.html#cb396-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Me voy a la playa, looser&quot;</span>)</span>
-<span id="cb396-6"><a href="Estructuras_de_seleccion.html#cb396-6" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb396-7"><a href="Estructuras_de_seleccion.html#cb396-7" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Me quedo en mi casa&quot;</span>)</span>
-<span id="cb396-8"><a href="Estructuras_de_seleccion.html#cb396-8" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb398"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb398-1"><a href="Estructuras_de_seleccion.html#cb398-1" tabindex="-1"></a>minimo<span class="ot">&lt;-</span><span class="dv">20000</span></span>
+<span id="cb398-2"><a href="Estructuras_de_seleccion.html#cb398-2" tabindex="-1"></a>vacaciones<span class="ot">&lt;-</span><span class="st">&quot;SI&quot;</span></span>
+<span id="cb398-3"><a href="Estructuras_de_seleccion.html#cb398-3" tabindex="-1"></a>dinero<span class="ot">&lt;-</span><span class="dv">21000</span></span>
+<span id="cb398-4"><a href="Estructuras_de_seleccion.html#cb398-4" tabindex="-1"></a><span class="cf">if</span>(dinero<span class="sc">&gt;=</span>minimo <span class="sc">&amp;</span> vacaciones<span class="sc">==</span><span class="st">&quot;SI&quot;</span>){</span>
+<span id="cb398-5"><a href="Estructuras_de_seleccion.html#cb398-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Me voy a la playa, looser&quot;</span>)</span>
+<span id="cb398-6"><a href="Estructuras_de_seleccion.html#cb398-6" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb398-7"><a href="Estructuras_de_seleccion.html#cb398-7" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Me quedo en mi casa&quot;</span>)</span>
+<span id="cb398-8"><a href="Estructuras_de_seleccion.html#cb398-8" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Me voy a la playa, looser&quot;</code></pre>
 </div>
 <div id="ifelse" class="section level2 hasAnchor" number="7.5">
 <h2><span class="header-section-number">7.5</span> ifelse<a href="Estructuras_de_seleccion.html#ifelse" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Si la condición es muy simple ,tanto para cuando es verdadero como cuando es falso se puede implementar la función <code>ifelse</code> en una línea. Es equivalente a la condición compuesta pero ahorramos código.</p>
-<div class="sourceCode" id="cb398"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb398-1"><a href="Estructuras_de_seleccion.html#cb398-1" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">21</span></span>
-<span id="cb398-2"><a href="Estructuras_de_seleccion.html#cb398-2" tabindex="-1"></a><span class="fu">ifelse</span>(edad<span class="sc">&gt;=</span><span class="dv">18</span>, <span class="st">&quot;Ya eres grande&quot;</span>,<span class="st">&quot;Todavia no puedes beber (legalmente)&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;Ya eres grande&quot;</code></pre>
-<div class="sourceCode" id="cb400"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb400-1"><a href="Estructuras_de_seleccion.html#cb400-1" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">12</span></span>
+<div class="sourceCode" id="cb400"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb400-1"><a href="Estructuras_de_seleccion.html#cb400-1" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">21</span></span>
 <span id="cb400-2"><a href="Estructuras_de_seleccion.html#cb400-2" tabindex="-1"></a><span class="fu">ifelse</span>(edad<span class="sc">&gt;=</span><span class="dv">18</span>, <span class="st">&quot;Ya eres grande&quot;</span>,<span class="st">&quot;Todavia no puedes beber (legalmente)&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Ya eres grande&quot;</code></pre>
+<div class="sourceCode" id="cb402"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb402-1"><a href="Estructuras_de_seleccion.html#cb402-1" tabindex="-1"></a>edad<span class="ot">&lt;-</span><span class="dv">12</span></span>
+<span id="cb402-2"><a href="Estructuras_de_seleccion.html#cb402-2" tabindex="-1"></a><span class="fu">ifelse</span>(edad<span class="sc">&gt;=</span><span class="dv">18</span>, <span class="st">&quot;Ya eres grande&quot;</span>,<span class="st">&quot;Todavia no puedes beber (legalmente)&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Todavia no puedes beber (legalmente)&quot;</code></pre>
 </div>
 <div id="if-else-if-else-si-si-no-si-si-no-si-si-no" class="section level2 hasAnchor" number="7.6">
@@ -600,29 +600,20 @@ div.csl-indent {
 <p>Esta estructura se ejecuta solo en la primera que sea verdadera o si no hay una verdadera ejecuta lo que esta en el <code>else</code></p>
 </dd>
 </dl>
-<div class="sourceCode" id="cb402"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb402-1"><a href="Estructuras_de_seleccion.html#cb402-1" tabindex="-1"></a><span class="cf">if</span> ( condicion <span class="dv">1</span>) {</span>
-<span id="cb402-2"><a href="Estructuras_de_seleccion.html#cb402-2" tabindex="-1"></a>Hace cosas</span>
-<span id="cb402-3"><a href="Estructuras_de_seleccion.html#cb402-3" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> ( condcion <span class="dv">2</span>) {</span>
-<span id="cb402-4"><a href="Estructuras_de_seleccion.html#cb402-4" tabindex="-1"></a>Hace otras cosas</span>
-<span id="cb402-5"><a href="Estructuras_de_seleccion.html#cb402-5" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> ( condicion <span class="dv">3</span>) {</span>
-<span id="cb402-6"><a href="Estructuras_de_seleccion.html#cb402-6" tabindex="-1"></a>Hace estas otras cosas</span>
-<span id="cb402-7"><a href="Estructuras_de_seleccion.html#cb402-7" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb402-8"><a href="Estructuras_de_seleccion.html#cb402-8" tabindex="-1"></a>No le queda de otra y hace esto</span>
-<span id="cb402-9"><a href="Estructuras_de_seleccion.html#cb402-9" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb404"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb404-1"><a href="Estructuras_de_seleccion.html#cb404-1" tabindex="-1"></a><span class="cf">if</span> ( condicion <span class="dv">1</span>) {</span>
+<span id="cb404-2"><a href="Estructuras_de_seleccion.html#cb404-2" tabindex="-1"></a>Hace cosas</span>
+<span id="cb404-3"><a href="Estructuras_de_seleccion.html#cb404-3" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> ( condcion <span class="dv">2</span>) {</span>
+<span id="cb404-4"><a href="Estructuras_de_seleccion.html#cb404-4" tabindex="-1"></a>Hace otras cosas</span>
+<span id="cb404-5"><a href="Estructuras_de_seleccion.html#cb404-5" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> ( condicion <span class="dv">3</span>) {</span>
+<span id="cb404-6"><a href="Estructuras_de_seleccion.html#cb404-6" tabindex="-1"></a>Hace estas otras cosas</span>
+<span id="cb404-7"><a href="Estructuras_de_seleccion.html#cb404-7" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb404-8"><a href="Estructuras_de_seleccion.html#cb404-8" tabindex="-1"></a>No le queda de otra y hace esto</span>
+<span id="cb404-9"><a href="Estructuras_de_seleccion.html#cb404-9" tabindex="-1"></a>}</span></code></pre></div>
 <div class="float" id="id">
 <img src="If_else_else_if.001.jpeg" class="class" style="width:100.0%;height:150.0%" alt="Diagrama de flujo del if… else if… else if…else" />
 <div class="figcaption">Diagrama de flujo del if… else if… else if…else</div>
 </div>
-<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="Estructuras_de_seleccion.html#cb403-1" tabindex="-1"></a>numero<span class="ot">&lt;-</span><span class="dv">3</span></span>
-<span id="cb403-2"><a href="Estructuras_de_seleccion.html#cb403-2" tabindex="-1"></a><span class="cf">if</span>(numero <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
-<span id="cb403-3"><a href="Estructuras_de_seleccion.html#cb403-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es positivo&quot;</span>)</span>
-<span id="cb403-4"><a href="Estructuras_de_seleccion.html#cb403-4" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span> (numero <span class="sc">&lt;</span><span class="dv">0</span>){</span>
-<span id="cb403-5"><a href="Estructuras_de_seleccion.html#cb403-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es negativo&quot;</span>)</span>
-<span id="cb403-6"><a href="Estructuras_de_seleccion.html#cb403-6" tabindex="-1"></a>}<span class="cf">else</span>{</span>
-<span id="cb403-7"><a href="Estructuras_de_seleccion.html#cb403-7" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es cero&quot;</span>)</span>
-<span id="cb403-8"><a href="Estructuras_de_seleccion.html#cb403-8" tabindex="-1"></a>}</span></code></pre></div>
-<pre><code>## [1] &quot;Tu número es positivo&quot;</code></pre>
-<div class="sourceCode" id="cb405"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb405-1"><a href="Estructuras_de_seleccion.html#cb405-1" tabindex="-1"></a>numero<span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">27</span></span>
+<div class="sourceCode" id="cb405"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb405-1"><a href="Estructuras_de_seleccion.html#cb405-1" tabindex="-1"></a>numero<span class="ot">&lt;-</span><span class="dv">3</span></span>
 <span id="cb405-2"><a href="Estructuras_de_seleccion.html#cb405-2" tabindex="-1"></a><span class="cf">if</span>(numero <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
 <span id="cb405-3"><a href="Estructuras_de_seleccion.html#cb405-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es positivo&quot;</span>)</span>
 <span id="cb405-4"><a href="Estructuras_de_seleccion.html#cb405-4" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span> (numero <span class="sc">&lt;</span><span class="dv">0</span>){</span>
@@ -630,8 +621,8 @@ div.csl-indent {
 <span id="cb405-6"><a href="Estructuras_de_seleccion.html#cb405-6" tabindex="-1"></a>}<span class="cf">else</span>{</span>
 <span id="cb405-7"><a href="Estructuras_de_seleccion.html#cb405-7" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es cero&quot;</span>)</span>
 <span id="cb405-8"><a href="Estructuras_de_seleccion.html#cb405-8" tabindex="-1"></a>}</span></code></pre></div>
-<pre><code>## [1] &quot;Tu número es negativo&quot;</code></pre>
-<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="Estructuras_de_seleccion.html#cb407-1" tabindex="-1"></a>numero<span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<pre><code>## [1] &quot;Tu número es positivo&quot;</code></pre>
+<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="Estructuras_de_seleccion.html#cb407-1" tabindex="-1"></a>numero<span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">27</span></span>
 <span id="cb407-2"><a href="Estructuras_de_seleccion.html#cb407-2" tabindex="-1"></a><span class="cf">if</span>(numero <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
 <span id="cb407-3"><a href="Estructuras_de_seleccion.html#cb407-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es positivo&quot;</span>)</span>
 <span id="cb407-4"><a href="Estructuras_de_seleccion.html#cb407-4" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span> (numero <span class="sc">&lt;</span><span class="dv">0</span>){</span>
@@ -639,6 +630,15 @@ div.csl-indent {
 <span id="cb407-6"><a href="Estructuras_de_seleccion.html#cb407-6" tabindex="-1"></a>}<span class="cf">else</span>{</span>
 <span id="cb407-7"><a href="Estructuras_de_seleccion.html#cb407-7" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es cero&quot;</span>)</span>
 <span id="cb407-8"><a href="Estructuras_de_seleccion.html#cb407-8" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] &quot;Tu número es negativo&quot;</code></pre>
+<div class="sourceCode" id="cb409"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb409-1"><a href="Estructuras_de_seleccion.html#cb409-1" tabindex="-1"></a>numero<span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb409-2"><a href="Estructuras_de_seleccion.html#cb409-2" tabindex="-1"></a><span class="cf">if</span>(numero <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb409-3"><a href="Estructuras_de_seleccion.html#cb409-3" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es positivo&quot;</span>)</span>
+<span id="cb409-4"><a href="Estructuras_de_seleccion.html#cb409-4" tabindex="-1"></a>}<span class="cf">else</span> <span class="cf">if</span> (numero <span class="sc">&lt;</span><span class="dv">0</span>){</span>
+<span id="cb409-5"><a href="Estructuras_de_seleccion.html#cb409-5" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es negativo&quot;</span>)</span>
+<span id="cb409-6"><a href="Estructuras_de_seleccion.html#cb409-6" tabindex="-1"></a>}<span class="cf">else</span>{</span>
+<span id="cb409-7"><a href="Estructuras_de_seleccion.html#cb409-7" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;Tu número es cero&quot;</span>)</span>
+<span id="cb409-8"><a href="Estructuras_de_seleccion.html#cb409-8" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] &quot;Tu número es cero&quot;</code></pre>
 <p><strong>Pregunta</strong>: ¿por qué no es necesario poner un if en el último else?</p>
 </div>

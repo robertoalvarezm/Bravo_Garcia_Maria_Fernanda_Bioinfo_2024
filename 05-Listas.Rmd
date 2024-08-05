@@ -60,6 +60,8 @@ Guarda datos de análisis de diferentes muestras de agua en una lista.
 2. Cada elemento debe ser una lista con: ID, Localización, pH, Coliformes (número de coliformes).
 3. Calcula el promedio de coliformes en todas las muestras.
 
+
+
 ```{r}
 # Crear lista de muestras de agua
 muestras_agua <- list(
@@ -68,6 +70,9 @@ muestras_agua <- list(
   list(ID = "Muestra3", Localizacion = "Pozo", pH = 7.5, Coliformes = 50),
   list(ID = "Muestra4", Localizacion = "Mar", pH = 8.1, Coliformes = 80)
 )
+
+muestras_agua
+str(muestras_agua)
 
 # Calcular promedio de coliformes
 promedio_coliformes <- mean(sapply(muestras_agua, function(x) x$Coliformes))
@@ -84,5 +89,30 @@ Crea una lista que contenga al menos cuatro tipos diferentes de datos (incluyend
 
 2. 
 Añade un nuevo elemento a la compleja_lista que sea otra lista conteniendo información relevante a un experimento microbiológico (p.ej., fechas, resultados de crecimiento, tipo de medio de cultivo). Accede a un elemento específico dentro de esta lista anidada.
+
+
+3. Almacena datos de producción en experimentos de fermentación.
+
+- Crea una lista fermentacion con 4 elementos, cada uno representando un experimento de fermentación.
+- Cada elemento debe ser una lista con: Cepa, Condición, ProducciónEtanol.
+- Encuentra la condición con la mayor producción de etanol.
+
+4. Mantén un registro de resistencias a antibióticos.
+
+- Crea una lista resistencias con 3 elementos, cada uno representando una bacteria.
+- Cada elemento debe ser una lista con: Bacteria, AntibióticosResistentes (vector de nombres de antibióticos).
+- Encuentra la bacteria con más resistencias.
+
+5. Mantén un registro de ensayos clínicos en una lista.
+
+- Crea una lista ensayos_clinicos con 3 elementos, cada uno representando un ensayo clínico.
+- Cada elemento debe ser una lista con: Nombre, Fase, NúmeroPacientes.
+- Calcula el total de pacientes involucrados en todos los ensayos clínicos.
+
+6. Almacena datos de producción en experimentos de fermentación.
+
+- Crea una lista fermentacion con 4 elementos, cada uno representando un experimento de fermentación.
+- Cada elemento debe ser una lista con: Cepa, Condición, ProducciónEtanol.
+- Encuentra la condición con la mayor producción de etanol.
 
 Recuerda, el uso efectivo de listas en R puede ayudarte a gestionar y manipular una amplia gama de conjuntos de datos complejos, especialmente útil en campos como la Microbiología.

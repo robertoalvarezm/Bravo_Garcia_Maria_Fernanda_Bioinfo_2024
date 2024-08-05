@@ -364,15 +364,15 @@ div.csl-indent {
 <ul>
 <li>Creación de una Lista</li>
 </ul>
-<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="Listas.html#cb374-1" tabindex="-1"></a><span class="co"># Creando una lista con diferentes tipos de datos</span></span>
-<span id="cb374-2"><a href="Listas.html#cb374-2" tabindex="-1"></a>compleja_lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb374-3"><a href="Listas.html#cb374-3" tabindex="-1"></a>  <span class="at">numero =</span> <span class="dv">42</span>,</span>
-<span id="cb374-4"><a href="Listas.html#cb374-4" tabindex="-1"></a>  <span class="at">vector =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
-<span id="cb374-5"><a href="Listas.html#cb374-5" tabindex="-1"></a>  <span class="at">matriz =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>),</span>
-<span id="cb374-6"><a href="Listas.html#cb374-6" tabindex="-1"></a>  <span class="at">data_frame =</span> <span class="fu">data.frame</span>(<span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">&quot;E. coli&quot;</span>, <span class="st">&quot;S. aureus&quot;</span>), <span class="at">gram =</span> <span class="fu">c</span>(<span class="st">&quot;+&quot;</span>, <span class="st">&quot;-&quot;</span>))</span>
-<span id="cb374-7"><a href="Listas.html#cb374-7" tabindex="-1"></a>)</span>
-<span id="cb374-8"><a href="Listas.html#cb374-8" tabindex="-1"></a></span>
-<span id="cb374-9"><a href="Listas.html#cb374-9" tabindex="-1"></a><span class="fu">print</span>(compleja_lista)</span></code></pre></div>
+<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="Listas.html#cb372-1" tabindex="-1"></a><span class="co"># Creando una lista con diferentes tipos de datos</span></span>
+<span id="cb372-2"><a href="Listas.html#cb372-2" tabindex="-1"></a>compleja_lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb372-3"><a href="Listas.html#cb372-3" tabindex="-1"></a>  <span class="at">numero =</span> <span class="dv">42</span>,</span>
+<span id="cb372-4"><a href="Listas.html#cb372-4" tabindex="-1"></a>  <span class="at">vector =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb372-5"><a href="Listas.html#cb372-5" tabindex="-1"></a>  <span class="at">matriz =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>), <span class="at">nrow =</span> <span class="dv">2</span>),</span>
+<span id="cb372-6"><a href="Listas.html#cb372-6" tabindex="-1"></a>  <span class="at">data_frame =</span> <span class="fu">data.frame</span>(<span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">&quot;E. coli&quot;</span>, <span class="st">&quot;S. aureus&quot;</span>), <span class="at">gram =</span> <span class="fu">c</span>(<span class="st">&quot;+&quot;</span>, <span class="st">&quot;-&quot;</span>))</span>
+<span id="cb372-7"><a href="Listas.html#cb372-7" tabindex="-1"></a>)</span>
+<span id="cb372-8"><a href="Listas.html#cb372-8" tabindex="-1"></a></span>
+<span id="cb372-9"><a href="Listas.html#cb372-9" tabindex="-1"></a><span class="fu">print</span>(compleja_lista)</span></code></pre></div>
 <pre><code>## $numero
 ## [1] 42
 ## 
@@ -390,15 +390,15 @@ div.csl-indent {
 ## 2 S. aureus    -</code></pre>
 <p>Para acceder a los elementos de una lista, puedes usar el doble corchete [[ ]] o el operador de dólar $. El doble corchete es útil para acceder a los elementos por su índice, mientras que el operador de dólar se usa con nombres.</p>
 <p>Accceso por índice</p>
-<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="Listas.html#cb376-1" tabindex="-1"></a><span class="co"># Accediendo al vector dentro de la lista</span></span>
-<span id="cb376-2"><a href="Listas.html#cb376-2" tabindex="-1"></a>vector_en_lista <span class="ot">&lt;-</span> compleja_lista[[<span class="dv">2</span>]]</span>
-<span id="cb376-3"><a href="Listas.html#cb376-3" tabindex="-1"></a><span class="fu">print</span>(vector_en_lista)</span></code></pre></div>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="Listas.html#cb374-1" tabindex="-1"></a><span class="co"># Accediendo al vector dentro de la lista</span></span>
+<span id="cb374-2"><a href="Listas.html#cb374-2" tabindex="-1"></a>vector_en_lista <span class="ot">&lt;-</span> compleja_lista[[<span class="dv">2</span>]]</span>
+<span id="cb374-3"><a href="Listas.html#cb374-3" tabindex="-1"></a><span class="fu">print</span>(vector_en_lista)</span></code></pre></div>
 <pre><code>## [1] 1 2 3</code></pre>
 <div id="acceso-por-nombre" class="section level3 hasAnchor" number="6.0.1">
 <h3><span class="header-section-number">6.0.1</span> Acceso por Nombre<a href="Listas.html#acceso-por-nombre" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="Listas.html#cb378-1" tabindex="-1"></a><span class="co"># Accediendo al data frame por nombre</span></span>
-<span id="cb378-2"><a href="Listas.html#cb378-2" tabindex="-1"></a>data_frame_en_lista <span class="ot">&lt;-</span> compleja_lista<span class="sc">$</span>data_frame</span>
-<span id="cb378-3"><a href="Listas.html#cb378-3" tabindex="-1"></a><span class="fu">print</span>(data_frame_en_lista)</span></code></pre></div>
+<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="Listas.html#cb376-1" tabindex="-1"></a><span class="co"># Accediendo al data frame por nombre</span></span>
+<span id="cb376-2"><a href="Listas.html#cb376-2" tabindex="-1"></a>data_frame_en_lista <span class="ot">&lt;-</span> compleja_lista<span class="sc">$</span>data_frame</span>
+<span id="cb376-3"><a href="Listas.html#cb376-3" tabindex="-1"></a><span class="fu">print</span>(data_frame_en_lista)</span></code></pre></div>
 <pre><code>##      nombre gram
 ## 1   E. coli    +
 ## 2 S. aureus    -</code></pre>
@@ -411,17 +411,94 @@ div.csl-indent {
 <li>Cada elemento debe ser una lista con: ID, Localización, pH, Coliformes (número de coliformes).</li>
 <li>Calcula el promedio de coliformes en todas las muestras.</li>
 </ol>
-<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb380-1"><a href="Listas.html#cb380-1" tabindex="-1"></a><span class="co"># Crear lista de muestras de agua</span></span>
-<span id="cb380-2"><a href="Listas.html#cb380-2" tabindex="-1"></a>muestras_agua <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb380-3"><a href="Listas.html#cb380-3" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">ID =</span> <span class="st">&quot;Muestra1&quot;</span>, <span class="at">Localizacion =</span> <span class="st">&quot;Río&quot;</span>, <span class="at">pH =</span> <span class="fl">7.2</span>, <span class="at">Coliformes =</span> <span class="dv">150</span>),</span>
-<span id="cb380-4"><a href="Listas.html#cb380-4" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">ID =</span> <span class="st">&quot;Muestra2&quot;</span>, <span class="at">Localizacion =</span> <span class="st">&quot;Lago&quot;</span>, <span class="at">pH =</span> <span class="fl">6.8</span>, <span class="at">Coliformes =</span> <span class="dv">200</span>),</span>
-<span id="cb380-5"><a href="Listas.html#cb380-5" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">ID =</span> <span class="st">&quot;Muestra3&quot;</span>, <span class="at">Localizacion =</span> <span class="st">&quot;Pozo&quot;</span>, <span class="at">pH =</span> <span class="fl">7.5</span>, <span class="at">Coliformes =</span> <span class="dv">50</span>),</span>
-<span id="cb380-6"><a href="Listas.html#cb380-6" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">ID =</span> <span class="st">&quot;Muestra4&quot;</span>, <span class="at">Localizacion =</span> <span class="st">&quot;Mar&quot;</span>, <span class="at">pH =</span> <span class="fl">8.1</span>, <span class="at">Coliformes =</span> <span class="dv">80</span>)</span>
-<span id="cb380-7"><a href="Listas.html#cb380-7" tabindex="-1"></a>)</span>
-<span id="cb380-8"><a href="Listas.html#cb380-8" tabindex="-1"></a></span>
-<span id="cb380-9"><a href="Listas.html#cb380-9" tabindex="-1"></a><span class="co"># Calcular promedio de coliformes</span></span>
-<span id="cb380-10"><a href="Listas.html#cb380-10" tabindex="-1"></a>promedio_coliformes <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">sapply</span>(muestras_agua, <span class="cf">function</span>(x) x<span class="sc">$</span>Coliformes))</span>
-<span id="cb380-11"><a href="Listas.html#cb380-11" tabindex="-1"></a><span class="fu">print</span>(promedio_coliformes)</span></code></pre></div>
+<div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="Listas.html#cb378-1" tabindex="-1"></a><span class="co"># Crear lista de muestras de agua</span></span>
+<span id="cb378-2"><a href="Listas.html#cb378-2" tabindex="-1"></a>muestras_agua <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb378-3"><a href="Listas.html#cb378-3" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">ID =</span> <span class="st">&quot;Muestra1&quot;</span>, <span class="at">Localizacion =</span> <span class="st">&quot;Río&quot;</span>, <span class="at">pH =</span> <span class="fl">7.2</span>, <span class="at">Coliformes =</span> <span class="dv">150</span>),</span>
+<span id="cb378-4"><a href="Listas.html#cb378-4" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">ID =</span> <span class="st">&quot;Muestra2&quot;</span>, <span class="at">Localizacion =</span> <span class="st">&quot;Lago&quot;</span>, <span class="at">pH =</span> <span class="fl">6.8</span>, <span class="at">Coliformes =</span> <span class="dv">200</span>),</span>
+<span id="cb378-5"><a href="Listas.html#cb378-5" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">ID =</span> <span class="st">&quot;Muestra3&quot;</span>, <span class="at">Localizacion =</span> <span class="st">&quot;Pozo&quot;</span>, <span class="at">pH =</span> <span class="fl">7.5</span>, <span class="at">Coliformes =</span> <span class="dv">50</span>),</span>
+<span id="cb378-6"><a href="Listas.html#cb378-6" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">ID =</span> <span class="st">&quot;Muestra4&quot;</span>, <span class="at">Localizacion =</span> <span class="st">&quot;Mar&quot;</span>, <span class="at">pH =</span> <span class="fl">8.1</span>, <span class="at">Coliformes =</span> <span class="dv">80</span>)</span>
+<span id="cb378-7"><a href="Listas.html#cb378-7" tabindex="-1"></a>)</span>
+<span id="cb378-8"><a href="Listas.html#cb378-8" tabindex="-1"></a></span>
+<span id="cb378-9"><a href="Listas.html#cb378-9" tabindex="-1"></a>muestras_agua</span></code></pre></div>
+<pre><code>## [[1]]
+## [[1]]$ID
+## [1] &quot;Muestra1&quot;
+## 
+## [[1]]$Localizacion
+## [1] &quot;Río&quot;
+## 
+## [[1]]$pH
+## [1] 7.2
+## 
+## [[1]]$Coliformes
+## [1] 150
+## 
+## 
+## [[2]]
+## [[2]]$ID
+## [1] &quot;Muestra2&quot;
+## 
+## [[2]]$Localizacion
+## [1] &quot;Lago&quot;
+## 
+## [[2]]$pH
+## [1] 6.8
+## 
+## [[2]]$Coliformes
+## [1] 200
+## 
+## 
+## [[3]]
+## [[3]]$ID
+## [1] &quot;Muestra3&quot;
+## 
+## [[3]]$Localizacion
+## [1] &quot;Pozo&quot;
+## 
+## [[3]]$pH
+## [1] 7.5
+## 
+## [[3]]$Coliformes
+## [1] 50
+## 
+## 
+## [[4]]
+## [[4]]$ID
+## [1] &quot;Muestra4&quot;
+## 
+## [[4]]$Localizacion
+## [1] &quot;Mar&quot;
+## 
+## [[4]]$pH
+## [1] 8.1
+## 
+## [[4]]$Coliformes
+## [1] 80</code></pre>
+<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb380-1"><a href="Listas.html#cb380-1" tabindex="-1"></a><span class="fu">str</span>(muestras_agua)</span></code></pre></div>
+<pre><code>## List of 4
+##  $ :List of 4
+##   ..$ ID          : chr &quot;Muestra1&quot;
+##   ..$ Localizacion: chr &quot;Río&quot;
+##   ..$ pH          : num 7.2
+##   ..$ Coliformes  : num 150
+##  $ :List of 4
+##   ..$ ID          : chr &quot;Muestra2&quot;
+##   ..$ Localizacion: chr &quot;Lago&quot;
+##   ..$ pH          : num 6.8
+##   ..$ Coliformes  : num 200
+##  $ :List of 4
+##   ..$ ID          : chr &quot;Muestra3&quot;
+##   ..$ Localizacion: chr &quot;Pozo&quot;
+##   ..$ pH          : num 7.5
+##   ..$ Coliformes  : num 50
+##  $ :List of 4
+##   ..$ ID          : chr &quot;Muestra4&quot;
+##   ..$ Localizacion: chr &quot;Mar&quot;
+##   ..$ pH          : num 8.1
+##   ..$ Coliformes  : num 80</code></pre>
+<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="Listas.html#cb382-1" tabindex="-1"></a><span class="co"># Calcular promedio de coliformes</span></span>
+<span id="cb382-2"><a href="Listas.html#cb382-2" tabindex="-1"></a>promedio_coliformes <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">sapply</span>(muestras_agua, <span class="cf">function</span>(x) x<span class="sc">$</span>Coliformes))</span>
+<span id="cb382-3"><a href="Listas.html#cb382-3" tabindex="-1"></a><span class="fu">print</span>(promedio_coliformes)</span></code></pre></div>
 <pre><code>## [1] 120</code></pre>
 </div>
 <div id="ejercicios-2" class="section level2 hasAnchor" number="6.2">
@@ -431,7 +508,37 @@ div.csl-indent {
 <ol style="list-style-type: decimal">
 <li><p>Crea una lista que contenga al menos cuatro tipos diferentes de datos (incluyendo al menos un vector, una matriz, y un data frame). Luego, escribe código para acceder a cada uno de estos elementos por su índice.</p></li>
 <li><p>Añade un nuevo elemento a la compleja_lista que sea otra lista conteniendo información relevante a un experimento microbiológico (p.ej., fechas, resultados de crecimiento, tipo de medio de cultivo). Accede a un elemento específico dentro de esta lista anidada.</p></li>
+<li><p>Almacena datos de producción en experimentos de fermentación.</p></li>
 </ol>
+<ul>
+<li>Crea una lista fermentacion con 4 elementos, cada uno representando un experimento de fermentación.</li>
+<li>Cada elemento debe ser una lista con: Cepa, Condición, ProducciónEtanol.</li>
+<li>Encuentra la condición con la mayor producción de etanol.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Mantén un registro de resistencias a antibióticos.</li>
+</ol>
+<ul>
+<li>Crea una lista resistencias con 3 elementos, cada uno representando una bacteria.</li>
+<li>Cada elemento debe ser una lista con: Bacteria, AntibióticosResistentes (vector de nombres de antibióticos).</li>
+<li>Encuentra la bacteria con más resistencias.</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>Mantén un registro de ensayos clínicos en una lista.</li>
+</ol>
+<ul>
+<li>Crea una lista ensayos_clinicos con 3 elementos, cada uno representando un ensayo clínico.</li>
+<li>Cada elemento debe ser una lista con: Nombre, Fase, NúmeroPacientes.</li>
+<li>Calcula el total de pacientes involucrados en todos los ensayos clínicos.</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>Almacena datos de producción en experimentos de fermentación.</li>
+</ol>
+<ul>
+<li>Crea una lista fermentacion con 4 elementos, cada uno representando un experimento de fermentación.</li>
+<li>Cada elemento debe ser una lista con: Cepa, Condición, ProducciónEtanol.</li>
+<li>Encuentra la condición con la mayor producción de etanol.</li>
+</ul>
 <p>Recuerda, el uso efectivo de listas en R puede ayudarte a gestionar y manipular una amplia gama de conjuntos de datos complejos, especialmente útil en campos como la Microbiología.</p>
 
 </div>
