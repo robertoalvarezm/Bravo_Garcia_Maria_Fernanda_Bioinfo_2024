@@ -498,6 +498,30 @@ div.csl-indent {
 <span id="cb431-7"><a href="functions.html#cb431-7" tabindex="-1"></a><span class="co"># Prueba de la función</span></span>
 <span id="cb431-8"><a href="functions.html#cb431-8" tabindex="-1"></a><span class="fu">indice_shannon</span>(<span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>))</span></code></pre></div>
 <pre><code>## [1] 1.279854</code></pre>
+<p><strong>Calcular Matriz de Distancias Genéticas</strong></p>
+<p>Descripción: Define una función que calcule una matriz de distancias genéticas entre varias secuencias.</p>
+<ul>
+<li>Define una función matriz_distancias que acepte un argumento: secuencias (una lista de secuencias).</li>
+<li>La función debe devolver una matriz de distancias (número de diferencias entre pares de secuencias).</li>
+</ul>
+<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb433-1"><a href="functions.html#cb433-1" tabindex="-1"></a>matriz_distancias <span class="ot">&lt;-</span> <span class="cf">function</span>(secuencias) {</span>
+<span id="cb433-2"><a href="functions.html#cb433-2" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(secuencias)</span>
+<span id="cb433-3"><a href="functions.html#cb433-3" tabindex="-1"></a>  distancias <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, n, n)</span>
+<span id="cb433-4"><a href="functions.html#cb433-4" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(n<span class="dv">-1</span>)) {</span>
+<span id="cb433-5"><a href="functions.html#cb433-5" tabindex="-1"></a>    <span class="cf">for</span> (j <span class="cf">in</span> (i<span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span>n) {</span>
+<span id="cb433-6"><a href="functions.html#cb433-6" tabindex="-1"></a>      distancias[i, j] <span class="ot">&lt;-</span> <span class="fu">sum</span>(secuencias[[i]] <span class="sc">!=</span> secuencias[[j]])</span>
+<span id="cb433-7"><a href="functions.html#cb433-7" tabindex="-1"></a>      distancias[j, i] <span class="ot">&lt;-</span> distancias[i, j]</span>
+<span id="cb433-8"><a href="functions.html#cb433-8" tabindex="-1"></a>    }</span>
+<span id="cb433-9"><a href="functions.html#cb433-9" tabindex="-1"></a>  }</span>
+<span id="cb433-10"><a href="functions.html#cb433-10" tabindex="-1"></a>  <span class="fu">return</span>(distancias)</span>
+<span id="cb433-11"><a href="functions.html#cb433-11" tabindex="-1"></a>}</span>
+<span id="cb433-12"><a href="functions.html#cb433-12" tabindex="-1"></a></span>
+<span id="cb433-13"><a href="functions.html#cb433-13" tabindex="-1"></a><span class="co"># Prueba de la función</span></span>
+<span id="cb433-14"><a href="functions.html#cb433-14" tabindex="-1"></a><span class="fu">matriz_distancias</span>(<span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;T&quot;</span>, <span class="st">&quot;G&quot;</span>, <span class="st">&quot;C&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;T&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;C&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;G&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;G&quot;</span>, <span class="st">&quot;C&quot;</span>)))</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    0    1    2
+## [2,]    1    0    3
+## [3,]    2    3    0</code></pre>
 <p><strong>Ejercicios</strong></p>
 <ol style="list-style-type: decimal">
 <li><p>Escribe una función que tome un vector numérico como argumento de entrada y devuelva la media aritmética de los valores.</p></li>
@@ -516,6 +540,38 @@ div.csl-indent {
 <ul>
 <li>Define una función tasa_crecimiento que acepte tres argumentos: concentracion_inicial, concentracion_final y tiempo.</li>
 <li>La función debe devolver la tasa de crecimiento (logaritmo natural de la razón de concentraciones dividido por el tiempo).</li>
+</ul>
+<ol start="12" style="list-style-type: decimal">
+<li><strong>Calcular Porcentaje de GC</strong></li>
+</ol>
+<p>Descripción: Define una función que calcule el porcentaje de GC en una secuencia de ADN.</p>
+<ul>
+<li>Define una función porcentaje_gc que acepte un argumento: secuencia.</li>
+<li>La función debe devolver el porcentaje de bases G y C en la secuencia.</li>
+</ul>
+<ol start="13" style="list-style-type: decimal">
+<li><strong>Calcular Resistencia Promedio</strong></li>
+</ol>
+<p>Descripción: Define una función que calcule la resistencia promedio de una bacteria a varios antibióticos.</p>
+<ul>
+<li>Define una función resistencia_promedio que acepte un argumento: resistencias (un vector de valores de resistencia).</li>
+<li>La función debe devolver la resistencia promedio.</li>
+</ul>
+<ol start="14" style="list-style-type: decimal">
+<li><strong>Calcular Concentración Normalizada</strong></li>
+</ol>
+<p>Descripción: Define una función que normalice un vector de concentraciones de metabolitos.</p>
+<ul>
+<li>Define una función normalizar_concentraciones que acepte un argumento: concentraciones.</li>
+<li>La función debe devolver el vector de concentraciones normalizado (dividiendo cada valor por el máximo).</li>
+</ul>
+<ol start="15" style="list-style-type: decimal">
+<li><strong>Calcular la Media y Desviación Estándar de Niveles de Expresión</strong></li>
+</ol>
+<p>Descripción: Define una función que calcule la media y desviación estándar de los niveles de expresión génica.</p>
+<ul>
+<li>Define una función estadisticas_expresion que acepte un argumento: niveles.</li>
+<li>La función debe devolver una lista con la media y la desviación estándar de los niveles de expresión.</li>
 </ul>
 
 </div>

@@ -176,7 +176,30 @@ indice_shannon(c(10, 20, 30, 40))
 
 ```
 
+**Calcular Matriz de Distancias Genéticas**
 
+Descripción: Define una función que calcule una matriz de distancias genéticas entre varias secuencias.
+
+- Define una función matriz_distancias que acepte un argumento: secuencias (una lista de secuencias).
+- La función debe devolver una matriz de distancias (número de diferencias entre pares de secuencias).
+
+```{r}
+matriz_distancias <- function(secuencias) {
+  n <- length(secuencias)
+  distancias <- matrix(0, n, n)
+  for (i in 1:(n-1)) {
+    for (j in (i+1):n) {
+      distancias[i, j] <- sum(secuencias[[i]] != secuencias[[j]])
+      distancias[j, i] <- distancias[i, j]
+    }
+  }
+  return(distancias)
+}
+
+# Prueba de la función
+matriz_distancias(list(c("A", "T", "G", "C"), c("A", "T", "A", "C"), c("G", "C", "G", "C")))
+
+```
 
 **Ejercicios**
 
@@ -207,4 +230,31 @@ Descripción: Define una función que calcule la tasa de crecimiento bacteriano 
 - Define una función tasa_crecimiento que acepte tres argumentos: concentracion_inicial, concentracion_final y tiempo.
 - La función debe devolver la tasa de crecimiento (logaritmo natural de la razón de concentraciones dividido por el tiempo).
 
+12. **Calcular Porcentaje de GC**
+
+Descripción: Define una función que calcule el porcentaje de GC en una secuencia de ADN.
+
+- Define una función porcentaje_gc que acepte un argumento: secuencia.
+- La función debe devolver el porcentaje de bases G y C en la secuencia.
+
+13. **Calcular Resistencia Promedio**
+
+Descripción: Define una función que calcule la resistencia promedio de una bacteria a varios antibióticos.
+
+- Define una función resistencia_promedio que acepte un argumento: resistencias (un vector de valores de resistencia).
+- La función debe devolver la resistencia promedio.
+
+14.  **Calcular Concentración Normalizada**
+
+Descripción: Define una función que normalice un vector de concentraciones de metabolitos.
+
+- Define una función normalizar_concentraciones que acepte un argumento: concentraciones.
+- La función debe devolver el vector de concentraciones normalizado (dividiendo cada valor por el máximo).
+
+15. **Calcular la Media y Desviación Estándar de Niveles de Expresión**
+
+Descripción: Define una función que calcule la media y desviación estándar de los niveles de expresión génica.
+
+- Define una función estadisticas_expresion que acepte un argumento: niveles.
+- La función debe devolver una lista con la media y la desviación estándar de los niveles de expresión.
 

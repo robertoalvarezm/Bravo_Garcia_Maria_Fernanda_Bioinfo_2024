@@ -130,7 +130,7 @@
 
 \title{Notas de R}
 \author{Roberto Álvarez}
-\date{2024-08-03}
+\date{2024-08-04}
 
 \begin{document}
 \maketitle
@@ -285,68 +285,130 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 \end{Shaded}
 
 \begin{verbatim}
-##   [1] "%>%"                         "add_summary"                
-##   [3] "annotate_figure"             "as_ggplot"                  
-##   [5] "as_npc"                      "as_npcx"                    
-##   [7] "as_npcy"                     "background_image"           
-##   [9] "bgcolor"                     "border"                     
-##  [11] "change_palette"              "clean_table_theme"          
-##  [13] "clean_theme"                 "colnames_style"             
-##  [15] "color_palette"               "compare_means"              
-##  [17] "create_aes"                  "desc_statby"                
-##  [19] "diff_express"                "facet"                      
-##  [21] "fill_palette"                "font"                       
-##  [23] "gene_citation"               "gene_expression"            
-##  [25] "geom_bracket"                "geom_exec"                  
-##  [27] "geom_pwc"                    "geom_signif"                
-##  [29] "get_breaks"                  "get_coord"                  
-##  [31] "get_legend"                  "get_palette"                
-##  [33] "get_summary_stats"           "ggadd"                      
-##  [35] "ggadjust_pvalue"             "ggarrange"                  
-##  [37] "ggballoonplot"               "ggbarplot"                  
-##  [39] "ggboxplot"                   "ggdensity"                  
-##  [41] "ggdonutchart"                "ggdotchart"                 
-##  [43] "ggdotplot"                   "ggecdf"                     
-##  [45] "ggerrorplot"                 "ggexport"                   
-##  [47] "gghistogram"                 "ggline"                     
-##  [49] "ggmaplot"                    "ggpaired"                   
-##  [51] "ggpar"                       "ggparagraph"                
-##  [53] "ggpie"                       "ggpubr_options"             
-##  [55] "ggqqplot"                    "ggscatter"                  
-##  [57] "ggscatterhist"               "ggstripchart"               
-##  [59] "ggsummarystats"              "ggsummarytable"             
-##  [61] "ggtext"                      "ggtexttable"                
-##  [63] "ggviolin"                    "gradient_color"             
-##  [65] "gradient_fill"               "grids"                      
-##  [67] "group_by"                    "labs_pubr"                  
-##  [69] "mean_ci"                     "mean_range"                 
-##  [71] "mean_sd"                     "mean_se_"                   
-##  [73] "median_hilow_"               "median_iqr"                 
-##  [75] "median_mad"                  "median_q1q3"                
-##  [77] "median_range"                "mutate"                     
-##  [79] "npc_to_data_coord"           "rotate"                     
-##  [81] "rotate_x_text"               "rotate_y_text"              
-##  [83] "rownames_style"              "rremove"                    
-##  [85] "set_palette"                 "show_line_types"            
-##  [87] "show_point_shapes"           "stat_anova_test"            
-##  [89] "stat_bracket"                "stat_central_tendency"      
-##  [91] "stat_chull"                  "stat_compare_means"         
-##  [93] "stat_conf_ellipse"           "stat_cor"                   
-##  [95] "stat_friedman_test"          "stat_kruskal_test"          
-##  [97] "stat_mean"                   "stat_overlay_normal_density"
-##  [99] "stat_pvalue_manual"          "stat_pwc"                   
-## [101] "stat_regline_equation"       "stat_stars"                 
-## [103] "stat_welch_anova_test"       "tab_add_border"             
-## [105] "tab_add_footnote"            "tab_add_hline"              
-## [107] "tab_add_title"               "tab_add_vline"              
-## [109] "tab_cell_crossout"           "tab_ncol"                   
-## [111] "tab_nrow"                    "table_cell_bg"              
-## [113] "table_cell_font"             "tbody_add_border"           
-## [115] "tbody_style"                 "text_grob"                  
-## [117] "thead_add_border"            "theme_classic2"             
-## [119] "theme_cleveland"             "theme_pubclean"             
-## [121] "theme_pubr"                  "theme_transparent"          
-## [123] "ttheme"                      "xscale"                     
+##   [1] "%>%"                        
+##   [2] "add_summary"                
+##   [3] "annotate_figure"            
+##   [4] "as_ggplot"                  
+##   [5] "as_npc"                     
+##   [6] "as_npcx"                    
+##   [7] "as_npcy"                    
+##   [8] "background_image"           
+##   [9] "bgcolor"                    
+##  [10] "border"                     
+##  [11] "change_palette"             
+##  [12] "clean_table_theme"          
+##  [13] "clean_theme"                
+##  [14] "colnames_style"             
+##  [15] "color_palette"              
+##  [16] "compare_means"              
+##  [17] "create_aes"                 
+##  [18] "desc_statby"                
+##  [19] "diff_express"               
+##  [20] "facet"                      
+##  [21] "fill_palette"               
+##  [22] "font"                       
+##  [23] "gene_citation"              
+##  [24] "gene_expression"            
+##  [25] "geom_bracket"               
+##  [26] "geom_exec"                  
+##  [27] "geom_pwc"                   
+##  [28] "geom_signif"                
+##  [29] "get_breaks"                 
+##  [30] "get_coord"                  
+##  [31] "get_legend"                 
+##  [32] "get_palette"                
+##  [33] "get_summary_stats"          
+##  [34] "ggadd"                      
+##  [35] "ggadjust_pvalue"            
+##  [36] "ggarrange"                  
+##  [37] "ggballoonplot"              
+##  [38] "ggbarplot"                  
+##  [39] "ggboxplot"                  
+##  [40] "ggdensity"                  
+##  [41] "ggdonutchart"               
+##  [42] "ggdotchart"                 
+##  [43] "ggdotplot"                  
+##  [44] "ggecdf"                     
+##  [45] "ggerrorplot"                
+##  [46] "ggexport"                   
+##  [47] "gghistogram"                
+##  [48] "ggline"                     
+##  [49] "ggmaplot"                   
+##  [50] "ggpaired"                   
+##  [51] "ggpar"                      
+##  [52] "ggparagraph"                
+##  [53] "ggpie"                      
+##  [54] "ggpubr_options"             
+##  [55] "ggqqplot"                   
+##  [56] "ggscatter"                  
+##  [57] "ggscatterhist"              
+##  [58] "ggstripchart"               
+##  [59] "ggsummarystats"             
+##  [60] "ggsummarytable"             
+##  [61] "ggtext"                     
+##  [62] "ggtexttable"                
+##  [63] "ggviolin"                   
+##  [64] "gradient_color"             
+##  [65] "gradient_fill"              
+##  [66] "grids"                      
+##  [67] "group_by"                   
+##  [68] "labs_pubr"                  
+##  [69] "mean_ci"                    
+##  [70] "mean_range"                 
+##  [71] "mean_sd"                    
+##  [72] "mean_se_"                   
+##  [73] "median_hilow_"              
+##  [74] "median_iqr"                 
+##  [75] "median_mad"                 
+##  [76] "median_q1q3"                
+##  [77] "median_range"               
+##  [78] "mutate"                     
+##  [79] "npc_to_data_coord"          
+##  [80] "rotate"                     
+##  [81] "rotate_x_text"              
+##  [82] "rotate_y_text"              
+##  [83] "rownames_style"             
+##  [84] "rremove"                    
+##  [85] "set_palette"                
+##  [86] "show_line_types"            
+##  [87] "show_point_shapes"          
+##  [88] "stat_anova_test"            
+##  [89] "stat_bracket"               
+##  [90] "stat_central_tendency"      
+##  [91] "stat_chull"                 
+##  [92] "stat_compare_means"         
+##  [93] "stat_conf_ellipse"          
+##  [94] "stat_cor"                   
+##  [95] "stat_friedman_test"         
+##  [96] "stat_kruskal_test"          
+##  [97] "stat_mean"                  
+##  [98] "stat_overlay_normal_density"
+##  [99] "stat_pvalue_manual"         
+## [100] "stat_pwc"                   
+## [101] "stat_regline_equation"      
+## [102] "stat_stars"                 
+## [103] "stat_welch_anova_test"      
+## [104] "tab_add_border"             
+## [105] "tab_add_footnote"           
+## [106] "tab_add_hline"              
+## [107] "tab_add_title"              
+## [108] "tab_add_vline"              
+## [109] "tab_cell_crossout"          
+## [110] "tab_ncol"                   
+## [111] "tab_nrow"                   
+## [112] "table_cell_bg"              
+## [113] "table_cell_font"            
+## [114] "tbody_add_border"           
+## [115] "tbody_style"                
+## [116] "text_grob"                  
+## [117] "thead_add_border"           
+## [118] "theme_classic2"             
+## [119] "theme_cleveland"            
+## [120] "theme_pubclean"             
+## [121] "theme_pubr"                 
+## [122] "theme_transparent"          
+## [123] "ttheme"                     
+## [124] "xscale"                     
 ## [125] "yscale"
 \end{verbatim}
 
@@ -385,7 +447,7 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 ## > plot(x, ann = FALSE, type = "n")
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-6-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-5-1.pdf}
 
 \begin{verbatim}
 ## 
@@ -412,7 +474,7 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 ## > pie(rep(1,24), col = rainbow(24), radius = 0.9)
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-6-2.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-5-2.pdf}
 
 \begin{verbatim}
 ## 
@@ -433,7 +495,7 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 ## +     col = c("purple","violetred1","green3","cornsilk","cyan","white"))
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-6-3.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-5-3.pdf}
 
 \begin{verbatim}
 ## 
@@ -456,7 +518,7 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 ## > boxplot(split(x,g), col="lavender", notch=TRUE)
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-6-4.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-5-4.pdf}
 
 \begin{verbatim}
 ## 
@@ -479,7 +541,7 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 ## > plot(xx, yy, type="n", xlab="Time", ylab="Distance")
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-6-5.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-5-5.pdf}
 
 \begin{verbatim}
 ## 
@@ -499,7 +561,7 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 ## > plot(x, type="n", axes=FALSE, ann=FALSE)
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-6-6.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-5-6.pdf}
 
 \begin{verbatim}
 ## 
@@ -531,7 +593,7 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 ## > hist(x, xlim=range(-4, 4, x), col="lavender", main="")
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-6-7.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-5-7.pdf}
 
 \begin{verbatim}
 ## 
@@ -543,7 +605,7 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 ## > pairs(iris[1:4], main="Edgar Anderson's Iris Data", font.main=4, pch=19)
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-6-8.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-5-8.pdf}
 
 \begin{verbatim}
 ## 
@@ -551,7 +613,7 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 ## +       bg = c("red", "green3", "blue")[unclass(iris$Species)])
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-6-9.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-5-9.pdf}
 
 \begin{verbatim}
 ## 
@@ -587,7 +649,7 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 ## +      type = "n", ann = FALSE)
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-6-10.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-5-10.pdf}
 
 \begin{verbatim}
 ## 
@@ -613,7 +675,7 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 ## > coplot(lat ~ long | depth, data = quakes, pch = 21, bg = "green3")
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-6-11.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-5-11.pdf}
 
 \begin{verbatim}
 ## 
@@ -717,14 +779,14 @@ Ejemplo:
 ## hclust> plot(hc)
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-12-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-11-1.pdf}
 
 \begin{verbatim}
 ## 
 ## hclust> plot(hc, hang = -1)
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-12-2.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-11-2.pdf}
 
 \begin{verbatim}
 ## 
@@ -753,7 +815,7 @@ Ejemplo:
 ## hclust> plot(hc1, labels = FALSE, hang = -1, main = "Re-start from 10 clusters")
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-12-3.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-11-3.pdf}
 
 \begin{verbatim}
 ## 
@@ -767,7 +829,7 @@ Ejemplo:
 ## hclust> plot(mds2, type="n", axes=FALSE, ann=FALSE)
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-12-4.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-11-4.pdf}
 
 \begin{verbatim}
 ## 
@@ -787,7 +849,7 @@ Ejemplo:
 ## hclust> plot(hcity.D2, hang=-1)
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-12-5.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-11-5.pdf}
 
 \begin{verbatim}
 ## 
@@ -855,8 +917,9 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] -0.038998018  0.758203514 -1.349242559  0.001171862  0.504689087
-##  [6]  0.827538781  1.196159067 -0.502982027  1.386914012 -0.708304493
+##  [1]  0.8104569  1.4266741 -2.1010633  0.5845402
+##  [5] -1.8896614 -0.4581024  0.7265907 -0.5832138
+##  [9] -0.8141102 -0.7978648
 \end{verbatim}
 
 \begin{Shaded}
@@ -866,8 +929,9 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  0.5854544 -1.3837363 -1.9708028 -0.9765416  1.1359097
-##  [6]  1.0721026  1.4859182  0.9697558 -2.3765914  0.6074945
+##  [1]  0.4892828 -1.0104476 -0.4810680  0.1929028
+##  [5] -0.8849995  1.6718237 -0.1899867 -0.3263491
+##  [9]  1.5266139  1.0758022
 \end{verbatim}
 
 Las \textbf{asignaciones}, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de \texttt{\textless{}-}
@@ -887,8 +951,9 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] -0.59587707  0.68101309  1.58648056 -0.53781906 -0.59819972
-##  [6]  1.19153644 -0.01946832 -0.13359182 -0.57294842  0.88481736
+##  [1] -0.1042512 -1.8290861  0.5467695 -0.8701468
+##  [5]  1.7862834 -0.5209483 -1.2106567  1.1563404
+##  [9] -0.5048587  0.1354314
 \end{verbatim}
 
 \textbf{NOTA} El símbolo \texttt{\textless{}-} es equivalente en función a \texttt{=} pero puede llevar a confusiones importantes con el operador \texttt{==}.
@@ -1295,10 +1360,18 @@ Por lo común no importa esta diferencia, pero puede ser relevante para algunas 
 \chapter{Vectores}\label{estructura}
 
 R permite manejar datos dentro de estructuras para poder trabajarlos, estas estructuras pueden ser:
-- Vector: Es de una sola dimensión y solo permite almacenar datos del mismo tipo.
-- Matriz: Es un arreglo en dos dimensiones y permite ingresar datos del mismo tipo.
-- Data Frame: Similar a la matriz por ser también de dos dimensiones, solo que este arreglo permite distintas clases de datos.
-- Lista: Es de una sola dimensión como el vector, la diferencia que es que una lista permite incorporar diferentes tipos de datos.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Vector}: Es de una sola dimensión y solo permite almacenar datos del mismo tipo.
+\item
+  \textbf{Matriz}: Es un arreglo en dos dimensiones y permite ingresar datos del mismo tipo.
+\item
+  \textbf{Data Frame}: Similar a la matriz por ser también de dos dimensiones, solo que este arreglo permite distintas clases de datos.
+\item
+  \textbf{Lista}: Es de una sola dimensión como el vector, la diferencia que es que una lista permite incorporar diferentes tipos de datos.
+\end{itemize}
 
 \section{Contenido}\label{contenido}
 
@@ -1358,12 +1431,14 @@ Un vector que tenga los primeros 100 números enteros
 \end{Shaded}
 
 \begin{verbatim}
-##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
-##  [17]  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32
-##  [33]  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48
-##  [49]  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64
-##  [65]  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80
-##  [81]  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96
+##   [1]   1   2   3   4   5   6   7   8   9  10  11  12
+##  [13]  13  14  15  16  17  18  19  20  21  22  23  24
+##  [25]  25  26  27  28  29  30  31  32  33  34  35  36
+##  [37]  37  38  39  40  41  42  43  44  45  46  47  48
+##  [49]  49  50  51  52  53  54  55  56  57  58  59  60
+##  [61]  61  62  63  64  65  66  67  68  69  70  71  72
+##  [73]  73  74  75  76  77  78  79  80  81  82  83  84
+##  [85]  85  86  87  88  89  90  91  92  93  94  95  96
 ##  [97]  97  98  99 100
 \end{verbatim}
 
@@ -1382,12 +1457,14 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
-##  [17]  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32
-##  [33]  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48
-##  [49]  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64
-##  [65]  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80
-##  [81]  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96
+##   [1]   1   2   3   4   5   6   7   8   9  10  11  12
+##  [13]  13  14  15  16  17  18  19  20  21  22  23  24
+##  [25]  25  26  27  28  29  30  31  32  33  34  35  36
+##  [37]  37  38  39  40  41  42  43  44  45  46  47  48
+##  [49]  49  50  51  52  53  54  55  56  57  58  59  60
+##  [61]  61  62  63  64  65  66  67  68  69  70  71  72
+##  [73]  73  74  75  76  77  78  79  80  81  82  83  84
+##  [85]  85  86  87  88  89  90  91  92  93  94  95  96
 ##  [97]  97  98  99 100
 \end{verbatim}
 
@@ -1405,7 +1482,8 @@ Una secuencia que vaya desde -12 hasta 30 en un rango de 3, es decir, -12, -9, -
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] -12  -9  -6  -3   0   3   6   9  12  15  18  21  24  27  30
+##  [1] -12  -9  -6  -3   0   3   6   9  12  15  18  21
+## [13]  24  27  30
 \end{verbatim}
 
 \textbf{NOTA} Se puede omitir \emph{from}, \emph{to} y \emph{by} mientras se sigan colocando los valores en el mismo orden.
@@ -1685,8 +1763,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  1  2  3  5  7 11  1  2  3  5  7 11  1  2  3  5  7 11  1  2  3
-## [22]  5  7 11
+##  [1]  1  2  3  5  7 11  1  2  3  5  7 11  1  2  3  5
+## [17]  7 11  1  2  3  5  7 11
 \end{verbatim}
 
 Dentro del comando \texttt{rep()} se encuentra la opción \texttt{each}, la cual permite definir la frecuencia de repetición.
@@ -1979,7 +2057,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -2.97576
+## [1] -3.083485
 \end{verbatim}
 
 \begin{Shaded}
@@ -1989,7 +2067,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 3.896923
+## [1] 3.101558
 \end{verbatim}
 
 \begin{Shaded}
@@ -1999,7 +2077,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -2.975760  3.896923
+## [1] -3.083485  3.101558
 \end{verbatim}
 
 \begin{Shaded}
@@ -2009,7 +2087,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -4.918641
+## [1] -30.56625
 \end{verbatim}
 
 \begin{Shaded}
@@ -2019,7 +2097,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -0.004918641
+## [1] -0.03056625
 \end{verbatim}
 
 \begin{Shaded}
@@ -2029,7 +2107,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -0.004371671
+## [1] -0.02536214
 \end{verbatim}
 
 \textbf{Ejercicio} ¿Qué función tienen los siguientes comandos \texttt{sd()} y \texttt{quantile()}?
@@ -2055,7 +2133,7 @@ Para \texttt{unique()} y \texttt{sort()} conviene tener elementos discretos más
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 10  3  7  5  2  6  9  1  4  8
+##  [1]  7  3  9 10  1  8  4  2  5  6
 \end{verbatim}
 
 \begin{Shaded}
@@ -2080,7 +2158,7 @@ Podemos graficar los vectores de manera inmediata en \texttt{R}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-77-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-76-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2088,7 +2166,7 @@ Podemos graficar los vectores de manera inmediata en \texttt{R}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-77-2.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-76-2.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2096,7 +2174,7 @@ Podemos graficar los vectores de manera inmediata en \texttt{R}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-77-3.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-76-3.pdf}
 
 \section{Vectores con nombre}\label{vectores-con-nombre}
 
@@ -2190,7 +2268,8 @@ Ahora veamos un ejemplo más ``biológico''
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 3234830000 2716970000  143730000      14281   12100000
+## [1] 3234830000 2716970000  143730000      14281
+## [5]   12100000
 \end{verbatim}
 
 \begin{Shaded}
@@ -2212,8 +2291,10 @@ Ahora veamos un ejemplo más ``biológico''
 \end{Shaded}
 
 \begin{verbatim}
-##       Human       Mouse   Fruit Fly   Roundworm       Yeast 
-## 3234.830000 2716.970000  143.730000    0.014281   12.100000
+##       Human       Mouse   Fruit Fly   Roundworm 
+## 3234.830000 2716.970000  143.730000    0.014281 
+##       Yeast 
+##   12.100000
 \end{verbatim}
 
 ¿Qué hay de diferente entre el primer vector al que le se asiganaron los tamaños de genomas \& esta última versión?
@@ -2395,7 +2476,8 @@ Veamos paso a paso qué es lo que hace este proceso
 \end{Shaded}
 
 \begin{verbatim}
-## [1] FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+## [1] FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE
+## [9]  TRUE
 \end{verbatim}
 
 \begin{Shaded}
@@ -2648,10 +2730,11 @@ Los factores son una manera computacionalmente eficiente de almacenar caracteres
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] "March"     "April"     "January"   "November"  "January"  
-##  [6] "September" "October"   "September" "November"  "August"   
-## [11] "January"   "November"  "November"  "February"  "May"      
-## [16] "August"    "July"      "December"  "August"    "August"   
+##  [1] "March"     "April"     "January"   "November" 
+##  [5] "January"   "September" "October"   "September"
+##  [9] "November"  "August"    "January"   "November" 
+## [13] "November"  "February"  "May"       "August"   
+## [17] "July"      "December"  "August"    "August"   
 ## [21] "September" "November"  "February"  "April"
 \end{verbatim}
 
@@ -2663,11 +2746,12 @@ Los factores son una manera computacionalmente eficiente de almacenar caracteres
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] March     April     January   November  January   September
-##  [7] October   September November  August    January   November 
-## [13] November  February  May       August    July      December 
-## [19] August    August    September November  February  April    
-## 11 Levels: April August December February January July March ... September
+##  [1] March     April     January   November  January  
+##  [6] September October   September November  August   
+## [11] January   November  November  February  May      
+## [16] August    July      December  August    August   
+## [21] September November  February  April    
+## 11 Levels: April August December February ... September
 \end{verbatim}
 
 El que existan los \emph{levels} permite realizar ciertas operaciones y manipular el contenido del factor.
@@ -2680,10 +2764,12 @@ El que existan los \emph{levels} permite realizar ciertas operaciones y manipula
 
 \begin{verbatim}
 ## meses
-##     April    August  December  February   January      July 
-##         2         4         1         2         3         1 
-##     March       May  November   October September 
-##         1         1         5         1         3
+##     April    August  December  February   January 
+##         2         4         1         2         3 
+##      July     March       May  November   October 
+##         1         1         1         5         1 
+## September 
+##         3
 \end{verbatim}
 
 \begin{Shaded}
@@ -2693,9 +2779,9 @@ El que existan los \emph{levels} permite realizar ciertas operaciones y manipula
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] "April"     "August"    "December"  "February"  "January"  
-##  [6] "July"      "March"     "May"       "November"  "October"  
-## [11] "September"
+##  [1] "April"     "August"    "December"  "February" 
+##  [5] "January"   "July"      "March"     "May"      
+##  [9] "November"  "October"   "September"
 \end{verbatim}
 
 \begin{Shaded}
@@ -2716,9 +2802,9 @@ El que existan los \emph{levels} permite realizar ciertas operaciones y manipula
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] "Abril"     "August"    "December"  "February"  "January"  
-##  [6] "July"      "March"     "May"       "November"  "October"  
-## [11] "September"
+##  [1] "Abril"     "August"    "December"  "February" 
+##  [5] "January"   "July"      "March"     "May"      
+##  [9] "November"  "October"   "September"
 \end{verbatim}
 
 \begin{Shaded}
@@ -2728,11 +2814,12 @@ El que existan los \emph{levels} permite realizar ciertas operaciones y manipula
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] March     Abril     January   November  January   September
-##  [7] October   September November  August    January   November 
-## [13] November  February  May       August    July      December 
-## [19] August    August    September November  February  Abril    
-## 11 Levels: Abril August December February January July March ... September
+##  [1] March     Abril     January   November  January  
+##  [6] September October   September November  August   
+## [11] January   November  November  February  May      
+## [16] August    July      December  August    August   
+## [21] September November  February  Abril    
+## 11 Levels: Abril August December February ... September
 \end{verbatim}
 
 \subsection{Ejercicio: Temperaturas de Incubación}\label{ejercicio-temperaturas-de-incubaciuxf3n}
@@ -2852,6 +2939,223 @@ Supongamos que tenemos un conjunto de temperaturas de incubación de diferentes 
 \item
   Normaliza el vector ``v3''.
 \end{enumerate}
+
+\subsection{Ejercicios avanzados}\label{ejercicios-avanzados}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Filtrado de Genes por Expresión}
+\end{enumerate}
+
+Descripción: Supón que tienes un vector con los niveles de expresión de 100 genes.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea un vector expresion\_genes con 100 valores aleatorios entre 0 y 1000.
+\item
+  Asigna nombres de genes reales en H. sapiens.
+\item
+  Filtra los genes que tienen niveles de expresión por encima de 500.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Análisis de Resistencias Antibióticas}
+\end{enumerate}
+
+Descripción: Supón que tienes un vector con datos de resistencia de 50 cepas bacterianas a un antibiótico específico.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea un vector resistencia con 50 valores binarios (0 para sensible, 1 para resistente).
+\item
+  Asigna nombres de especies reales de bacterias.
+\item
+  Calcula el número total de cepas resistentes.
+\item
+  Encuentra el índice de la primera cepa resistente.
+\item
+  Calcula el porcentaje de genes filtrados.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Distancias Genéticas}
+\end{enumerate}
+
+Descripción: Supón que tienes un vector con distancias genéticas entre 20 pares de especies.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea un vector distancias\_geneticas con 20 valores aleatorios entre 0 y 100.
+\item
+  Asigna nombres de especies reales de hongos.
+\item
+  Calcula la media y la desviación estándar de las distancias genéticas.
+\item
+  Encuentra la distancia genética mínima y máxima.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{Abundancia de Microorganismos}
+\end{enumerate}
+
+Descripción: Supón que tienes un vector con la abundancia de 30 microorganismos en una muestra ambiental.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea un vector abundancia\_microorganismos con 30 valores aleatorios entre 0 y 500.
+\item
+  Asigna nombres de especies reales de virus.
+\item
+  Ordena el vector en orden descendente.
+\item
+  Encuentra los 5 microorganismos más abundantes.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  \textbf{Análisis de pH en Muestras de Agua}
+\end{enumerate}
+
+Descripción: Supón que tienes un vector con valores de pH de 25 muestras de agua.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea un vector ph\_muestras con 25 valores aleatorios entre 6 y 9.
+\item
+  Calcula la mediana del pH.
+\item
+  Encuentra las muestras con pH fuera del rango ideal (6.5 a 8.5).
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  \textbf{Tiempos de Crecimiento Bacteriano}
+\end{enumerate}
+
+Descripción: Supón que tienes un vector con tiempos de crecimiento de 15 cepas bacterianas en horas.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea un vector tiempos\_crecimiento con 15 valores aleatorios entre 0 y 24.
+\item
+  Asigna nombres de especies reales de cepas bacterianas.
+\item
+  Calcula el tiempo de crecimiento total.
+\item
+  Encuentra la mediana del tiempo de crecimiento.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  \textbf{Análisis de Porcentajes de GC}
+\end{enumerate}
+
+Descripción: Supón que tienes un vector con porcentajes de GC de 20 secuencias de ADN.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea un vector porcentajes\_gc con 20 valores reales entre 35 y 60.
+\item
+  Asigna nombres de especies reales de bacterias con esos porcentajes.
+\item
+  Calcula el porcentaje de GC promedio.
+\item
+  Encuentra el índice de la secuencia con el porcentaje de GC más cercano a 50\%.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  \textbf{Análisis de Concentraciones de Metabolitos}
+\end{enumerate}
+
+Descripción: Supón que tienes un vector con concentraciones de 12 metabolitos en mM.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea un vector concentraciones\_metabolitos con 12 valores aleatorios entre 0 y 10.
+\item
+  Normaliza las concentraciones dividiendo por el valor máximo.
+\item
+  Encuentra las concentraciones normalizadas mayores a 0.5.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  \textbf{Análisis de Tasas de Transcripción}
+\end{enumerate}
+
+Descripción: Supón que tienes un vector con tasas de transcripción de 25 genes en RPKM.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea un vector tasas\_transcripcion con 25 valores aleatorios entre 0 y 50.
+\item
+  Asigna nombres de genes reales de E. coli.
+\item
+  Encuentra la tasa de transcripción media.
+\item
+  Encuentra los genes con tasas de transcripción por encima de la media.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{9}
+\tightlist
+\item
+  \textbf{Análisis de Diversidad de Especies}
+\end{enumerate}
+
+Descripción: Supón que tienes un vector con la abundancia de 20 especies en una muestra ambiental.
+
+\begin{itemize}
+\tightlist
+\item
+  Crea un vector abundancia\_especies con 20 valores aleatorios entre 1 y 100.
+\item
+  Asigna nombres de especies reales de bacterias.
+\item
+  Calcula el índice de diversidad de Shannon.
+\item
+  Encuentra las especies con abundancia mayor al promedio.
+\end{itemize}
 
 \chapter{Matrices}\label{matrices}
 
@@ -3454,8 +3758,9 @@ Descripción: Supongamos que tienes una matriz de distancias genéticas entre 6 
   Asigna nombres de especies a las filas y columnas.
 \item
   Encuentra la especie más cercana y más lejana para cada especie (índices de los mínimos y máximos valores en cada fila, excluyendo la diagonal).
-  \#\#\# Ejercicios avanzados
 \end{itemize}
+
+\subsection{Ejercicios avanzados}\label{ejercicios-avanzados-1}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3614,9 +3919,9 @@ Para eliminar una columna de un Dataframe en R, puedes utilizar el operador de s
 
 Para agregar un nuevo renglón a un Dataframe en R, puedes utilizar la función \texttt{rbind()}. ¿También se puede aplicar \texttt{cbind()} en Dataframe?
 
-\textbf{Ejercicio}
+** Ejercicio **
 
-Empleando la siguiente fórmula para calcular la Temperatura de Fusión: \(T_m=4(G+C)+2(A+T)\), diseña una secuencia que cumpla con una \(T_m\) de \(55°\). Agrega sus características (secuencia, tamaño, cantidad GC \& T\_m) en un nuevo renglón. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe \texttt{dna\_data} como base.
+Emplea la siguiente fórmula para calcular la Temperatura de Fusión: \(T_m=4(G+C)+2(A+T)\), diseña una secuencia que cumpla con una \(T_m\) de \(55°\). Agrega sus características (secuencia, tamaño, cantidad GC \& T\_m) en un nuevo renglón. También será necesario agregar la columna Tm para indicar la Temperatura de Fusión de cada secuencia. Usa el Dataframe \texttt{dna\_data} como base.
 
 \section{Importar archivos externos}\label{importar-archivos-externos}
 
@@ -3733,7 +4038,7 @@ Descripción: Supón que tienes un data.frame con datos de abundancia de secuenc
 \setcounter{enumi}{3}
 \tightlist
 \item
-  ** Datos de Producción de Ácido Láctico**
+  \textbf{Datos de Producción de Ácido Láctico}
 \end{enumerate}
 
 Descripción: Supón que tienes un data.frame con datos de producción de ácido láctico por diferentes cepas en distintas condiciones.
@@ -3826,6 +4131,134 @@ Accceso por índice
 ## 2 S. aureus    -
 \end{verbatim}
 
+\section{Ejercicio resuelto}\label{ejercicio-resuelto}
+
+Guarda datos de análisis de diferentes muestras de agua en una lista.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Crea una lista muestras\_agua con 4 elementos, cada uno representando una muestra de agua.
+\item
+  Cada elemento debe ser una lista con: ID, Localización, pH, Coliformes (número de coliformes).
+\item
+  Calcula el promedio de coliformes en todas las muestras.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Crear lista de muestras de agua}
+\NormalTok{muestras\_agua }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}
+  \FunctionTok{list}\NormalTok{(}\AttributeTok{ID =} \StringTok{"Muestra1"}\NormalTok{, }\AttributeTok{Localizacion =} \StringTok{"Río"}\NormalTok{, }\AttributeTok{pH =} \FloatTok{7.2}\NormalTok{, }\AttributeTok{Coliformes =} \DecValTok{150}\NormalTok{),}
+  \FunctionTok{list}\NormalTok{(}\AttributeTok{ID =} \StringTok{"Muestra2"}\NormalTok{, }\AttributeTok{Localizacion =} \StringTok{"Lago"}\NormalTok{, }\AttributeTok{pH =} \FloatTok{6.8}\NormalTok{, }\AttributeTok{Coliformes =} \DecValTok{200}\NormalTok{),}
+  \FunctionTok{list}\NormalTok{(}\AttributeTok{ID =} \StringTok{"Muestra3"}\NormalTok{, }\AttributeTok{Localizacion =} \StringTok{"Pozo"}\NormalTok{, }\AttributeTok{pH =} \FloatTok{7.5}\NormalTok{, }\AttributeTok{Coliformes =} \DecValTok{50}\NormalTok{),}
+  \FunctionTok{list}\NormalTok{(}\AttributeTok{ID =} \StringTok{"Muestra4"}\NormalTok{, }\AttributeTok{Localizacion =} \StringTok{"Mar"}\NormalTok{, }\AttributeTok{pH =} \FloatTok{8.1}\NormalTok{, }\AttributeTok{Coliformes =} \DecValTok{80}\NormalTok{)}
+\NormalTok{)}
+
+\NormalTok{muestras\_agua}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [[1]]
+## [[1]]$ID
+## [1] "Muestra1"
+## 
+## [[1]]$Localizacion
+## [1] "Río"
+## 
+## [[1]]$pH
+## [1] 7.2
+## 
+## [[1]]$Coliformes
+## [1] 150
+## 
+## 
+## [[2]]
+## [[2]]$ID
+## [1] "Muestra2"
+## 
+## [[2]]$Localizacion
+## [1] "Lago"
+## 
+## [[2]]$pH
+## [1] 6.8
+## 
+## [[2]]$Coliformes
+## [1] 200
+## 
+## 
+## [[3]]
+## [[3]]$ID
+## [1] "Muestra3"
+## 
+## [[3]]$Localizacion
+## [1] "Pozo"
+## 
+## [[3]]$pH
+## [1] 7.5
+## 
+## [[3]]$Coliformes
+## [1] 50
+## 
+## 
+## [[4]]
+## [[4]]$ID
+## [1] "Muestra4"
+## 
+## [[4]]$Localizacion
+## [1] "Mar"
+## 
+## [[4]]$pH
+## [1] 8.1
+## 
+## [[4]]$Coliformes
+## [1] 80
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{str}\NormalTok{(muestras\_agua)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## List of 4
+##  $ :List of 4
+##   ..$ ID          : chr "Muestra1"
+##   ..$ Localizacion: chr "Río"
+##   ..$ pH          : num 7.2
+##   ..$ Coliformes  : num 150
+##  $ :List of 4
+##   ..$ ID          : chr "Muestra2"
+##   ..$ Localizacion: chr "Lago"
+##   ..$ pH          : num 6.8
+##   ..$ Coliformes  : num 200
+##  $ :List of 4
+##   ..$ ID          : chr "Muestra3"
+##   ..$ Localizacion: chr "Pozo"
+##   ..$ pH          : num 7.5
+##   ..$ Coliformes  : num 50
+##  $ :List of 4
+##   ..$ ID          : chr "Muestra4"
+##   ..$ Localizacion: chr "Mar"
+##   ..$ pH          : num 8.1
+##   ..$ Coliformes  : num 80
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Calcular promedio de coliformes}
+\NormalTok{promedio\_coliformes }\OtherTok{\textless{}{-}} \FunctionTok{mean}\NormalTok{(}\FunctionTok{sapply}\NormalTok{(muestras\_agua, }\ControlFlowTok{function}\NormalTok{(x) x}\SpecialCharTok{$}\NormalTok{Coliformes))}
+\FunctionTok{print}\NormalTok{(promedio\_coliformes)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 120
+\end{verbatim}
+
 \section{Ejercicios}\label{ejercicios-2}
 
 \subsection{Ejercicios Propuestos con listas}\label{ejercicios-propuestos-con-listas}
@@ -3836,7 +4269,73 @@ Accceso por índice
   Crea una lista que contenga al menos cuatro tipos diferentes de datos (incluyendo al menos un vector, una matriz, y un data frame). Luego, escribe código para acceder a cada uno de estos elementos por su índice.
 \item
   Añade un nuevo elemento a la compleja\_lista que sea otra lista conteniendo información relevante a un experimento microbiológico (p.ej., fechas, resultados de crecimiento, tipo de medio de cultivo). Accede a un elemento específico dentro de esta lista anidada.
+\item
+  Almacena datos de producción en experimentos de fermentación.
 \end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Crea una lista fermentacion con 4 elementos, cada uno representando un experimento de fermentación.
+\item
+  Cada elemento debe ser una lista con: Cepa, Condición, ProducciónEtanol.
+\item
+  Encuentra la condición con la mayor producción de etanol.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Mantén un registro de resistencias a antibióticos.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Crea una lista resistencias con 3 elementos, cada uno representando una bacteria.
+\item
+  Cada elemento debe ser una lista con: Bacteria, AntibióticosResistentes (vector de nombres de antibióticos).
+\item
+  Encuentra la bacteria con más resistencias.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Mantén un registro de ensayos clínicos en una lista.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Crea una lista ensayos\_clinicos con 3 elementos, cada uno representando un ensayo clínico.
+\item
+  Cada elemento debe ser una lista con: Nombre, Fase, NúmeroPacientes.
+\item
+  Calcula el total de pacientes involucrados en todos los ensayos clínicos.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Almacena datos de producción en experimentos de fermentación.
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Crea una lista fermentacion con 4 elementos, cada uno representando un experimento de fermentación.
+\item
+  Cada elemento debe ser una lista con: Cepa, Condición, ProducciónEtanol.
+\item
+  Encuentra la condición con la mayor producción de etanol.
+\end{itemize}
 
 Recuerda, el uso efectivo de listas en R puede ayudarte a gestionar y manipular una amplia gama de conjuntos de datos complejos, especialmente útil en campos como la Microbiología.
 
@@ -4498,6 +4997,75 @@ También puede proporcionar un valor diferente para y, si es necesario:
 ## [1] "11 es un número primo."
 \end{verbatim}
 
+\subsection{Ejemplo resuelto}\label{ejemplo-resuelto}
+
+\textbf{Calcular Índice de Diversidad de Shannon}
+
+Descripción: Define una función que calcule el índice de diversidad de Shannon dado un vector de abundancias de especies.
+
+\begin{itemize}
+\tightlist
+\item
+  Define una función indice\_shannon que acepte un argumento: abundancias.
+\item
+  La función debe devolver el índice de Shannon calculado a partir del vector de abundancias.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{indice\_shannon }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(abundancias) \{}
+\NormalTok{  p }\OtherTok{\textless{}{-}}\NormalTok{ abundancias }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(abundancias)}
+\NormalTok{  shannon }\OtherTok{\textless{}{-}} \SpecialCharTok{{-}}\FunctionTok{sum}\NormalTok{(p }\SpecialCharTok{*} \FunctionTok{log}\NormalTok{(p), }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+  \FunctionTok{return}\NormalTok{(shannon)}
+\NormalTok{\}}
+
+\CommentTok{\# Prueba de la función}
+\FunctionTok{indice\_shannon}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{40}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.279854
+\end{verbatim}
+
+\textbf{Calcular Matriz de Distancias Genéticas}
+
+Descripción: Define una función que calcule una matriz de distancias genéticas entre varias secuencias.
+
+\begin{itemize}
+\tightlist
+\item
+  Define una función matriz\_distancias que acepte un argumento: secuencias (una lista de secuencias).
+\item
+  La función debe devolver una matriz de distancias (número de diferencias entre pares de secuencias).
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{matriz\_distancias }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(secuencias) \{}
+\NormalTok{  n }\OtherTok{\textless{}{-}} \FunctionTok{length}\NormalTok{(secuencias)}
+\NormalTok{  distancias }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\DecValTok{0}\NormalTok{, n, n)}
+  \ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\NormalTok{(n}\DecValTok{{-}1}\NormalTok{)) \{}
+    \ControlFlowTok{for}\NormalTok{ (j }\ControlFlowTok{in}\NormalTok{ (i}\SpecialCharTok{+}\DecValTok{1}\NormalTok{)}\SpecialCharTok{:}\NormalTok{n) \{}
+\NormalTok{      distancias[i, j] }\OtherTok{\textless{}{-}} \FunctionTok{sum}\NormalTok{(secuencias[[i]] }\SpecialCharTok{!=}\NormalTok{ secuencias[[j]])}
+\NormalTok{      distancias[j, i] }\OtherTok{\textless{}{-}}\NormalTok{ distancias[i, j]}
+\NormalTok{    \}}
+\NormalTok{  \}}
+  \FunctionTok{return}\NormalTok{(distancias)}
+\NormalTok{\}}
+
+\CommentTok{\# Prueba de la función}
+\FunctionTok{matriz\_distancias}\NormalTok{(}\FunctionTok{list}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"T"}\NormalTok{, }\StringTok{"G"}\NormalTok{, }\StringTok{"C"}\NormalTok{), }\FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{, }\StringTok{"T"}\NormalTok{, }\StringTok{"A"}\NormalTok{, }\StringTok{"C"}\NormalTok{), }\FunctionTok{c}\NormalTok{(}\StringTok{"G"}\NormalTok{, }\StringTok{"C"}\NormalTok{, }\StringTok{"G"}\NormalTok{, }\StringTok{"C"}\NormalTok{)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      [,1] [,2] [,3]
+## [1,]    0    1    2
+## [2,]    1    0    3
+## [3,]    2    3    0
+\end{verbatim}
+
 \textbf{Ejercicios}
 
 \begin{enumerate}
@@ -4522,7 +5090,91 @@ También puede proporcionar un valor diferente para y, si es necesario:
   Escribe una función que tome un vector de caracteres como argumento de entrada y devuelva un vector con los mismos elementos en orden inverso.
 \item
   Escribe una función que tome una matriz como argumento de entrada y devuelva la diagonal principal en un vector.
+\item
+  \textbf{Calcular Tasa de Crecimiento Bacteriano}
 \end{enumerate}
+
+Descripción: Define una función que calcule la tasa de crecimiento bacteriano dada la concentración inicial y final de bacterias y el tiempo.
+
+\begin{itemize}
+\tightlist
+\item
+  Define una función tasa\_crecimiento que acepte tres argumentos: concentracion\_inicial, concentracion\_final y tiempo.
+\item
+  La función debe devolver la tasa de crecimiento (logaritmo natural de la razón de concentraciones dividido por el tiempo).
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{11}
+\tightlist
+\item
+  \textbf{Calcular Porcentaje de GC}
+\end{enumerate}
+
+Descripción: Define una función que calcule el porcentaje de GC en una secuencia de ADN.
+
+\begin{itemize}
+\tightlist
+\item
+  Define una función porcentaje\_gc que acepte un argumento: secuencia.
+\item
+  La función debe devolver el porcentaje de bases G y C en la secuencia.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{12}
+\tightlist
+\item
+  \textbf{Calcular Resistencia Promedio}
+\end{enumerate}
+
+Descripción: Define una función que calcule la resistencia promedio de una bacteria a varios antibióticos.
+
+\begin{itemize}
+\tightlist
+\item
+  Define una función resistencia\_promedio que acepte un argumento: resistencias (un vector de valores de resistencia).
+\item
+  La función debe devolver la resistencia promedio.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{13}
+\tightlist
+\item
+  \textbf{Calcular Concentración Normalizada}
+\end{enumerate}
+
+Descripción: Define una función que normalice un vector de concentraciones de metabolitos.
+
+\begin{itemize}
+\tightlist
+\item
+  Define una función normalizar\_concentraciones que acepte un argumento: concentraciones.
+\item
+  La función debe devolver el vector de concentraciones normalizado (dividiendo cada valor por el máximo).
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{14}
+\tightlist
+\item
+  \textbf{Calcular la Media y Desviación Estándar de Niveles de Expresión}
+\end{enumerate}
+
+Descripción: Define una función que calcule la media y desviación estándar de los niveles de expresión génica.
+
+\begin{itemize}
+\tightlist
+\item
+  Define una función estadisticas\_expresion que acepte un argumento: niveles.
+\item
+  La función debe devolver una lista con la media y la desviación estándar de los niveles de expresión.
+\end{itemize}
 
 \chapter{Gráficos}\label{plots}
 
@@ -4596,7 +5248,7 @@ Vamos a comenzar con un gráfico de dispersión simple utilizando el conjunto de
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-174-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-176-1.pdf}
 
 \subsection{Personalización de gráficos}\label{personalizaciuxf3n-de-gruxe1ficos}
 
@@ -4619,7 +5271,7 @@ Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de
 ## `geom_smooth()` using formula = 'y ~ x'
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-175-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-177-1.pdf}
 \#\#\#\# Ejercicios sugeridos
 
 \begin{enumerate}
@@ -4647,7 +5299,7 @@ Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-176-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-178-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -4661,7 +5313,7 @@ Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-177-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-179-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -4673,7 +5325,7 @@ Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-178-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-180-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -4686,7 +5338,7 @@ Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-179-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-181-1.pdf}
 
 \subsection{Ejercicios resueltos}\label{ejercicios-resueltos}
 
@@ -4711,11 +5363,11 @@ Crea un gráfico de dispersión para visualizar la relación entre la longitud d
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing missing values or values outside the scale
-## range (`geom_point()`).
+## Warning: Removed 2 rows containing missing values or values
+## outside the scale range (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-181-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-183-1.pdf}
 
 \subsubsection{Ejercicio 2: Diferenciación por especie}\label{ejercicio-2-diferenciaciuxf3n-por-especie}
 
@@ -4729,11 +5381,11 @@ Modifica el gráfico de dispersión anterior para diferenciar los puntos por esp
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing missing values or values outside the scale
-## range (`geom_point()`).
+## Warning: Removed 2 rows containing missing values or values
+## outside the scale range (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-182-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-184-1.pdf}
 
 \subsubsection{Ejercicio 3: Histograma de masa corporal}\label{ejercicio-3-histograma-de-masa-corporal}
 
@@ -4747,11 +5399,11 @@ Crea un histograma para explorar la distribución de la masa corporal de los pin
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing non-finite outside the scale range
-## (`stat_bin()`).
+## Warning: Removed 2 rows containing non-finite outside the
+## scale range (`stat_bin()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-183-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-185-1.pdf}
 
 \subsubsection{Ejercicio 4: Barras de error por especie}\label{ejercicio-4-barras-de-error-por-especie}
 
@@ -4766,13 +5418,13 @@ Genera un gráfico de barras que muestre la masa corporal media de los pingüino
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing non-finite outside the scale range
-## (`stat_summary()`).
-## Removed 2 rows containing non-finite outside the scale range
-## (`stat_summary()`).
+## Warning: Removed 2 rows containing non-finite outside the
+## scale range (`stat_summary()`).
+## Removed 2 rows containing non-finite outside the
+## scale range (`stat_summary()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-184-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-186-1.pdf}
 
 \subsubsection{Ejercicio 5: Boxplot de profundidad del culmen}\label{ejercicio-5-boxplot-de-profundidad-del-culmen}
 
@@ -4786,11 +5438,11 @@ Crea un boxplot para comparar la profundidad del culmen entre las diferentes esp
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing non-finite outside the scale range
-## (`stat_boxplot()`).
+## Warning: Removed 2 rows containing non-finite outside the
+## scale range (`stat_boxplot()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-185-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-187-1.pdf}
 
 \subsubsection{Ejercicio 6: Facetado por islas}\label{ejercicio-6-facetado-por-islas}
 
@@ -4805,11 +5457,11 @@ Repite el gráfico de dispersión de longitud vs.~profundidad del culmen, pero e
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing missing values or values outside the scale
-## range (`geom_point()`).
+## Warning: Removed 2 rows containing missing values or values
+## outside the scale range (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-186-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-188-1.pdf}
 
 \subsubsection{Ejercicio 7: Densidad de masa corporal}\label{ejercicio-7-densidad-de-masa-corporal}
 
@@ -4823,11 +5475,11 @@ Muestra la densidad de la distribución de la masa corporal de los pingüinos ut
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing non-finite outside the scale range
-## (`stat_density()`).
+## Warning: Removed 2 rows containing non-finite outside the
+## scale range (`stat_density()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-187-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-189-1.pdf}
 
 \subsubsection{Ejercicio 8: Gráfico de violín de la longitud del culmen}\label{ejercicio-8-gruxe1fico-de-violuxedn-de-la-longitud-del-culmen}
 
@@ -4841,11 +5493,11 @@ Genera un gráfico de violín para visualizar la distribución de la longitud de
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing non-finite outside the scale range
-## (`stat_ydensity()`).
+## Warning: Removed 2 rows containing non-finite outside the
+## scale range (`stat_ydensity()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-188-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-190-1.pdf}
 
 \subsubsection{Ejercicio 9: Puntos superpuestos en boxplot}\label{ejercicio-9-puntos-superpuestos-en-boxplot}
 
@@ -4860,16 +5512,16 @@ Crea un boxplot de la profundidad del culmen por especie y superpón los puntos 
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing non-finite outside the scale range
-## (`stat_boxplot()`).
+## Warning: Removed 2 rows containing non-finite outside the
+## scale range (`stat_boxplot()`).
 \end{verbatim}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing missing values or values outside the scale
-## range (`geom_point()`).
+## Warning: Removed 2 rows containing missing values or values
+## outside the scale range (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-189-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-191-1.pdf}
 
 \subsubsection{Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo}\label{ejercicio-10-gruxe1fico-de-luxedneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo}
 
@@ -4884,11 +5536,11 @@ Asumiendo que los datos estén ordenados temporalmente, muestra cómo cambia la 
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing non-finite outside the scale range
-## (`stat_summary()`).
+## Warning: Removed 2 rows containing non-finite outside the
+## scale range (`stat_summary()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-190-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-192-1.pdf}
 
 \subsubsection{Ejercicio 11: Gráfico de dispersión con tamaño de punto}\label{ejercicio-11-gruxe1fico-de-dispersiuxf3n-con-tamauxf1o-de-punto}
 
@@ -4902,11 +5554,11 @@ Modifica el gráfico de dispersión de longitud vs.~profundidad del culmen para 
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing missing values or values outside the scale
-## range (`geom_point()`).
+## Warning: Removed 2 rows containing missing values or values
+## outside the scale range (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-191-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-193-1.pdf}
 
 \subsubsection{Ejercicio 12: Barras apiladas de especies por isla}\label{ejercicio-12-barras-apiladas-de-especies-por-isla}
 
@@ -4919,7 +5571,7 @@ Crea un gráfico de barras apiladas que muestre la cantidad de pingüinos de cad
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-192-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-194-1.pdf}
 
 \subsubsection{Ejercicio 13: Gráfico de correlación con texto}\label{ejercicio-13-gruxe1fico-de-correlaciuxf3n-con-texto}
 
@@ -4935,16 +5587,16 @@ Genera un gráfico de dispersión entre la longitud y la profundidad del culmen 
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing non-finite outside the scale range
-## (`stat_cor()`).
+## Warning: Removed 2 rows containing non-finite outside the
+## scale range (`stat_cor()`).
 \end{verbatim}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing missing values or values outside the scale
-## range (`geom_point()`).
+## Warning: Removed 2 rows containing missing values or values
+## outside the scale range (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-193-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-195-1.pdf}
 
 \subsubsection{Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen}\label{ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen}
 
@@ -4958,11 +5610,11 @@ Crea un mapa de calor que muestre la distribución conjunta de la longitud y la 
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing non-finite outside the scale range
-## (`stat_bin2d()`).
+## Warning: Removed 2 rows containing non-finite outside the
+## scale range (`stat_bin2d()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-194-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-196-1.pdf}
 
 \subsubsection{Ejercicio 15: Gráfico de interacción entre tres variables}\label{ejercicio-15-gruxe1fico-de-interacciuxf3n-entre-tres-variables}
 
@@ -4977,11 +5629,11 @@ Explora la relación entre la longitud del culmen, la profundidad del culmen y l
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 2 rows containing missing values or values outside the scale
-## range (`geom_point()`).
+## Warning: Removed 2 rows containing missing values or values
+## outside the scale range (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-195-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-197-1.pdf}
 
 \subsubsection{Ejercicios propuestos}\label{ejercicios-propuestos}
 
