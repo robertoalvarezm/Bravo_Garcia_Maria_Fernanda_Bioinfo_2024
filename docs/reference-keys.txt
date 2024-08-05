@@ -47,6 +47,7 @@ la-función-de-selección-which
 cómo-podemos-ver-si-dos-vectores-son-iguales
 factor
 ejercicio-temperaturas-de-incubación
+ejercicios-avanzados
 matrices
 creación-de-matrices
 dimensiones-de-un-matriz
@@ -64,7 +65,7 @@ seleccionar-todoa-una-renglóncolumna
 selecccionar-elementos-de-una-matriz
 nombres-a-renglones-y-columnas
 ejercicios
-ejercicios-avanzados
+ejercicios-avanzados-1
 data-frames
 crear-un-dataframe-en-r
 acceder-a-los-datos-de-un-dataframe

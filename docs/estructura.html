@@ -234,6 +234,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="3.15.1" data-path="estructura.html"><a href="estructura.html#factor"><i class="fa fa-check"></i><b>3.15.1</b> Factor</a></li>
 <li class="chapter" data-level="3.15.2" data-path="estructura.html"><a href="estructura.html#ejercicio-temperaturas-de-incubación"><i class="fa fa-check"></i><b>3.15.2</b> Ejercicio: Temperaturas de Incubación</a></li>
+<li class="chapter" data-level="3.15.3" data-path="estructura.html"><a href="estructura.html#ejercicios-avanzados"><i class="fa fa-check"></i><b>3.15.3</b> Ejercicios avanzados</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>4</b> Matrices</a>
@@ -259,7 +260,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.10" data-path="matrices.html"><a href="matrices.html#nombres-a-renglones-y-columnas"><i class="fa fa-check"></i><b>4.10</b> Nombres a renglones y columnas</a>
 <ul>
 <li class="chapter" data-level="4.10.1" data-path="matrices.html"><a href="matrices.html#ejercicios"><i class="fa fa-check"></i><b>4.10.1</b> Ejercicios</a></li>
-<li class="chapter" data-level="4.10.2" data-path="matrices.html"><a href="matrices.html#ejercicios-avanzados"><i class="fa fa-check"></i><b>4.10.2</b> Ejercicios avanzados</a></li>
+<li class="chapter" data-level="4.10.2" data-path="matrices.html"><a href="matrices.html#ejercicios-avanzados-1"><i class="fa fa-check"></i><b>4.10.2</b> Ejercicios avanzados</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>5</b> Data Frames</a>
@@ -664,17 +665,17 @@ El resultado obtenido siempre será un valor booleano: <strong>TRUE</strong> o <
 <span id="cb176-2"><a href="estructura.html#cb176-2" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
 <span id="cb176-3"><a href="estructura.html#cb176-3" tabindex="-1"></a></span>
 <span id="cb176-4"><a href="estructura.html#cb176-4" tabindex="-1"></a><span class="fu">min</span>(x) <span class="co">#Se obtiene el valor mínimo</span></span></code></pre></div>
-<pre><code>## [1] -3.836792</code></pre>
+<pre><code>## [1] -3.614847</code></pre>
 <div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="estructura.html#cb178-1" tabindex="-1"></a><span class="fu">max</span>(x) <span class="co">#Se obtiene el valor máximo</span></span></code></pre></div>
-<pre><code>## [1] 2.623741</code></pre>
+<pre><code>## [1] 2.842467</code></pre>
 <div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="estructura.html#cb180-1" tabindex="-1"></a><span class="fu">range</span>(x) <span class="co">#Da a conocer el rango en el cual se encuentran los valores, es decir el valor min y max. </span></span></code></pre></div>
-<pre><code>## [1] -3.836792  2.623741</code></pre>
+<pre><code>## [1] -3.614847  2.842467</code></pre>
 <div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="estructura.html#cb182-1" tabindex="-1"></a><span class="fu">sum</span>(x) <span class="co">#Realiza la suma de todos los valores contenidos en el vector </span></span></code></pre></div>
-<pre><code>## [1] -15.24277</code></pre>
+<pre><code>## [1] -48.13963</code></pre>
 <div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="estructura.html#cb184-1" tabindex="-1"></a><span class="fu">mean</span>(x) <span class="co">#Calcula el promedio del conjunto de valores </span></span></code></pre></div>
-<pre><code>## [1] -0.01524277</code></pre>
+<pre><code>## [1] -0.04813963</code></pre>
 <div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="estructura.html#cb186-1" tabindex="-1"></a><span class="fu">median</span>(x) <span class="co">#Se obtiene la mediana </span></span></code></pre></div>
-<pre><code>## [1] 0.01476829</code></pre>
+<pre><code>## [1] -0.08321492</code></pre>
 <p><strong>Ejercicio</strong> ¿Qué función tienen los siguientes comandos <code>sd()</code> y <code>quantile()</code>?</p>
 <p>Para <code>unique()</code> y <code>sort()</code> conviene tener elementos discretos más que continuos.</p>
 <div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="estructura.html#cb188-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>),<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>,<span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),<span class="dv">5</span>))</span>
@@ -683,7 +684,7 @@ El resultado obtenido siempre será un valor booleano: <strong>TRUE</strong> o <
 ## [11] 11 12 13 14 15</code></pre>
 <div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="estructura.html#cb190-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">10</span>,<span class="dv">10</span>)</span>
 <span id="cb190-2"><a href="estructura.html#cb190-2" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1]  1  2  5 10  6  3  7  9  4  8</code></pre>
+<pre><code>##  [1] 10  6  3  2  4  7  1  5  9  8</code></pre>
 <div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="estructura.html#cb192-1" tabindex="-1"></a><span class="fu">sort</span>(x)</span></code></pre></div>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 </div>
@@ -1025,6 +1026,99 @@ No confundir con el operador <code>=</code> que se puede usar como operador de a
 16 .Crea un vector llamado “v3” con números aleatorios entre 0 y 1, de longitud 10.</li>
 <li>Normaliza el vector “v3”.</li>
 </ol>
+</div>
+<div id="ejercicios-avanzados" class="section level3 hasAnchor" number="3.15.3">
+<h3><span class="header-section-number">3.15.3</span> Ejercicios avanzados<a href="estructura.html#ejercicios-avanzados" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><strong>Filtrado de Genes por Expresión</strong>
+Descripción: Supón que tienes un vector con los niveles de expresión de 100 genes.</li>
+</ol>
+<ul>
+<li>Crea un vector expresion_genes con 100 valores aleatorios entre 0 y 1000.</li>
+<li>Filtra los genes que tienen niveles de expresión por encima de 500.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Análisis de Resistencias Antibióticas</strong>
+Descripción: Supón que tienes un vector con datos de resistencia de 50 cepas bacterianas a un antibiótico específico.</li>
+</ol>
+<ul>
+<li>Crea un vector resistencia con 50 valores binarios (0 para sensible, 1 para resistente).</li>
+<li>Calcula el número total de cepas resistentes.</li>
+<li>Encuentra el índice de la primera cepa resistente.</li>
+<li>Calcula el porcentaje de genes filtrados.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Distancias Genéticas</strong>
+Descripción: Supón que tienes un vector con distancias genéticas entre 20 pares de especies.</li>
+</ol>
+<ul>
+<li>Crea un vector distancias_geneticas con 20 valores aleatorios entre 0 y 100.</li>
+<li>Calcula la media y la desviación estándar de las distancias genéticas.</li>
+<li>Encuentra la distancia genética mínima y máxima.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Abundancia de Microorganismos</strong>
+Descripción: Supón que tienes un vector con la abundancia de 30 microorganismos en una muestra ambiental.</li>
+</ol>
+<ul>
+<li>Crea un vector abundancia_microorganismos con 30 valores aleatorios entre 0 y 500.</li>
+<li>Ordena el vector en orden descendente.</li>
+<li>Encuentra los 5 microorganismos más abundantes.</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Análisis de pH en Muestras de Agua</strong>
+Descripción: Supón que tienes un vector con valores de pH de 25 muestras de agua.</li>
+</ol>
+<ul>
+<li>Crea un vector ph_muestras con 25 valores aleatorios entre 6 y 9.</li>
+<li>Calcula la mediana del pH.</li>
+<li>Encuentra las muestras con pH fuera del rango ideal (6.5 a 8.5).</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>Tiempos de Crecimiento Bacteriano</strong>
+Descripción: Supón que tienes un vector con tiempos de crecimiento de 15 cepas bacterianas en horas.</li>
+</ol>
+<ul>
+<li>Crea un vector tiempos_crecimiento con 15 valores aleatorios entre 0 y 24.</li>
+<li>Calcula el tiempo de crecimiento total.</li>
+<li>Encuentra la mediana del tiempo de crecimiento.</li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li><strong>Análisis de Porcentajes de GC</strong>
+Descripción: Supón que tienes un vector con porcentajes de GC de 20 secuencias de ADN.</li>
+</ol>
+<ul>
+<li>Crea un vector porcentajes_gc con 20 valores aleatorios entre 30 y 70.</li>
+<li>Calcula el porcentaje de GC promedio.</li>
+<li>Encuentra el índice de la secuencia con el porcentaje de GC más cercano a 50%.</li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li><strong>Análisis de Concentraciones de Metabolitos</strong>
+Descripción: Supón que tienes un vector con concentraciones de 12 metabolitos en mM.</li>
+</ol>
+<ul>
+<li>Crea un vector concentraciones_metabolitos con 12 valores aleatorios entre 0 y 10.</li>
+<li>Normaliza las concentraciones dividiendo por el valor máximo.</li>
+<li>Encuentra las concentraciones normalizadas mayores a 0.5.</li>
+</ul>
+<ol start="9" style="list-style-type: decimal">
+<li><strong>Análisis de Tasas de Transcripción</strong>
+Descripción: Supón que tienes un vector con tasas de transcripción de 25 genes en RPKM.</li>
+</ol>
+<ul>
+<li>Crea un vector tasas_transcripcion con 25 valores aleatorios entre 0 y 50.</li>
+<li>Encuentra la tasa de transcripción media.</li>
+<li>Encuentra los genes con tasas de transcripción por encima de la media.</li>
+</ul>
+<ol start="10" style="list-style-type: decimal">
+<li><strong>Análisis de Diversidad de Especies</strong>
+Descripción: Supón que tienes un vector con la abundancia de 20 especies en una muestra ambiental.</li>
+</ol>
+<ul>
+<li>Crea un vector abundancia_especies con 20 valores aleatorios entre 1 y 100.</li>
+<li>Calcula el índice de diversidad de Shannon.</li>
+<li>Encuentra las especies con abundancia mayor al promedio.</li>
+</ul>
 
 </div>
 </div>
