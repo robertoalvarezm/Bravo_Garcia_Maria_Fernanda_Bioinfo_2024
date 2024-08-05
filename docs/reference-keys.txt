@@ -64,6 +64,7 @@ seleccionar-todoa-una-renglóncolumna
 selecccionar-elementos-de-una-matriz
 nombres-a-renglones-y-columnas
 ejercicios
+ejercicios-avanzados
 data-frames
 crear-un-dataframe-en-r
 acceder-a-los-datos-de-un-dataframe
@@ -75,6 +76,7 @@ importar-un-archivo-excel-en-r
 ejercicios-1
 Listas
 acceso-por-nombre
+ejercicio-resuelto
 ejercicios-2
 ejercicios-propuestos-con-listas
 Estructuras_de_seleccion
