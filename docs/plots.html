@@ -414,8 +414,7 @@ div.csl-indent {
 <span id="cb433-6"><a href="plots.html#cb433-6" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Millas por Galón (mpg)&quot;</span>,</span>
 <span id="cb433-7"><a href="plots.html#cb433-7" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">&quot;Tipo de Cambio&quot;</span>) <span class="sc">+</span></span>
 <span id="cb433-8"><a href="plots.html#cb433-8" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<pre><code>## `geom_smooth()` using formula =
-## &#39;y ~ x&#39;</code></pre>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-175-1.png" width="672" />
 #### Ejercicios sugeridos</p>
 <ol style="list-style-type: decimal">
@@ -465,9 +464,9 @@ div.csl-indent {
 <p>Crea un gráfico de dispersión para visualizar la relación entre la longitud del culmen y la profundidad del culmen de los pingüinos.</p>
 <div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb440-1"><a href="plots.html#cb440-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
 <span id="cb440-2"><a href="plots.html#cb440-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing missing
-## values or values outside the
-## scale range (`geom_point()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values or
+## values outside the scale range
+## (`geom_point()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-181-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-2-diferenciación-por-especie" class="section level4 hasAnchor" number="9.1.6.2">
@@ -475,9 +474,9 @@ div.csl-indent {
 <p>Modifica el gráfico de dispersión anterior para diferenciar los puntos por especie de pingüino.</p>
 <div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb442-1"><a href="plots.html#cb442-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">color =</span> species)) <span class="sc">+</span></span>
 <span id="cb442-2"><a href="plots.html#cb442-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing missing
-## values or values outside the
-## scale range (`geom_point()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values or
+## values outside the scale range
+## (`geom_point()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-182-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-3-histograma-de-masa-corporal" class="section level4 hasAnchor" number="9.1.6.3">
@@ -485,9 +484,8 @@ div.csl-indent {
 <p>Crea un histograma para explorar la distribución de la masa corporal de los pingüinos.</p>
 <div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="plots.html#cb444-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)) <span class="sc">+</span></span>
 <span id="cb444-2"><a href="plots.html#cb444-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">30</span>)</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing
-## non-finite outside the scale
-## range (`stat_bin()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside
+## the scale range (`stat_bin()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-183-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-4-barras-de-error-por-especie" class="section level4 hasAnchor" number="9.1.6.4">
@@ -496,12 +494,10 @@ div.csl-indent {
 <div class="sourceCode" id="cb446"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb446-1"><a href="plots.html#cb446-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
 <span id="cb446-2"><a href="plots.html#cb446-2" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>) <span class="sc">+</span></span>
 <span id="cb446-3"><a href="plots.html#cb446-3" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun.data =</span> mean_se, <span class="at">width =</span> <span class="fl">0.2</span>)</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing
-## non-finite outside the scale
-## range (`stat_summary()`).
-## Removed 2 rows containing
-## non-finite outside the scale
-## range (`stat_summary()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside
+## the scale range (`stat_summary()`).
+## Removed 2 rows containing non-finite outside
+## the scale range (`stat_summary()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-184-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-5-boxplot-de-profundidad-del-culmen" class="section level4 hasAnchor" number="9.1.6.5">
@@ -509,9 +505,8 @@ div.csl-indent {
 <p>Crea un boxplot para comparar la profundidad del culmen entre las diferentes especies de pingüinos.</p>
 <div class="sourceCode" id="cb448"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb448-1"><a href="plots.html#cb448-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
 <span id="cb448-2"><a href="plots.html#cb448-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing
-## non-finite outside the scale
-## range (`stat_boxplot()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside
+## the scale range (`stat_boxplot()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-185-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-6-facetado-por-islas" class="section level4 hasAnchor" number="9.1.6.6">
@@ -520,9 +515,9 @@ div.csl-indent {
 <div class="sourceCode" id="cb450"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb450-1"><a href="plots.html#cb450-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
 <span id="cb450-2"><a href="plots.html#cb450-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb450-3"><a href="plots.html#cb450-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>island)</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing missing
-## values or values outside the
-## scale range (`geom_point()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values or
+## values outside the scale range
+## (`geom_point()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-186-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-7-densidad-de-masa-corporal" class="section level4 hasAnchor" number="9.1.6.7">
@@ -530,9 +525,8 @@ div.csl-indent {
 <p>Muestra la densidad de la distribución de la masa corporal de los pingüinos utilizando un gráfico de densidad.</p>
 <div class="sourceCode" id="cb452"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb452-1"><a href="plots.html#cb452-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">fill =</span> species)) <span class="sc">+</span></span>
 <span id="cb452-2"><a href="plots.html#cb452-2" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>)</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing
-## non-finite outside the scale
-## range (`stat_density()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside
+## the scale range (`stat_density()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-187-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-8-gráfico-de-violín-de-la-longitud-del-culmen" class="section level4 hasAnchor" number="9.1.6.8">
@@ -540,9 +534,8 @@ div.csl-indent {
 <p>Genera un gráfico de violín para visualizar la distribución de la longitud del culmen por especie.</p>
 <div class="sourceCode" id="cb454"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb454-1"><a href="plots.html#cb454-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
 <span id="cb454-2"><a href="plots.html#cb454-2" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing
-## non-finite outside the scale
-## range (`stat_ydensity()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside
+## the scale range (`stat_ydensity()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-188-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-9-puntos-superpuestos-en-boxplot" class="section level4 hasAnchor" number="9.1.6.9">
@@ -551,12 +544,11 @@ div.csl-indent {
 <div class="sourceCode" id="cb456"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb456-1"><a href="plots.html#cb456-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
 <span id="cb456-2"><a href="plots.html#cb456-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
 <span id="cb456-3"><a href="plots.html#cb456-3" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> <span class="fl">0.2</span>)</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing
-## non-finite outside the scale
-## range (`stat_boxplot()`).</code></pre>
-<pre><code>## Warning: Removed 2 rows containing missing
-## values or values outside the
-## scale range (`geom_point()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside
+## the scale range (`stat_boxplot()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values or
+## values outside the scale range
+## (`geom_point()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-10-gráfico-de-líneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo" class="section level4 hasAnchor" number="9.1.6.10">
@@ -565,9 +557,8 @@ div.csl-indent {
 <div class="sourceCode" id="cb459"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb459-1"><a href="plots.html#cb459-1" tabindex="-1"></a><span class="co"># Asumiendo que &#39;year&#39; representa el tiempo en tus datos</span></span>
 <span id="cb459-2"><a href="plots.html#cb459-2" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> body_mass_g, <span class="at">group =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
 <span id="cb459-3"><a href="plots.html#cb459-3" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>)</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing
-## non-finite outside the scale
-## range (`stat_summary()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside
+## the scale range (`stat_summary()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-190-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-11-gráfico-de-dispersión-con-tamaño-de-punto" class="section level4 hasAnchor" number="9.1.6.11">
@@ -575,9 +566,9 @@ div.csl-indent {
 <p>Modifica el gráfico de dispersión de longitud vs. profundidad del culmen para que el tamaño de los puntos refleje la masa corporal de los pingüinos.</p>
 <div class="sourceCode" id="cb461"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb461-1"><a href="plots.html#cb461-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">size =</span> body_mass_g)) <span class="sc">+</span></span>
 <span id="cb461-2"><a href="plots.html#cb461-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing missing
-## values or values outside the
-## scale range (`geom_point()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values or
+## values outside the scale range
+## (`geom_point()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-191-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-12-barras-apiladas-de-especies-por-isla" class="section level4 hasAnchor" number="9.1.6.12">
@@ -594,12 +585,11 @@ div.csl-indent {
 <span id="cb464-2"><a href="plots.html#cb464-2" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
 <span id="cb464-3"><a href="plots.html#cb464-3" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb464-4"><a href="plots.html#cb464-4" tabindex="-1"></a>  <span class="fu">stat_cor</span>(<span class="at">method =</span> <span class="st">&quot;pearson&quot;</span>, <span class="at">label.x =</span> <span class="dv">3</span>, <span class="at">label.y =</span> <span class="dv">50</span>)</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing
-## non-finite outside the scale
-## range (`stat_cor()`).</code></pre>
-<pre><code>## Warning: Removed 2 rows containing missing
-## values or values outside the
-## scale range (`geom_point()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside
+## the scale range (`stat_cor()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values or
+## values outside the scale range
+## (`geom_point()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-193-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen" class="section level4 hasAnchor" number="9.1.6.14">
@@ -607,9 +597,8 @@ div.csl-indent {
 <p>Crea un mapa de calor que muestre la distribución conjunta de la longitud y la profundidad del culmen de los pingüinos.</p>
 <div class="sourceCode" id="cb467"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb467-1"><a href="plots.html#cb467-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm)) <span class="sc">+</span></span>
 <span id="cb467-2"><a href="plots.html#cb467-2" tabindex="-1"></a>  <span class="fu">geom_bin2d</span>()</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing
-## non-finite outside the scale
-## range (`stat_bin2d()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside
+## the scale range (`stat_bin2d()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-194-1.png" width="672" /></p>
 </div>
 <div id="ejercicio-15-gráfico-de-interacción-entre-tres-variables" class="section level4 hasAnchor" number="9.1.6.15">
@@ -618,9 +607,9 @@ div.csl-indent {
 <div class="sourceCode" id="cb469"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb469-1"><a href="plots.html#cb469-1" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> bill_length_mm, <span class="at">y =</span> bill_depth_mm, <span class="at">color =</span> body_mass_g)) <span class="sc">+</span></span>
 <span id="cb469-2"><a href="plots.html#cb469-2" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb469-3"><a href="plots.html#cb469-3" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>species)</span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing missing
-## values or values outside the
-## scale range (`geom_point()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing missing values or
+## values outside the scale range
+## (`geom_point()`).</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-195-1.png" width="672" /></p>
 </div>
 <div id="ejercicios-propuestos" class="section level4 hasAnchor" number="9.1.6.16">

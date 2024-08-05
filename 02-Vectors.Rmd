@@ -7,10 +7,11 @@ output:
 # Vectores {#estructura} 
 
 R permite manejar datos dentro de estructuras para poder trabajarlos, estas estructuras pueden ser: 
-- Vector: Es de una sola dimensión y solo permite almacenar datos del mismo tipo. 
-- Matriz: Es un arreglo en dos dimensiones y permite ingresar datos del mismo tipo. 
-- Data Frame: Similar a la matriz por ser también de dos dimensiones, solo que este arreglo permite distintas clases de datos. 
-- Lista: Es de una sola dimensión como el vector, la diferencia que es que una lista permite incorporar diferentes tipos de datos. 
+
+-   **Vector**: Es de una sola dimensión y solo permite almacenar datos del mismo tipo. 
+-   **Matriz**: Es un arreglo en dos dimensiones y permite ingresar datos del mismo tipo. 
+-   **Data Frame**: Similar a la matriz por ser también de dos dimensiones, solo que este arreglo permite distintas clases de datos. 
+-   **Lista**: Es de una sola dimensión como el vector, la diferencia que es que una lista permite incorporar diferentes tipos de datos. 
 
 ## Contenido 
 
@@ -794,12 +795,14 @@ cat("Muestras con temperatura óptima:", muestras_optimas, "\n")
 ### Ejercicios avanzados
 
 1. **Filtrado de Genes por Expresión**
+
 Descripción: Supón que tienes un vector con los niveles de expresión de 100 genes.
 
 - Crea un vector expresion_genes con 100 valores aleatorios entre 0 y 1000.
 - Filtra los genes que tienen niveles de expresión por encima de 500.
 
 2. **Análisis de Resistencias Antibióticas**
+
 Descripción: Supón que tienes un vector con datos de resistencia de 50 cepas bacterianas a un antibiótico específico.
 
 - Crea un vector resistencia con 50 valores binarios (0 para sensible, 1 para resistente).
@@ -808,6 +811,7 @@ Descripción: Supón que tienes un vector con datos de resistencia de 50 cepas b
 - Calcula el porcentaje de genes filtrados.
 
 3. **Distancias Genéticas**
+
 Descripción: Supón que tienes un vector con distancias genéticas entre 20 pares de especies.
 
 - Crea un vector distancias_geneticas con 20 valores aleatorios entre 0 y 100.
@@ -815,6 +819,7 @@ Descripción: Supón que tienes un vector con distancias genéticas entre 20 par
 - Encuentra la distancia genética mínima y máxima.
 
 4. **Abundancia de Microorganismos**
+
 Descripción: Supón que tienes un vector con la abundancia de 30 microorganismos en una muestra ambiental.
 
 - Crea un vector abundancia_microorganismos con 30 valores aleatorios entre 0 y 500.
@@ -822,6 +827,7 @@ Descripción: Supón que tienes un vector con la abundancia de 30 microorganismo
 - Encuentra los 5 microorganismos más abundantes.
 
 5. **Análisis de pH en Muestras de Agua**
+
 Descripción: Supón que tienes un vector con valores de pH de 25 muestras de agua.
 
 - Crea un vector ph_muestras con 25 valores aleatorios entre 6 y 9.
@@ -829,6 +835,7 @@ Descripción: Supón que tienes un vector con valores de pH de 25 muestras de ag
 - Encuentra las muestras con pH fuera del rango ideal (6.5 a 8.5).
 
 6. **Tiempos de Crecimiento Bacteriano**
+
 Descripción: Supón que tienes un vector con tiempos de crecimiento de 15 cepas bacterianas en horas.
 
 - Crea un vector tiempos_crecimiento con 15 valores aleatorios entre 0 y 24.
@@ -836,6 +843,7 @@ Descripción: Supón que tienes un vector con tiempos de crecimiento de 15 cepas
 - Encuentra la mediana del tiempo de crecimiento.
 
 7. **Análisis de Porcentajes de GC**
+
 Descripción: Supón que tienes un vector con porcentajes de GC de 20 secuencias de ADN.
 
 - Crea un vector porcentajes_gc con 20 valores aleatorios entre 30 y 70.
@@ -843,6 +851,7 @@ Descripción: Supón que tienes un vector con porcentajes de GC de 20 secuencias
 - Encuentra el índice de la secuencia con el porcentaje de GC más cercano a 50%.
 
 8. **Análisis de Concentraciones de Metabolitos**
+
 Descripción: Supón que tienes un vector con concentraciones de 12 metabolitos en mM.
 
 - Crea un vector concentraciones_metabolitos con 12 valores aleatorios entre 0 y 10.
@@ -850,6 +859,7 @@ Descripción: Supón que tienes un vector con concentraciones de 12 metabolitos 
 - Encuentra las concentraciones normalizadas mayores a 0.5.
 
 9. **Análisis de Tasas de Transcripción**
+
 Descripción: Supón que tienes un vector con tasas de transcripción de 25 genes en RPKM.
 
 - Crea un vector tasas_transcripcion con 25 valores aleatorios entre 0 y 50.
@@ -857,8 +867,10 @@ Descripción: Supón que tienes un vector con tasas de transcripción de 25 gene
 - Encuentra los genes con tasas de transcripción por encima de la media.
 
 10. **Análisis de Diversidad de Especies**
+
 Descripción: Supón que tienes un vector con la abundancia de 20 especies en una muestra ambiental.
 
 - Crea un vector abundancia_especies con 20 valores aleatorios entre 1 y 100.
+- Asigan nombres de especies reales de bacterias.
 - Calcula el índice de diversidad de Shannon.
 - Encuentra las especies con abundancia mayor al promedio.
