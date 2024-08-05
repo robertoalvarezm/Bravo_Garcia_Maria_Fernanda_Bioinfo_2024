@@ -653,17 +653,17 @@ El resultado obtenido siempre será un valor booleano: <strong>TRUE</strong> o <
 <span id="cb176-2"><a href="estructura.html#cb176-2" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">1000</span>)</span>
 <span id="cb176-3"><a href="estructura.html#cb176-3" tabindex="-1"></a></span>
 <span id="cb176-4"><a href="estructura.html#cb176-4" tabindex="-1"></a><span class="fu">min</span>(x) <span class="co">#Se obtiene el valor mínimo</span></span></code></pre></div>
-<pre><code>## [1] -3.21265</code></pre>
+<pre><code>## [1] -3.130727</code></pre>
 <div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="estructura.html#cb178-1" tabindex="-1"></a><span class="fu">max</span>(x) <span class="co">#Se obtiene el valor máximo</span></span></code></pre></div>
-<pre><code>## [1] 3.400829</code></pre>
+<pre><code>## [1] 3.480889</code></pre>
 <div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="estructura.html#cb180-1" tabindex="-1"></a><span class="fu">range</span>(x) <span class="co">#Da a conocer el rango en el cual se encuentran los valores, es decir el valor min y max. </span></span></code></pre></div>
-<pre><code>## [1] -3.212650  3.400829</code></pre>
+<pre><code>## [1] -3.130727  3.480889</code></pre>
 <div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="estructura.html#cb182-1" tabindex="-1"></a><span class="fu">sum</span>(x) <span class="co">#Realiza la suma de todos los valores contenidos en el vector </span></span></code></pre></div>
-<pre><code>## [1] 19.52279</code></pre>
+<pre><code>## [1] -35.96465</code></pre>
 <div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="estructura.html#cb184-1" tabindex="-1"></a><span class="fu">mean</span>(x) <span class="co">#Calcula el promedio del conjunto de valores </span></span></code></pre></div>
-<pre><code>## [1] 0.01952279</code></pre>
+<pre><code>## [1] -0.03596465</code></pre>
 <div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="estructura.html#cb186-1" tabindex="-1"></a><span class="fu">median</span>(x) <span class="co">#Se obtiene la mediana </span></span></code></pre></div>
-<pre><code>## [1] 0.01856489</code></pre>
+<pre><code>## [1] -0.01819193</code></pre>
 <p><strong>Ejercicio</strong> ¿Qué función tienen los siguientes comandos <code>sd()</code> y <code>quantile()</code>?</p>
 <p>Para <code>unique()</code> y <code>sort()</code> conviene tener elementos discretos más que continuos.</p>
 <div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="estructura.html#cb188-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>),<span class="dv">1</span><span class="sc">:</span><span class="dv">15</span>,<span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>),<span class="dv">5</span>))</span>
@@ -672,7 +672,7 @@ El resultado obtenido siempre será un valor booleano: <strong>TRUE</strong> o <
 ## [14] 14 15</code></pre>
 <div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="estructura.html#cb190-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">10</span>,<span class="dv">10</span>)</span>
 <span id="cb190-2"><a href="estructura.html#cb190-2" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1]  1  7  5  3 10  9  4  8  2  6</code></pre>
+<pre><code>##  [1]  5  6 10  7  8  2  3  9  1  4</code></pre>
 <div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="estructura.html#cb192-1" tabindex="-1"></a><span class="fu">sort</span>(x)</span></code></pre></div>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 </div>
@@ -1004,6 +1004,7 @@ No confundir con el operador <code>=</code> que se puede usar como operador de a
 <p>Descripción: Supón que tienes un vector con los niveles de expresión de 100 genes.</p>
 <ul>
 <li>Crea un vector expresion_genes con 100 valores aleatorios entre 0 y 1000.</li>
+<li>Asigna nombres de genes reales en H. sapiens.</li>
 <li>Filtra los genes que tienen niveles de expresión por encima de 500.</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
@@ -1012,6 +1013,7 @@ No confundir con el operador <code>=</code> que se puede usar como operador de a
 <p>Descripción: Supón que tienes un vector con datos de resistencia de 50 cepas bacterianas a un antibiótico específico.</p>
 <ul>
 <li>Crea un vector resistencia con 50 valores binarios (0 para sensible, 1 para resistente).</li>
+<li>Asigna nombres de especies reales de bacterias.</li>
 <li>Calcula el número total de cepas resistentes.</li>
 <li>Encuentra el índice de la primera cepa resistente.</li>
 <li>Calcula el porcentaje de genes filtrados.</li>
@@ -1022,6 +1024,7 @@ No confundir con el operador <code>=</code> que se puede usar como operador de a
 <p>Descripción: Supón que tienes un vector con distancias genéticas entre 20 pares de especies.</p>
 <ul>
 <li>Crea un vector distancias_geneticas con 20 valores aleatorios entre 0 y 100.</li>
+<li>Asigna nombres de especies reales de hongos.</li>
 <li>Calcula la media y la desviación estándar de las distancias genéticas.</li>
 <li>Encuentra la distancia genética mínima y máxima.</li>
 </ul>
@@ -1031,6 +1034,7 @@ No confundir con el operador <code>=</code> que se puede usar como operador de a
 <p>Descripción: Supón que tienes un vector con la abundancia de 30 microorganismos en una muestra ambiental.</p>
 <ul>
 <li>Crea un vector abundancia_microorganismos con 30 valores aleatorios entre 0 y 500.</li>
+<li>Asigna nombres de especies reales de virus.</li>
 <li>Ordena el vector en orden descendente.</li>
 <li>Encuentra los 5 microorganismos más abundantes.</li>
 </ul>
@@ -1049,6 +1053,7 @@ No confundir con el operador <code>=</code> que se puede usar como operador de a
 <p>Descripción: Supón que tienes un vector con tiempos de crecimiento de 15 cepas bacterianas en horas.</p>
 <ul>
 <li>Crea un vector tiempos_crecimiento con 15 valores aleatorios entre 0 y 24.</li>
+<li>Asigna nombres de especies reales de cepas bacterianas.</li>
 <li>Calcula el tiempo de crecimiento total.</li>
 <li>Encuentra la mediana del tiempo de crecimiento.</li>
 </ul>
@@ -1057,7 +1062,8 @@ No confundir con el operador <code>=</code> que se puede usar como operador de a
 </ol>
 <p>Descripción: Supón que tienes un vector con porcentajes de GC de 20 secuencias de ADN.</p>
 <ul>
-<li>Crea un vector porcentajes_gc con 20 valores aleatorios entre 30 y 70.</li>
+<li>Crea un vector porcentajes_gc con 20 valores reales entre 35 y 60.</li>
+<li>Asigna nombres de especies reales de bacterias con esos porcentajes.</li>
 <li>Calcula el porcentaje de GC promedio.</li>
 <li>Encuentra el índice de la secuencia con el porcentaje de GC más cercano a 50%.</li>
 </ul>
@@ -1076,6 +1082,7 @@ No confundir con el operador <code>=</code> que se puede usar como operador de a
 <p>Descripción: Supón que tienes un vector con tasas de transcripción de 25 genes en RPKM.</p>
 <ul>
 <li>Crea un vector tasas_transcripcion con 25 valores aleatorios entre 0 y 50.</li>
+<li>Asigna nombres de genes reales de E. coli.</li>
 <li>Encuentra la tasa de transcripción media.</li>
 <li>Encuentra los genes con tasas de transcripción por encima de la media.</li>
 </ul>
@@ -1085,7 +1092,7 @@ No confundir con el operador <code>=</code> que se puede usar como operador de a
 <p>Descripción: Supón que tienes un vector con la abundancia de 20 especies en una muestra ambiental.</p>
 <ul>
 <li>Crea un vector abundancia_especies con 20 valores aleatorios entre 1 y 100.</li>
-<li>Asigan nombres de especies reales de bacterias.</li>
+<li>Asigna nombres de especies reales de bacterias.</li>
 <li>Calcula el índice de diversidad de Shannon.</li>
 <li>Encuentra las especies con abundancia mayor al promedio.</li>
 </ul>

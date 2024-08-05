@@ -799,6 +799,7 @@ cat("Muestras con temperatura óptima:", muestras_optimas, "\n")
 Descripción: Supón que tienes un vector con los niveles de expresión de 100 genes.
 
 - Crea un vector expresion_genes con 100 valores aleatorios entre 0 y 1000.
+- Asigna nombres de genes reales en H. sapiens.
 - Filtra los genes que tienen niveles de expresión por encima de 500.
 
 2. **Análisis de Resistencias Antibióticas**
@@ -806,6 +807,7 @@ Descripción: Supón que tienes un vector con los niveles de expresión de 100 g
 Descripción: Supón que tienes un vector con datos de resistencia de 50 cepas bacterianas a un antibiótico específico.
 
 - Crea un vector resistencia con 50 valores binarios (0 para sensible, 1 para resistente).
+- Asigna nombres de especies reales de bacterias.
 - Calcula el número total de cepas resistentes.
 - Encuentra el índice de la primera cepa resistente.
 - Calcula el porcentaje de genes filtrados.
@@ -815,6 +817,7 @@ Descripción: Supón que tienes un vector con datos de resistencia de 50 cepas b
 Descripción: Supón que tienes un vector con distancias genéticas entre 20 pares de especies.
 
 - Crea un vector distancias_geneticas con 20 valores aleatorios entre 0 y 100.
+- Asigna nombres de especies reales de hongos.
 - Calcula la media y la desviación estándar de las distancias genéticas.
 - Encuentra la distancia genética mínima y máxima.
 
@@ -823,6 +826,7 @@ Descripción: Supón que tienes un vector con distancias genéticas entre 20 par
 Descripción: Supón que tienes un vector con la abundancia de 30 microorganismos en una muestra ambiental.
 
 - Crea un vector abundancia_microorganismos con 30 valores aleatorios entre 0 y 500.
+- Asigna nombres de especies reales de virus.
 - Ordena el vector en orden descendente.
 - Encuentra los 5 microorganismos más abundantes.
 
@@ -839,6 +843,7 @@ Descripción: Supón que tienes un vector con valores de pH de 25 muestras de ag
 Descripción: Supón que tienes un vector con tiempos de crecimiento de 15 cepas bacterianas en horas.
 
 - Crea un vector tiempos_crecimiento con 15 valores aleatorios entre 0 y 24.
+- Asigna nombres de especies reales de cepas bacterianas.
 - Calcula el tiempo de crecimiento total.
 - Encuentra la mediana del tiempo de crecimiento.
 
@@ -846,7 +851,8 @@ Descripción: Supón que tienes un vector con tiempos de crecimiento de 15 cepas
 
 Descripción: Supón que tienes un vector con porcentajes de GC de 20 secuencias de ADN.
 
-- Crea un vector porcentajes_gc con 20 valores aleatorios entre 30 y 70.
+- Crea un vector porcentajes_gc con 20 valores reales entre 35 y 60.
+- Asigna nombres de especies reales de bacterias con esos porcentajes. 
 - Calcula el porcentaje de GC promedio.
 - Encuentra el índice de la secuencia con el porcentaje de GC más cercano a 50%.
 
@@ -863,6 +869,7 @@ Descripción: Supón que tienes un vector con concentraciones de 12 metabolitos 
 Descripción: Supón que tienes un vector con tasas de transcripción de 25 genes en RPKM.
 
 - Crea un vector tasas_transcripcion con 25 valores aleatorios entre 0 y 50.
+- Asigna nombres de genes reales de E. coli.
 - Encuentra la tasa de transcripción media.
 - Encuentra los genes con tasas de transcripción por encima de la media.
 
@@ -871,6 +878,6 @@ Descripción: Supón que tienes un vector con tasas de transcripción de 25 gene
 Descripción: Supón que tienes un vector con la abundancia de 20 especies en una muestra ambiental.
 
 - Crea un vector abundancia_especies con 20 valores aleatorios entre 1 y 100.
-- Asigan nombres de especies reales de bacterias.
+- Asigna nombres de especies reales de bacterias.
 - Calcula el índice de diversidad de Shannon.
 - Encuentra las especies con abundancia mayor al promedio.
