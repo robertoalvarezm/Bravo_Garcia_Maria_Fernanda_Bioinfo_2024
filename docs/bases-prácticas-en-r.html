@@ -364,23 +364,26 @@ div.csl-indent {
 <p>Las <strong>expresiones</strong> sólo se muestran en la salida estándar y NO se guardan en alguna variable, es decir, cada que se corra la línea se obtendran valores distintos.</p>
 <p>Ejemplo:</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="bases-prácticas-en-r.html#cb37-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1]  0.3945400  0.6630100 -0.9034575
-##  [4]  0.6645018  1.8326265 -0.2258644
-##  [7]  0.7245406 -0.5069751  0.4831893
-## [10] -0.4154193</code></pre>
+<pre><code>##  [1] -0.82399225  0.35892805
+##  [3]  0.89450457 -1.49064070
+##  [5]  0.50743686  0.48380358
+##  [7] -0.30559523 -0.20764175
+##  [9]  0.02101937 -0.47771017</code></pre>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="bases-prácticas-en-r.html#cb39-1" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] -0.07989635 -1.58676719  0.37709835
-##  [4]  0.94744344  0.94164849 -0.88345268
-##  [7]  0.40065600  0.38559204 -1.05541575
-## [10] -0.41051200</code></pre>
+<pre><code>##  [1] -1.2608389  1.1730696
+##  [3] -1.7239667  0.8511396
+##  [5] -1.4300891 -0.3839275
+##  [7] -0.4153205  0.4386145
+##  [9]  0.6546710  0.7329360</code></pre>
 <p>Las <strong>asignaciones</strong>, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de <code>&lt;-</code></p>
 <p>Ejemplo:</p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="bases-prácticas-en-r.html#cb41-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="bases-prácticas-en-r.html#cb42-1" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -0.5767360 -0.5377346 -0.4141525
-##  [4] -0.2642416  1.5244101 -0.4544607
-##  [7]  0.2843083 -0.6314041  1.4370048
-## [10]  0.4644948</code></pre>
+<pre><code>##  [1]  1.2405949 -0.6024885
+##  [3]  2.3292047  0.6177684
+##  [5]  0.6350562 -0.5266272
+##  [7] -1.1796744  0.5610354
+##  [9] -1.5112498 -0.7497098</code></pre>
 <p><strong>NOTA</strong> El símbolo <code>&lt;-</code> es equivalente en función a <code>=</code> pero puede llevar a confusiones importantes con el operador <code>==</code>.</p>
 <div class="float">
 <img src="equals-sign-assignment-operator-imgflip-com-going-through-data-structures-and-47188178.png" alt="Operador de asignación. Así que evita el uso del igual" />

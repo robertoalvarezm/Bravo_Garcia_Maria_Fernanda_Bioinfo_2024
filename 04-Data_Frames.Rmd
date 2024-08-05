@@ -150,7 +150,7 @@ Descripción: Supón que tienes un data.frame con datos de abundancia de secuenc
 - Llena el data.frame con datos aleatorios para 8 microorganismos en 5 muestras diferentes.
 - Encuentra la abundancia total y promedio por muestra.
 
-4. ** Datos de Producción de Ácido Láctico**
+4. **Datos de Producción de Ácido Láctico**
 
 Descripción: Supón que tienes un data.frame con datos de producción de ácido láctico por diferentes cepas en distintas condiciones.
 
