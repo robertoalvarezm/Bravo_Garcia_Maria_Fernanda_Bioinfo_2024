@@ -1,6 +1,6 @@
 # Ciclos en R{#ciclos}
 
-## Introducción a los ciclos `for` en R
+## Ciclos `for` en R
 
 Los ciclos `for` en R permiten repetir una serie de instrucciones para un conjunto de elementos. Esto es útil cuando se desea realizar una operación varias veces sin tener que escribir el mismo código repetidamente. El ciclo `for` sigue la siguiente estructura:
 
@@ -46,51 +46,58 @@ Explicación:
 
 ### Ejemplo 2: Sumar los elementos de un vector
 
-Ahora, vamos a sumar los elementos de un vector usando un ciclo for:
+Ahora, vamos a sumar los elementos de un vector usando un ciclo `for`:
 
-r
-Copiar código
+```{r}
 vector <- c(3, 5, 7, 9)
 suma <- 0
 for (i in vector) {
   suma <- suma + i
 }
 print(suma)
+```
+
 Resultado:
 
-csharp
-Copiar código
+
+```r
 [1] 24
+```
+
 Explicación:
 
-Iniciamos la variable suma en 0.
-En cada iteración, el valor de i se suma a suma, acumulando el resultado.
-Ejemplo 3: Multiplicar cada elemento de un vector por 2
+- Iniciamos la variable `suma` en 0.
+- En cada iteración, el valor de `i` se suma a `suma`, acumulando el resultado.
+
+
+### Ejemplo 3: Multiplicar cada elemento de un vector por 2
 
 Podemos usar un ciclo for para modificar un vector, multiplicando cada uno de sus elementos por 2:
 
-r
-Copiar código
+```{r}
 vector <- c(1, 2, 3, 4, 5)
 for (i in 1:length(vector)) {
   vector[i] <- vector[i] * 2
 }
 print(vector)
+```
+
 Resultado:
 
-csharp
-Copiar código
+```r
 [1] 2 4 6 8 10
+```
+
 Explicación:
 
-Usamos 1:length(vector) para iterar sobre los índices del vector.
-En cada iteración, el valor correspondiente del vector se multiplica por 2.
-Ejemplo 4: Iterar sobre un dataframe
+- Usamos 1:length(`vector`) para iterar sobre los índices del vector.
+- En cada iteración, el valor correspondiente del vector se multiplica por 2.
+
+### Ejemplo 4: Iterar sobre un dataframe
 
 Supongamos que tenemos un dataframe con datos biológicos y queremos iterar sobre cada fila para hacer cálculos.
 
-r
-Copiar código
+```{r}
 # Creamos un dataframe de ejemplo
 df <- data.frame(muestra = c("A", "B", "C"),
                  conteo_celular = c(100, 200, 150),
@@ -100,90 +107,103 @@ for (i in 1:nrow(df)) {
   print(paste("Muestra:", df$muestra[i], 
               "- Conteo celular:", df$conteo_celular[i]))
 }
+```
+
+
+
 Resultado:
 
-csharp
-Copiar código
+
+```r
 [1] "Muestra: A - Conteo celular: 100"
 [1] "Muestra: B - Conteo celular: 200"
 [1] "Muestra: C - Conteo celular: 150"
-Ejercicios resueltos
 
-Ejercicio 1: Sumar los cuadrados de los primeros 5 números
+```
+### Ejercicios resueltos
+
+
+#### Ejercicio 1: Sumar los cuadrados de los primeros 5 números
 
 Escribe un ciclo for que sume los cuadrados de los números del 1 al 5.
 
-r
-Copiar código
+
+```{r}
 suma_cuadrados <- 0
 for (i in 1:5) {
   suma_cuadrados <- suma_cuadrados + i^2
 }
 print(suma_cuadrados)
+
+```
+
 Resultado:
 
-csharp
-Copiar código
+```r
 [1] 55
-Ejercicio 2: Imprimir solo los números pares de un vector
+```
+
+
+#### Ejercicio 2: Imprimir solo los números pares de un vector
 
 Dado el siguiente vector, escribe un ciclo for que imprima solo los números pares.
 
-r
-Copiar código
+```{r}
 vector <- c(1, 4, 5, 6, 7, 10, 12)
 for (i in vector) {
   if (i %% 2 == 0) {
     print(i)
   }
 }
+```
+
 Resultado:
 
-csharp
-Copiar código
+```r
 [1] 4
 [1] 6
 [1] 10
 [1] 12
-Ejercicios propuestos
+```
 
-Ejercicio 1: Calcular el factorial de un número
+### Ejercicios propuestos
+
+1. Ejercicio 1: Calcular el factorial de un número
 
 Escribe un ciclo for que calcule el factorial de un número. Por ejemplo, si el número es 5, el resultado debe ser 5! = 5 * 4 * 3 * 2 * 1.
 
-Ejercicio 2: Encontrar el valor máximo en un vector
+2. Ejercicio 2: Encontrar el valor máximo en un vector
 
 Dado un vector de números, escribe un ciclo for que encuentre el valor máximo.
 
-Ejercicio 3: Contar los números mayores a 50
+3. Ejercicio 3: Contar los números mayores a 50
 
 Dado el siguiente vector c(12, 45, 67, 34, 89, 23, 56), escribe un ciclo for que cuente cuántos números son mayores a 50.
 
-Ejercicio 4: Imprimir los nombres de las muestras con conteo celular mayor a 150
+4. Ejercicio 4: Imprimir los nombres de las muestras con conteo celular mayor a 150
 
 Dado el siguiente dataframe:
 
-r
-Copiar código
+```{r}
 df <- data.frame(muestra = c("A", "B", "C", "D"),
                  conteo_celular = c(100, 200, 150, 180))
+
+```
+
 Escribe un ciclo for que imprima el nombre de las muestras cuyo conteo celular sea mayor a 150.
 
-Ejercicio 5: Calcular la media de cada fila en un dataframe
+5. Ejercicio 5: Calcular la media de cada fila en un dataframe
 
 Dado el siguiente dataframe que representa los resultados de varios ensayos en diferentes condiciones:
 
-r
-Copiar código
+```{r}
 df <- data.frame(ensayo1 = c(2.5, 3.1, 4.7),
                  ensayo2 = c(3.5, 2.9, 4.2),
                  ensayo3 = c(4.1, 3.8, 4.5))
+
+```
+
 Escribe un ciclo for que calcule la media de los valores de cada fila.
-
-css
-Copiar código
-
-Este tutorial incluye una introducción clara a los ciclos `for` en R, ejemplos detallados, ejercicios resueltos y ejercicios propuestos que permiten a los estudiantes practicar y aplicar los conceptos aprendidos.
 
 
 

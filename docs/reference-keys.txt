@@ -139,3 +139,12 @@ introducción-a-r-projects-en-rstudio
 gestión-de-proyectos-organización-y-buenas-prácticas
 colaboración-y-control-de-versiones-con-git-y-github
 referencias
+elementos-de-una-matriz
+ejercicios-sugeridos
+ciclos-for-en-r
+ejemplo-3-multiplicar-cada-elemento-de-un-vector-por-2
+ejercicios-resueltos-1
+ejemplo-4-iterar-sobre-un-dataframe
+ejercicio-1-sumar-los-cuadrados-de-los-primeros-5-números
+ejercicio-2-imprimir-solo-los-números-pares-de-un-vector
+ejercicios-propuestos-1
