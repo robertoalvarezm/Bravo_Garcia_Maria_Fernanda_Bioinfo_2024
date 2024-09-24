@@ -257,17 +257,6 @@ Por ejemplo:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## 
-## Attaching package: 'gplots'
-\end{verbatim}
-
-\begin{verbatim}
-## The following object is masked from 'package:stats':
-## 
-##     lowess
-\end{verbatim}
-
 Para visualizar los paquetes ya cargados, teclea:
 
 \begin{Shaded}
@@ -277,10 +266,14 @@ Para visualizar los paquetes ya cargados, teclea:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] ".GlobalEnv"        "package:gplots"    "tools:rstudio"    
-##  [4] "package:stats"     "package:graphics"  "package:grDevices"
-##  [7] "package:utils"     "package:datasets"  "package:methods"  
-## [10] "Autoloads"         "package:base"
+##  [1] ".GlobalEnv"             "package:ggpubr"        
+##  [3] "package:palmerpenguins" "package:ggplot2"       
+##  [5] "package:readxl"         "package:gplots"        
+##  [7] "tools:rstudio"          "package:stats"         
+##  [9] "package:graphics"       "package:grDevices"     
+## [11] "package:utils"          "package:datasets"      
+## [13] "package:methods"        "Autoloads"             
+## [15] "package:base"
 \end{verbatim}
 
 Para visualizar las funciones dentro de un paquete en particular se utiliza:
@@ -292,15 +285,69 @@ Para visualizar las funciones dentro de un paquete en particular se utiliza:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] "angleAxis"      "balloonplot"    "bandplot"       "barplot2"      
-##  [5] "bluered"        "boxplot2"       "ci2d"           "col2hex"       
-##  [9] "colorpanel"     "greenred"       "heatmap.2"      "hist2d"        
-## [13] "lmplot2"        "lowess"         "ooplot"         "overplot"      
-## [17] "panel.overplot" "plot.venn"      "plotCI"         "plotLowess"    
-## [21] "plotmeans"      "qqnorm.aov"     "redblue"        "redgreen"      
-## [25] "reorder.factor" "residplot"      "rich.colors"    "sinkplot"      
-## [29] "smartlegend"    "space"          "textplot"       "venn"          
-## [33] "wapply"
+##   [1] "%>%"                         "add_summary"                
+##   [3] "annotate_figure"             "as_ggplot"                  
+##   [5] "as_npc"                      "as_npcx"                    
+##   [7] "as_npcy"                     "background_image"           
+##   [9] "bgcolor"                     "border"                     
+##  [11] "change_palette"              "clean_table_theme"          
+##  [13] "clean_theme"                 "colnames_style"             
+##  [15] "color_palette"               "compare_means"              
+##  [17] "create_aes"                  "desc_statby"                
+##  [19] "diff_express"                "facet"                      
+##  [21] "fill_palette"                "font"                       
+##  [23] "gene_citation"               "gene_expression"            
+##  [25] "geom_bracket"                "geom_exec"                  
+##  [27] "geom_pwc"                    "geom_signif"                
+##  [29] "get_breaks"                  "get_coord"                  
+##  [31] "get_legend"                  "get_palette"                
+##  [33] "get_summary_stats"           "ggadd"                      
+##  [35] "ggadjust_pvalue"             "ggarrange"                  
+##  [37] "ggballoonplot"               "ggbarplot"                  
+##  [39] "ggboxplot"                   "ggdensity"                  
+##  [41] "ggdonutchart"                "ggdotchart"                 
+##  [43] "ggdotplot"                   "ggecdf"                     
+##  [45] "ggerrorplot"                 "ggexport"                   
+##  [47] "gghistogram"                 "ggline"                     
+##  [49] "ggmaplot"                    "ggpaired"                   
+##  [51] "ggpar"                       "ggparagraph"                
+##  [53] "ggpie"                       "ggpubr_options"             
+##  [55] "ggqqplot"                    "ggscatter"                  
+##  [57] "ggscatterhist"               "ggstripchart"               
+##  [59] "ggsummarystats"              "ggsummarytable"             
+##  [61] "ggtext"                      "ggtexttable"                
+##  [63] "ggviolin"                    "gradient_color"             
+##  [65] "gradient_fill"               "grids"                      
+##  [67] "group_by"                    "labs_pubr"                  
+##  [69] "mean_ci"                     "mean_range"                 
+##  [71] "mean_sd"                     "mean_se_"                   
+##  [73] "median_hilow_"               "median_iqr"                 
+##  [75] "median_mad"                  "median_q1q3"                
+##  [77] "median_range"                "mutate"                     
+##  [79] "npc_to_data_coord"           "rotate"                     
+##  [81] "rotate_x_text"               "rotate_y_text"              
+##  [83] "rownames_style"              "rremove"                    
+##  [85] "set_palette"                 "show_line_types"            
+##  [87] "show_point_shapes"           "stat_anova_test"            
+##  [89] "stat_bracket"                "stat_central_tendency"      
+##  [91] "stat_chull"                  "stat_compare_means"         
+##  [93] "stat_conf_ellipse"           "stat_cor"                   
+##  [95] "stat_friedman_test"          "stat_kruskal_test"          
+##  [97] "stat_mean"                   "stat_overlay_normal_density"
+##  [99] "stat_pvalue_manual"          "stat_pwc"                   
+## [101] "stat_regline_equation"       "stat_stars"                 
+## [103] "stat_welch_anova_test"       "tab_add_border"             
+## [105] "tab_add_footnote"            "tab_add_hline"              
+## [107] "tab_add_title"               "tab_add_vline"              
+## [109] "tab_cell_crossout"           "tab_ncol"                   
+## [111] "tab_nrow"                    "table_cell_bg"              
+## [113] "table_cell_font"             "tbody_add_border"           
+## [115] "tbody_style"                 "text_grob"                  
+## [117] "thead_add_border"            "theme_classic2"             
+## [119] "theme_cleveland"             "theme_pubclean"             
+## [121] "theme_pubr"                  "theme_transparent"          
+## [123] "ttheme"                      "xscale"                     
+## [125] "yscale"
 \end{verbatim}
 
 \textbf{EJEMPLOS DE VISUALIZACIÓN DE GRÁFICOS}
@@ -799,8 +846,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] -0.54237045 -0.05918080  0.24705406  0.18446567  1.51251079 -0.03285565
-##  [7] -0.28870040  0.77186498 -0.45916892  1.13197821
+##  [1] -0.8410226 -0.1653545 -1.5305274  1.2649028  0.5504604  0.8968529
+##  [7] -1.4903635  0.2220796 -0.6850697 -0.6226382
 \end{verbatim}
 
 \begin{Shaded}
@@ -810,8 +857,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] -0.4295183 -1.0859830 -1.1229952 -0.2911500 -0.2691227  0.2029044
-##  [7] -0.6846581  2.1032877 -0.6360153 -0.5124215
+##  [1] -1.2597905 -0.5566253  1.3083891 -1.0715050  1.3926192  0.5324484
+##  [7] -0.5267065 -0.7114330 -0.2788043 -0.5741482
 \end{verbatim}
 
 Las \textbf{asignaciones}, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de \texttt{\textless{}-}
@@ -831,8 +878,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  0.153722554  0.450582776 -0.403202472  0.001484244 -0.642938843
-##  [6] -0.712154861 -0.709277911  0.567660867  0.150940153 -0.363661931
+##  [1] -1.03672551 -0.04639883  0.03773554  0.10045969 -0.26318865 -0.90976913
+##  [7] -0.60167488 -1.32265499 -2.18908009  0.07529417
 \end{verbatim}
 
 \textbf{NOTA} El símbolo \texttt{\textless{}-} es equivalente en función a \texttt{=} pero puede llevar a confusiones importantes con el operador \texttt{==}.
@@ -1928,7 +1975,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -3.494691
+## [1] -3.191509
 \end{verbatim}
 
 \begin{Shaded}
@@ -1938,7 +1985,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 2.911187
+## [1] 3.372416
 \end{verbatim}
 
 \begin{Shaded}
@@ -1948,7 +1995,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -3.494691  2.911187
+## [1] -3.191509  3.372416
 \end{verbatim}
 
 \begin{Shaded}
@@ -1958,7 +2005,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 8.192052
+## [1] 56.58945
 \end{verbatim}
 
 \begin{Shaded}
@@ -1968,7 +2015,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.008192052
+## [1] 0.05658945
 \end{verbatim}
 
 \begin{Shaded}
@@ -1978,7 +2025,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.006529916
+## [1] 0.06776414
 \end{verbatim}
 
 \textbf{Ejercicio} ¿Qué función tienen los siguientes comandos \texttt{sd()} y \texttt{quantile()}?
@@ -2004,7 +2051,7 @@ Para \texttt{unique()} y \texttt{sort()} conviene tener elementos discretos más
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  6  4  7  2  5 10  1  8  9  3
+##  [1] 10  8  6  1  7  2  4  5  3  9
 \end{verbatim}
 
 \begin{Shaded}
@@ -4670,22 +4717,35 @@ Esta estructura se ejecuta solo en la primera que sea verdadera o si no hay una 
   Dado un paciente, escribe un código que determine si tiene una infección viral o bacteriana basándote en los niveles de linfocitos (\textgreater{} 4000 sugiere infección viral) y neutrófilos (\textgreater{} 7000 sugiere infección bacteriana).
 \end{enumerate}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\chapter{\texorpdfstring{Introducción a los ciclos \texttt{for} en R}{Introducción a los ciclos for en R}}\label{introducciuxf3n-a-los-ciclos-for-en-r}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\chapter{Funciones en R}\label{functions}
-
-Las funciones definidas por el usuario en R son bloques de código que realizan una tarea específica y se pueden llamar desde cualquier lugar del programa. Las funciones en R se definen usando la palabra clave function seguida del nombre de la función, paréntesis y llaves.
-
-Las funciones toman argumentos de entrada y producen un resultado como salida. Las funciones definidas por el usuario son una herramienta poderosa en R que permiten reutilizar código y automatizar tareas. Una vez que domines la sintaxis básica de la función en R, puedes comenzar a crear funciones más avanzadas y complejas para adaptarse a tus necesidades.
-
-\section{Sintaxis básica de una función en R}\label{sintaxis-buxe1sica-de-una-funciuxf3n-en-r}
-
-La sintaxis básica para definir una función en R es la siguiente:
+Los ciclos \texttt{for} en R permiten repetir una serie de instrucciones para un conjunto de elementos. Esto es útil cuando se desea realizar una operación varias veces sin tener que escribir el mismo código repetidamente. El ciclo \texttt{for} sigue la siguiente estructura:
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ (variable }\ControlFlowTok{in}\NormalTok{ secuencia) \{}
+  \CommentTok{\# Código a ejecutar en cada iteración}
+\NormalTok{\}}\StringTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+
+
+\AttributeTok{\textless{}!{-}{-}chapter:end:07{-}Ciclos\_en\_R.Rmd{-}{-}\textgreater{}}
+
+\AttributeTok{{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\AttributeTok{{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+
+\AttributeTok{\# Funciones en R \{\#functions\}}
+
+\AttributeTok{Las funciones definidas por el usuario en R son bloques de código que realizan una tarea específica y se pueden llamar desde cualquier lugar del programa. Las funciones en R se definen usando la palabra clave function seguida del nombre de la función, paréntesis y llaves.}
+
+\AttributeTok{Las funciones toman argumentos de entrada y producen un resultado como salida. Las funciones definidas por el usuario son una herramienta poderosa en R que permiten reutilizar código y automatizar tareas. Una vez que domines la sintaxis básica de la función en R, puedes comenzar a crear funciones más avanzadas y complejas para adaptarse a tus necesidades.}
+
+\AttributeTok{\#\# Sintaxis básica de una función en R}
+
+\AttributeTok{La sintaxis básica para definir una función en R es la siguiente:}
+
+
+\StringTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}\NormalTok{ r}
 \NormalTok{nombre\_de\_la\_funcion }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(arg1, arg2, ...) \{}
   \CommentTok{\# Cuerpo de la función}
 \NormalTok{  resultado }\OtherTok{\textless{}{-}}\NormalTok{ ...}

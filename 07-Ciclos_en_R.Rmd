@@ -1,0 +1,15 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
+
+# Introducción a los ciclos `for` en R
+
+Los ciclos `for` en R permiten repetir una serie de instrucciones para un conjunto de elementos. Esto es útil cuando se desea realizar una operación varias veces sin tener que escribir el mismo código repetidamente. El ciclo `for` sigue la siguiente estructura:
+
+```r
+for (variable in secuencia) {
+  # Código a ejecutar en cada iteración
+}```
+
