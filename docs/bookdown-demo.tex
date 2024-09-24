@@ -846,8 +846,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  1.2199267 -1.2963320 -1.5405734  0.9280935 -0.4480765  0.4101580
-##  [7]  1.7441150 -1.5188742  1.2042810 -0.2416334
+##  [1]  0.09070048  0.26851615 -0.44390266  0.07077542  1.02491182 -0.04978241
+##  [7] -0.05316822 -1.07312133 -0.37984925 -0.21070461
 \end{verbatim}
 
 \begin{Shaded}
@@ -857,8 +857,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  0.68157162 -0.93241687  0.89349322 -0.49963521 -0.61782431 -0.58351575
-##  [7]  0.03827256 -0.91048544 -0.26451426  0.18132235
+##  [1] -0.05914702  0.50620337  0.98183711 -0.26056275 -0.66088867  1.18387732
+##  [7]  0.33818016  0.92674297 -1.39653160 -0.59745400
 \end{verbatim}
 
 Las \textbf{asignaciones}, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de \texttt{\textless{}-}
@@ -878,8 +878,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  2.1343027 -1.3666013 -1.6784692  0.2796392 -0.2290791 -0.3436097
-##  [7]  1.2308886  0.5960079 -2.6632100 -0.8607139
+##  [1] -0.9861281  0.2280080  0.9362491 -0.1560571 -1.4999624 -0.9342705
+##  [7]  1.3070124 -0.2578319 -0.8201453  0.8138734
 \end{verbatim}
 
 \textbf{NOTA} El símbolo \texttt{\textless{}-} es equivalente en función a \texttt{=} pero puede llevar a confusiones importantes con el operador \texttt{==}.
@@ -1975,7 +1975,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -3.290219
+## [1] -2.7385
 \end{verbatim}
 
 \begin{Shaded}
@@ -1985,7 +1985,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 3.149713
+## [1] 3.290011
 \end{verbatim}
 
 \begin{Shaded}
@@ -1995,7 +1995,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -3.290219  3.149713
+## [1] -2.738500  3.290011
 \end{verbatim}
 
 \begin{Shaded}
@@ -2005,7 +2005,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 23.74974
+## [1] -20.57414
 \end{verbatim}
 
 \begin{Shaded}
@@ -2015,7 +2015,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.02374974
+## [1] -0.02057414
 \end{verbatim}
 
 \begin{Shaded}
@@ -2025,7 +2025,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.05607982
+## [1] -0.04137869
 \end{verbatim}
 
 \textbf{Ejercicio} ¿Qué función tienen los siguientes comandos \texttt{sd()} y \texttt{quantile()}?
@@ -2051,7 +2051,7 @@ Para \texttt{unique()} y \texttt{sort()} conviene tener elementos discretos más
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  8  4  5 10  1  7  2  6  9  3
+##  [1]  8  6 10  7  1  4  5  9  2  3
 \end{verbatim}
 
 \begin{Shaded}
@@ -4727,27 +4727,207 @@ Los ciclos \texttt{for} en R permiten repetir una serie de instrucciones para un
 \begin{Highlighting}[]
 \ControlFlowTok{for}\NormalTok{ (variable }\ControlFlowTok{in}\NormalTok{ secuencia) \{}
   \CommentTok{\# Código a ejecutar en cada iteración}
-\NormalTok{\}}\StringTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
+Donde \texttt{variable} toma, en cada iteración, el valor de cada elemento en la secuencia. La secuencia puede ser un vector, lista o cualquier conjunto de elementos.
 
-\AttributeTok{\textless{}!{-}{-}chapter:end:07{-}Ciclos\_en\_R.Rmd{-}{-}\textgreater{}}
+\subsection{Ejemplo básico}\label{ejemplo-buxe1sico}
 
-\AttributeTok{{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+Supongamos que queremos imprimir los números del 1 al 5. Podemos hacerlo con un ciclo for como sigue:
 
-\AttributeTok{{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}{-}}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\SpecialCharTok{:}\DecValTok{5}\NormalTok{) \{}
+  \FunctionTok{print}\NormalTok{(i)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
-\AttributeTok{\# Funciones en R \{\#functions\}}
+\begin{verbatim}
+## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+\end{verbatim}
 
-\AttributeTok{Las funciones definidas por el usuario en R son bloques de código que realizan una tarea específica y se pueden llamar desde cualquier lugar del programa. Las funciones en R se definen usando la palabra clave function seguida del nombre de la función, paréntesis y llaves.}
+Esto dará como resultado:
 
-\AttributeTok{Las funciones toman argumentos de entrada y producen un resultado como salida. Las funciones definidas por el usuario son una herramienta poderosa en R que permiten reutilizar código y automatizar tareas. Una vez que domines la sintaxis básica de la función en R, puedes comenzar a crear funciones más avanzadas y complejas para adaptarse a tus necesidades.}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{[}\DecValTok{1}\NormalTok{] }\DecValTok{1}
+\NormalTok{[}\DecValTok{1}\NormalTok{] }\DecValTok{2}
+\NormalTok{[}\DecValTok{1}\NormalTok{] }\DecValTok{3}
+\NormalTok{[}\DecValTok{1}\NormalTok{] }\DecValTok{4}
+\NormalTok{[}\DecValTok{1}\NormalTok{] }\DecValTok{5}
+\end{Highlighting}
+\end{Shaded}
 
-\AttributeTok{\#\# Sintaxis básica de una función en R}
+Explicación:
 
-\AttributeTok{La sintaxis básica para definir una función en R es la siguiente:}
+\begin{itemize}
+\tightlist
+\item
+  \texttt{i} : es la variable que toma los valores del 1 al 5.
+\item
+  \texttt{print(i)} : imprime el valor de \texttt{i} en cada iteración.
+\end{itemize}
 
+\subsection{Ejemplo 2: Sumar los elementos de un vector}\label{ejemplo-2-sumar-los-elementos-de-un-vector}
 
-\StringTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}\NormalTok{ r}
+Ahora, vamos a sumar los elementos de un vector usando un ciclo for:
+
+r
+Copiar código
+vector \textless- c(3, 5, 7, 9)
+suma \textless- 0
+for (i in vector) \{
+suma \textless- suma + i
+\}
+print(suma)
+Resultado:
+
+csharp
+Copiar código
+{[}1{]} 24
+Explicación:
+
+Iniciamos la variable suma en 0.
+En cada iteración, el valor de i se suma a suma, acumulando el resultado.
+Ejemplo 3: Multiplicar cada elemento de un vector por 2
+
+Podemos usar un ciclo for para modificar un vector, multiplicando cada uno de sus elementos por 2:
+
+r
+Copiar código
+vector \textless- c(1, 2, 3, 4, 5)
+for (i in 1:length(vector)) \{
+vector{[}i{]} \textless- vector{[}i{]} * 2
+\}
+print(vector)
+Resultado:
+
+csharp
+Copiar código
+{[}1{]} 2 4 6 8 10
+Explicación:
+
+Usamos 1:length(vector) para iterar sobre los índices del vector.
+En cada iteración, el valor correspondiente del vector se multiplica por 2.
+Ejemplo 4: Iterar sobre un dataframe
+
+Supongamos que tenemos un dataframe con datos biológicos y queremos iterar sobre cada fila para hacer cálculos.
+
+r
+Copiar código
+\# Creamos un dataframe de ejemplo
+df \textless- data.frame(muestra = c(``A'', ``B'', ``C''),
+conteo\_celular = c(100, 200, 150),
+temperatura = c(37, 25, 30))
+
+for (i in 1:nrow(df)) \{
+print(paste(``Muestra:'', df\(muestra[i],
+              "- Conteo celular:", df\)conteo\_celular{[}i{]}))
+\}
+Resultado:
+
+csharp
+Copiar código
+{[}1{]} ``Muestra: A - Conteo celular: 100''
+{[}1{]} ``Muestra: B - Conteo celular: 200''
+{[}1{]} ``Muestra: C - Conteo celular: 150''
+Ejercicios resueltos
+
+Ejercicio 1: Sumar los cuadrados de los primeros 5 números
+
+Escribe un ciclo for que sume los cuadrados de los números del 1 al 5.
+
+r
+Copiar código
+suma\_cuadrados \textless- 0
+for (i in 1:5) \{
+suma\_cuadrados \textless- suma\_cuadrados + i\^{}2
+\}
+print(suma\_cuadrados)
+Resultado:
+
+csharp
+Copiar código
+{[}1{]} 55
+Ejercicio 2: Imprimir solo los números pares de un vector
+
+Dado el siguiente vector, escribe un ciclo for que imprima solo los números pares.
+
+r
+Copiar código
+vector \textless- c(1, 4, 5, 6, 7, 10, 12)
+for (i in vector) \{
+if (i \%\% 2 == 0) \{
+print(i)
+\}
+\}
+Resultado:
+
+csharp
+Copiar código
+{[}1{]} 4
+{[}1{]} 6
+{[}1{]} 10
+{[}1{]} 12
+Ejercicios propuestos
+
+Ejercicio 1: Calcular el factorial de un número
+
+Escribe un ciclo for que calcule el factorial de un número. Por ejemplo, si el número es 5, el resultado debe ser 5! = 5 * 4 * 3 * 2 * 1.
+
+Ejercicio 2: Encontrar el valor máximo en un vector
+
+Dado un vector de números, escribe un ciclo for que encuentre el valor máximo.
+
+Ejercicio 3: Contar los números mayores a 50
+
+Dado el siguiente vector c(12, 45, 67, 34, 89, 23, 56), escribe un ciclo for que cuente cuántos números son mayores a 50.
+
+Ejercicio 4: Imprimir los nombres de las muestras con conteo celular mayor a 150
+
+Dado el siguiente dataframe:
+
+r
+Copiar código
+df \textless- data.frame(muestra = c(``A'', ``B'', ``C'', ``D''),
+conteo\_celular = c(100, 200, 150, 180))
+Escribe un ciclo for que imprima el nombre de las muestras cuyo conteo celular sea mayor a 150.
+
+Ejercicio 5: Calcular la media de cada fila en un dataframe
+
+Dado el siguiente dataframe que representa los resultados de varios ensayos en diferentes condiciones:
+
+r
+Copiar código
+df \textless- data.frame(ensayo1 = c(2.5, 3.1, 4.7),
+ensayo2 = c(3.5, 2.9, 4.2),
+ensayo3 = c(4.1, 3.8, 4.5))
+Escribe un ciclo for que calcule la media de los valores de cada fila.
+
+css
+Copiar código
+
+Este tutorial incluye una introducción clara a los ciclos \texttt{for} en R, ejemplos detallados, ejercicios resueltos y ejercicios propuestos que permiten a los estudiantes practicar y aplicar los conceptos aprendidos.
+
+\chapter{Funciones en R}\label{functions}
+
+Las funciones definidas por el usuario en R son bloques de código que realizan una tarea específica y se pueden llamar desde cualquier lugar del programa. Las funciones en R se definen usando la palabra clave function seguida del nombre de la función, paréntesis y llaves.
+
+Las funciones toman argumentos de entrada y producen un resultado como salida. Las funciones definidas por el usuario son una herramienta poderosa en R que permiten reutilizar código y automatizar tareas. Una vez que domines la sintaxis básica de la función en R, puedes comenzar a crear funciones más avanzadas y complejas para adaptarse a tus necesidades.
+
+\section{Sintaxis básica de una función en R}\label{sintaxis-buxe1sica-de-una-funciuxf3n-en-r}
+
+La sintaxis básica para definir una función en R es la siguiente:
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{nombre\_de\_la\_funcion }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(arg1, arg2, ...) \{}
   \CommentTok{\# Cuerpo de la función}
 \NormalTok{  resultado }\OtherTok{\textless{}{-}}\NormalTok{ ...}
@@ -5199,7 +5379,7 @@ Vamos a comenzar con un gráfico de dispersión simple utilizando el conjunto de
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-176-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-177-1.pdf}
 
 \subsection{Personalización de gráficos}\label{personalizaciuxf3n-de-gruxe1ficos}
 
@@ -5222,7 +5402,7 @@ Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de
 ## `geom_smooth()` using formula = 'y ~ x'
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-177-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-178-1.pdf}
 \#\#\#\# Ejercicios sugeridos
 
 \begin{enumerate}
@@ -5250,7 +5430,7 @@ Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-178-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-179-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -5264,7 +5444,7 @@ Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-179-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-180-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -5276,7 +5456,7 @@ Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-180-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-181-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -5289,7 +5469,7 @@ Ahora, personalizaremos el gráfico cambiando colores y añadiendo una línea de
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-181-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-182-1.pdf}
 
 \subsection{Ejercicios resueltos}\label{ejercicios-resueltos}
 
@@ -5318,7 +5498,7 @@ Crea un gráfico de dispersión para visualizar la relación entre la longitud d
 ## (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-183-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-184-1.pdf}
 
 \subsubsection{Ejercicio 2: Diferenciación por especie}\label{ejercicio-2-diferenciaciuxf3n-por-especie}
 
@@ -5336,7 +5516,7 @@ Modifica el gráfico de dispersión anterior para diferenciar los puntos por esp
 ## (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-184-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-185-1.pdf}
 
 \subsubsection{Ejercicio 3: Histograma de masa corporal}\label{ejercicio-3-histograma-de-masa-corporal}
 
@@ -5354,7 +5534,7 @@ Crea un histograma para explorar la distribución de la masa corporal de los pin
 ## (`stat_bin()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-185-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-186-1.pdf}
 
 \subsubsection{Ejercicio 4: Barras de error por especie}\label{ejercicio-4-barras-de-error-por-especie}
 
@@ -5375,7 +5555,7 @@ Genera un gráfico de barras que muestre la masa corporal media de los pingüino
 ## (`stat_summary()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-186-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-187-1.pdf}
 
 \subsubsection{Ejercicio 5: Boxplot de profundidad del culmen}\label{ejercicio-5-boxplot-de-profundidad-del-culmen}
 
@@ -5393,7 +5573,7 @@ Crea un boxplot para comparar la profundidad del culmen entre las diferentes esp
 ## (`stat_boxplot()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-187-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-188-1.pdf}
 
 \subsubsection{Ejercicio 6: Facetado por islas}\label{ejercicio-6-facetado-por-islas}
 
@@ -5412,7 +5592,7 @@ Repite el gráfico de dispersión de longitud vs.~profundidad del culmen, pero e
 ## (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-188-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-189-1.pdf}
 
 \subsubsection{Ejercicio 7: Densidad de masa corporal}\label{ejercicio-7-densidad-de-masa-corporal}
 
@@ -5430,7 +5610,7 @@ Muestra la densidad de la distribución de la masa corporal de los pingüinos ut
 ## (`stat_density()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-189-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-190-1.pdf}
 
 \subsubsection{Ejercicio 8: Gráfico de violín de la longitud del culmen}\label{ejercicio-8-gruxe1fico-de-violuxedn-de-la-longitud-del-culmen}
 
@@ -5448,7 +5628,7 @@ Genera un gráfico de violín para visualizar la distribución de la longitud de
 ## (`stat_ydensity()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-190-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-191-1.pdf}
 
 \subsubsection{Ejercicio 9: Puntos superpuestos en boxplot}\label{ejercicio-9-puntos-superpuestos-en-boxplot}
 
@@ -5472,7 +5652,7 @@ Crea un boxplot de la profundidad del culmen por especie y superpón los puntos 
 ## (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-191-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-192-1.pdf}
 
 \subsubsection{Ejercicio 10: Gráfico de líneas de masa corporal promedio a lo largo del tiempo}\label{ejercicio-10-gruxe1fico-de-luxedneas-de-masa-corporal-promedio-a-lo-largo-del-tiempo}
 
@@ -5491,7 +5671,7 @@ Asumiendo que los datos estén ordenados temporalmente, muestra cómo cambia la 
 ## (`stat_summary()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-192-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-193-1.pdf}
 
 \subsubsection{Ejercicio 11: Gráfico de dispersión con tamaño de punto}\label{ejercicio-11-gruxe1fico-de-dispersiuxf3n-con-tamauxf1o-de-punto}
 
@@ -5509,7 +5689,7 @@ Modifica el gráfico de dispersión de longitud vs.~profundidad del culmen para 
 ## (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-193-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-194-1.pdf}
 
 \subsubsection{Ejercicio 12: Barras apiladas de especies por isla}\label{ejercicio-12-barras-apiladas-de-especies-por-isla}
 
@@ -5522,7 +5702,7 @@ Crea un gráfico de barras apiladas que muestre la cantidad de pingüinos de cad
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-194-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-195-1.pdf}
 
 \subsubsection{Ejercicio 13: Gráfico de correlación con texto}\label{ejercicio-13-gruxe1fico-de-correlaciuxf3n-con-texto}
 
@@ -5547,7 +5727,7 @@ Genera un gráfico de dispersión entre la longitud y la profundidad del culmen 
 ## (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-195-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-196-1.pdf}
 
 \subsubsection{Ejercicio 14: Mapa de calor de la longitud y profundidad del culmen}\label{ejercicio-14-mapa-de-calor-de-la-longitud-y-profundidad-del-culmen}
 
@@ -5565,7 +5745,7 @@ Crea un mapa de calor que muestre la distribución conjunta de la longitud y la 
 ## (`stat_bin2d()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-196-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-197-1.pdf}
 
 \subsubsection{Ejercicio 15: Gráfico de interacción entre tres variables}\label{ejercicio-15-gruxe1fico-de-interacciuxf3n-entre-tres-variables}
 
@@ -5584,7 +5764,7 @@ Explora la relación entre la longitud del culmen, la profundidad del culmen y l
 ## (`geom_point()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-197-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-198-1.pdf}
 
 \subsubsection{Ejercicios propuestos}\label{ejercicios-propuestos}
 

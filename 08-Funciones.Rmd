@@ -1,7 +1,3 @@
-------------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
 # Funciones en R {#functions}
 
 Las funciones definidas por el usuario en R son bloques de código que realizan una tarea específica y se pueden llamar desde cualquier lugar del programa. Las funciones en R se definen usando la palabra clave function seguida del nombre de la función, paréntesis y llaves.
