@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Notas de R</title>
+  <title>Chapter 8 Ciclos en R | Notas de R</title>
   <meta name="description" content="Estas son las notas de un curso básico de R." />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Notas de R" />
+  <meta property="og:title" content="Chapter 8 Ciclos en R | Notas de R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Estas son las notas de un curso básico de R." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Notas de R" />
+  <meta name="twitter:title" content="Chapter 8 Ciclos en R | Notas de R" />
   
   <meta name="twitter:description" content="Estas son las notas de un curso básico de R." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="Estructuras_de_seleccion.html"/>
+<link rel="next" href="plots.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -360,19 +360,251 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="ciclos-en-r" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Ciclos en R<a href="ciclos-en-r.html#ciclos-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introducción-a-los-ciclos-for-en-r" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Introducción a los ciclos <code>for</code> en R<a href="ciclos-en-r.html#introducción-a-los-ciclos-for-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Los ciclos <code>for</code> en R permiten repetir una serie de instrucciones para un conjunto de elementos. Esto es útil cuando se desea realizar una operación varias veces sin tener que escribir el mismo código repetidamente. El ciclo <code>for</code> sigue la siguiente estructura:</p>
+<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="ciclos-en-r.html#cb411-1" tabindex="-1"></a><span class="cf">for</span> (variable <span class="cf">in</span> secuencia) {</span>
+<span id="cb411-2"><a href="ciclos-en-r.html#cb411-2" tabindex="-1"></a>  <span class="co"># Código a ejecutar en cada iteración</span></span>
+<span id="cb411-3"><a href="ciclos-en-r.html#cb411-3" tabindex="-1"></a>}<span class="st">```</span></span>
+<span id="cb411-4"><a href="ciclos-en-r.html#cb411-4" tabindex="-1"></a></span>
+<span id="cb411-5"><a href="ciclos-en-r.html#cb411-5" tabindex="-1"></a></span>
+<span id="cb411-6"><a href="ciclos-en-r.html#cb411-6" tabindex="-1"></a><span class="at">&lt;!--chapter:end:07-Ciclos_en_R.Rmd--&gt;</span></span>
+<span id="cb411-7"><a href="ciclos-en-r.html#cb411-7" tabindex="-1"></a></span>
+<span id="cb411-8"><a href="ciclos-en-r.html#cb411-8" tabindex="-1"></a><span class="at">------------------------------------------------------------------------</span></span>
+<span id="cb411-9"><a href="ciclos-en-r.html#cb411-9" tabindex="-1"></a></span>
+<span id="cb411-10"><a href="ciclos-en-r.html#cb411-10" tabindex="-1"></a><span class="at">------------------------------------------------------------------------</span></span>
+<span id="cb411-11"><a href="ciclos-en-r.html#cb411-11" tabindex="-1"></a></span>
+<span id="cb411-12"><a href="ciclos-en-r.html#cb411-12" tabindex="-1"></a><span class="at"># Funciones en R {#functions}</span></span>
+<span id="cb411-13"><a href="ciclos-en-r.html#cb411-13" tabindex="-1"></a></span>
+<span id="cb411-14"><a href="ciclos-en-r.html#cb411-14" tabindex="-1"></a><span class="at">Las funciones definidas por el usuario en R son bloques de código que realizan una tarea específica y se pueden llamar desde cualquier lugar del programa. Las funciones en R se definen usando la palabra clave function seguida del nombre de la función, paréntesis y llaves.</span></span>
+<span id="cb411-15"><a href="ciclos-en-r.html#cb411-15" tabindex="-1"></a></span>
+<span id="cb411-16"><a href="ciclos-en-r.html#cb411-16" tabindex="-1"></a><span class="at">Las funciones toman argumentos de entrada y producen un resultado como salida. Las funciones definidas por el usuario son una herramienta poderosa en R que permiten reutilizar código y automatizar tareas. Una vez que domines la sintaxis básica de la función en R, puedes comenzar a crear funciones más avanzadas y complejas para adaptarse a tus necesidades.</span></span>
+<span id="cb411-17"><a href="ciclos-en-r.html#cb411-17" tabindex="-1"></a></span>
+<span id="cb411-18"><a href="ciclos-en-r.html#cb411-18" tabindex="-1"></a><span class="at">## Sintaxis básica de una función en R</span></span>
+<span id="cb411-19"><a href="ciclos-en-r.html#cb411-19" tabindex="-1"></a></span>
+<span id="cb411-20"><a href="ciclos-en-r.html#cb411-20" tabindex="-1"></a><span class="at">La sintaxis básica para definir una función en R es la siguiente:</span></span>
+<span id="cb411-21"><a href="ciclos-en-r.html#cb411-21" tabindex="-1"></a></span>
+<span id="cb411-22"><a href="ciclos-en-r.html#cb411-22" tabindex="-1"></a></span>
+<span id="cb411-23"><a href="ciclos-en-r.html#cb411-23" tabindex="-1"></a><span class="st">```</span> r</span>
+<span id="cb411-24"><a href="ciclos-en-r.html#cb411-24" tabindex="-1"></a>nombre_de_la_funcion <span class="ot">&lt;-</span> <span class="cf">function</span>(arg1, arg2, ...) {</span>
+<span id="cb411-25"><a href="ciclos-en-r.html#cb411-25" tabindex="-1"></a>  <span class="co"># Cuerpo de la función</span></span>
+<span id="cb411-26"><a href="ciclos-en-r.html#cb411-26" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> ...</span>
+<span id="cb411-27"><a href="ciclos-en-r.html#cb411-27" tabindex="-1"></a>  <span class="fu">return</span>(resultado)</span>
+<span id="cb411-28"><a href="ciclos-en-r.html#cb411-28" tabindex="-1"></a>}</span></code></pre></div>
+<p>Donde:</p>
+<ul>
+<li><code>nombre_de_la_funcion</code>: el nombre que le das a tu función. -<code>function</code>: la palabra <em>function</em></li>
+<li><code>arg1</code>, <code>arg2</code>, …: los argumentos de entrada que toma la función (opcional).</li>
+<li><code>resultado</code>: el resultado que devuelve la función (opcional).</li>
+</ul>
+<p>El cuerpo de la función es donde se escribe el código que realiza la tarea específica. El resultado de la función se devuelve con la función <code>return()</code>.</p>
+</div>
+<div id="ejemplo-de-función-definida-por-el-usuario-en-r" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Ejemplo de función definida por el usuario en R<a href="ciclos-en-r.html#ejemplo-de-función-definida-por-el-usuario-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Aquí hay un ejemplo de una función definida por el usuario que toma dos argumentos x e y y devuelve la suma de ambos:</p>
+<div class="sourceCode" id="cb412"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb412-1"><a href="ciclos-en-r.html#cb412-1" tabindex="-1"></a>mi_suma <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
+<span id="cb412-2"><a href="ciclos-en-r.html#cb412-2" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
+<span id="cb412-3"><a href="ciclos-en-r.html#cb412-3" tabindex="-1"></a>  <span class="fu">return</span>(resultado)</span>
+<span id="cb412-4"><a href="ciclos-en-r.html#cb412-4" tabindex="-1"></a>}</span></code></pre></div>
+<p>Para usar esta función, simplemente llámala con los argumentos que deseas pasar:</p>
+<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb413-1"><a href="ciclos-en-r.html#cb413-1" tabindex="-1"></a><span class="fu">mi_suma</span>(<span class="dv">3</span>, <span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+</div>
+<div id="ejemplo-de-función-con-argumentos-por-defecto-en-r" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Ejemplo de función con argumentos por defecto en R<a href="ciclos-en-r.html#ejemplo-de-función-con-argumentos-por-defecto-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Las funciones en R también pueden tener argumentos por defecto que se utilizan si no se proporciona ningún valor para ellos. Aquí hay un ejemplo de una función que tiene dos argumentos, <code>x</code> e <code>y</code>, y <code>y</code> tiene un valor por defecto de 2:</p>
+<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="ciclos-en-r.html#cb415-1" tabindex="-1"></a>mi_funcion <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">y =</span> <span class="dv">2</span>) {</span>
+<span id="cb415-2"><a href="ciclos-en-r.html#cb415-2" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> x <span class="sc">*</span> y</span>
+<span id="cb415-3"><a href="ciclos-en-r.html#cb415-3" tabindex="-1"></a>  <span class="fu">return</span>(resultado)</span>
+<span id="cb415-4"><a href="ciclos-en-r.html#cb415-4" tabindex="-1"></a>}</span></code></pre></div>
+<p>En este caso, si no se proporciona un valor para <code>y</code>, se utilizará el valor por defecto de <code>2</code>:</p>
+<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb416-1"><a href="ciclos-en-r.html#cb416-1" tabindex="-1"></a><span class="fu">mi_funcion</span>(<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<p>También puede proporcionar un valor diferente para y, si es necesario:</p>
+<div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb418-1"><a href="ciclos-en-r.html#cb418-1" tabindex="-1"></a><span class="fu">mi_funcion</span>(<span class="dv">3</span>, <span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+</div>
+<div id="definir-una-función-con-un-parámetro-opcional" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Definir una función con un parámetro opcional<a href="ciclos-en-r.html#definir-una-función-con-un-parámetro-opcional" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb420"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb420-1"><a href="ciclos-en-r.html#cb420-1" tabindex="-1"></a>saludar <span class="ot">&lt;-</span> <span class="cf">function</span>(nombre, <span class="at">saludo =</span> <span class="st">&quot;Hola&quot;</span>) {</span>
+<span id="cb420-2"><a href="ciclos-en-r.html#cb420-2" tabindex="-1"></a>  mensaje <span class="ot">&lt;-</span> <span class="fu">paste</span>(saludo, nombre)</span>
+<span id="cb420-3"><a href="ciclos-en-r.html#cb420-3" tabindex="-1"></a>  <span class="fu">return</span>(mensaje)</span>
+<span id="cb420-4"><a href="ciclos-en-r.html#cb420-4" tabindex="-1"></a>}</span></code></pre></div>
+<div id="llamar-a-la-función-saludar-sin-proporcionar-el-parámetro-opcional" class="section level3 hasAnchor" number="8.4.1">
+<h3><span class="header-section-number">8.4.1</span> Llamar a la función saludar sin proporcionar el parámetro opcional<a href="ciclos-en-r.html#llamar-a-la-función-saludar-sin-proporcionar-el-parámetro-opcional" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb421"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb421-1"><a href="ciclos-en-r.html#cb421-1" tabindex="-1"></a>mensaje1 <span class="ot">&lt;-</span> <span class="fu">saludar</span>(<span class="st">&quot;Juan&quot;</span>)</span>
+<span id="cb421-2"><a href="ciclos-en-r.html#cb421-2" tabindex="-1"></a><span class="fu">print</span>(mensaje1)</span></code></pre></div>
+<pre><code>## [1] &quot;Hola Juan&quot;</code></pre>
+</div>
+<div id="llamar-a-la-función-saludar-proporcionando-el-parámetro-opcional" class="section level3 hasAnchor" number="8.4.2">
+<h3><span class="header-section-number">8.4.2</span> Llamar a la función saludar proporcionando el parámetro opcional<a href="ciclos-en-r.html#llamar-a-la-función-saludar-proporcionando-el-parámetro-opcional" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="ciclos-en-r.html#cb423-1" tabindex="-1"></a>mensaje2 <span class="ot">&lt;-</span> <span class="fu">saludar</span>(<span class="st">&quot;María&quot;</span>, <span class="st">&quot;Buenos días&quot;</span>)</span>
+<span id="cb423-2"><a href="ciclos-en-r.html#cb423-2" tabindex="-1"></a><span class="fu">print</span>(mensaje2)</span></code></pre></div>
+<pre><code>## [1] &quot;Buenos días María&quot;</code></pre>
+</div>
+</div>
+<div id="definir-una-función-para-calcular-el-área-de-un-círculo" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Definir una función para calcular el área de un círculo<a href="ciclos-en-r.html#definir-una-función-para-calcular-el-área-de-un-círculo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="ciclos-en-r.html#cb425-1" tabindex="-1"></a>area_circulo <span class="ot">&lt;-</span> <span class="cf">function</span>(radio) {</span>
+<span id="cb425-2"><a href="ciclos-en-r.html#cb425-2" tabindex="-1"></a>  area <span class="ot">&lt;-</span> pi <span class="sc">*</span> radio<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb425-3"><a href="ciclos-en-r.html#cb425-3" tabindex="-1"></a>  <span class="fu">return</span>(area)</span>
+<span id="cb425-4"><a href="ciclos-en-r.html#cb425-4" tabindex="-1"></a>}</span>
+<span id="cb425-5"><a href="ciclos-en-r.html#cb425-5" tabindex="-1"></a><span class="co"># Ejemplo de uso</span></span>
+<span id="cb425-6"><a href="ciclos-en-r.html#cb425-6" tabindex="-1"></a></span>
+<span id="cb425-7"><a href="ciclos-en-r.html#cb425-7" tabindex="-1"></a>radio <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb425-8"><a href="ciclos-en-r.html#cb425-8" tabindex="-1"></a>area <span class="ot">&lt;-</span> <span class="fu">area_circulo</span>(radio)</span>
+<span id="cb425-9"><a href="ciclos-en-r.html#cb425-9" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;El área del círculo con radio&quot;</span>, radio, <span class="st">&quot;es:&quot;</span>, area))</span></code></pre></div>
+<pre><code>## [1] &quot;El área del círculo con radio 3 es: 28.2743338823081&quot;</code></pre>
+</div>
+<div id="definir-una-función-para-calcular-el-factorial-de-un-número" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> Definir una función para calcular el factorial de un número<a href="ciclos-en-r.html#definir-una-función-para-calcular-el-factorial-de-un-número" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb427"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb427-1"><a href="ciclos-en-r.html#cb427-1" tabindex="-1"></a>factorial <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {</span>
+<span id="cb427-2"><a href="ciclos-en-r.html#cb427-2" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb427-3"><a href="ciclos-en-r.html#cb427-3" tabindex="-1"></a>    <span class="fu">return</span>(<span class="dv">1</span>)</span>
+<span id="cb427-4"><a href="ciclos-en-r.html#cb427-4" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb427-5"><a href="ciclos-en-r.html#cb427-5" tabindex="-1"></a>    <span class="fu">return</span>(n <span class="sc">*</span> <span class="fu">factorial</span>(n <span class="sc">-</span> <span class="dv">1</span>))</span>
+<span id="cb427-6"><a href="ciclos-en-r.html#cb427-6" tabindex="-1"></a>  }</span>
+<span id="cb427-7"><a href="ciclos-en-r.html#cb427-7" tabindex="-1"></a>}</span>
+<span id="cb427-8"><a href="ciclos-en-r.html#cb427-8" tabindex="-1"></a></span>
+<span id="cb427-9"><a href="ciclos-en-r.html#cb427-9" tabindex="-1"></a><span class="co"># Ejemplo de uso</span></span>
+<span id="cb427-10"><a href="ciclos-en-r.html#cb427-10" tabindex="-1"></a>numero <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb427-11"><a href="ciclos-en-r.html#cb427-11" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> <span class="fu">factorial</span>(numero)</span>
+<span id="cb427-12"><a href="ciclos-en-r.html#cb427-12" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">&quot;El factorial de&quot;</span>, numero, <span class="st">&quot;es:&quot;</span>, resultado))</span></code></pre></div>
+<pre><code>## [1] &quot;El factorial de 5 es: 120&quot;</code></pre>
+</div>
+<div id="definir-una-función-para-verificar-si-un-número-es-primo" class="section level2 hasAnchor" number="8.7">
+<h2><span class="header-section-number">8.7</span> Definir una función para verificar si un número es primo<a href="ciclos-en-r.html#definir-una-función-para-verificar-si-un-número-es-primo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb429"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb429-1"><a href="ciclos-en-r.html#cb429-1" tabindex="-1"></a>es_primo <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {</span>
+<span id="cb429-2"><a href="ciclos-en-r.html#cb429-2" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">&lt;=</span> <span class="dv">1</span>) {</span>
+<span id="cb429-3"><a href="ciclos-en-r.html#cb429-3" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb429-4"><a href="ciclos-en-r.html#cb429-4" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (n <span class="sc">&lt;=</span> <span class="dv">3</span>) {</span>
+<span id="cb429-5"><a href="ciclos-en-r.html#cb429-5" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb429-6"><a href="ciclos-en-r.html#cb429-6" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (n <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">|</span> n <span class="sc">%%</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb429-7"><a href="ciclos-en-r.html#cb429-7" tabindex="-1"></a>    <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb429-8"><a href="ciclos-en-r.html#cb429-8" tabindex="-1"></a>  }</span>
+<span id="cb429-9"><a href="ciclos-en-r.html#cb429-9" tabindex="-1"></a>  i <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb429-10"><a href="ciclos-en-r.html#cb429-10" tabindex="-1"></a>  <span class="cf">while</span> (i <span class="sc">*</span> i <span class="sc">&lt;=</span> n) {</span>
+<span id="cb429-11"><a href="ciclos-en-r.html#cb429-11" tabindex="-1"></a>    <span class="cf">if</span> (n <span class="sc">%%</span> i <span class="sc">==</span> <span class="dv">0</span> <span class="sc">|</span> n <span class="sc">%%</span> (i <span class="sc">+</span> <span class="dv">2</span>) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb429-12"><a href="ciclos-en-r.html#cb429-12" tabindex="-1"></a>      <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb429-13"><a href="ciclos-en-r.html#cb429-13" tabindex="-1"></a>    }</span>
+<span id="cb429-14"><a href="ciclos-en-r.html#cb429-14" tabindex="-1"></a>    i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">6</span></span>
+<span id="cb429-15"><a href="ciclos-en-r.html#cb429-15" tabindex="-1"></a>  }</span>
+<span id="cb429-16"><a href="ciclos-en-r.html#cb429-16" tabindex="-1"></a>  <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb429-17"><a href="ciclos-en-r.html#cb429-17" tabindex="-1"></a>}</span>
+<span id="cb429-18"><a href="ciclos-en-r.html#cb429-18" tabindex="-1"></a></span>
+<span id="cb429-19"><a href="ciclos-en-r.html#cb429-19" tabindex="-1"></a><span class="co"># Ejemplo de uso</span></span>
+<span id="cb429-20"><a href="ciclos-en-r.html#cb429-20" tabindex="-1"></a>numero <span class="ot">&lt;-</span> <span class="dv">11</span></span>
+<span id="cb429-21"><a href="ciclos-en-r.html#cb429-21" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">es_primo</span>(numero)) {</span>
+<span id="cb429-22"><a href="ciclos-en-r.html#cb429-22" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(numero, <span class="st">&quot;es un número primo.&quot;</span>))</span>
+<span id="cb429-23"><a href="ciclos-en-r.html#cb429-23" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb429-24"><a href="ciclos-en-r.html#cb429-24" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(numero, <span class="st">&quot;no es un número primo.&quot;</span>))</span>
+<span id="cb429-25"><a href="ciclos-en-r.html#cb429-25" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] &quot;11 es un número primo.&quot;</code></pre>
+<div id="ejemplo-resuelto" class="section level3 hasAnchor" number="8.7.1">
+<h3><span class="header-section-number">8.7.1</span> Ejemplo resuelto<a href="ciclos-en-r.html#ejemplo-resuelto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Calcular Índice de Diversidad de Shannon</strong></p>
+<p>Descripción: Define una función que calcule el índice de diversidad de Shannon dado un vector de abundancias de especies.</p>
+<ul>
+<li>Define una función indice_shannon que acepte un argumento: abundancias.</li>
+<li>La función debe devolver el índice de Shannon calculado a partir del vector de abundancias.</li>
+</ul>
+<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb431-1"><a href="ciclos-en-r.html#cb431-1" tabindex="-1"></a>indice_shannon <span class="ot">&lt;-</span> <span class="cf">function</span>(abundancias) {</span>
+<span id="cb431-2"><a href="ciclos-en-r.html#cb431-2" tabindex="-1"></a>  p <span class="ot">&lt;-</span> abundancias <span class="sc">/</span> <span class="fu">sum</span>(abundancias)</span>
+<span id="cb431-3"><a href="ciclos-en-r.html#cb431-3" tabindex="-1"></a>  shannon <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">sum</span>(p <span class="sc">*</span> <span class="fu">log</span>(p), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb431-4"><a href="ciclos-en-r.html#cb431-4" tabindex="-1"></a>  <span class="fu">return</span>(shannon)</span>
+<span id="cb431-5"><a href="ciclos-en-r.html#cb431-5" tabindex="-1"></a>}</span>
+<span id="cb431-6"><a href="ciclos-en-r.html#cb431-6" tabindex="-1"></a></span>
+<span id="cb431-7"><a href="ciclos-en-r.html#cb431-7" tabindex="-1"></a><span class="co"># Prueba de la función</span></span>
+<span id="cb431-8"><a href="ciclos-en-r.html#cb431-8" tabindex="-1"></a><span class="fu">indice_shannon</span>(<span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>))</span></code></pre></div>
+<pre><code>## [1] 1.279854</code></pre>
+<p><strong>Calcular Matriz de Distancias Genéticas</strong></p>
+<p>Descripción: Define una función que calcule una matriz de distancias genéticas entre varias secuencias.</p>
+<ul>
+<li>Define una función matriz_distancias que acepte un argumento: secuencias (una lista de secuencias).</li>
+<li>La función debe devolver una matriz de distancias (número de diferencias entre pares de secuencias).</li>
+</ul>
+<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb433-1"><a href="ciclos-en-r.html#cb433-1" tabindex="-1"></a>matriz_distancias <span class="ot">&lt;-</span> <span class="cf">function</span>(secuencias) {</span>
+<span id="cb433-2"><a href="ciclos-en-r.html#cb433-2" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(secuencias)</span>
+<span id="cb433-3"><a href="ciclos-en-r.html#cb433-3" tabindex="-1"></a>  distancias <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, n, n)</span>
+<span id="cb433-4"><a href="ciclos-en-r.html#cb433-4" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(n<span class="dv">-1</span>)) {</span>
+<span id="cb433-5"><a href="ciclos-en-r.html#cb433-5" tabindex="-1"></a>    <span class="cf">for</span> (j <span class="cf">in</span> (i<span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span>n) {</span>
+<span id="cb433-6"><a href="ciclos-en-r.html#cb433-6" tabindex="-1"></a>      distancias[i, j] <span class="ot">&lt;-</span> <span class="fu">sum</span>(secuencias[[i]] <span class="sc">!=</span> secuencias[[j]])</span>
+<span id="cb433-7"><a href="ciclos-en-r.html#cb433-7" tabindex="-1"></a>      distancias[j, i] <span class="ot">&lt;-</span> distancias[i, j]</span>
+<span id="cb433-8"><a href="ciclos-en-r.html#cb433-8" tabindex="-1"></a>    }</span>
+<span id="cb433-9"><a href="ciclos-en-r.html#cb433-9" tabindex="-1"></a>  }</span>
+<span id="cb433-10"><a href="ciclos-en-r.html#cb433-10" tabindex="-1"></a>  <span class="fu">return</span>(distancias)</span>
+<span id="cb433-11"><a href="ciclos-en-r.html#cb433-11" tabindex="-1"></a>}</span>
+<span id="cb433-12"><a href="ciclos-en-r.html#cb433-12" tabindex="-1"></a></span>
+<span id="cb433-13"><a href="ciclos-en-r.html#cb433-13" tabindex="-1"></a><span class="co"># Prueba de la función</span></span>
+<span id="cb433-14"><a href="ciclos-en-r.html#cb433-14" tabindex="-1"></a><span class="fu">matriz_distancias</span>(<span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;T&quot;</span>, <span class="st">&quot;G&quot;</span>, <span class="st">&quot;C&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;T&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;C&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;G&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;G&quot;</span>, <span class="st">&quot;C&quot;</span>)))</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    0    1    2
+## [2,]    1    0    3
+## [3,]    2    3    0</code></pre>
+<p><strong>Ejercicios</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Escribe una función que tome un vector numérico como argumento de entrada y devuelva la media aritmética de los valores.</p></li>
+<li><p>Escribe una función que tome dos vectores numéricos como argumentos de entrada y devuelva su producto punto (también conocido como producto escalar).</p></li>
+<li><p>Escribe una función que tome un vector numérico como argumento de entrada y devuelva el valor mínimo y máximo en una lista.</p></li>
+<li><p>Escribe una función que tome una matriz cuadrada como argumento de entrada y devuelva su determinante.</p></li>
+<li><p>Escribe una función que tome una matriz de <span class="math inline">\(2 \times 2\)</span> como argumento de entrada y devuelva su transpuesta.</p></li>
+<li><p>Escribe una función que tome una lista como argumento de entrada y devuelva la longitud de cada elemento en una lista.</p></li>
+<li><p>Escribe una función que tome una cadena de texto como argumento de entrada y devuelva una lista con todas las palabras en la cadena.</p></li>
+<li><p>Escribe una función que tome un vector numérico como argumento de entrada y devuelva un vector con los valores ordenados de menor a mayor.</p></li>
+<li><p>Escribe una función que tome un vector de caracteres como argumento de entrada y devuelva un vector con los mismos elementos en orden inverso.</p></li>
+<li><p>Escribe una función que tome una matriz como argumento de entrada y devuelva la diagonal principal en un vector.</p></li>
+<li><p><strong>Calcular Tasa de Crecimiento Bacteriano</strong></p></li>
+</ol>
+<p>Descripción: Define una función que calcule la tasa de crecimiento bacteriano dada la concentración inicial y final de bacterias y el tiempo.</p>
+<ul>
+<li>Define una función tasa_crecimiento que acepte tres argumentos: concentracion_inicial, concentracion_final y tiempo.</li>
+<li>La función debe devolver la tasa de crecimiento (logaritmo natural de la razón de concentraciones dividido por el tiempo).</li>
+</ul>
+<ol start="12" style="list-style-type: decimal">
+<li><strong>Calcular Porcentaje de GC</strong></li>
+</ol>
+<p>Descripción: Define una función que calcule el porcentaje de GC en una secuencia de ADN.</p>
+<ul>
+<li>Define una función porcentaje_gc que acepte un argumento: secuencia.</li>
+<li>La función debe devolver el porcentaje de bases G y C en la secuencia.</li>
+</ul>
+<ol start="13" style="list-style-type: decimal">
+<li><strong>Calcular Resistencia Promedio</strong></li>
+</ol>
+<p>Descripción: Define una función que calcule la resistencia promedio de una bacteria a varios antibióticos.</p>
+<ul>
+<li>Define una función resistencia_promedio que acepte un argumento: resistencias (un vector de valores de resistencia).</li>
+<li>La función debe devolver la resistencia promedio.</li>
+</ul>
+<ol start="14" style="list-style-type: decimal">
+<li><strong>Calcular Concentración Normalizada</strong></li>
+</ol>
+<p>Descripción: Define una función que normalice un vector de concentraciones de metabolitos.</p>
+<ul>
+<li>Define una función normalizar_concentraciones que acepte un argumento: concentraciones.</li>
+<li>La función debe devolver el vector de concentraciones normalizado (dividiendo cada valor por el máximo).</li>
+</ul>
+<ol start="15" style="list-style-type: decimal">
+<li><strong>Calcular la Media y Desviación Estándar de Niveles de Expresión</strong></li>
+</ol>
+<p>Descripción: Define una función que calcule la media y desviación estándar de los niveles de expresión génica.</p>
+<ul>
+<li>Define una función estadisticas_expresion que acepte un argumento: niveles.</li>
+<li>La función debe devolver una lista con la media y la desviación estándar de los niveles de expresión.</li>
+</ul>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="Estructuras_de_seleccion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -403,7 +635,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/%s",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-Funciones.Rmd",
 "text": "Edit"
 },
 "history": {

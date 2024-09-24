@@ -846,8 +846,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] -2.652837378 -0.003663205  0.597378420 -0.966756010  0.407832620
-##  [6] -1.250962495 -0.689473971 -0.142457724 -0.497869704 -1.169579164
+##  [1]  1.2199267 -1.2963320 -1.5405734  0.9280935 -0.4480765  0.4101580
+##  [7]  1.7441150 -1.5188742  1.2042810 -0.2416334
 \end{verbatim}
 
 \begin{Shaded}
@@ -857,8 +857,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] -0.005640625 -1.494132233  0.899282724 -0.789193117 -0.434212592
-##  [6]  0.487487192 -1.477660711  0.598838851 -0.304276279  1.291852085
+##  [1]  0.68157162 -0.93241687  0.89349322 -0.49963521 -0.61782431 -0.58351575
+##  [7]  0.03827256 -0.91048544 -0.26451426  0.18132235
 \end{verbatim}
 
 Las \textbf{asignaciones}, como su nombre lo indica, se guardan los valores al ser asignados a una variable. Esto se puede lograr mediante el uso de \texttt{\textless{}-}
@@ -878,8 +878,8 @@ Ejemplo:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] -0.2881803  1.0140813 -2.0972339 -0.9367575  0.8478683  0.7319288
-##  [7] -0.4771293  1.0108121 -0.6012590  1.0942479
+##  [1]  2.1343027 -1.3666013 -1.6784692  0.2796392 -0.2290791 -0.3436097
+##  [7]  1.2308886  0.5960079 -2.6632100 -0.8607139
 \end{verbatim}
 
 \textbf{NOTA} El símbolo \texttt{\textless{}-} es equivalente en función a \texttt{=} pero puede llevar a confusiones importantes con el operador \texttt{==}.
@@ -1975,7 +1975,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -2.848443
+## [1] -3.290219
 \end{verbatim}
 
 \begin{Shaded}
@@ -1985,7 +1985,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 2.808515
+## [1] 3.149713
 \end{verbatim}
 
 \begin{Shaded}
@@ -1995,7 +1995,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -2.848443  2.808515
+## [1] -3.290219  3.149713
 \end{verbatim}
 
 \begin{Shaded}
@@ -2005,7 +2005,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -59.872
+## [1] 23.74974
 \end{verbatim}
 
 \begin{Shaded}
@@ -2015,7 +2015,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -0.059872
+## [1] 0.02374974
 \end{verbatim}
 
 \begin{Shaded}
@@ -2025,7 +2025,7 @@ También podemos aplicar funciones para calcular con una sola instrucción varia
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -0.0249567
+## [1] 0.05607982
 \end{verbatim}
 
 \textbf{Ejercicio} ¿Qué función tienen los siguientes comandos \texttt{sd()} y \texttt{quantile()}?
@@ -2051,7 +2051,7 @@ Para \texttt{unique()} y \texttt{sort()} conviene tener elementos discretos más
 \end{Shaded}
 
 \begin{verbatim}
-##  [1]  1  9 10  2  6  3  8  4  5  7
+##  [1]  8  4  5 10  1  7  2  6  9  3
 \end{verbatim}
 
 \begin{Shaded}
@@ -4717,7 +4717,9 @@ Esta estructura se ejecuta solo en la primera que sea verdadera o si no hay una 
   Dado un paciente, escribe un código que determine si tiene una infección viral o bacteriana basándote en los niveles de linfocitos (\textgreater{} 4000 sugiere infección viral) y neutrófilos (\textgreater{} 7000 sugiere infección bacteriana).
 \end{enumerate}
 
-\chapter{\texorpdfstring{Introducción a los ciclos \texttt{for} en R}{Introducción a los ciclos for en R}}\label{introducciuxf3n-a-los-ciclos-for-en-r}
+\chapter{Ciclos en R}\label{ciclos-en-r}
+
+\section{\texorpdfstring{Introducción a los ciclos \texttt{for} en R}{Introducción a los ciclos for en R}}\label{introducciuxf3n-a-los-ciclos-for-en-r}
 
 Los ciclos \texttt{for} en R permiten repetir una serie de instrucciones para un conjunto de elementos. Esto es útil cuando se desea realizar una operación varias veces sin tener que escribir el mismo código repetidamente. El ciclo \texttt{for} sigue la siguiente estructura:
 
