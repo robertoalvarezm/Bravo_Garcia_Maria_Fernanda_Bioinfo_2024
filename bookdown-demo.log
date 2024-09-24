@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.1)  23 SEP 2024 19:51
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.1)  23 SEP 2024 19:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1116,18 +1116,28 @@ Underfull \vbox (badness 1019) has occurred while \output is active []
 ]
 Capítulo 2.
 
-Overfull \hbox (38.25pt too wide) in paragraph at lines 851--851
-[]\TU/lmtt/m/n/10 ##  [1] -0.8410226 -0.1653545 -1.5305274  1.2649028  0.5504604  0.8968529[] 
+Overfull \hbox (33.0pt too wide) in paragraph at lines 851--851
+[]\TU/lmtt/m/n/10 ##  [1] -2.652837378 -0.003663205  0.597378420 -0.966756010  0.407832620[] 
  []
 
 
-Overfull \hbox (38.25pt too wide) in paragraph at lines 862--862
-[]\TU/lmtt/m/n/10 ##  [1] -1.2597905 -0.5566253  1.3083891 -1.0715050  1.3926192  0.5324484[] 
+Overfull \hbox (33.0pt too wide) in paragraph at lines 851--851
+[]\TU/lmtt/m/n/10 ##  [6] -1.250962495 -0.689473971 -0.142457724 -0.497869704 -1.169579164[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 883--883
-[]\TU/lmtt/m/n/10 ##  [1] -1.03672551 -0.04639883  0.03773554  0.10045969 -0.26318865 -0.90976913[] 
+Overfull \hbox (33.0pt too wide) in paragraph at lines 862--862
+[]\TU/lmtt/m/n/10 ##  [1] -0.005640625 -1.494132233  0.899282724 -0.789193117 -0.434212592[] 
+ []
+
+
+Overfull \hbox (33.0pt too wide) in paragraph at lines 862--862
+[]\TU/lmtt/m/n/10 ##  [6]  0.487487192 -1.477660711  0.598838851 -0.304276279  1.291852085[] 
+ []
+
+
+Overfull \hbox (38.25pt too wide) in paragraph at lines 883--883
+[]\TU/lmtt/m/n/10 ##  [1] -0.2881803  1.0140813 -2.0972339 -0.9367575  0.8478683  0.7319288[] 
  []
 
 File: equals-sign-assignment-operator-imgflip-com-going-through-data-structures-and-47188178.png Graphic file (type bmp)
