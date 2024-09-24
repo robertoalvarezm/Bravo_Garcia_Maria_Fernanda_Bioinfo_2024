@@ -301,3 +301,50 @@ if(numero > 0){
 1.  Elabora un programa que con tu fecha de cumpleaños te diga en qué estación del año naciste.
 
 2.  Elabora un programa que a partir de las calificaciones de tus examenes parciales y 8 quincenales arroje si exentarás o no este curso usando los criterios definidos en el programa del curso. Asume que en las tareas y demás actividades tienes 10.
+
+
+3. Dado un valor de pH de una muestra, escribe un código en `R` que determine si el ambiente es ácido ($pH < 7$) o neutro ($pH = 7$).
+
+
+
+4. Dada una  temperatura determina si es adeucada para el crecimiento de una bacteria mesófila. La temperatura óptima para los mesófilos está entre 20°C y 45°C.
+
+
+5. Clasifica una célula entre procariota o eucariota basándote en su tamaño. Si la célula mide menos de 10 micrómetros, es procariota; de lo contrario, es eucariota.
+
+
+6. Dado un porcentaje de contenido de guanina y citosina (GC) de cepas de E coli, escribe un código que determine si el ADN es rico en GC (más del 50%).
+
+
+7. Escribe un código que determine si un hongo es potencialmente patógeno. Un hongo que crece óptimamente a 37°C es considerado patógeno.
+
+
+8. Una cepa bacteriana ha sido sometida a un test de sensibilidad a antibióticos. Si la zona de inhibición es mayor o igual a 15 mm, clasifícala como sensible; de lo contrario, clasifícala como resistente.
+
+
+9. Dado un nivel de anticuerpos, escribe un código que determine si un individuo es inmune (niveles superiores a 500) o susceptible a una infección.
+
+
+10. Un hongo dimórfico cambia de forma según la temperatura. A 25°C, adopta una forma micelial, y a 37°C, forma levaduriforme. Escribe un código que clasifique la forma del hongo según la temperatura de incubación.
+
+
+11. Clasifica un ambiente acuático según la concentración de oxígeno disuelto: oxigenado (> 8 mg/L), moderado en oxígeno (4-8 mg/L) o anóxico (< 4 mg/L).
+
+
+12. Escribe un código que determine si un paciente debe recibir tratamiento antibiótico en función de su conteo de leucocitos. Un conteo superior a 10,000 indica que requiere tratamiento.
+
+
+13. Dada una cepa bacteriana, verifica si fermenta lactosa basándote en el resultado de un ensayo de fermentación (valor TRUE o FALSE).
+
+
+14. Dado un paciente con una temperatura corporal de 38.5°C, escribe un código que determine si tiene fiebre (temperatura > 37.5°C).
+
+
+15. En un cultivo de levaduras, la fase de crecimiento puede ser "latencia", "exponencial" o "estacionaria". Escribe un código que clasifique la fase en que se encuentra la levadura.
+
+
+16. Durante un ensayo de tinción de Gram, una bacteria se tiñe de color violeta. Escribe un código que determine si la bacteria es gram positiva o gram negativa según la coloración obtenida.
+
+
+17. Dado un paciente, escribe un código que determine si tiene una infección viral o bacteriana basándote en los niveles de linfocitos (> 4000 sugiere infección viral) y neutrófilos (> 7000 sugiere infección bacteriana).
+
