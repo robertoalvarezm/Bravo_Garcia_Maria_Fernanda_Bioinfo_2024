@@ -220,7 +220,7 @@ minimo<-20000
 vacaciones<-"SI"
 dinero<-21000
 if(dinero>=minimo & vacaciones=="SI"){
-  print("Me voy a la playa, looser")
+  print("Me voy a la playa, loser")
 }else{
   print("Me quedo en mi casa")
 }
