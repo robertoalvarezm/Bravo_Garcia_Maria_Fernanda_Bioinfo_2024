@@ -23,7 +23,7 @@
 <meta name="author" content="Roberto Álvarez" />
 
 
-<meta name="date" content="2024-09-23" />
+<meta name="date" content="2024-10-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -313,6 +313,10 @@ div.csl-indent {
 <li class="chapter" data-level="7.1.5" data-path="ciclos.html"><a href="ciclos.html#ejercicios-resueltos"><i class="fa fa-check"></i><b>7.1.5</b> Ejercicios resueltos</a></li>
 <li class="chapter" data-level="7.1.6" data-path="ciclos.html"><a href="ciclos.html#ejercicios-propuestos"><i class="fa fa-check"></i><b>7.1.6</b> Ejercicios propuestos</a></li>
 </ul></li>
+<li class="chapter" data-level="7.2" data-path="ciclos.html"><a href="ciclos.html#ciclos-while-en-r"><i class="fa fa-check"></i><b>7.2</b> Ciclos <code>while</code> en R</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="ciclos.html"><a href="ciclos.html#sintaxis-1"><i class="fa fa-check"></i><b>7.2.1</b> Sintaxis</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>8</b> Funciones en R</a>
 <ul>
@@ -520,7 +524,213 @@ div.csl-indent {
 <span id="cb21-2"><a href="ciclos.html#cb21-2" tabindex="-1"></a>                 <span class="at">ensayo2 =</span> <span class="fu">c</span>(<span class="fl">3.5</span>, <span class="fl">2.9</span>, <span class="fl">4.2</span>),</span>
 <span id="cb21-3"><a href="ciclos.html#cb21-3" tabindex="-1"></a>                 <span class="at">ensayo3 =</span> <span class="fu">c</span>(<span class="fl">4.1</span>, <span class="fl">3.8</span>, <span class="fl">4.5</span>))</span></code></pre></div>
 <p>Escribe un ciclo for que calcule la media de los valores de cada fila.</p>
+</div>
+</div>
+<div id="ciclos-while-en-r" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Ciclos <code>while</code> en R<a href="ciclos.html#ciclos-while-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El bucle <code>while</code> se utiliza en situaciones donde no sabemos de antemano cuántas veces se repetirá una operación, a diferencia del bucle <code>for</code>, que itera un número conocido de veces.</p>
+<div id="sintaxis-1" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Sintaxis<a href="ciclos.html#sintaxis-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="ciclos.html#cb22-1" tabindex="-1"></a><span class="cf">while</span> (condición) {</span>
+<span id="cb22-2"><a href="ciclos.html#cb22-2" tabindex="-1"></a>  <span class="co"># Bloque de código</span></span>
+<span id="cb22-3"><a href="ciclos.html#cb22-3" tabindex="-1"></a>  <span class="co"># Ejecuta </span><span class="al">TODO</span><span class="co"> lo que está dientro </span></span>
+<span id="cb22-4"><a href="ciclos.html#cb22-4" tabindex="-1"></a>  <span class="co"># MIENTRAS la condicón sea VERDADERA</span></span>
+<span id="cb22-5"><a href="ciclos.html#cb22-5" tabindex="-1"></a>}</span></code></pre></div>
+<ul>
+<li><strong>condición</strong>: Es una expresión lógica que debe evaluarse como verdadera (TRUE) para que el bucle continúe ejecutándose.</li>
+<li><strong>bloque de código</strong>: Es el conjunto de instrucciones que se ejecutan en cada iteración del bucle.</li>
+</ul>
+<p><strong>Ejemplo básico</strong></p>
+<p>Vamos a ver un ejemplo básico para entender cómo funciona el bucle <code>while</code> en R. En este caso, el bucle continuará ejecutándose hasta que el valor de x sea mayor que 5.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="ciclos.html#cb23-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb23-2"><a href="ciclos.html#cb23-2" tabindex="-1"></a><span class="cf">while</span> (x <span class="sc">&lt;=</span> <span class="dv">5</span>) {</span>
+<span id="cb23-3"><a href="ciclos.html#cb23-3" tabindex="-1"></a>  <span class="fu">print</span>(x)</span>
+<span id="cb23-4"><a href="ciclos.html#cb23-4" tabindex="-1"></a>  x <span class="ot">&lt;-</span> x <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb23-5"><a href="ciclos.html#cb23-5" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5</code></pre>
+<p>El resultado será:</p>
+<pre><code>[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5</code></pre>
+<div id="ejemplo-1-suma-de-números-enteros" class="section level4 hasAnchor" number="7.2.1.1">
+<h4><span class="header-section-number">7.2.1.1</span> Ejemplo 1: Suma de números enteros<a href="ciclos.html#ejemplo-1-suma-de-números-enteros" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Escribe un programa que sume todos los números enteros desde 1 hasta que la suma total supere 1000. Imprime el número de iteraciones necesarias y el valor de la suma final.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="ciclos.html#cb26-1" tabindex="-1"></a>suma <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb26-2"><a href="ciclos.html#cb26-2" tabindex="-1"></a>contador <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb26-3"><a href="ciclos.html#cb26-3" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="ciclos.html#cb26-4" tabindex="-1"></a><span class="cf">while</span> (suma <span class="sc">&lt;=</span> <span class="dv">1000</span>) {</span>
+<span id="cb26-5"><a href="ciclos.html#cb26-5" tabindex="-1"></a>  suma <span class="ot">&lt;-</span> suma <span class="sc">+</span> contador</span>
+<span id="cb26-6"><a href="ciclos.html#cb26-6" tabindex="-1"></a>  contador <span class="ot">&lt;-</span> contador <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb26-7"><a href="ciclos.html#cb26-7" tabindex="-1"></a>}</span>
+<span id="cb26-8"><a href="ciclos.html#cb26-8" tabindex="-1"></a></span>
+<span id="cb26-9"><a href="ciclos.html#cb26-9" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Número de iteraciones:&quot;</span>, contador <span class="sc">-</span> <span class="dv">1</span>, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<pre><code>## Número de iteraciones: 45</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="ciclos.html#cb28-1" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Suma total:&quot;</span>, suma, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<pre><code>## Suma total: 1035</code></pre>
+</div>
+<div id="ejemplo-2-secuencia-de-fibonacci" class="section level4 hasAnchor" number="7.2.1.2">
+<h4><span class="header-section-number">7.2.1.2</span> Ejemplo 2: Secuencia de Fibonacci<a href="ciclos.html#ejemplo-2-secuencia-de-fibonacci" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Genera los primeros 10 términos de la secuencia de Fibonacci utilizando un bucle while. La secuencia de Fibonacci comienza con 0 y 1, y cada número posterior es la suma de los dos anteriores.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="ciclos.html#cb30-1" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb30-2"><a href="ciclos.html#cb30-2" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb30-3"><a href="ciclos.html#cb30-3" tabindex="-1"></a>contador <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb30-4"><a href="ciclos.html#cb30-4" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="ciclos.html#cb30-5" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Secuencia de Fibonacci:</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<pre><code>## Secuencia de Fibonacci:</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="ciclos.html#cb32-1" tabindex="-1"></a><span class="cf">while</span> (contador <span class="sc">&lt;</span> <span class="dv">10</span>) {</span>
+<span id="cb32-2"><a href="ciclos.html#cb32-2" tabindex="-1"></a>  <span class="fu">cat</span>(a, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb32-3"><a href="ciclos.html#cb32-3" tabindex="-1"></a>  temp <span class="ot">&lt;-</span> a <span class="sc">+</span> b</span>
+<span id="cb32-4"><a href="ciclos.html#cb32-4" tabindex="-1"></a>  a <span class="ot">&lt;-</span> b</span>
+<span id="cb32-5"><a href="ciclos.html#cb32-5" tabindex="-1"></a>  b <span class="ot">&lt;-</span> temp</span>
+<span id="cb32-6"><a href="ciclos.html#cb32-6" tabindex="-1"></a>  contador <span class="ot">&lt;-</span> contador <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb32-7"><a href="ciclos.html#cb32-7" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## 0 
+## 1 
+## 1 
+## 2 
+## 3 
+## 5 
+## 8 
+## 13 
+## 21 
+## 34</code></pre>
+</div>
+<div id="ejemplo-3-factorial-de-un-número" class="section level4 hasAnchor" number="7.2.1.3">
+<h4><span class="header-section-number">7.2.1.3</span> Ejemplo 3: Factorial de un número<a href="ciclos.html#ejemplo-3-factorial-de-un-número" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Escribe un programa que calcule el factorial de un número entero dado. El factorial de un número <strong>n</strong>
+es el producto de todos los números enteros positivos menores o iguales a n</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="ciclos.html#cb34-1" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">6</span></span>
+<span id="cb34-2"><a href="ciclos.html#cb34-2" tabindex="-1"></a>factorial <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb34-3"><a href="ciclos.html#cb34-3" tabindex="-1"></a>contador <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb34-4"><a href="ciclos.html#cb34-4" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="ciclos.html#cb34-5" tabindex="-1"></a><span class="cf">while</span> (contador <span class="sc">&lt;=</span> n) {</span>
+<span id="cb34-6"><a href="ciclos.html#cb34-6" tabindex="-1"></a>  factorial <span class="ot">&lt;-</span> factorial <span class="sc">*</span> contador</span>
+<span id="cb34-7"><a href="ciclos.html#cb34-7" tabindex="-1"></a>  contador <span class="ot">&lt;-</span> contador <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb34-8"><a href="ciclos.html#cb34-8" tabindex="-1"></a>}</span>
+<span id="cb34-9"><a href="ciclos.html#cb34-9" tabindex="-1"></a></span>
+<span id="cb34-10"><a href="ciclos.html#cb34-10" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Factorial de&quot;</span>, n, <span class="st">&quot;es:&quot;</span>, factorial, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<pre><code>## Factorial de 6 es: 720</code></pre>
+</div>
+<div id="ejemplo-4-aproximación-de-pi-mediante-series" class="section level4 hasAnchor" number="7.2.1.4">
+<h4><span class="header-section-number">7.2.1.4</span> Ejemplo 4: Aproximación de <span class="math inline">\(\pi\)</span> mediante series<a href="ciclos.html#ejemplo-4-aproximación-de-pi-mediante-series" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Utiliza la serie de Leibniz para calcular una aproximación de <span class="math inline">\(\pi\)</span>. La serie de Leibniz es:
+<span class="math display">\[\pi=4( 1- \frac{1}{3} +\frac{1}{5} -\frac{1}{7} +\frac{1}{9} + \ldots )\]</span></p>
+<p>Escribe un programa que continúe sumando términos de la serie hasta que la diferencia entre dos aproximaciones sucesivas de <span class="math inline">\(\pi\)</span> sea menor que <span class="math inline">\(10^{-6}\)</span></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="ciclos.html#cb36-1" tabindex="-1"></a>pi_aprox <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb36-2"><a href="ciclos.html#cb36-2" tabindex="-1"></a>tolerancia <span class="ot">&lt;-</span> <span class="fl">1e-6</span></span>
+<span id="cb36-3"><a href="ciclos.html#cb36-3" tabindex="-1"></a>diferencia <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb36-4"><a href="ciclos.html#cb36-4" tabindex="-1"></a>contador <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb36-5"><a href="ciclos.html#cb36-5" tabindex="-1"></a>signo <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb36-6"><a href="ciclos.html#cb36-6" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="ciclos.html#cb36-7" tabindex="-1"></a><span class="cf">while</span> (diferencia <span class="sc">&gt;</span> tolerancia) {</span>
+<span id="cb36-8"><a href="ciclos.html#cb36-8" tabindex="-1"></a>  nueva_aprox <span class="ot">&lt;-</span> pi_aprox <span class="sc">+</span> signo <span class="sc">*</span> (<span class="dv">4</span> <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> contador <span class="sc">+</span> <span class="dv">1</span>))</span>
+<span id="cb36-9"><a href="ciclos.html#cb36-9" tabindex="-1"></a>  diferencia <span class="ot">&lt;-</span> <span class="fu">abs</span>(nueva_aprox <span class="sc">-</span> pi_aprox)</span>
+<span id="cb36-10"><a href="ciclos.html#cb36-10" tabindex="-1"></a>  pi_aprox <span class="ot">&lt;-</span> nueva_aprox</span>
+<span id="cb36-11"><a href="ciclos.html#cb36-11" tabindex="-1"></a>  signo <span class="ot">&lt;-</span> <span class="sc">-</span>signo</span>
+<span id="cb36-12"><a href="ciclos.html#cb36-12" tabindex="-1"></a>  contador <span class="ot">&lt;-</span> contador <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb36-13"><a href="ciclos.html#cb36-13" tabindex="-1"></a>}</span>
+<span id="cb36-14"><a href="ciclos.html#cb36-14" tabindex="-1"></a></span>
+<span id="cb36-15"><a href="ciclos.html#cb36-15" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Aproximación de pi:&quot;</span>, pi_aprox, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<pre><code>## Aproximación de pi: 3.141593</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="ciclos.html#cb38-1" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Número de iteraciones:&quot;</span>, contador, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<pre><code>## Número de iteraciones: 2000001</code></pre>
+</div>
+<div id="ejemplo-5-encontrar-la-raíz-cuadrada-de-un-número-usando-el-método-de-bisección" class="section level4 hasAnchor" number="7.2.1.5">
+<h4><span class="header-section-number">7.2.1.5</span> Ejemplo 5: Encontrar la raíz cuadrada de un número usando el método de bisección<a href="ciclos.html#ejemplo-5-encontrar-la-raíz-cuadrada-de-un-número-usando-el-método-de-bisección" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Escribe un programa que calcule la raíz cuadrada de un número positivo <span class="math inline">\(x\)</span> utilizando el método de bisección. El método de bisección consiste en encontrar un número <span class="math inline">\(y\)</span> tal que <span class="math inline">\(y^2=x\)</span> dentro de un intervalo <span class="math inline">\([0, x]\)</span>.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="ciclos.html#cb40-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">25</span></span>
+<span id="cb40-2"><a href="ciclos.html#cb40-2" tabindex="-1"></a>tol <span class="ot">&lt;-</span> <span class="fl">1e-6</span></span>
+<span id="cb40-3"><a href="ciclos.html#cb40-3" tabindex="-1"></a>low <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb40-4"><a href="ciclos.html#cb40-4" tabindex="-1"></a>high <span class="ot">&lt;-</span> x</span>
+<span id="cb40-5"><a href="ciclos.html#cb40-5" tabindex="-1"></a>guess <span class="ot">&lt;-</span> (low <span class="sc">+</span> high) <span class="sc">/</span> <span class="dv">2</span></span>
+<span id="cb40-6"><a href="ciclos.html#cb40-6" tabindex="-1"></a></span>
+<span id="cb40-7"><a href="ciclos.html#cb40-7" tabindex="-1"></a><span class="cf">while</span> (<span class="fu">abs</span>(guess<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> x) <span class="sc">&gt;</span> tol) {</span>
+<span id="cb40-8"><a href="ciclos.html#cb40-8" tabindex="-1"></a>  <span class="cf">if</span> (guess<span class="sc">^</span><span class="dv">2</span> <span class="sc">&lt;</span> x) {</span>
+<span id="cb40-9"><a href="ciclos.html#cb40-9" tabindex="-1"></a>    low <span class="ot">&lt;-</span> guess</span>
+<span id="cb40-10"><a href="ciclos.html#cb40-10" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb40-11"><a href="ciclos.html#cb40-11" tabindex="-1"></a>    high <span class="ot">&lt;-</span> guess</span>
+<span id="cb40-12"><a href="ciclos.html#cb40-12" tabindex="-1"></a>  }</span>
+<span id="cb40-13"><a href="ciclos.html#cb40-13" tabindex="-1"></a>  guess <span class="ot">&lt;-</span> (low <span class="sc">+</span> high) <span class="sc">/</span> <span class="dv">2</span></span>
+<span id="cb40-14"><a href="ciclos.html#cb40-14" tabindex="-1"></a>}</span>
+<span id="cb40-15"><a href="ciclos.html#cb40-15" tabindex="-1"></a></span>
+<span id="cb40-16"><a href="ciclos.html#cb40-16" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;La raíz cuadrada aproximada de&quot;</span>, x, <span class="st">&quot;es:&quot;</span>, guess, <span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<pre><code>## La raíz cuadrada aproximada de 25 es: 5</code></pre>
+<p><strong>Ejercicio 1: Crecimiento bacteriano simple</strong></p>
+<p>Imagina que estamos monitoreando el crecimiento de una colonia de bacterias en un medio de cultivo. El número de bacterias se duplica cada hora. Partimos con 100 bacterias y queremos saber cuántas horas pasará hasta que la colonia tenga más de 10,000 bacterias.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="ciclos.html#cb42-1" tabindex="-1"></a>bacterias <span class="ot">&lt;-</span> <span class="dv">100</span></span>
+<span id="cb42-2"><a href="ciclos.html#cb42-2" tabindex="-1"></a>horas <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb42-3"><a href="ciclos.html#cb42-3" tabindex="-1"></a></span>
+<span id="cb42-4"><a href="ciclos.html#cb42-4" tabindex="-1"></a><span class="cf">while</span> (bacterias <span class="sc">&lt;=</span> <span class="dv">10000</span>) {</span>
+<span id="cb42-5"><a href="ciclos.html#cb42-5" tabindex="-1"></a>  bacterias <span class="ot">&lt;-</span> bacterias <span class="sc">*</span> <span class="dv">2</span></span>
+<span id="cb42-6"><a href="ciclos.html#cb42-6" tabindex="-1"></a>  horas <span class="ot">&lt;-</span> horas <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb42-7"><a href="ciclos.html#cb42-7" tabindex="-1"></a>}</span>
+<span id="cb42-8"><a href="ciclos.html#cb42-8" tabindex="-1"></a></span>
+<span id="cb42-9"><a href="ciclos.html#cb42-9" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Número de horas:&quot;</span>, horas)</span></code></pre></div>
+<pre><code>## Número de horas: 7</code></pre>
+<p>Explicación:</p>
+<ul>
+<li>Comenzamos con 100 bacterias y un contador de horas igual a 0.</li>
+<li>En cada iteración, el número de bacterias se duplica y se incrementa el contador de horas en 1.</li>
+<li>El ciclo se detiene cuando la población de bacterias supera las 10,000.</li>
+</ul>
+<p><strong>Ejercicio 2: Tasa de mortalidad bacteriana</strong></p>
+<p>Ahora supongamos que estamos observando una colonia de bacterias que se reduce en un 20% cada hora debido a la falta de nutrientes. Comenzamos con 500 bacterias y queremos saber cuántas horas pasará hasta que la población bacteriana baje de 50 bacterias.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="ciclos.html#cb44-1" tabindex="-1"></a>bacterias <span class="ot">&lt;-</span> <span class="dv">500</span></span>
+<span id="cb44-2"><a href="ciclos.html#cb44-2" tabindex="-1"></a>horas <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb44-3"><a href="ciclos.html#cb44-3" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="ciclos.html#cb44-4" tabindex="-1"></a><span class="cf">while</span> (bacterias <span class="sc">&gt;=</span> <span class="dv">50</span>) {</span>
+<span id="cb44-5"><a href="ciclos.html#cb44-5" tabindex="-1"></a>  bacterias <span class="ot">&lt;-</span> bacterias <span class="sc">*</span> <span class="fl">0.8</span>  <span class="co"># reducción del 20%</span></span>
+<span id="cb44-6"><a href="ciclos.html#cb44-6" tabindex="-1"></a>  horas <span class="ot">&lt;-</span> horas <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb44-7"><a href="ciclos.html#cb44-7" tabindex="-1"></a>}</span>
+<span id="cb44-8"><a href="ciclos.html#cb44-8" tabindex="-1"></a></span>
+<span id="cb44-9"><a href="ciclos.html#cb44-9" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Número de horas:&quot;</span>, horas)</span></code></pre></div>
+<pre><code>## Número de horas: 11</code></pre>
+<p>Explicación:</p>
+<ul>
+<li>El número de bacterias disminuye un 20% en cada iteración.</li>
+<li>El bucle se detiene cuando la población cae por debajo de 50.</li>
+</ul>
+<p><strong>Ejercicio 3: Ciclos de infección viral</strong></p>
+<p>Un virus infecta una célula y produce nuevas partículas virales. Cada partícula puede infectar nuevas células, y el ciclo se repite. Si comenzamos con 1,000 partículas virales y cada ciclo de infección produce 50 nuevas partículas por partícula viral, ¿cuántos ciclos de infección se necesitarán para alcanzar 1,000,000 de partículas virales?</p>
+<p>Solución:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="ciclos.html#cb46-1" tabindex="-1"></a>particulas <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb46-2"><a href="ciclos.html#cb46-2" tabindex="-1"></a>ciclos <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb46-3"><a href="ciclos.html#cb46-3" tabindex="-1"></a></span>
+<span id="cb46-4"><a href="ciclos.html#cb46-4" tabindex="-1"></a><span class="cf">while</span> (particulas <span class="sc">&lt;</span> <span class="dv">1000000</span>) {</span>
+<span id="cb46-5"><a href="ciclos.html#cb46-5" tabindex="-1"></a>  particulas <span class="ot">&lt;-</span> particulas <span class="sc">*</span> <span class="dv">50</span></span>
+<span id="cb46-6"><a href="ciclos.html#cb46-6" tabindex="-1"></a>  ciclos <span class="ot">&lt;-</span> ciclos <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb46-7"><a href="ciclos.html#cb46-7" tabindex="-1"></a>}</span>
+<span id="cb46-8"><a href="ciclos.html#cb46-8" tabindex="-1"></a></span>
+<span id="cb46-9"><a href="ciclos.html#cb46-9" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">&quot;Número de ciclos de infección:&quot;</span>, ciclos)</span></code></pre></div>
+<pre><code>## Número de ciclos de infección: 2</code></pre>
+<p>Explicación:</p>
+<ul>
+<li>En cada ciclo de infección, el número de partículas virales se multiplica por 50.</li>
+<li>El ciclo se detiene cuando el número de partículas supera 1,000,000.</li>
+</ul>
+</div>
+<div id="ejercicios-sugeridos" class="section level4 hasAnchor" number="7.2.1.6">
+<h4><span class="header-section-number">7.2.1.6</span> Ejercicios sugeridos<a href="ciclos.html#ejercicios-sugeridos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li><strong>Ejercicio 1: Producción de antibióticos</strong></li>
+</ol>
+<p>Un microorganismo es capaz de producir antibióticos en condiciones de laboratorio. Se mide la cantidad de antibiótico en el medio cada hora. Inicialmente, hay 0.5 mg de antibiótico, y la producción se incrementa en 10% cada hora. Escribe un bucle while que determine cuántas horas tomará para alcanzar una concentración de 10 mg de antibiótico.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Ejercicio 2: Decaimiento de una toxina</strong></li>
+</ol>
+<p>Una toxina producida por bacterias tiene un periodo de vida media de 3 horas, lo que significa que se reduce a la mitad cada 3 horas. Si hay inicialmente 80 mg de toxina en el medio, ¿cuántas horas tomarán hasta que la cantidad de toxina sea menor de 1 mg?</p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Ejercicio 3: Reproducción bacteriana con nutrientes limitados</strong>
+Una población de bacterias crece en un medio con nutrientes limitados. La tasa de crecimiento es inicialmente del 50% por hora, pero disminuye en un 10% en cada iteración debido a la reducción de los nutrientes. Parte de una población de 200 bacterias y determina cuántas iteraciones tomará para que la población supere las 500 bacterias.</li>
+</ol>
 
+</div>
 </div>
 </div>
 </div>
@@ -584,6 +794,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
